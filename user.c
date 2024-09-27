@@ -13,9 +13,9 @@
 void fn_START(void);
 void fn_KEY_WOUT_DOUB(void);
 void fn_KEY_WH_DOUB(void);
-void fn_S_TENT(void);
+void fn_RESET_TENT(void);
 /*ENUM DECLARATION*/
-typedef enum {START, KEY_WOUT_DOUB, KEY_WH_DOUB, S_TENT, ERROR} State;
+typedef enum {START, KEY_WOUT_DOUB, KEY_WH_DOUB, RESET_TENT, ERROR} State;
 typedef struct {
     State state;
     void (*state_function)(void);
@@ -25,7 +25,7 @@ StateMachine fsm[]={
     {START, fn_START},
     {KEY_WOUT_DOUB, fn_KEY_WOUT_DOUB},
     {KEY_WH_DOUB, fn_KEY_WH_DOUB},
-    {S_TENT, fn_S_TENT}
+    {RESET_TENT, fn_RESET_TENT}
 };
 State current_state=START;
 /* Struct of the Program */
@@ -41,7 +41,7 @@ typedef struct {
 typedef struct {
     int count;
     int dim;
-    int* seq_user;
+    char* seq_user;
 } Tentative;
 Game game;
 Tentative tentative;
@@ -165,6 +165,11 @@ void continue_Key_Decryption(int* sequence) {
     deallocate_Int(sequence);
 
 }
+void resetTentative(void) {
+    tentative.count=0;
+    tentative.dim=game.dim;
+    allocate_in_Heap_Char(&tentative.seq_user, 1, game.dim);
+}
 /*Initializes the components*/
 void fn_START(void) {
     initGame(DIM, DIFFICULTY, DOUBLES, TENTATIVES);
@@ -179,15 +184,16 @@ void fn_START(void) {
 void fn_KEY_WOUT_DOUB(void) {
     int* sequence=key_generation_wout_doub();
     continue_Key_Decryption(sequence);
-    current_state=S_TENT;
+    current_state=RESET_TENT;
 }
 void fn_KEY_WH_DOUB(void) {
     int* sequence=key_generation_wh_doub();
     continue_Key_Decryption(sequence);
-    current_state=S_TENT;
+    current_state=RESET_TENT;
 }
-void fn_S_TENT(void) {
-    
+void fn_RESET_TENT(void) {
+    resetTentative();
+    current_state=ERROR;
 }
 /**
  * main.c
@@ -201,13 +207,12 @@ int main(void)
             (*fsm[current_state].state_function)();
         }
         else {
-            /* ERROR */
-        }
-        /* TO BE REMOVED */
-        if (current_state==ERROR-1) {
-            deallocate_Char(game.seq_to_guess);
-            deallocate_Char(game.chronology);
-            break;
+            /* TO BE REMOVED */
+            if (current_state==ERROR) {
+                deallocate_Char(game.seq_to_guess);
+                deallocate_Char(game.chronology);
+                break;
+            }
         }
     }
     return 0;
