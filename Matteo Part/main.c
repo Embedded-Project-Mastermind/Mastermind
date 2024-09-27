@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include "game.h"
+#include "fsm.h"
 // Finite State Machine declaration
 typedef struct {
     State state;                          // Current state of the FSM
