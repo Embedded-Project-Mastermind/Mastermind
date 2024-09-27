@@ -1,3 +1,9 @@
+//
+//  game.c
+//  Mastermind Program
+//
+//  Created by Matteo Gottardelli on 27/09/24.
+//
 #include "game.h"
 /* Function to clean a character array */
 void makeArrayEmpty_Char(char* array, int par1, int par2) {
