@@ -108,16 +108,13 @@ int* key_generation_wh_doub(void) {
 }
 bool presence_Double (int* array, int value, int dim) {
     if (dim==1) {
-        printf("FALSE\n");
         return false;
     }
     for (int i=0; i<dim-1; i++) {
         if (array[i]==value) {
-            printf("TRUE\n");
             return true;
         }
     }
-    printf("FALSE\n");
     return false;
 }
 int* key_generation_wout_doub(void) {
