@@ -4,8 +4,8 @@
 //
 //  Created by Matteo Gottardelli on 27/09/24.
 //
-#ifndef GAME_H
-#define GAME_H
+#ifndef GAMELOGIC1_H
+#define GAMELOGIC1_H
 
 #include "stdio.h"
 #include "stdlib.h"
