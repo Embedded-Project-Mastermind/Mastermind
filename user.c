@@ -14,6 +14,7 @@ typedef struct {
 	int dim;
 	char difficulty;
 	bool doubles;
+	int count_tent;
 	int tentatives;
 	char* seq_to_guess;
 } Game;
