@@ -1,3 +1,9 @@
+//
+//  game.h
+//  Mastermind Program
+//
+//  Created by Matteo Gottardelli on 27/09/24.
+//
 #ifndef GAME_H
 #define GAME_H
 
