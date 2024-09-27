@@ -6,7 +6,7 @@
 //
 
 #include <stdio.h>
-#include "game.h"
+#include "gamelogic1.h"
 #include "fsm.h"
 // Finite State Machine declaration
 typedef struct {
