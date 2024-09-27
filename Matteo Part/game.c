@@ -123,7 +123,15 @@ void crypt_sequence_Int_Char(int* arr1, char* arr2, int dim) {
 
 /* Continue the key decryption process */
 void continue_Key_Decryption(int* sequence) {
+    for (int i=0; i<game.dim; i++) {
+        printf("%d", sequence[i]);
+    }
+    printf("\n");
     crypt_sequence_Int_Char(sequence, game.seq_to_guess, game.dim); // Convert the sequence
+    for (int i=0; i<game.dim; i++) {
+        printf("%c", game.seq_to_guess[i]);
+    }
+    printf("\n");
     deallocate_Int(sequence); // Free the sequence memory
 }
 
