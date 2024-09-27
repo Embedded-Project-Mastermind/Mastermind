@@ -1,6 +1,6 @@
 //
 //  main.c
-//  Mastermind Program Divided
+//  Mastermind Program
 //
 //  Created by Matteo Gottardelli on 27/09/24.
 //
@@ -24,7 +24,7 @@ StateMachine fsm[] = {
 Game game;
 Tentative tentative;
 State current_state=START;
-int main(void) {
+void main(void) {
     srand((unsigned)time(NULL)); // Seed the random number generator
     while (1) {
         if (current_state < ERROR) {
@@ -38,5 +38,4 @@ int main(void) {
             }
         }
     }
-    return 0; // Return success
 }
