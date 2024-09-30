@@ -20,6 +20,15 @@ StateMachine fsm[] = {
     {KEY_WOUT_DOUB, fn_KEY_WOUT_DOUB},
     {KEY_WH_DOUB, fn_KEY_WH_DOUB},
     {RESET_TENT, fn_RESET_TENT}
+     //Insert here other state machines
+    {ELABORATE_TENT, fn_ELABORATE_TENT},
+    {INCREMENT_TENT, fn_INCREMENT_TENT},
+    {GAME_OVER, fn_GAME_OVER},
+    {EASY_MODE, fn_EASY_MODE},
+    {MEDIUM_MODE, fn_MEDIUM_MODE},
+    {DIFFICULT_MODE, fn_DIFFICULT_MODE},
+    {ELABORATE_RESULT, fn_ELABORATE_RESULT},
+    {WIN, fn_WIN}
 };
 Game game;
 Tentative tentative;
