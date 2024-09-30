@@ -15,7 +15,7 @@
 #define DOUBLES false           // Whether doubles are allowed
 
 /* ENUM Declaration */
-typedef enum {START, KEY_WOUT_DOUB, KEY_WH_DOUB, RESET_TENT, ERROR} State;
+typedef enum {START, KEY_WOUT_DOUB, KEY_WH_DOUB, RESET_TENT, START_TENTATIVE, /*insert here other state*/   ELABORATE_TENT, INCREMENT_TENT, GAME_OVER, EASY_MODE, MEDIUM_MODE, DIFFICULT_MODE, ELABORATE_RESULT, WIN, ERROR} State;
 
 /* Struct declarations */
 typedef struct {
