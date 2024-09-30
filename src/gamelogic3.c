@@ -89,7 +89,6 @@ void correctionsMediumMode(void){
 
 //Function that transforms the seq_user into corrections in DIFFICULT_MODE
 void correctionsDifficultMode(void){
-    correctionsEasyMode();
     int x=0;
     correctionsEasyMode();
     for(int i=0; i<game.dim; i++){
