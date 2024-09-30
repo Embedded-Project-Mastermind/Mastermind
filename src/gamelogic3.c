@@ -26,7 +26,7 @@ void insertInChronology(char* seq){
 //Function that increases the number of tenctative
 void incrementTent(void){
     game.count_tent++;
-    printf("Number of current tentative: %d of %d",
+    printf("Number of current tentative: %d of %d \n",
            game.count_tent,
            game.tentatives);  //print number of count_tent/tentatives
 }
@@ -72,17 +72,17 @@ void correctionsMediumMode(void){
             case 'O': o++; break;
             case '!': break;
             default: printf("ERROR!\n"); break;
-        }  //This switch count the number of X O ! for reordinate the corrections for the medium mode
-        for(int i=0; i<game.dim; i++){
-            if(x>0){
-                tentative.seq_user[i]='X';  //Firstly it's inserted the X based on the number the upper switch have finded
-                x--;
-            } else if (o>0){
-                tentative.seq_user[i]='O';  //Secondly it's inserted the Y based on the number the upper switch have finded
-                o--;
-            } else {
-                tentative.seq_user[i]='!';  //Lastly it's inserted the !
-            }
+        }  //This switch count the number of X O for reordinate the corrections for the medium mode
+    }
+    for(int i=0; i<game.dim; i++){
+        if(x>0){
+            tentative.seq_user[i]='X';  //Firstly it's inserted the X based on the number the upper switch have finded
+            x--;
+        } else if (o>0){
+            tentative.seq_user[i]='O';  //Secondly it's inserted the Y based on the number the upper switch have finded
+            o--;
+        } else {
+            tentative.seq_user[i]='!';  //Lastly it's inserted the !
         }
     }
 }
@@ -90,9 +90,22 @@ void correctionsMediumMode(void){
 //Function that transforms the seq_user into corrections in DIFFICULT_MODE
 void correctionsDifficultMode(void){
     correctionsEasyMode();
+    int x=0;
+    correctionsEasyMode();
     for(int i=0; i<game.dim; i++){
-        if(tentative.seq_user[i]=='O'){
-            tentative.seq_user[i]='!';  //In the difficult mode corrections show only the colour that is present in the sequence to guess in the right position
+        switch (tentative.seq_user[i]) {
+            case 'X': x++; break;
+            case 'O': break;  //in difficult mode the O signed isn't showed
+            case '!': break;
+            default: printf("ERROR!\n"); break;
+        }  //This switch count the number of X for reordinate the corrections for the difficult mode
+    }
+    for(int i=0; i<game.dim; i++){
+        if(x>0){
+            tentative.seq_user[i]='X';  //Firstly it's inserted the X based on the number the upper switch have finded
+            x--;
+        } else {
+            tentative.seq_user[i]='!';  //Lastly it's inserted the !
         }
     }
 }
@@ -108,7 +121,7 @@ void printLastTentativeInChronology(void){
     for(int i=0; i<game.dim; i++){
         printf("%c",
                game.chronology[game.dim*(game.count_tent-1)*2+game.dim+i]);  //Print the last corrections inserted in the cronology
-    }printf("/n");
+    }printf("\n");
 }
 
 //Function that checks if the next state is WIN or not
@@ -168,7 +181,7 @@ void fn_DIFFICULT_MODE(void){
 void fn_ELABORATE_RESULT(void){
     insertInChronology(tentative.seq_user);  //Insert corrections in chronology
     printLastTentativeInChronology();  //Print the complete output of the last tentative
-    current_state = winCondition() ? WIN : START_TENTATIVE; // Transition to the next state based on the win condition
+    current_state = winCondition() ? WIN : RESET_TENT; // Transition to the next state based on the win condition
 }
 
 //Function for WIN state
