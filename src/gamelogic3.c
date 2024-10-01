@@ -18,7 +18,7 @@ int checkIfTenctOrCorrection(char c){
 //Function that inserts sequence or sequence corrections in chronology
 void insertInChronology(char* seq){
     int j=checkIfTenctOrCorrection(seq[0]);  //The j index is used to insert correctly in the chronology the sequence or corrections
-    for(int i=0; i<game.dim; i++){
+    for(i=0; i<game.dim; i++){
         game.chronology[ game.dim * 2 * game.count_tent - j + i ]=seq[i];  //The minus is used because when it's add the corrections the tenctative is already the next
     }
 }
@@ -47,12 +47,12 @@ char check_difficulty(void){
 //Function that transforms the seq_user into corrections in EASY_MODE
 void correctionsEasyMode(void){
     makeArrayEmpty_Bool(game.flags, 1, game.dim);  //Function for set all the flags to false
-    for(int i=0; i<game.dim; i++){
+    for(i=0; i<game.dim; i++){
         if(tentative.seq_user[i]==game.seq_to_guess[i]){  //If the colour in the seq user corrispond to the colour of the sequence to guess in the same position
             tentative.seq_user[i]= 'X';  //That means the colour is correct and in the right position
             game.flags[i]=true;
         } else {
-            for(int j=0; j<game.dim; j++){
+            for(j=0; j<game.dim; j++){
                 if(tentative.seq_user[i]==game.seq_to_guess[j]){  //If the colour in the seq user corrispond to the colour of the sequence to guess in at least one position
                     if(game.flags[j]!=true){  //If the colour in that position of the seq_to_guess was already been selected it must be ! not O
                         tentative.seq_user[i]= 'O';  //That means the colour is correct but in wrong position
@@ -71,7 +71,7 @@ void correctionsEasyMode(void){
 void correctionsMediumMode(void){
     int o=0; int x=0;
     correctionsEasyMode();
-    for(int i=0; i<game.dim; i++){
+    for(i=0; i<game.dim; i++){
         switch (tentative.seq_user[i]) {
             case 'X': x++; break;
             case 'O': o++; break;
@@ -79,7 +79,7 @@ void correctionsMediumMode(void){
             default: printf("ERROR!\n"); break;
         }  //This switch count the number of X O for reordinate the corrections for the medium mode
     }
-    for(int i=0; i<game.dim; i++){
+    for(i=0; i<game.dim; i++){
         if(x>0){
             tentative.seq_user[i]='X';  //Firstly it's inserted the X based on the number the upper switch have finded
             x--;
@@ -96,7 +96,7 @@ void correctionsMediumMode(void){
 void correctionsDifficultMode(void){
     int x=0;
     correctionsEasyMode();
-    for(int i=0; i<game.dim; i++){
+    for(i=0; i<game.dim; i++){
         switch (tentative.seq_user[i]) {
             case 'X': x++; break;
             case 'O': break;  //in difficult mode the O signed isn't showed
@@ -104,7 +104,7 @@ void correctionsDifficultMode(void){
             default: printf("ERROR!\n"); break;
         }  //This switch count the number of X for reordinate the corrections for the difficult mode
     }
-    for(int i=0; i<game.dim; i++){
+    for(i=0; i<game.dim; i++){
         if(x>0){
             tentative.seq_user[i]='X';  //Firstly it's inserted the X based on the number the upper switch have finded
             x--;
@@ -117,12 +117,12 @@ void correctionsDifficultMode(void){
 //Function that prints the last sequence inserted in the chronology with the respective corrections
 void printLastTentativeInChronology(void){
     printf("Sequence: ");
-    for(int i=0; i<game.dim; i++){
+    for(i=0; i<game.dim; i++){
         printf("%c",
                game.chronology[game.dim*(game.count_tent-1)*2+i]);  //Print the last sequence inserted in the cronology
     }
     printf(" Corrections: ");
-    for(int i=0; i<game.dim; i++){
+    for(i=0; i<game.dim; i++){
         printf("%c",
                game.chronology[game.dim*(game.count_tent-1)*2+game.dim+i]);  //Print the last corrections inserted in the cronology
     }printf("\n");
@@ -130,7 +130,7 @@ void printLastTentativeInChronology(void){
 
 //Function that checks if the next state is WIN or not
 bool winCondition(void){
-    for(int i=0; i<game.dim; i++){
+    for(i=0; i<game.dim; i++){
         if(game.chronology[game.dim*(game.count_tent-1)*2+i]!=game.seq_to_guess[i]){
             return false;  //If a value of the last sequence inserted in the chronology doesn't correspond to the sequence to guess the win condition is false
         }
