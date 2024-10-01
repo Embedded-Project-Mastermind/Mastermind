@@ -5,14 +5,7 @@
 //  Created by Matteo Gottardelli on 27/09/24.
 //
 #include "gamelogic1.h"
-/* Function to clean a character array */
-void makeArrayEmpty_Char(char* array, int par1, int par2) {
-    for (int i = 0; i < par1; i++) {
-        for (int j = 0; j < par2; j++) {
-            array[i * par1 + j] = 0; // Set each element to zero
-        }
-    }
-}
+
 /* Deallocate memory for a character array */
 void deallocate_Char(char* array) {
     free(array);    // Free allocated memory
@@ -29,7 +22,14 @@ void deallocate_Bool(bool* array){
     free(array);    // Free allocated memory
     array = NULL;   // Set pointer to NULL
 }
-
+/* Function to clean a character array */
+void makeArrayEmpty_Char(char* array, int par1, int par2) {
+    for (int i = 0; i < par1; i++) {
+        for (int j = 0; j < par2; j++) {
+            array[i * par1 + j] = 0; // Set each element to zero
+        }
+    }
+}
 /* Function to clean an integer array */
 void makeArrayEmpty_Int(int* array, int par1, int par2) {
     for (int i = 0; i < par1; i++) {
