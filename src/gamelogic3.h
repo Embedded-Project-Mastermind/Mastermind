@@ -34,4 +34,5 @@ void correctionsMediumMode(void); //Function that transforms the seq_user into c
 void correctionsDifficultMode(void); //Function that transforms the seq_user into corrections in DIFFICULT_MODE
 void printLastTentativeInChronology(void);  //Function that prints the last sequence the last sequence inserted in the chronology with the respective corrections
 bool winCondition(void); //Function that checks if the next state is WIN or not
+
 #endif
