@@ -24,12 +24,25 @@ void deallocate_Int(int* array) {
     free(array);    // Free allocated memory
     array = NULL;   // Set pointer to NULL
 }
+/* Deallocates boolean array memory */
+void deallocate_Bool(bool* array){
+    free(array);    // Free allocated memory
+    array = NULL;   // Set pointer to NULL
+}
 
 /* Function to clean an integer array */
 void makeArrayEmpty_Int(int* array, int par1, int par2) {
     for (int i = 0; i < par1; i++) {
         for (int j = 0; j < par2; j++) {
             array[i * par1 + j] = 0; // Set each element to zero
+        }
+    }
+}
+/* Initializes a boolean array to false */
+void makeArrayEmpty_Bool(bool* array, int par1, int par2){
+    for (int i = 0; i < par1; i++) {
+        for (int j = 0; j < par2; j++) {
+            array[i * par1 + j] = 0; // Set each element to false
         }
     }
 }
@@ -60,6 +73,19 @@ void allocate_in_Heap_Int(int** array, int par1, int par2) {
     makeArrayEmpty_Int(*array, par1, par2); // Initialize the allocated array
 }
 
+/*Memory allocation for a boolean array*/
+void allocate_in_Heap_Bool(bool** array, int par1, int par2){
+    if (array!=NULL) {
+        deallocate_Bool(*array);
+    }
+    *array = (bool*)malloc(par1 * par2 * sizeof(bool));
+    if (*array == NULL) {
+        printf("Error! memory not allocated."); // Handle memory allocation failure
+        exit(1);
+    }
+    makeArrayEmpty_Bool(*array, par1, par2); // Initialize the allocated array
+}
+
 /* Initialize the game with parameters */
 void initGame(int dim, char diff, bool doubles, int tents) {
     game.dim = dim;                     // Set the dimension
@@ -69,6 +95,7 @@ void initGame(int dim, char diff, bool doubles, int tents) {
     game.tentatives = tents;             // Set the total number of attempts
     allocate_in_Heap_Char(&game.seq_to_guess, 1, game.dim); // Allocate memory for the sequence to guess
     allocate_in_Heap_Char(&game.chronology, game.tentatives, game.dim * 2); // Allocate memory for attempt history
+    allocate_in_Heap_Bool(&game.flags, 1, game.dim);  //allocate memory for flags
 }
 
 /* Generate a random integer between min and max */
