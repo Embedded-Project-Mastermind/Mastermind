@@ -31,7 +31,7 @@ bool checkIfGameOver(void);  //Function that checks if the maximum number of att
 char check_difficulty(void);  //Function that checks the difficulty degree
 void correctionsEasyMode(void); //Function that transforms the seq_user into corrections in EASY_MODE
 void correctionsMediumMode(void); //Function that transforms the seq_user into corrections in MEDIUM_MODE
-void correctionsEasyMode(void); //Function that transforms the seq_user into corrections in DIFFICULT_MODE
+void correctionsDifficultMode(void); //Function that transforms the seq_user into corrections in DIFFICULT_MODE
 void printLastTentativeInChronology(void);  //Function that prints the last sequence the last sequence inserted in the chronology with the respective corrections
 bool winCondition(void); //Function that checks if the next state is WIN or not
 #endif
