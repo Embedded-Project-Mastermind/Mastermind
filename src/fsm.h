@@ -37,5 +37,6 @@ typedef struct {
 /* Global variables */
 extern Game game;                  // Game struct instance
 extern Tentative tentative;        // Tentative struct instance
-extern State current_state;  // Initialize current state
+extern State current_state;    // Initialize current state
+int i, j;                     //Variables acting like counters for for-cycles
 #endif /* fsm_h */
