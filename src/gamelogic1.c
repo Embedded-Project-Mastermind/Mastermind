@@ -24,24 +24,24 @@ void deallocate_Bool(bool* array){
 }
 /* Function to clean a character array */
 void makeArrayEmpty_Char(char* array, int par1, int par2) {
-    for (int i = 0; i < par1; i++) {
-        for (int j = 0; j < par2; j++) {
+    for (i = 0; i < par1; i++) {
+        for (j = 0; j < par2; j++) {
             array[i * par1 + j] = 0; // Set each element to zero
         }
     }
 }
 /* Function to clean an integer array */
 void makeArrayEmpty_Int(int* array, int par1, int par2) {
-    for (int i = 0; i < par1; i++) {
-        for (int j = 0; j < par2; j++) {
+    for (i = 0; i < par1; i++) {
+        for (j = 0; j < par2; j++) {
             array[i * par1 + j] = 0; // Set each element to zero
         }
     }
 }
 /* Initializes a boolean array to false */
 void makeArrayEmpty_Bool(bool* array, int par1, int par2){
-    for (int i = 0; i < par1; i++) {
-        for (int j = 0; j < par2; j++) {
+    for (i = 0; i < par1; i++) {
+        for (j = 0; j < par2; j++) {
             array[i * par1 + j] = 0; // Set each element to false
         }
     }
@@ -107,7 +107,7 @@ int random_int(int min, int max) {
 int* key_generation_wh_doub(void) {
     int* array = NULL;
     allocate_in_Heap_Int(&array, 1, game.dim); // Allocate memory for the key
-    for (int i = 0; i < game.dim; i++) {
+    for (i = 0; i < game.dim; i++) {
         array[i] = random_int(1, COLORS); // Assign random values to the array
     }
     return array; // Return the generated key
@@ -116,7 +116,7 @@ int* key_generation_wh_doub(void) {
 /* Check if a value is already present in the array */
 bool presence_Double(int* array, int value, int dim) {
     if (dim == 1) return false; // If array has only one element, no duplicates possible
-    for (int i = 0; i < dim - 1; i++) {
+    for (i = 0; i < dim - 1; i++) {
         if (array[i] == value) return true; // Return true if the value is found
     }
     return false; // Return false if the value is not found
@@ -126,7 +126,7 @@ bool presence_Double(int* array, int value, int dim) {
 int* key_generation_wout_doub(void) {
     int* array = NULL;
     allocate_in_Heap_Int(&array, 1, game.dim); // Allocate memory for the key
-    for (int i = 0; i < game.dim; i++) {
+    for (i = 0; i < game.dim; i++) {
         int value = random_int(1, COLORS); // Generate a random value
         if (!presence_Double(array, value, i + 1)) {
             array[i] = value; // Assign value if not already present
@@ -154,19 +154,19 @@ char int_Conversion_to_Char(int index) {
 
 /* Convert an integer array to a character array */
 void crypt_sequence_Int_Char(int* arr1, char* arr2, int dim) {
-    for (int i = 0; i < dim; i++) {
+    for (i = 0; i < dim; i++) {
         arr2[i] = int_Conversion_to_Char(arr1[i]); // Convert each integer to character
     }
 }
 
 /* Continue the key decryption process */
 void continue_Key_Decryption(int* sequence) {
-    for (int i=0; i<game.dim; i++) {
+    for (i=0; i<game.dim; i++) {
         printf("%d", sequence[i]);
     }
     printf("\n");
     crypt_sequence_Int_Char(sequence, game.seq_to_guess, game.dim); // Convert the sequence
-    for (int i=0; i<game.dim; i++) {
+    for (i=0; i<game.dim; i++) {
         printf("%c", game.seq_to_guess[i]);
     }
     printf("\n");
