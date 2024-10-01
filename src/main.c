@@ -20,7 +20,7 @@ StateMachine fsm[] = {
     {START, fn_START},
     {KEY_WOUT_DOUB, fn_KEY_WOUT_DOUB},
     {KEY_WH_DOUB, fn_KEY_WH_DOUB},
-    {RESET_TENT, fn_RESET_TENT}
+    {RESET_TENT, fn_RESET_TENT},
      //Insert here other state machines
     {ELABORATE_TENT, fn_ELABORATE_TENT},
     {INCREMENT_TENT, fn_INCREMENT_TENT},
