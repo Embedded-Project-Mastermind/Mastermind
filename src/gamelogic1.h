@@ -34,6 +34,6 @@ void continue_Key_Decryption(int* sequence);  // Continues decryption process fo
 void resetTentative(void);                     // Resets the tentative state for the user's guesses
 void makeArrayEmpty_Char(char* array, int par1, int par2); // Initializes a character array to zero
 void makeArrayEmpty_Int(int* array, int par1, int par2);   // Initializes a boolean array to zero
-void makeArrayEmpty_Bool(bool* array, int par1, int par2);   // Initializes an integer array to zero
+void makeArrayEmpty_Bool(bool* array, int par1, int par2);   // Initializes a boolean array to false
 
 #endif
