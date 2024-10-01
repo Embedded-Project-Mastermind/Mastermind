@@ -44,6 +44,7 @@ void main(void) {
             if (current_state == ERROR) {
                 deallocate_Char(game.seq_to_guess); // Deallocate sequence memory
                 deallocate_Char(game.chronology); // Deallocate chronology memory
+                deallocate_Bool(game.flags); //Deallocate flag memory
                 break; // Exit the loop
             }
         }
