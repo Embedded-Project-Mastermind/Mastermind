@@ -1,3 +1,9 @@
+//
+//  fsm.h
+//  Mastermind Program
+//
+//  Created by Matteo Gottardelli on 01/10/24.
+//
 #include "msp.h"
 #include "stdbool.h"
 #include <ti/devices/msp432p4xx/inc/msp.h>
