@@ -13,7 +13,17 @@ void makeArrayEmpty_Char(char* array, int par1, int par2) {
         }
     }
 }
+/* Deallocate memory for a character array */
+void deallocate_Char(char* array) {
+    free(array);    // Free allocated memory
+    array = NULL;   // Set pointer to NULL
+}
 
+/* Deallocate memory for an integer array */
+void deallocate_Int(int* array) {
+    free(array);    // Free allocated memory
+    array = NULL;   // Set pointer to NULL
+}
 /* Function to clean an integer array */
 void makeArrayEmpty_Int(int* array, int par1, int par2) {
     for (int i = 0; i < par1; i++) {
@@ -25,6 +35,9 @@ void makeArrayEmpty_Int(int* array, int par1, int par2) {
 
 /* Memory allocation for a character array */
 void allocate_in_Heap_Char(char** array, int par1, int par2) {
+    if (array!=NULL) {
+        deallocate_Char(*array);
+    }
     *array = (char*)malloc(par1 * par2 * sizeof(char));
     if (*array == NULL) {
         printf("Error! memory not allocated."); // Handle memory allocation failure
@@ -35,6 +48,9 @@ void allocate_in_Heap_Char(char** array, int par1, int par2) {
 
 /* Memory allocation for an integer array */
 void allocate_in_Heap_Int(int** array, int par1, int par2) {
+    if (array!=NULL) {
+        deallocate_Int(*array);
+    }
     *array = (int*)malloc(par1 * par2 * sizeof(int));
     if (*array == NULL) {
         printf("Error! memory not allocated."); // Handle memory allocation failure
@@ -52,18 +68,6 @@ void initGame(int dim, char diff, bool doubles, int tents) {
     game.tentatives = tents;             // Set the total number of attempts
     allocate_in_Heap_Char(&game.seq_to_guess, 1, game.dim); // Allocate memory for the sequence to guess
     allocate_in_Heap_Char(&game.chronology, game.tentatives, game.dim * 2); // Allocate memory for attempt history
-}
-
-/* Deallocate memory for a character array */
-void deallocate_Char(char* array) {
-    free(array);    // Free allocated memory
-    array = NULL;   // Set pointer to NULL
-}
-
-/* Deallocate memory for an integer array */
-void deallocate_Int(int* array) {
-    free(array);    // Free allocated memory
-    array = NULL;   // Set pointer to NULL
 }
 
 /* Generate a random integer between min and max */
