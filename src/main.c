@@ -34,7 +34,7 @@ StateMachine fsm[] = {
 Game game;
 Tentative tentative;
 State current_state=START;
-void main(void) {
+int main(void) {
     srand((unsigned)time(NULL)); // Seed the random number generator
     while (1) {
         if (current_state < ERROR) {
@@ -49,4 +49,5 @@ void main(void) {
             }
         }
     }
+    return 0;
 }
