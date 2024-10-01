@@ -95,22 +95,10 @@ void correctionsMediumMode(void){
 
 //Function that transforms the seq_user into corrections in DIFFICULT_MODE
 void correctionsDifficultMode(void){
-    int x=0;
-    correctionsEasyMode();
+    correctionsMediumMode();
     for(int i=0; i<game.dim; i++){
-        switch (tentative.seq_user[i]) {
-            case 'X': x++; break;
-            case 'O': break;  //in difficult mode the O signed isn't showed
-            case '!': break;
-            default: printf("ERROR!\n"); break;
-        }  //This switch count the number of X for reordinate the corrections for the difficult mode
-    }
-    for(int i=0; i<game.dim; i++){
-        if(x>0){
-            tentative.seq_user[i]='X';  //Firstly it's inserted the X based on the number the upper switch have finded
-            x--;
-        } else {
-            tentative.seq_user[i]='!';  //Lastly it's inserted the !
+        if(tentative.seq_user[i]=='O'){
+            tentative.seq_user[i]='!';  //Difficult mode showed only X and ! (not O)
         }
     }
 }
