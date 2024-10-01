@@ -77,7 +77,7 @@ void correctionsMediumMode(void){
             case 'X': x++; break;
             case 'O': o++; break;
             case '!': break;
-            default: printf("ERROR!\n"); break;
+            default: exit(1);
         }  //This switch count the number of X O for reordinate the corrections for the medium mode
     }
     for(int i=0; i<game.dim; i++){
@@ -139,9 +139,10 @@ void fn_INCREMENT_TENT(void){
         current_state=GAME_OVER;  //if it's reached the number of tentatives the next state is GAME_OVER
     }else{
         switch (check_difficulty()) {  //otherwise a check_difficult must be made
+            case 'A': current_state=EASY_MODE; break; // Transition to the EASY_MODE state
             case 'B': current_state=MEDIUM_MODE; break;  // Transition to the MEDIUM_MODE state
             case 'C': current_state=DIFFICULT_MODE; break;  // Transition to the DIFFICULT_MODE state
-            default: current_state=EASY_MODE; break;  // Transition to the EASY_MODE state
+            default: exit(1);  //Error rises
         }
     }
 }
