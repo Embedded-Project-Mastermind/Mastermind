@@ -4,7 +4,10 @@
 #include "fsm.h"
 #include "gamelogic1.h"
 #include "gamelogic2.h"
-
+//For avoiding duplicates in compilation
+char temp;
+int value;
+bool selection;
 bool is_empty(void){     //tentative.count=null, then the array is empty (true, if not empty false) 
      (tentative.count = 0) ? true : false; 	
 }
