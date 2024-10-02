@@ -9,11 +9,11 @@ char temp;
 int value;
 bool selection;
 bool is_empty(void){     //tentative.count=null, then the array is empty (true, if not empty false) 
-     (tentative.count = 0) ? true : false; 	
+     return (tentative.count == 0) 
 }
 
 bool is_full(void){   	//If count=dim, then array is full (true, if != then false)
-(tentative.count  = tentative.dim) ? true : false;
+     return (tentative.count  == tentative.dim);
 }
 
 void text_selection(bool sel){     //selects which text to display
@@ -29,7 +29,7 @@ void full_text(){
      printf("The array is full, click 2 to confirm and 3 to go back.\nSelection: ");    
 }
 
-int read(int dim){     //reads the input from keyboard and verifies if it's correct
+int read_input(int dim){     //reads the input from keyboard and verifies if it's correct
     int value = 0;
     do{       //done with a do while so we are sure that it executes
        if(current_state == WAIT || current_state == ELABORATE) { text_selection(selection);}
@@ -40,6 +40,7 @@ int read(int dim){     //reads the input from keyboard and verifies if it's corr
 	       value = 0;
        }	
        }while(value < 1 || value > dim);	//do while exit condition
+	return value;
 }
 
 void print_sequence(char* seq, int dim){
@@ -63,7 +64,7 @@ void handle_wait(int val){
 	}
 }
 
-void wait() { 
+void wait_handle() { 
      selection = true;  	//to select menu text from text_selection()
      value = read(OPTIONS);   	//to read the value in input
      selection = false;   	//to change text selection in function text_selection
@@ -71,7 +72,7 @@ void wait() {
 	
 }
 
-void wait_full() {  //wait function when the array is full
+void wait_full(void) {  //wait function when the array is full
     full_text();   //prints the text that tells what instructions you can do
 	int value = read(OPTIONS);   //gets the value from the keyboard
 	handle_wait(value);	//calls handle_wait(), which handles the input and redirects to the correct state
