@@ -9,9 +9,6 @@
 #include "gamelogic1.h"
 
 #define OPTIONS 3  //number of button options: 1=input, 2=confirm, 3=back
-char temp = '\0';  // used to pass converted vale into char(color) crom a function to another
-int value = 0;   //used to pass input value from a function to another
-bool selection = true; // true if text_selection -> buttons menu, false if text selection -> colors menu
 
 /* Function declarations */
 void fn_WAIT(void);                 //Function for WAIT state
