@@ -37,6 +37,13 @@ int read(int dim){     //reads the input from keyboard and verifies if it's corr
        }while(value < 1 || value > dim);	//do while exit condition
 }
 
+void print_sequence(char* seq, int dim){
+     for(int i=0; i< dim; i++){
+             printf("%c ", seq[i]);
+             }
+     printf("\n");
+}
+
 void handle_wait(int val){
      if(current_state == WAIT){ text_selection(selection);}	//text selection for wait() function
      if(current_state == WAIT_FULL) { full_text(); }	//text for wait_full() function
@@ -83,6 +90,7 @@ void insert_color(char color){
         tentative.seq_user[tentative.count]=color; 	//inserts the color in the tentave array seq_user
         tentative.count +=1;	//incremets tentative counter
     }
+    print_sequence(tentative.seq_user, tentative.count);  //to print sequence after adding an element
 }
 
 
@@ -91,7 +99,7 @@ void eliminate_color( ){  //eliminates color in position tentative.count from se
      tentative.count -= 1;  	//decrements tentative.count
      tentative.seq_user[tentative.count]= '\0';   //eliminate color 
 	}
-	
+     print_sequence(tentative.seq_user, tentative.count);  //to print sequence after eliminating an element
 }
 
 bool elaborate(){  
