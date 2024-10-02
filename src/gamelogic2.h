@@ -20,10 +20,10 @@ bool is_empty(void);                // checks if the array seq_user  is empty
 bool is_full(void);                 // checks if the array seq_user  is full
 void text_selection(bool sel);      //selects the test to display
 void full_text();                  //displays the text if the arrya is full
-int read(int dim);        //reads input value from keyboard and verifies if correct
+int read_input(int dim);        //reads input value from keyboard and verifies if correct
 void handle_wait(int value);      //menu selection(buttons or colors)
 void print_sequence(char* seq, int dim);  //to print the sequence
-void wait(void);   //Function that waits for an input from the buttons(interrupt)
+void wait_handle(void);   //Function that waits for an input from the buttons(interrupt)
 void wait_full(void);     //Function to wait if the array is full 
 void insert_color(char color);   //Function to insert color in the array seq_user
 void eliminate_color(void);   //Function to eliminate color from the array seq_user
