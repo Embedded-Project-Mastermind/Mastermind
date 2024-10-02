@@ -38,23 +38,23 @@ int read(int dim){     //reads the input from keyboard and verifies if it's corr
 }
 
 void handle_wait(int val){
-     if(current_state == WAIT){ text_selection(selection);}
-     if(current_state == WAIT_FULL) { full_text(); }
+     if(current_state == WAIT){ text_selection(selection);}	//text selection for wait() function
+     if(current_state == WAIT_FULL) { full_text(); }	//text for wait_full() function
 	switch(val){
-		case 1: if(current_state == WAIT){  
+		case 1: if(current_state == WAIT){  //if it's in WAIT state->it can take the input and goes in ELABORATE 
 					current_state  = ELABORATE;}
 				else{
 					printf("Can't continue!");   //error message
 				}
 				break;
-		case 2:	if(current_state == WAIT_FULL){
+		case 2:	if(current_state == WAIT_FULL){  //if state is WAIT_FULL then the user can confirm the tentative and so changes the state
 					current_state = ELABORATE_TENT;
 				}
 				else {
 					printf("Can't elaborate because the array is not full!");  //error message
 				}
 				break;
-		case 3: if(!is_empty()){
+		case 3: if(!is_empty()){  //if the array isn't empty the color can be eliminated -> ELIMINATE_COLOR state
 					current_state = ELIMINATE_COLOR;
 				}
 				else {
@@ -65,30 +65,30 @@ void handle_wait(int val){
 }
 
 void wait() { 
-     selection = true;  //to select menu text from text_selection()
-     value = read(OPTIONS);   //to read the value in input
-     selection = false;   //to change text selection in function text_selection
-     handle_wait(value); //
+     selection = true;  	//to select menu text from text_selection()
+     value = read(OPTIONS);   	//to read the value in input
+     selection = false;   	//to change text selection in function text_selection
+     handle_wait(value); 	//calls handle_wait(), which handles the input and redirects to the correct state
 	
 }
 
 void wait_full() {  //wait function when the array is full
     full_text();   //prints the text that tells what instructions you can do
 	int value = read(OPTIONS);   //gets the value from the keyboard
-	handle_wait(value);
+	handle_wait(value);	//calls handle_wait(), which handles the input and redirects to the correct state
 }
 
 void insert_color(char color){
-	if(!(is_full())){
-        tentative.seq_user[tentative.count]=color; 
-        tentative.count +=1;
+	if(!(is_full())){	//verifies if the array is full
+        tentative.seq_user[tentative.count]=color; 	//inserts the color in the tentave array seq_user
+        tentative.count +=1;	//incremets tentative counter
     }
 }
 
 
 void eliminate_color( ){  //eliminates color in position tentative.count from seq_user array
-     if(!(is_empty())){
-     tentative.count -= 1;   //decrements tentative.count
+     if(!(is_empty())){	 	//verifies if empty
+     tentative.count -= 1;  	//decrements tentative.count
      tentative.seq_user[tentative.count]= '\0';   //eliminate color 
 	}
 	
@@ -98,16 +98,16 @@ bool elaborate(){
      selection = false;   //set boolean variable selection to false to display the correct text
      value = read(COLORS);   //gets input from keyboard as an integer
      temp = int_Conversion_to_Char(value); //global variable that saves the chosen color
-     return true; //fittizio
+     return true;	 //fittizio
 }
 void fn_WAIT(void) {
-	wait(); //actions of wait state
+	wait(); 	//actions of wait state
 }
 
 void fn_ELABORATE(void){
-/*	if(elaborate()){ current_state = INSERT_COLOR; }
+/*	if(elaborate()){ current_state = INSERT_COLOR; }	
 	else { current_state = WAIT; }*/
-	current_state = (elaborate()) ? INSERT_COLOR : WAIT;
+	current_state = (elaborate()) ? INSERT_COLOR : WAIT;	//if the input is correct it changes state to insert the color, otherwise returns to wait
 }
 
 void fn_INSERT_COLOR(){
