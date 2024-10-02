@@ -29,10 +29,10 @@ void full_text(){
 int read(int dim){     //reads the input from keyboard and verifies if it's correct
     int value = 0;
     do{       //done with a do while so we are sure that it executes
-       if(current_state == WAIT) { text_selection(selection);}
+       if(current_state == WAIT || current_state == ELABORATE) { text_selection(selection);}
        else if(current_state == WAIT_FULL) { full_text(); }    
        value = scanf("%d", value);       //scans the value to analize
-       if((current_state == WAIT && value == 2) || (current_state == WAIT_FULL && value == 1) || (is_empty() && value == 3)){
+       if(selection && ((current_state == WAIT && value == 2) || (current_state == WAIT_FULL && value == 1) || (is_empty() && value == 3))){
 	       printf("Function not available in this state!");
 	       value = 0;
        }	
