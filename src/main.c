@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include "gamelogic1.h"
+#include "gamelogic2.h"
 #include "gamelogic3.h"
 #include "fsm.h"
 // Finite State Machine declaration
