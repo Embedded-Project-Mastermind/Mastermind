@@ -19,7 +19,7 @@ void fn_ELIMINATE_COLOR(void);      //Function for ELIMINATE_COLOR state
 bool is_empty(void);                // checks if the array seq_user  is empty
 bool is_full(void);                 // checks if the array seq_user  is full
 void text_selection(bool sel);      //selects the test to display
-void full_text();                  //displays the text if the arrya is full
+void full_text(void);                  //displays the text if the arrya is full
 int read_input(int dim);        //reads input value from keyboard and verifies if correct
 void handle_wait(int value);      //menu selection(buttons or colors)
 void print_sequence(char* seq, int dim);  //to print the sequence
