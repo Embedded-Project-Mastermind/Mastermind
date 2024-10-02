@@ -203,6 +203,6 @@ void fn_KEY_WH_DOUB(void) {
 /* Function for the RESET_TENT state */
 void fn_RESET_TENT(void) {
     resetTentative(); // Reset user's tentative state
-    current_state = ERROR; // Transition to the ERROR state
+    current_state = WAIT; // Transition to the ERROR state
 }
 
