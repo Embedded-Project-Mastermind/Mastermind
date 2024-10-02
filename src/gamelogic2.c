@@ -18,15 +18,15 @@ bool is_full(void){   	//If count=dim, then array is full (true, if != then fals
 
 void text_selection(bool sel){     //selects which text to display
 	if(sel){             //if true -> button menu
-	printf("Selection menu: \n- Type 1 to insert an input \n- Type 2 to press confirm\n- Type 3 to press back \n");
+	printf("Selection menu: \n- Type 1 to insert an input \n- Type 2 to press confirm\n- Type 3 to press back \nSelection: ");
 	}
 	else{             //if false -> color menu
-		printf("Colors selection menu:\n- 1 red \n- 2 green \n- 3 blue \n-4 yellow \n- 5 purple \n- 6 cyan \n ");
+		printf("Colors selection menu:\n- 1 red \n- 2 green \n- 3 blue \n-4 yellow \n- 5 purple \n- 6 cyan \nSelection: ");
 	}
 }
 
 void full_text(){
-     printf("The array is full, click 2 to confirm and 3 to go back");    
+     printf("The array is full, click 2 to confirm and 3 to go back.\nSelection: ");    
 }
 
 int read(int dim){     //reads the input from keyboard and verifies if it's correct
@@ -34,7 +34,7 @@ int read(int dim){     //reads the input from keyboard and verifies if it's corr
     do{       //done with a do while so we are sure that it executes
        if(current_state == WAIT || current_state == ELABORATE) { text_selection(selection);}
        else if(current_state == WAIT_FULL) { full_text(); }    
-       value = scanf("%d", value);       //scans the value to analize
+       value = scanf("%d", &value);       //scans the value to analize
        if(selection && ((current_state == WAIT && value == 2) || (current_state == WAIT_FULL && value == 1) || (is_empty() && value == 3))){
 	       printf("Function not available in this state!");
 	       value = 0;
