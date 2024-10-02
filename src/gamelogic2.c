@@ -64,9 +64,9 @@ void handle_wait(int val){
 	}
 }
 
-void wait_handle() { 
+void wait_handle(void) { 
      selection = true;  	//to select menu text from text_selection()
-     value = read(OPTIONS);   	//to read the value in input
+     value = read_input(OPTIONS);   	//to read the value in input
      selection = false;   	//to change text selection in function text_selection
      handle_wait(value); 	//calls handle_wait(), which handles the input and redirects to the correct state
 	
@@ -74,7 +74,7 @@ void wait_handle() {
 
 void wait_full(void) {  //wait function when the array is full
     full_text();   //prints the text that tells what instructions you can do
-	int value = read(OPTIONS);   //gets the value from the keyboard
+	int value = read_input(OPTIONS);   //gets the value from the keyboard
 	handle_wait(value);	//calls handle_wait(), which handles the input and redirects to the correct state
 }
 
@@ -87,7 +87,7 @@ void insert_color(char color){
 }
 
 
-void eliminate_color( ){  //eliminates color in position tentative.count from seq_user array
+void eliminate_color(void){  //eliminates color in position tentative.count from seq_user array
      if(!(is_empty())){	 	//verifies if empty
      tentative.count -= 1;  	//decrements tentative.count
      tentative.seq_user[tentative.count]= '\0';   //eliminate color 
@@ -95,14 +95,14 @@ void eliminate_color( ){  //eliminates color in position tentative.count from se
      print_sequence(tentative.seq_user, tentative.count);  //to print sequence after eliminating an element
 }
 
-bool elaborate(){  
+bool elaborate(void){  
      selection = false;   //set boolean variable selection to false to display the correct text
-     value = read(COLORS);   //gets input from keyboard as an integer
+     value = read_input(COLORS);   //gets input from keyboard as an integer
      temp = int_Conversion_to_Char(value); //global variable that saves the chosen color
      return true;	 //fittizio
 }
 void fn_WAIT(void) {
-	wait(); 	//actions of wait state
+	wait_handle(); 	//actions of wait state
 }
 
 void fn_ELABORATE(void){
