@@ -68,14 +68,11 @@ void wait_handle(void) {
      selection = true;  	//to select menu text from text_selection()
      value = read_input(OPTIONS);   	//to read the value in input
      selection = false;   	//to change text selection in function text_selection
-     handle_wait(value); 	//calls handle_wait(), which handles the input and redirects to the correct state
-	
 }
 
 void wait_full(void) {  //wait function when the array is full
     full_text();   //prints the text that tells what instructions you can do
-	int value = read_input(OPTIONS);   //gets the value from the keyboard
-	handle_wait(value);	//calls handle_wait(), which handles the input and redirects to the correct state
+    value = read_input(OPTIONS);   //gets the value from the keyboard	
 }
 
 void insert_color(char color){
@@ -103,6 +100,7 @@ bool elaborate(void){
 }
 void fn_WAIT(void) {
 	wait_handle(); 	//actions of wait state
+	handle_wait(value); 	//calls handle_wait(), which handles the input and redirects to the correct state
 }
 
 void fn_ELABORATE(void){
@@ -121,6 +119,7 @@ void fn_INSERT_COLOR(){
 
 void fn_WAIT_FULL(void) {
 	wait_full(); //actions of wait_full state
+	handle_wait(value); 	//calls handle_wait(), which handles the input and redirects to the correct state
 }
 
 void fn_ELIMINATE_COLOR(void){
