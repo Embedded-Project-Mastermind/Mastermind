@@ -29,8 +29,8 @@ void full_text(){
 int read(int dim){     //reads the input from keyboard and verifies if it's correct
     int value = 0;
     do{       //done with a do while so we are sure that it executes
-       if(current_state == WAIT){ text_selection(selection);}
-       else { full_text(); }    
+       if(current_state == WAIT) { text_selection(selection);}
+       else if(current_state == WAIT_FULL) { full_text(); }    
        value = scanf("%d", value);       //scans the value to analize
        if((current_state == WAIT && value == 2) || (current_state == WAIT_FULL && value == 1) || (is_empty() && value == 3)){
 	       printf("Function not available in this state!");
@@ -50,25 +50,12 @@ void handle_wait(int val){
      if(current_state == WAIT){ text_selection(selection);}	//text selection for wait() function
      if(current_state == WAIT_FULL) { full_text(); }	//text for wait_full() function
 	switch(val){
-		case 1: if(current_state == WAIT){  //if it's in WAIT state->it can take the input and goes in ELABORATE 
-					current_state  = ELABORATE;}
-				else{
-					printf("Can't continue!");   //error message
-				}
-				break;
-		case 2:	if(current_state == WAIT_FULL){  //if state is WAIT_FULL then the user can confirm the tentative and so changes the state
-					current_state = ELABORATE_TENT;
-				}
-				else {
-					printf("Can't elaborate because the array is not full!");  //error message
-				}
-				break;
-		case 3: if(!is_empty()){  //if the array isn't empty the color can be eliminated -> ELIMINATE_COLOR state
-					current_state = ELIMINATE_COLOR;
-				}
-				else {
-					printf("Can't eliminate color, because the array is empty");        //error message
-				}
+		case 1: current_state  = ELABORATE;
+			break;
+		case 2:	current_state = ELABORATE_TENT;
+			break;
+		case 3: current_state = ELIMINATE_COLOR;
+			break;
 		default: exit(1);
 	}
 }
