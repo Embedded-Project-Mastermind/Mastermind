@@ -29,11 +29,13 @@ void full_text(){
 int read(int dim){     //reads the input from keyboard and verifies if it's correct
     int value = 0;
     do{       //done with a do while so we are sure that it executes
-	   text_selection(selection);  //da mettere all'esterno se non vogliamo che ristampi il testo ogni volta(poco rilevante)
+       if(current_state == WAIT){ text_selection(selection);}
+       else { full_text(); }    
        value = scanf("%d", value);       //scans the value to analize
-       if(value> 0 && value <= dim){     //value must respect these constraints
-	             return value;
-       }
+       if((current_state == WAIT && value == 2) || (current_state == WAIT_FULL && value == 1) || (is_empty() && value == 3)){
+	       printf("Function not available in this state!");
+	       value = 0;
+       }	
        }while(value < 1 || value > dim);	//do while exit condition
 }
 
