@@ -109,7 +109,7 @@ void fn_ELABORATE(void){
 	current_state = (elaborate()) ? INSERT_COLOR : WAIT;	//if the input is correct it changes state to insert the color, otherwise returns to wait
 }
 
-void fn_INSERT_COLOR(){
+void fn_INSERT_COLOR(void){
 	insert_color(temp);  // calls insert_color(char color) function
  //verifies if the array is full or not and based on that decides in which state to jump
     current_state = (is_full()) ? WAIT_FULL : WAIT;
