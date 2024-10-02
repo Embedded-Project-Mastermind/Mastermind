@@ -100,6 +100,9 @@ bool elaborate(){
      temp = int_Conversion_to_Char(value); //global variable that saves the chosen color
      return true; //fittizio
 }
+void fn_WAIT(void) {
+	wait(); //actions of wait state
+}
 
 void fn_ELABORATE(void){
 /*	if(elaborate()){ current_state = INSERT_COLOR; }
@@ -113,6 +116,10 @@ void fn_INSERT_COLOR(){
     current_state = (is_full()) ? WAIT_FULL : WAIT;
 /*	if(is_full()){ current_state= WAIT_FULL;} 
     else { current_state= WAIT; }*/
+}
+
+void fn_WAIT_FULL(void) {
+	wait_full(); //actions of wait_full state
 }
 
 void fn_ELIMINATE_COLOR(void){
