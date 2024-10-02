@@ -40,7 +40,7 @@ int read(int dim){     //reads the input from keyboard and verifies if it's corr
 }
 
 void print_sequence(char* seq, int dim){
-     for(int i=0; i< dim; i++){
+     for(int i=0; i<dim; i++){
              printf("%c ", seq[i]);
              }
      printf("\n");
