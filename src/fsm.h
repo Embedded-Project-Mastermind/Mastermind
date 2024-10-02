@@ -38,5 +38,8 @@ typedef struct {
 extern Game game;                  // Game struct instance
 extern Tentative tentative;        // Tentative struct instance
 extern State current_state;    // Initialize current state
-int i, j;                     //Variables acting like counters for for-cycles
+extern int i, j;                     //Variables acting like counters for for-cycles
+extern char temp;                // used to pass converted vale into char(color) crom a function to another
+extern int value;                 //used to pass input value from a function to another
+extern bool selection;            // true if text_selection -> buttons menu, false if text selection -> colors menu
 #endif /* fsm_h */
