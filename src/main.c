@@ -21,7 +21,11 @@ StateMachine fsm[] = {
     {KEY_WOUT_DOUB, fn_KEY_WOUT_DOUB},
     {KEY_WH_DOUB, fn_KEY_WH_DOUB},
     {RESET_TENT, fn_RESET_TENT},
-     //Insert here other state machines
+    {WAIT, fn_WAIT},
+    {ELABORATE, fn_ ELABORATE},
+    {INSERT_COLOR, fn_INSERT_COLOR},
+    {WAIT_FULL, fn_WAIT_FULL},
+    {ELIMINATE_COLOR, fn_ELIMINATE_COLOR},
     {ELABORATE_TENT, fn_ELABORATE_TENT},
     {INCREMENT_TENT, fn_INCREMENT_TENT},
     {GAME_OVER, fn_GAME_OVER},
