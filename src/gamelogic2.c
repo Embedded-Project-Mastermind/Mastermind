@@ -9,7 +9,7 @@ char temp;
 int value;
 bool selection;
 bool is_empty(void){     //tentative.count=null, then the array is empty (true, if not empty false) 
-     return (tentative.count == 0) 
+     return (tentative.count == 0);
 }
 
 bool is_full(void){   	//If count=dim, then array is full (true, if != then false)
