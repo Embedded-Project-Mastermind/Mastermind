@@ -1,9 +1,3 @@
-//
-//  Interrupt Code for Breadboard.c
-//  Mastermind Program
-//
-//  Created by Matteo Gottardelli on 01/10/24.
-//
 #include "msp.h"
 #include "stdbool.h"
 #include <ti/devices/msp432p4xx/inc/msp.h>
@@ -12,11 +6,11 @@
 #include "LcdDriver/Crystalfontz128x128_ST7735.h"
 #include "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.h"
 #include <stdio.h>
-#define P7_D 0
-#define P8_D 1
-#define P9_D 2
-#define P10_D 3
-#define P1_D 4
+#define P3_D 1
+#define P4_D 2
+#define P5_D 3
+#define P6_D 4
+#define P1_D 0
 #define DIMIO 40
 #define BYTE 8
 #define BUZZER_DUTY_CYCLE  5000
@@ -69,30 +63,30 @@ void configurePorts() {
     P1->OUT |= (BIT1 | BIT4);
     /*enable pullup resistor*/
     P1->REN |= (BIT1 | BIT4);
-    /*Port 7*/
-    P7->SEL0 = 0x00;
-    P7->SEL1 = 0x00;
-    P7->DIR = 0x00;
-    P7->OUT = 0xFF;
-    P7->REN = 0xFF;
-    /*Port 8*/
-    P8->SEL0 = 0x00;
-    P8->SEL1 = 0x00;
-    P8->DIR = 0x00;
-    P8->OUT = 0xFF;
-    P8->REN = 0xFF;
-    /*Port 9*/
-    P9->SEL0 = 0x00;
-    P9->SEL1 = 0x00;
-    P9->DIR = 0x00;
-    P9->OUT = 0xFF;
-    P9->REN = 0xFF;
-    /*Port 10*/
-    P10->SEL0 = 0x00;
-    P10->SEL1 = 0x00;
-    P10->DIR = 0x00;
-    P10->OUT = 0xFF;
-    P10->REN = 0xFF;
+    /*Port 2*/
+    //P2->SEL0 = 0x00;
+    //P2->SEL1 = 0x00;
+    //P2->DIR = 0x00;
+    //P2->OUT = 0xFF;
+    //P2->REN = 0xFF;
+    /*Port 3*/
+    P3->SEL0 = 0x00;
+    P3->SEL1 = 0x00;
+    P3->DIR = 0x00;
+    P3->OUT = 0xFF;
+    P3->REN = 0xFF;
+    /*Port 4*/
+    P4->SEL0 = 0x00;
+    P4->SEL1 = 0x00;
+    P4->DIR = 0x00;
+    P4->OUT = 0xFF;
+    P4->REN = 0xFF;
+    /*Port 5*/
+    P5->SEL0 = 0x00;
+    P5->SEL1 = 0x00;
+    P5->DIR = 0x00;
+    P5->OUT = 0xFF;
+    P5->REN = 0xFF;
 }
 void configureInterruptPort() {
     /*P1.1 and P1.4 as HtL transition interrupt*/
@@ -103,26 +97,31 @@ void configureInterruptPort() {
     P1->IFG=0;
     /*play with ISER1 register to set IRQ35 -> P1*/
     NVIC->ISER[1] |= 1 << (PORT1_IRQn & 31);
-    /*Port 7*/
-    P7->IES = 0xFF;
-    P7->IE = 0xFF;
-    P7->IFG = 0x00;
-    NVIC->ISER[1] |= 1 << (40 & 31); //Port7_IRQn
-    /*Port 7*/
-    P8->IES = 0xFF;
-    P8->IE = 0xFF;
-    P8->IFG = 0x00;
-    NVIC->ISER[1] |= 1 << (41 & 31); //Port8_IRQn
-    /*Port 7*/
-    P9->IES = 0xFF;
-    P9->IE = 0xFF;
-    P9->IFG = 0x00;
-    NVIC->ISER[1] |= 1 << (42 & 31); //Port9_IRQn
-    /*Port 7*/
-    P10->IES = 0xFF;
-    P10->IE = 0xFF;
-    P10->IFG = 0x00;
-    NVIC->ISER[1] |= 1 << (43 & 31); //Port10_IRQn
+    /*Port 2*/
+    //P2->IES = 0xFF;
+    //P2->IE = 0xFF;
+    //P2->IFG = 0x00;
+    NVIC->ISER[1] |= 1 << (PORT2_IRQn & 31);
+    /*Port 3*/
+    P3->IES = 0xFF;
+    P3->IE = 0xFF;
+    P3->IFG = 0x00;
+    NVIC->ISER[1] |= 1 << (PORT3_IRQn & 31);
+    /*Port 4*/
+    P4->IES = 0xFF;
+    P4->IE = 0xFF;
+    P4->IFG = 0x00;
+    NVIC->ISER[1] |= 1 << (PORT4_IRQn & 31);
+    /*Port 5*/
+    P5->IES = 0xFF;
+    P5->IE = 0xFF;
+    P5->IFG = 0x00;
+    NVIC->ISER[1] |= 1 << (PORT5_IRQn & 31);
+    /*Port 6*/
+    P6->IES = 0xFF;
+    P6->IE = 0xFF;
+    P6->IFG = 0x00;
+    NVIC->ISER[1] |= 1 << (PORT6_IRQn & 31);
 }
 /*void buzzerInit() {
     // Configure P2.7 as  buzzer module
@@ -169,38 +168,6 @@ int findTrue() {
 void elaborateOutput() {
     if (counterTrue()==1) {
         switch(findTrue()) { /*To Generalization in groups of four findTrue()/4*/
-            case (P7_D*BYTE+0): break; //P7.0
-            case (P7_D*BYTE+1): break; //P7.1
-            case (P7_D*BYTE+2): break; //P7.2
-            case (P7_D*BYTE+3): break; //P7.3
-            case (P7_D*BYTE+4): break; //P7.4
-            case (P7_D*BYTE+5): break; //P7.5
-            case (P7_D*BYTE+6): break; //P7.6
-            case (P7_D*BYTE+7): break; //P7.7
-            case (P8_D*BYTE+0): break; //P8.0
-            case (P8_D*BYTE+1): break; //P8.1
-            case (P8_D*BYTE+2): break; //P8.2
-            case (P8_D*BYTE+3): break; //P8.3
-            case (P8_D*BYTE+4): break; //P8.4
-            case (P8_D*BYTE+5): break; //P8.5
-            case (P8_D*BYTE+6): break; //P8.6
-            case (P8_D*BYTE+7): break; //P8.7
-            case (P9_D*BYTE+0): break; //P9.0
-            case (P9_D*BYTE+1): break; //P9.1
-            case (P9_D*BYTE+2): break; //P9.2
-            case (P9_D*BYTE+3): break; //P9.3
-            case (P9_D*BYTE+4): break; //P9.4
-            case (P9_D*BYTE+5): break; //P9.5
-            case (P9_D*BYTE+6): break; //P9.6
-            case (P9_D*BYTE+7): break; //P9.7
-            case (P10_D*BYTE+0): break; //P10.0
-            case (P10_D*BYTE+1): break; //P10.1
-            case (P10_D*BYTE+2): break; //P10.2
-            case (P10_D*BYTE+3): break; //P10.3
-            case (P10_D*BYTE+4): break; //P10.4
-            case (P10_D*BYTE+5): break; //P10.5
-            case (P10_D*BYTE+6): break; //P10.6
-            case (P10_D*BYTE+7): break; //P10.7
             case (P1_D*BYTE+0): break; //P1.0
             case (P1_D*BYTE+1): P2->OUT ^= BIT0; break; //P1.1
             case (P1_D*BYTE+2): break; //P1.2
@@ -209,6 +176,46 @@ void elaborateOutput() {
             case (P1_D*BYTE+5): break; //P1.5
             case (P1_D*BYTE+6): break; //P1.6
             case (P1_D*BYTE+7): break; //P1.7
+            //case (P2_D*BYTE+0): break; //P2.0
+            //case (P2_D*BYTE+1): break; //P2.1
+            //case (P2_D*BYTE+2): break; //P2.2
+            //case (P2_D*BYTE+3): break; //P2.3
+            //case (P2_D*BYTE+4): break; //P2.4
+            //case (P2_D*BYTE+5): break; //P2.5
+            //case (P2_D*BYTE+6): break; //P2.6
+            //case (P2_D*BYTE+7): break; //P2.7
+            case (P3_D*BYTE+0): break; //P3.0
+            case (P3_D*BYTE+1): break; //P3.1
+            case (P3_D*BYTE+2): break; //P3.2
+            case (P3_D*BYTE+3): break; //P3.3
+            case (P3_D*BYTE+4): break; //P3.4
+            case (P3_D*BYTE+5): break; //P3.5
+            case (P3_D*BYTE+6): break; //P3.6
+            case (P3_D*BYTE+7): break; //P3.7
+            case (P4_D*BYTE+0): P2->OUT ^= BIT2; break; //P4.0
+            case (P4_D*BYTE+1): break; //P4.1
+            case (P4_D*BYTE+2): break; //P4.2
+            case (P4_D*BYTE+3): break; //P4.3
+            case (P4_D*BYTE+4): break; //P4.4
+            case (P4_D*BYTE+5): break; //P4.5
+            case (P4_D*BYTE+6): break; //P4.6
+            case (P4_D*BYTE+7): break; //P4.7
+            case (P5_D*BYTE+0): break; //P5.0
+            case (P5_D*BYTE+1): break; //P5.1
+            case (P5_D*BYTE+2): break; //P5.2
+            case (P5_D*BYTE+3): break; //P5.3
+            case (P5_D*BYTE+4): break; //P5.4
+            case (P5_D*BYTE+5): break; //P5.5
+            case (P5_D*BYTE+6): break; //P5.6
+            case (P5_D*BYTE+7): break; //P5.7
+            case (P6_D*BYTE+0): break; //P6.0
+            case (P6_D*BYTE+1): break; //P6.1
+            case (P6_D*BYTE+2): break; //P6.2
+            case (P6_D*BYTE+3): break; //P6.3
+            case (P6_D*BYTE+4): break; //P6.4
+            case (P6_D*BYTE+5): break; //P6.5
+            case (P6_D*BYTE+6): break; //P6.6
+            case (P6_D*BYTE+7): break; //P6.7
             //default: exit(1);
         }
         buzzerBeepFlag = true;
@@ -267,25 +274,30 @@ void PORT1_IRQHandler() {
     switching(status, P1_D);
     P1->IFG &= ~status;
 }
-void PORT7_IRQHandler() {
-    uint8_t status=P7->IFG;
-    switching(status, P7_D);
-    P7->IFG &= ~status;
+/*void PORT2_IRQHandler() {
+    uint8_t status=P2->IFG;
+    switching(status, P2_D);
+    P2->IFG &= ~status;
+}*/
+void PORT3_IRQHandler() {
+    uint8_t status=P3->IFG;
+    switching(status, P3_D);
+    P3->IFG &= ~status;
 }
-void PORT8_IRQHandler() {
-    uint8_t status=P8->IFG;
-    switching(status, P8_D);
-    P8->IFG &= ~status;
+void PORT4_IRQHandler() {
+    uint8_t status=P4->IFG;
+    switching(status, P4_D);
+    P4->IFG &= ~status;
 }
-void PORT9_IRQHandler() {
-    uint8_t status=P9->IFG;
-    switching(status, P9_D);
-    P9->IFG &= ~status;
+void PORT5_IRQHandler() {
+    uint8_t status=P5->IFG;
+    switching(status, P5_D);
+    P5->IFG &= ~status;
 }
-void PORT10_IRQHandler() {
-    uint8_t status=P10->IFG;
-    switching(status, P10_D);
-    P10->IFG &= ~status;
+void PORT6_IRQHandler() {
+    uint8_t status=P6->IFG;
+    switching(status, P6_D);
+    P6->IFG &= ~status;
 }
 /* it will be called when TA0CCR0 CCIFG is set */
 void TA0_N_IRQHandler(){
