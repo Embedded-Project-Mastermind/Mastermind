@@ -34,7 +34,7 @@ int read_input(int dim){     //reads the input from keyboard and verifies if it'
     do{       //done with a do while so we are sure that it executes
        if(current_state == WAIT || current_state == ELABORATE) { text_selection(selection);}
        else if(current_state == WAIT_FULL) { full_text(); }    
-       value = scanf("%d", &value);       //scans the value to analize
+       scanf("%d", &value);       //scans the value to analize
        if(selection && ((current_state == WAIT && value == 2) || (current_state == WAIT_FULL && value == 1) || (is_empty() && value == 3))){
 	       printf("Function not available in this state!");
 	       value = 0;
