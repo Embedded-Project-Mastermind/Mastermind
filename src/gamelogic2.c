@@ -51,8 +51,6 @@ void print_sequence(char* seq, int dim){
 }
 
 void handle_wait(int val){
-     if(current_state == WAIT){ text_selection(selection);}	//text selection for wait() function
-     if(current_state == WAIT_FULL) { full_text(); }	//text for wait_full() function
 	switch(val){
 		case 1: current_state  = ELABORATE;
 			break;
