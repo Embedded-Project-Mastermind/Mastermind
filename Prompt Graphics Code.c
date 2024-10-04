@@ -5,6 +5,17 @@
 #include "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.h"
 #include <stdio.h>
 #include <stdbool.h>
+//0. SETUP ENVIRONMENT
+/* Search the four files sent on Whatsapp and save them in a folder called LcdDriver
+ * Create a project CCS and setup the machine for MSP432P401R
+ * Add the folder previously created in the project 
+ * Download and install simplelink for mps432 on ti.com, based on your OS
+ * Go on the properties right-clicking on the created project
+ * In the left column select Build > Arm Compiler > Include Options
+ * In add dir to #include search path click the add file icon and then Browse
+ * Search the simplelink_msp432p4_sdk_3_40_01_02 folder. If you can't find it, go on Applications > ti
+ * In this folder follow this path simplelink_msp432p4_sdk_3_40_01_02 > source and click on open and then OK
+ */
 
 //1. DEFINITION OF CONTEXT
 Graphics_Context grContext;
