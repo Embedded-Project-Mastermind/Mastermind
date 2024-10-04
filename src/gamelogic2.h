@@ -1,5 +1,5 @@
 //
-//  game.c
+//  gamelogic2.h
 //  Mastermind Program
 //
 //  Created by Alessandro Benassi and Daniele Calvo on 29/09/24.
