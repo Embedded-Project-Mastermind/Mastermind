@@ -1,8 +1,9 @@
-#include "stdio.h"
-#include "stdlib.h"
-#include "stdbool.h"
-#include "fsm.h"
-#include "gamelogic1.h"
+//
+//  game.c
+//  Mastermind Program
+//
+//  Created by Alessandro Benassi and Daniele Calvo on 29/09/24.
+//
 #include "gamelogic2.h"
 //For avoiding duplicates in compilation
 char temp;
