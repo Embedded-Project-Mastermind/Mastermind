@@ -5,6 +5,7 @@
 #include "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.h"
 #include <stdio.h>
 #include <stdbool.h>
+
 //0. SETUP ENVIRONMENT
 /* Search the four files sent on Whatsapp and save them in a folder called LcdDriver
  * Create a project CCS and setup the machine for MSP432P401R
@@ -15,6 +16,13 @@
  * In add dir to #include search path click the add file icon and then Browse
  * Search the simplelink_msp432p4_sdk_3_40_01_02 folder. If you can't find it, go on Applications > ti
  * In this folder follow this path simplelink_msp432p4_sdk_3_40_01_02 > source and click on open and then OK
+ * Then, always in the left column select Build > Arm Linker > File Search Path
+ * In include library file or command file as input click the add file icon and then Browse
+ * You will have to do this twice with two different paths, but first search the simplelink folder:
+ * 1. simplelink_msp432p4_sdk_3_40_01_02 > source > ti > devices > mps432p4xx > driverlib > ccs > msp432p4xx_driverlib.lib
+ * 2. simplelink_msp432p4_sdk_3_40_01_02 > source > ti > grlib > lib > ccs > m4 > grlib.a
+ * After adding the files successfullt, click bottom-right apply and close
+ * Finally, rebuild the project and try to check out if this file pasted in main.c generates errors
  */
 
 //1. DEFINITION OF CONTEXT
@@ -22,12 +30,12 @@ Graphics_Context grContext;
 //2. DEFINITION OF COLORS
 
 //BACKGROUND COLORS
-#define BACKGROUND_COLOR GRAPHICS_COLOR_BLACK;
-#define RECT_SELECTED GRAPHICS_COLOR_WHITE;
+const int32_t BACKGROUND_COLOR=GRAPHICS_COLOR_BLACK;
+const int32_t RECT_SELECTED=GRAPHICS_COLOR_WHITE;
 
 //FOREGROUND COLORS
-#define FOREGROUND_COLOR GRAPHICS_COLOR_WHITE;
-#define TEXT_SELECTED GRAPHICS_COLOR_BLACK;
+const int32_t FOREGROUND_COLOR=GRAPHICS_COLOR_WHITE;
+const int32_t TEXT_SELECTED=GRAPHICS_COLOR_BLACK;
 
 /*3. THIS IMPLEMENTATION AS TO BE DONE IF THE CHANGE OF THE ELEMENTS CHANGE, IF THEIR STATE DOESN'T CHANGE DO A SEPARATE DECLARATION WITHOUT ARRAY*/
 
@@ -121,18 +129,18 @@ Graphics_Context grContext;
 int selectedOption=0;
 //5. Dimension of the arrays can be calculated with this formula
 //int numOptions=sizeof(array)/sizeof(array[0]);
-int numOptions=100; //To change
+int numOptions=3; //To change
 //6. Drawing elements time (Release Your Freedom)
 void drawMenu() {
-    Graphics_setForegroundColor(&grContext, FOREGROUND_COLOR); 
+    Graphics_setForegroundColor(&grContext, FOREGROUND_COLOR);
     Graphics_setBackgroundColor(&grContext, BACKGROUND_COLOR);
     Graphics_clearDisplay(&grContext);
-    int i;
-    for (int i=0; i<numOptions; i++) {
+    //int i;
+    //for (int i=0; i<numOptions; i++) {
         /* Trying to draw the elements with a reuse of code
-         * 
+         *
          * RECTANGLES AND CIRCLES
-         * 
+         *
          * With rectangle and circle the functions are easy
          * RECT: Graphics_drawRectangle(&grContext, menuRect[i]);
          * CIRC: Graphics_drawCircle (&grContext, menuCircle[i].x, menuCircle[i].y, menuCircle[i].radius);
@@ -142,16 +150,16 @@ void drawMenu() {
          * and then compute the functions:
          * RECT: Graphics_fillRectangle with the same parameters of the one above
          * CIRCLE: Graphics_fillCircle with the same parameters of the one above
-         * 
+         *
          * TEXTS
-         * 
+         *
          * The texts doesn't have a fill function, when the draw function is called they are colored with the set foreground color,
          * so first set the foreground color
-         * The function to draw the element 
+         * The function to draw the element
          * Graphics_drawString(&grContext, menuOptions[i], -1 (length of word, with -1 print all the word up to /0), x, y, opacity);
          * Based on the implementation adopted above
         */
-    }
+    //}
 }
 //7. Default Graphical Initialization Function Don't touch
 void graphicsInit()
@@ -167,9 +175,9 @@ void graphicsInit()
 //8. Main Definition
 int main(void) {
     WDT_A_holdTimer();
-    initHW();
+    graphicsInit();
     while(1) {
-        _sleep();
+        __sleep();
     }
 }
 //FINAL TIPS
