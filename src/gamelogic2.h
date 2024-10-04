@@ -1,3 +1,9 @@
+//
+//  game.c
+//  Mastermind Program
+//
+//  Created by Alessandro Benassi and Daniele Calvo on 29/09/24.
+//
 #ifndef GAMELOGIC2_H
 #define GAMELOGIC2_H
 
