@@ -30,12 +30,16 @@ Graphics_Context grContext;
 //2. DEFINITION OF COLORS
 
 //BACKGROUND COLORS
-const int32_t BACKGROUND_COLOR=GRAPHICS_COLOR_BLACK;
-const int32_t RECT_SELECTED=GRAPHICS_COLOR_WHITE;
+const int32_t BACKGROUND_STANDARD_COLOR=GRAPHICS_COLOR_BLACK;
+const int32_t BACKGROUND_FOCUSED_COLOR=GRAPHICS_COLOR_BLACK;
+const int32_t BACKGROUND_SELECTED_COLOR=GRAPHICS_COLOR_WHITE;
 
 //FOREGROUND COLORS
-const int32_t FOREGROUND_COLOR=GRAPHICS_COLOR_WHITE;
-const int32_t TEXT_SELECTED=GRAPHICS_COLOR_BLACK;
+const int32_t FOREGROUND_STANDARD_COLOR=GRAPHICS_COLOR_WHITE;
+const int32_t FOREGROUND_FOCUSED_COLOR=GRAPHICS_COLOR_RED;
+const int32_t FOREGROUND_SELECTED_COLOR=GRAPHICS_COLOR_BLACK;
+//BUTTON STATES
+typedef enum {STANDARD, FOCUSED, SELECTED} State_Button;
 
 /*3. THIS IMPLEMENTATION AS TO BE DONE IF THE CHANGE OF THE ELEMENTS CHANGE, IF THEIR STATE DOESN'T CHANGE DO A SEPARATE DECLARATION WITHOUT ARRAY*/
 
@@ -120,6 +124,12 @@ const int32_t TEXT_SELECTED=GRAPHICS_COLOR_BLACK;
  *      {{xMin, yMin, xMax, yMax}, "Option1"}
  *  }
  *  Design choice has to be taken
+ * In definitely an element that changes if it recurs can be defined with the following struct
+ *  typedef struct Graphics_Button {
+ *      Graphics_Rectangle rect;
+ *      Graphics_text text;
+ *      State_Button state;
+ *  }
  */
 /*4. Selected index (only one element can be selected an it is determined by this variable)
  *Preferable that all the elements that can be pressed in the page are same types in the array.
