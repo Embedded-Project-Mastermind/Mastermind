@@ -7,7 +7,7 @@
 
 #ifndef FSM_H_
 #define FSM_H_
-#include <unistd.h>
+
 //COSTANTS
 #define COLORS 8 //Colors Available based on the number you have
 #define MAX_TENTS 30 //Is no tentatives are selected, after a certain number we stop
