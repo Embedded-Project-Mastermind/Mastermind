@@ -3,23 +3,7 @@
  *
  *  Created on: 5 ott 2024
  *      Author: matteogottardelligmail.com
- *      //0. SETUP ENVIRONMENT
-     * Search the four files sent on Whatsapp and save them in a folder called LcdDriver
-     * Create a project CCS and setup the machine for MSP432P401R
-     * Add the folder previously created in the project
-     * Download and install simplelink for mps432 on ti.com, based on your OS
-     * Go on the properties right-clicking on the created project
-     * In the left column select Build > Arm Compiler > Include Options
-     * In add dir to #include search path click the add file icon and then Browse
-     * Search the simplelink_msp432p4_sdk_3_40_01_02 folder. If you can't find it, go on Applications > ti
-     * In this folder follow this path simplelink_msp432p4_sdk_3_40_01_02 > source and click on open and then OK
-     * Then, always in the left column select Build > Arm Linker > File Search Path
-     * In include library file or command file as input click the add file icon and then Browse
-     * You will have to do this twice with two different paths, but first search the simplelink folder:
-     * 1. simplelink_msp432p4_sdk_3_40_01_02 > source > ti > devices > mps432p4xx > driverlib > ccs > msp432p4xx_driverlib.lib
-     * 2. simplelink_msp432p4_sdk_3_40_01_02 > source > ti > grlib > lib > ccs > m4 > grlib.a
-     * After adding the files successfullt, click bottom-right apply and close
-     * Finally, rebuild the project and try to check out if this file pasted in main.c generates errors
+ *     
  */
 
 #ifndef GRAPHICS_H_
@@ -36,18 +20,18 @@
 //1. DEFINITION OF CONTEXT
 Graphics_Context grContext;
 //2. DEFINITION OF COLORS
-
 //BACKGROUND COLORS
-const int32_t BACKGROUND_STANDARD_COLOR=GRAPHICS_COLOR_BLACK;
-const int32_t BACKGROUND_FOCUSED_COLOR=GRAPHICS_COLOR_BLACK;
-const int32_t BACKGROUND_SELECTED_COLOR=GRAPHICS_COLOR_WHITE;
+#define BACKGROUND_STANDARD_COLOR GRAPHICS_COLOR_BLACK
+#define BACKGROUND_FOCUSED_COLOR GRAPHICS_COLOR_BLACK
+#define BACKGROUND_SELECTED_COLOR GRAPHICS_COLOR_WHITE
 
 //FOREGROUND COLORS
-const int32_t FOREGROUND_STANDARD_COLOR=GRAPHICS_COLOR_WHITE;
-const int32_t FOREGROUND_FOCUSED_COLOR=GRAPHICS_COLOR_RED;
-const int32_t FOREGROUND_SELECTED_COLOR=GRAPHICS_COLOR_BLACK;
+#define FOREGROUND_STANDARD_COLOR GRAPHICS_COLOR_WHITE
+#define FOREGROUND_FOCUSED_COLOR GRAPHICS_COLOR_RED
+#define FOREGROUND_SELECTED_COLOR GRAPHICS_COLOR_BLACK
+
 //Enum Declaration for display changes
-typedef enum Graphics_State {START, DIMENSION, DIFFICULTY, TENTATIVE, DOUBLES, INFO, GAME, CHRONOLOGY, END} Graphics_State;
+typedef enum Graphics_State {START_GR, DIMENSION, DIFFICULTY, TENTATIVE, DOUBLES, INFO, GAME, CHRONOLOGY, END, ERROR_GR} Graphics_State;
 //Button possible states
 typedef enum Button_State {STANDARD, FOCUSED, SELECTED} Button_State;
 //Struct Declarations
@@ -61,7 +45,7 @@ typedef struct Graphics_Text {
 typedef struct Graphics_Circle {
     int16_t x; //Center of figure x position
     int16_t y; //Center of figure y position
-    int16_t radius; //Radius of figure 
+    int16_t radius; //Radius of figure
     int32_t color; //Fill color of the figure
 } Graphics_Circle;
 
@@ -70,5 +54,8 @@ typedef struct Graphics_Button {
     Graphics_Rectangle rect; //Rectangle Struct
     Graphics_Text text; //A positioned text with a content inside
 } Graphics_Button;
-
+//Extern Variables
+extern Graphics_State display_position;
 #endif /* GRAPHICS_H_ */
+
+
