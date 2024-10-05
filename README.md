@@ -2,6 +2,6 @@
 # Summary of task done and to do
 - [X] Project Definition
 - [ ] Hardware Implementation
-- [ ] Software Implementation
+- [X] Software Implementation
 - [ ] Integration Hardware and Software
 - [ ] Optimization and extras
