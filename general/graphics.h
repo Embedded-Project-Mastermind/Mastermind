@@ -32,6 +32,7 @@
 #include "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.h"
 #include <stdio.h>
 #include <stdbool.h>
+#include <fsm.h>
 //1. DEFINITION OF CONTEXT
 Graphics_Context grContext;
 //2. DEFINITION OF COLORS
@@ -45,29 +46,29 @@ const int32_t BACKGROUND_SELECTED_COLOR=GRAPHICS_COLOR_WHITE;
 const int32_t FOREGROUND_STANDARD_COLOR=GRAPHICS_COLOR_WHITE;
 const int32_t FOREGROUND_FOCUSED_COLOR=GRAPHICS_COLOR_RED;
 const int32_t FOREGROUND_SELECTED_COLOR=GRAPHICS_COLOR_BLACK;
-
+//Enum Declaration for display changes
 typedef enum Graphics_State {START, DIMENSION, DIFFICULTY, TENTATIVE, DOUBLES, INFO, GAME, CHRONOLOGY, END} Graphics_State;
-
+//Button possible states
 typedef enum Button_State {STANDARD, FOCUSED, SELECTED} Button_State;
-
+//Struct Declarations
 typedef struct Graphics_Text {
-    int8_t* string;
-    int16_t x;
-    int16_t y;
-    bool opacity;
+    int8_t* string; //Content of the text
+    int16_t x; //upper-left corner x position
+    int16_t y; //upper-left corner x position
+    bool opacity; //0 no opacity, 1 yes opacity
 } Graphics_Text;
 
 typedef struct Graphics_Circle {
-    int16_t x;
-    int16_t y;
-    int16_t radius;
-    int32_t color;
+    int16_t x; //Center of figure x position
+    int16_t y; //Center of figure y position
+    int16_t radius; //Radius of figure 
+    int32_t color; //Fill color of the figure
 } Graphics_Circle;
 
 typedef struct Graphics_Button {
-    Button_State state;
-    Graphics_Rectangle rect;
-    Graphics_Text text;
+    Button_State state; //Current button state
+    Graphics_Rectangle rect; //Rectangle Struct
+    Graphics_Text text; //A positioned text with a content inside
 } Graphics_Button;
 
 #endif /* GRAPHICS_H_ */
