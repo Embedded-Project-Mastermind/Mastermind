@@ -1,36 +1,24 @@
-#include <ti/devices/msp432p4xx/inc/msp.h>
+/*
+ * read_me.c
+ *
+ *  Created on: 5 ott 2024
+ *      Author: matteogottardelligmail.com
+ */
+
+/*#include <ti/devices/msp432p4xx/inc/msp.h>
 #include <ti/devices/msp432p4xx/driverlib/driverlib.h>
 #include <ti/grlib/grlib.h>
 #include "LcdDriver/Crystalfontz128x128_ST7735.h"
 #include "LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.h"
 #include <stdio.h>
-#include <stdbool.h>
-
-//0. SETUP ENVIRONMENT
-/* Search the four files sent on Whatsapp and save them in a folder called LcdDriver
- * Create a project CCS and setup the machine for MSP432P401R
- * Add the folder previously created in the project 
- * Download and install simplelink for mps432 on ti.com, based on your OS
- * Go on the properties right-clicking on the created project
- * In the left column select Build > Arm Compiler > Include Options
- * In add dir to #include search path click the add file icon and then Browse
- * Search the simplelink_msp432p4_sdk_3_40_01_02 folder. If you can't find it, go on Applications > ti
- * In this folder follow this path simplelink_msp432p4_sdk_3_40_01_02 > source and click on open and then OK
- * Then, always in the left column select Build > Arm Linker > File Search Path
- * In include library file or command file as input click the add file icon and then Browse
- * You will have to do this twice with two different paths, but first search the simplelink folder:
- * 1. simplelink_msp432p4_sdk_3_40_01_02 > source > ti > devices > mps432p4xx > driverlib > ccs > msp432p4xx_driverlib.lib
- * 2. simplelink_msp432p4_sdk_3_40_01_02 > source > ti > grlib > lib > ccs > m4 > grlib.a
- * After adding the files successfullt, click bottom-right apply and close
- * Finally, rebuild the project and try to check out if this file pasted in main.c generates errors
- */
+#include <stdbool.h>*/
 
 //1. DEFINITION OF CONTEXT
-Graphics_Context grContext;
+//Graphics_Context grContext;
 //2. DEFINITION OF COLORS
 
 //BACKGROUND COLORS
-const int32_t BACKGROUND_STANDARD_COLOR=GRAPHICS_COLOR_BLACK;
+/*const int32_t BACKGROUND_STANDARD_COLOR=GRAPHICS_COLOR_BLACK;
 const int32_t BACKGROUND_FOCUSED_COLOR=GRAPHICS_COLOR_BLACK;
 const int32_t BACKGROUND_SELECTED_COLOR=GRAPHICS_COLOR_WHITE;
 
@@ -38,8 +26,10 @@ const int32_t BACKGROUND_SELECTED_COLOR=GRAPHICS_COLOR_WHITE;
 const int32_t FOREGROUND_STANDARD_COLOR=GRAPHICS_COLOR_WHITE;
 const int32_t FOREGROUND_FOCUSED_COLOR=GRAPHICS_COLOR_RED;
 const int32_t FOREGROUND_SELECTED_COLOR=GRAPHICS_COLOR_BLACK;
-//BUTTON STATES
-typedef enum {STANDARD, FOCUSED, SELECTED} State_Button;
+//Enum Declaration for display changes*/
+//typedef enum Graphics_State {START, DIMENSION, DIFFICULTY, TENTATIVE, DOUBLES, INFO, GAME, CHRONOLOGY, END} Graphics_State;
+//Button possible states
+//typedef enum Button_State {STANDARD, FOCUSED, SELECTED} Button_State;
 
 /*3. THIS IMPLEMENTATION AS TO BE DONE IF THE CHANGE OF THE ELEMENTS CHANGE, IF THEIR STATE DOESN'T CHANGE DO A SEPARATE DECLARATION WITHOUT ARRAY*/
 
@@ -123,8 +113,8 @@ typedef enum {STANDARD, FOCUSED, SELECTED} State_Button;
  *  Graphics_Button_Rect* menuButtons[]={
  *      {{xMin, yMin, xMax, yMax}, "Option1"}
  *  }
- *  Design choice has to be taken
- * In definitely an element that changes if it recurs can be defined with the following struct
+ *
+ *  In definitely an element that changes if it recurs can be defined with the following struct
  *  typedef struct Graphics_Button {
  *      Graphics_Rectangle rect;
  *      Graphics_text text;
@@ -136,15 +126,15 @@ typedef enum {STANDARD, FOCUSED, SELECTED} State_Button;
  *Example if selected Option=0 and we have two array one of texts and one of rectangles,
  *the first elements of each array will be selected.
 */
-int selectedOption=0;
+//int selectedOption=0;
 //5. Dimension of the arrays can be calculated with this formula
 //int numOptions=sizeof(array)/sizeof(array[0]);
-int numOptions=3; //To change
+//int numOptions=3; //To change
 //6. Drawing elements time (Release Your Freedom)
-void drawMenu() {
+/*void drawMenu() {
     Graphics_setForegroundColor(&grContext, FOREGROUND_COLOR);
     Graphics_setBackgroundColor(&grContext, BACKGROUND_COLOR);
-    Graphics_clearDisplay(&grContext);
+    Graphics_clearDisplay(&grContext);*/
     //int i;
     //for (int i=0; i<numOptions; i++) {
         /* Trying to draw the elements with a reuse of code
@@ -170,9 +160,9 @@ void drawMenu() {
          * Based on the implementation adopted above
         */
     //}
-}
+//}
 //7. Default Graphical Initialization Function Don't touch
-void graphicsInit()
+/*void graphicsInit()
 {
     //INITIALIZE DISPLAY AND DRIVERS
     Crystalfontz128x128_Init();
@@ -182,6 +172,7 @@ void graphicsInit()
     Graphics_setFont(&grContext, &g_sFontFixed6x8);
     drawMenu();
 }
+
 //8. Main Definition
 int main(void) {
     WDT_A_holdTimer();
@@ -191,7 +182,7 @@ int main(void) {
     }
 }
 //FINAL TIPS
-// 1.  Trying the compilation sometimes there is an error in functions invocation, especially with array elements, so do a cast if that is the case
+// 1. Trying the compilation sometimes there is an error in functions invocation, especially with array elements, so do a cast if that is the case
 // 2. If a function is declared in a library it will be cyan, typically with Graphics functions
 // 3. Try to implement a logical an symmetric in order that is accessible by the joystick with four directions in order to be intuitive in future
-// implementation, so for example all elements in row, column, or in square disposal
+// implementation, so for example all elements in row, column, or in square disposal*/
