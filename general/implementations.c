@@ -83,9 +83,10 @@ void defaultDraw(void) {
     }
 }
 void hardware_Init() {
+    before_ADC();
     graphics_Init();
-    //DRAW FUNCTION
-    //FOLLOWING POSITION
+    _adcInit();
+    //BUTTONS INIT
 }
 void fn_START_GR(void) {
     //DRAW FUNCTION
