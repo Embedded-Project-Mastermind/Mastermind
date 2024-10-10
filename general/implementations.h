@@ -33,11 +33,6 @@ void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color);
 void focusedHandle(void);
 //FUNCTIONS FOR STATES
 void fn_START_GR(void);
-void fn_DIMENSION(void);
-void fn_DIFFICULTY(void);
-void fn_TENTATIVE(void);
-void fn_DOUBLES(void);
-void fn_INFO(void);
 void fn_GAME(void);
 void fn_CHRONOLOGY(void);
 void fn_END(void);
