@@ -91,16 +91,6 @@ void fn_START_GR(void) {
     //FOLLOWING POSITION
 }
 
-void fn_DOUBLES(void) {
-    reset_Screen();
-    //DRAW FUNCTION
-    //FOLLOWING POSITION
-}
-void fn_INFO(void) {
-    reset_Screen();
-    //DRAW FUNCTION
-    //FOLLOWING POSITION
-}
 void fn_GAME(void) {
     reset_Screen();
     //DRAW FUNCTION
