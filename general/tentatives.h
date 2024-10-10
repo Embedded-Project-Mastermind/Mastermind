@@ -15,6 +15,7 @@
 #define TENT_DIM 32
 
 extern Graphics_Button tent_buttons[];
+extern Graphics_Button text_no_tent;
 
 void drawTentatives(int elems);
 void fn_TENTATIVE(void);
