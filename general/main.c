@@ -9,7 +9,10 @@
 #include "graphics.h"
 #include "fsm.h"
 #include "dimension.h"
+#include "difficulty.h"
 #include "tentatives.h"
+#include "doubles.h"
+#include "info.h"
 #include "joystick.h"
 
 typedef struct Graphics_StateMachine {
