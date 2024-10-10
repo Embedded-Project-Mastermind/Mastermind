@@ -15,7 +15,7 @@ extern Graphics_Button doubles_buttons[];
 void create_doubles_text(void);
 void create_doubles_button(void);
 void change_screen_d(void); //to call the other two functions and set minor things
-
+void fn_DOUBLES(void);
 
 
 #endif /* DOUBLES_H_ */
