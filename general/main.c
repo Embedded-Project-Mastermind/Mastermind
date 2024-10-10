@@ -78,6 +78,32 @@ Graphics_Button tent_buttons[]={
     {STANDARD, {0, 0, 0, 0}, {"", false}}
 };
 
+//Daniele Calvo's code
+Graphics_Text doubles_text={{"Doubles"}, false};  //DOUBLE state part
+Graphics_Text doubles_description[]={ 
+    {{"Possibility of "}, false},
+    {{"the same color "}, false},
+    {{"repeated or not"}, false}};
+Graphics_Button doubles_buttons[]={ 
+    {FOCUSED, {80, 40, 110, 60}, {{"No"}, false}},
+    {STANDARD, {0,0,0,0}, {{""}, false}},
+    {STANDARD, {0,0,0,0}, {{""}, false}}};
+   
+Graphics_Text info_texts[]={                     //INFO sate part
+    {{"Dimension: "}, false},
+    {{"Difficulty: "}, false},
+    {{"Doubles: "}, false},
+    {{"Tentatives: "}, false}};
+Graphics_Text info_texts_results[]={ 
+    {{" "}, false},
+    {{" "}, false},
+    {{" "}, false},
+    {{" "}, false}};
+Graphics_Button info_buttons[]={ 
+    {STANDARD, {0,0,0,0}, {{""}, false}},
+    {STANDARD, {0,0,0,0}, {{""}, false}}};
+
+
 int main(void) {
     WDT_A_holdTimer();
     hardware_Init();
