@@ -8,6 +8,7 @@
 #include "implementations.h"
 #include "graphics.h"
 #include "fsm.h"
+#include "tentatives.h"
 
 typedef struct Graphics_StateMachine {
     Graphics_State state; //Current Graphics State
@@ -25,6 +26,20 @@ Graphics_StateMachine gfsm[]={
      {CHRONOLOGY, fn_CHRONOLOGY},
      {END, fn_END}
 };
+
+//Niccolò Cristoforetti's code
+Graphics_Button tent_buttons[]={
+    {STANDARD, {1, 32+2, TENT_DIM-1, 32+TENT_DIM-1}, {"", false}},
+    {FOCUSED, {TENT_DIM/4+1, 32+TENT_DIM/4+1, TENT_DIM/2+TENT_DIM/4-1, 32+TENT_DIM/2+TENT_DIM/4-1}, {"", false}},
+    {DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TENT", false}},
+    {STANDARD, {1, 32+TENT_DIM+1, TENT_DIM-1, 32+TENT_DIM*2-1}, {"3", false}},
+    {STANDARD, {TENT_DIM+1, 32+TENT_DIM+1, TENT_DIM*2-1, 32+TENT_DIM*2-1}, {"5", false}},
+    {STANDARD, {TENT_DIM*2+1, 32+TENT_DIM+1, TENT_DIM*3-1, 32+TENT_DIM*2-1}, {"7", false}},
+    {STANDARD, {TENT_DIM*3+1, 32+TENT_DIM+1, TENT_DIM*4-1, 32+TENT_DIM*2-1}, {"10", false}},
+    {STANDARD, {0, 0, 0, 0}, {"", false}},
+    {STANDARD, {0, 0, 0, 0}, {"", false}}
+};
+
 Game game;
 Tentative tentative;
 State current_state=START;
