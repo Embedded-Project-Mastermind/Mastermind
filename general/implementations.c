@@ -90,23 +90,7 @@ void fn_START_GR(void) {
     //DRAW FUNCTION
     //FOLLOWING POSITION
 }
-void fn_DIMENSION(void) {
-    reset_Screen();
-    //DRAW FUNCTION
-    drawDimension();
-    //FOLLOWING POSITION
-}
-void fn_DIFFICULTY(void) {
-    reset_Screen();
-    //DRAW FUNCTION
-    //FOLLOWING POSITION
-}
-void fn_TENTATIVE(void) {
-    reset_Screen();
-    //DRAW FUNCTION
 
-    //FOLLOWING POSITION
-}
 void fn_DOUBLES(void) {
     reset_Screen();
     //DRAW FUNCTION
