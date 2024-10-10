@@ -92,3 +92,23 @@ int main(void) {
     }
 
 }
+void ADC14_IRQHandler(void)
+{
+    uint64_t status;
+    int i;
+    status = ADC14_getEnabledInterruptStatus();
+    ADC14_clearInterruptFlag(status);
+
+    /* ADC_MEM1 conversion completed */
+    if(status & ADC_INT1)
+    {
+        /* Store ADC14 conversion results */
+        resultsBuffer[0] = ADC14_getResult(ADC_MEM0);
+        resultsBuffer[1] = ADC14_getResult(ADC_MEM1);
+        uint16_t x=resultsBuffer[0];
+        uint16_t y=resultsBuffer[1];
+
+        NavigateMenu(findDirection(x, y));
+        for (i=0; i<100000; i++);
+    }
+}
