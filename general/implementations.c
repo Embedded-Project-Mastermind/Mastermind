@@ -80,13 +80,6 @@ void defaultDraw(void) {
         Graphics_setForegroundColor(&grContext, GRAPHICS_COLOR_WHITE); //Manual
         Graphics_drawStringCentered(&grContext, (int8_t *)labelText.string, AUTO_STRING_LENGTH, getCenteredX(upperRect),  getCenteredY(upperRect), labelText.opacity);
     }
-    //BACK
-    drawButton(prevButton, FILL_MOVEMENT, STANDARD_COLOR);
-    //NEXT
-    drawButton(nextButton, FILL_MOVEMENT, STANDARD_COLOR);
-}
-void drawDimension(void){
-    defaultDraw();
 }
 void hardware_Init() {
     graphics_Init();
