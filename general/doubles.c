@@ -37,3 +37,6 @@ void change_screen_d(void){
     create_doubles_buttons();
 }
 
+void fn_DOUBLES(void) {
+    change_screen_d();
+}
