@@ -1,13 +1,68 @@
 #include "joystick.h"
 
-
+void upfunctions() {
+    switch(display_position) {
+    case START_GR: break;
+    case DIMENSION: break;
+    case DIFFICULTY: break;
+    case TENTATIVE: break;
+    case DOUBLES: break;
+    case INFO: break;
+    case GAME: break;
+    case CHRONOLOGY: break;
+    case END: break;
+    default: exit(1);
+    }
+}
+void downfunctions() {
+    switch(display_position) {
+    case START_GR: break;
+    case DIMENSION: break;
+    case DIFFICULTY: break;
+    case TENTATIVE: break;
+    case DOUBLES: break;
+    case INFO: break;
+    case GAME: break;
+    case CHRONOLOGY: break;
+    case END: break;
+    default: exit(1);
+    }
+}
+void leftfunctions() {
+    switch(display_position) {
+    case START_GR: break;
+    case DIMENSION: break;
+    case DIFFICULTY: break;
+    case TENTATIVE: break;
+    case DOUBLES: break;
+    case INFO: break;
+    case GAME: break;
+    case CHRONOLOGY: break;
+    case END: break;
+    default: exit(1);
+    }
+}
+void rightfunctions() {
+    switch(display_position) {
+    case START_GR: break;
+    case DIMENSION: break;
+    case DIFFICULTY: break;
+    case TENTATIVE: break;
+    case DOUBLES: break;
+    case INFO: break;
+    case GAME: break;
+    case CHRONOLOGY: break;
+    case END: break;
+    default: exit(1);
+    }
+}
 //Movement functions redirection IMPLEMENT IN YOUR FILES
 void NavigateMenu(Move direction) {
     switch(direction) {
-        case UP: break;
-        case DOWN: break;
-        case LEFT: break;
-        case RIGHT: break;
+        case UP: upfunctions(); break;
+        case DOWN: downfunctions(); break;
+        case LEFT: leftfunctions(); break;
+        case RIGHT: rightfunctions(); break;
         case CENTER: break;
         //default: exit(1);
     }
