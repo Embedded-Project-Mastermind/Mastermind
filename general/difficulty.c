@@ -23,7 +23,7 @@ void drawText() {
     Graphics_setForegroundColor(&grContext, SELECTED_COLOR);
     int i;
     for (i=0; i<4; i++) {//Logic implementation
-        Graphics_drawString(&grContext, (int8_t *)explain[i][position].string, AUTO_STRING_LENGTH, DIFF_DIM+5,  32+5+10*i, explain[i][position].opacity);
+        Graphics_drawString(&grContext, (int8_t *)explain[i][position].string, AUTO_STRING_LENGTH, DIFF_DIM+10,  32+10+10*i, explain[i][position].opacity);
     }
 }
 
