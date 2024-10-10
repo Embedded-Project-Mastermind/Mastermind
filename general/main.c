@@ -10,6 +10,7 @@
 #include "fsm.h"
 #include "dimension.h"
 #include "tentatives.h"
+#include "joystick.h"
 
 typedef struct Graphics_StateMachine {
     Graphics_State state; //Current Graphics State
