@@ -69,9 +69,9 @@ Graphics_Button dim_buttons[]={
 };
 //Matteo Gottardelli's code
 Graphics_Button diff_buttons[]={
-    {FOCUSED, {0, 32, DIFF_DIM+1, 32+DIFF_DIM-1}, {"A", false}},
-    {STANDARD, {0, 32+DIFF_DIM+1, DIFF_DIM, 32+2*DIFF_DIM-1}, {"B", false}},
-    {STANDARD, {0, 32+2*DIFF_DIM+1, DIFF_DIM, 32+3*DIFF_DIM-1}, {"C", false}},
+    {FOCUSED, {1, 32+2, DIFF_DIM, 32+DIFF_DIM}, {"A", false}},
+    {STANDARD, {1, 32+DIFF_DIM+2, DIFF_DIM, 32+2*DIFF_DIM+1}, {"B", false}},
+    {STANDARD, {1, 96-DIFF_DIM-1, DIFF_DIM, 96-2}, {"C", false}},
     {STANDARD, {0, 0, 0, 0}, {"", false}},
     {STANDARD, {0, 0, 0, 0}, {"", false}}
 };
