@@ -47,7 +47,7 @@ void _adcInit(){
 
         /* Triggering the start of the sample */
         ADC14_enableConversion();
-        ADC14_toggleConversionTrigger();
+        //ADC14_toggleConversionTrigger();
 }
 void before_ADC(){
     /* Set the core voltage level to VCORE1 */
