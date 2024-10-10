@@ -6,6 +6,7 @@
  */
 #include "implementations.h"
 #include "graphics.h"
+#include "joystick.h"
 
 void reset_Screen(void) {
     Graphics_setFont(&grContext, &g_sFontFixed6x8); //resets the font to the standard one, probably not necessary but anyways it's good practice to put it
