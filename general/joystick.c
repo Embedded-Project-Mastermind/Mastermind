@@ -9,58 +9,58 @@
 
 void upfunctions() {
     switch(display_position) {
-    case START_GR: break;
-    case DIMENSION: break;
-    case DIFFICULTY: break;
-    case TENTATIVE: break;
-    case DOUBLES: break;
-    case INFO: break;
-    case GAME: break;
-    case CHRONOLOGY: break;
-    case END: break;
-    default: exit(1);
+        case START_GR: break;
+        case DIMENSION: break;
+        case DIFFICULTY: break;
+        case TENTATIVE: break;
+        case DOUBLES: break;
+        case INFO: break;
+        case GAME: break;
+        case CHRONOLOGY: break;
+        case END: break;
+        //default: exit(1);
     }
 }
 void downfunctions() {
     switch(display_position) {
-    case START_GR: break;
-    case DIMENSION: break;
-    case DIFFICULTY: break;
-    case TENTATIVE: break;
-    case DOUBLES: break;
-    case INFO: break;
-    case GAME: break;
-    case CHRONOLOGY: break;
-    case END: break;
-    default: exit(1);
+        case START_GR: break;
+        case DIMENSION: break;
+        case DIFFICULTY: break;
+        case TENTATIVE: break;
+        case DOUBLES: break;
+        case INFO: break;
+        case GAME: break;
+        case CHRONOLOGY: break;
+        case END: break;
+       // default: exit(1);
     }
 }
 void leftfunctions() {
     switch(display_position) {
-    case START_GR: break;
-    case DIMENSION: break;
-    case DIFFICULTY: break;
-    case TENTATIVE: break;
-    case DOUBLES: break;
-    case INFO: break;
-    case GAME: break;
-    case CHRONOLOGY: break;
-    case END: break;
-    default: exit(1);
+        case START_GR: break;
+        case DIMENSION: break;
+        case DIFFICULTY: break;
+        case TENTATIVE: break;
+        case DOUBLES: break;
+        case INFO: break;
+        case GAME: break;
+        case CHRONOLOGY: break;
+        case END: break;
+       //default: exit(1);
     }
 }
 void rightfunctions() {
     switch(display_position) {
-    case START_GR: break;
-    case DIMENSION: break;
-    case DIFFICULTY: break;
-    case TENTATIVE: break;
-    case DOUBLES: break;
-    case INFO: break;
-    case GAME: break;
-    case CHRONOLOGY: break;
-    case END: break;
-    default: exit(1);
+        case START_GR: break;
+        case DIMENSION: break;
+        case DIFFICULTY: break;
+        case TENTATIVE: break;
+        case DOUBLES: break;
+        case INFO: break;
+        case GAME: break;
+        case CHRONOLOGY: break;
+        case END: break;
+        //default: exit(1);
     }
 }
 //Movement functions redirection IMPLEMENT IN YOUR FILES
