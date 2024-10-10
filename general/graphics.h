@@ -3,7 +3,7 @@
  *
  *  Created on: 5 ott 2024
  *      Author: matteogottardelligmail.com
- *     
+ *
  */
 
 #ifndef GRAPHICS_H_
@@ -22,23 +22,26 @@ Graphics_Context grContext;
 //2. DEFINITION OF COLORS
 //BACKGROUND COLORS
 #define BACKGROUND_STANDARD_COLOR GRAPHICS_COLOR_BLACK
-#define BACKGROUND_FOCUSED_COLOR GRAPHICS_COLOR_BLACK
-#define BACKGROUND_SELECTED_COLOR GRAPHICS_COLOR_WHITE
 
 //FOREGROUND COLORS
-#define FOREGROUND_STANDARD_COLOR GRAPHICS_COLOR_WHITE
-#define FOREGROUND_FOCUSED_COLOR GRAPHICS_COLOR_RED
-#define FOREGROUND_SELECTED_COLOR GRAPHICS_COLOR_BLACK
+#define SELECTED_COLOR GRAPHICS_COLOR_WHITE
+#define STANDARD_COLOR GRAPHICS_COLOR_BLACK
+#define DISABLED_COLOR GRAPHICS_COLOR_GRAY
+#define BORDER_FOCUSED_COLOR GRAPHICS_COLOR_RED
+#define BORDER_SELECTED_COLOR GRAPHICS_COLOR_BLACK
+#define FILL_UPPER_RECT GRAPHICS_COLOR_BLUE
+#define FILL_MOVEMENT GRAPHICS_COLOR_CYAN
+#define STANDARD_TEXT GRAPHICS_COLOR_BLACK
 
 //Enum Declaration for display changes
 typedef enum Graphics_State {START_GR, DIMENSION, DIFFICULTY, TENTATIVE, DOUBLES, INFO, GAME, CHRONOLOGY, END, ERROR_GR} Graphics_State;
 //Button possible states
-typedef enum Button_State {STANDARD, FOCUSED, SELECTED} Button_State;
+typedef enum Button_State {STANDARD, FOCUSED, SELECTED, DISABLED} Button_State;
 //Struct Declarations
 typedef struct Graphics_Text {
     int8_t* string; //Content of the text
-    int16_t x; //upper-left corner x position
-    int16_t y; //upper-left corner x position
+    //int16_t x; //upper-left corner x position
+    //int16_t y; //upper-left corner x position
     bool opacity; //0 no opacity, 1 yes opacity
 } Graphics_Text;
 
