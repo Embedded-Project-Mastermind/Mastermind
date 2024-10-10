@@ -29,7 +29,7 @@ int32_t chooseColorRect(Button_State state, int32_t color);
 int32_t chooseColorText(Button_State state, int32_t color);
 //FUNCTIONS DRAW
 void defaultDraw(void);
-void drawDimension(void);
+void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color);
 void focusedHandle(void);
 //FUNCTIONS FOR STATES
 void fn_START_GR(void);
