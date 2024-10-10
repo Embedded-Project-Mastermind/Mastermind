@@ -64,7 +64,20 @@ Graphics_Button dim_buttons[]={
     {STANDARD, {0, 0, 0, 0}, {"", false}},
     {STANDARD, {0, 0, 0, 0}, {"", false}}
 };
-
+//Matteo Gottardelli's code
+Graphics_Button diff_buttons[]={
+    {FOCUSED, {0, 32, DIFF_DIM+1, 32+DIFF_DIM-1}, {"A", false}},
+    {STANDARD, {0, 32+DIFF_DIM+1, DIFF_DIM, 32+2*DIFF_DIM-1}, {"B", false}},
+    {STANDARD, {0, 32+2*DIFF_DIM+1, DIFF_DIM, 32+3*DIFF_DIM-1}, {"C", false}},
+    {STANDARD, {0, 0, 0, 0}, {"", false}},
+    {STANDARD, {0, 0, 0, 0}, {"", false}}
+};
+Graphics_Text explain[][DIFF_TYPES]={
+     {{"EASY MODE", false},{"MEDIUM MODE", false}, {"HARD MODE", false}},
+     {{"INFO PER COLOR", false},{"INFO GENERAL", false},{"INFO GENERAL", false}},
+     {{"- RIGHT POS", false},{"- RIGHT POS", false},{"- RIGHT POS", false}},
+     {{"- WRONG POS", false}, {"- WRONG POS", false}, {"", false}}
+};
 //Niccolò Cristoforetti's code
 Graphics_Button tent_buttons[]={
     {FOCUSED, {TENT_DIM/4+1, 32+TENT_DIM/4+1, TENT_DIM/2+TENT_DIM/4-1, 32+TENT_DIM/2+TENT_DIM/4-1}, {"", false}},
