@@ -8,8 +8,9 @@
 #include "graphics.h"
 
 void reset_Screen(void) {
-    Graphics_setForegroundColor(&grContext, STANDARD_COLOR);
-    Graphics_setBackgroundColor(&grContext, BACKGROUND_STANDARD_COLOR);
+    Graphics_setFont(&grContext, &g_sFontFixed6x8); //resets the font to the standard one, probably not necessary but anyways it's good practice to put it
+    Graphics_setForegroundColor(&grContext, STANDARD_COLOR); //sets foreground to black
+    Graphics_setBackgroundColor(&grContext, SELECTED_COLOR); //sets background to white for the borders
     Graphics_clearDisplay(&grContext);
 }
 void graphics_Init(void) {
