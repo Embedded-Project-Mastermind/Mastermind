@@ -17,8 +17,9 @@ void change_screen_i(void){
     game.dim=3;
     game.tentatives=6;
     game.difficulty= 'B';
+     int8_t str[2]={game.difficulty,'\0'};
     info_texts_results[0].string= (int8_t*)ltoa((long)game.dim, buffer[0], 10);
-    info_texts_results[1].string= (int8_t)game.difficulty;
+    info_texts_results[1].string= str;
     info_texts_results[2].string= (game.doubles) ? (int8_t*)"Yes" : (int8_t*)"No";
     info_texts_results[3].string= (int8_t*)ltoa((long)game.tentatives, buffer[1], 10);
 
@@ -29,8 +30,8 @@ void change_screen_i(void){
     Graphics_setForegroundColor(&grContext, FILL_UPPER_RECT);
 
     for(i=0; i<2; i++){drawButton(info_buttons[i], FILL_MOVEMENT, STANDARD_COLOR);}
-
-
 }
-
+void fn_INFO(void) {
+    change_screen_i();
+}
 
