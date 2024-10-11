@@ -83,6 +83,7 @@ Graphics_Text explain[][DIFF_TYPES]={
      {{"- WRONG POS", false}, {"- WRONG POS", false}, {"", false}, {"", false}}
 };
 //Niccolò Cristoforetti's code
+Graphics_Button start_button={FOCUSED, {32, 96, 96, 112}, {"START", false}};
 Graphics_Button tent_buttons[]={
     {FOCUSED, {TENT_DIM/4+1, 32+TENT_DIM/4+1, TENT_DIM/2+TENT_DIM/4-1, 32+TENT_DIM/2+TENT_DIM/4-1}, {"", false}},
     {STANDARD, {1, 32+TENT_DIM+1, TENT_DIM-1, 32+TENT_DIM*2-1}, {"3", false}},
