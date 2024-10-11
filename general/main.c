@@ -139,6 +139,10 @@ int main(void) {
     WDT_A_holdTimer();
     hardware_Init();
     setSizes();
+    ADC_EnableInterrupts();
+    setputPriorities();
+   __enable_irq();
+
     while(1) {
        if(display_position<ERROR_GR) {
            labelDefining(display_position);
@@ -147,10 +151,8 @@ int main(void) {
        else {
            return 0;
        }
-       //ADC14_toggleConversionTrigger();
-       //__enable_irq();
-        __sleep();
-       //ADC14_toggleConversionTrigger();
+       ADC_StartConversion(); // Start ADC conversion
+       __sleep();
     }
 
 }
