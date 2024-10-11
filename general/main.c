@@ -146,10 +146,10 @@ int main(void) {
        else {
            return 0;
        }
-       ADC14_toggleConversionTrigger();
+       //ADC14_toggleConversionTrigger();
        //__enable_irq();
         __sleep();
-       ADC14_toggleConversionTrigger();
+       //ADC14_toggleConversionTrigger();
     }
 
 }
