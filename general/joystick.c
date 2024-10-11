@@ -10,7 +10,7 @@
 #include "dimension.h"
 #include "tentatives.h"
 #include "doubles.h"
-
+#include "msp.h"
 
 void upfunctions() {
     switch(display_position) {
@@ -114,7 +114,7 @@ void _adcInit(){
         ADC14_enableSampleTimer(ADC_AUTOMATIC_ITERATION);
 
         /* Triggering the start of the sample */
-        ADC14_enableConversion();
+         ADC14_enableConversion();
 }
 void before_ADC(){
     /* Set the core voltage level to VCORE1 */
@@ -130,6 +130,20 @@ void before_ADC(){
         CS_initClockSignal(CS_HSMCLK, CS_DCOCLK_SELECT, CS_CLOCK_DIVIDER_1);
         CS_initClockSignal(CS_SMCLK, CS_DCOCLK_SELECT, CS_CLOCK_DIVIDER_1);
         CS_initClockSignal(CS_ACLK, CS_REFOCLK_SELECT, CS_CLOCK_DIVIDER_1);
+}
+void setupPriorities() {
+    // Set priorities for interrupts
+   NVIC_SetPriority(ADC14_IRQn, 2);  // Set ADC interrupt priority (lower number = higher priority)
+   NVIC_SetPriority(PORT3_IRQn, 1);   // Set GPIO Port 3 interrupt priority (higher priority)
+   NVIC_SetPriority(PORT5_IRQn, 1);   // Set GPIO Port 5 interrupt priority (same as Port 3)
+}
+void ADC_StartConversion(void) {
+    ADC14->CTL0 |= ADC14_CTL0_SC; // Start the conversion
+}
+void ADC_EnableInterrupts(void) {
+    ADC14->IER0 |= BIT0; // Enable interrupt for channel 0 (P6.0)
+    ADC14->IER0 |= BIT1; // Enable interrupt for channel 1 (P4.4)
+    NVIC->ISER[1] |= (1 << (ADC14_IRQn & 31)); // Enable ADC14 interrupt in NVIC
 }
 Move findDirection(uint16_t x, uint16_t y) {
     if (y>16200) {
@@ -162,7 +176,7 @@ void ADC14_IRQHandler(void)
         resultsBuffer[1] = ADC14_getResult(ADC_MEM1);
         uint16_t x=resultsBuffer[0];
         uint16_t y=resultsBuffer[1];
-
+        ADC14_clearInterruptFlag(ADC_INT1);
         NavigateMenu(findDirection(x, y));
         for (i=0; i<100000; i++);
     }
