@@ -7,6 +7,13 @@
 #include "buttons.h"
 #include "msp.h"
 #include "graphics.h"
+#include "implementations.h"
+#include "difficulty.h"
+#include "dimension.h"
+#include "tentatives.h"
+#include "doubles.h"
+#include "info.h"
+
 void button_Init() {
     GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P5, GPIO_PIN1);
     GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P3, GPIO_PIN5);
@@ -25,11 +32,11 @@ void buttonBackAction() {
 void buttonConfirmAction() {
     switch(display_position) {
         case START_GR: break;
-        case DIMENSION: break;
-        case DIFFICULTY: break;
-        case TENTATIVE: break;
-        case DOUBLES: break;
-        case INFO: break;
+        case DIMENSION: handle_buttons(dim_buttons); break;
+        case DIFFICULTY: handle_buttons(diff_buttons); break;
+        case TENTATIVE: handle_buttons(tent_buttons); break;
+        case DOUBLES: handle_buttons(doubles_buttons); break;
+        case INFO: handle_buttons(info_buttons); break;
         case GAME: break;
         case CHRONOLOGY: break;
         case END: break;
