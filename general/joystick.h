@@ -18,7 +18,10 @@ typedef enum {UP, DOWN, LEFT, RIGHT, CENTER} Move;
  * RIGHT - X >15500
  * CENTER - DEFAULT
  */
-
+void upfunctions();
+void downfunctions();
+void leftfunctions();
+void rightfunctions();
 void NavigateMenu(Move direction);
 void _adcInit();
 void before_ADC();
