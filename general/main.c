@@ -9,11 +9,12 @@
 #include "graphics.h"
 #include "fsm.h"
 #include "dimension.h"
-#include "difficulty.h"
 #include "tentatives.h"
 #include "doubles.h"
+#include "difficulty.h"
 #include "info.h"
 #include "joystick.h"
+#include "buttons.h"
 
 typedef struct Graphics_StateMachine {
     Graphics_State state; //Current Graphics State
@@ -35,7 +36,7 @@ Graphics_StateMachine gfsm[]={
 Game game;
 Tentative tentative;
 State current_state=START;
-Graphics_State display_position=DIMENSION;
+Graphics_State display_position=DIFFICULTY;
 Graphics_Rectangle upperRect={0, 0, 128, 32};
 Graphics_Button prevButton={STANDARD, {0, 97, 63, 128}, {{"Back"}, false}};
 Graphics_Button nextButton={DISABLED, {65, 97, 128, 128}, {{"Next"}, false}};
@@ -76,10 +77,10 @@ Graphics_Button diff_buttons[]={
     {STANDARD, {0, 0, 0, 0}, {"", false}}
 };
 Graphics_Text explain[][DIFF_TYPES]={
-     {{"EASY MODE", false},{"MEDIUM MODE", false}, {"HARD MODE", false}},
-     {{"INFO PER COLOR", false},{"INFO GENERAL", false},{"INFO GENERAL", false}},
-     {{"- RIGHT POS", false},{"- RIGHT POS", false},{"- RIGHT POS", false}},
-     {{"- WRONG POS", false}, {"- WRONG POS", false}, {"", false}}
+     {{"EASY MODE", false},{"MEDIUM MODE", false}, {"HARD MODE", false}, {"", false}},
+     {{"INFO PER COLOR", false},{"INFO GENERAL", false},{"INFO GENERAL", false}, {"", false}},
+     {{"- RIGHT POS", false},{"- RIGHT POS", false},{"- RIGHT POS", false}, {"", false}},
+     {{"- WRONG POS", false}, {"- WRONG POS", false}, {"", false}, {"", false}}
 };
 //Niccolò Cristoforetti's code
 Graphics_Button tent_buttons[]={
@@ -117,11 +118,27 @@ Graphics_Text info_texts_results[]={
 Graphics_Button info_buttons[]={ 
     {STANDARD, {0,0,0,0}, {{""}, false}},
     {STANDARD, {0,0,0,0}, {{""}, false}}};
-
+//SIZES
+int8_t sizes[ERROR_GR];
+void setSizes() {
+    switch(display_position) {
+        case START_GR: sizes[display_position]=1; break;
+        case DIMENSION: sizes[display_position]=ARRAY_SIZE(dim_buttons); break;
+        case DIFFICULTY: sizes[display_position]=ARRAY_SIZE(diff_buttons); break;
+        case TENTATIVE: sizes[display_position]=ARRAY_SIZE(tent_buttons); break;
+        case DOUBLES: sizes[display_position]=ARRAY_SIZE(doubles_buttons); break;
+        case INFO: sizes[display_position]=ARRAY_SIZE(info_buttons); break;
+        case GAME:  sizes[display_position]=1; break;
+        case CHRONOLOGY: sizes[display_position]=1; break;
+        case END: sizes[display_position]=1; break;
+        default: exit(1);
+    }
+}
 
 int main(void) {
     WDT_A_holdTimer();
     hardware_Init();
+    setSizes();
     while(1) {
        if(display_position<ERROR_GR) {
            labelDefining(display_position);
@@ -130,27 +147,11 @@ int main(void) {
        else {
            return 0;
        }
+       ADC14_toggleConversionTrigger();
+       //__enable_irq();
         __sleep();
+       ADC14_toggleConversionTrigger();
     }
 
 }
-void ADC14_IRQHandler(void)
-{
-    uint64_t status;
-    int i;
-    status = ADC14_getEnabledInterruptStatus();
-    ADC14_clearInterruptFlag(status);
 
-    /* ADC_MEM1 conversion completed */
-    if(status & ADC_INT1)
-    {
-        /* Store ADC14 conversion results */
-        resultsBuffer[0] = ADC14_getResult(ADC_MEM0);
-        resultsBuffer[1] = ADC14_getResult(ADC_MEM1);
-        uint16_t x=resultsBuffer[0];
-        uint16_t y=resultsBuffer[1];
-
-        NavigateMenu(findDirection(x, y));
-        for (i=0; i<100000; i++);
-    }
-}
