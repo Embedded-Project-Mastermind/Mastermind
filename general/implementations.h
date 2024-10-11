@@ -28,7 +28,7 @@ int32_t getCenteredY(Graphics_Rectangle rect);
 int32_t chooseColorRect(Button_State state, int32_t color);
 int32_t chooseColorText(Button_State state, int32_t color);
 //FUNCTIONS STATUS
-void handleOut(Graphics_Button array[], uint8_t position);
+void handleOut(Graphics_Button array[], uint8_t position, int8_t size);
 void handleIn(Graphics_Button array[], uint8_t position);
 //FUNCTIONS DRAW
 void defaultDraw(void);
