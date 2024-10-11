@@ -19,5 +19,9 @@ Graphics_Button other_things[];
 
 void drawTentatives(int elems);
 void fn_TENTATIVE(void);
+void upStick_TENTATIVE();
+void downStick_TENTATIVE();
+void leftStick_TENTATIVE();
+void rightStick_TENTATIVE();
 
 #endif /* TENTATIVES_H_ */
