@@ -118,11 +118,6 @@ void handle_buttons(Graphics_Button array[]){
     }
 }
 
-void fn_START_GR(void) {
-    //DRAW FUNCTION
-    //FOLLOWING POSITION
-}
-
 void fn_GAME(void) {
     reset_Screen();
     //DRAW FUNCTION
