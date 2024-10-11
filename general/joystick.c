@@ -7,15 +7,18 @@
  */
 #include "joystick.h"
 #include "difficulty.h"
+#include "dimension.h"
 #include "tentatives.h"
+#include "doubles.h"
+
 
 void upfunctions() {
     switch(display_position) {
         case START_GR: break;
-        case DIMENSION: break;
+        case DIMENSION: upStick_DIMENSION(); break;
         case DIFFICULTY: upStick_DIFFICULTY(); break;
         case TENTATIVE: upStick_TENTATIVE(); break;
-        case DOUBLES: break;
+        case DOUBLES: upStick_DOUBLES(); break;
         case INFO: break;
         case GAME: break;
         case CHRONOLOGY: break;
@@ -26,10 +29,10 @@ void upfunctions() {
 void downfunctions() {
     switch(display_position) {
         case START_GR: break;
-        case DIMENSION: break;
+       case DIMENSION: downStick_DIMENSION(); break;
         case DIFFICULTY: downStick_DIFFICULTY(); break;
         case TENTATIVE: downStick_TENTATIVE(); break;
-        case DOUBLES: break;
+        case DOUBLES: downStick_DOUBLES(); break;
         case INFO: break;
         case GAME: break;
         case CHRONOLOGY: break;
@@ -40,10 +43,10 @@ void downfunctions() {
 void leftfunctions() {
     switch(display_position) {
         case START_GR: break;
-        case DIMENSION: break;
+        case DIMENSION: leftStick_DIMENSION(); break;
         case DIFFICULTY: leftStick_DIFFICULTY(); break;
         case TENTATIVE: leftStick_TENTATIVE(); break;
-        case DOUBLES: break;
+        case DOUBLES: leftStick_DOUBLES(); break;
         case INFO: break;
         case GAME: break;
         case CHRONOLOGY: break;
@@ -54,10 +57,10 @@ void leftfunctions() {
 void rightfunctions() {
     switch(display_position) {
         case START_GR: break;
-        case DIMENSION: break;
+        case DIMENSION: rightStick_DIMENSION(); break;
         case DIFFICULTY: rightStick_DIFFICULTY(); break;
         case TENTATIVE: rightStick_TENTATIVE(); break;
-        case DOUBLES: break;
+        case DOUBLES: rightStick_DOUBLES(); break;
         case INFO: break;
         case GAME: break;
         case CHRONOLOGY: break;
