@@ -84,9 +84,9 @@ void defaultDraw(void) {
         Graphics_drawStringCentered(&grContext, (int8_t *)labelText.string, AUTO_STRING_LENGTH, getCenteredX(upperRect),  getCenteredY(upperRect), labelText.opacity);
     }
 }
-void handleOut(Graphics_Button array[], uint8_t position) {
+void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
     array[position].state=STANDARD;
-    if(position<(5-2)) {
+    if(position<(size-2)) {
         drawButton(array[position], STANDARD_COLOR, SELECTED_COLOR);
     }
     else {
