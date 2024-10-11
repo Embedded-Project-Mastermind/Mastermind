@@ -140,7 +140,7 @@ int main(void) {
     hardware_Init();
     setSizes();
     ADC_EnableInterrupts();
-    setputPriorities();
+    setupPriorities();
    __enable_irq();
 
     while(1) {
