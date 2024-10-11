@@ -104,13 +104,18 @@ void hardware_Init() {
     button_Init();
 }
 
-void bottom_buttons(){
-    if(position==(sizes[display_position]-2)){
-        display_position--;
+void handle_buttons(Graphics_Button array[]){
+    if(position<(sizes[display_position]-2)){
+        array[position].state=SELECTED;
+        }
+    else{
+       if(position==(sizes[display_position]-2)){
+           display_position--;
+       }
+       if(position==(sizes[display_position]-1)){
+           display_position++;
+       }
     }
-    if(position==(sizes[display_position]-1)){
-         display_position++;
-     }
 }
 
 void fn_START_GR(void) {
