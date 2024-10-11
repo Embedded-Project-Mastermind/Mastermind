@@ -72,4 +72,13 @@ void rightStick_DOUBLES(){
        }
 }
 
+void buttons_DOUBLES(){
+    if(position<(sizes[DOUBLES]-2)){
+        doubles_buttons[position].state=SELECTED;
+        change_screen_d();
+    }
+    else{
+        bottom_buttons();
+    }
+}
 
