@@ -40,13 +40,13 @@ void fn_DIFFICULTY(void) {
 }
 void upStick_DIFFICULTY() {
     if(position>0 && position<sizes[DIFFICULTY]-2) {
-        handleOut(diff_buttons, position);
+        handleOut(diff_buttons, position, sizes[DIFFICULTY]);
         position--;
         handleIn(diff_buttons, position);
         drawText();
     }
     else if (position>=sizes[DIFFICULTY]-2) {
-        handleOut(diff_buttons, position);
+        handleOut(diff_buttons, position, sizes[DIFFICULTY]);
         position=2;
         handleIn(diff_buttons, position);
         drawText();
@@ -54,7 +54,7 @@ void upStick_DIFFICULTY() {
 }
 void downStick_DIFFICULTY() {
     if(position<3) {
-        handleOut(diff_buttons, position);
+        handleOut(diff_buttons, position, sizes[DIFFICULTY]);
         position++;
         handleIn(diff_buttons, position);
         drawText();
