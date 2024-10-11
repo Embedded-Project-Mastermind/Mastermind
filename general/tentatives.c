@@ -9,12 +9,14 @@
 #include "graphics.h"
 
 void drawTentatives(int elems) {
-    Graphics_Rectangle temp={1, 32+2, TENT_DIM-1, 32+TENT_DIM-1};
-    Graphics_drawRectangle(&grContext, &temp);
-    Graphics_setForegroundColor(&grContext, GRAPHICS_COLOR_BLACK);
-    Graphics_fillRectangle(&grContext, &temp);
-    drawButton(text_no_tent, STANDARD_COLOR, SELECTED_COLOR);
+    Graphics_Button other_things[]={
+        {DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TENT", false}},
+        {DISABLED, {1, 32+2, TENT_DIM-1, 32+TENT_DIM-1}, {"", false}}
+    };
     int i;
+    for (i=0; i<2; i++) {
+        drawButton(other_things[i], STANDARD_COLOR, SELECTED_COLOR);
+    }
     for (i=0; i<elems; i++) {
            if (i<elems-2) {
                drawButton(tent_buttons[i], STANDARD_COLOR, SELECTED_COLOR);
