@@ -20,5 +20,6 @@ void upStick_DOUBLES();
 void downStick_DOUBLES();
 void leftStick_DOUBLES();
 void rightStick_DOUBLES();
+void buttons_DOUBLES();
 
 #endif /* DOUBLES_H_ */
