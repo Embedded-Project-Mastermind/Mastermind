@@ -59,6 +59,7 @@ typedef struct Graphics_Button {
 } Graphics_Button;
 //Extern Variables
 extern Graphics_State display_position;
+extern int8_t sizes[ERROR_GR];
 #endif /* GRAPHICS_H_ */
 
 
