@@ -92,7 +92,6 @@ Graphics_Button tent_buttons[]={
     {STANDARD, {0, 0, 0, 0}, {"", false}},
     {STANDARD, {0, 0, 0, 0}, {"", false}}
 };
-Graphics_Button text_no_tent={DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TENT", false}};
 
 //Daniele Calvo's code
 Graphics_Text doubles_text={{"Doubles"}, false};  //DOUBLE state part
