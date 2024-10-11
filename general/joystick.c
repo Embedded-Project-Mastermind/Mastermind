@@ -7,13 +7,14 @@
  */
 #include "joystick.h"
 #include "difficulty.h"
+#include "tentatives.h"
 
 void upfunctions() {
     switch(display_position) {
         case START_GR: break;
         case DIMENSION: break;
         case DIFFICULTY: upStick_DIFFICULTY(); break;
-        case TENTATIVE: break;
+        case TENTATIVE: upStick_TENTATIVE(); break;
         case DOUBLES: break;
         case INFO: break;
         case GAME: break;
@@ -27,7 +28,7 @@ void downfunctions() {
         case START_GR: break;
         case DIMENSION: break;
         case DIFFICULTY: downStick_DIFFICULTY(); break;
-        case TENTATIVE: break;
+        case TENTATIVE: downStick_TENTATIVE(); break;
         case DOUBLES: break;
         case INFO: break;
         case GAME: break;
@@ -41,7 +42,7 @@ void leftfunctions() {
         case START_GR: break;
         case DIMENSION: break;
         case DIFFICULTY: leftStick_DIFFICULTY(); break;
-        case TENTATIVE: break;
+        case TENTATIVE: leftStick_TENTATIVE(); break;
         case DOUBLES: break;
         case INFO: break;
         case GAME: break;
@@ -55,7 +56,7 @@ void rightfunctions() {
         case START_GR: break;
         case DIMENSION: break;
         case DIFFICULTY: rightStick_DIFFICULTY(); break;
-        case TENTATIVE: break;
+        case TENTATIVE: rightStick_TENTATIVE(); break;
         case DOUBLES: break;
         case INFO: break;
         case GAME: break;
