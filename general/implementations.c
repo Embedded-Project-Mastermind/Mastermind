@@ -7,6 +7,7 @@
 #include "implementations.h"
 #include "graphics.h"
 #include "joystick.h"
+#include "buttons.h"
 
 void reset_Screen(void) {
     Graphics_setFont(&grContext, &g_sFontFixed6x8); //resets the font to the standard one, probably not necessary but anyways it's good practice to put it
@@ -83,11 +84,24 @@ void defaultDraw(void) {
         Graphics_drawStringCentered(&grContext, (int8_t *)labelText.string, AUTO_STRING_LENGTH, getCenteredX(upperRect),  getCenteredY(upperRect), labelText.opacity);
     }
 }
+void handleOut(Graphics_Button array[], uint8_t position) {
+    array[position].state=STANDARD;
+    if(position<(5-2)) {
+        drawButton(array[position], STANDARD_COLOR, SELECTED_COLOR);
+    }
+    else {
+        drawButton(array[position], FILL_MOVEMENT, STANDARD_COLOR);
+    }
+}
+void handleIn(Graphics_Button array[], uint8_t position) {
+    array[position].state=FOCUSED;
+    drawButton(array[position], STANDARD_COLOR, BORDER_FOCUSED_COLOR);
+}
 void hardware_Init() {
     before_ADC();
     graphics_Init();
     _adcInit();
-    //BUTTONS INIT
+    button_Init();
 }
 void fn_START_GR(void) {
     //DRAW FUNCTION
