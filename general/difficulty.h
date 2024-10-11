@@ -15,7 +15,7 @@
 #define DIFF_TYPES 4
 
 void fn_DIFFICULTY(void);
-void drawDifficulty(int32_t elems);
+void drawDifficulty();
 void upStick_DIFFICULTY();
 void downStick_DIFFICULTY();
 void leftStick_DIFFICULTY();
