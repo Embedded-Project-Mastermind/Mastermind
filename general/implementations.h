@@ -37,7 +37,6 @@ void focusedHandle(void);
 //buttons back and next handler
 void handle_buttons(Graphics_Button array[]);
 //FUNCTIONS FOR STATES
-void fn_START_GR(void);
 void fn_GAME(void);
 void fn_CHRONOLOGY(void);
 void fn_END(void);
