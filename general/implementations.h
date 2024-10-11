@@ -35,7 +35,7 @@ void defaultDraw(void);
 void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color);
 void focusedHandle(void);
 //buttons back and next handler
-void bottom_buttons();
+void handle_buttons(Graphics_Button array[]);
 //FUNCTIONS FOR STATES
 void fn_START_GR(void);
 void fn_GAME(void);
