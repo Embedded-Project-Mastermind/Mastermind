@@ -6,12 +6,13 @@
  *
  */
 #include "joystick.h"
+#include "difficulty.h"
 
 void upfunctions() {
     switch(display_position) {
         case START_GR: break;
         case DIMENSION: break;
-        case DIFFICULTY: break;
+        case DIFFICULTY: upStick_DIFFICULTY(); break;
         case TENTATIVE: break;
         case DOUBLES: break;
         case INFO: break;
@@ -25,7 +26,7 @@ void downfunctions() {
     switch(display_position) {
         case START_GR: break;
         case DIMENSION: break;
-        case DIFFICULTY: break;
+        case DIFFICULTY: downStick_DIFFICULTY(); break;
         case TENTATIVE: break;
         case DOUBLES: break;
         case INFO: break;
@@ -39,7 +40,7 @@ void leftfunctions() {
     switch(display_position) {
         case START_GR: break;
         case DIMENSION: break;
-        case DIFFICULTY: break;
+        case DIFFICULTY: leftStick_DIFFICULTY(); break;
         case TENTATIVE: break;
         case DOUBLES: break;
         case INFO: break;
@@ -53,7 +54,7 @@ void rightfunctions() {
     switch(display_position) {
         case START_GR: break;
         case DIMENSION: break;
-        case DIFFICULTY: break;
+        case DIFFICULTY: rightStick_DIFFICULTY(); break;
         case TENTATIVE: break;
         case DOUBLES: break;
         case INFO: break;
@@ -85,6 +86,7 @@ void _adcInit(){
 
         /* Configuring ADC Memory (ADC_MEM0 - ADC_MEM1 (A15, A9)  with repeat)
              * with internal 2.5v reference */
+
         ADC14_configureMultiSequenceMode(ADC_MEM0, ADC_MEM1, true);
         ADC14_configureConversionMemory(ADC_MEM0,
                 ADC_VREFPOS_AVCC_VREFNEG_VSS,
@@ -109,7 +111,6 @@ void _adcInit(){
 
         /* Triggering the start of the sample */
         ADC14_enableConversion();
-        //ADC14_toggleConversionTrigger();
 }
 void before_ADC(){
     /* Set the core voltage level to VCORE1 */
@@ -142,3 +143,23 @@ Move findDirection(uint16_t x, uint16_t y) {
     return CENTER;
 }
 
+void ADC14_IRQHandler(void)
+{
+    uint64_t status;
+    int i;
+    status = ADC14_getEnabledInterruptStatus();
+    ADC14_clearInterruptFlag(status);
+
+    /* ADC_MEM1 conversion completed */
+    if(status & ADC_INT1)
+    {
+        /* Store ADC14 conversion results */
+        resultsBuffer[0] = ADC14_getResult(ADC_MEM0);
+        resultsBuffer[1] = ADC14_getResult(ADC_MEM1);
+        uint16_t x=resultsBuffer[0];
+        uint16_t y=resultsBuffer[1];
+
+        NavigateMenu(findDirection(x, y));
+        for (i=0; i<100000; i++);
+    }
+}
