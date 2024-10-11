@@ -12,6 +12,7 @@
 #define COLORS 8 //Colors Available based on the number you have
 #define MAX_TENTS 30 //Is no tentatives are selected, after a certain number we stop
                      //in order to not saturate the memory
+#define ARRAY_SIZE(arr) (sizeof(arr)/sizeof(arr[0]))
 /* ENUM Declaration */
 typedef enum {START, KEY_WOUT_DOUB, KEY_WH_DOUB, RESET_TENT, WAIT, ELABORATE, INSERT_COLOR, WAIT_FULL, ELIMINATE_COLOR, ELABORATE_TENT, INCREMENT_TENT, GAME_OVER, EASY_MODE, MEDIUM_MODE, DIFFICULT_MODE, ELABORATE_RESULT, WIN, ERROR} State;
 /* Struct Declaration*/
