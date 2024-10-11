@@ -11,10 +11,15 @@
 #include "stdlib.h"
 #include "implementations.h"
 #define DIFF_DIM 20
-#define DIFF_TYPES 3
+#define DIFF_TEXT 4
+#define DIFF_TYPES 4
 
 void fn_DIFFICULTY(void);
 void drawDifficulty(int32_t elems);
+void upStick_DIFFICULTY();
+void downStick_DIFFICULTY();
+void leftStick_DIFFICULTY();
+void rightStick_DIFFICULTY();
 
 extern Graphics_Button diff_buttons[];
 extern Graphics_Text explain[][DIFF_TYPES];
