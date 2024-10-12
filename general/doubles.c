@@ -71,6 +71,11 @@ void rightStick_DOUBLES(){
        }
 }
 void handlePressure_DOUBLES() {
-
+    if (doubles_buttons[0].state == FOCUSED || doubles_buttons[0].state == SELECTED) {
+        game.doubles=false;
+    } else {
+        game.doubles=true;
+    }
+    handleSelection(doubles_buttons);
 }
 
