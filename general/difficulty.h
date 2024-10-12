@@ -20,7 +20,8 @@ void upStick_DIFFICULTY();
 void downStick_DIFFICULTY();
 void leftStick_DIFFICULTY();
 void rightStick_DIFFICULTY();
+void handlePressure_DIFFICULTY();
 
 extern Graphics_Button diff_buttons[];
-extern Graphics_Text explain[][DIFF_TYPES];
+extern Graphics_Text explain[DIFF_TEXT][DIFF_TYPES];
 #endif /* DIFFICULTY_H_ */
