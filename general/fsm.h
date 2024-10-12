@@ -8,6 +8,7 @@
 #ifndef FSM_H_
 #define FSM_H_
 #include "msp.h"
+#include "stdbool.h"
 //COSTANTS
 #define COLORS 8 //Colors Available based on the number you have
 #define MAX_TENTS 30 //Is no tentatives are selected, after a certain number we stop
@@ -37,4 +38,5 @@ extern Game game;                  // Game struct instance
 extern Tentative tentative;        // Tentative struct instance
 extern State current_state;    // Initialize current state
 extern int i, j;                     //Variables acting like counters for for-cycles
+extern bool interruptFlag;
 #endif /* FSM_H_ */
