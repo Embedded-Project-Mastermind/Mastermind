@@ -8,6 +8,7 @@
 #include "implementations.h"
 #include "graphics.h"
 #include "fsm.h"
+#include "start.h"
 #include "dimension.h"
 #include "tentatives.h"
 #include "doubles.h"
@@ -83,7 +84,6 @@ Graphics_Text explain[][DIFF_TYPES]={
      {{"- WRONG POS", false}, {"- WRONG POS", false}, {"", false}, {"", false}}
 };
 //Niccolò Cristoforetti's code
-Graphics_Button start_button={FOCUSED, {32, 96, 96, 112}, {"START", false}};
 Graphics_Button tent_buttons[]={
     {FOCUSED, {TENT_DIM/4+1, 32+TENT_DIM/4+1, TENT_DIM/2+TENT_DIM/4-1, 32+TENT_DIM/2+TENT_DIM/4-1}, {"", false}},
     {STANDARD, {1, 32+TENT_DIM+1, TENT_DIM-1, 32+TENT_DIM*2-1}, {"3", false}},
@@ -93,7 +93,8 @@ Graphics_Button tent_buttons[]={
     {STANDARD, {0, 0, 0, 0}, {"", false}},
     {STANDARD, {0, 0, 0, 0}, {"", false}}
 };
-
+Graphics_Button text_no_tent={DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TENT", false}};
+Graphics_Button start_button={FOCUSED, {32, 96, 96, 112}, {"START", false}};
 //Daniele Calvo's code
 Graphics_Text doubles_text={{"Doubles"}, false};  //DOUBLE state part
 Graphics_Text doubles_description[]={ 
@@ -121,29 +122,34 @@ Graphics_Button info_buttons[]={
 //SIZES
 int8_t sizes[ERROR_GR];
 void setSizes() {
-    switch(display_position) {
-        case START_GR: sizes[display_position]=1; break;
-        case DIMENSION: sizes[display_position]=ARRAY_SIZE(dim_buttons); break;
-        case DIFFICULTY: sizes[display_position]=ARRAY_SIZE(diff_buttons); break;
-        case TENTATIVE: sizes[display_position]=ARRAY_SIZE(tent_buttons); break;
-        case DOUBLES: sizes[display_position]=ARRAY_SIZE(doubles_buttons); break;
-        case INFO: sizes[display_position]=ARRAY_SIZE(info_buttons); break;
-        case GAME:  sizes[display_position]=1; break;
-        case CHRONOLOGY: sizes[display_position]=1; break;
-        case END: sizes[display_position]=1; break;
-        default: exit(1);
+    int i;
+    for (i=0; i<ERROR_GR; i++) {
+        switch(i) {
+            case START_GR: sizes[i]=1; break;
+            case DIMENSION: sizes[i]=ARRAY_SIZE(dim_buttons); break;
+            case DIFFICULTY: sizes[i]=ARRAY_SIZE(diff_buttons); break;
+            case TENTATIVE: sizes[i]=ARRAY_SIZE(tent_buttons); break;
+            case DOUBLES: sizes[i]=ARRAY_SIZE(doubles_buttons); break;
+            case INFO: sizes[i]=ARRAY_SIZE(info_buttons); break;
+            case GAME:  sizes[i]=1; break;
+            case CHRONOLOGY: sizes[i]=1; break;
+            case END: sizes[i]=1; break;
+            default: exit(1);
+        }
     }
 }
-
+//BOOLEANS
+bool interruptFlag=false;
+bool flagNext=false;
+bool flagPrev=false;
 int main(void) {
     WDT_A_holdTimer();
     hardware_Init();
     setSizes();
     ADC_EnableInterrupts();
     setupPriorities();
-   __enable_irq();
-
     while(1) {
+       interruptFlag=false;
        if(display_position<ERROR_GR) {
            labelDefining(display_position);
            (*gfsm[display_position].state_function)();
@@ -151,9 +157,16 @@ int main(void) {
        else {
            return 0;
        }
-       ADC_StartConversion(); // Start ADC conversion
-       __sleep();
+       //__delay_cycles(1000000);
+      __enable_irq();
+       while(1) {
+           ADC_StartConversion(); // Start ADC conversion
+           ADC14_toggleConversionTrigger();
+           __sleep();
+           if (interruptFlag) {
+               break;
+           }
+       }
+       __disable_irq();
     }
-
 }
-
