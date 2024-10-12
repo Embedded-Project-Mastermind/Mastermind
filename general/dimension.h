@@ -13,14 +13,13 @@
 
 
 void drawDimension();
-void handleFont();
 void fn_DIMENSION(void); //ricordarsi di rimuoverla da implementations.h e implementations.c
+void handleFont();
 void upStick_DIMENSION();
 void downStick_DIMENSION();
 void leftStick_DIMENSION();
 void rightStick_DIMENSION();
-
-
+void handlePressure_DIMENSION();
 //extern declaretion
 extern Graphics_Button dim_buttons[];  //da implementare nel main
 
