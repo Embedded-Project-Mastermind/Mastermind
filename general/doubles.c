@@ -23,8 +23,8 @@ void create_doubles_text(void){
 void create_doubles_buttons(void){
     int i, elems= 3;
     for(i=0; i<elems; i++){
-        if(i<elems-2){drawButton(doubles_buttons[i], STANDARD_COLOR, SELECTED_COLOR);}
-        else{drawButton(doubles_buttons[i], FILL_MOVEMENT, STANDARD_COLOR);}
+        if(i<elems-2){drawButton(doubles_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(doubles_buttons, sizes[DOUBLES]));}
+        else{drawButton(doubles_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, findSelected(doubles_buttons, sizes[DOUBLES]));}
     }
 
 }
@@ -36,38 +36,41 @@ void change_screen_d(void){
 }
 
 void fn_DOUBLES(void) {
-    doubles_buttons[1]=prevButton; //spostati dalla funzione create_doubles perchè c'era necessita di impostare next a STANDARD
-    doubles_buttons[2]=nextButton;
+    reset_Screen();
     doubles_buttons[sizes[DOUBLES]-1].state=STANDARD;
+    initArray(doubles_buttons, sizes[DOUBLES]);
     change_screen_d();
-
 }
 
 void upStick_DOUBLES(){
     if(position>0){
         handleOut(doubles_buttons, position, sizes[DOUBLES]);
         position=0;
-        handleIn(doubles_buttons, position);
+        handleIn(doubles_buttons, position, sizes[DOUBLES]);
     }
 }
 void downStick_DOUBLES(){
     if(position==0){
         handleOut(doubles_buttons, position, sizes[DOUBLES]);
         position=2;
-        handleIn(doubles_buttons, position);
+        handleIn(doubles_buttons, position, sizes[DOUBLES]);
     }
 }
 void leftStick_DOUBLES(){
     if(position==2){
         handleOut(doubles_buttons, position, sizes[DOUBLES]);
         position--;
-        handleIn(doubles_buttons, position);
+        handleIn(doubles_buttons, position, sizes[DOUBLES]);
        }
 }
 void rightStick_DOUBLES(){
     if(position==1){
         handleOut(doubles_buttons, position, sizes[DOUBLES]);
         position++;
-        handleIn(doubles_buttons, position);
+        handleIn(doubles_buttons, position, sizes[DOUBLES]);
        }
 }
+void handlePressure_DOUBLES() {
+
+}
+
