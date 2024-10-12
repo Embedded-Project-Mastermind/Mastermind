@@ -31,7 +31,7 @@ void buttonBackAction() {
 }
 void buttonConfirmAction() {
     switch(display_position) {
-        case START_GR: break;
+        case START_GR: display_position++; break;
         case DIMENSION: handle_buttons(dim_buttons); break;
         case DIFFICULTY: handle_buttons(diff_buttons); break;
         case TENTATIVE: handle_buttons(tent_buttons); break;
@@ -42,18 +42,23 @@ void buttonConfirmAction() {
         case END: break;
         //default: exit(1);
     }
+
 }
 void PORT5_IRQHandler(void) {
     if(P5->IFG & BIT1) {
         buttonBackAction();
         P5->IFG &= ~BIT1;
-        __delay_cycles(200000);
+        interruptFlag=true;
+        __disable_irq();
+        //__delay_cycles(1000000);
     }
 }
 void PORT3_IRQHandler(void) {
     if(P3->IFG & BIT5) {
         buttonConfirmAction();
         P3->IFG &= ~BIT5;
-        __delay_cycles(200000);
+        interruptFlag=true;
+        __disable_irq();
+        //__delay_cycles(1000000);
     }
 }
