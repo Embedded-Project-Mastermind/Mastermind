@@ -12,11 +12,11 @@ void drawDimension() {
     for (i=0; i<sizes[DIMENSION]; i++) {
         if (i<sizes[DIMENSION]-2) {
             Graphics_setFont(&grContext, &g_sFontCm20);
-            drawButton(dim_buttons[i], STANDARD_COLOR, SELECTED_COLOR);
+            drawButton(dim_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(dim_buttons, sizes[DIMENSION]));
         }
         else {
             Graphics_setFont(&grContext, &g_sFontFixed6x8);
-            drawButton(dim_buttons[i], FILL_MOVEMENT, STANDARD_COLOR);
+            drawButton(dim_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, findSelected(dim_buttons, sizes[DIMENSION]));
         }
     }
 }
@@ -32,9 +32,7 @@ void handleFont(){
 
 void fn_DIMENSION(void) {
     reset_Screen();  //screen reset function
-//    int32_t num_elements = 6;  // 6 elements, 4 buttons for dimension selection and back and next buttons
-    dim_buttons[sizes[DIMENSION]-2]=prevButton; //add prev to the array
-    dim_buttons[sizes[DIMENSION]-1]=nextButton;  //add back to the array
+    initArray(dim_buttons, sizes[DIMENSION]);
     defaultDraw(); //default draw function, draws top part, back and next buttons
     drawDimension();
     //FOLLOWING POSITION
@@ -46,7 +44,7 @@ void upStick_DIMENSION(){
         handleOut(dim_buttons, position, sizes[DIMENSION]);
         position=position-2;
         handleFont(); //sarebbe da ottimizzare
-        handleIn(dim_buttons, position);
+        handleIn(dim_buttons, position, sizes[DIMENSION]);
     }
 }
 
@@ -56,14 +54,14 @@ void downStick_DIMENSION(){
             handleOut(dim_buttons, position, sizes[DIMENSION]);
             position=position+2;
             handleFont();
-            handleIn(dim_buttons, position);
+            handleIn(dim_buttons, position, sizes[DIMENSION]);
     }
     else if(position==3 && dim_buttons[sizes[DIMENSION]-1].state!=DISABLED ){
         handleFont();
         handleOut(dim_buttons, position, sizes[DIMENSION]);
         position=position+2;
         handleFont();
-        handleIn(dim_buttons, position);
+        handleIn(dim_buttons, position, sizes[DIMENSION]);
     }
 }
 
@@ -74,7 +72,7 @@ void leftStick_DIMENSION(){
         handleOut(dim_buttons, position, sizes[DIMENSION]);
         position--;
         handleFont();
-        handleIn(dim_buttons, position);
+        handleIn(dim_buttons, position, sizes[DIMENSION]);
     }
 }
 
@@ -86,18 +84,21 @@ void rightStick_DIMENSION(){
             handleOut(dim_buttons, position, sizes[DIMENSION]);
             position++;
             handleFont();
-            handleIn(dim_buttons, position);
+            handleIn(dim_buttons, position, sizes[DIMENSION]);
         }
         if(position==4 && dim_buttons[sizes[DIMENSION]-1].state!=DISABLED){
            handleFont();
            handleOut(dim_buttons, position, sizes[DIMENSION]);
            position++;
            handleFont();
-           handleIn(dim_buttons, position);
+           handleIn(dim_buttons, position, sizes[DIMENSION]);
        }
      }
 }
-
+void handlePressure_DIMENSION() {
+    game.dim=atoi((char*)dim_buttons[position].text.string);
+    handleSelection(dim_buttons);
+}
 
 
 
