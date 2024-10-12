@@ -17,6 +17,7 @@
 extern Graphics_Button tent_buttons[];
 Graphics_Button other_things[];
 
+void handlePressure_TENTATIVE();
 void drawTentatives(int elems);
 void fn_TENTATIVE(void);
 void upStick_TENTATIVE();
