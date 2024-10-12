@@ -146,16 +146,16 @@ void ADC_EnableInterrupts(void) {
     NVIC->ISER[1] |= (1 << (ADC14_IRQn & 31)); // Enable ADC14 interrupt in NVIC
 }
 Move findDirection(uint16_t x, uint16_t y) {
-    if (y>16200) {
+    if (y>16350) {
         return UP;
     }
-    if(y<200) {
+    if(y<50) {
         return DOWN;
     }
-    if(x<200) {
+    if(x<50) {
         return LEFT;
     }
-    if(x>15500) {
+    if(x>15700) {
         return RIGHT;
     }
     return CENTER;
@@ -178,6 +178,8 @@ void ADC14_IRQHandler(void)
         uint16_t y=resultsBuffer[1];
         ADC14_clearInterruptFlag(ADC_INT1);
         NavigateMenu(findDirection(x, y));
+        //ADC14_toggleConversionTrigger();
         for (i=0; i<100000; i++);
+        interruptFlag=true;
     }
 }
