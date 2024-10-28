@@ -12,15 +12,15 @@
 #include "graphics.h"
 
 
-void drawDimension();
-void fn_DIMENSION(void); 
-void handleFont();
-void upStick_DIMENSION();
-void downStick_DIMENSION();
-void leftStick_DIMENSION();
-void rightStick_DIMENSION();
+void drawDimension(); //draws buttons
+void fn_DIMENSION(void); //general function for scenario drawing
+void handleFont(); //manages the font dimension for the buttons
+void upStick_DIMENSION(); //handles the up movement of the stick
+void downStick_DIMENSION(); //handles the down movement of the stick
+void leftStick_DIMENSION(); //handles the left movement of the stick
+void rightStick_DIMENSION(); //handles the right movement of the stick
 void handlePressure_DIMENSION();
 //extern declaretion
-extern Graphics_Button dim_buttons[];  //da implementare nel main
+extern Graphics_Button dim_buttons[];  //array of buttons declaration
 
 #endif /* DIMENSION_H_ */
