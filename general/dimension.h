@@ -13,7 +13,7 @@
 
 
 void drawDimension();
-void fn_DIMENSION(void); //ricordarsi di rimuoverla da implementations.h e implementations.c
+void fn_DIMENSION(void); 
 void handleFont();
 void upStick_DIMENSION();
 void downStick_DIMENSION();
