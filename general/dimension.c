@@ -7,30 +7,30 @@
 #include "dimension.h"
 #include "implementations.h"
 
-void drawDimension() {
+void drawDimension() {  //draws thew scenenario
     int i;
-    for (i=0; i<sizes[DIMENSION]; i++) {
-        if (i<sizes[DIMENSION]-2) {
+    for (i=0; i<sizes[DIMENSION]; i++) { //uses sizes[] funciton to calculate the size of the array of buttons
+        if (i<sizes[DIMENSION]-2) { //draws back and next button
             Graphics_setFont(&grContext, &g_sFontCm20);
             drawButton(dim_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(dim_buttons, sizes[DIMENSION]));
         }
-        else {
+        else { draws the other buttons
             Graphics_setFont(&grContext, &g_sFontFixed6x8);
             drawButton(dim_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, findSelected(dim_buttons, sizes[DIMENSION]));
         }
     }
 }
 
-void handleFont(){
-    if (position<sizes[DIMENSION]-2) {
+void handleFont(){ //manages the font dimension for the buttons
+    if (position<sizes[DIMENSION]-2) { //normal font for next and back buttons
         Graphics_setFont(&grContext, &g_sFontCm20);
     }
-    else{
+    else{ //bigger font for the selection buttons to see better
         Graphics_setFont(&grContext, &g_sFontFixed6x8);
     }
 }
 
-void fn_DIMENSION(void) {
+void fn_DIMENSION(void) { //general function for sceneario drawing
     reset_Screen();  //screen reset function
     initArray(dim_buttons, sizes[DIMENSION]);
     defaultDraw(); //default draw function, draws top part, back and next buttons
@@ -38,7 +38,7 @@ void fn_DIMENSION(void) {
     //FOLLOWING POSITION
 }
 
-void upStick_DIMENSION(){
+void upStick_DIMENSION(){ //handles the up movement of the stick
     if(position>1){
         handleFont();
         handleOut(dim_buttons, position, sizes[DIMENSION]);
@@ -48,7 +48,7 @@ void upStick_DIMENSION(){
     }
 }
 
-void downStick_DIMENSION(){
+void downStick_DIMENSION(){  //handles the down movement of the stick
     if(position<3){
             handleFont();
             handleOut(dim_buttons, position, sizes[DIMENSION]);
@@ -56,7 +56,7 @@ void downStick_DIMENSION(){
             handleFont();
             handleIn(dim_buttons, position, sizes[DIMENSION]);
     }
-    else if(position==3 && dim_buttons[sizes[DIMENSION]-1].state!=DISABLED ){
+    else if(position==3 && dim_buttons[sizes[DIMENSION]-1].state!=DISABLED ){ //handles the case of next button disabled
         handleFont();
         handleOut(dim_buttons, position, sizes[DIMENSION]);
         position=position+2;
@@ -65,7 +65,7 @@ void downStick_DIMENSION(){
     }
 }
 
-void leftStick_DIMENSION(){
+void leftStick_DIMENSION(){  //handles the left movement of the stick
     //int num=position%2;
     if((position%2)==1){
         handleFont();
@@ -76,7 +76,7 @@ void leftStick_DIMENSION(){
     }
 }
 
-void rightStick_DIMENSION(){
+void rightStick_DIMENSION(){  //handles the right movement of the stick
     //int num=position%2;
     if((position%2)==0){
         if(position<4){
@@ -86,7 +86,7 @@ void rightStick_DIMENSION(){
             handleFont();
             handleIn(dim_buttons, position, sizes[DIMENSION]);
         }
-        if(position==4 && dim_buttons[sizes[DIMENSION]-1].state!=DISABLED){
+        if(position==4 && dim_buttons[sizes[DIMENSION]-1].state!=DISABLED){ //handles the case of next button disabled
            handleFont();
            handleOut(dim_buttons, position, sizes[DIMENSION]);
            position++;
