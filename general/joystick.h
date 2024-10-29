@@ -23,6 +23,7 @@ void upfunctions();
 void downfunctions();
 void leftfunctions();
 void rightfunctions();
+void Timer_Init(void);
 void ADC_StartConversion(void);
 void ADC_EnableInterrupts(void);
 void setupPriorities();
