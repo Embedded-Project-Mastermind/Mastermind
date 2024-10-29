@@ -1,227 +1,208 @@
-/*
- * implementations.c
- *
- *  Created on: 5 ott 2024
- *      Author: matteogottardelligmail.com
- */
-#include "implementations.h"
-#include "graphics.h"
-#include "joystick.h"
-#include "buttons.h"
-#include "dimension.h"
-#include "difficulty.h"
-#include "tentatives.h"
-#include "doubles.h"
-#include "info.h"
 #include "input.h"
+#include "fsm.h"
+#include "buttons.h"
+#include "game.h"
 
-volatile bool mutex=false;
+// Global variables
+bool array[DIMIO];
+uint8_t overflow_counter=0;
 
-void reset_Screen(void) {
-    Graphics_setFont(&grContext, &g_sFontFixed6x8); //resets the font to the standard one, probably not necessary but anyways it's good practice to put it
-    Graphics_setForegroundColor(&grContext, STANDARD_COLOR); //sets foreground to black
-    Graphics_setBackgroundColor(&grContext, SELECTED_COLOR); //sets background to white for the borders
-    Graphics_clearDisplay(&grContext);
+// Function implementations
+void resetArrayInput(void) {
+    int i;
+    for (i = 0; i < DIMIO; i++) {
+        array[i] = false;
+    }
 }
-void graphics_Init(void) {
-    //INITIALIZE DISPLAY AND DRIVERS
-    Crystalfontz128x128_Init();
-    Crystalfontz128x128_SetOrientation(LCD_ORIENTATION_UP);
 
-    Graphics_initContext(&grContext, &g_sCrystalfontz128x128, &g_sCrystalfontz128x128_funcs);
-    Graphics_setFont(&grContext, &g_sFontFixed6x8);
-    reset_Screen();
-}
-int32_t getCenteredX(Graphics_Rectangle rect) {
-    return (rect.xMax+rect.xMin)/2;
-}
-int32_t getCenteredY(Graphics_Rectangle rect) {
-    return (rect.yMax+rect.yMin)/2;
-}
-int32_t chooseColorRect(Button_State state, int32_t color) {
-    int32_t c;
-    switch(state) {
-        case FOCUSED: c=STANDARD_COLOR; break;
-        case STANDARD: c=color; break;
-        case SELECTED: c=SELECTED_COLOR; break;
-        case DISABLED: c=DISABLED_COLOR; break;
-        default: exit(1);
+void setArrayInput(int val) {
+    if (val < 0 || val >= DIMIO) {
+        resetArrayInput();
+    } else {
+        array[val] = true;
     }
-    return c;
 }
-int32_t chooseColorText(Button_State state, int32_t color) {
-    int32_t c;
-    switch(state) {
-        case FOCUSED: c=BORDER_FOCUSED_COLOR; break;
-        case STANDARD: c=color; break;
-        case SELECTED: c=BORDER_SELECTED_COLOR; break;
-        case DISABLED: c=BORDER_SELECTED_COLOR; break;
-        default: exit(1);
-    }
-    return c;
-}
-void focusedhandle(Button_State state, Graphics_Rectangle rect, int32_t color) {
-    Graphics_drawRectangle(&grContext, &rect);
-    Graphics_setForegroundColor(&grContext, BORDER_FOCUSED_COLOR);
-    Graphics_fillRectangle(&grContext, &rect);
-    Graphics_Rectangle temp={rect.xMin+BORDER, rect.yMin+BORDER, rect.xMax-BORDER, rect.yMax-BORDER};
-    Graphics_drawRectangle(&grContext, &temp);
-    if (state==FOCUSED) {
-        Graphics_setForegroundColor(&grContext, chooseColorRect(FOCUSED, color));
-    }
-    else {
-        if (state==SELECTED) {
-            Graphics_setForegroundColor(&grContext, chooseColorRect(SELECTED, color));
+
+void configurePortsInput(void) {
+    //P4.4 ADC, P6.0 ADC, P5.0
+    int port;
+    for (port=GPIO_PORT_P3; port<=GPIO_PORT_P6; port++) {
+        if (port!=GPIO_PORT_P6 && port!=GPIO_PORT_P5) {
+            GPIO_setAsInputPinWithPullUpResistor(port, GPIO_PIN0);
+        }
+        if(port!=GPIO_PORT_P4) {//PRESSING joystick
+            GPIO_setAsInputPinWithPullUpResistor(port, GPIO_PIN1);
+        }
+        GPIO_setAsInputPinWithPullUpResistor(port, GPIO_PIN2);
+        if(port!=GPIO_PORT_P3) {
+            GPIO_setAsInputPinWithPullUpResistor(port, GPIO_PIN3);
+        }
+        if (port!=GPIO_PORT_P4) {//LEFT DIR
+            GPIO_setAsInputPinWithPullUpResistor(port, GPIO_PIN4);
+        }
+        GPIO_setAsInputPinWithPullUpResistor(port, GPIO_PIN5);
+        if (port!=GPIO_PORT_P5) {
+            GPIO_setAsInputPinWithPullUpResistor(port, GPIO_PIN6);
+        }
+        if (port!=GPIO_PORT_P6 && port!=GPIO_PORT_P5) {
+            GPIO_setAsInputPinWithPullUpResistor(port, GPIO_PIN7);
         }
     }
-    Graphics_fillRectangle(&grContext, &temp);
+    GPIO_setAsOutputPin(GPIO_PORT_P1, GPIO_PIN0);
+    GPIO_setAsOutputPin(GPIO_PORT_P2, GPIO_PIN0);
+    GPIO_setAsOutputPin(GPIO_PORT_P2, GPIO_PIN1);
+    GPIO_setAsOutputPin(GPIO_PORT_P2, GPIO_PIN2);
+    //GPIO_setAsOutputPin(GPIO_PORT_P2, GPIO_PIN3);
+    GPIO_setAsOutputPin(GPIO_PORT_P2, GPIO_PIN4);
+    P2->OUT=0;
+    //GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P2, GPIO_PIN4);
+    //GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P2, GPIO_PIN5);
+    //GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P2, GPIO_PIN6); BUZZER
+    //GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P2, GPIO_PIN7);
 }
-int8_t findSelected(Graphics_Button array[], int8_t size) {
-    int8_t i;
-    for (i=0; i<size; i++) {
-        if (array[i].state==SELECTED) {
+
+void configureInterruptPortInput(void) {
+    /*P1->IES = 0xFF;
+    P1->IE = 0xFF;
+    P1->IFG = 0x00;
+    NVIC->ISER[1] |= 1 << (PORT1_IRQn & 31);*/
+    /*P3->IES = 0xFF;
+    P3->IE = 0xFF;
+    P3->IFG = 0x00;
+    NVIC->ISER[1] |= 1 << (PORT3_IRQn & 31);*/
+    //P4.4 ADC, P6.0 ADC, P5.0
+    P3->IES |= 0x7F;
+    P3->IE |= 0x7F;
+    P3->IFG =0x80;
+    NVIC->ISER[1] |= 1 << (PORT3_IRQn & 31);
+    P4->IES = 0xFF;
+    P4->IE = 0xFF;
+    P4->IFG = 0x00;
+    NVIC->ISER[1] |= 1 << (PORT4_IRQn & 31);
+    P5->IES = 0x7E;
+    P5->IE = 0x7E;
+    P5->IFG = 0x81;
+    NVIC->ISER[1] |= 1 << (PORT5_IRQn & 31);
+    P6->IES = 0xFF;
+    P6->IE = 0xFF;
+    P6->IFG = 0x00;
+    NVIC->ISER[1] |= 1 << (PORT6_IRQn & 31);
+}
+
+int counterTrue(void) {
+    int i, counter = 0;
+    for (i = 0; i < DIMIO; i++) {
+        if (array[i] == true) {
+            counter++;
+        }
+    }
+    return counter;
+}
+
+int findTrue(void) {
+    int i;
+    for (i = 0; i < DIMIO; i++) {
+        if (array[i] == true) {
             return i;
         }
     }
     return -1;
 }
-void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color, int8_t pos_selected) {
-    if(button.state==FOCUSED || (button.state==SELECTED && position==pos_selected)) {
-        focusedhandle(button.state, button.rect, rect_color);
-    }
-    else {
-        Graphics_drawRectangle(&grContext, &button.rect);
-        Graphics_setForegroundColor(&grContext, chooseColorRect(button.state, rect_color));
-        Graphics_fillRectangle(&grContext, &button.rect);
-    }
-    Graphics_setForegroundColor(&grContext, chooseColorText(button.state, text_color));
-    Graphics_drawStringCentered(&grContext, (int8_t *) button.text.string, AUTO_STRING_LENGTH, getCenteredX(button.rect),  getCenteredY(button.rect), button.text.opacity);
 
-}
-void defaultDraw(void) {
-    //START LABEL
-    if(display_position==DIMENSION || display_position==DIFFICULTY || display_position==TENTATIVE || display_position==DOUBLES || display_position==INFO || display_position==GAME){
-        Graphics_drawRectangle(&grContext, &upperRect);
-        Graphics_setForegroundColor(&grContext, FILL_UPPER_RECT);
-        Graphics_fillRectangle(&grContext, &upperRect);
-        Graphics_setForegroundColor(&grContext, GRAPHICS_COLOR_WHITE); //Manual
-        Graphics_drawStringCentered(&grContext, (int8_t *)labelText.string, AUTO_STRING_LENGTH, getCenteredX(upperRect),  getCenteredY(upperRect), labelText.opacity);
-    }
-}
-void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
-    if(position<(size-2)) {
-        if (array[position].state!=SELECTED) {
-            array[position].state=STANDARD;
-            drawButton(array[position], STANDARD_COLOR, SELECTED_COLOR, findSelected(array, size));
+void elaborateOutput(void) {
+    if (counterTrue() == 1) {
+        switch (findTrue()) {
+           /*case (P1_D*BYTE+0): break; //P1.0
+           case (P1_D*BYTE+1): break; //P1.1
+           case (P1_D*BYTE+2): break; //P1.2
+           case (P1_D*BYTE+3): break; //P1.3
+           case (P1_D*BYTE+4): break; //P1.4
+           case (P1_D*BYTE+5): break; //P1.5
+           case (P1_D*BYTE+6): break; //P1.6
+           case (P1_D*BYTE+7): break; //P1.7*/
+           //case (P2_D*BYTE+0): break; //P2.0
+           //case (P2_D*BYTE+1): break; //P2.1
+           //case (P2_D*BYTE+2): break; //P2.2
+           //case (P2_D*BYTE+3): break; //P2.3
+           //case (P2_D*BYTE+4): break; //P2.4
+           //case (P2_D*BYTE+5): break; //P2.5
+           //case (P2_D*BYTE+6): break; //P2.6
+           //case (P2_D*BYTE+7): break; //P2.7
+           case (P3_D*BYTE+0): elaborateColor('R'); break; //P3.0
+           case (P3_D*BYTE+1): elaborateColor('R'); break; //P3.1
+           case (P3_D*BYTE+2): elaborateColor('R'); break; //P3.2
+           case (P3_D*BYTE+3): elaborateColor('O'); break; //P3.3
+           case (P3_D*BYTE+4): elaborateColor('O'); break; //P3.4
+           case (P3_D*BYTE+5): buttonConfirmAction(); break; //P3.5
+           case (P3_D*BYTE+6): elaborateColor('O'); break; //P3.6
+           //case (P3_D*BYTE+7): break; //P3.7
+           case (P4_D*BYTE+0): elaborateColor('Y'); break; //P4.0
+           case (P4_D*BYTE+1): elaborateColor('Y'); break; //P4.1
+           case (P4_D*BYTE+2): elaborateColor('Y'); break; //P4.2
+           //case (P4_D*BYTE+3): elaborateColor('G'); break; //P4.3
+           //case (P4_D*BYTE+4): break; //P4.4
+           case (P4_D*BYTE+5): elaborateColor('G'); break; //P4.5
+           case (P4_D*BYTE+6): elaborateColor('G'); break; //P4.6
+           case (P4_D*BYTE+7): elaborateColor('G'); break; //P4.7
+           //case (P5_D*BYTE+0): break; //P5.0
+           case (P5_D*BYTE+1): buttonBackAction(); break;  //P5.1
+           case (P5_D*BYTE+2): elaborateColor('B'); break; //P5.2
+           case (P5_D*BYTE+3): elaborateColor('B'); break; //P5.3
+           case (P5_D*BYTE+4): elaborateColor('B'); break; //P5.4
+           case (P5_D*BYTE+5): elaborateColor('C'); break; //P5.5
+           case (P5_D*BYTE+6): elaborateColor('C'); break; //P5.6
+           case (P5_D*BYTE+7): elaborateColor('C'); break; //P5.7
+           //case (P6_D*BYTE+0): break; //P6.0
+           case (P6_D*BYTE+1): elaborateColor('W'); break; //P6.1
+           case (P6_D*BYTE+2): elaborateColor('W'); break; //P6.2
+           case (P6_D*BYTE+3): elaborateColor('W'); break; //P6.3
+           case (P6_D*BYTE+4): elaborateColor('P'); break; //P6.4
+           case (P6_D*BYTE+5): elaborateColor('P'); break; //P6.5
+           case (P6_D*BYTE+6): elaborateColor('P'); break; //P6.6
+           //case (P6_D*BYTE+7): elaborateColor('P'); break; //P6.7
+           //default: exit(1);
         }
-        else {
-            int output=findSelected(array, size)+1;//IN ORDER TO MAKE output!=position
-            drawButton(array[position], SELECTED_COLOR, STANDARD_COLOR, output);
-        }
-    }
-    else {
-        array[position].state=STANDARD;
-        drawButton(array[position], FILL_MOVEMENT, STANDARD_COLOR, findSelected(array, size));
     }
 }
-void handleIn(Graphics_Button array[], uint8_t position, int8_t size) {
-    if (array[position].state!=SELECTED) {
-        array[position].state=FOCUSED;
-        drawButton(array[position], STANDARD_COLOR, BORDER_FOCUSED_COLOR, findSelected(array, size));
-    }
-    else {
-        drawButton(array[position], SELECTED_COLOR, STANDARD_COLOR, findSelected(array, size));
-    }
-}
-void hardware_Init() {
-    configurePortsInput();
-    configureInterruptPortInput();
-    before_ADC();
-    graphics_Init();
-    _adcInit();
-}
-
-void handle_buttons(Graphics_Button array[]){
-    if(position<(sizes[display_position]-2)){
-        switch(display_position) {
-            case DIMENSION: handlePressure_DIMENSION(); break;
-            case DIFFICULTY: handlePressure_DIFFICULTY(); break;
-            case TENTATIVE: handlePressure_TENTATIVE(); break;
-            case DOUBLES: handlePressure_DOUBLES(); break;
-            default: exit(1);
-        }
-    }
-    else{
-       if(position==(sizes[display_position]-2)){
-           display_position--;
-           position=0;
-       }
-       else {
-           if(position==(sizes[display_position]-1)){
-               display_position++;
-               position=0;
-               if(display_position==INFO) {
-                   position=sizes[INFO]-1;
-                   info_buttons[position]=nextButton;
-               }
-           }
-       }
-    }
-}
-void handleSelection(Graphics_Button array[]) {
+uint8_t bitofstatus(uint8_t status) {
+    int bit_pos=-1;
     int i;
-    for (i=0; i<sizes[display_position]; i++) {
-        array[i].state=STANDARD;
+    for (i=0; i<BYTE; i++) {
+        if(status & (1 << i)) {
+            bit_pos=i;
+            return bit_pos;
+        }
     }
-    array[position].state=SELECTED;
-    position=sizes[display_position]-1;
-    array[position].state=FOCUSED;
+    return bit_pos;
+    //exit(1);
 }
-void handleDeselection(Graphics_Button array[]) {
-    int i;
-    for (i=0; i<sizes[display_position]; i++) {
-        array[i].state=STANDARD;
-    }
-    position=sizes[display_position]-1;
-    array[position].state=DISABLED;
-}
-void initArray(Graphics_Button array[], int size) {
-    if (position!=size-2) {
-        array[size-2]=prevButton;
-    }
-    if (position!=size-1) {
-        array[size-1]=nextButton;
-    }
-    if(findSelected(array, size)!=-1) {
-        array[size-1].state=STANDARD;
-    }
-    if (position!=findSelected(array, size)) {
-        array[position].state=FOCUSED;
+void switching(uint8_t status, int8_t port){
+    switch(bitofstatus(status)){
+        case 0: setArrayInput(port*BYTE); break;
+        case 1: setArrayInput(port*BYTE+1); break;
+        case 2: setArrayInput(port*BYTE+2); break;
+        case 3: setArrayInput(port*BYTE+3); break;
+        case 4: setArrayInput(port*BYTE+4); break;
+        case 5: setArrayInput(port*BYTE+5); break;
+        case 6: setArrayInput(port*BYTE+6); break;
+        case 7: setArrayInput(port*BYTE+7); break;
+        //default: exit(1);
     }
 }
-void acquireMutex() {
-    __disable_irq();
-    if(!mutex) {
-        mutex=true;
-        __enable_irq();
-    }
-    __enable_irq();
+void configureTimersInput(void) {
+    TIMER_A0->CTL = TIMER_A_CTL_SSEL__SMCLK;
+    TIMER_A0->CTL |= TIMER_A_CTL_MC__CONTINUOUS;
+    TIMER_A0->CTL |= TIMER_A_CTL_ID_3;
+    TIMER_A0->CTL |= TIMER_A_CTL_IE;
+    NVIC->ISER[0] = 1 << ((TA0_N_IRQn) & 31);
 }
-void releaseMutex() {
-    __disable_irq();
-    mutex=false;
-    __enable_irq();
-    setupPriorities();
-    ADC_EnableInterrupts();
 
-}
-void fn_CHRONOLOGY(void) {
-    reset_Screen();
-    //DRAW FUNCTION
-    //FOLLOWING POSITION
-}
-void fn_END(void) {
-    reset_Screen();
-    //DRAW FUNCTION
-    //FOLLOWING POSITION
+bool atLeastOneTrue(void) {
+    int i;
+    for (i = 0; i < DIMIO; i++) {
+        if (array[i]) {
+            return true;
+        }
+    }
+    return false;
 }
