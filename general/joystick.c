@@ -19,7 +19,7 @@ void upfunctions() {
         case DIFFICULTY: upStick_DIFFICULTY(); break;
         case TENTATIVE: upStick_TENTATIVE(); break;
         case DOUBLES: upStick_DOUBLES(); break;
-        case INFO: break;
+        case INFO: upStick_INFO(); break;
         case GAME: break;
         case CHRONOLOGY: break;
         case END: break;
@@ -33,7 +33,7 @@ void downfunctions() {
         case DIFFICULTY: downStick_DIFFICULTY(); break;
         case TENTATIVE: downStick_TENTATIVE(); break;
         case DOUBLES: downStick_DOUBLES(); break;
-        case INFO: break;
+        case INFO: downStick_INFO(); break;
         case GAME: break;
         case CHRONOLOGY: break;
         case END: break;
@@ -47,7 +47,7 @@ void leftfunctions() {
         case DIFFICULTY: leftStick_DIFFICULTY(); break;
         case TENTATIVE: leftStick_TENTATIVE(); break;
         case DOUBLES: leftStick_DOUBLES(); break;
-        case INFO: break;
+        case INFO: leftStick_INFO(); break;
         case GAME: break;
         case CHRONOLOGY: break;
         case END: break;
@@ -61,7 +61,7 @@ void rightfunctions() {
         case DIFFICULTY: rightStick_DIFFICULTY(); break;
         case TENTATIVE: rightStick_TENTATIVE(); break;
         case DOUBLES: rightStick_DOUBLES(); break;
-        case INFO: break;
+        case INFO: rightStick_INFO(); break;
         case GAME: break;
         case CHRONOLOGY: break;
         case END: break;
@@ -78,6 +78,22 @@ void NavigateMenu(Move direction) {
         case CENTER: break;
         //default: exit(1);
     }
+    if(direction!=CENTER) {
+        interruptFlag=true;
+    }
+    else {
+        ADC_StartConversion();
+    }
+}
+void Timer_Init(void) {
+    // Imposta il Timer A0 in modalità up
+    TIMER_A0->CTL = TIMER_A_CTL_SSEL__SMCLK | // Sorgente del clock = SMCLK
+                    TIMER_A_CTL_MC__UP |     // Modalità up
+                    TIMER_A_CTL_CLR;         // Cancella il contatore
+
+    TIMER_A0->CCR[0] = 48000; // Imposta il valore di confronto (1 secondo a 48kHz)
+    TIMER_A0->CCTL[0] = TIMER_A_CCTLN_CCIE; // Abilita l'interrupt per CCR0
+    NVIC_EnableIRQ(TA0_N_IRQn); // Abilita l'interrupt del Timer A0
 }
 void _adcInit(){
     /* Configures Pin 6.0 and 4.4 as ADC input */
@@ -135,10 +151,12 @@ void setupPriorities() {
     // Set priorities for interrupts
    NVIC_SetPriority(ADC14_IRQn, 2);  // Set ADC interrupt priority (lower number = higher priority)
    NVIC_SetPriority(PORT3_IRQn, 1);   // Set GPIO Port 3 interrupt priority (higher priority)
-   NVIC_SetPriority(PORT5_IRQn, 1);   // Set GPIO Port 5 interrupt priority (same as Port 3)
+   NVIC_SetPriority(PORT4_IRQn, 3);
+   NVIC_SetPriority(PORT5_IRQn, 1); // Set GPIO Port 5 interrupt priority (same as Port 3)
+   NVIC_SetPriority(PORT6_IRQn, 3);
 }
 void ADC_StartConversion(void) {
-    ADC14->CTL0 |= ADC14_CTL0_SC; // Start the conversion
+    ADC14->CTL0 |= ADC14_CTL0_SC;
 }
 void ADC_EnableInterrupts(void) {
     ADC14->IER0 |= BIT0; // Enable interrupt for channel 0 (P6.0)
@@ -146,40 +164,18 @@ void ADC_EnableInterrupts(void) {
     NVIC->ISER[1] |= (1 << (ADC14_IRQn & 31)); // Enable ADC14 interrupt in NVIC
 }
 Move findDirection(uint16_t x, uint16_t y) {
-    if (y>16350) {
+    if (y>16200) {
         return UP;
     }
-    if(y<50) {
+    if(y<200) {
         return DOWN;
     }
-    if(x<50) {
+    if(x<200) {
         return LEFT;
     }
-    if(x>15700) {
+    if(x>15500) {
         return RIGHT;
     }
     return CENTER;
 }
 
-void ADC14_IRQHandler(void)
-{
-    uint64_t status;
-    int i;
-    status = ADC14_getEnabledInterruptStatus();
-    ADC14_clearInterruptFlag(status);
-
-    /* ADC_MEM1 conversion completed */
-    if(status & ADC_INT1)
-    {
-        /* Store ADC14 conversion results */
-        resultsBuffer[0] = ADC14_getResult(ADC_MEM0);
-        resultsBuffer[1] = ADC14_getResult(ADC_MEM1);
-        uint16_t x=resultsBuffer[0];
-        uint16_t y=resultsBuffer[1];
-        ADC14_clearInterruptFlag(ADC_INT1);
-        NavigateMenu(findDirection(x, y));
-        //ADC14_toggleConversionTrigger();
-        for (i=0; i<100000; i++);
-        interruptFlag=true;
-    }
-}
