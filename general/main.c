@@ -16,6 +16,8 @@
 #include "info.h"
 #include "joystick.h"
 #include "buttons.h"
+#include "input.h"
+#include "game.h"
 
 typedef struct Graphics_StateMachine {
     Graphics_State state; //Current Graphics State
@@ -37,7 +39,7 @@ Graphics_StateMachine gfsm[]={
 Game game;
 Tentative tentative;
 State current_state=START;
-Graphics_State display_position=DIFFICULTY;
+Graphics_State display_position=START_GR;
 Graphics_Rectangle upperRect={0, 0, 128, 32};
 Graphics_Button prevButton={STANDARD, {0, 97, 63, 128}, {{"Back"}, false}};
 Graphics_Button nextButton={DISABLED, {65, 97, 128, 128}, {{"Next"}, false}};
@@ -52,7 +54,7 @@ void labelDefining(Graphics_State pos) {
         case TENTATIVE: labelText.string="NUMBER OF TRIES"; break;
         case DOUBLES: labelText.string="DOUBLE PRESENCE"; break;
         case INFO: labelText.string="SUMMARY"; break;
-        case GAME:  labelText.string=""; break;
+        case GAME:  labelText.string="MASTERMIND"; break;
         case CHRONOLOGY: labelText.string=""; break;
         case END: labelText.string=""; break;
         default: exit(1);
@@ -77,12 +79,6 @@ Graphics_Button diff_buttons[]={
     {STANDARD, {0, 0, 0, 0}, {"", false}},
     {STANDARD, {0, 0, 0, 0}, {"", false}}
 };
-Graphics_Text explain[][DIFF_TYPES]={
-     {{"EASY MODE", false},{"MEDIUM MODE", false}, {"HARD MODE", false}, {"", false}},
-     {{"INFO PER COLOR", false},{"INFO GENERAL", false},{"INFO GENERAL", false}, {"", false}},
-     {{"- RIGHT POS", false},{"- RIGHT POS", false},{"- RIGHT POS", false}, {"", false}},
-     {{"- WRONG POS", false}, {"- WRONG POS", false}, {"", false}, {"", false}}
-};
 //Niccolò Cristoforetti's code
 Graphics_Button tent_buttons[]={
     {FOCUSED, {TENT_DIM/4+1, 32+TENT_DIM/4+1, TENT_DIM/2+TENT_DIM/4-1, 32+TENT_DIM/2+TENT_DIM/4-1}, {"", false}},
@@ -93,7 +89,7 @@ Graphics_Button tent_buttons[]={
     {STANDARD, {0, 0, 0, 0}, {"", false}},
     {STANDARD, {0, 0, 0, 0}, {"", false}}
 };
-Graphics_Button text_no_tent={DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TENT", false}};
+Graphics_Button text_no_tent={DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TRIES", false}};
 Graphics_Button start_button={FOCUSED, {32, 96, 96, 112}, {"START", false}};
 //Daniele Calvo's code
 Graphics_Text doubles_text={{"Doubles"}, false};  //DOUBLE state part
@@ -102,16 +98,19 @@ Graphics_Text doubles_description[]={
     {{"the same color "}, false},
     {{"repeated or not"}, false}};
 Graphics_Button doubles_buttons[]={ 
-    {FOCUSED, {80, 40, 110, 60}, {{"No"}, false}},
+    {FOCUSED, {80, 37, 110, 57}, {{"No"}, false}},
     {STANDARD, {0,0,0,0}, {{""}, false}},
     {STANDARD, {0,0,0,0}, {{""}, false}}};
    
-Graphics_Text info_texts[]={                     //INFO sate part
+Graphics_Text info_texts[]={   //INFO state part
+    {{" "}, false},
     {{"Dimension: "}, false},
     {{"Difficulty: "}, false},
     {{"Doubles: "}, false},
-    {{"Tentatives: "}, false}};
+    {{"Tentatives: "}, false}
+};
 Graphics_Text info_texts_results[]={ 
+    {{" "}, false},
     {{" "}, false},
     {{" "}, false},
     {{" "}, false},
@@ -138,16 +137,20 @@ void setSizes() {
         }
     }
 }
+volatile uint32_t timerTicks = 0;
+uint32_t Timer_getValue(void) {
+    return timerTicks; // Restituisce il numero di tick del timer
+}
 //BOOLEANS
-bool interruptFlag=false;
-bool flagNext=false;
-bool flagPrev=false;
+volatile bool interruptFlag=false;
 int main(void) {
     WDT_A_holdTimer();
+    //Setup Infrastructure
     hardware_Init();
     setSizes();
-    ADC_EnableInterrupts();
     setupPriorities();
+    ADC_EnableInterrupts();
+    Timer_Init();
     while(1) {
        interruptFlag=false;
        if(display_position<ERROR_GR) {
@@ -157,16 +160,257 @@ int main(void) {
        else {
            return 0;
        }
-       //__delay_cycles(1000000);
-      __enable_irq();
-       while(1) {
-           ADC_StartConversion(); // Start ADC conversion
-           ADC14_toggleConversionTrigger();
-           __sleep();
-           if (interruptFlag) {
-               break;
-           }
-       }
-       __disable_irq();
+       __enable_interrupt();
+       ADC14_enableConversion();
+       ADC_StartConversion(); // Start ADC conversion
+      while(1) {
+          __sleep();
+          ADC14_disableConversion();
+          if (interruptFlag) {
+              break;
+          }
+          ADC14_enableConversion();
+      }
+      __disable_interrupt();
     }
+}
+/*ISR HANDLER FOR PORTS 1-6*/
+/*void PORT1_IRQHandler() {
+    //while(P1->IN);
+    uint8_t status=P1->IFG;
+    switching(status, P1_D);
+    P1->IFG &= 0;
+}*/
+/*void PORT2_RQHandler() {
+    while(P2->IN);
+    uint8_t status=P2->IFG;
+    elaborateOutput();
+    P2->IFG &= ~status;
+}*/
+void PORT3_IRQHandler(void) {
+    bool internalFlag=false;
+    if (P3->IFG & BIT0) {
+        while(!(P3->IN & BIT0));
+        internalFlag=true;
+    }
+    if (P3->IFG & BIT1) {
+        while(!(P3->IN & BIT1));
+        internalFlag=true;
+    }
+    if (P3->IFG & BIT2) {
+        while(!(P3->IN & BIT2));
+        internalFlag=true;
+    }
+    if (P3->IFG & BIT3) {
+        while(!(P3->IN & BIT3));
+        internalFlag=true;
+    }
+    if (P3->IFG & BIT4) {
+        while(!(P3->IN & BIT4));
+        internalFlag=true;
+    }
+    if (P3->IFG & BIT5) {
+        while(!(P3->IN & BIT5));
+        internalFlag=true;
+    }
+    if (P3->IFG & BIT6) {
+       while(!(P3->IN & BIT6));
+       internalFlag=true;
+    }
+    /*if (P3->IFG & BIT7) {
+        while(!(P3->IN & BIT7));
+        internalFlag=true;
+    }*/
+    uint8_t status=P3->IFG-0x80;
+    if(internalFlag) {
+        functionPinsDefault(status, P3_D);
+    }
+    P3->IFG &= ~status;
+    printf("Port 3");
+    fflush(stdout);
+}
+void PORT4_IRQHandler() {
+    bool internalFlag=false;
+    if (P4->IFG & BIT0) {
+        while(!(P4->IN & BIT0));
+        internalFlag=true;
+    }
+    /*if (P4->IFG & BIT1) {
+        while(!(P4->IN & BIT1));
+        internalFlag=true;
+    }*/
+    if (P4->IFG & BIT2) {
+        while(!(P4->IN & BIT2));
+        internalFlag=true;
+    }
+    /*if (P4->IFG & BIT3) {
+        while(!(P4->IN & BIT3));
+        internalFlag=true;
+    }*/
+    if (P4->IFG & BIT4) {
+        //DEBOUNCE
+        GPIO_clearInterruptFlag(GPIO_PORT_P4, GPIO_PIN4);
+        static uint32_t lastInterruptTime = 0;
+        uint32_t currentTime = Timer_getValue();
+
+        if (currentTime - lastInterruptTime > DEBOUNCE_TIME) {
+            interruptFlag = true;
+            lastInterruptTime = currentTime;
+        }
+    }
+    if (P4->IFG & BIT5) {
+        while(!(P4->IN & BIT5));
+        internalFlag=true;
+    }
+    if (P4->IFG & BIT6) {
+       while(!(P4->IN & BIT6));
+       internalFlag=true;
+    }
+    if (P4->IFG & BIT7) {
+        while(!(P4->IN & BIT7));
+        internalFlag=true;
+    }
+    uint8_t status=P4->IFG;
+    if(internalFlag) {
+        functionPinsDefault(status, P4_D);
+    }
+    P4->IFG &= ~status;
+    printf("Port 4");
+    fflush(stdout);
+}
+void PORT5_IRQHandler(void) {
+   bool internalFlag=false;
+   /*if (P5->IFG & BIT0) {
+       while(P5->IN & BIT0);
+       internalFlag=true;
+   }*/
+   if (P5->IFG & BIT1) {
+       while(!(P5->IN & BIT1));
+       internalFlag=true;
+   }
+   if (P5->IFG & BIT2) {
+       while(!(P5->IN & BIT2));
+       internalFlag=true;
+   }
+   if (P5->IFG & BIT3) {
+       while(!(P5->IN & BIT3));
+       internalFlag=true;
+   }
+   if (P5->IFG & BIT4) {
+       while(!(P5->IN & BIT4));
+       internalFlag=true;
+   }
+   if (P5->IFG & BIT5) {
+       while(!(P5->IN & BIT5));
+       internalFlag=true;
+   }
+   if (P5->IFG & BIT6) {
+      while(!(P5->IN & BIT6));
+      internalFlag=true;
+   }
+   /*if (P5->IFG & BIT7) {
+       while(!(P5->IN & BIT7));
+       internalFlag=true;
+   }*/
+   uint8_t status=P5->IFG-0x81;
+   if(internalFlag) {
+       functionPinsDefault(status, P5_D);
+   }
+   P5->IFG &= ~status;
+   printf("Port 5");
+   fflush(stdout);
+}
+void PORT6_IRQHandler() {
+    bool internalFlag=false;
+    if (P6->IFG & BIT0) {
+        //DEBOUNCE
+        GPIO_clearInterruptFlag(GPIO_PORT_P6, GPIO_PIN0);
+        static uint32_t lastInterruptTime = 0;
+        uint32_t currentTime = Timer_getValue();
+
+        if (currentTime - lastInterruptTime > DEBOUNCE_TIME) {
+            interruptFlag = true;
+            lastInterruptTime = currentTime;
+        }
+    }
+    if (P6->IFG & BIT1) {
+        while(!(P6->IN & BIT1));
+        internalFlag=true;
+    }
+    if (P6->IFG & BIT2) {
+        while(!(P6->IN & BIT2));
+        internalFlag=true;
+    }
+    if (P6->IFG & BIT3) {
+        while(!(P6->IN & BIT3));
+        internalFlag=true;
+    }
+    if (P6->IFG & BIT4) {
+        while(!(P6->IN & BIT4));
+        internalFlag=true;
+    }
+    if (P6->IFG & BIT5) {
+        while(!(P6->IN & BIT5));
+        internalFlag=true;
+    }
+    if (P6->IFG & BIT6) {
+       while(!(P6->IN & BIT6));
+       internalFlag=true;
+    }
+    if (P6->IFG & BIT7) {
+        while(!(P6->IN & BIT7));
+        internalFlag=true;
+    }
+    uint8_t status=P6->IFG;
+    if(internalFlag) {
+        functionPinsDefault(status, P6_D);
+    }
+    P6->IFG &= ~status;
+    printf("Port 6");
+    fflush(stdout);
+}
+//Timer Interrupt
+void TA0_N_IRQHandler(void) {
+    TIMER_A0->CCTL[0] &= ~TIMER_A_CCTLN_CCIFG;
+    timerTicks++;
+}
+/* it will be called when TA0CCR0 CCIFG is set */
+/*void TA0_N_IRQHandler(){
+    switch(TA0IV){
+        case 0xE:
+            if(atLeastOneTrue()) {
+                if(++overflow_counter == 6){ //6 =  1 sec
+                    //Action LED
+                    elaborateOutput();
+                    resetArrayInput();
+                    // clear the variable
+                    overflow_counter = 0;
+                }
+            }
+        break;
+    }
+}*/
+//ADC Interrupt
+void ADC14_IRQHandler(void)
+{
+    acquireMutex();
+    uint16_t x, y;
+    uint64_t status= ADC14_getEnabledInterruptStatus();
+    ADC14_clearInterruptFlag(status);
+    /* ADC_MEM1 conversion completed */
+    if(status & ADC_INT1)
+    {
+            /* Store ADC14 conversion results */
+            resultsBuffer[0] = ADC14_getResult(ADC_MEM0);
+            resultsBuffer[1] = ADC14_getResult(ADC_MEM1);
+            x=resultsBuffer[0];
+            y=resultsBuffer[1];
+            ADC14_clearInterruptFlag(ADC_INT1);
+            NavigateMenu(findDirection(x, y));
+    }
+    releaseMutex();
+    int i;
+    for (i=0; i<100000; i++);
+    printf("X: %d, Y: %d\n", x, y);
+    fflush(stdout);
 }
