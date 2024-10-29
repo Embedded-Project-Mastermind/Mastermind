@@ -10,6 +10,7 @@
 #include "dimension.h"
 #include "tentatives.h"
 #include "doubles.h"
+#include "info.h"
 #include "msp.h"
 
 void upfunctions() {
@@ -88,12 +89,27 @@ void NavigateMenu(Move direction) {
 void Timer_Init(void) {
     // Imposta il Timer A0 in modalità up
     TIMER_A0->CTL = TIMER_A_CTL_SSEL__SMCLK | // Sorgente del clock = SMCLK
-                    TIMER_A_CTL_MC__UP |     // Modalità up
-                    TIMER_A_CTL_CLR;         // Cancella il contatore
+                    TIMER_A_CTL_MC__CONTINUOUS |
+                    TIMER_A_CTL_ID_3 |
+                    TIMER_A_CTL_IE;
 
     TIMER_A0->CCR[0] = 48000; // Imposta il valore di confronto (1 secondo a 48kHz)
     TIMER_A0->CCTL[0] = TIMER_A_CCTLN_CCIE; // Abilita l'interrupt per CCR0
     NVIC_EnableIRQ(TA0_N_IRQn); // Abilita l'interrupt del Timer A0
+}
+void delay_ms(uint32_t milliseconds) {
+    // Set up Timer32 for 1 ms tick
+    TIMER32_1->LOAD = (48000 - 1); // Assuming a 48 MHz clock, 48000 counts for 1 ms
+    TIMER32_1->CONTROL = TIMER32_CONTROL_ENABLE | TIMER32_CONTROL_MODE | TIMER32_CONTROL_SIZE;
+    uint32_t i;
+    for (i = 0; i < milliseconds; i++) {
+        // Wait until timer has counted down
+        while ((TIMER32_1->RIS & 1) == 0);
+        TIMER32_1->INTCLR = 0; // Clear the interrupt flag
+    }
+
+    // Stop Timer32
+    TIMER32_1->CONTROL = 0;
 }
 void _adcInit(){
     /* Configures Pin 6.0 and 4.4 as ADC input */
@@ -149,11 +165,12 @@ void before_ADC(){
 }
 void setupPriorities() {
     // Set priorities for interrupts
-   NVIC_SetPriority(ADC14_IRQn, 2);  // Set ADC interrupt priority (lower number = higher priority)
+   NVIC_SetPriority(ADC14_IRQn, 3);  // Set ADC interrupt priority (lower number = higher priority)
    NVIC_SetPriority(PORT3_IRQn, 1);   // Set GPIO Port 3 interrupt priority (higher priority)
-   NVIC_SetPriority(PORT4_IRQn, 3);
+   NVIC_SetPriority(PORT4_IRQn, 1);
    NVIC_SetPriority(PORT5_IRQn, 1); // Set GPIO Port 5 interrupt priority (same as Port 3)
-   NVIC_SetPriority(PORT6_IRQn, 3);
+   NVIC_SetPriority(PORT6_IRQn, 1);
+   NVIC_SetPriority(TA0_N_IRQn, 2);
 }
 void ADC_StartConversion(void) {
     ADC14->CTL0 |= ADC14_CTL0_SC;
