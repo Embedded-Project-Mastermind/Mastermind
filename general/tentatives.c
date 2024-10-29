@@ -112,6 +112,11 @@ void rightStick_TENTATIVE() {
     }
 }
 void handlePressure_TENTATIVE() {
-    game.tentatives=atoi((char*)tent_buttons[position].text.string);
+    if (position!=0) {
+        game.tentatives=atoi((char*)tent_buttons[position].text.string);
+    }
+    else {
+        game.tentatives=0;
+    }
     handleSelection(tent_buttons);
 }
