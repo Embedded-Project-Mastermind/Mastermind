@@ -48,10 +48,11 @@ void buttonConfirmAction() {
 }
 void functionPinsDefault(uint8_t status, int8_t port) {
     switching(status, port);
-    //if(!configurationGame) {
-        elaborateOutput();
-        resetArrayInput();
-        interruptFlag=true;
-    //}
-    ADC14_disableConversion();
+    /*if(!configurationGame) {
+      //elaborateOutput();
+      //resetArrayInput();
+      //interruptFlag=true;
+    }*/
+    //ADC14_disableConversion();
+    //delay_ms(100);
 }
