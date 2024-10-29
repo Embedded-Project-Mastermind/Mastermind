@@ -8,37 +8,47 @@
 #include "doubles.h"
 
 void create_doubles_text(void){
-
-    Graphics_setForegroundColor(&grContext, STANDARD_COLOR);
-    Graphics_drawStringCentered(&grContext, (int8_t *)doubles_text.string, AUTO_STRING_LENGTH, 40 , 50 , doubles_text.opacity);
+    Graphics_setForegroundColor(&grContext, SELECTED_COLOR);
+    Graphics_drawStringCentered(&grContext, (int8_t *)doubles_text.string, AUTO_STRING_LENGTH, 40 , 47 , doubles_text.opacity);
     int i, elems= 3;
     for(i=0; i< elems; i++){
-        Graphics_drawStringCentered(&grContext, (int8_t *)doubles_description[i].string, AUTO_STRING_LENGTH, 64 , 68+10*i , doubles_description[i].opacity);
+        Graphics_drawStringCentered(&grContext, (int8_t *)doubles_description[i].string, AUTO_STRING_LENGTH, 65 , 68+10*i , doubles_description[i].opacity);
     }
-    Graphics_setForegroundColor(&grContext, FILL_UPPER_RECT);
-
-
 }
 
 void create_doubles_buttons(void){
     int i, elems= 3;
     for(i=0; i<elems; i++){
-        if(i<elems-2){drawButton(doubles_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(doubles_buttons, sizes[DOUBLES]));}
-        else{drawButton(doubles_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, findSelected(doubles_buttons, sizes[DOUBLES]));}
+        if(i<elems-2){
+            drawButton(doubles_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(doubles_buttons, sizes[DOUBLES]));
+        }
+        else{
+            drawButton(doubles_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, findSelected(doubles_buttons, sizes[DOUBLES]));
+        }
     }
 
 }
 
 void change_screen_d(void){
     defaultDraw();
+    const Graphics_Rectangle temp1={1, 34, 126, 59};
+    const Graphics_Rectangle temp2={1, 61, 126, 95};
+    Graphics_setForegroundColor(&grContext, DISABLED_COLOR);
+    Graphics_drawRectangle(&grContext, &temp1);
+    Graphics_fillRectangle(&grContext, &temp1);
+    Graphics_setForegroundColor(&grContext, STANDARD_COLOR);
+    Graphics_drawRectangle(&grContext, &temp2);
+    Graphics_fillRectangle(&grContext, &temp2);
     create_doubles_text();
     create_doubles_buttons();
 }
 
 void fn_DOUBLES(void) {
     reset_Screen();
-    doubles_buttons[sizes[DOUBLES]-1].state=STANDARD;
     initArray(doubles_buttons, sizes[DOUBLES]);
+    if (doubles_buttons[sizes[DOUBLES]-1].state==DISABLED) {
+        doubles_buttons[sizes[DOUBLES]-1].state=STANDARD;
+    }
     change_screen_d();
 }
 
@@ -71,11 +81,15 @@ void rightStick_DOUBLES(){
        }
 }
 void handlePressure_DOUBLES() {
-    if (doubles_buttons[0].state == FOCUSED || doubles_buttons[0].state == SELECTED) {
+    if (doubles_buttons[0].state == SELECTED) {
         game.doubles=false;
+        doubles_buttons[0].text.string="No";
+        handleDeselection(doubles_buttons);
     } else {
         game.doubles=true;
+        doubles_buttons[0].text.string="Yes";
+        handleSelection(doubles_buttons);
     }
-    handleSelection(doubles_buttons);
 }
+
 
