@@ -14,6 +14,10 @@ extern Graphics_Button info_buttons[];
 
 void change_screen_i(void);
 void fn_INFO(void);
-
+void upStick_INFO();
+void downStick_INFO();
+void leftStick_INFO();
+void rightStick_INFO();
+void buttons_INFO();
 
 #endif /* INFO_H_ */
