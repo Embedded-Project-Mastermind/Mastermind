@@ -12,7 +12,10 @@
 #include "difficulty.h"
 #include "tentatives.h"
 #include "doubles.h"
+#include "info.h"
+#include "input.h"
 
+volatile bool mutex=false;
 
 void reset_Screen(void) {
     Graphics_setFont(&grContext, &g_sFontFixed6x8); //resets the font to the standard one, probably not necessary but anyways it's good practice to put it
@@ -97,7 +100,7 @@ void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color, 
 }
 void defaultDraw(void) {
     //START LABEL
-    if(display_position==DIMENSION || display_position==DIFFICULTY || display_position==TENTATIVE || display_position==DOUBLES || display_position==INFO){
+    if(display_position==DIMENSION || display_position==DIFFICULTY || display_position==TENTATIVE || display_position==DOUBLES || display_position==INFO || display_position==GAME){
         Graphics_drawRectangle(&grContext, &upperRect);
         Graphics_setForegroundColor(&grContext, FILL_UPPER_RECT);
         Graphics_fillRectangle(&grContext, &upperRect);
@@ -131,10 +134,11 @@ void handleIn(Graphics_Button array[], uint8_t position, int8_t size) {
     }
 }
 void hardware_Init() {
+    configurePortsInput();
+    configureInterruptPortInput();
     before_ADC();
     graphics_Init();
     _adcInit();
-    button_Init();
 }
 
 void handle_buttons(Graphics_Button array[]){
@@ -156,6 +160,10 @@ void handle_buttons(Graphics_Button array[]){
            if(position==(sizes[display_position]-1)){
                display_position++;
                position=0;
+               if(display_position==INFO) {
+                   position=sizes[INFO]-1;
+                   info_buttons[position]=nextButton;
+               }
            }
        }
     }
@@ -168,7 +176,14 @@ void handleSelection(Graphics_Button array[]) {
     array[position].state=SELECTED;
     position=sizes[display_position]-1;
     array[position].state=FOCUSED;
-
+}
+void handleDeselection(Graphics_Button array[]) {
+    int i;
+    for (i=0; i<sizes[display_position]; i++) {
+        array[i].state=STANDARD;
+    }
+    position=sizes[display_position]-1;
+    array[position].state=DISABLED;
 }
 void initArray(Graphics_Button array[], int size) {
     if (position!=size-2) {
@@ -184,10 +199,21 @@ void initArray(Graphics_Button array[], int size) {
         array[position].state=FOCUSED;
     }
 }
-void fn_GAME(void) {
-    reset_Screen();
-    //DRAW FUNCTION
-    //FOLLOWING POSITION
+void acquireMutex() {
+    __disable_irq();
+    if(!mutex) {
+        mutex=true;
+        __enable_irq();
+    }
+    __enable_irq();
+}
+void releaseMutex() {
+    __disable_irq();
+    mutex=false;
+    __enable_irq();
+    setupPriorities();
+    ADC_EnableInterrupts();
+
 }
 void fn_CHRONOLOGY(void) {
     reset_Screen();
