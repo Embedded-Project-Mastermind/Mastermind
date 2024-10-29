@@ -13,6 +13,8 @@
 #include "tentatives.h"
 #include "doubles.h"
 #include "info.h"
+#include "input.h"
+#include "game.h"
 
 void button_Init() {
     GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P5, GPIO_PIN1);
@@ -27,7 +29,7 @@ void button_Init() {
     NVIC->ISER[1]|=1<<(PORT3_IRQn & 31);
 }
 void buttonBackAction() {
-    //TO IMPLEMENT
+    elaborateColor('G');//TO IMPLEMENT
 }
 void buttonConfirmAction() {
     switch(display_position) {
@@ -44,21 +46,12 @@ void buttonConfirmAction() {
     }
 
 }
-void PORT5_IRQHandler(void) {
-    if(P5->IFG & BIT1) {
-        buttonBackAction();
-        P5->IFG &= ~BIT1;
+void functionPinsDefault(uint8_t status, int8_t port) {
+    switching(status, port);
+    //if(!configurationGame) {
+        elaborateOutput();
+        resetArrayInput();
         interruptFlag=true;
-        __disable_irq();
-        //__delay_cycles(1000000);
-    }
-}
-void PORT3_IRQHandler(void) {
-    if(P3->IFG & BIT5) {
-        buttonConfirmAction();
-        P3->IFG &= ~BIT5;
-        interruptFlag=true;
-        __disable_irq();
-        //__delay_cycles(1000000);
-    }
+    //}
+    ADC14_disableConversion();
 }
