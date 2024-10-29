@@ -171,6 +171,7 @@ int main(void) {
           }
           ADC14_enableConversion();
       }
+      releaseMutex();
       __disable_interrupt();
     }
 }
@@ -250,13 +251,13 @@ void PORT4_IRQHandler() {
     if (P4->IFG & BIT4) {
         //DEBOUNCE
         GPIO_clearInterruptFlag(GPIO_PORT_P4, GPIO_PIN4);
-        static uint32_t lastInterruptTime = 0;
+        /*static uint32_t lastInterruptTime = 0;
         uint32_t currentTime = Timer_getValue();
 
         if (currentTime - lastInterruptTime > DEBOUNCE_TIME) {
             interruptFlag = true;
             lastInterruptTime = currentTime;
-        }
+        }*/
     }
     if (P4->IFG & BIT5) {
         while(!(P4->IN & BIT5));
@@ -325,13 +326,13 @@ void PORT6_IRQHandler() {
     if (P6->IFG & BIT0) {
         //DEBOUNCE
         GPIO_clearInterruptFlag(GPIO_PORT_P6, GPIO_PIN0);
-        static uint32_t lastInterruptTime = 0;
+        /*static uint32_t lastInterruptTime = 0;
         uint32_t currentTime = Timer_getValue();
 
         if (currentTime - lastInterruptTime > DEBOUNCE_TIME) {
             interruptFlag = true;
             lastInterruptTime = currentTime;
-        }
+        }*/
     }
     if (P6->IFG & BIT1) {
         while(!(P6->IN & BIT1));
@@ -370,26 +371,35 @@ void PORT6_IRQHandler() {
     fflush(stdout);
 }
 //Timer Interrupt
-void TA0_N_IRQHandler(void) {
-    TIMER_A0->CCTL[0] &= ~TIMER_A_CCTLN_CCIFG;
-    timerTicks++;
-}
 /* it will be called when TA0CCR0 CCIFG is set */
-/*void TA0_N_IRQHandler(){
+void TA0_N_IRQHandler(){
     switch(TA0IV){
         case 0xE:
             if(atLeastOneTrue()) {
-                if(++overflow_counter == 6){ //6 =  1 sec
-                    //Action LED
+                overflow_counter++;
+                if(overflow_counter == 2 && !configurationGame){ //6 =  1 sec
                     elaborateOutput();
                     resetArrayInput();
+                    interruptFlag=true;
                     // clear the variable
                     overflow_counter = 0;
+                    ADC14_disableConversion();
+                }else {
+                    if(overflow_counter == 6 && configurationGame){ //6 =  1 sec
+                        elaborateOutput();
+                        resetArrayInput();
+                        interruptFlag=true;
+                        // clear the variable
+                        overflow_counter = 0;
+                        ADC14_disableConversion();
+                    }
                 }
+                printf("Overflow %d\n", overflow_counter);
+                fflush(stdout);
             }
         break;
     }
-}*/
+}
 //ADC Interrupt
 void ADC14_IRQHandler(void)
 {
@@ -413,4 +423,5 @@ void ADC14_IRQHandler(void)
     for (i=0; i<100000; i++);
     printf("X: %d, Y: %d\n", x, y);
     fflush(stdout);
+    delay_ms(50);
 }
