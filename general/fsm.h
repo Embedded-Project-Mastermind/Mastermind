@@ -33,10 +33,13 @@ typedef struct {
     int16_t dim;                  // Dimension of user's sequence
     int8_t* seq_user;           // User's guessed sequence
 } Tentative;
+void acquireMutex(void);
+void releaseMutex(void);
 /*Global variables*/
 extern Game game;                  // Game struct instance
 extern Tentative tentative;        // Tentative struct instance
 extern State current_state;    // Initialize current state
 extern int i, j;                     //Variables acting like counters for for-cycles
-extern bool interruptFlag;
+extern volatile bool interruptFlag;
+extern volatile bool mutex;
 #endif /* FSM_H_ */
