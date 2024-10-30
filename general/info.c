@@ -7,6 +7,15 @@
 
 #include "info.h"
 
+/***************************************
+*
+* change_screen_i - manages how to set
+* all info' interface
+* no input
+* no output
+*
+***************************************/
+
 void change_screen_i(void){
     defaultDraw();
     char buffer[sizeof(long)*8+1][2];
@@ -29,6 +38,17 @@ void change_screen_i(void){
 
     for(i=0; i<2; i++){drawButton(info_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, position);}
 }
+
+/***************************************
+*
+* fn_INFO() - calls all needed
+* functions to change the previous interface
+* with the one of the info's state
+* no input
+* no output
+*
+***************************************/
+
 void fn_INFO(void) {
     reset_Screen();
     initArray(info_buttons, sizes[INFO]);
@@ -38,12 +58,20 @@ void fn_INFO(void) {
     change_screen_i();
 }
 
-void upStick_INFO(){
+/***************************************
+*
+* upStick_INFO() / douwnStick_INFO() / leftStick_INFO() / rightStick_INFO()
+* they manage what to do when the user
+* moves the stick
+* no input
+* no output
+*
+***************************************/
 
-}
-void downStick_INFO(){
+void upStick_INFO(){}
 
-}
+void downStick_INFO(){}
+
 void leftStick_INFO(){
     if(position==1){
         handleOut(info_buttons, position, sizes[INFO]);
@@ -58,6 +86,17 @@ void rightStick_INFO(){
         handleIn(info_buttons, position, sizes[INFO]);
        }
 }
+
+/***************************************
+*
+* handlePressure_INFO() - calls the handle
+* to when you press the "back" or "next" buttons,
+* being this interface without any other button
+* no input
+* no output
+*
+***************************************/
+
 void handlePressure_INFO() {
     handleSelection(info_buttons);
 }
