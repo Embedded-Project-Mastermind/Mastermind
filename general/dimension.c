@@ -14,7 +14,7 @@ void drawDimension() {  //draws thew scenenario
             Graphics_setFont(&grContext, &g_sFontCm20);
             drawButton(dim_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(dim_buttons, sizes[DIMENSION]));
         }
-        else { draws the other buttons
+        else { //draws the other buttons
             Graphics_setFont(&grContext, &g_sFontFixed6x8);
             drawButton(dim_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, findSelected(dim_buttons, sizes[DIMENSION]));
         }
