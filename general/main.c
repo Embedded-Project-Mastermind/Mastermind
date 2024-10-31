@@ -83,7 +83,7 @@ void labelDefining(Graphics_State pos) {
         case DOUBLES: labelText.string="DOUBLE PRESENCE"; break;
         case INFO: labelText.string="SUMMARY"; break;
         case GAME:  labelText.string="MASTERMIND"; break;
-        case CHRONOLOGY: labelText.string=""; break;
+        case CHRONOLOGY: labelText.string="CHRONOLOGY"; break;
         case END: labelText.string=""; break;
         default: exit(1);
     }
