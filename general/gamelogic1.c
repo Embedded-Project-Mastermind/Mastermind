@@ -5,6 +5,7 @@
 //  Created by Matteo Gottardelli on 27/09/24.
 //
 #include "gamelogic1.h"
+#include "implementations.h"
 int i, j;
 /* Deallocate memory for a character array */
 void deallocate_Char(int8_t* array) {
@@ -153,8 +154,6 @@ int8_t int_Conversion_to_Char(int16_t index) {
         case 4: c = 'Y'; break; // Yellow
         case 5: c = 'P'; break; // Purple
         case 6: c = 'C'; break; // Cyan
-        case 7: c = 'O'; break; //Orange
-        case 8: c = 'W'; break; //White
         default: exit(1); // Exit on error
     }
     return c; // Return the character representation
@@ -185,7 +184,7 @@ void continue_Key_Decryption(int16_t* sequence) {
 void resetTentative(void) {
     tentative.count = 0; // Reset attempt count
     tentative.dim = game.dim; // Set dimension for user's sequence
-    position=1;
+    position=0;
     allocate_in_Heap_Char(&tentative.seq_user, 1, game.dim); // Allocate memory for user's guesses
 }
 
