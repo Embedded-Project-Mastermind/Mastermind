@@ -107,8 +107,8 @@ void rightStick_CHRONOLOGY() {
 /***************************************
 *
 * updatePos()
-* they manage what to do when the user
-* moves the stick
+* Update the number of tent for each
+* space
 * no input
 * no output
 *
