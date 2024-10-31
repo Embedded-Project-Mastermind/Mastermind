@@ -15,7 +15,7 @@ void fn_GAME(void) {
         defaultDraw();
     }
     if(!tentativeStart){
-        tenativeStart=true;
+        tentativeStart=true;
         position=0;
     }
     //DRAW FUNCTION
