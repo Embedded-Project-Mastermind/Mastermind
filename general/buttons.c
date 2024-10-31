@@ -15,6 +15,7 @@
 #include "info.h"
 #include "input.h"
 #include "game.h"
+#include "gamelogic2.h"
 
 void button_Init() {
     GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P5, GPIO_PIN1);
@@ -29,9 +30,12 @@ void button_Init() {
     NVIC->ISER[1]|=1<<(PORT3_IRQn & 31);
 }
 void buttonBackAction() {
-    elaborateColor('G');//TO IMPLEMENT
+    if(is_empty()){ current_state = WAIT; }
+    else{ current_state = ELIMINATE_COLOR; }
+
 }
 void buttonConfirmAction() {
+
     switch(display_position) {
         case START_GR: display_position++; break;
         case DIMENSION: handle_buttons(dim_buttons); break;
