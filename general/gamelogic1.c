@@ -7,6 +7,11 @@
 #include "gamelogic1.h"
 #include "implementations.h"
 int i, j;
+void emergency() {
+    deallocate_Char(game.seq_to_guess); // Deallocate sequence memory
+    deallocate_Char(game.chronology); // Deallocate chronology memory
+    deallocate_Bool(game.flags); //Deallocate flag memory
+}
 /* Deallocate memory for a character array */
 void deallocate_Char(int8_t* array) {
     free(array);    // Free allocated memory
@@ -56,6 +61,7 @@ void allocate_in_Heap_Char(int8_t** array, int16_t par1, int16_t par2) {
     if(par1!=0 && par2!=0) {
             *array =malloc(par1 * par2 * sizeof(int8_t));
             if (*array == NULL) {
+                emergency();
                 printf("Error! memory not allocated."); // Handle memory allocation failure
                 exit(1);
             }
@@ -71,6 +77,7 @@ void allocate_in_Heap_Int(int16_t** array, int16_t par1, int16_t par2) {
     if(par1!=0 && par2!=0) {
             *array =malloc(par1 * par2 * sizeof(int16_t));
             if (*array == NULL) {
+                emergency();
                 printf("Error! memory not allocated."); // Handle memory allocation failure
                 exit(1);
             }
@@ -86,6 +93,7 @@ void allocate_in_Heap_Bool(bool** array, int16_t par1, int16_t par2){
     if(par1!=0 && par2!=0) {
         *array =malloc(par1 * par2 * sizeof(bool));
         if (*array == NULL) {
+            emergency();
             printf("Error! memory not allocated."); // Handle memory allocation failure
             exit(1);
         }
