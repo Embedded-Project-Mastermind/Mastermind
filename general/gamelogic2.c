@@ -81,6 +81,16 @@ void insert_color(){ // cambiato da char color a nulla perche uso la variabile g
     if(!(is_full())){
         tentative.seq_user[tentative.count]=int_Conversion_to_Char(color_selected);
         tentative.count +=1;
+	switch(color_selected){
+            case 1:  circles[tentative.count].color=GRAPHICS_COLOR_RED;
+            case 2:  circles[tentative.count].color=GRAPHICS_COLOR_GREEN;
+            case 3:  circles[tentative.count].color=GRAPHICS_COLOR_BLUE;
+            case 4:  circles[tentative.count].color=GRAPHICS_COLOR_YELLOW;
+            case 5:  circles[tentative.count].color=GRAPHICS_COLOR_PURPLE;
+            case 6:  circles[tentative.count].color=GRAPHICS_COLOR_CYAN;
+            case 7:  circles[tentative.count].color=GRAPHICS_COLOR_ORANGE;
+            case 8:  circles[tentative.count].color=GRAPHICS_COLOR_WHITE;
+        }
     }
     else
         printf("array pieno!");
@@ -91,7 +101,8 @@ void eliminate_color(void){
      if(!(is_empty())){
      tentative.count -= 1;
      tentative.seq_user[tentative.count]= '\0';
-	}
+     circles[tentative.count].color=STANDARD;
+     }
      printf("color eliminated");
      print_sequence(tentative.seq_user, tentative.count);
 }
