@@ -39,7 +39,12 @@ void buttonConfirmAction() {
         case TENTATIVE: handle_buttons(tent_buttons); break;
         case DOUBLES: handle_buttons(doubles_buttons); break;
         case INFO: handle_buttons(info_buttons); break;
-        case GAME: break;
+        case GAME: if(configurationGame){
+                //funzione per i bottoni
+                if(current_state==WAIT_FULL){
+                    current_state = ELABORATE_TENT;
+                }
+            } break;
         case CHRONOLOGY: break;
         case END: break;
         //default: exit(1);
