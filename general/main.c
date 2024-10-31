@@ -225,8 +225,8 @@ int main(void) {
                } else {
                    // Clean up and exit if in ERROR state
                    if (current_state == ERROR) {
-                       deallocate_Char((char*) game.seq_to_guess); // Deallocate sequence memory
-                       deallocate_Char((char*) game.chronology); // Deallocate chronology memory
+                       deallocate_Char(game.seq_to_guess); // Deallocate sequence memory
+                       deallocate_Char(game.chronology); // Deallocate chronology memory
                        deallocate_Bool(game.flags); //Deallocate flag memory
                        exit_gamelogic=true; // Exit the loop
                    }
