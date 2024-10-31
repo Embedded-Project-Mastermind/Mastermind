@@ -5,16 +5,15 @@
 //  Created by Matteo Gottardelli on 27/09/24.
 //
 #include "gamelogic1.h"
-#include "joystick.c"
 int i, j;
 /* Deallocate memory for a character array */
-void deallocate_Char(char* array) {
+void deallocate_Char(int8_t* array) {
     free(array);    // Free allocated memory
     array = NULL;   // Set pointer to NULL
 }
 
 /* Deallocate memory for an integer array */
-void deallocate_Int(int* array) {
+void deallocate_Int(int16_t* array) {
     free(array);    // Free allocated memory
     array = NULL;   // Set pointer to NULL
 }
@@ -24,7 +23,7 @@ void deallocate_Bool(bool* array){
     array = NULL;   // Set pointer to NULL
 }
 /* Function to clean a character array */
-void makeArrayEmpty_Char(char* array, int par1, int par2) {
+void makeArrayEmpty_Char(int8_t* array, int16_t par1, int16_t par2) {
     for (i = 0; i < par1; i++) {
         for (j = 0; j < par2; j++) {
             array[i * par1 + j] = 0; // Set each element to zero
@@ -32,7 +31,7 @@ void makeArrayEmpty_Char(char* array, int par1, int par2) {
     }
 }
 /* Function to clean an integer array */
-void makeArrayEmpty_Int(int* array, int par1, int par2) {
+void makeArrayEmpty_Int(int16_t* array, int16_t par1, int16_t par2) {
     for (i = 0; i < par1; i++) {
         for (j = 0; j < par2; j++) {
             array[i * par1 + j] = 0; // Set each element to zero
@@ -40,7 +39,7 @@ void makeArrayEmpty_Int(int* array, int par1, int par2) {
     }
 }
 /* Initializes a boolean array to false */
-void makeArrayEmpty_Bool(bool* array, int par1, int par2){
+void makeArrayEmpty_Bool(bool* array, int16_t par1, int16_t par2){
     for (i = 0; i < par1; i++) {
         for (j = 0; j < par2; j++) {
             array[i * par1 + j] = 0; // Set each element to false
@@ -49,67 +48,70 @@ void makeArrayEmpty_Bool(bool* array, int par1, int par2){
 }
 
 /* Memory allocation for a character array */
-void allocate_in_Heap_Char(char** array, int par1, int par2) {
-    if (array!=NULL) {
+void allocate_in_Heap_Char(int8_t** array, int16_t par1, int16_t par2) {
+    if (*array!=NULL) {
         deallocate_Char(*array);
     }
-    *array = (char*)malloc(par1 * par2 * sizeof(char));
-    delay_ms(50);
-    if (*array == NULL) {
-        printf("Error! memory not allocated."); // Handle memory allocation failure
-        exit(1);
-    }
-    makeArrayEmpty_Char(*array, par1, par2); // Initialize the allocated array
+    if(par1!=0 && par2!=0) {
+            *array =malloc(par1 * par2 * sizeof(int8_t));
+            if (*array == NULL) {
+                printf("Error! memory not allocated."); // Handle memory allocation failure
+                exit(1);
+            }
+            makeArrayEmpty_Char(*array, par1, par2); // Initialize the allocated array
+        }
 }
 
 /* Memory allocation for an integer array */
-void allocate_in_Heap_Int(int** array, int par1, int par2) {
-    if (array!=NULL) {
+void allocate_in_Heap_Int(int16_t** array, int16_t par1, int16_t par2) {
+    if (*array!=NULL) {
         deallocate_Int(*array);
     }
-    *array = (int*)malloc(par1 * par2 * sizeof(int));
-    delay_ms(50);
-    if (*array == NULL) {
-        printf("Error! memory not allocated."); // Handle memory allocation failure
-        exit(1);
-    }
-    makeArrayEmpty_Int(*array, par1, par2); // Initialize the allocated array
+    if(par1!=0 && par2!=0) {
+            *array =malloc(par1 * par2 * sizeof(int16_t));
+            if (*array == NULL) {
+                printf("Error! memory not allocated."); // Handle memory allocation failure
+                exit(1);
+            }
+            makeArrayEmpty_Int(*array, par1, par2); // Initialize the allocated array
+        }
 }
 
 /*Memory allocation for a boolean array*/
-void allocate_in_Heap_Bool(bool** array, int par1, int par2){
+void allocate_in_Heap_Bool(bool** array, int16_t par1, int16_t par2){
     if (array!=NULL) {
         deallocate_Bool(*array);
     }
-    *array = (bool*)malloc(par1 * par2 * sizeof(bool));
-    delay_ms(50);
-    if (*array == NULL) {
-        printf("Error! memory not allocated."); // Handle memory allocation failure
-        exit(1);
+    if(par1!=0 && par2!=0) {
+        *array =malloc(par1 * par2 * sizeof(bool));
+        if (*array == NULL) {
+            printf("Error! memory not allocated."); // Handle memory allocation failure
+            exit(1);
+        }
+        makeArrayEmpty_Bool(*array, par1, par2); // Initialize the allocated array
     }
-    makeArrayEmpty_Bool(*array, par1, par2); // Initialize the allocated array
 }
 
 /* Initialize the game with parameters */
-void initGame(int dim, char diff, bool doubles, int tents) {
+void initGame(int16_t dim, int8_t diff, bool doubles, int16_t tents) {
     //game.dim = dim;                     // Set the dimension
     //game.difficulty = diff;             // Set the difficulty
     //game.doubles = doubles;              // Set the doubles flag
     game.count_tent = 0;                // Initialize current attempt count
     //game.tentatives = tents;             // Set the total number of attempts
-    allocate_in_Heap_Char((char**)&game.seq_to_guess, 1, game.dim); // Allocate memory for the sequence to guess
-    allocate_in_Heap_Char((char**)&game.chronology, game.tentatives, game.dim * 2); // Allocate memory for attempt history
+    allocate_in_Heap_Char(&game.seq_to_guess, 1, game.dim); // Allocate memory for the sequence to guess
+    allocate_in_Heap_Char(&game.chronology, game.tentatives, game.dim * 2); // Allocate memory for attempt history
     allocate_in_Heap_Bool(&game.flags, 1, game.dim);  //allocate memory for flags
 }
 
 /* Generate a random integer between min and max */
-int random_int(int min, int max) {
+int random_int(int16_t min, int16_t max) {
     return rand() % (max - min + 1) + min; // Return a random integer within the specified range
 }
 
 /* Generate a key with doubles allowed */
-int* key_generation_wh_doub(void) {
-    int* array = NULL;
+int16_t* key_generation_wh_doub(void) {
+    int16_t* array = NULL;
     allocate_in_Heap_Int(&array, 1, game.dim); // Allocate memory for the key
     for (i = 0; i < game.dim; i++) {
         array[i] = random_int(1, COLORS); // Assign random values to the array
@@ -118,7 +120,7 @@ int* key_generation_wh_doub(void) {
 }
 
 /* Check if a value is already present in the array */
-bool presence_Double(int* array, int value, int dim) {
+bool presence_Double(int16_t* array, int16_t value, int16_t dim) {
     if (dim == 1) return false; // If array has only one element, no duplicates possible
     for (i = 0; i < dim - 1; i++) {
         if (array[i] == value) return true; // Return true if the value is found
@@ -127,8 +129,8 @@ bool presence_Double(int* array, int value, int dim) {
 }
 
 /* Generate a key without allowing doubles */
-int* key_generation_wout_doub(void) {
-    int* array = NULL;
+int16_t* key_generation_wout_doub(void) {
+    int16_t* array = NULL;
     allocate_in_Heap_Int(&array, 1, game.dim); // Allocate memory for the key
     for (i = 0; i < game.dim; i++) {
         int value = random_int(1, COLORS); // Generate a random value
@@ -142,7 +144,7 @@ int* key_generation_wout_doub(void) {
 }
 
 /* Convert an integer index to a character */
-char int_Conversion_to_Char(int index) {
+int8_t int_Conversion_to_Char(int16_t index) {
     char c = '\0';
     switch (index) {
         case 1: c = 'R'; break; // Red
@@ -157,19 +159,19 @@ char int_Conversion_to_Char(int index) {
 }
 
 /* Convert an integer array to a character array */
-void crypt_sequence_Int_Char(int* arr1, char* arr2, int dim) {
+void crypt_sequence_Int_Char(int16_t* arr1, int8_t* arr2, int16_t dim) {
     for (i = 0; i < dim; i++) {
         arr2[i] = int_Conversion_to_Char(arr1[i]); // Convert each integer to character
     }
 }
 
 /* Continue the key decryption process */
-void continue_Key_Decryption(int* sequence) {
+void continue_Key_Decryption(int16_t* sequence) {
     for (i=0; i<game.dim; i++) {
         printf("%d", sequence[i]);
     }
     printf("\n");
-    crypt_sequence_Int_Char(sequence, (char*) game.seq_to_guess, game.dim); // Convert the sequence
+    crypt_sequence_Int_Char(sequence, game.seq_to_guess, game.dim); // Convert the sequence
     for (i=0; i<game.dim; i++) {
         printf("%c", game.seq_to_guess[i]);
     }
@@ -181,7 +183,7 @@ void continue_Key_Decryption(int* sequence) {
 void resetTentative(void) {
     tentative.count = 0; // Reset attempt count
     tentative.dim = game.dim; // Set dimension for user's sequence
-    allocate_in_Heap_Char((char**)&tentative.seq_user, 1, game.dim); // Allocate memory for user's guesses
+    allocate_in_Heap_Char(&tentative.seq_user, 1, game.dim); // Allocate memory for user's guesses
 }
 
 /* Function for the START state */
@@ -192,14 +194,14 @@ void fn_START(void) {
 
 /* Function for the KEY_WOUT_DOUB state */
 void fn_KEY_WOUT_DOUB(void) {
-    int* sequence = key_generation_wout_doub(); // Generate key without doubles
+    int16_t* sequence = key_generation_wout_doub(); // Generate key without doubles
     continue_Key_Decryption(sequence); // Continue the decryption process
     current_state = RESET_TENT; // Transition to the next state
 }
 
 /* Function for the KEY_WH_DOUB state */
 void fn_KEY_WH_DOUB(void) {
-    int* sequence = key_generation_wh_doub(); // Generate key with doubles
+    int16_t* sequence = key_generation_wh_doub(); // Generate key with doubles
     continue_Key_Decryption(sequence); // Continue the decryption process
     current_state = RESET_TENT; // Transition to the next state
 }
