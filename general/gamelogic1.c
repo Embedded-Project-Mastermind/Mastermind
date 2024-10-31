@@ -94,11 +94,11 @@ void allocate_in_Heap_Bool(bool** array, int16_t par1, int16_t par2){
 
 /* Initialize the game with parameters */
 void initGame(int16_t dim, int8_t diff, bool doubles, int16_t tents) {
-    //game.dim = dim;                     // Set the dimension
-    //game.difficulty = diff;             // Set the difficulty
-    //game.doubles = doubles;              // Set the doubles flag
+    game.dim = dim;                     // Set the dimension
+    game.difficulty = diff;             // Set the difficulty
+    game.doubles = doubles;              // Set the doubles flag
     game.count_tent = 0;                // Initialize current attempt count
-    //game.tentatives = tents;             // Set the total number of attempts
+    game.tentatives = tents;             // Set the total number of attempts
     allocate_in_Heap_Char(&game.seq_to_guess, 1, game.dim); // Allocate memory for the sequence to guess
     allocate_in_Heap_Char(&game.chronology, game.tentatives, game.dim * 2); // Allocate memory for attempt history
     allocate_in_Heap_Bool(&game.flags, 1, game.dim);  //allocate memory for flags
@@ -188,7 +188,8 @@ void resetTentative(void) {
 
 /* Function for the START state */
 void fn_START(void) {
-    initGame(game.dim, game.difficulty, game.doubles, game.tentatives); // Initialize the game
+    //initGame(game.dim, game.difficulty, game.doubles, game.tentatives); // Initialize the game
+    initGame(4, 'A', true, 7); // Initialize the game
     current_state = game.doubles ? KEY_WH_DOUB : KEY_WOUT_DOUB; // Transition to the next state based on doubles flag
 }
 
