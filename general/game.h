@@ -12,7 +12,6 @@
 #include "input.h"
 
 extern bool configurationGame;
-extern bool tentativeStart;
 
 void fn_GAME(void);
 void elaborateColor(int8_t c);
