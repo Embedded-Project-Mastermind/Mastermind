@@ -1,5 +1,5 @@
 /*
- * chronologyEs.c
+ * chronology.c
  *
  *  Created on: 31 ott 2024
  *      Author: niccolocristoforetti
@@ -24,6 +24,7 @@ void drawChronology(void) {
     int i;
     for (i=0; i<sizes[CHRONOLOGY]; i++) {
         drawButton(chronology_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(chronology_buttons, sizes[CHRONOLOGY]));
+        drawButton(tent_number[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(chronology_buttons, sizes[CHRONOLOGY]));
     }
     for (i=0; i<2; i++) {
         drawButton(other_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(other_buttons, 2));
@@ -43,6 +44,7 @@ void drawChronology(void) {
 
 
 void fn_CHRONOLOGY(void) {
+    pos=0;
     reset_Screen();
     //DRAW FUNCTION
     reset_Screen();
@@ -54,6 +56,7 @@ void fn_CHRONOLOGY(void) {
     if(game.count_tent-1>=3){
         other_buttons[1].state=SELECTED;
     }
+    updatePos();
 }
 
 /***************************************
@@ -69,49 +72,51 @@ void fn_CHRONOLOGY(void) {
 void upStick_CHRONOLOGY() {
     if(position!=0) {
         handleOut(chronology_buttons, position, sizes[CHRONOLOGY]);
-        position=0;
+        position--;
         handleIn(chronology_buttons, position, sizes[CHRONOLOGY]);
     }
-    else if(other_buttons[0].state==SELECTED){
+    else if(pos>0){
+        pos--;
+        if(pos==0){
+            other_buttons[0].state=DISABLED;
+        }
+        //Modifica le schermate precedenti
+        updatePos();
 
     }
 }
 void downStick_CHRONOLOGY() {
-    /*if(position==0) {
-        handleOut(tent_buttons, position, sizes[TENTATIVE]);
-        if(tent_buttons[1].state!=DISABLED){
-             position=1;
-        } else{
-             position=sizes[TENTATIVE]-2;
+    if(position!=2) {
+        handleOut(chronology_buttons, position, sizes[CHRONOLOGY]);
+        position++;
+        handleIn(chronology_buttons, position, sizes[CHRONOLOGY]);
+    }
+    else if(other_buttons[1].state==SELECTED) {
+        pos++;
+        if(game.count_tent-1<=pos+sizes[CHRONOLOGY]){
+            other_buttons[1].state=DISABLED;
         }
-        handleIn(tent_buttons, position, sizes[TENTATIVE]);
-    }
-    else if(position==1 || position==2) {
-            handleOut(tent_buttons, position, sizes[TENTATIVE]);
-            position=sizes[TENTATIVE]-2;
-            handleIn(tent_buttons, position, sizes[TENTATIVE]);
-    }
-    else if(position==3 || position==4) {
-            handleOut(tent_buttons, position, sizes[TENTATIVE]);
-            if(tent_buttons[sizes[TENTATIVE]-1].state!=DISABLED){
-              position=sizes[TENTATIVE]-1;
-            } else{
-              position=sizes[TENTATIVE]-2;
-            }
-            handleIn(tent_buttons, position, sizes[TENTATIVE]);
-    }*/
-}
-void rightStick_CHRONOLOGY() {/*
-    if(position<sizes[TENTATIVE]) {
+        //Modifica le schermate precedenti
+        updatePos();
 
-             int i=position+1;
-             while(tent_buttons[i].state==DISABLED){
-                 i++;
-             }
-             if(i<sizes[TENTATIVE]){
-                 handleOut(tent_buttons, position, sizes[TENTATIVE]);
-                 position=i;
-                 handleIn(tent_buttons, position, sizes[TENTATIVE]);
-         }
-    }*/
+    }
+}
+void rightStick_CHRONOLOGY() {
+    display_position--;
+}
+/***************************************
+*
+* updatePos()
+* they manage what to do when the user
+* moves the stick
+* no input
+* no output
+*
+***************************************/
+
+void updatePos(){
+    char buffer[sizeof(long)*8+1][2];
+    for(i=0; i<sizes[CHRONOLOGY]; i++){
+          tent_number[i].text.string=(int8_t*)ltoa((long)game.count_tent-i-pos, buffer[0], 10);
+    }
 }
