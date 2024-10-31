@@ -17,6 +17,7 @@ void hardware_Init(void);
 void reset_Screen(void);
 //FOLLOWING DEFINE THE GRAPHIC FUNCTIONS USED IN C FILE
 extern Graphics_Rectangle upperRect;
+extern Graphics_Rectangle upperRectCH;
 extern Graphics_Button prevButton;
 extern Graphics_Button nextButton;
 extern Graphics_Text labelText;
