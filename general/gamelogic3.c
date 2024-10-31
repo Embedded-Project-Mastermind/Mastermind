@@ -129,6 +129,7 @@ bool winCondition(void){
 
 //Function for ELABORATE_TENT state
 void fn_ELABORATE_TENT(void){
+    printf("Sono arrivato in elaborate tent");
     insertInChronology(tentative.seq_user);  //Insert sequence in chronology
     current_state = INCREMENT_TENT;  // Transition to the INCREMENT_TENT state;
 }
