@@ -113,6 +113,7 @@ void defaultDraw(void) {
             Graphics_setForegroundColor(&grContext, GRAPHICS_COLOR_WHITE); //Manual
             Graphics_drawStringCentered(&grContext, (int8_t *)labelText.string, AUTO_STRING_LENGTH, getCenteredX(upperRect),  getCenteredY(upperRect), labelText.opacity);
         }
+    }
 }
 void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
     if(position<(size-2)) {
