@@ -14,6 +14,10 @@ void fn_GAME(void) {
         configurationGame=true;
         defaultDraw();
     }
+    if(!tentativeStart){
+        tenativeStart=true;
+        position=0;
+    }
     //DRAW FUNCTION
     //FOLLOWING POSITION
 }
