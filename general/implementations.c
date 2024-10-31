@@ -127,20 +127,20 @@ void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
             }
     }
      else {
-        if(position<(size-2)) {
-                if (array[position].state!=SELECTED) {
-                    array[position].state=STANDARD;
-                    drawButton(array[position], STANDARD_COLOR, SELECTED_COLOR, findSelected(array, size));
-                }
-                else {
-                    int output=findSelected(array, size)+1;//IN ORDER TO MAKE output!=position
-                    drawButton(array[position], SELECTED_COLOR, STANDARD_COLOR, output);
-                }
-            }
-            else {
-                array[position].state=STANDARD;
-                drawButton(array[position], FILL_MOVEMENT, STANDARD_COLOR, findSelected(array, size));
-            }
+         if(position<(size-2)) {
+                 if (array[position].state!=SELECTED) {
+                     array[position].state=STANDARD;
+                     drawButton(array[position], STANDARD_COLOR, SELECTED_COLOR, findSelected(array, size));
+                 }
+                 else {
+                     int output=findSelected(array, size)+1;//IN ORDER TO MAKE output!=position
+                     drawButton(array[position], SELECTED_COLOR, STANDARD_COLOR, output);
+                 }
+             }
+             else {
+                 array[position].state=STANDARD;
+                 drawButton(array[position], FILL_MOVEMENT, STANDARD_COLOR, findSelected(array, size));
+             }
     }
 }
 void handleIn(Graphics_Button array[], uint8_t position, int8_t size) {
