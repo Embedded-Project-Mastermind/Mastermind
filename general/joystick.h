@@ -32,4 +32,5 @@ void _adcInit();
 void before_ADC();
 void initHW();
 Move findDirection(uint16_t x, uint16_t y);
+void delay_ms(uint32_t milliseconds);
 #endif /* JOYSTICK_H_ */
