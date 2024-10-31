@@ -214,7 +214,7 @@ int main(void) {
                    }
                }
                //CASES OF BREAK IN ORDER TO GO TO INTERRUPT
-               if(current_state==WAIT) {
+               if(current_state==WAIT || current_state=WAIT_FULL) {
                    exit_gamelogic=true;
                }
                if(exit_gamelogic) {
