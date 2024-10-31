@@ -18,6 +18,9 @@
 #include "buttons.h"
 #include "input.h"
 #include "game.h"
+#include "gamelogic1.h"
+#include "gamelogic2.h"
+#include "gamelogic3.h"
 
 typedef struct Graphics_StateMachine {
     Graphics_State state; //Current Graphics State
@@ -35,11 +38,34 @@ Graphics_StateMachine gfsm[]={
      {CHRONOLOGY, fn_CHRONOLOGY},
      {END, fn_END}
 };
-
+// Finite State Machine declaration
+typedef struct {
+    State state;                          // Current state of the FSM
+    void (*state_function)(void);         // Pointer to the state function
+} StateMachine;
+StateMachine fsm[] = {
+    {START, fn_START},
+    {KEY_WOUT_DOUB, fn_KEY_WOUT_DOUB},
+    {KEY_WH_DOUB, fn_KEY_WH_DOUB},
+    {RESET_TENT, fn_RESET_TENT},
+    {WAIT, fn_WAIT},
+    {ELABORATE, fn_ELABORATE},
+    {INSERT_COLOR, fn_INSERT_COLOR},
+    {WAIT_FULL, fn_WAIT_FULL},
+    {ELIMINATE_COLOR, fn_ELIMINATE_COLOR},
+    {ELABORATE_TENT, fn_ELABORATE_TENT},
+    {INCREMENT_TENT, fn_INCREMENT_TENT},
+    {GAME_OVER, fn_GAME_OVER},
+    {EASY_MODE, fn_EASY_MODE},
+    {MEDIUM_MODE, fn_MEDIUM_MODE},
+    {DIFFICULT_MODE, fn_DIFFICULT_MODE},
+    {ELABORATE_RESULT, fn_ELABORATE_RESULT},
+    {WIN, fn_WIN}
+};
 Game game;
 Tentative tentative;
-State current_state=START;
 Graphics_State display_position=START_GR;
+State current_state=START;
 Graphics_Rectangle upperRect={0, 0, 128, 32};
 Graphics_Button prevButton={STANDARD, {0, 97, 63, 128}, {{"Back"}, false}};
 Graphics_Button nextButton={DISABLED, {65, 97, 128, 128}, {{"Next"}, false}};
@@ -143,7 +169,9 @@ uint32_t Timer_getValue(void) {
 }
 //BOOLEANS
 volatile bool interruptFlag=false;
+bool exit_gamelogic=false;
 int main(void) {
+    srand((unsigned)time(NULL));
     WDT_A_holdTimer();
     //Setup Infrastructure
     hardware_Init();
@@ -153,12 +181,35 @@ int main(void) {
     Timer_Init();
     while(1) {
        interruptFlag=false;
+       exit_gamelogic=false;
        if(display_position<ERROR_GR) {
            labelDefining(display_position);
            (*gfsm[display_position].state_function)();
        }
        else {
            return 0;
+       }
+       if(configurationGame) {
+           while(1) {
+               if (current_state < ERROR) {
+                   (*fsm[current_state].state_function)(); // Call the appropriate state function
+               } else {
+                   // Clean up and exit if in ERROR state
+                   if (current_state == ERROR) {
+                       deallocate_Char((char*) game.seq_to_guess); // Deallocate sequence memory
+                       deallocate_Char((char*) game.chronology); // Deallocate chronology memory
+                       deallocate_Bool(game.flags); //Deallocate flag memory
+                       exit_gamelogic=true; // Exit the loop
+                   }
+               }
+               //CASES OF BREAK IN ORDER TO GO TO INTERRUPT
+               if(current_state==WAIT) {
+                   exit_gamelogic=true;
+               }
+               if(exit_gamelogic) {
+                   break;
+               }
+           }
        }
        __enable_interrupt();
        ADC14_enableConversion();
@@ -358,10 +409,10 @@ void PORT6_IRQHandler() {
        while(!(P6->IN & BIT6));
        internalFlag=true;
     }
-    if (P6->IFG & BIT7) {
+    /*if (P6->IFG & BIT7) {
         while(!(P6->IN & BIT7));
         internalFlag=true;
-    }
+    }*/
     uint8_t status=P6->IFG;
     if(internalFlag) {
         functionPinsDefault(status, P6_D);
