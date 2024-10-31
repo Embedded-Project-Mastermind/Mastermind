@@ -15,6 +15,7 @@
 #include "info.h"
 #include "input.h"
 #include "chronology.h"
+#include "game.h"
 
 volatile bool mutex=false;
 
