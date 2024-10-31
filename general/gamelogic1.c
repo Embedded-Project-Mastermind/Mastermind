@@ -153,6 +153,8 @@ int8_t int_Conversion_to_Char(int16_t index) {
         case 4: c = 'Y'; break; // Yellow
         case 5: c = 'P'; break; // Purple
         case 6: c = 'C'; break; // Cyan
+        case 7: c = 'O'; break; //Orange
+        case 8: c = 'W'; break; //White
         default: exit(1); // Exit on error
     }
     return c; // Return the character representation
