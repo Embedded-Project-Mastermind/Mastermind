@@ -12,6 +12,7 @@
 #include "doubles.h"
 #include "info.h"
 #include "msp.h"
+#include "chronology.h"
 
 void upfunctions() {
     switch(display_position) {
@@ -22,7 +23,7 @@ void upfunctions() {
         case DOUBLES: upStick_DOUBLES(); break;
         case INFO: upStick_INFO(); break;
         case GAME: break;
-        case CHRONOLOGY: break;
+        case CHRONOLOGY: upStick_CHRONOLOGY(); break;
         case END: break;
         //default: exit(1);
     }
@@ -36,7 +37,7 @@ void downfunctions() {
         case DOUBLES: downStick_DOUBLES(); break;
         case INFO: downStick_INFO(); break;
         case GAME: break;
-        case CHRONOLOGY: break;
+        case CHRONOLOGY: downStick_CHRONOLOGY(); break;
         case END: break;
        // default: exit(1);
     }
@@ -64,7 +65,7 @@ void rightfunctions() {
         case DOUBLES: rightStick_DOUBLES(); break;
         case INFO: rightStick_INFO(); break;
         case GAME: break;
-        case CHRONOLOGY: break;
+        case CHRONOLOGY: rightStick_CHRONOLOGY(); break;
         case END: break;
         //default: exit(1);
     }
