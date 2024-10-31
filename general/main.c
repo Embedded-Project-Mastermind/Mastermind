@@ -68,7 +68,7 @@ Tentative tentative;
 Graphics_State display_position=GAME;
 State current_state=START;
 Graphics_Rectangle upperRect={0, 0, 128, 32};
-Graphics_Rectangle upperRectCH={0, 0, 128, 16};
+Graphics_Rectangle upperRectCH={0, 0, 128-16-1, 16};
 Graphics_Button prevButton={STANDARD, {0, 97, 63, 128}, {{"Back"}, false}};
 Graphics_Button nextButton={DISABLED, {65, 97, 128, 128}, {{"Next"}, false}};
 uint8_t position=0;
@@ -125,7 +125,7 @@ Graphics_Button chronology_buttons[]={  //CHRONOLOGY state part
     {STANDARD, {1, 88+1, 128-1, 120-1}, {"", false}}
 };
 Graphics_Button other_buttons[]={
-    {DISABLED, {1, 16+1, 128-1, 24-1}, {"", false}}, 
+    {DISABLED, {1, 16+1, 128-1, 24-1}, {"", false}},
     {DISABLED, {1, 120+1, 128-1, 128-1}, {"", false}}
 };
 //Daniele Calvo's code
