@@ -128,6 +128,11 @@ Graphics_Button other_buttons[]={
     {DISABLED, {1, 16+1, 128-1, 24-1}, {"", false}},
     {DISABLED, {1, 120+1, 128-1, 128-1}, {"", false}}
 };
+Graphics_Button tent_number[]={
+    {DISABLED, {1, 24+1, 16-1, 40-1}, {"", false}},
+    {DISABLED, {1, 56+1, 16-1, 72-1}, {"", false}},
+    {DISABLED, {1, 88+1, 16-1, 104-1}, {"", false}}
+};
 //Daniele Calvo's code
 Graphics_Text doubles_text={{"Doubles"}, false};  //DOUBLE state part
 Graphics_Text doubles_description[]={ 
