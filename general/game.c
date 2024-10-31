@@ -5,6 +5,7 @@
  *      Author: matteogottardelligmail.com
  */
 #include "game.h"
+#include "gamelogic2.h"
 #include "gamelogic1.h"
 
 bool configurationGame=false;
