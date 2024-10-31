@@ -21,6 +21,7 @@
 #include "gamelogic1.h"
 #include "gamelogic2.h"
 #include "gamelogic3.h"
+#include "chronology.h"
 
 typedef struct Graphics_StateMachine {
     Graphics_State state; //Current Graphics State
@@ -64,9 +65,10 @@ StateMachine fsm[] = {
 };
 Game game;
 Tentative tentative;
-Graphics_State display_position=START_GR;
+Graphics_State display_position=GAME;
 State current_state=START;
 Graphics_Rectangle upperRect={0, 0, 128, 32};
+Graphics_Rectangle upperRectCH={0, 0, 128, 16};
 Graphics_Button prevButton={STANDARD, {0, 97, 63, 128}, {{"Back"}, false}};
 Graphics_Button nextButton={DISABLED, {65, 97, 128, 128}, {{"Next"}, false}};
 uint8_t position=0;
@@ -106,7 +108,7 @@ Graphics_Button diff_buttons[]={
     {STANDARD, {0, 0, 0, 0}, {"", false}}
 };
 //Niccolò Cristoforetti's code
-Graphics_Button tent_buttons[]={
+Graphics_Button tent_buttons[]={  //TENTATIVE state part
     {FOCUSED, {TENT_DIM/4+1, 32+TENT_DIM/4+1, TENT_DIM/2+TENT_DIM/4-1, 32+TENT_DIM/2+TENT_DIM/4-1}, {"", false}},
     {STANDARD, {1, 32+TENT_DIM+1, TENT_DIM-1, 32+TENT_DIM*2-1}, {"3", false}},
     {STANDARD, {TENT_DIM+1, 32+TENT_DIM+1, TENT_DIM*2-1, 32+TENT_DIM*2-1}, {"5", false}},
@@ -117,6 +119,15 @@ Graphics_Button tent_buttons[]={
 };
 Graphics_Button text_no_tent={DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TRIES", false}};
 Graphics_Button start_button={FOCUSED, {32, 96, 96, 112}, {"START", false}};
+Graphics_Button chronology_buttons[]={  //CHRONOLOGY state part
+    {STANDARD, {1, 24+1, 128-1, 56-1}, {"", false}},
+    {STANDARD, {1, 56+1, 128-1, 88-1}, {"", false}},
+    {STANDARD, {1, 88+1, 128-1, 120-1}, {"", false}}
+};
+Graphics_Button other_buttons[]={
+    {DISABLED, {1, 16+1, 128-1, 24-1}, {"", false}}, 
+    {DISABLED, {1, 120+1, 128-1, 128-1}, {"", false}}
+};
 //Daniele Calvo's code
 Graphics_Text doubles_text={{"Doubles"}, false};  //DOUBLE state part
 Graphics_Text doubles_description[]={ 
@@ -157,7 +168,7 @@ void setSizes() {
             case DOUBLES: sizes[i]=ARRAY_SIZE(doubles_buttons); break;
             case INFO: sizes[i]=ARRAY_SIZE(info_buttons); break;
             case GAME:  sizes[i]=1; break;
-            case CHRONOLOGY: sizes[i]=1; break;
+            case CHRONOLOGY: sizes[i]=ARRAY_SIZE(chronology_buttons); break;
             case END: sizes[i]=1; break;
             default: exit(1);
         }
