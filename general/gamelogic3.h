@@ -24,11 +24,11 @@ void fn_MEDIUM_MODE(void); //Function for MEDIUM_MODE state
 void fn_DIFFICULT_MODE(void);  //Function for DIFFICULT_MODE state
 void fn_ELABORATE_RESULT(void); //Function for ELABORATE_RESULT state
 void fn_WIN(void);  //Function for WIN state
-int checkIfTenctOrCorrection(char c); //Function that checks if the sequence is a tenctative or a correction. Returns a int for set the right index in the chronology
-void insertInChronology(char* seq); //Function that inserts sequence or sequence correction in chronology
+int16_t checkIfTenctOrCorrection(int8_t c); //Function that checks if the sequence is a tenctative or a correction. Returns a int for set the right index in the chronology
+void insertInChronology(int8_t* seq); //Function that inserts sequence or sequence correction in chronology
 void incrementTent(void); //Function that increases the number of tenctative
 bool checkIfGameOver(void);  //Function that checks if the maximum number of attempts has been reached
-char check_difficulty(void);  //Function that checks the difficulty degree
+int8_t check_difficulty(void);  //Function that checks the difficulty degree
 void correctionsEasyMode(void); //Function that transforms the seq_user into corrections in EASY_MODE
 void correctionsMediumMode(void); //Function that transforms the seq_user into corrections in MEDIUM_MODE
 void correctionsDifficultMode(void); //Function that transforms the seq_user into corrections in DIFFICULT_MODE
