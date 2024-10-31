@@ -222,11 +222,6 @@ void releaseMutex() {
     ADC_EnableInterrupts();
 
 }
-void fn_CHRONOLOGY(void) {
-    reset_Screen();
-    //DRAW FUNCTION
-    //FOLLOWING POSITION
-}
 void fn_END(void) {
     reset_Screen();
     //DRAW FUNCTION
