@@ -8,7 +8,7 @@
 #include "gamelogic3.h"
 
 //Function that checks if the sequence is a tenctative or a correction. Returns a int for set the right index in the chronology
-int checkIfTenctOrCorrection(char c){
+int16_t checkIfTenctOrCorrection(int8_t c){
     if( c=='X' || c== 'O' || c=='!' ){  //Check if the output isn't a correction
         return game.dim;
     }
@@ -16,7 +16,7 @@ int checkIfTenctOrCorrection(char c){
 }
 
 //Function that inserts sequence or sequence corrections in chronology
-void insertInChronology(char* seq){
+void insertInChronology(int8_t* seq){
     j=checkIfTenctOrCorrection(seq[0]);  //The j index is used to insert correctly in the chronology the sequence or corrections
     for(i=0; i<game.dim; i++){
         game.chronology[ game.dim * 2 * game.count_tent - j + i ]=seq[i];  //The minus is used because when it's add the corrections the tenctative is already the next
@@ -40,7 +40,7 @@ bool checkIfGameOver(void){
 }
 
 //Function that checks the difficulty degree
-char check_difficulty(void){
+int8_t check_difficulty(void){
     return game.difficulty;
 }
 
@@ -70,7 +70,7 @@ void correctionsEasyMode(void){
 }
 //Function that transforms the seq_user into corrections in MEDIUM_MODE
 void correctionsMediumMode(void){
-    int o=0; int x=0;
+    int16_t o=0; int16_t x=0;
     correctionsEasyMode();
     for(i=0; i<game.dim; i++){
         switch (tentative.seq_user[i]) {
@@ -129,7 +129,7 @@ bool winCondition(void){
 
 //Function for ELABORATE_TENT state
 void fn_ELABORATE_TENT(void){
-    insertInChronology((char*)tentative.seq_user);  //Insert sequence in chronology
+    insertInChronology(tentative.seq_user);  //Insert sequence in chronology
     current_state = INCREMENT_TENT;  // Transition to the INCREMENT_TENT state;
 }
 
@@ -174,7 +174,7 @@ void fn_DIFFICULT_MODE(void){
 
 //Function for ELABORATE_RESULT state
 void fn_ELABORATE_RESULT(void){
-    insertInChronology((char*)tentative.seq_user);  //Insert corrections in chronology
+    insertInChronology(tentative.seq_user);  //Insert corrections in chronology
     printLastTentativeInChronology();  //Print the complete output of the last tentative
     current_state = winCondition() ? WIN : RESET_TENT; // Transition to the next state based on the win condition
 }
