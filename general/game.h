@@ -12,7 +12,7 @@
 #include "input.h"
 
 extern bool configurationGame;
-
+extern int16_t color_selected;
 extern Graphics_Circle circles[];
 
 void fn_GAME(void);
