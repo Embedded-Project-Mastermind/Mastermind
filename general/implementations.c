@@ -101,7 +101,7 @@ void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color, 
 }
 void defaultDraw(void) {
     //START LABEL
-    if(display_position==DIMENSION || display_position==DIFFICULTY || display_position==TENTATIVE || display_position==DOUBLES || display_position==INFO || display_position==GAME){
+    if(display_position==DIMENSION || display_position==DIFFICULTY || display_position==TENTATIVE || display_position==DOUBLES || display_position==INFO || display_position==GAME || display_position==CHRONOLOGY){
         Graphics_drawRectangle(&grContext, &upperRect);
         Graphics_setForegroundColor(&grContext, FILL_UPPER_RECT);
         if(display_position==CHRONOLOGY){
@@ -116,19 +116,31 @@ void defaultDraw(void) {
     }
 }
 void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
-    if(position<(size-2)) {
-        if (array[position].state!=SELECTED) {
-            array[position].state=STANDARD;
-            drawButton(array[position], STANDARD_COLOR, SELECTED_COLOR, findSelected(array, size));
-        }
-        else {
-            int output=findSelected(array, size)+1;//IN ORDER TO MAKE output!=position
-            drawButton(array[position], SELECTED_COLOR, STANDARD_COLOR, output);
-        }
+    if(display_position==GAME || display_position==CHRONOLOGY){
+         if (array[position].state!=SELECTED) {
+                array[position].state=STANDARD;
+                drawButton(array[position], STANDARD_COLOR, SELECTED_COLOR, findSelected(array, size));
+         }
+          else {
+                int output=findSelected(array, size)+1;//IN ORDER TO MAKE output!=position
+                drawButton(array[position], SELECTED_COLOR, STANDARD_COLOR, output);
+            }
     }
-    else {
-        array[position].state=STANDARD;
-        drawButton(array[position], FILL_MOVEMENT, STANDARD_COLOR, findSelected(array, size));
+     else {
+        if(position<(size-2)) {
+                if (array[position].state!=SELECTED) {
+                    array[position].state=STANDARD;
+                    drawButton(array[position], STANDARD_COLOR, SELECTED_COLOR, findSelected(array, size));
+                }
+                else {
+                    int output=findSelected(array, size)+1;//IN ORDER TO MAKE output!=position
+                    drawButton(array[position], SELECTED_COLOR, STANDARD_COLOR, output);
+                }
+            }
+            else {
+                array[position].state=STANDARD;
+                drawButton(array[position], FILL_MOVEMENT, STANDARD_COLOR, findSelected(array, size));
+            }
     }
 }
 void handleIn(Graphics_Button array[], uint8_t position, int8_t size) {
