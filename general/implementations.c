@@ -14,6 +14,7 @@
 #include "doubles.h"
 #include "info.h"
 #include "input.h"
+#include "chronology.h"
 
 volatile bool mutex=false;
 
@@ -103,10 +104,15 @@ void defaultDraw(void) {
     if(display_position==DIMENSION || display_position==DIFFICULTY || display_position==TENTATIVE || display_position==DOUBLES || display_position==INFO || display_position==GAME){
         Graphics_drawRectangle(&grContext, &upperRect);
         Graphics_setForegroundColor(&grContext, FILL_UPPER_RECT);
-        Graphics_fillRectangle(&grContext, &upperRect);
-        Graphics_setForegroundColor(&grContext, GRAPHICS_COLOR_WHITE); //Manual
-        Graphics_drawStringCentered(&grContext, (int8_t *)labelText.string, AUTO_STRING_LENGTH, getCenteredX(upperRect),  getCenteredY(upperRect), labelText.opacity);
-    }
+        if(display_position==CHRONOLOGY){
+            Graphics_fillRectangle(&grContext, &upperRectCH);
+            Graphics_setForegroundColor(&grContext, GRAPHICS_COLOR_WHITE); //Manual
+            Graphics_drawStringCentered(&grContext, (int8_t *)labelText.string, AUTO_STRING_LENGTH, getCenteredX(upperRectCH),  getCenteredY(upperRectCH), labelText.opacity);
+        }else{
+            Graphics_fillRectangle(&grContext, &upperRect);
+            Graphics_setForegroundColor(&grContext, GRAPHICS_COLOR_WHITE); //Manual
+            Graphics_drawStringCentered(&grContext, (int8_t *)labelText.string, AUTO_STRING_LENGTH, getCenteredX(upperRect),  getCenteredY(upperRect), labelText.opacity);
+        }
 }
 void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
     if(position<(size-2)) {
