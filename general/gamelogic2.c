@@ -29,7 +29,7 @@ void text_selection(bool sel){     //selects which text to display
 void full_text(){
      printf("The array is full, click 2 to confirm and 3 to go back.\nSelection: ");    
 }
-/*
+
 int read_input(int16_t dim){     //reads the input from keyboard and verifies if it's correct
     int16_t value = 0;
     do{       //done with a do while so we are sure that it executes
@@ -38,14 +38,14 @@ int read_input(int16_t dim){     //reads the input from keyboard and verifies if
 
        //
 
-       scanf("%d", &value);       //scans the value to analize
+       //scanf("%d", &value);       //scans the value to analize
        if(selection && ((current_state == WAIT && value == 2) || (current_state == WAIT_FULL && value == 1) || (is_empty() && value == 3))){
 	       printf("Function not available in this state!");
 	       value = 0;
        }	
        }while(value < 1 || value > dim);	//do while exit condition
 	return value;
-}*/
+}
 
 void print_sequence(int8_t* seq, int16_t dim){
      for(i=0; i<dim; i++){
@@ -53,7 +53,7 @@ void print_sequence(int8_t* seq, int16_t dim){
              }
      printf("\n");
 }
-/*
+
 void handle_wait(int16_t value){ //potenzialmente inutile
 	switch(value){
 		case 1: current_state  = ELABORATE;
@@ -64,18 +64,18 @@ void handle_wait(int16_t value){ //potenzialmente inutile
 			break;
 		default: exit(1);
 	}
-}*/
-/*
+}
+
 void wait_handle(void) { 
      selection = true;  	//to select menu text from text_selection()
      value = read_input(OPTIONS);   	//to read the value in input
      selection = false;   	//to change text selection in function text_selection
-}*/
-/*
+}
+
 void wait_full(void) {  //wait function when the array is full
     full_text();   //prints the text that tells what instructions you can do
 //not useful    value = read_input(OPTIONS);   //gets the value from the keyboard
-}*/
+}
 
 void insert_color(){ // cambiato da char color a nulla perche uso la variabile globale in game.h
     if(!(is_full())){
@@ -96,14 +96,14 @@ void eliminate_color(void){
      print_sequence(tentative.seq_user, tentative.count);
 }
 
-/*
+
 bool elaborate(void){  
      selection = false;   //set boolean variable selection to false to display the correct text
      value = read_input(COLORS);   //gets input from keyboard as an integer
     // temp = int_Conversion_to_Char(value); //global variable that saves the chosen color
      return true;	 //fittizio
 }
-*/
+
 
 void fn_WAIT(void) {
 //	wait_handle(); 	//actions of wait state
@@ -114,7 +114,7 @@ void fn_WAIT(void) {
 void fn_ELABORATE(void){ //da rimuovere
 /*	if(elaborate()){ current_state = INSERT_COLOR; }	
 	else { current_state = WAIT; }*/
-	//current_state = (elaborate()) ? INSERT_COLOR : WAIT;	//if the input is correct it changes state to insert the color, otherwise returns to wait
+	current_state = (elaborate()) ? INSERT_COLOR : WAIT;	//if the input is correct it changes state to insert the color, otherwise returns to wait
 }
 
 void fn_INSERT_COLOR(void){
