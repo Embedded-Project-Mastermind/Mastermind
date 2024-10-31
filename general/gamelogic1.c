@@ -5,6 +5,7 @@
 //  Created by Matteo Gottardelli on 27/09/24.
 //
 #include "gamelogic1.h"
+#include "joystick.c"
 int i, j;
 /* Deallocate memory for a character array */
 void deallocate_Char(char* array) {
