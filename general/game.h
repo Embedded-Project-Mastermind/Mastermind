@@ -16,7 +16,7 @@ extern bool configurationGame;
 extern Graphics_Circle circles[];
 
 void fn_GAME(void);
-void elaborateColor(int8_t c);
+void elaborateColor(int16_t c);
 void initCircles();
 void populateCircles(int16_t offset, int16_t radius);
 void drawCircles();
