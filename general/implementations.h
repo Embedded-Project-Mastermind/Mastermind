@@ -43,6 +43,5 @@ void handle_buttons(Graphics_Button array[]);
 //FUNCTION INIT
 void initArray(Graphics_Button array[], int size);
 //FUNCTIONS FOR STATES
-void fn_GAME(void);
 void fn_END(void);
 #endif /* IMPLEMENTATIONS_H_ */
