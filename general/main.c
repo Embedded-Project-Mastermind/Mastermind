@@ -155,6 +155,15 @@ Graphics_Text info_texts_results[]={
 Graphics_Button info_buttons[]={ 
     {STANDARD, {0,0,0,0}, {{""}, false}},
     {STANDARD, {0,0,0,0}, {{""}, false}}};
+//GAME PASSWORD
+Graphics_Circle circles[]={
+   {0, 0, 0, 0},
+   {0, 0, 0, 0},
+   {0, 0, 0, 0},
+   {0, 0, 0, 0},
+   {0, 0, 0, 0},
+   {0, 0, 0, 0}
+};
 //SIZES
 int8_t sizes[ERROR_GR];
 void setSizes() {
