@@ -22,7 +22,7 @@ int16_t pos; //var for manage the tent outputs after having overtaken three tent
 void drawChronology(void);
 void fn_CHRONOLOGY(void);
 void upStick_CHRONOLOGY();
-void downStick_CHRONOLOY();
+void downStick_CHRONOLOGY();
 void rightStick_CHRONOLOGY();
 void updatePos();
 
