@@ -187,6 +187,10 @@ volatile uint32_t timerTicks = 0;
 uint32_t Timer_getValue(void) {
     return timerTicks; // Restituisce il numero di tick del timer
 }
+
+//color selected
+int16_t color_selected;
+
 //BOOLEANS
 volatile bool interruptFlag=false;
 bool exit_gamelogic=false;
