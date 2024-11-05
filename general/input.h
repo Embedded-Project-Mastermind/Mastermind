@@ -1,8 +1,9 @@
 /*
- * input.h
- *
- *  Created on: 27 ott 2024
- *      Author: matteogottardelligmail.com
+ * Title: input.c
+ * Primary Authors: Matteo Gottardelli
+ * Helpers: Alessandro Benassi
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 27 ott 2024
  */
 
 #ifndef INPUT_H
@@ -42,5 +43,6 @@ void configureTimersInput(void);
 uint8_t bitofstatus(uint8_t status);
 void switching(uint8_t status, int8_t port);
 bool atLeastOneTrue(void);
+void triggerPinInterrupt();
 
 #endif // INPUT_H
