@@ -1,8 +1,9 @@
 /*
- * difficulty.h
- *
- *  Created on: 10 ott 2024
- *      Author: matteogottardelligmail.com
+ * Title: difficulty.h
+ * Primary Authors: Alessandro Benassi
+ * Helpers: -
+ * Maintainability: Alessandro Benassi
+ * Date Creation: 10 ott 2024
  */
 
 #ifndef DIFFICULTY_H_
