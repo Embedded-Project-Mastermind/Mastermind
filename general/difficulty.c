@@ -1,8 +1,8 @@
 /*
  * Title: difficulty.c
- * Primary Authors: Alessandro Benassi
+ * Primary Authors: Matteo Gottardelli
  * Helpers: -
- * Maintainability: Alessandro Benassi
+ * Maintainability: Matteo Gottardelli
  * Date Creation: 10 ott 2024
  */
 
