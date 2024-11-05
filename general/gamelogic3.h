@@ -1,9 +1,10 @@
-//
-//  gamelogic3.h
-//  Mastermind
-//
-//  Created by Niccolò Cristoforetti on 29/09/24.
-//
+/*
+ * Title: gamelogic3.h
+ * Primary Authors: Niccolò Cristoforetti
+ * Helpers: -
+ * Maintainability: Niccolò Cristoforetti
+ * Date Creation: 29 set 2024
+ */
 
 #ifndef GAMELOGIC3_H
 #define GAMELOGIC3_H
