@@ -1,8 +1,9 @@
 /*
- * buttons.h
- *
- *  Created on: 11 ott 2024
- *      Author: matteogottardelligmail.com
+ * Title: buttons.c
+ * Primary Authors: Matteo Gottardelli
+ * Helpers: Alessandro Benassi
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 11 ott 2024
  */
 
 #ifndef BUTTONS_H_
