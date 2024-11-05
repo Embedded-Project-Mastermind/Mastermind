@@ -1,8 +1,9 @@
 /*
- * buttons.c
- *
- *  Created on: 11 ott 2024
- *      Author: matteogottardelligmail.com
+ * Title: buttons.c
+ * Primary Authors: Matteo Gottardelli
+ * Helpers: Alessandro Benassi
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 11 ott 2024
  */
 #include "buttons.h"
 #include "msp.h"
@@ -30,9 +31,15 @@ void button_Init() {
     NVIC->ISER[1]|=1<<(PORT3_IRQn & 31);
 }
 void buttonBackAction() {
-    if(is_empty()){ current_state = WAIT; }
-    else{ current_state = ELIMINATE_COLOR; }
-
+    if(is_empty()){
+        current_state = WAIT;
+        rectangleWithText(textRect,STANDARD_COLOR, (Graphics_Text){{"EMPTY"}, false}, SELECTED_COLOR);
+        interruptFlag=false;
+    }
+    else {
+        current_state = ELIMINATE_COLOR;
+        interruptFlag=true;
+    }
 }
 void buttonConfirmAction() {
 
@@ -47,11 +54,19 @@ void buttonConfirmAction() {
                 //funzione per i bottoni
                 if(current_state==WAIT_FULL){
                     current_state = ELABORATE_TENT;
+                    interruptFlag=true;
+                }
+                else {
+                    rectangleWithText(textRect,STANDARD_COLOR, (Graphics_Text){{"NOT FULL"}, false}, SELECTED_COLOR);
+                    interruptFlag=false;
                 }
             } break;
         case CHRONOLOGY: break;
         case END: break;
         //default: exit(1);
+    }
+    if (display_position!=GAME) {
+        interruptFlag=true;
     }
 
 }
