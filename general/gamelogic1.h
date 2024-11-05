@@ -1,9 +1,10 @@
-//
-//  game.h
-//  Mastermind Program
-//
-//  Created by Matteo Gottardelli on 27/09/24.
-//
+/*
+ * Title: gamelogic1.c
+ * Primary Authors: Matteo Gottardelli
+ * Helpers: -
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 27 set 2024
+ */
 #ifndef GAMELOGIC1_H
 #define GAMELOGIC1_H
 
@@ -15,6 +16,7 @@
 #include "joystick.h"
 
 /* Function declarations */
+void emergency();
 void fn_START(void);                          // Function for the START state
 void fn_KEY_WOUT_DOUB(void);                  // Function for the KEY_WOUT_DOUB state
 void fn_KEY_WH_DOUB(void);                     // Function for the KEY_WH_DOUB state
