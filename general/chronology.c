@@ -1,8 +1,8 @@
 /*
- * Title: chronology.c
+ * Title: chronology.h
  * Primary Authors: Niccolò Cristoforetti
  * Helpers: Matteo Gottardelli
- * Maintainability: Matteo Gottardelli, Niccolò Cristoforetti
+ * Maintainability: Niccolò Cristoforetti, Matteo Gottardelli
  * Date Creation: 31 ott 2024
  */
 #include "chronology.h"
