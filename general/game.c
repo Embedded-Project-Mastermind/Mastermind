@@ -1,5 +1,5 @@
 /*
- * Title: doubles.h
+ * Title: game.c
  * Primary Authors: Matteo Gottardelli
  * Helpers: Alessandro Benassi
  * Maintainability: Alessandro Benassi, Matteo Gottardelli
