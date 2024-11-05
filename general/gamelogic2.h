@@ -1,9 +1,10 @@
-//
-//  gamelogic2.h
-//  Mastermind Program
-//
-//  Created by Alessandro Benassi and Daniele Calvo on 29/09/24.
-//
+/*
+ * Title: gamelogic2.h
+ * Primary Authors: Alessandro Benassi, Daniele Calvo
+ * Helpers: Matteo Gottardelli
+ * Maintainability: Alessandro Benassi
+ * Date Creation: 27 set 2024
+ */
 #ifndef GAMELOGIC2_H
 #define GAMELOGIC2_H
 
