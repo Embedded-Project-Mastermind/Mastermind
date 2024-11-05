@@ -1,8 +1,9 @@
 /*
- * tentatives.h
- *
- *  Created on: 10 ott 2024
- *      Author: niccolocristoforetti
+ * Title: tentatives.h
+ * Primary Authors: Niccolò Cristoforetti
+ * Helpers: -
+ * Maintainability: Niccolò Cristoforetti
+ * Date Creation: 10 ott 2024
  */
 
 #ifndef TENTATIVES_H_
@@ -15,10 +16,10 @@
 #define TENT_DIM 32
 
 extern Graphics_Button tent_buttons[];
-Graphics_Button other_things[];
+extern Graphics_Button other_things[];
 
 void handlePressure_TENTATIVE();
-void drawTentatives(void);
+void drawTentatives(int elems);
 void fn_TENTATIVE(void);
 void upStick_TENTATIVE();
 void downStick_TENTATIVE();
