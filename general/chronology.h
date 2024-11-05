@@ -1,103 +1,35 @@
 /*
- * Title: difficulty.c
- * Primary Authors: Alessandro Benassi
- * Helpers: -
- * Maintainability: Alessandro Benassi
+ * Title: chronology.h
+ * Primary Authors: Niccolò Cristoforetti
+ * Helpers: Matteo Gottardelli
+ * Maintainability: Matteo Gottardelli, Niccolò Cristoforetti
  * Date Creation: 31 ott 2024
  */
 
-
-#include "difficulty.h"
+#ifndef CHRONOLOGY_H_
+#define CHRONOLOGY_H_
+#include "graphics.h"
 #include "implementations.h"
+#include "input.h"
 
-Graphics_Text explain[][DIFF_TYPES]={
-     {{"EASY MODE", false},{"MEDIUM MODE", false}, {"HARD MODE", false}},
-     {{"INFO PER COLOR", false},{"INFO GENERAL", false},{"INFO GENERAL", false}},
-     {{"- RIGHT POS", false},{"- RIGHT POS", false},{"- RIGHT POS", false}},
-     {{"- WRONG POS", false}, {"- WRONG POS", false}, {"", false}}
-};
+//extern bool configurationGame;
 
-void drawDifficulty() {
-    int i;
-    for (i=0; i<sizes[DIFFICULTY]; i++) {
-        if (i<sizes[DIFFICULTY]-2) {
-            drawButton(diff_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(diff_buttons, sizes[DIFFICULTY]));
-        }
-        else {
-            drawButton(diff_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, findSelected(diff_buttons, sizes[DIFFICULTY]));
-        }
-    }
-}
-void drawText() {
-    Graphics_Rectangle temp={DIFF_DIM+2, 32+1, 128-1, 96-1};
-    Graphics_setForegroundColor(&grContext, STANDARD_COLOR);
-    Graphics_fillRectangle(&grContext, &temp);
-    Graphics_setForegroundColor(&grContext, SELECTED_COLOR);
-    int8_t i;
-    if (position<sizes[DIFFICULTY]-2) {
-        for (i=0; i<DIFF_TEXT; i++) {//Logic implementation
-            Graphics_drawString(&grContext, (int8_t *)explain[i][position].string, AUTO_STRING_LENGTH, DIFF_DIM+10,  32+10+10*i, explain[i][position].opacity);
-        }
-    }
-    else {
-        int8_t selected=findSelected(diff_buttons, sizes[DIFFICULTY]);
-        if (selected>=0) {
-            for (i=0; i<DIFF_TEXT; i++) {
-                Graphics_drawString(&grContext, (int8_t *)explain[i][(int) selected].string, AUTO_STRING_LENGTH, DIFF_DIM+10,  32+10+10*i, explain[i][selected].opacity);
-            }
-        }
-    }
-}
+extern Graphics_Button other_buttons[];
+Graphics_Button return_to;
+int16_t pos_chronology; //var for manage the tent outputs after having overtaken three tentative
 
-void fn_DIFFICULTY(void) {
-    reset_Screen();
-    initArray(diff_buttons, sizes[DIFFICULTY]);
-    rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
-    drawDifficulty();
-    drawText();
-}
-void upStick_DIFFICULTY() {
-    if(position>0 && position<(sizes[DIFFICULTY]-2)) {
-        handleOut(diff_buttons, position, sizes[DIFFICULTY]);
-        position--;
-        handleIn(diff_buttons, position, sizes[DIFFICULTY]);
-        drawText();
-    }
-    else {
-        if ((position==sizes[DIFFICULTY]-2) || (position==sizes[DIFFICULTY]-1)){
-            handleOut(diff_buttons, position, sizes[DIFFICULTY]);
-            position=sizes[DIFFICULTY]-3;
-            handleIn(diff_buttons, position, sizes[DIFFICULTY]);
-            drawText();
-        }
-    }
-}
-void downStick_DIFFICULTY(){
-    if(position<(sizes[DIFFICULTY]-2)){
-        handleOut(diff_buttons, position, sizes[DIFFICULTY]);
-        position++;
-        handleIn(diff_buttons, position, sizes[DIFFICULTY]);
-        drawText();
-    }
-}
-void leftStick_DIFFICULTY() {
-    if (position==sizes[DIFFICULTY]-1) {
-        handleOut(diff_buttons, position, sizes[DIFFICULTY]);
-        position--;
-        handleIn(diff_buttons, position, sizes[DIFFICULTY]);
-        drawText();
-    }
-}
-void rightStick_DIFFICULTY() {
-    if (position==sizes[DIFFICULTY]-2 && (diff_buttons[sizes[DIFFICULTY-1]].state!=DISABLED)) {
-            handleOut(diff_buttons, position, sizes[DIFFICULTY]);
-            position++;
-            handleIn(diff_buttons, position, sizes[DIFFICULTY]);
-            drawText();
-      }
-}
+typedef struct Graphics_Chronology {
+    Graphics_Button button;
+    Graphics_Rectangle num_rect;
+    Graphics_Text num;
+} Graphics_Chronology;
+extern Graphics_Chronology chronology[];
+void drawChronology(void);
+void fn_CHRONOLOGY(void);
+void upStick_CHRONOLOGY();
+void downStick_CHRONOLOGY();
+void rightStick_CHRONOLOGY();
+void updatePos();
 
-void handlePressure_DIFFICULTY() {
-    game.difficulty=diff_buttons[position].text.string[0];
-    handleSelection(diff_buttons);
-}
+
+#endif /* CHRONOLOGY_H_ */
