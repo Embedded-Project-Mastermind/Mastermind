@@ -1,12 +1,18 @@
 /*
- * tentatives.c
- *
- *  Created on: 10 ott 2024
- *      Author: niccolocristoforetti
+ * Title: tentatives.c
+ * Primary Authors: Niccolò Cristoforetti
+ * Helpers: -
+ * Maintainability: Niccolò Cristoforetti
+ * Date Creation: 10 ott 2024
  */
 #include "tentatives.h"
 #include "implementations.h"
 #include "graphics.h"
+
+Graphics_Button other_things[]={
+    {DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TENT", false}},
+    {DISABLED, {1, 32+2, TENT_DIM-1, 32+TENT_DIM-1}, {"", false}}
+};
 
 /***************************************
 *
@@ -17,17 +23,13 @@
 *
 ***************************************/
 
-void drawTentatives(void) {
-    Graphics_Button other_things[]={
-        {DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TENT", false}},
-        {DISABLED, {1, 32+2, TENT_DIM-1, 32+TENT_DIM-1}, {"", false}}
-    };
+void drawTentatives(int elems) {
     int i;
     for (i=0; i<2; i++) {
         drawButton(other_things[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(tent_buttons, sizes[TENTATIVE]));
     }
-    for (i=0; i<sizes[TENTATIVE]; i++) {
-           if (i<sizes[TENTATIVE]-2) {
+    for (i=0; i<elems; i++) {
+           if (i<elems-2) {
                drawButton(tent_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(tent_buttons, sizes[TENTATIVE]));
            }
            else {
@@ -46,14 +48,13 @@ void drawTentatives(void) {
 *
 ***************************************/
 
-
 void fn_TENTATIVE(void) {
     reset_Screen();
     //DRAW FUNCTION
     reset_Screen();
     initArray(tent_buttons, sizes[TENTATIVE]);
-    defaultDraw();
-    drawTentatives();
+    rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
+    drawTentatives(sizes[TENTATIVE]);
     //FOLLOWING POSITION
 }
 
