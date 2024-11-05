@@ -1,8 +1,9 @@
 /*
- * chronology.h
- *
- *  Created on: 31 ott 2024
- *      Author: niccolocristoforetti
+ * Title: buttons.c
+ * Primary Authors: Niccolò Cristoforetti
+ * Helpers: Matteo Gottardelli
+ * Maintainability: Matteo Gottardelli, Niccolò Cristoforetti
+ * Date Creation: 31 ott 2024
  */
 
 #ifndef CHRONOLOGY_H_
@@ -13,12 +14,16 @@
 
 //extern bool configurationGame;
 
-extern Graphics_Button chronology_buttons[];
 extern Graphics_Button other_buttons[];
-extern Graphics_Button tent_number[];
 Graphics_Button return_to;
-int16_t pos; //var for manage the tent outputs after having overtaken three tentative
+int16_t pos_chronology; //var for manage the tent outputs after having overtaken three tentative
 
+typedef struct Graphics_Chronology {
+    Graphics_Button button;
+    Graphics_Rectangle num_rect;
+    Graphics_Text num;
+} Graphics_Chronology;
+extern Graphics_Chronology chronology[];
 void drawChronology(void);
 void fn_CHRONOLOGY(void);
 void upStick_CHRONOLOGY();
