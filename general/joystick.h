@@ -1,8 +1,9 @@
 /*
- * joystick.h
- *
- *  Created on: 10 ott 2024
- *      Author: matteogottardelligmail.com
+ * Title: joystick.h
+ * Primary Authors: Matteo Gottardelli
+ * Helpers: -
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 27 ott 2024
  */
 
 #ifndef JOYSTICK_H_
