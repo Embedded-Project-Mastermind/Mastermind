@@ -1,9 +1,11 @@
 /*
- * game.h
- *
- *  Created on: 27 ott 2024
- *      Author: matteogottardelligmail.com
+ * Title: game.h
+ * Primary Authors: Matteo Gottardelli
+ * Helpers: Alessandro Benassi
+ * Maintainability: Alessandro Benassi, Matteo Gottardelli
+ * Date Creation: 31 ott 2024
  */
+
 
 #ifndef GAME_H_
 #define GAME_H_
