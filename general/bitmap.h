@@ -1,3 +1,10 @@
+/*
+ * Title: buttons.c
+ * Primary Authors: Niccolò Cristoforetti
+ * Helpers: Matteo Gottardelli
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 10 ott 2024
+ */
 #ifndef BITMAP_H
 #define BITMAP_H
 
