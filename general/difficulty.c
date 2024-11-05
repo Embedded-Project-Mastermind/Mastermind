@@ -1,8 +1,9 @@
 /*
- * difficulty.c
- *
- *  Created on: 10 ott 2024
- *      Author: matteogottardelligmail.com
+ * Title: difficulty.c
+ * Primary Authors: Alessandro Benassi
+ * Helpers: -
+ * Maintainability: Alessandro Benassi
+ * Date Creation: 10 ott 2024
  */
 
 
@@ -51,7 +52,7 @@ void drawText() {
 void fn_DIFFICULTY(void) {
     reset_Screen();
     initArray(diff_buttons, sizes[DIFFICULTY]);
-    defaultDraw();
+    rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
     drawDifficulty();
     drawText();
 }
