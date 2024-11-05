@@ -1,5 +1,5 @@
 /*
- * Title: buttons.c
+ * Title: bitmap.h
  * Primary Authors: Niccolò Cristoforetti
  * Helpers: Matteo Gottardelli
  * Maintainability: Matteo Gottardelli
