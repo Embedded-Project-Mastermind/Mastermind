@@ -1,11 +1,13 @@
-//
-//  gamelogic3.c
-//  Mastermind
-//
-//  Created by Niccolò Cristoforetti on 29/09/24.
-//
+/*
+ * Title: gamelogic3.c
+ * Primary Authors: Niccolò Cristoforetti
+ * Helpers: -
+ * Maintainability: Niccolò Cristoforetti
+ * Date Creation: 29 set 2024
+ */
 
 #include "gamelogic3.h"
+#include "game.h"
 
 //Function that checks if the sequence is a tenctative or a correction. Returns a int for set the right index in the chronology
 int16_t checkIfTenctOrCorrection(int8_t c){
@@ -129,7 +131,6 @@ bool winCondition(void){
 
 //Function for ELABORATE_TENT state
 void fn_ELABORATE_TENT(void){
-    printf("Sono arrivato in elaborate tent");
     insertInChronology(tentative.seq_user);  //Insert sequence in chronology
     current_state = INCREMENT_TENT;  // Transition to the INCREMENT_TENT state;
 }
@@ -177,6 +178,7 @@ void fn_DIFFICULT_MODE(void){
 void fn_ELABORATE_RESULT(void){
     insertInChronology(tentative.seq_user);  //Insert corrections in chronology
     printLastTentativeInChronology();  //Print the complete output of the last tentative
+    displayResultsOnScreen();
     current_state = winCondition() ? WIN : RESET_TENT; // Transition to the next state based on the win condition
 }
 
