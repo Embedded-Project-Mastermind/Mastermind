@@ -1,8 +1,9 @@
 /*
- * chronology.h
- *
- *  Created on: 10 ott 2024
- *      Author: niccolocristoforetti
+ * Title: start.c
+ * Primary Authors: Niccolò Cristoforetti
+ * Helpers: Matteo Gottardelli
+ * Maintainability: Niccolò Cristoforetti
+ * Date Creation: 10 ott 2024
  */
 
 #ifndef START_H_
