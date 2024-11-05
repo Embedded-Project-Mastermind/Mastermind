@@ -1,10 +1,11 @@
 /*
- * graphics.h
- *
- *  Created on: 5 ott 2024
- *      Author: matteogottardelligmail.com
- *
+ * Title: graphics.h
+ * Primary Authors: Alessandro Benassi, Daniele Calvo, Matteo Gottardelli, Niccolò Cristoforetti
+ * Helpers: -
+ • Maintainability: Alessandro Benassi, Daniele Calvo, Matteo Gottardelli, Niccolò Cristoforetti
+ * Date Creation: 5 ott 2024
  */
+
 
 #ifndef GRAPHICS_H_
 #define GRAPHICS_H_
