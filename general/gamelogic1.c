@@ -1,11 +1,14 @@
-//
-//  game.c
-//  Mastermind Program
-//
-//  Created by Matteo Gottardelli on 27/09/24.
-//
+/*
+ * Title: gamelogic1.c
+ * Primary Authors: Matteo Gottardelli
+ * Helpers: -
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 27 set 2024
+ */
 #include "gamelogic1.h"
 #include "implementations.h"
+#include "game.h"
+#include "chronology.h"
 int i, j;
 void emergency() {
     deallocate_Char(game.seq_to_guess); // Deallocate sequence memory
@@ -162,6 +165,8 @@ int8_t int_Conversion_to_Char(int16_t index) {
         case 4: c = 'Y'; break; // Yellow
         case 5: c = 'P'; break; // Purple
         case 6: c = 'C'; break; // Cyan
+        case 7: c = 'O'; break; // Orange
+        case 8: c = 'W'; break; //White
         default: exit(1); // Exit on error
     }
     return c; // Return the character representation
@@ -194,12 +199,18 @@ void resetTentative(void) {
     tentative.dim = game.dim; // Set dimension for user's sequence
     position=0;
     allocate_in_Heap_Char(&tentative.seq_user, 1, game.dim); // Allocate memory for user's guesses
+    for (i=0; i<game.dim; i++) {
+        circles[i].color=STANDARD_COLOR;
+    }
+    pos_chronology=0;
+    fn_GAME();
 }
 
 /* Function for the START state */
+//ABILITATE initGame HERE and disable in fn_GAME
 void fn_START(void) {
     //initGame(game.dim, game.difficulty, game.doubles, game.tentatives); // Initialize the game
-    initGame(4, 'A', true, 7); // Initialize the game
+    //initGame(3, 'A', true, 7); // Initialize the game
     current_state = game.doubles ? KEY_WH_DOUB : KEY_WOUT_DOUB; // Transition to the next state based on doubles flag
 }
 
