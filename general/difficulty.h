@@ -1,5 +1,5 @@
 /*
- * Title: difficulty.c
+ * Title: difficulty.h
  * Primary Authors: Matteo Gottardelli
  * Helpers: -
  * Maintainability: Matteo Gottardelli
