@@ -1,8 +1,9 @@
 /*
- * info.h
- *
- *  Created on: 10 Oct 2024
- *      Author: calvo
+ * Title: info.h
+ * Primary Authors: Daniele Calvo
+ * Helpers: Matteo Gottardelli
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 5 ott 2024
  */
 
 #ifndef INFO_H_
