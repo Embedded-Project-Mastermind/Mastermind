@@ -1,7 +1,7 @@
 /*
  * Title: implementations.c
  * Primary Authors: Matteo Gottardelli
- * Helpers: -
+ * Helpers: Niccolò Cristoforetti
  * Maintainability: Matteo Gottardelli
  * Date Creation: 5 ott 2024
  */
