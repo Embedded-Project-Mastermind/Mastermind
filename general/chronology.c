@@ -1,14 +1,16 @@
 /*
- * chronology.c
- *
- *  Created on: 31 ott 2024
- *      Author: niccolocristoforetti
+ * Title: buttons.c
+ * Primary Authors: Niccolò Cristoforetti
+ * Helpers: Matteo Gottardelli
+ * Maintainability: Matteo Gottardelli, Niccolò Cristoforetti
+ * Date Creation: 31 ott 2024
  */
 #include "chronology.h"
 #include "implementations.h"
 #include "graphics.h"
 #include "fsm.h"
-
+#include "joystick.h"
+#include "game.h"
 
 /***************************************
 *
@@ -23,11 +25,11 @@ void drawChronology(void) {
     Graphics_Button return_to={STANDARD, {128-16+1, 1, 128-1, 16-1}, {"->", false}};
     int i;
     for (i=0; i<sizes[CHRONOLOGY]; i++) {
-        drawButton(chronology_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(chronology_buttons, sizes[CHRONOLOGY]));
-        drawButton(tent_number[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(chronology_buttons, sizes[CHRONOLOGY]));
+        drawButton(chronology[i].button, STANDARD_COLOR, SELECTED_COLOR, -1);
+        rectangleWithText(chronology[i].num_rect, SELECTED_COLOR, chronology[i].num, STANDARD_COLOR);
     }
     for (i=0; i<2; i++) {
-        drawButton(other_buttons[i], STANDARD_COLOR, SELECTED_COLOR, findSelected(other_buttons, 2));
+        drawButton(other_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, -1);
     }
     drawButton(return_to, GRAPHICS_COLOR_CYAN, STANDARD, findSelected(&return_to, 1));
 }
@@ -44,19 +46,15 @@ void drawChronology(void) {
 
 
 void fn_CHRONOLOGY(void) {
-    pos=0;
-    reset_Screen();
     //DRAW FUNCTION
     reset_Screen();
-    chronology_buttons[position].state=FOCUSED;
-    defaultDraw();
-    drawChronology();
-    //FOLLOWING POSITION
-    //OTHER_BUTTONS COLOR
     if(game.count_tent-1>=3){
-        other_buttons[1].state=SELECTED;
+        other_buttons[1].state=STANDARD;
     }
+    chronology[position].button.state=FOCUSED;
+    rectangleWithText((Graphics_Rectangle){upperRect.xMin, upperRect.yMin, upperRect.xMax, upperRect.yMax-10}, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
     updatePos();
+    drawChronology();
 }
 
 /***************************************
@@ -71,44 +69,52 @@ void fn_CHRONOLOGY(void) {
 
 void upStick_CHRONOLOGY() {
     if(position!=0) {
-        handleOut(chronology_buttons, position, sizes[CHRONOLOGY]);
+        chronology[position].button.state=STANDARD;
         position--;
-        handleIn(chronology_buttons, position, sizes[CHRONOLOGY]);
+        chronology[position].button.state=FOCUSED;
     }
-    else if(pos>0){
-        pos--;
-        if(pos==0){
+    else if(position==0 && other_buttons[0].state==STANDARD){
+        pos_chronology--;
+        position=0;
+        if(pos_chronology==0){
             other_buttons[0].state=DISABLED;
+        }
+        if(game.count_tent-1>pos_chronology+sizes[CHRONOLOGY]){
+            other_buttons[1].state=STANDARD;
         }
         //Modifica le schermate precedenti
         updatePos();
-
     }
 }
 void downStick_CHRONOLOGY() {
-    if(position!=2) {
-        handleOut(chronology_buttons, position, sizes[CHRONOLOGY]);
+    if(position+1<game.count_tent && position!=sizes[CHRONOLOGY]) {
+        chronology[position].button.state=STANDARD;
         position++;
-        handleIn(chronology_buttons, position, sizes[CHRONOLOGY]);
+        chronology[position].button.state=FOCUSED;
     }
-    else if(other_buttons[1].state==SELECTED) {
-        pos++;
-        if(game.count_tent-1<=pos+sizes[CHRONOLOGY]){
+    else if(position==sizes[CHRONOLOGY]-1 && other_buttons[1].state==STANDARD) {
+        pos_chronology++;
+        position=sizes[CHRONOLOGY]-1;
+        if(game.count_tent-1<=pos_chronology+sizes[CHRONOLOGY]){
             other_buttons[1].state=DISABLED;
+        }
+        if(pos_chronology>0) {
+            other_buttons[0].state=STANDARD;
         }
         //Modifica le schermate precedenti
         updatePos();
-
     }
 }
 void rightStick_CHRONOLOGY() {
     display_position--;
+    configurationGame=true;
+    delay_ms(100);
 }
 /***************************************
 *
 * updatePos()
-* Update the number of tent for each
-* space
+* they manage what to do when the user
+* moves the stick
 * no input
 * no output
 *
@@ -117,6 +123,8 @@ void rightStick_CHRONOLOGY() {
 void updatePos(){
     char buffer[sizeof(long)*8+1][2];
     for(i=0; i<sizes[CHRONOLOGY]; i++){
-          tent_number[i].text.string=(int8_t*)ltoa((long)game.count_tent-i-pos, buffer[0], 10);
+        if(game.count_tent-i-pos_chronology>0) {
+           chronology[i].num.string=(int8_t*)ltoa((long)(game.count_tent-i-pos_chronology), buffer[0], 10);
+        }
     }
 }
