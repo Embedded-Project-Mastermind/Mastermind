@@ -1,9 +1,11 @@
 /*
- * fsm.h
- *
- *  Created on: 5 ott 2024
- *      Author: matteogottardelligmail.com
+ * Title: fsm.h
+ * Primary Authors: Alessandro Benassi, Daniele Calvo, Matteo Gottardelli, Niccolò Cristoforetti
+ * Helpers: -
+ • Maintainability: Alessandro Benassi, Daniele Calvo, Matteo Gottardelli, Niccolò Cristoforetti
+ * Date Creation: 5 ott 2024
  */
+
 #include "stdio.h"
 #include "implementations.h"
 #include "graphics.h"
@@ -119,20 +121,17 @@ Graphics_Button tent_buttons[]={  //TENTATIVE state part
 };
 Graphics_Button text_no_tent={DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TRIES", false}};
 Graphics_Button start_button={FOCUSED, {32, 96, 96, 112}, {"START", false}};
-Graphics_Button chronology_buttons[]={  //CHRONOLOGY state part
-    {STANDARD, {1, 24+1, 128-1, 56-1}, {"", false}},
-    {STANDARD, {1, 56+1, 128-1, 88-1}, {"", false}},
-    {STANDARD, {1, 88+1, 128-1, 120-1}, {"", false}}
+Graphics_Chronology chronology[]={
+      {{STANDARD, {1, 24+1, 128-1, 56-1}, {"", false}}, {1, 24+1, 16-1, 56-1}, {"", false}},
+      {{STANDARD, {1, 56+1, 128-1, 88-1}, {"", false}}, {1, 56+1, 16-1, 88-1}, {"", false}},
+      {{STANDARD, {1, 88+1, 128-1, 120-1},{"", false}}, {1, 88+1, 16-1, 120-1}, {"", false}}
 };
+
 Graphics_Button other_buttons[]={
     {DISABLED, {1, 16+1, 128-1, 24-1}, {"", false}},
     {DISABLED, {1, 120+1, 128-1, 128-1}, {"", false}}
 };
-Graphics_Button tent_number[]={
-    {DISABLED, {1, 24+1, 16-1, 40-1}, {"", false}},
-    {DISABLED, {1, 56+1, 16-1, 72-1}, {"", false}},
-    {DISABLED, {1, 88+1, 16-1, 104-1}, {"", false}}
-};
+
 //Daniele Calvo's code
 Graphics_Text doubles_text={{"Doubles"}, false};  //DOUBLE state part
 Graphics_Text doubles_description[]={ 
@@ -182,7 +181,7 @@ void setSizes() {
             case DOUBLES: sizes[i]=ARRAY_SIZE(doubles_buttons); break;
             case INFO: sizes[i]=ARRAY_SIZE(info_buttons); break;
             case GAME:  sizes[i]=1; break;
-            case CHRONOLOGY: sizes[i]=ARRAY_SIZE(chronology_buttons); break;
+            case CHRONOLOGY: sizes[i]=ARRAY_SIZE(chronology); break;
             case END: sizes[i]=1; break;
             default: exit(1);
         }
@@ -268,6 +267,14 @@ int main(void) {
     elaborateOutput();
     P2->IFG &= ~status;
 }*/
+void PORT1_IRQHandler() {
+    uint8_t status=P1->IFG;
+    P1->IFG &= ~status;
+    printf("Port 1");
+    fflush(stdout);
+    interruptFlag=true;
+    ADC14_disableConversion();
+}
 void PORT3_IRQHandler(void) {
     bool internalFlag=false;
     if (P3->IFG & BIT0) {
@@ -468,7 +475,6 @@ void TA0_N_IRQHandler(){
                     if(overflow_counter == 6 && configurationGame){ //6 =  1 sec
                         elaborateOutput();
                         resetArrayInput();
-                        interruptFlag=true;
                         // clear the variable
                         overflow_counter = 0;
                         ADC14_disableConversion();
@@ -496,7 +502,17 @@ void ADC14_IRQHandler(void)
             x=resultsBuffer[0];
             y=resultsBuffer[1];
             ADC14_clearInterruptFlag(ADC_INT1);
-            NavigateMenu(findDirection(x, y));
+            Move direction=findDirection(x, y);
+            NavigateMenu(direction);
+            if(direction!=CENTER) {
+                interruptFlag=true;
+                if(display_position==GAME || display_position==CHRONOLOGY) {
+                    triggerPinInterrupt();
+                }
+            }
+            else {
+                ADC_StartConversion();
+            }
     }
     releaseMutex();
     int i;
