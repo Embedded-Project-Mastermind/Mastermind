@@ -1,5 +1,5 @@
 /*
- * Title: input.c
+ * Title: input.h
  * Primary Authors: Matteo Gottardelli
  * Helpers: Alessandro Benassi
  * Maintainability: Matteo Gottardelli
