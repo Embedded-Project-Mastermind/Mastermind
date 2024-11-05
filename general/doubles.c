@@ -1,5 +1,5 @@
 /*
- * Title: doubles.h
+ * Title: doubles.c
  * Primary Authors: Daniele Calvo
  * Helpers: Alessandro Benassi
  * Maintainability: Matteo Gottardelli
