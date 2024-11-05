@@ -1,8 +1,9 @@
 /*
- * implementations.c
- *
- *  Created on: 5 ott 2024
- *      Author: matteogottardelligmail.com
+ * Title: implementations.c
+ * Primary Authors: Matteo Gottardelli
+ * Helpers: -
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 5 ott 2024
  */
 #include "implementations.h"
 #include "graphics.h"
@@ -100,21 +101,15 @@ void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color, 
     Graphics_drawStringCentered(&grContext, (int8_t *) button.text.string, AUTO_STRING_LENGTH, getCenteredX(button.rect),  getCenteredY(button.rect), button.text.opacity);
 
 }
-void defaultDraw(void) {
-    //START LABEL
-    if(display_position==DIMENSION || display_position==DIFFICULTY || display_position==TENTATIVE || display_position==DOUBLES || display_position==INFO || display_position==GAME || display_position==CHRONOLOGY){
-        Graphics_drawRectangle(&grContext, &upperRect);
-        Graphics_setForegroundColor(&grContext, FILL_UPPER_RECT);
-        if(display_position==CHRONOLOGY){
-            Graphics_fillRectangle(&grContext, &upperRectCH);
-            Graphics_setForegroundColor(&grContext, GRAPHICS_COLOR_WHITE); //Manual
-            Graphics_drawStringCentered(&grContext, (int8_t *)labelText.string, AUTO_STRING_LENGTH, getCenteredX(upperRectCH),  getCenteredY(upperRectCH), labelText.opacity);
-        }else{
-            Graphics_fillRectangle(&grContext, &upperRect);
-            Graphics_setForegroundColor(&grContext, GRAPHICS_COLOR_WHITE); //Manual
-            Graphics_drawStringCentered(&grContext, (int8_t *)labelText.string, AUTO_STRING_LENGTH, getCenteredX(upperRect),  getCenteredY(upperRect), labelText.opacity);
-        }
+
+void rectangleWithText(Graphics_Rectangle rect, int32_t colorRect, Graphics_Text text, int32_t colorText) {
+    if(colorRect!=-1) {
+        Graphics_drawRectangle(&grContext, &rect);
+        Graphics_setForegroundColor(&grContext, colorRect);
+        Graphics_fillRectangle(&grContext, &rect);
     }
+    Graphics_setForegroundColor(&grContext, colorText); //Manual
+    Graphics_drawStringCentered(&grContext, (int8_t *)text.string, AUTO_STRING_LENGTH, getCenteredX(rect),  getCenteredY(rect), text.opacity);
 }
 void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
     if(display_position==GAME || display_position==CHRONOLOGY){
