@@ -1,3 +1,10 @@
+/*
+ * Title: input.c
+ * Primary Authors: Matteo Gottardelli
+ * Helpers: Alessandro Benassi
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 5 ott 2024
+ */
 #include "input.h"
 #include "fsm.h"
 #include "buttons.h"
@@ -26,6 +33,9 @@ void setArrayInput(int val) {
 void configurePortsInput(void) {
     //P4.4 ADC, P6.0 ADC, P5.0
     int port;
+    P1->DIR &= ~BIT1;
+    P1->REN |= BIT1;
+    P1->OUT |= BIT1;
     for (port=GPIO_PORT_P3; port<=GPIO_PORT_P6; port++) {
         if (port!=GPIO_PORT_P6 && port!=GPIO_PORT_P5) {
             GPIO_setAsInputPinWithPullUpResistor(port, GPIO_PIN0);
@@ -62,10 +72,10 @@ void configurePortsInput(void) {
 }
 
 void configureInterruptPortInput(void) {
-    /*P1->IES = 0xFF;
+    P1->IES = 0xFF;
     P1->IE = 0xFF;
     P1->IFG = 0x00;
-    NVIC->ISER[1] |= 1 << (PORT1_IRQn & 31);*/
+    NVIC->ISER[1] |= 1 << (PORT1_IRQn & 31);
     /*P3->IES = 0xFF;
     P3->IE = 0xFF;
     P3->IFG = 0x00;
@@ -87,6 +97,11 @@ void configureInterruptPortInput(void) {
     P6->IE = 0xFF;
     P6->IFG = 0x00;
     NVIC->ISER[1] |= 1 << (PORT6_IRQn & 31);
+}
+
+void triggerPinInterrupt() {
+    P1->IFG |= BIT1;
+    __NVIC_SetPendingIRQ(PORT1_IRQn);
 }
 
 int counterTrue(void) {
@@ -129,34 +144,34 @@ void elaborateOutput(void) {
            //case (P2_D*BYTE+6): break; //P2.6
            //case (P2_D*BYTE+7): break; //P2.7
            case (P3_D*BYTE+0): elaborateColor(1); break; //P3.0
-           case (P3_D*BYTE+1): elaborateColor(1); break; //P3.1
+           //case (P3_D*BYTE+1): elaborateColor(1); break; //P3.1
            case (P3_D*BYTE+2): elaborateColor(1); break; //P3.2
            case (P3_D*BYTE+3): elaborateColor(7); break; //P3.3
            case (P3_D*BYTE+4): elaborateColor(7); break; //P3.4
            case (P3_D*BYTE+5): buttonConfirmAction(); break; //P3.5
-           case (P3_D*BYTE+6): elaborateColor(7); break; //P3.6
+           case (P3_D*BYTE+6): elaborateColor(4); break; //P3.6
            //case (P3_D*BYTE+7): break; //P3.7
-           case (P4_D*BYTE+0): elaborateColor(4); break; //P4.0
-           case (P4_D*BYTE+1): elaborateColor(4); break; //P4.1
-           case (P4_D*BYTE+2): elaborateColor(4); break; //P4.2
+           //case (P4_D*BYTE+0): elaborateColor(4); break; //P4.0
+           //case (P4_D*BYTE+1): elaborateColor(4); break; //P4.1
+           //case (P4_D*BYTE+2): elaborateColor(4); break; //P4.2
            //case (P4_D*BYTE+3): elaborateColor('G'); break; //P4.3
            //case (P4_D*BYTE+4): break; //P4.4
-           case (P4_D*BYTE+5): elaborateColor(2); break; //P4.5
+           case (P4_D*BYTE+5): elaborateColor(4); break; //P4.5
            case (P4_D*BYTE+6): elaborateColor(2); break; //P4.6
            case (P4_D*BYTE+7): elaborateColor(2); break; //P4.7
            //case (P5_D*BYTE+0): break; //P5.0
            case (P5_D*BYTE+1): buttonBackAction(); break;  //P5.1
            case (P5_D*BYTE+2): elaborateColor(3); break; //P5.2
            case (P5_D*BYTE+3): elaborateColor(3); break; //P5.3
-           case (P5_D*BYTE+4): elaborateColor(3); break; //P5.4
-           case (P5_D*BYTE+5): elaborateColor(6); break; //P5.5
-           case (P5_D*BYTE+6): elaborateColor(6); break; //P5.6
-           case (P5_D*BYTE+7): elaborateColor(6); break; //P5.7
+           case (P5_D*BYTE+4): elaborateColor(6); break; //P5.4
+           //case (P5_D*BYTE+5): elaborateColor(6); break; //P5.5 TIMER A0
+           case (P5_D*BYTE+6): elaborateColor(8); break; //P5.6
+           //case (P5_D*BYTE+7): elaborateColor(6); break; //P5.7
            //case (P6_D*BYTE+0): break; //P6.0
-           case (P6_D*BYTE+1): elaborateColor(8); break; //P6.1
-           case (P6_D*BYTE+2): elaborateColor(8); break; //P6.2
-           case (P6_D*BYTE+3): elaborateColor(8); break; //P6.3
-           case (P6_D*BYTE+4): elaborateColor(5); break; //P6.4
+           //case (P6_D*BYTE+1): elaborateColor(8); break; //P6.1
+           //case (P6_D*BYTE+2): elaborateColor(8); break; //P6.2
+           //case (P6_D*BYTE+3): elaborateColor(8); break; //P6.3
+           case (P6_D*BYTE+4): elaborateColor(8); break; //P6.4
            case (P6_D*BYTE+5): elaborateColor(5); break; //P6.5
            case (P6_D*BYTE+6): elaborateColor(5); break; //P6.6
           // case (P6_D*BYTE+7): elaborateColor(5); break; //P6.7
