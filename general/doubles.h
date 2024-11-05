@@ -1,8 +1,9 @@
 /*
- * doubles.h
- *
- *  Created on: 10 Oct 2024
- *      Author: calvo
+ * Title: doubles.h
+ * Primary Authors: Daniele Calvo
+ * Helpers: Alessandro Benassi
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 10 ott 2024
  */
 
 #ifndef DOUBLES_H_
