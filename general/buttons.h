@@ -1,5 +1,5 @@
 /*
- * Title: buttons.c
+ * Title: buttons.h
  * Primary Authors: Matteo Gottardelli
  * Helpers: Alessandro Benassi
  * Maintainability: Matteo Gottardelli
