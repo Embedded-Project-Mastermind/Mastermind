@@ -128,7 +128,14 @@ void rightStick_DIFFICULTY() {
             drawText();
       }
 }
-
+/***************************************
+*
+* handlePressure_DOUBLES() - manages the changes of
+* our difficulty variable
+* no input
+* no output
+*
+***************************************/
 void handlePressure_DIFFICULTY() {
     game.difficulty=diff_buttons[position].text.string[0];
     handleSelection(diff_buttons);
