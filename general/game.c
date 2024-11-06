@@ -92,7 +92,7 @@ void drawCircles() {
 void leftStick_GAME() {
     if (game.count_tent!=0){
         display_position++;
-        configurationGame=false;z
+        configurationGame=false;
         delay_ms(100);
     }
 }
