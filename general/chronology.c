@@ -51,6 +51,7 @@ void drawChronology(void) {
 
 
 void fn_CHRONOLOGY(void) {
+    int i;
     //DRAW FUNCTION
     reset_Screen();
     if(game.count_tent-1>=3){
@@ -85,18 +86,19 @@ int16_t char_Conversion_to_Int(int8_t index) {
 }
 
 void populateChronologyCircles(int16_t offset, int16_t radius, int16_t value, int16_t index){
-    for (i=0; i<game.dim; i++) {
-        chronology[value].chrono_circles[i].radius=radius;
-        if(i<3){
-            chronology[value].chrono_circles[i].x= offset+(58/3)*(i+1);
-            chronology[value].chrono_circles[i].y=32*value+35;
+    int j;
+    for (j=0; j<game.dim; j++) {
+        chronology[value].chrono_circles[j].radius=radius;
+        if(j<3){
+            chronology[value].chrono_circles[j].x= offset+(58/3)*(j+1);
+            chronology[value].chrono_circles[j].y=32*value+35;
         } else {
-            chronology[value].chrono_circles[i].x= offset+(58/3)*(i-2);
-                        chronology[value].chrono_circles[i].y=32*value+45;
+            chronology[value].chrono_circles[j].x= offset+(58/3)*(j-2);
+                        chronology[value].chrono_circles[j].y=32*value+45;
         }
 
-        int16_t tmp = char_Conversion_to_Int(game.chronology[index*game.dim*2+i]);
-        chronology[value].chrono_circles[i].color=selectColor(tmp);
+        int16_t tmp = char_Conversion_to_Int(game.chronology[index*game.dim*2+j]);
+        chronology[value].chrono_circles[j].color=selectColor(tmp);
     }
 }
 
@@ -131,7 +133,7 @@ void upStick_CHRONOLOGY() {
     }
 }
 void downStick_CHRONOLOGY() {
-    if(position+1<game.count_tent && position!=sizes[CHRONOLOGY]) {
+    if(position<sizes[CHRONOLOGY]-1) {
         chronology[position].button.state=STANDARD;
         position++;
         chronology[position].button.state=FOCUSED;
@@ -139,6 +141,7 @@ void downStick_CHRONOLOGY() {
     else if(position==sizes[CHRONOLOGY]-1 && other_buttons[1].state==STANDARD) {
         pos_chronology++;
         position=sizes[CHRONOLOGY]-1;
+        chronology[position].button.state=FOCUSED;
         if(game.count_tent-1<=pos_chronology+sizes[CHRONOLOGY]){
             other_buttons[1].state=DISABLED;
         }
@@ -152,7 +155,6 @@ void downStick_CHRONOLOGY() {
 void rightStick_CHRONOLOGY() {
     display_position--;
     configurationGame=true;
-    delay_ms(100);
 }
 /***************************************
 *
@@ -165,18 +167,17 @@ void rightStick_CHRONOLOGY() {
 ***************************************/
 
 void updatePos(){
+        int i, j;
         for (i=0; i<sizes[CHRONOLOGY]; i++){
             if (chronology[i].button.state!=DISABLED) {
                 int16_t result=game.count_tent-i-pos_chronology;
                 if(result>0) {
-                    populateChronologyCircles(BASIC_OFFSET,RADIUS,i, result-1);
                     char buffer[20];
                     char* str=ltoa((long)result, buffer, 10);
                     chronology[i].num.string = (int8_t*)malloc(strlen(str) + 1);
                     if (chronology[i].num.string == NULL) {
                         printf("Memory allocation failed!\n");
                         emergency();
-
                         exit(1);
                     }
                     for (j=0; str[j]!='\0'; j++){
@@ -185,6 +186,7 @@ void updatePos(){
                     chronology[i].num.string[strlen(str)] = '\0';
 
                     printf("Chronology[%d] num.string: %s %s\n", i, str, chronology[i].num.string);
+                    populateChronologyCircles(BASIC_OFFSET,RADIUS,i, result-1);
                 }
             }
         }
