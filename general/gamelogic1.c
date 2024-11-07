@@ -196,6 +196,7 @@ void continue_Key_Decryption(int16_t* sequence) {
 /* Reset the user's tentative state */
 void resetTentative(void) {
     tentative.count = 0; // Reset attempt count
+    pos_chronology = 0;  // Reset chronology position count
     tentative.dim = game.dim; // Set dimension for user's sequence
     position=0;
     allocate_in_Heap_Char(&tentative.seq_user, 1, game.dim); // Allocate memory for user's guesses
