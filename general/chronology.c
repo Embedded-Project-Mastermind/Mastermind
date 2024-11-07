@@ -68,7 +68,7 @@ void fn_CHRONOLOGY(void) {
 }
 
 
-int16_t char_Conversion_to_Int(char index) {
+int16_t char_Conversion_to_Int(int8_t index) {
     int16_t c=0;
     switch (index) {
         case 'R': c = 1; break; // Red
