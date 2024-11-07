@@ -24,6 +24,7 @@
 #include "gamelogic2.h"
 #include "gamelogic3.h"
 #include "chronology.h"
+#include "end.h"
 
 typedef struct Graphics_StateMachine {
     Graphics_State state; //Current Graphics State
@@ -121,8 +122,10 @@ Graphics_Button tent_buttons[]={  //TENTATIVE state part
     {STANDARD, {0, 0, 0, 0}, {"", false}}
 };
 Graphics_Button text_no_tent={DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TRIES", false}};
-Graphics_Button start_button={FOCUSED, {32, 96, 96, 112}, {"START", false}};
-Graphics_Chronology chronology[]={
+Graphics_Button start_button={FOCUSED, {32, 96, 96, 112}, {"START", false}};  //START_GR state part
+Graphics_Button gameover_button={FOCUSED, {24, 96, 104, 112}, {"GAMEOVER!", false}}; //END state part
+Graphics_Button win_button={FOCUSED, {32, 96, 96, 122}, {"YOU WIN", false}};
+Graphics_Chronology chronology[]={  //CHRONOLOGY state part
       {{DISABLED, {1, 24+1, 128-1, 56-1}, {"", false}}, {1, 24+1, 16-1, 56-1}, {"", false}},
       {{DISABLED, {1, 56+1, 128-1, 88-1}, {"", false}}, {1, 56+1, 16-1, 88-1}, {"", false}},
       {{DISABLED, {1, 88+1, 128-1, 120-1},{"", false}}, {1, 88+1, 16-1, 120-1}, {"", false}}
