@@ -1,12 +1,12 @@
 /*
- * info.c
- *
- *  Created on: 10 Oct 2024
- *      Author: calvo
+ * Title: info.c
+ * Primary Authors: Daniele Calvo
+ * Helpers: Matteo Gottardelli
+ * Maintainability: Matteo Gottardelli
+ * Date Creation: 5 ott 2024
  */
 
 #include "info.h"
-
 /***************************************
 *
 * change_screen_i - manages how to set
@@ -17,7 +17,7 @@
 ***************************************/
 
 void change_screen_i(void){
-    defaultDraw();
+    rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
     char buffer[sizeof(long)*8+1][2];
     int8_t str[2]={game.difficulty,'\0'};
     info_texts_results[1].string= (int8_t*)ltoa((long)game.dim, buffer[0], 10);
@@ -38,7 +38,6 @@ void change_screen_i(void){
 
     for(i=0; i<2; i++){drawButton(info_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, position);}
 }
-
 /***************************************
 *
 * fn_INFO() - calls all needed
@@ -48,7 +47,6 @@ void change_screen_i(void){
 * no output
 *
 ***************************************/
-
 void fn_INFO(void) {
     reset_Screen();
     initArray(info_buttons, sizes[INFO]);
@@ -57,7 +55,6 @@ void fn_INFO(void) {
     }
     change_screen_i();
 }
-
 /***************************************
 *
 * upStick_INFO() / douwnStick_INFO() / leftStick_INFO() / rightStick_INFO()
@@ -67,11 +64,12 @@ void fn_INFO(void) {
 * no output
 *
 ***************************************/
+void upStick_INFO(){
 
-void upStick_INFO(){}
+}
+void downStick_INFO(){
 
-void downStick_INFO(){}
-
+}
 void leftStick_INFO(){
     if(position==1){
         handleOut(info_buttons, position, sizes[INFO]);
@@ -86,7 +84,6 @@ void rightStick_INFO(){
         handleIn(info_buttons, position, sizes[INFO]);
        }
 }
-
 /***************************************
 *
 * handlePressure_INFO() - calls the handle
@@ -96,7 +93,6 @@ void rightStick_INFO(){
 * no output
 *
 ***************************************/
-
 void handlePressure_INFO() {
     handleSelection(info_buttons);
 }
