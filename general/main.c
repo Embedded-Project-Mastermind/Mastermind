@@ -74,6 +74,7 @@ Graphics_Rectangle upperRectCH={0, 0, 128-16-1, 16};
 Graphics_Button prevButton={STANDARD, {0, 97, 63, 128}, {{"Back"}, false}};
 Graphics_Button nextButton={DISABLED, {65, 97, 128, 128}, {{"Next"}, false}};
 uint8_t position=0;
+int16_t pos_chronology=0;
 Graphics_Text labelText={"", false};
 
 void labelDefining(Graphics_State pos) {
