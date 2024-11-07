@@ -121,10 +121,26 @@ void rightStick_CHRONOLOGY() {
 ***************************************/
 
 void updatePos(){
-    char buffer[sizeof(long)*8+1][2];
-    for(i=0; i<sizes[CHRONOLOGY]; i++){
-        if(game.count_tent-i-pos_chronology>0) {
-           chronology[i].num.string=(int8_t*)ltoa((long)(game.count_tent-i-pos_chronology), buffer[0], 10);
+        for (i=0; i<sizes[CHRONOLOGY]; i++){
+            if (chronology[i].button.state!=DISABLED) {
+                int16_t result=game.count_tent-i-pos_chronology;
+                if(game.count_tent-i-pos_chronology>0) {
+                    char buffer[20];
+                    char* str=ltoa((long)result, buffer, 10);
+                    chronology[i].num.string = (int8_t*)malloc(strlen(str) + 1);
+                    if (chronology[i].num.string == NULL) {
+                        printf("Memory allocation failed!\n");
+                        emergency();
+
+                        exit(1);
+                    }
+                    for (j=0; str[j]!='\0'; j++){
+                        chronology[i].num.string[j] = (int8_t)str[j];
+                    }
+                    chronology[i].num.string[strlen(str)] = '\0';
+
+                    printf("Chronology[%d] num.string: %s %s\n", i, str, chronology[i].num.string);
+                }
+            }
         }
-    }
 }
