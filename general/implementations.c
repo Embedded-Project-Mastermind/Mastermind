@@ -20,12 +20,28 @@
 
 volatile bool mutex=false;
 
+/***************************************
+*
+* reset_Screen() - it resets all default's
+* colors and clear the display
+* no input
+* no output
+*
+***************************************/
 void reset_Screen(void) {
     Graphics_setFont(&grContext, &g_sFontFixed6x8); //resets the font to the standard one, probably not necessary but anyways it's good practice to put it
     Graphics_setForegroundColor(&grContext, STANDARD_COLOR); //sets foreground to black
     Graphics_setBackgroundColor(&grContext, SELECTED_COLOR); //sets background to white for the borders
     Graphics_clearDisplay(&grContext);
 }
+/***************************************
+*
+* graphics_Init() - Initializes the display
+* and drivers 
+* no input
+* no output
+*
+***************************************/
 void graphics_Init(void) {
     //INITIALIZE DISPLAY AND DRIVERS
     Crystalfontz128x128_Init();
@@ -35,12 +51,36 @@ void graphics_Init(void) {
     Graphics_setFont(&grContext, &g_sFontFixed6x8);
     reset_Screen();
 }
+/***************************************
+*
+* getCenteredX() - gives back the x of the
+* center of the given rectangle
+* input: a rectangle (Graphics_Rectangle)
+* output: the x of the center (int32_t)
+*
+***************************************/
 int32_t getCenteredX(Graphics_Rectangle rect) {
     return (rect.xMax+rect.xMin)/2;
 }
+/***************************************
+*
+* getCenteredY() - gives back the y of the
+* center of the given rectangle
+* input: a rectangle (Graphics_Rectangle)
+* output: the y of the center (int32_t)
+*
+***************************************/
 int32_t getCenteredY(Graphics_Rectangle rect) {
     return (rect.yMax+rect.yMin)/2;
 }
+/***************************************
+*
+* chooseColorRect() - chooses the color of the
+* Button given its current state
+* input: a state for a button (Button_state) and its current color (int32_t)
+* output: the new color (int32_t)
+*
+***************************************/
 int32_t chooseColorRect(Button_State state, int32_t color) {
     int32_t c;
     switch(state) {
@@ -52,6 +92,14 @@ int32_t chooseColorRect(Button_State state, int32_t color) {
     }
     return c;
 }
+/***************************************
+*
+* chooseColorText() - chooses the color of the
+* text on the button given the button's current state
+* input: a state for a button (Button_state) and its current color (int32_t)
+* output: the color for the text(int32_t)
+*
+***************************************/
 int32_t chooseColorText(Button_State state, int32_t color) {
     int32_t c;
     switch(state) {
@@ -63,6 +111,14 @@ int32_t chooseColorText(Button_State state, int32_t color) {
     }
     return c;
 }
+/***************************************
+*
+* chooseColorText() - chooses the color of the
+* text on the button given the button's current state
+* input: a state for a button (Button_state) and its current color (int32_t)
+* output: the color for the text(int32_t)
+*
+***************************************/
 void focusedhandle(Button_State state, Graphics_Rectangle rect, int32_t color) {
     Graphics_drawRectangle(&grContext, &rect);
     Graphics_setForegroundColor(&grContext, BORDER_FOCUSED_COLOR);
@@ -79,6 +135,14 @@ void focusedhandle(Button_State state, Graphics_Rectangle rect, int32_t color) {
     }
     Graphics_fillRectangle(&grContext, &temp);
 }
+/***************************************
+*
+* findSelected() - finds the selected button in
+* all the buttons of an interface
+* input: an aray of buttons (Graphics_Button[]) and the size of the array (int8_t size)
+* output: its position (int8_t) (if no button is selected, -1)
+*
+***************************************/
 int8_t findSelected(Graphics_Button array[], int8_t size) {
     int8_t i;
     for (i=0; i<size; i++) {
@@ -88,6 +152,14 @@ int8_t findSelected(Graphics_Button array[], int8_t size) {
     }
     return -1;
 }
+/***************************************
+*
+* drawButton() - draws the button in the selected
+* position with the right colors given the position
+* input: the button (Graphics_button), it's rectangle and text color (int32_t) and 
+* output: its position (int8_t) (if no button is selected, -1)
+*
+***************************************/
 void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color, int8_t pos_selected) {
     if(button.state==FOCUSED || (button.state==SELECTED && position==pos_selected)) {
         focusedhandle(button.state, button.rect, rect_color);
