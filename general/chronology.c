@@ -1,8 +1,8 @@
 /*
  * Title: chronology.h
- * Primary Authors: Niccolò Cristoforetti
+ * Primary Authors: NiccolÃ² Cristoforetti
  * Helpers: Matteo Gottardelli
- * Maintainability: Niccolò Cristoforetti, Matteo Gottardelli
+ * Maintainability: NiccolÃ² Cristoforetti, Matteo Gottardelli
  * Date Creation: 31 ott 2024
  */
 #include "chronology.h"
@@ -11,6 +11,8 @@
 #include "fsm.h"
 #include "joystick.h"
 #include "game.h"
+#include "gamelogic1.h"
+#include "string.h"
 
 /***************************************
 *
@@ -27,6 +29,9 @@ void drawChronology(void) {
     for (i=0; i<sizes[CHRONOLOGY]; i++) {
         drawButton(chronology[i].button, STANDARD_COLOR, SELECTED_COLOR, -1);
         rectangleWithText(chronology[i].num_rect, SELECTED_COLOR, chronology[i].num, STANDARD_COLOR);
+        if(chronology[i].button.state!=DISABLED){
+            drawCircles(chronology[i].chrono_circles);
+        }
     }
     for (i=0; i<2; i++) {
         drawButton(other_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, -1);
@@ -52,19 +57,19 @@ void fn_CHRONOLOGY(void) {
         other_buttons[1].state=STANDARD;
     }
     for (i=0; i<sizes[CHRONOLOGY] && i<game.count_tent; i++) {
-        chronology[i].button.state=STANDARD;
+          chronology[i].button.state=STANDARD;
     }
     chronology[position].button.state=FOCUSED;
     rectangleWithText((Graphics_Rectangle){upperRect.xMin, upperRect.yMin, upperRect.xMax, upperRect.yMax-10}, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
-    populateChronologyCircles(BASIC_OFFSET,RADIUS,chronology[0], 0);
+
     updatePos();
     drawChronology();
-    drawCircles(chronology[0].chrono_circles);
+
 }
 
 
-int16_t char_Conversion_to_Int(int8_t index) {
-    int16_t c = '\0';
+int16_t char_Conversion_to_Int(char index) {
+    int16_t c=0;
     switch (index) {
         case 'R': c = 1; break; // Red
         case 'G': c = 2; break; // Green
@@ -79,21 +84,22 @@ int16_t char_Conversion_to_Int(int8_t index) {
     return c; // Return the character representation
 }
 
-void populateChronologyCircles(int16_t offset, int16_t radius, Graphics_Chronology chronology, int16_t index){
+void populateChronologyCircles(int16_t offset, int16_t radius, int16_t value, int16_t index){
     for (i=0; i<game.dim; i++) {
-        chronology.chrono_circles[i].y=45;
-        chronology.chrono_circles[i].x=offset;
-        chronology.chrono_circles[i].radius=radius;
-            if(game.dim<=4) {
-                chronology.chrono_circles[i].x+=radius*3*(i);//offset
-            }
-            else {
-                chronology.chrono_circles[i].x+=radius*2*i+radius*2/3*(i);//offset
-            }
-            int16_t tmp = char_Conversion_to_Int(game.chronology[index*game.dim*2+i]);
-            chronology.chrono_circles[i].color=selectColor(tmp);
+        chronology[value].chrono_circles[i].radius=radius;
+        if(i<3){
+            chronology[value].chrono_circles[i].x= offset+(58/3)*(i+1);
+            chronology[value].chrono_circles[i].y=32*value+35;
+        } else {
+            chronology[value].chrono_circles[i].x= offset+(58/3)*(i-2);
+                        chronology[value].chrono_circles[i].y=32*value+45;
+        }
+
+        int16_t tmp = char_Conversion_to_Int(game.chronology[index*game.dim*2+i]);
+        chronology[value].chrono_circles[i].color=selectColor(tmp);
     }
 }
+
 
 /***************************************
 *
@@ -162,7 +168,8 @@ void updatePos(){
         for (i=0; i<sizes[CHRONOLOGY]; i++){
             if (chronology[i].button.state!=DISABLED) {
                 int16_t result=game.count_tent-i-pos_chronology;
-                if(game.count_tent-i-pos_chronology>0) {
+                if(result>0) {
+                    populateChronologyCircles(BASIC_OFFSET,RADIUS,i, result-1);
                     char buffer[20];
                     char* str=ltoa((long)result, buffer, 10);
                     chronology[i].num.string = (int8_t*)malloc(strlen(str) + 1);
