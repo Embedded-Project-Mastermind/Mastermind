@@ -317,8 +317,3 @@ void releaseMutex() {
     ADC_EnableInterrupts();
 
 }
-void fn_END(void) {
-    reset_Screen();
-    //DRAW FUNCTION
-    //FOLLOWING POSITION
-}
