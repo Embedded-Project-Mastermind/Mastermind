@@ -14,6 +14,11 @@ void emergency() {
     deallocate_Char(game.seq_to_guess); // Deallocate sequence memory
     deallocate_Char(game.chronology); // Deallocate chronology memory
     deallocate_Bool(game.flags); //Deallocate flag memory
+    for (i = 0; i < sizes[CHRONOLOGY]; i++) {
+        if (chronology[i].button.state != DISABLED) {
+            free(chronology[i].num.string);  // Free each dynamically allocated string
+        }
+    }
 }
 /* Deallocate memory for a character array */
 void deallocate_Char(int8_t* array) {
