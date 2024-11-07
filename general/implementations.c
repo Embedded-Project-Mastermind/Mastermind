@@ -220,6 +220,14 @@ void handleIn(Graphics_Button array[], uint8_t position, int8_t size) {
         drawButton(array[position], SELECTED_COLOR, STANDARD_COLOR, findSelected(array, size));
     }
 }
+/***************************************
+*
+* hardware_Init() - initializa all the hardware,
+* ports and interrupt include
+* no input
+* no output
+*
+***************************************/
 void hardware_Init() {
     graphics_Init();
     configurePortsInput();
@@ -227,7 +235,14 @@ void hardware_Init() {
     before_ADC();
     _adcInit();
 }
-
+/***************************************
+*
+* handle_Buttons() - handles the prev
+* and next buttons
+* input
+* no output
+*
+***************************************/
 void handle_buttons(Graphics_Button array[]){
     if(position<(sizes[display_position]-2)){
         switch(display_position) {
