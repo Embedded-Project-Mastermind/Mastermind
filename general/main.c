@@ -122,9 +122,9 @@ Graphics_Button tent_buttons[]={  //TENTATIVE state part
 Graphics_Button text_no_tent={DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TRIES", false}};
 Graphics_Button start_button={FOCUSED, {32, 96, 96, 112}, {"START", false}};
 Graphics_Chronology chronology[]={
-      {{STANDARD, {1, 24+1, 128-1, 56-1}, {"", false}}, {1, 24+1, 16-1, 56-1}, {"", false}},
-      {{STANDARD, {1, 56+1, 128-1, 88-1}, {"", false}}, {1, 56+1, 16-1, 88-1}, {"", false}},
-      {{STANDARD, {1, 88+1, 128-1, 120-1},{"", false}}, {1, 88+1, 16-1, 120-1}, {"", false}}
+      {{DISABLED, {1, 24+1, 128-1, 56-1}, {"", false}}, {1, 24+1, 16-1, 56-1}, {"", false}},
+      {{DISABLED, {1, 56+1, 128-1, 88-1}, {"", false}}, {1, 56+1, 16-1, 88-1}, {"", false}},
+      {{DISABLED, {1, 88+1, 128-1, 120-1},{"", false}}, {1, 88+1, 16-1, 120-1}, {"", false}}
 };
 
 Graphics_Button other_buttons[]={
