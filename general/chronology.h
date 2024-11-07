@@ -11,6 +11,10 @@
 #include "graphics.h"
 #include "implementations.h"
 #include "input.h"
+#include "game.h"
+#define BASIC_OFFSET 15
+#define RADIUS 6
+#define MAX_DIM 6
 
 //extern bool configurationGame;
 
@@ -22,10 +26,13 @@ typedef struct Graphics_Chronology {
     Graphics_Button button;
     Graphics_Rectangle num_rect;
     Graphics_Text num;
+    Graphics_Circle chrono_circles[MAX_DIM];
 } Graphics_Chronology;
 extern Graphics_Chronology chronology[];
 void drawChronology(void);
 void fn_CHRONOLOGY(void);
+void populateChronologyCircles(int16_t offset, int16_t radius, Graphics_Chronology chronology, int16_t index);
+int16_t char_Conversion_to_Int(int8_t index);
 void upStick_CHRONOLOGY();
 void downStick_CHRONOLOGY();
 void rightStick_CHRONOLOGY();
