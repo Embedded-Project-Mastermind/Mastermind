@@ -60,7 +60,7 @@ void fn_CHRONOLOGY(void) {
           chronology[i].button.state=STANDARD;
     }
     chronology[position].button.state=FOCUSED;
-    rectangleWithText((Graphics_Rectangle){upperRect.xMin, upperRect.yMin, upperRect.xMax, upperRect.yMax-10}, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
+    rectangleWithText((Graphics_Rectangle){upperRect.xMin, upperRect.yMin, upperRect.xMax, upperRect.yMax-16}, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
 
     updatePos();
     drawChronology();
