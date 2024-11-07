@@ -58,16 +58,16 @@ void elaborateColor(int16_t c) {
 }
 void initCircles() {
     switch(game.dim) {
-        case 3: populateCircles(25, 13); break;
-        case 4: populateCircles(20, 10); break;
-        case 5: populateCircles(15, 9); break;
-        case 6: populateCircles(11, 8); break;
+        case 3: populateCircles(25, 13, 56); break;
+        case 4: populateCircles(20, 10, 56); break;
+        case 5: populateCircles(15, 9, 56); break;
+        case 6: populateCircles(11, 8, 56); break;
         default: exit(1);
     }
 }
-void populateCircles(int16_t offset, int16_t radius){
+void populateCircles(int16_t offset, int16_t radius, int16_t valY){
     for (i=0; i<game.dim; i++) {
-            circles[i].y=56;
+            circles[i].y=valY;
             circles[i].radius=radius;
             if(game.dim<=4) {
                 circles[i].x=offset+radius*3*i;//offset
@@ -78,13 +78,13 @@ void populateCircles(int16_t offset, int16_t radius){
             circles[i].color=STANDARD_COLOR;
     }
 }
-void drawCircles() {
+void drawCircles(Graphics_Circle circ[]) {
     for (i=0; i<game.dim; i++) {
         Graphics_setForegroundColor(&grContext, SELECTED_COLOR);
-        Graphics_drawCircle(&grContext, circles[i].x, circles[i].y, circles[i].radius);
+        Graphics_drawCircle(&grContext, circ[i].x, circ[i].y, circ[i].radius);
         if(circles[i].color!=STANDARD_COLOR) {
-            Graphics_setForegroundColor(&grContext, circles[i].color);
-            Graphics_fillCircle(&grContext, circles[i].x, circles[i].y, circles[i].radius);
+            Graphics_setForegroundColor(&grContext, circ[i].color);
+            Graphics_fillCircle(&grContext, circ[i].x, circ[i].y, circ[i].radius);
         }
     }
 }
