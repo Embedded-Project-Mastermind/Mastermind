@@ -53,8 +53,43 @@ void fn_CHRONOLOGY(void) {
     }
     chronology[position].button.state=FOCUSED;
     rectangleWithText((Graphics_Rectangle){upperRect.xMin, upperRect.yMin, upperRect.xMax, upperRect.yMax-10}, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
+    populateChronologyCircles(BASIC_OFFSET,RADIUS,chronology[0], 0);
     updatePos();
     drawChronology();
+    drawCircles(chronology[0].chrono_circles);
+}
+
+
+int16_t char_Conversion_to_Int(int8_t index) {
+    int16_t c = '\0';
+    switch (index) {
+        case 'R': c = 1; break; // Red
+        case 'G': c = 2; break; // Green
+        case 'B': c = 3; break; // Blue
+        case 'Y': c = 4; break; // Yellow
+        case 'P': c = 5; break; // Purple
+        case 'C': c = 6; break; // Cyan
+        case 'O': c = 7; break; // Orange
+        case 'W': c = 8; break; //White
+        default: exit(1); // Exit on error
+    }
+    return c; // Return the character representation
+}
+
+void populateChronologyCircles(int16_t offset, int16_t radius, Graphics_Chronology chronology, int16_t index){
+    for (i=0; i<game.dim; i++) {
+        chronology.chrono_circles[i].y=45;
+        chronology.chrono_circles[i].x=offset;
+        chronology.chrono_circles[i].radius=radius;
+            if(game.dim<=4) {
+                chronology.chrono_circles[i].x+=radius*3*(i);//offset
+            }
+            else {
+                chronology.chrono_circles[i].x+=radius*2*i+radius*2/3*(i);//offset
+            }
+            int16_t tmp = char_Conversion_to_Int(game.chronology[index*game.dim*2+i]);
+            chronology.chrono_circles[i].color=selectColor(tmp);
+    }
 }
 
 /***************************************
