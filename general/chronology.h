@@ -16,7 +16,7 @@
 
 extern Graphics_Button other_buttons[];
 Graphics_Button return_to;
-int16_t pos_chronology; //var for manage the tent outputs after having overtaken three tentative
+extern int16_t pos_chronology; //var for manage the tent outputs after having overtaken three tentative
 
 typedef struct Graphics_Chronology {
     Graphics_Button button;
