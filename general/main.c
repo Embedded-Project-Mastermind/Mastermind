@@ -1,5 +1,5 @@
 /*
- * Title: fsm.h
+ * Title: main.h
  * Primary Authors: Alessandro Benassi, Daniele Calvo, Matteo Gottardelli, Niccolò Cristoforetti
  * Helpers: -
  • Maintainability: Alessandro Benassi, Daniele Calvo, Matteo Gottardelli, Niccolò Cristoforetti
