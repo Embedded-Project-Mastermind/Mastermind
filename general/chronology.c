@@ -51,6 +51,9 @@ void fn_CHRONOLOGY(void) {
     if(game.count_tent-1>=3){
         other_buttons[1].state=STANDARD;
     }
+    for (i=0; i<sizes[CHRONOLOGY] && i<game.count_tent; i++) {
+        chronology[i].button.state=STANDARD;
+    }
     chronology[position].button.state=FOCUSED;
     rectangleWithText((Graphics_Rectangle){upperRect.xMin, upperRect.yMin, upperRect.xMax, upperRect.yMax-10}, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
     populateChronologyCircles(BASIC_OFFSET,RADIUS,chronology[0], 0);
