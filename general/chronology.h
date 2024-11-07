@@ -32,7 +32,7 @@ extern Graphics_Chronology chronology[];
 void drawChronology(void);
 void fn_CHRONOLOGY(void);
 void populateChronologyCircles(int16_t offset, int16_t radius, Graphics_Chronology chronology, int16_t index);
-int16_t char_Conversion_to_Int(int8_t index);
+int16_t char_Conversion_to_Int(char index);
 void upStick_CHRONOLOGY();
 void downStick_CHRONOLOGY();
 void rightStick_CHRONOLOGY();
