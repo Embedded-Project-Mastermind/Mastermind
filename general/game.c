@@ -22,7 +22,7 @@ void fn_GAME(void) {
     //DRAW FUNCTION
     rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
     rectangleWithText((Graphics_Rectangle){1, 34, 126, 108}, STANDARD_COLOR, (Graphics_Text){{""}, false}, STANDARD_COLOR);
-    drawCircles();
+    drawCircles(circles);
     if (game.count_tent==0){
         rectangleWithText((Graphics_Rectangle){0, 110, 128, 128}, DISABLED_COLOR, (Graphics_Text){{"<- CHRONOLOGY"}, false}, STANDARD_COLOR);
     }
@@ -65,9 +65,10 @@ void initCircles() {
         default: exit(1);
     }
 }
-void populateCircles(int16_t offset, int16_t radius, int16_t valY){
+void populateCircles(int16_t offset, int16_t radius, int16_t value_y){
+    int i;
     for (i=0; i<game.dim; i++) {
-            circles[i].y=valY;
+            circles[i].y=value_y;
             circles[i].radius=radius;
             if(game.dim<=4) {
                 circles[i].x=offset+radius*3*i;//offset
@@ -78,13 +79,14 @@ void populateCircles(int16_t offset, int16_t radius, int16_t valY){
             circles[i].color=STANDARD_COLOR;
     }
 }
-void drawCircles(Graphics_Circle circ[]) {
-    for (i=0; i<game.dim; i++) {
+void drawCircles(Graphics_Circle* circs) {
+    int k;
+    for (k=0; k<game.dim; k++) {
         Graphics_setForegroundColor(&grContext, SELECTED_COLOR);
-        Graphics_drawCircle(&grContext, circ[i].x, circ[i].y, circ[i].radius);
-        if(circles[i].color!=STANDARD_COLOR) {
-            Graphics_setForegroundColor(&grContext, circ[i].color);
-            Graphics_fillCircle(&grContext, circ[i].x, circ[i].y, circ[i].radius);
+        Graphics_drawCircle(&grContext, circs[k].x, circs[k].y, circs[k].radius);
+        if(circs[k].color!=STANDARD_COLOR) {
+            Graphics_setForegroundColor(&grContext, circs[k].color);
+            Graphics_fillCircle(&grContext, circs[k].x, circs[k].y, circs[k].radius);
         }
     }
 }
@@ -131,5 +133,5 @@ void displayResultsOnScreen() {
         Graphics_setFont(&grContext, &g_sFontFixed6x8);
         delay_ms(500);
     }
-    delay_ms(3000);
+    delay_ms(1000);
 }
