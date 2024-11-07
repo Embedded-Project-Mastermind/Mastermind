@@ -221,6 +221,7 @@ int16_t color_selected;
 //BOOLEANS
 volatile bool interruptFlag=false;
 bool exit_gamelogic=false;
+bool definitive_exit=false;
 int main(void) {
     srand((unsigned)time(NULL));
     WDT_A_holdTimer();
@@ -238,7 +239,7 @@ int main(void) {
            (*gfsm[display_position].state_function)();
        }
        else {
-           return 0;
+           definitive_exit=true;
        }
        if(configurationGame) {
            while(1) {
@@ -265,7 +266,10 @@ int main(void) {
        __enable_interrupt();
        ADC14_enableConversion();
        ADC_StartConversion(); // Start ADC conversion
-      while(1) {
+       while(1) {
+          if(definitive_exit){
+              break;
+          }
           __sleep();
           ADC14_disableConversion();
           if (interruptFlag) {
@@ -275,7 +279,13 @@ int main(void) {
       }
       releaseMutex();
       __disable_interrupt();
+      if(definitive_exit){
+            break;
+       }
     }
+    reset_Screen();
+    emergency();
+    while(1);
 }
 /*ISR HANDLER FOR PORTS 1-6*/
 /*void PORT1_IRQHandler() {
