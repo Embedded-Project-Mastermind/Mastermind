@@ -125,29 +125,35 @@ Graphics_Button text_no_tent={DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT
 Graphics_Button start_button={FOCUSED, {32, 96, 96, 112}, {"START", false}};  //START_GR state part
 Graphics_Button gameover_button={FOCUSED, {24, 96, 104, 112}, {"GAMEOVER!", false}}; //END state part
 Graphics_Button win_button={FOCUSED, {32, 96, 96, 122}, {"YOU WIN", false}};
-Graphics_Chronology chronology[]={ //CHRONOLOGY state part
-      {{DISABLED, {1, 24+1, 128-1, 56-1}, {"", false}}, {1, 24+1, 16-1, 56-1}, {"", false},.chrono_circles={
+Graphics_Chronology chronology[]={
+      {{DISABLED, {1, 34, 128-1, 72}, {"", false}}, {1, 25, 128, 33}, {"", false},.chrono_circles={
        {0, 0, 0, 0},
        {0, 0, 0, 0},
        {0, 0, 0, 0},
        {0, 0, 0, 0},
        {0, 0, 0, 0},
-       {0, 0, 0, 0}}},
-      {{DISABLED, {1, 56+1, 128-1, 88-1}, {"", false}}, {1, 56+1, 16-1, 88-1}, {"", false},.chrono_circles={
+       {0, 0, 0, 0}},.chrono_buttons={
+                    {STANDARD, {0, 0, 0, 0}, {"a", false}},
+                    {STANDARD, {0, 0, 0, 0}, {"a", false}},
+                    {STANDARD, {0, 0, 0, 0}, {"a", false}},
+                    {STANDARD, {0, 0, 0, 0}, {"a", false}},
+                    {STANDARD, {0, 0, 0, 0}, {"a", false}},
+                    {STANDARD, {0, 0, 0, 0}, {"a", false}}
+       }},
+      {{DISABLED, {1, 82, 128-1, 120}, {"", false}}, {1, 73, 128, 81}, {"", false},.chrono_circles={
        {0, 0, 0, 0},
        {0, 0, 0, 0},
        {0, 0, 0, 0},
        {0, 0, 0, 0},
        {0, 0, 0, 0},
-       {0, 0, 0, 0}}},
-      {{DISABLED, {1, 88+1, 128-1, 120-1},{"", false}}, {1, 88+1, 16-1, 120-1}, {"", false},.chrono_circles={
-      {0, 0, 0, 0},
-      {0, 0, 0, 0},
-      {0, 0, 0, 0},
-      {0, 0, 0, 0},
-      {0, 0, 0, 0},
-      {0, 0, 0, 0}
-      }}
+       {0, 0, 0, 0}},.chrono_buttons={
+                     {STANDARD, {0, 0, 0, 0}, {".", false}},
+                     {STANDARD, {0, 0, 0, 0}, {".", false}},
+                     {STANDARD, {0, 0, 0, 0}, {".", false}},
+                     {STANDARD, {0, 0, 0, 0}, {".", false}},
+                     {STANDARD, {0, 0, 0, 0}, {".", false}},
+                     {STANDARD, {0, 0, 0, 0}, {".", false}}
+       }}
 };
 
 Graphics_Button other_buttons[]={
