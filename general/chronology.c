@@ -29,11 +29,13 @@ void drawChronology(void) {
     for (i=0; i<sizes[CHRONOLOGY]; i++) {
         drawButton(chronology[i].button, STANDARD_COLOR, SELECTED_COLOR, -1);
         rectangleWithText(chronology[i].num_rect, SELECTED_COLOR, chronology[i].num, STANDARD_COLOR);
+
         if(chronology[i].button.state!=DISABLED){
             drawCircles(chronology[i].chrono_circles);
+            drawPastResults(chronology[i].chrono_buttons);
         }
     }
-    for (i=0; i<2; i++) {
+  for (i=0; i<2; i++) {
         drawButton(other_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, -1);
     }
     drawButton(return_to, GRAPHICS_COLOR_CYAN, STANDARD, findSelected(&return_to, 1));
@@ -54,7 +56,7 @@ void fn_CHRONOLOGY(void) {
     int i;
     //DRAW FUNCTION
     reset_Screen();
-    if(game.count_tent-1>=3){
+    if(game.count_tent-1>=sizes[CHRONOLOGY]){
         other_buttons[1].state=STANDARD;
     }
     for (i=0; i<sizes[CHRONOLOGY] && i<game.count_tent; i++) {
@@ -89,19 +91,48 @@ void populateChronologyCircles(int16_t offset, int16_t radius, int16_t value, in
     int j;
     for (j=0; j<game.dim; j++) {
         chronology[value].chrono_circles[j].radius=radius;
-        if(j<3){
-            chronology[value].chrono_circles[j].x= offset+(58/3)*(j+1);
-            chronology[value].chrono_circles[j].y=32*value+35;
-        } else {
-            chronology[value].chrono_circles[j].x= offset+(58/3)*(j-2);
-                        chronology[value].chrono_circles[j].y=32*value+45;
-        }
-
+        chronology[value].chrono_circles[j].x= (128/(game.dim+1))*(j+1);
+        chronology[value].chrono_circles[j].y=47*value+46;
+        
         int16_t tmp = char_Conversion_to_Int(game.chronology[index*game.dim*2+j]);
         chronology[value].chrono_circles[j].color=selectColor(tmp);
     }
 }
 
+void populateChronologyButtons(int16_t value, int16_t index){
+    int i;
+    for (i=0; i<game.dim; i++) {
+            if(chronology[value].chrono_buttons[i].text.string!=NULL){
+                free(chronology[value].chrono_buttons[i].text.string);
+            }
+            chronology[value].chrono_buttons[i].text.string=(int8_t*)malloc(2*sizeof(int8_t));
+            if(chronology[value].chrono_buttons[i].text.string==NULL){
+                printf("Memory allocation failed!\n");
+                emergency();
+                exit(1);
+            }
+            strcpy((char*)chronology[value].chrono_buttons[i].text.string, (char*)&game.chronology[index*game.dim*2+game.dim+i]);
+            chronology[value].chrono_buttons[i].text.string[1]='\0';
+          
+            printf("\n pop %s %s ",str, chronology[value].chrono_buttons[i].text.string);
+            chronology[value].chrono_buttons[i].rect=(Graphics_Rectangle){
+                        (128/(game.dim+1))*(i+1)-RADIUS, 47*value+57,
+                                (128/(game.dim+1))*(i+1)+RADIUS, 47*value+67
+                        };
+        }
+}
+
+
+void drawPastResults(Graphics_Button* buttons){
+    int i;
+    for (i=0; i<game.dim; i++) {
+        printf("\n STRINGA %s ", buttons[i].text.string);
+        Graphics_setForegroundColor(&grContext, SELECTED_COLOR);
+        Graphics_setFont(&grContext, &g_sFontFixed6x8);
+        rectangleWithText(buttons[i].rect,-1,buttons[i].text,SELECTED_COLOR); //non disegna il testo e qua non so se ci vada il -1 perchè piu che altro senno salta mezza funzione
+   }
+
+}
 
 /***************************************
 *
@@ -184,9 +215,9 @@ void updatePos(){
                         chronology[i].num.string[j] = (int8_t)str[j];
                     }
                     chronology[i].num.string[strlen(str)] = '\0';
-
                     printf("Chronology[%d] num.string: %s %s\n", i, str, chronology[i].num.string);
                     populateChronologyCircles(BASIC_OFFSET,RADIUS,i, result-1);
+                    populateChronologyButtons(i, result-1);
                 }
             }
         }
