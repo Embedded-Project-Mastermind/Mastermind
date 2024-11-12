@@ -17,6 +17,9 @@ void emergency() {
     for (i = 0; i < sizes[CHRONOLOGY]; i++) {
         if (chronology[i].button.state != DISABLED) {
             free(chronology[i].num.string);  // Free each dynamically allocated string
+            for(j=0; j<game.dim; j++){
+            free(chronology[i].chrono_buttons[j].text.string);
+            }
         }
     }
 }
