@@ -173,7 +173,15 @@ void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color, 
     Graphics_drawStringCentered(&grContext, (int8_t *) button.text.string, AUTO_STRING_LENGTH, getCenteredX(button.rect),  getCenteredY(button.rect), button.text.opacity);
 
 }
-
+/***************************************
+*
+* rectangleWithText() - it draws a rectangle
+* with a text centered in it
+* input: the rectangle with its color (Graphics_Rectangle, int32_t) 
+* with the text and its color (Graphics_Text, int32_t)
+* no output
+*
+***************************************/
 void rectangleWithText(Graphics_Rectangle rect, int32_t colorRect, Graphics_Text text, int32_t colorText) {
     if(colorRect!=-1) {
         Graphics_drawRectangle(&grContext, &rect);
