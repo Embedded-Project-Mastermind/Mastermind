@@ -113,8 +113,8 @@ int32_t chooseColorText(Button_State state, int32_t color) {
 }
 /***************************************
 *
-* chooseColorText() - chooses the color of the
-* text on the button given the button's current state
+* focusedhandle() - 
+* 
 * input: a state for a button (Button_state) and its current color (int32_t)
 * output: the color for the text(int32_t)
 *
@@ -191,6 +191,15 @@ void rectangleWithText(Graphics_Rectangle rect, int32_t colorRect, Graphics_Text
     Graphics_setForegroundColor(&grContext, colorText); //Manual
     Graphics_drawStringCentered(&grContext, (int8_t *)text.string, AUTO_STRING_LENGTH, getCenteredX(rect),  getCenteredY(rect), text.opacity);
 }
+/***************************************
+*
+* handleOut() - it handles the status change of 
+* old focused button (in our position)
+* input: an array of buttons (Graphic_Button[]) with the position
+* of the old selected button (uint8_t) and the size of the array (int8_t)
+* no output
+*
+***************************************/
 void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
     if(display_position==GAME || display_position==CHRONOLOGY){
          if (array[position].state!=SELECTED) {
@@ -219,6 +228,15 @@ void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
              }
     }
 }
+/***************************************
+*
+* handleIn() - it handles the status change of 
+* new focused button (in our position)
+* input: an array of buttons (Graphic_Button[]) with the position
+* of the new selected button (uint8_t) and the size of the array (int8_t)
+* no output
+*
+***************************************/
 void handleIn(Graphics_Button array[], uint8_t position, int8_t size) {
     if (array[position].state!=SELECTED) {
         array[position].state=FOCUSED;
@@ -295,6 +313,14 @@ void handleDeselection(Graphics_Button array[]) {
     position=sizes[display_position]-1;
     array[position].state=DISABLED;
 }
+/***************************************
+*
+* initArray() - it finalize out buttons' array
+* putting in it the prev and next button and modifing the states
+* input:
+* no output
+*
+***************************************/
 void initArray(Graphics_Button array[], int size) {
     if (position!=size-2) {
         array[size-2]=prevButton;
@@ -309,6 +335,13 @@ void initArray(Graphics_Button array[], int size) {
         array[position].state=FOCUSED;
     }
 }
+/***************************************
+*
+* acquireMutex() - it activates the mutex
+* no input
+* no output
+*
+***************************************/
 void acquireMutex() {
     __disable_irq();
     if(!mutex) {
@@ -317,6 +350,13 @@ void acquireMutex() {
     }
     __enable_irq();
 }
+/***************************************
+*
+* releaseMutex() - it releases the mutex
+* no input
+* no output
+*
+***************************************/
 void releaseMutex() {
     __disable_irq();
     mutex=false;
