@@ -223,7 +223,7 @@ void resetTentative(void) {
 /* Function for the START state */
 //ABILITATE initGame HERE and disable in fn_GAME
 void fn_START(void) {
-    //initGame(game.dim, game.difficulty, game.doubles, game.tentatives); // Initialize the game
+    initGame(game.dim, game.difficulty, game.doubles, game.tentatives); // Initialize the game
     //initGame(3, 'A', true, 7); // Initialize the game
     current_state = game.doubles ? KEY_WH_DOUB : KEY_WOUT_DOUB; // Transition to the next state based on doubles flag
 }
