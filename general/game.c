@@ -117,7 +117,7 @@ void displayResultsOnScreen() {
     for (i=0; i<game.dim; i++) {
         Graphics_setForegroundColor(&grContext, SELECTED_COLOR);
         Graphics_fillCircle(&grContext, circles[i].x, circles[i].y+YLEVEL_OFFSET, circles[i].radius);
-        int8_t str[2]={tentative.seq_user[i], '\0'};
+        int8_t str[2]={tentative.sol_user[i], '\0'};
         Graphics_setFont(&grContext, &g_sFontCm20);
         rectangleWithText(
             (Graphics_Rectangle){
