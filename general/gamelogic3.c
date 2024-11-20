@@ -10,18 +10,26 @@
 #include "game.h"
 
 //Function that checks if the sequence is a tenctative or a correction. Returns a int for set the right index in the chronology
-int16_t checkIfTenctOrCorrection(int8_t c){
+/*int16_t checkIfTenctOrCorrection(int8_t c){
     if( c=='X' || c== 'O' || c=='!' ){  //Check if the output isn't a correction
         return game.dim;
     }
     return 0;
-}
+}*/
 
 //Function that inserts sequence or sequence corrections in chronology
-void insertInChronology(int8_t* seq){
-    j=checkIfTenctOrCorrection(seq[0]);  //The j index is used to insert correctly in the chronology the sequence or corrections
+void insertInChronologyColor(int8_t* seq){
+    //j=checkIfTenctOrCorrection(seq[0]);  //The j index is used to insert correctly in the chronology the sequence or corrections
     for(i=0; i<game.dim; i++){
-        game.chronology[ game.dim * 2 * game.count_tent - j + i ]=seq[i];  //The minus is used because when it's add the corrections the tenctative is already the next
+        //game.chronology[ game.dim * 2 * game.count_tent + j + i ]=seq[i];  //The minus is used because when it's add the corrections the tenctative is already the next
+        game.chronology[ game.dim * 2 * game.count_tent + i ]=seq[i];
+    }
+}
+void insertInChronologyRes(int8_t* seq){
+    //j=checkIfTenctOrCorrection(seq[0]);  //The j index is used to insert correctly in the chronology the sequence or corrections
+    for(i=0; i<game.dim; i++){
+        //game.chronology[ game.dim * 2 * game.count_tent + j + i ]=seq[i];  //The minus is used because when it's add the corrections the tenctative is already the next
+        game.chronology[ game.dim * 2 * (game.count_tent-1) + game.dim + i ]=seq[i];
     }
 }
 
@@ -51,7 +59,7 @@ void correctionsEasyMode(void){
     makeArrayEmpty_Bool(game.flags, 1, game.dim);  //Function for set all the flags to false
     for(i=0; i<game.dim; i++){
         if(tentative.seq_user[i]==game.seq_to_guess[i]){  //If the colour in the seq user corrispond to the colour of the sequence to guess in the same position
-            tentative.seq_user[i]= 'X';  //That means the colour is correct and in the right position
+            tentative.sol_user[i]= 'X';  //That means the colour is correct and in the right position
             game.flags[i]=true;
         }
     }
@@ -59,14 +67,14 @@ void correctionsEasyMode(void){
         for(j=0; j<game.dim; j++){
             if(tentative.seq_user[i]==game.seq_to_guess[j]){  //If the colour in the seq user corrispond to the colour of the sequence to guess in at least one position
                 if(game.flags[j]!=true){  //If the colour in that position of the seq_to_guess was already been selected it must be ! not O
-                    tentative.seq_user[i]= 'O';  //That means the colour is correct but in wrong position
+                    tentative.sol_user[i]= 'O';  //That means the colour is correct but in wrong position
                     game.flags[j]=true;
                     break;
                 }
             }
         }
-        if(tentative.seq_user[i]!='O' && tentative.seq_user[i]!='X'){  //If the colour doesn't exist in the sequence to guess (that means the output is neither 'O' and 'X')
-            tentative.seq_user[i]= '!';  //The colour isn't correct
+        if(tentative.sol_user[i]!='O' && tentative.sol_user[i]!='X'){  //If the colour doesn't exist in the sequence to guess (that means the output is neither 'O' and 'X')
+            tentative.sol_user[i]= '!';  //The colour isn't correct
         }
     }
 }
@@ -75,7 +83,7 @@ void correctionsMediumMode(void){
     int16_t o=0; int16_t x=0;
     correctionsEasyMode();
     for(i=0; i<game.dim; i++){
-        switch (tentative.seq_user[i]) {
+        switch (tentative.sol_user[i]) {
             case 'X': x++; break;
             case 'O': o++; break;
             case '!': break;
@@ -84,13 +92,13 @@ void correctionsMediumMode(void){
     }
     for(i=0; i<game.dim; i++){
         if(x>0){
-            tentative.seq_user[i]='X';  //Firstly it's inserted the X based on the number the upper switch have finded
+            tentative.sol_user[i]='X';  //Firstly it's inserted the X based on the number the upper switch have finded
             x--;
         } else if (o>0){
-            tentative.seq_user[i]='O';  //Secondly it's inserted the Y based on the number the upper switch have finded
+            tentative.sol_user[i]='O';  //Secondly it's inserted the Y based on the number the upper switch have finded
             o--;
         } else {
-            tentative.seq_user[i]='!';  //Lastly it's inserted the !
+            tentative.sol_user[i]='!';  //Lastly it's inserted the !
         }
     }
 }
@@ -99,8 +107,8 @@ void correctionsMediumMode(void){
 void correctionsDifficultMode(void){
     correctionsMediumMode();
     for(i=0; i<game.dim; i++){
-        if(tentative.seq_user[i]=='O'){
-            tentative.seq_user[i]='!';  //Difficult mode showed only X and ! (not O)
+        if(tentative.sol_user[i]=='O'){
+            tentative.sol_user[i]='!';  //Difficult mode showed only X and ! (not O)
         }
     }
 }
@@ -131,7 +139,7 @@ bool winCondition(void){
 
 //Function for ELABORATE_TENT state
 void fn_ELABORATE_TENT(void){
-    insertInChronology(tentative.seq_user);  //Insert sequence in chronology
+    insertInChronologyColor(tentative.seq_user);  //Insert sequence in chronology
     current_state = INCREMENT_TENT;  // Transition to the INCREMENT_TENT state;
 }
 
@@ -176,7 +184,7 @@ void fn_DIFFICULT_MODE(void){
 
 //Function for ELABORATE_RESULT state
 void fn_ELABORATE_RESULT(void){
-    insertInChronology(tentative.seq_user);  //Insert corrections in chronology
+    insertInChronologyRes(tentative.sol_user);  //Insert corrections in chronology
     printLastTentativeInChronology();  //Print the complete output of the last tentative
     displayResultsOnScreen();
     current_state = winCondition() ? WIN : RESET_TENT; // Transition to the next state based on the win condition
