@@ -188,6 +188,9 @@ void fn_ELABORATE_RESULT(void){
     printLastTentativeInChronology();  //Print the complete output of the last tentative
     displayResultsOnScreen();
     current_state = winCondition() ? WIN : RESET_TENT; // Transition to the next state based on the win condition
+    if(current_state==WIN) {
+        display_position=END;
+    }
 }
 
 //Function for WIN state
