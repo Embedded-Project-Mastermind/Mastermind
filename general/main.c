@@ -68,7 +68,7 @@ StateMachine fsm[] = {
 };
 Game game;
 Tentative tentative;
-Graphics_State display_position=GAME;
+Graphics_State display_position=START_GR;
 State current_state=START;
 Graphics_Rectangle upperRect={0, 0, 128, 32};
 Graphics_Rectangle upperRectCH={0, 0, 128-16-1, 16};
@@ -251,17 +251,19 @@ int main(void) {
            while(1) {
                if (current_state < ERROR) {
                    (*fsm[current_state].state_function)(); // Call the appropriate state function
-               } else {
+               } /*else {
                    // Clean up and exit if in ERROR state
                    if (current_state == ERROR) {
                        deallocate_Char(game.seq_to_guess); // Deallocate sequence memory
                        deallocate_Char(game.chronology); // Deallocate chronology memory
                        deallocate_Bool(game.flags); //Deallocate flag memory
+                       deallocate_Char(tentative.seq_user);
+                       deallocate_Char(tentative.sol_user);
                        exit_gamelogic=true; // Exit the loop
                    }
-               }
+               }*/
                //CASES OF BREAK IN ORDER TO GO TO INTERRUPT
-               if(current_state==WAIT || current_state==WAIT_FULL) {
+               if(current_state==WAIT || current_state==WAIT_FULL || current_state==WIN) {
                    exit_gamelogic=true;
                }
                if(exit_gamelogic) {
@@ -535,6 +537,9 @@ void ADC14_IRQHandler(void)
     /* ADC_MEM1 conversion completed */
     if(status & ADC_INT1)
     {
+            if(display_position==END) {
+                triggerPinInterrupt();
+            }
             /* Store ADC14 conversion results */
             resultsBuffer[0] = ADC14_getResult(ADC_MEM0);
             resultsBuffer[1] = ADC14_getResult(ADC_MEM1);
