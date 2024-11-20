@@ -14,7 +14,7 @@ Graphics_Rectangle textRect={1, 70, 126, 106};
 
 void fn_GAME(void) {
     if(!configurationGame) {//TO REMOVE ONLY FOR EXAMPLE
-        initGame(3, 'A', true, 7); //REMOVE WHEN CONNECTED TO ALL
+       // initGame(3, 'A', true, 7); //REMOVE WHEN CONNECTED TO ALL
         configurationGame=true;
         initCircles();
     }
