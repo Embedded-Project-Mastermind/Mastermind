@@ -14,11 +14,13 @@ void emergency() {
     deallocate_Char(game.seq_to_guess); // Deallocate sequence memory
     deallocate_Char(game.chronology); // Deallocate chronology memory
     deallocate_Bool(game.flags); //Deallocate flag memory
+    deallocate_Char(tentative.seq_user);
+    deallocate_Char(tentative.sol_user);
     for (i = 0; i < sizes[CHRONOLOGY]; i++) {
         if (chronology[i].button.state != DISABLED) {
             free(chronology[i].num.string);  // Free each dynamically allocated string
             for(j=0; j<game.dim; j++){
-            free(chronology[i].chrono_buttons[j].text.string);
+                free(chronology[i].chrono_buttons[j].text.string);
             }
         }
     }
@@ -203,11 +205,14 @@ void continue_Key_Decryption(int16_t* sequence) {
 
 /* Reset the user's tentative state */
 void resetTentative(void) {
+    deallocate_Char(tentative.seq_user);
+    deallocate_Char(tentative.sol_user);
     tentative.count = 0; // Reset attempt count
     pos_chronology = 0;  // Reset chronology position count
     tentative.dim = game.dim; // Set dimension for user's sequence
     position=0;
     allocate_in_Heap_Char(&tentative.seq_user, 1, game.dim); // Allocate memory for user's guesses
+    allocate_in_Heap_Char(&tentative.sol_user, 1, game.dim);
     for (i=0; i<game.dim; i++) {
         circles[i].color=STANDARD_COLOR;
     }
@@ -242,4 +247,3 @@ void fn_RESET_TENT(void) {
     resetTentative(); // Reset user's tentative state
     current_state = WAIT; // Transition to the ERROR state
 }
-
