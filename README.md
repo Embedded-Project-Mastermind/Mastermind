@@ -23,7 +23,9 @@
 
 # Introduction
 - Present the purpose of the project and its main functionalities<br>
+The purpose of the project is to develop a simple version of th egame Mastermind(...) where the user can choose some settings for the game, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the precence of doubles. Then the game starts and the purpose is to guess the sequence within the number of tries previously chosen. At every sequence inserted the system tells wheter the color is in the right position(O???), is in the sequence but in the wrong position(!???), and if it isn't present at all X???. 
 - Describe shortly how the MSP432 is used<br><br>
+The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit
 
 [Back to top](#table-of-contents)
 
@@ -94,6 +96,9 @@ Suggested connection - Considering that the connections are done in order to avo
 ## Import Libraries
 
 - How to import the necessary library to make the code work, the imports that prof told us<br><br>
+The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at the following link:
+
+[SIMPLELINK-MSP432-SDK Download](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02)
 
 [Back to top](#table-of-contents)
 
