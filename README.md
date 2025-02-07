@@ -15,7 +15,8 @@
   - [Software Algorithm](#software-algorithm)
   - [Menu](#menu)
   - [Connectivity Sensors and MPS432](#connectivity-sensors-and-MSP432)
-- [Future Integrations](#future-integrations)  
+- [Work Contribution](#work-contribution)
+- [Future Integrations](#future-integrations) 
 - [Contacts](#contacts)
   
 ---
@@ -66,6 +67,8 @@ Suggested connection - Considering that the connections are done in order to avo
 ## Software Requirements
 • Code Composer Studio (Link)
 
+- Really brief description of what this is
+
 [Back to top](#table-of-contents)
 
 ---
@@ -74,11 +77,15 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Setup IDE
 
+- Customization of CCS after installation
+
 [Back to top](#table-of-contents)
 
 ---
 
 ## Import Project
+
+- How to import this project from GitHub to CCS
 
 [Back to top](#table-of-contents)
 
@@ -86,11 +93,15 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Import Libraries
 
+- How to import the necessary library to make the code work, the imports that prof told us
+
 [Back to top](#table-of-contents)
 
 ---
 
 ## Run Project
+
+- How to run the project on CCS
 
 [Back to top](#table-of-contents)
 
@@ -100,7 +111,7 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Software Algorithm
 
---FMS that we developed
+- FMS that we developed
 
 [Back to top](#table-of-contents)
 
@@ -108,7 +119,7 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Menu
 
--- FMS for the menu
+- FMS for the menu
 
 [Back to top](#table-of-contents)
 
@@ -116,14 +127,38 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Connectivity Sensors and MSP432
 
--- Sensors used
--- How they interface and react based on the system
+- Sensors used
+- How they interface and react based on the system
 
 [Back to top](#table-of-contents)
 
 ---
 
-## Future Integrations
+# Work Contribution
+
+<table>
+  <tr>
+    <th>Topic/Section</th>
+    <th>Responsible Member</th>
+    <th>Helper Member</th>
+  </tr>
+  <tr>
+    
+  </tr>
+  ...
+</table>
+
+[Back to top](#table-of-contents)
+
+---
+
+# Future Integrations
+
+- The possible integration the project could have
+• Connection with an ESP32 in order to display the game on another device
+• Sound Emition explaining how the combination gone
+• Theme customization
+...
 
 [Back to top](#table-of-contents)
 
