@@ -122,7 +122,12 @@ void initGame(int16_t dim, int8_t diff, bool doubles, int16_t tents) {
     game.count_tent = 0;                // Initialize current attempt count
     game.tentatives = tents;             // Set the total number of attempts
     allocate_in_Heap_Char(&game.seq_to_guess, 1, game.dim); // Allocate memory for the sequence to guess
-    allocate_in_Heap_Char(&game.chronology, game.tentatives, game.dim * 2); // Allocate memory for attempt history
+    if(game.tentatives!=0) {
+        allocate_in_Heap_Char(&game.chronology, game.tentatives, game.dim * 2); // Allocate memory for attempt history
+    }
+    else {
+        allocate_in_Heap_Char(&game.chronology, 7, game.dim * 2);
+    }
     allocate_in_Heap_Bool(&game.flags, 1, game.dim);  //allocate memory for flags
 }
 

@@ -146,15 +146,11 @@ void fn_ELABORATE_TENT(void){
 //Function for INCREMENT_TENT state
 void fn_INCREMENT_TENT(void){
     incrementTent();  //increment the number of count_tent
-    if(checkIfGameOver()){
-        current_state=GAME_OVER;  //if it's reached the number of tentatives the next state is GAME_OVER
-    }else{
-        switch (check_difficulty()) {  //otherwise a check_difficult must be made
-            case 'A': current_state=EASY_MODE; break; // Transition to the EASY_MODE state
-            case 'B': current_state=MEDIUM_MODE; break;  // Transition to the MEDIUM_MODE state
-            case 'C': current_state=DIFFICULT_MODE; break;  // Transition to the DIFFICULT_MODE state
-            default: exit(1);  //Error rises
-        }
+    switch (check_difficulty()) {  //otherwise a check_difficult must be made
+        case 'A': current_state=EASY_MODE; break; // Transition to the EASY_MODE state
+        case 'B': current_state=MEDIUM_MODE; break;  // Transition to the MEDIUM_MODE state
+        case 'C': current_state=DIFFICULT_MODE; break;  // Transition to the DIFFICULT_MODE state
+        default: exit(1);  //Error rises
     }
 }
 
@@ -188,7 +184,17 @@ void fn_ELABORATE_RESULT(void){
     printLastTentativeInChronology();  //Print the complete output of the last tentative
     displayResultsOnScreen();
     current_state = winCondition() ? WIN : RESET_TENT; // Transition to the next state based on the win condition
-    if(current_state==WIN) {
+    if(game.tentatives!=0) {
+        if(checkIfGameOver()) {
+            current_state=GAME_OVER;
+        }
+    }
+    else {
+        if(game.count_tent>EMERGERCY_TENT) {
+            current_state=GAME_OVER;
+        }
+    }
+    if(current_state==WIN || current_state==GAME_OVER) {
         display_position=END;
     }
 }

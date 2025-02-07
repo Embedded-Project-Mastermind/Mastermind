@@ -123,7 +123,7 @@ Graphics_Button tent_buttons[]={  //TENTATIVE state part
 };
 Graphics_Button text_no_tent={DISABLED, {TENT_DIM+1, 32+2, TENT_DIM*4-1, 32+TENT_DIM-1}, {"NO TRIES", false}};
 Graphics_Button start_button={FOCUSED, {32, 96, 96, 112}, {"START", false}};  //START_GR state part
-Graphics_Button gameover_button={FOCUSED, {24, 96, 104, 112}, {"GAMEOVER!", false}}; //END state part
+Graphics_Button gameover_button={FOCUSED, {24, 96, 104, 112}, {"GAME OVER!", false}}; //END state part
 Graphics_Button win_button={FOCUSED, {32, 96, 96, 122}, {"YOU WIN", false}};
 Graphics_Chronology chronology[]={
       {{DISABLED, {1, 34, 128-1, 72}, {"", false}}, {1, 25, 128, 33}, {"", false},.chrono_circles={
@@ -263,7 +263,7 @@ int main(void) {
                    }
                }*/
                //CASES OF BREAK IN ORDER TO GO TO INTERRUPT
-               if(current_state==WAIT || current_state==WAIT_FULL || current_state==WIN) {
+               if(current_state==WAIT || current_state==WAIT_FULL || current_state==WIN || current_state==GAME_OVER) {
                    exit_gamelogic=true;
                }
                if(exit_gamelogic) {
