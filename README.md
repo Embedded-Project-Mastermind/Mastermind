@@ -22,8 +22,8 @@
 ---
 
 # Introduction
-- Present the purpose of the project and its main functionalities
-- Describe shortly how the MSP432 is used
+- Present the purpose of the project and its main functionalities<br>
+- Describe shortly how the MSP432 is used<br><br>
 
 [Back to top](#table-of-contents)
 
@@ -46,11 +46,11 @@ Mastermind
 
 # Software and Hardware Requirements
 ## Hardware Requirements
-• MSP432P401R + BoosterPack (Link the documentation)
-• Breadboard
-• Buttons for Breadboard
-• Wires
-Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...
+• MSP432P401R + BoosterPack (Link the documentation)<br>
+• Breadboard<br>
+• Buttons for Breadboard<br>
+• Wires<br><br>
+Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...<br>
 <table>
   <tr>
     <th>MSP432 pin</th>
@@ -58,7 +58,7 @@ Suggested connection - Considering that the connections are done in order to avo
   </tr>
   ...
 </table>
-- Description and image of how to build a working pressable button
+- Description and image of how to build a working pressable button<br><br>
 
 [Back to top](#table-of-contents)
 
@@ -67,7 +67,7 @@ Suggested connection - Considering that the connections are done in order to avo
 ## Software Requirements
 • Code Composer Studio (Link)
 
-- Really brief description of what this is
+- Really brief description of what this is<br><br>
 
 [Back to top](#table-of-contents)
 
@@ -77,7 +77,7 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Setup IDE
 
-- Customization of CCS after installation
+- Customization of CCS after installation<br><br>
 
 [Back to top](#table-of-contents)
 
@@ -85,7 +85,7 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Import Project
 
-- How to import this project from GitHub to CCS
+- How to import this project from GitHub to CCS<br><br>
 
 [Back to top](#table-of-contents)
 
@@ -93,7 +93,7 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Import Libraries
 
-- How to import the necessary library to make the code work, the imports that prof told us
+- How to import the necessary library to make the code work, the imports that prof told us<br><br>
 
 [Back to top](#table-of-contents)
 
@@ -101,7 +101,7 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Run Project
 
-- How to run the project on CCS
+- How to run the project on CCS<br><br>
 
 [Back to top](#table-of-contents)
 
@@ -111,7 +111,7 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Software Algorithm
 
-- FMS that we developed
+- FMS that we developed<br><br>
 
 [Back to top](#table-of-contents)
 
@@ -119,7 +119,7 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Menu
 
-- FMS for the menu
+- FMS for the menu<br><br>
 
 [Back to top](#table-of-contents)
 
@@ -127,8 +127,8 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Connectivity Sensors and MSP432
 
-- Sensors used
-- How they interface and react based on the system
+- Sensors used<br>
+- How they interface and react based on the system<br><br>
 
 [Back to top](#table-of-contents)
 
@@ -154,11 +154,11 @@ Suggested connection - Considering that the connections are done in order to avo
 
 # Future Integrations
 
-- The possible integration the project could have
-• Connection with an ESP32 in order to display the game on another device
-• Sound Emition explaining how the combination gone
-• Theme customization
-...
+- The possible integration the project could have<br>
+• Connection with an ESP32 in order to display the game on another device<br>
+• Sound Emition explaining how the combination gone<br>
+• Theme customization<br>
+...<br><br>
 
 [Back to top](#table-of-contents)
 
