@@ -94,7 +94,8 @@ Suggested connection - Considering that the connections are done in order to avo
 ## Import Libraries
 
 - How to import the necessary library to make the code work, the imports that prof told us<br><br>
-
+The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at the following link:
+https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02
 [Back to top](#table-of-contents)
 
 ---
