@@ -29,6 +29,8 @@ void fn_GAME(void) {
     rectangleWithText((Graphics_Rectangle){0, 0, 77, 32}, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
     rectangleWithText((Graphics_Rectangle){79, 0, 128, 16}, FILL_UPPER_RECT, (Graphics_Text){"Attempt",false}, SELECTED_COLOR);
     rectangleWithText((Graphics_Rectangle){79, 16, 128, 32}, FILL_UPPER_RECT, (Graphics_Text){(int8_t*)tentative_text,false}, SELECTED_COLOR);//
+    //
+    //
     rectangleWithText((Graphics_Rectangle){1, 34, 126, 108}, STANDARD_COLOR, (Graphics_Text){{""}, false}, STANDARD_COLOR);
     drawCircles(circles);
     if (game.count_tent==0){
