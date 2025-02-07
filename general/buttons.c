@@ -62,7 +62,7 @@ void buttonConfirmAction() {
                 }
             } break;
         case CHRONOLOGY: break;
-        case END: display_position++; break;
+        case END: break;
         //default: exit(1);
     }
     if (display_position!=GAME) {
