@@ -20,28 +20,12 @@
 
 volatile bool mutex=false;
 
-/***************************************
-*
-* reset_Screen() - it resets all default's
-* colors and clear the display
-* no input
-* no output
-*
-***************************************/
 void reset_Screen(void) {
     Graphics_setFont(&grContext, &g_sFontFixed6x8); //resets the font to the standard one, probably not necessary but anyways it's good practice to put it
     Graphics_setForegroundColor(&grContext, STANDARD_COLOR); //sets foreground to black
     Graphics_setBackgroundColor(&grContext, SELECTED_COLOR); //sets background to white for the borders
     Graphics_clearDisplay(&grContext);
 }
-/***************************************
-*
-* graphics_Init() - Initializes the display
-* and drivers 
-* no input
-* no output
-*
-***************************************/
 void graphics_Init(void) {
     //INITIALIZE DISPLAY AND DRIVERS
     Crystalfontz128x128_Init();
@@ -51,36 +35,12 @@ void graphics_Init(void) {
     Graphics_setFont(&grContext, &g_sFontFixed6x8);
     reset_Screen();
 }
-/***************************************
-*
-* getCenteredX() - gives back the x of the
-* center of the given rectangle
-* input: a rectangle (Graphics_Rectangle)
-* output: the x of the center (int32_t)
-*
-***************************************/
 int32_t getCenteredX(Graphics_Rectangle rect) {
     return (rect.xMax+rect.xMin)/2;
 }
-/***************************************
-*
-* getCenteredY() - gives back the y of the
-* center of the given rectangle
-* input: a rectangle (Graphics_Rectangle)
-* output: the y of the center (int32_t)
-*
-***************************************/
 int32_t getCenteredY(Graphics_Rectangle rect) {
     return (rect.yMax+rect.yMin)/2;
 }
-/***************************************
-*
-* chooseColorRect() - chooses the color of the
-* Button given its current state
-* input: a state for a button (Button_state) and its current color (int32_t)
-* output: the new color (int32_t)
-*
-***************************************/
 int32_t chooseColorRect(Button_State state, int32_t color) {
     int32_t c;
     switch(state) {
@@ -92,14 +52,6 @@ int32_t chooseColorRect(Button_State state, int32_t color) {
     }
     return c;
 }
-/***************************************
-*
-* chooseColorText() - chooses the color of the
-* text on the button given the button's current state
-* input: a state for a button (Button_state) and its current color (int32_t)
-* output: the color for the text(int32_t)
-*
-***************************************/
 int32_t chooseColorText(Button_State state, int32_t color) {
     int32_t c;
     switch(state) {
@@ -111,14 +63,6 @@ int32_t chooseColorText(Button_State state, int32_t color) {
     }
     return c;
 }
-/***************************************
-*
-* focusedhandle() - 
-* 
-* input: a state for a button (Button_state) and its current color (int32_t)
-* output: the color for the text(int32_t)
-*
-***************************************/
 void focusedhandle(Button_State state, Graphics_Rectangle rect, int32_t color) {
     Graphics_drawRectangle(&grContext, &rect);
     Graphics_setForegroundColor(&grContext, BORDER_FOCUSED_COLOR);
@@ -135,14 +79,6 @@ void focusedhandle(Button_State state, Graphics_Rectangle rect, int32_t color) {
     }
     Graphics_fillRectangle(&grContext, &temp);
 }
-/***************************************
-*
-* findSelected() - finds the selected button in
-* all the buttons of an interface
-* input: an aray of buttons (Graphics_Button[]) and the size of the array (int8_t size)
-* output: its position (int8_t) (if no button is selected, -1)
-*
-***************************************/
 int8_t findSelected(Graphics_Button array[], int8_t size) {
     int8_t i;
     for (i=0; i<size; i++) {
@@ -152,14 +88,6 @@ int8_t findSelected(Graphics_Button array[], int8_t size) {
     }
     return -1;
 }
-/***************************************
-*
-* drawButton() - draws the button in the selected
-* position with the right colors given the position
-* input: the button (Graphics_button), it's rectangle and text color (int32_t) and 
-* output: its position (int8_t) (if no button is selected, -1)
-*
-***************************************/
 void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color, int8_t pos_selected) {
     if(button.state==FOCUSED || (button.state==SELECTED && position==pos_selected)) {
         focusedhandle(button.state, button.rect, rect_color);
@@ -173,15 +101,7 @@ void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color, 
     Graphics_drawStringCentered(&grContext, (int8_t *) button.text.string, AUTO_STRING_LENGTH, getCenteredX(button.rect),  getCenteredY(button.rect), button.text.opacity);
 
 }
-/***************************************
-*
-* rectangleWithText() - it draws a rectangle
-* with a text centered in it
-* input: the rectangle with its color (Graphics_Rectangle, int32_t) 
-* with the text and its color (Graphics_Text, int32_t)
-* no output
-*
-***************************************/
+
 void rectangleWithText(Graphics_Rectangle rect, int32_t colorRect, Graphics_Text text, int32_t colorText) {
     if(colorRect!=-1) {
         Graphics_drawRectangle(&grContext, &rect);
@@ -191,15 +111,6 @@ void rectangleWithText(Graphics_Rectangle rect, int32_t colorRect, Graphics_Text
     Graphics_setForegroundColor(&grContext, colorText); //Manual
     Graphics_drawStringCentered(&grContext, (int8_t *)text.string, AUTO_STRING_LENGTH, getCenteredX(rect),  getCenteredY(rect), text.opacity);
 }
-/***************************************
-*
-* handleOut() - it handles the status change of 
-* old focused button (in our position)
-* input: an array of buttons (Graphic_Button[]) with the position
-* of the old selected button (uint8_t) and the size of the array (int8_t)
-* no output
-*
-***************************************/
 void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
     if(display_position==GAME || display_position==CHRONOLOGY){
          if (array[position].state!=SELECTED) {
@@ -228,15 +139,6 @@ void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
              }
     }
 }
-/***************************************
-*
-* handleIn() - it handles the status change of 
-* new focused button (in our position)
-* input: an array of buttons (Graphic_Button[]) with the position
-* of the new selected button (uint8_t) and the size of the array (int8_t)
-* no output
-*
-***************************************/
 void handleIn(Graphics_Button array[], uint8_t position, int8_t size) {
     if (array[position].state!=SELECTED) {
         array[position].state=FOCUSED;
@@ -246,14 +148,6 @@ void handleIn(Graphics_Button array[], uint8_t position, int8_t size) {
         drawButton(array[position], SELECTED_COLOR, STANDARD_COLOR, findSelected(array, size));
     }
 }
-/***************************************
-*
-* hardware_Init() - initializa all the hardware,
-* ports and interrupt include
-* no input
-* no output
-*
-***************************************/
 void hardware_Init() {
     graphics_Init();
     configurePortsInput();
@@ -261,14 +155,7 @@ void hardware_Init() {
     before_ADC();
     _adcInit();
 }
-/***************************************
-*
-* handle_Buttons() - handles the prev
-* and next buttons
-* input
-* no output
-*
-***************************************/
+
 void handle_buttons(Graphics_Button array[]){
     if(position<(sizes[display_position]-2)){
         switch(display_position) {
@@ -313,14 +200,6 @@ void handleDeselection(Graphics_Button array[]) {
     position=sizes[display_position]-1;
     array[position].state=DISABLED;
 }
-/***************************************
-*
-* initArray() - it finalize out buttons' array
-* putting in it the prev and next button and modifing the states
-* input:
-* no output
-*
-***************************************/
 void initArray(Graphics_Button array[], int size) {
     if (position!=size-2) {
         array[size-2]=prevButton;
@@ -335,13 +214,6 @@ void initArray(Graphics_Button array[], int size) {
         array[position].state=FOCUSED;
     }
 }
-/***************************************
-*
-* acquireMutex() - it activates the mutex
-* no input
-* no output
-*
-***************************************/
 void acquireMutex() {
     __disable_irq();
     if(!mutex) {
@@ -350,13 +222,6 @@ void acquireMutex() {
     }
     __enable_irq();
 }
-/***************************************
-*
-* releaseMutex() - it releases the mutex
-* no input
-* no output
-*
-***************************************/
 void releaseMutex() {
     __disable_irq();
     mutex=false;

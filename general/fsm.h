@@ -33,6 +33,7 @@ typedef struct {
     int16_t count;                // Count of user attempts
     int16_t dim;                  // Dimension of user's sequence
     int8_t* seq_user;           // User's guessed sequence
+    int8_t* sol_user;
 } Tentative;
 void acquireMutex(void);
 void releaseMutex(void);

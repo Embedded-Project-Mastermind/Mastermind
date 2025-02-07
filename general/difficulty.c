@@ -16,14 +16,7 @@ Graphics_Text explain[][DIFF_TYPES]={
      {{"- RIGHT POS", false},{"- RIGHT POS", false},{"- RIGHT POS", false}},
      {{"- WRONG POS", false}, {"- WRONG POS", false}, {"", false}}
 };
-/***************************************
-*
-* drawDifficulty() - draws all the
-* buttons of this array
-* no input
-* no output
-*
-***************************************/
+
 void drawDifficulty() {
     int i;
     for (i=0; i<sizes[DIFFICULTY]; i++) {
@@ -35,14 +28,6 @@ void drawDifficulty() {
         }
     }
 }
-/***************************************
-*
-* drawText() - draws all the interface
-* except for the buttons
-* no input
-* no output
-*
-***************************************/
 void drawText() {
     Graphics_Rectangle temp={DIFF_DIM+2, 32+1, 128-1, 96-1};
     Graphics_setForegroundColor(&grContext, STANDARD_COLOR);
@@ -63,15 +48,7 @@ void drawText() {
         }
     }
 }
-/***************************************
-*
-* fn_DIFFICULTY() - calls all needed
-* functions to change the previous interface
-* with the one of the difficulty' state
-* no input
-* no output
-*
-***************************************/
+
 void fn_DIFFICULTY(void) {
     reset_Screen();
     initArray(diff_buttons, sizes[DIFFICULTY]);
@@ -79,15 +56,6 @@ void fn_DIFFICULTY(void) {
     drawDifficulty();
     drawText();
 }
-/***************************************
-*
-* upStick_DIFFICULTY() / douwnStick_DIFFICULTY() / leftStick_DIFFICULTY() / rightStick_DIFFICULTY()
-* they manage what to do when the user
-* moves the stick
-* no input
-* no output
-*
-***************************************/
 void upStick_DIFFICULTY() {
     if(position>0 && position<(sizes[DIFFICULTY]-2)) {
         handleOut(diff_buttons, position, sizes[DIFFICULTY]);
@@ -128,14 +96,7 @@ void rightStick_DIFFICULTY() {
             drawText();
       }
 }
-/***************************************
-*
-* handlePressure_DOUBLES() - manages the changes of
-* our difficulty variable
-* no input
-* no output
-*
-***************************************/
+
 void handlePressure_DIFFICULTY() {
     game.difficulty=diff_buttons[position].text.string[0];
     handleSelection(diff_buttons);
