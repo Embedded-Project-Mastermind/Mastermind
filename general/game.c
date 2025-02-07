@@ -14,13 +14,23 @@ Graphics_Rectangle textRect={1, 70, 126, 106};
 
 void fn_GAME(void) {
     if(!configurationGame) {//TO REMOVE ONLY FOR EXAMPLE
-       // initGame(3, 'A', true, 7); //REMOVE WHEN CONNECTED TO ALL
+        initGame(6, 'A', true, 7); //REMOVE WHEN CONNECTED TO ALL
         configurationGame=true;
         initCircles();
     }
     reset_Screen();
     //DRAW FUNCTION
-    rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
+    //rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
+    char buffer[sizeof(long)*8+1][2];
+    char tentative_text[10]= "";
+    strcat(tentative_text,(char*)ltoa((long)(game.count_tent+1), buffer[0], 10));
+    strcat(tentative_text," of ");
+    strcat(tentative_text,(char*)ltoa((long)game.tentatives, buffer[1], 10));
+    rectangleWithText((Graphics_Rectangle){0, 0, 77, 32}, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
+    rectangleWithText((Graphics_Rectangle){79, 0, 128, 16}, FILL_UPPER_RECT, (Graphics_Text){"Attempt",false}, SELECTED_COLOR);
+    rectangleWithText((Graphics_Rectangle){79, 16, 128, 32}, FILL_UPPER_RECT, (Graphics_Text){(int8_t*)tentative_text,false}, SELECTED_COLOR);//
+    //
+    //
     rectangleWithText((Graphics_Rectangle){1, 34, 126, 108}, STANDARD_COLOR, (Graphics_Text){{""}, false}, STANDARD_COLOR);
     drawCircles(circles);
     if (game.count_tent==0){
@@ -117,7 +127,7 @@ void displayResultsOnScreen() {
     for (i=0; i<game.dim; i++) {
         Graphics_setForegroundColor(&grContext, SELECTED_COLOR);
         Graphics_fillCircle(&grContext, circles[i].x, circles[i].y+YLEVEL_OFFSET, circles[i].radius);
-        int8_t str[2]={tentative.sol_user[i], '\0'};
+        int8_t str[2]={tentative.seq_user[i], '\0'};
         Graphics_setFont(&grContext, &g_sFontCm20);
         rectangleWithText(
             (Graphics_Rectangle){
