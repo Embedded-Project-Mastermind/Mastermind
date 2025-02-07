@@ -23,7 +23,9 @@
 
 # Introduction
 - Present the purpose of the project and its main functionalities<br>
+The purpose of the project is to develop a simple version of th egame Mastermind(...) where the user can choose some settings for the game, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the precence of doubles. Then the game starts and the purpose is to guess the sequence within the number of tries previously chosen. At every sequence inserted the system tells wheter the color is in the right position(O???), is in the sequence but in the wrong position(!???), and if it isn't present at all X???. 
 - Describe shortly how the MSP432 is used<br><br>
+The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit
 
 [Back to top](#table-of-contents)
 
