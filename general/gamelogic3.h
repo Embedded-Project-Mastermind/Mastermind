@@ -26,7 +26,8 @@ void fn_DIFFICULT_MODE(void);  //Function for DIFFICULT_MODE state
 void fn_ELABORATE_RESULT(void); //Function for ELABORATE_RESULT state
 void fn_WIN(void);  //Function for WIN state
 int16_t checkIfTenctOrCorrection(int8_t c); //Function that checks if the sequence is a tenctative or a correction. Returns a int for set the right index in the chronology
-void insertInChronology(int8_t* seq); //Function that inserts sequence or sequence correction in chronology
+void insertInChronologyRes(int8_t* seq); //Function that inserts sequence or sequence correction in chronology
+void insertInChronologyColor(int8_t* seq); //Function that inserts sequence or sequence correction in chronology
 void incrementTent(void); //Function that increases the number of tenctative
 bool checkIfGameOver(void);  //Function that checks if the maximum number of attempts has been reached
 int8_t check_difficulty(void);  //Function that checks the difficulty degree

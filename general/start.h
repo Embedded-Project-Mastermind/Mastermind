@@ -1,5 +1,5 @@
 /*
- * Title: start.h
+ * Title: start.c
  * Primary Authors: Niccolò Cristoforetti
  * Helpers: Matteo Gottardelli
  * Maintainability: Niccolò Cristoforetti

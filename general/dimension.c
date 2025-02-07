@@ -1,5 +1,5 @@
 /*
- * Title: dimension.c
+ * Title: difficulty.c
  * Primary Authors: Alessandro Benassi
  * Helpers: -
  * Maintainability: Alessandro Benassi
