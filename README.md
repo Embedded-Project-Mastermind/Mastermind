@@ -38,41 +38,41 @@ Mastermind
 ┣ general                                  # 
 ┃ ┣ bitmap.h                               # 
 ┃ ┣ buttons.c                              # 
-┃ ┣ buttons.h                              # 
-┃ ┣ chronology.c                           # 
-┃ ┣ chronology.h                           # 
+┃ ┣ buttons.h                              # Headers for buttons.c
+┃ ┣ chronology.c                           # Manage the interface to show on screen the chronology of previous tentatives
+┃ ┣ chronology.h                           # Headers for chronology.c
 ┃ ┣ difficulty.c                           # 
-┃ ┣ difficulty.h                           # 
+┃ ┣ difficulty.h                           # Headers for difficulty.c
 ┃ ┣ dimension.c                            # 
-┃ ┣ dimension.h                            # 
-┃ ┣ doubles.c                              # 
-┃ ┣ doubles.h                              # 
+┃ ┣ dimension.h                            # Headers for dimension.c
+┃ ┣ doubles.c                              # Manage the interface to select 
+┃ ┣ doubles.h                              # Headers for doubles.c
 ┃ ┣ end.c                                  # 
-┃ ┣ end.h                                  # 
+┃ ┣ end.h                                  # Headers for end.c
 ┃ ┣ fsm.h                                  # 
 ┃ ┣ game.c                                 # 
-┃ ┣ game.h                                 # 
+┃ ┣ game.h                                 # Headers for game.c
 ┃ ┣ gamelogic1.c                           # 
-┃ ┣ gamelocig1.h                           # 
+┃ ┣ gamelogic1.h                           # Headers for gamelogic1.c
 ┃ ┣ gamelogic2.c                           # 
-┃ ┣ gamelocig2.h                           # 
+┃ ┣ gamelogic2.h                           # Headers for gamelogic2.c
 ┃ ┣ gamelogic3.c                           # 
-┃ ┣ gamelocig3.h                           # 
+┃ ┣ gamelogic3.h                           # Headers for gamelogic3.c
 ┃ ┣ graphics.h                             # 
 ┃ ┣ implementations.c                      # 
-┃ ┣ implementations.h                      # 
+┃ ┣ implementations.h                      # Headers for implementations.c
 ┃ ┣ info.c                                 # 
-┃ ┣ info.h                                 # 
+┃ ┣ info.h                                 # Headers for info.c
 ┃ ┣ input.c                                # 
-┃ ┣ input.h                                # 
+┃ ┣ input.h                                # Headers for input.c
 ┃ ┣ joystick.c                             # 
-┃ ┣ joystick.h                             # 
-┃ ┣ main.c                                 # 
+┃ ┣ joystick.h                             # Headers for joystick.c
+┃ ┣ main.c                                 # Calls the various states in out state machine
 ┃ ┣ read_me.c                              # 
 ┃ ┣ start.c                                # 
-┃ ┣ start.h                                # 
+┃ ┣ start.h                                # Headers for start.c
 ┃ ┣ tentatives.c                           # 
-┃ ┗ tentatives.h                           # 
+┃ ┗ tentatives.h                           # Headers for tentatives.c
 ┣ src                                      # 
 ┃ ┣ fsm.h                                  # 
 ┃ ┣ gamelogic1.c                           # 
