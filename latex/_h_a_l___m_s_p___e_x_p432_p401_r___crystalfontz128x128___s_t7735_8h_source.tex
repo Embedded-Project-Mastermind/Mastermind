@@ -1,0 +1,101 @@
+\doxysection{HAL\+\_\+\+MSP\+\_\+\+EXP432\+P401\+R\+\_\+\+Crystalfontz128x128\+\_\+\+ST7735.\+h}
+\hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_source}{}\label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_source}\index{LcdDriver/HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{LcdDriver/HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ -\/-\/COPYRIGHT-\/-\/,BSD}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2015,\ Texas\ Instruments\ Incorporated}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ All\ rights\ reserved.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ are\ met:}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ *\ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ *\ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ distribution.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ *\ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ "{}AS\ IS"{}}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ LIMITED\ TO,}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR\ A\ PARTICULAR}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ OWNER\ OR}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ SPECIAL,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ LIMITED\ TO,}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,\ DATA,\ OR\ PROFITS;}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY\ THEORY\ OF\ LIABILITY,}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ (INCLUDING\ NEGLIGENCE\ OR}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ OF\ THIS\ SOFTWARE,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ -\/-\//COPYRIGHT-\/-\/*/}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h\ -\/}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ Hardware\ abstraction\ layer\ for\ using\ the\ Educational\ Boosterpack's}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ Crystalfontz128x128\ LCD\ with\ MSP-\/EXP432P401R\ LaunchPad}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_HAL\_MSP\_EXP432P401R\_CRYSTALFONTZLCD\_H\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_HAL\_MSP\_EXP432P401R\_CRYSTALFONTZLCD\_H\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ <ti/devices/msp432p4xx/driverlib/driverlib.h>}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ User\ Configuration\ for\ the\ LCD\ Driver}}
+\DoxyCodeLine{00049\ \textcolor{comment}{//}}
+\DoxyCodeLine{00050\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ System\ clock\ speed\ (in\ Hz)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ LCD\_SYSTEM\_CLOCK\_SPEED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 48000000}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ SPI\ clock\ speed\ (in\ Hz)}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ LCD\_SPI\_CLOCK\_SPEED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 16000000}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ Ports\ from\ MSP432\ connected\ to\ LCD}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ LCD\_SCK\_PORT\ \ \ \ \ \ \ \ \ \ GPIO\_PORT\_P1}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ LCD\_SCK\_PIN\_FUNCTION\ \ GPIO\_PRIMARY\_MODULE\_FUNCTION}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ LCD\_MOSI\_PORT\ \ \ \ \ \ \ \ \ GPIO\_PORT\_P1}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ LCD\_MOSI\_PIN\_FUNCTION\ GPIO\_PRIMARY\_MODULE\_FUNCTION}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ LCD\_RST\_PORT\ \ \ \ \ \ \ \ \ \ GPIO\_PORT\_P5}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ LCD\_CS\_PORT\ \ \ \ \ \ \ \ \ \ \ GPIO\_PORT\_P5}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ LCD\_DC\_PORT\ \ \ \ \ \ \ \ \ \ \ GPIO\_PORT\_P3}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ Pins\ from\ MSP432\ connected\ to\ LCD}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ LCD\_SCK\_PIN\ \ \ \ \ \ \ \ \ \ \ GPIO\_PIN5}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ LCD\_MOSI\_PIN\ \ \ \ \ \ \ \ \ \ GPIO\_PIN6}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ LCD\_RST\_PIN\ \ \ \ \ \ \ \ \ \ \ GPIO\_PIN7}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ LCD\_CS\_PIN\ \ \ \ \ \ \ \ \ \ \ \ GPIO\_PIN0}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ LCD\_DC\_PIN\ \ \ \ \ \ \ \ \ \ \ \ GPIO\_PIN7}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{//\ Definition\ of\ USCI\ base\ address\ to\ be\ used\ for\ SPI\ communication}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ LCD\_EUSCI\_BASE\ \ \ \ \ \ \ \ EUSCI\_B0\_BASE}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00077\ \textcolor{comment}{//}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//\ Prototypes\ for\ the\ globals\ exported\ by\ this\ driver.}}
+\DoxyCodeLine{00079\ \textcolor{comment}{//}}
+\DoxyCodeLine{00080\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00081\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ HAL\_LCD\_writeCommand(uint8\_t\ command);}
+\DoxyCodeLine{00082\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ HAL\_LCD\_writeData(uint8\_t\ data);}
+\DoxyCodeLine{00083\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ HAL\_LCD\_PortInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00084\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ HAL\_LCD\_SpiInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ Custom\ \_\_delay\_cycles()\ for\ non\ CCS\ Compiler}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#if\ !defined(\ \_\_TI\_ARM\_\_\ )}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#undef\ \_\_delay\_cycles}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ \_\_delay\_cycles(x)\ \ \ \ \ SysCtlDelay(x)}}
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{void}\ SysCtlDelay(uint32\_t);}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ HAL\_LCD\_delay(x)\ \ \ \ \ \ \_\_delay\_cycles(x\ *\ 48)}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HAL\_MSP\_EXP432P401R\_CRYSTALFONTZ128X128\_ST7735\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -7,7 +7,12 @@
  */
 #include "dimension.h"
 #include "implementations.h"
-
+/**
+ * @brief draws buttons
+ * @return TODO: Describe return value.
+ * @author Alessandro Benassi (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void drawDimension() {
     int i;
     for (i=0; i<sizes[DIMENSION]; i++) {
@@ -21,7 +26,12 @@ void drawDimension() {
         }
     }
 }
-
+/**
+ * @brief manages the font dimension for the buttons
+ * @return void
+ * @author Alessandro Benassi (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void handleFont(){
     if (position<sizes[DIMENSION]-2) {
         Graphics_setFont(&grContext, &g_sFontCm20);
@@ -30,7 +40,12 @@ void handleFont(){
         Graphics_setFont(&grContext, &g_sFontFixed6x8);
     }
 }
-
+/**
+ * @brief general function for scenario drawing
+ * @return void
+ * @author Alessandro Benassi (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void fn_DIMENSION(void) {
     reset_Screen();  //screen reset function
     initArray(dim_buttons, sizes[DIMENSION]);
@@ -38,7 +53,12 @@ void fn_DIMENSION(void) {
     drawDimension();
     //FOLLOWING POSITION
 }
-
+/**
+ * @brief handles the up movement of the stick
+ * @return void
+ * @author Alessandro Benassi (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void upStick_DIMENSION(){
     if(position>1){
         handleFont();
@@ -48,7 +68,12 @@ void upStick_DIMENSION(){
         handleIn(dim_buttons, position, sizes[DIMENSION]);
     }
 }
-
+/**
+ * @brief handles the down movement of the stick
+ * @return void
+ * @author Alessandro Benassi (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void downStick_DIMENSION(){
     if(position<3){
             handleFont();
@@ -65,7 +90,12 @@ void downStick_DIMENSION(){
         handleIn(dim_buttons, position, sizes[DIMENSION]);
     }
 }
-
+/**
+ * @brief handles the down movement of the stick
+ * @return void
+ * @author Alessandro Benassi (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void leftStick_DIMENSION(){
     //int num=position%2;
     if((position%2)==1){
@@ -76,7 +106,12 @@ void leftStick_DIMENSION(){
         handleIn(dim_buttons, position, sizes[DIMENSION]);
     }
 }
-
+/**
+ * @brief handles the right movement of the stick
+ * @return void
+ * @author Alessandro Benassi (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void rightStick_DIMENSION(){
     //int num=position%2;
     if((position%2)==0){
@@ -96,6 +131,12 @@ void rightStick_DIMENSION(){
        }
      }
 }
+/**
+ * @brief extern declaretion
+ * @return void
+ * @author Alessandro Benassi (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void handlePressure_DIMENSION() {
     game.dim=atoi((char*)dim_buttons[position].text.string);
     handleSelection(dim_buttons);

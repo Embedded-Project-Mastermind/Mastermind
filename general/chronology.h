@@ -1,8 +1,8 @@
 /*
  * Title: chronology.h
- * Primary Authors: NiccolÃ² Cristoforetti
+ * Primary Authors: Niccolò Cristoforetti
  * Helpers: Matteo Gottardelli
- * Maintainability: NiccolÃ² Cristoforetti, Matteo Gottardelli
+ * Maintainability: Niccolò Cristoforetti, Matteo Gottardelli
  * Date Creation: 31 ott 2024
  */
 

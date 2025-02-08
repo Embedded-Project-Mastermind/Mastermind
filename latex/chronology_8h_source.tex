@@ -1,0 +1,50 @@
+\doxysection{chronology.\+h}
+\hypertarget{chronology_8h_source}{}\label{chronology_8h_source}\index{general/chronology.h@{general/chronology.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ chronology.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Primary\ Authors:\ NiccolÃ²\ Cristoforetti}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Helpers:\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Maintainability:\ NiccolÃ²\ Cristoforetti,\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Date\ Creation:\ 31\ ott\ 2024}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ CHRONOLOGY\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ CHRONOLOGY\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}graphics.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}implementations.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}input.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}game.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ BASIC\_OFFSET\ 15}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ RADIUS\ 6}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ MAX\_DIM\ 6}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//extern\ bool\ configurationGame;}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ other\_buttons[];}
+\DoxyCodeLine{00021\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ return\_to;}
+\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ int16\_t\ pos\_chronology;\ \textcolor{comment}{//var\ for\ manage\ the\ tent\ outputs\ after\ having\ overtaken\ three\ tentative}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graphics___chronology}{Graphics\_Chronology}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ button;}
+\DoxyCodeLine{00026\ \ \ \ \ Graphics\_Rectangle\ num\_rect;}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ num;}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_graphics___circle}{Graphics\_Circle}}\ chrono\_circles[MAX\_DIM];}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ chrono\_buttons[MAX\_DIM];}
+\DoxyCodeLine{00030\ \}\ \mbox{\hyperlink{struct_graphics___chronology}{Graphics\_Chronology}};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___chronology}{Graphics\_Chronology}}\ chronology[];}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ drawChronology(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ fn\_CHRONOLOGY(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ populateChronologyCircles(int16\_t\ offset,\ int16\_t\ radius,\ int16\_t\ value,\ int16\_t\ index);}
+\DoxyCodeLine{00035\ int16\_t\ char\_Conversion\_to\_Int(int8\_t\ index);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ populateChronologyButtons(int16\_t\ value,\ int16\_t\ index);}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ drawPastResults(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}*\ buttons);}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ upStick\_CHRONOLOGY();}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ downStick\_CHRONOLOGY();}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ rightStick\_CHRONOLOGY();}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ updatePos();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CHRONOLOGY\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

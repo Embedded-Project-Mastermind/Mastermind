@@ -1,0 +1,43 @@
+\doxysection{joystick.\+h}
+\hypertarget{joystick_8h_source}{}\label{joystick_8h_source}\index{general/joystick.h@{general/joystick.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ joystick.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Primary\ Authors:\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Helpers:\ -\/}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Maintainability:\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Date\ Creation:\ 27\ ott\ 2024}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ JOYSTICK\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ JOYSTICK\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}graphics.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ ADC14\_CTL0\_SREF\_VREF\_PLUS\_AVCC\ \ (0x00000000)\ }\textcolor{comment}{//\ V+\ =\ AVcc,\ V-\/\ =\ AVss}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ ADC14\_CTL0\_SHT\_64\_CLK\ \ \ \ \ \ \ \ \ \ \ \ \ (0x00000000)\ }\textcolor{comment}{//\ Sample\ time\ 64\ ADC\ clocks}}
+\DoxyCodeLine{00014\ \textcolor{comment}{/*\ ADC\ results\ buffer\ */}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{static}\ uint16\_t\ resultsBuffer[2];}
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{UP,\ DOWN,\ LEFT,\ RIGHT,\ CENTER\}\ Move;}
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ UP\ -\/\ Y>16200}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ DOWN\ -\/\ Y<200}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ LEFT\ -\/\ X<200}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ RIGHT\ -\/\ X\ >15500}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ CENTER\ -\/\ DEFAULT}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ upfunctions();}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ downfunctions();}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ leftfunctions();}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ rightfunctions();}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ Timer\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ ADC\_StartConversion(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ ADC\_EnableInterrupts(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ setupPriorities();}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ NavigateMenu(Move\ direction);}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \_adcInit();}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ before\_ADC();}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ initHW();}
+\DoxyCodeLine{00035\ Move\ findDirection(uint16\_t\ x,\ uint16\_t\ y);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ delay\_ms(uint32\_t\ milliseconds);}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ JOYSTICK\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

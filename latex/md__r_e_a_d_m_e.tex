@@ -1,0 +1,239 @@
+\chapter{Mastermind}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Mastermind@{Mastermind}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Table of Contents}{Table of Contents}}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Introduction
+\item Project Layout
+\item Software and Hardware Requirements
+\begin{DoxyItemize}
+\item Hardware Requirements
+\item Software Requirements
+\end{DoxyItemize}
+\item Installation and Configuration
+\begin{DoxyItemize}
+\item Setup IDE
+\item Import Project
+\item Import Libraries
+\item Run Project
+\end{DoxyItemize}
+\item Code Overview
+\begin{DoxyItemize}
+\item Software Algorithm
+\item Menu
+\item Connectivity Sensors and MPS432
+\end{DoxyItemize}
+\item Work Contribution
+\item Future Integrations
+\item Contacts
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Present the purpose of the project and its main functionalities~\newline
+ The purpose of the project is to develop a simple version of th egame Mastermind(...) where the user can choose some settings for the game, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the precence of doubles. Then the game starts and the purpose is to guess the sequence within the number of tries previously chosen. At every sequence inserted the system tells wheter the color is in the right position(O???), is in the sequence but in the wrong position(!???), and if it isn\textquotesingle{}t present at all X???.
+\item Describe shortly how the MSP432 is used~\newline
+~\newline
+ The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit
+\end{DoxyItemize}
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Project Layout}{Project Layout}}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Mastermind}
+\DoxyCodeLine{┣\ general}
+\DoxyCodeLine{┃\ ┗\ ...}
+\DoxyCodeLine{┣\ src}
+\DoxyCodeLine{┃\ ┗\ ...}
+\DoxyCodeLine{┗\ ...}
+
+\end{DoxyCode}
+
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{Software and Hardware Requirements}{Software and Hardware Requirements}}\label{md__r_e_a_d_m_e_autotoc_md7}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{\texorpdfstring{Hardware Requirements}{Hardware Requirements}}\label{md__r_e_a_d_m_e_autotoc_md8}
+• MSP432\+P401R + Booster\+Pack (Link the documentation)~\newline
+ • Breadboard~\newline
+ • Buttons for Breadboard~\newline
+ • Wires~\newline
+~\newline
+ Suggested connection -\/ Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.\+c, function ... lines...~\newline
+ \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ MSP432 pin }&\cellcolor{\tableheadbgcolor}\textbf{ Color  ... }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ MSP432 pin }&\cellcolor{\tableheadbgcolor}\textbf{ Color  ... }\\\cline{1-2}
+\endhead
+\end{longtabu}
+
+\begin{DoxyItemize}
+\item Description and image of how to build a working pressable button~\newline
+~\newline
+
+\end{DoxyItemize}
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{Software Requirements}{Software Requirements}}\label{md__r_e_a_d_m_e_autotoc_md10}
+• Code Composer Studio (Link)
+
+
+\begin{DoxyItemize}
+\item Really brief description of what this is~\newline
+~\newline
+
+\end{DoxyItemize}
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysection{\texorpdfstring{Installation and Configuration}{Installation and Configuration}}\label{md__r_e_a_d_m_e_autotoc_md12}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{\texorpdfstring{Setup IDE}{Setup IDE}}\label{md__r_e_a_d_m_e_autotoc_md13}
+
+\begin{DoxyItemize}
+\item Customization of CCS after installation~\newline
+~\newline
+
+\end{DoxyItemize}
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysubsection{\texorpdfstring{Import Project}{Import Project}}\label{md__r_e_a_d_m_e_autotoc_md15}
+
+\begin{DoxyItemize}
+\item How to import this project from Git\+Hub to CCS~\newline
+~\newline
+
+\end{DoxyItemize}
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysubsection{\texorpdfstring{Import Libraries}{Import Libraries}}\label{md__r_e_a_d_m_e_autotoc_md17}
+
+\begin{DoxyItemize}
+\item How to import the necessary library to make the code work, the imports that prof told us~\newline
+~\newline
+ The SIMPLELINK-\/\+MSP432-\/\+SDK library is needed to run the program. Download it at the following link\+:
+\end{DoxyItemize}
+
+\href{https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02}{\texttt{ SIMPLELINK-\/\+MSP432-\/\+SDK Download}}
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md19}{}\doxysubsection{\texorpdfstring{Run Project}{Run Project}}\label{md__r_e_a_d_m_e_autotoc_md19}
+
+\begin{DoxyItemize}
+\item How to run the project on CCS~\newline
+~\newline
+
+\end{DoxyItemize}
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md21}{}\doxysection{\texorpdfstring{Code Overview}{Code Overview}}\label{md__r_e_a_d_m_e_autotoc_md21}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md22}{}\doxysubsection{\texorpdfstring{Software Algorithm}{Software Algorithm}}\label{md__r_e_a_d_m_e_autotoc_md22}
+
+\begin{DoxyItemize}
+\item FMS that we developed~\newline
+~\newline
+
+\end{DoxyItemize}
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md24}{}\doxysubsection{\texorpdfstring{Menu}{Menu}}\label{md__r_e_a_d_m_e_autotoc_md24}
+
+\begin{DoxyItemize}
+\item FMS for the menu~\newline
+~\newline
+
+\end{DoxyItemize}
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md26}{}\doxysubsection{\texorpdfstring{Connectivity Sensors and MSP432}{Connectivity Sensors and MSP432}}\label{md__r_e_a_d_m_e_autotoc_md26}
+
+\begin{DoxyItemize}
+\item Sensors used~\newline
+
+\item How they interface and react based on the system~\newline
+~\newline
+
+\end{DoxyItemize}
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md28}{}\doxysection{\texorpdfstring{Work Contribution}{Work Contribution}}\label{md__r_e_a_d_m_e_autotoc_md28}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Topic/\+Section }&\cellcolor{\tableheadbgcolor}\textbf{ Responsible Member }&\cellcolor{\tableheadbgcolor}\textbf{ Helper Member  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Topic/\+Section }&\cellcolor{\tableheadbgcolor}\textbf{ Responsible Member }&\cellcolor{\tableheadbgcolor}\textbf{ Helper Member  }\\\cline{1-3}
+\endhead
+\\\cline{1-3}
+\end{longtabu}
+
+
+... 
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md30}{}\doxysection{\texorpdfstring{Future Integrations}{Future Integrations}}\label{md__r_e_a_d_m_e_autotoc_md30}
+
+\begin{DoxyItemize}
+\item The possible integration the project could have~\newline
+ • Connection with an ESP32 in order to display the game on another device~\newline
+ • Sound Emition explaining how the combination gone~\newline
+ • Theme customization~\newline
+ ...~\newline
+~\newline
+
+\end{DoxyItemize}
+
+Back to top
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md32}{}\doxysection{\texorpdfstring{Contacts}{Contacts}}\label{md__r_e_a_d_m_e_autotoc_md32}
+
+\begin{DoxyItemize}
+\item {\bfseries{Alessandro Benassi}} ~\newline
+ Email\+: \href{mailto:name.surname@email.com}{\texttt{ alessandro.\+benassi@studenti.\+unitn.\+it}}
+\item {\bfseries{Daniele Calvo}} ~\newline
+ Email\+: \href{mailto:name.surname@email.com}{\texttt{ daniele.\+calvo@studenti.\+unitn.\+it}}
+\item {\bfseries{Niccolò Cristoforetti}} ~\newline
+ Email\+: \href{mailto:name.surname@email.com}{\texttt{ n.\+cristoforetti@studenti.\+unitn.\+it}}
+\item {\bfseries{Matteo Gottardelli}} ~\newline
+ Email\+: \href{mailto:name.surname@email.com}{\texttt{ matteo.\+gottardelli@studenti.\+unitn.\+it}}
+\end{DoxyItemize}
+
+Back to top
+
+\DoxyHorRuler{0}
+ 

@@ -9,6 +9,13 @@
 #include "implementations.h"
 #include "graphics.h"
 
+/**
+ * @brief TODO: Describe function.
+ * @param elems TODO: Describe parameter.
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-11-07
+ */
 void drawEnd(int elems) {
     if(current_state==WIN){
         drawButton(win_button, STANDARD_COLOR, SELECTED_COLOR, -1);
@@ -31,7 +38,12 @@ void drawEnd(int elems) {
      }
 }
 
-
+/**
+ * @brief TODO: Describe function.
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-11-07
+ */
 void fn_END(void) {
     reset_Screen();
     Graphics_setBackgroundColor(&grContext, STANDARD_COLOR);
