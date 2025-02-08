@@ -210,6 +210,86 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>X</th>
     <th>X</th>
   </tr>
+  <tr>
+    <th>gamelogic1.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>-</th>
+    <th>Gottardelli Matteo</th>
+    <th>?</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>gamelogic2.c</th>
+    <th>Benassi Alessandro & Calvo Daniele</th>
+    <th>Gottardelli Matteo</th>
+    <th>Benassi Alessandro</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>gamelogic3.c</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>-</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>implementations.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>Gottardelli Matteo</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>info.c</th>
+    <th>Calvo Daniele</th>
+    <th>Gottardelli Matteo</th>
+    <th>Gottardelli Matteo</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+   <tr>
+    <th>input.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>Benassi Alessandro</th>
+    <th>Gottardelli Matteo</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>joystick.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>-</th>
+    <th>Gottardelli Matteo</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>main.c</th>
+    <th>All</th>
+    <th>-</th>
+    <th>All</th>
+    <th>!</th>
+    <th>NONE</th>
+  </tr>
+  <tr>
+    <th>start.c</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>Gottardelli Matteo</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>tentatives.c</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>-</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
 </table>
 
 [Back to top](#table-of-contents)
