@@ -238,7 +238,7 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>implementations.c</th>
     <th>Gottardelli Matteo</th>
     <th>Cristoforetti Niccolò</th>
-    <th>Gottardelli Matteo</th>
+    <th>Calvo Daniele</th>
     <th>!</th>
     <th>!</th>
   </tr>
