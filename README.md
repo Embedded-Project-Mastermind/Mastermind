@@ -140,7 +140,10 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 ---
 
 # Work Contribution
-
+X - Complete
+? - To finish
+! - To start
+This is referred to the TODO section, search TODO in those files and fill the missing information<br>
 <table>
   <tr>
     <th>Topic/Section</th>
@@ -155,14 +158,16 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
     <th>Gottardelli Matteo</th>
     <th>Benassi Alessandro</th>
     <th>Gottardelli Matteo</th>
-    <th>- [X]</th>
-    <th>- [X]</th>
+    <th>X</th>
+    <th>X</th>
   </tr>
   <tr>
     <th>chronology.c</th>
     <th>Cristoforetti Niccolò</th>
     <th>Gottardelli Matteo</th>
     <th>Gottardelli Matteo & Cristoforetti Niccolò</th>
+    <th>?</th>
+    <th>!</th>
   </tr>
   
   ...
