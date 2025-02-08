@@ -11,11 +11,28 @@
 int8_t temp;
 int16_t value;
 bool selection;
-bool is_empty(void){     //tentative.count=null, then the array is empty (true, if not empty false) 
+
+/**
+ * @brief returns if the user’s sequence is empty or not
+ * @return bool
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi (Maintainer Member)
+ * @date 2024-09-27
+ */
+bool is_empty(void){ 
      return (tentative.count == 0);
 }
 
-bool is_full(void){     //If count=dim, then array is full (true, if != then false)
+/**
+ * @brief returns if the user’s sequence is full or not
+ * @return bool
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi (Maintainer Member)
+ * @date 2024-09-27
+ */
+bool is_full(void){
      return (tentative.count  == tentative.dim);
 }
 
@@ -79,7 +96,15 @@ void wait_full(void) {  //wait function when the array is full
 //not useful    value = read_input(OPTIONS);   //gets the value from the keyboard
 }*/
 
-void insert_color(){ // cambiato da char color a nulla perche uso la variabile globale in game.h
+/**
+ * @brief inserts the selected color into the user's sequence if space is available
+ * @return void
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi (Maintainer Member)
+ * @date 2024-09-27
+ */
+void insert_color(){
     if(!(is_full())){
         tentative.seq_user[tentative.count]=int_Conversion_to_Char(color_selected);
         circles[tentative.count].color=selectColor(color_selected);
@@ -91,6 +116,14 @@ void insert_color(){ // cambiato da char color a nulla perche uso la variabile g
     print_sequence(tentative.seq_user, tentative.count);
 }
 
+/**
+ * @brief deletes the last color into the user's sequence if it is not empty
+ * @return void
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi (Maintainer Member)
+ * @date 2024-09-27
+ */
 void eliminate_color(void){
      if(!(is_empty())){
      tentative.count -= 1;
@@ -102,7 +135,7 @@ void eliminate_color(void){
      print_sequence(tentative.seq_user, tentative.count);
 }
 
-/*
+/* 
 bool elaborate(void){  
      selection = false;   //set boolean variable selection to false to display the correct text
      value = read_input(COLORS);   //gets input from keyboard as an integer
@@ -114,7 +147,6 @@ bool elaborate(void){
 void fn_WAIT(void) {
 //  wait_handle();  //actions of wait state
 //  handle_wait(value);     //calls handle_wait(), which handles the input and redirects to the correct state
-
 }
 
 void fn_ELABORATE(void){ //da rimuovere
