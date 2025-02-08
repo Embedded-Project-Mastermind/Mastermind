@@ -35,11 +35,54 @@ The MSP432 board is used to take the input of 8 buttons setted up on an external
 
 ```
 Mastermind
-┣ general
-┃ ┗ ...
-┣ src
-┃ ┗ ...
-┗ ...
+┣ general                                  # 
+┃ ┣ bitmap.h                               # 
+┃ ┣ buttons.c                              # 
+┃ ┣ buttons.h                              # 
+┃ ┣ chronology.c                           # 
+┃ ┣ chronology.h                           # 
+┃ ┣ difficulty.c                           # 
+┃ ┣ difficulty.h                           # 
+┃ ┣ dimension.c                            # 
+┃ ┣ dimension.h                            # 
+┃ ┣ doubles.c                              # 
+┃ ┣ doubles.h                              # 
+┃ ┣ end.c                                  # 
+┃ ┣ end.h                                  # 
+┃ ┣ fsm.h                                  # 
+┃ ┣ game.c                                 # 
+┃ ┣ game.h                                 # 
+┃ ┣ gamelogic1.c                           # 
+┃ ┣ gamelocig1.h                           # 
+┃ ┣ gamelogic2.c                           # 
+┃ ┣ gamelocig2.h                           # 
+┃ ┣ gamelogic3.c                           # 
+┃ ┣ gamelocig3.h                           # 
+┃ ┣ graphics.h                             # 
+┃ ┣ implementations.c                      # 
+┃ ┣ implementations.h                      # 
+┃ ┣ info.c                                 # 
+┃ ┣ info.h                                 # 
+┃ ┣ input.c                                # 
+┃ ┣ input.h                                # 
+┃ ┣ joystick.c                             # 
+┃ ┣ joystick.h                             # 
+┃ ┣ main.c                                 # 
+┃ ┣ read_me.c                              # 
+┃ ┣ start.c                                # 
+┃ ┣ start.h                                # 
+┃ ┣ tentatives.c                           # 
+┃ ┗ tentatives.h                           # 
+┣ src                                      # 
+┃ ┣ fsm.h                                  # 
+┃ ┣ gamelogic1.c                           # 
+┃ ┣ gamelogic1.h                           # 
+┃ ┣ gamelogic2.c                           # 
+┃ ┣ gamelogic2.h                           # 
+┃ ┣ gamelogic3.c                           # 
+┃ ┣ gamelogic3.h                           # 
+┃ ┗ main.c                                 # 
+┗ 
 ```
 
 [Back to top](#table-of-contents)
@@ -79,7 +122,13 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Setup IDE
 
-- Customization of CCS after installation<br><br>
+After the installation of CCS, version 12.8.0, open the file `ccs_setup_12.8.0.00012.exe`.
+On the opened window, press `next` one time. Accept the agreement and press `next` again four times.
+Then, in `Select Components` select `SimpleLink™ MSP432™ low power + performance MCUs`.
+In `Install debug probes` leave it as it clicking `next`.
+To conclude, press `next` until the launcher begins the download.
+
+(da finire)
 
 [Back to top](#table-of-contents)
 
