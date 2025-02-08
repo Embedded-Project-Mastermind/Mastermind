@@ -35,17 +35,17 @@ The MSP432 board is used to take the input of 8 buttons setted up on an external
 
 ```
 Mastermind
-┣ general                                  # 
+┣ general                                  # All the source code
 ┃ ┣ bitmap.h                               # 
-┃ ┣ buttons.c                              # 
+┃ ┣ buttons.c                              # Manage physical buttons + "back" and "next" buttons
 ┃ ┣ buttons.h                              # Headers for buttons.c
 ┃ ┣ chronology.c                           # Manage the interface to show on screen the chronology of previous tentatives
 ┃ ┣ chronology.h                           # Headers for chronology.c
-┃ ┣ difficulty.c                           # 
+┃ ┣ difficulty.c                           # Manage the interface to select the difficulty of the game (from easy to hard)
 ┃ ┣ difficulty.h                           # Headers for difficulty.c
-┃ ┣ dimension.c                            # 
+┃ ┣ dimension.c                            # Manage the interface to select 
 ┃ ┣ dimension.h                            # Headers for dimension.c
-┃ ┣ doubles.c                              # Manage the interface to select 
+┃ ┣ doubles.c                              # Manage the interface to able/disable doubles in the sequence
 ┃ ┣ doubles.h                              # Headers for doubles.c
 ┃ ┣ end.c                                  # 
 ┃ ┣ end.h                                  # Headers for end.c
@@ -59,9 +59,9 @@ Mastermind
 ┃ ┣ gamelogic3.c                           # 
 ┃ ┣ gamelogic3.h                           # Headers for gamelogic3.c
 ┃ ┣ graphics.h                             # 
-┃ ┣ implementations.c                      # 
+┃ ┣ implementations.c                      # Basic functions for the right functioning of all the interfaces
 ┃ ┣ implementations.h                      # Headers for implementations.c
-┃ ┣ info.c                                 # 
+┃ ┣ info.c                                 # Manage the interface that summarize all the game characteristics
 ┃ ┣ info.h                                 # Headers for info.c
 ┃ ┣ input.c                                # 
 ┃ ┣ input.h                                # Headers for input.c
@@ -71,7 +71,7 @@ Mastermind
 ┃ ┣ read_me.c                              # 
 ┃ ┣ start.c                                # 
 ┃ ┣ start.h                                # Headers for start.c
-┃ ┣ tentatives.c                           # 
+┃ ┣ tentatives.c                           # Manage the interface to select the number of tentatives you want to have to guess the sequence
 ┃ ┗ tentatives.h                           # Headers for tentatives.c
 ┣ src                                      # 
 ┃ ┣ fsm.h                                  # 
