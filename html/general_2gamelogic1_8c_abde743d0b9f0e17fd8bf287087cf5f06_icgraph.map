@@ -1,0 +1,21 @@
+<map id="deallocate_Int" name="deallocate_Int">
+<area shape="rect" id="Node000001" title="Deallocate memory for an integer array setting then that allocation to null for being sure." alt="" coords="659,81,762,107"/>
+<area shape="rect" id="Node000002" href="$src_2gamelogic1_8c.html#a9f10db332961593d68a369dae823491f" title=" " alt="" coords="454,5,598,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="666,77,610,53,563,34,565,29,612,48,668,72"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a69fca538b5b36e3923f0f33c8f62f262" title="Allocation for an integer array, ensuring that it is not already allocated." alt="" coords="454,107,598,132"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="644,106,599,112,598,107,644,101"/>
+<area shape="rect" id="Node000008" href="$src_2gamelogic1_8c.html#a8b4ee684b1ca644f070b168b3c6fb54c" title=" " alt="" coords="441,156,611,182"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="675,117,612,147,581,158,579,153,610,142,672,112"/>
+<area shape="rect" id="Node000009" href="$general_2gamelogic1_8c.html#a2700fd085c33e4ef923ab449276a578f" title="Analysis and parsing of the integer sequence to the char one, with an appropriate deallocation of the..." alt="" coords="218,56,388,82"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="644,93,389,77,389,71,644,87"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a88ad662207fa03ea53b1f6be039fa066" title="Generation of a random key that allows the presence of duplicates colors." alt="" coords="219,155,388,180"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="449,139,367,157,366,151,447,134"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#a3abce2284f44af7203a666506074b873" title="Generation of a random key that doesn&#39;t allow the presence of duplicates colors." alt="" coords="214,105,393,131"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="439,122,394,121,394,116,439,116"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a7b7577b178ce9de2be9e5ab17053f6e5" title=" " alt="" coords="14,131,157,156"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="204,159,157,154,158,149,204,154"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#a6dfdeacaef5a5d37960e2575015b6516" title=" " alt="" coords="5,69,166,95"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="206,105,166,98,167,93,207,100"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="235,89,215,95,118,133,116,128,213,90,233,84"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="202,78,166,80,166,75,202,72"/>
+</map>

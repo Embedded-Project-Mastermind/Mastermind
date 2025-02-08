@@ -1,0 +1,102 @@
+\doxysection{src/main.c File Reference}
+\hypertarget{src_2main_8c}{}\label{src_2main_8c}\index{src/main.c@{src/main.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}gamelogic1.\+h"{}}\newline
+{\ttfamily \#include "{}gamelogic2.\+h"{}}\newline
+{\ttfamily \#include "{}gamelogic3.\+h"{}}\newline
+{\ttfamily \#include "{}fsm.\+h"{}}\newline
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{src_2main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_state_machine}{State\+Machine}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{src_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_state_machine}{State\+Machine}} \mbox{\hyperlink{src_2main_8c_a3cdbaf41c8d20ef6a9e9a42a7ba77aa7}{fsm}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_game}{Game}} \mbox{\hyperlink{src_2main_8c_ac6a5ed6191fcf3a5bf0445921feb4f48}{game}}
+\item 
+\mbox{\hyperlink{struct_tentative}{Tentative}} \mbox{\hyperlink{src_2main_8c_a645ef54f5ed9e77e09c0edb057a4d15a}{tentative}}
+\item 
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{src_2main_8c_a54138d08678dd972a2c9b13e069fd91a}{current\+\_\+state}} =\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{src_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{src_2main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{src_2main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{src_2main_8c_a54138d08678dd972a2c9b13e069fd91a}\index{main.c@{main.c}!current\_state@{current\_state}}
+\index{current\_state@{current\_state}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{current\_state}{current\_state}}
+{\footnotesize\ttfamily \label{src_2main_8c_a54138d08678dd972a2c9b13e069fd91a} 
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} current\+\_\+state =\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}}}
+
+\Hypertarget{src_2main_8c_a3cdbaf41c8d20ef6a9e9a42a7ba77aa7}\index{main.c@{main.c}!fsm@{fsm}}
+\index{fsm@{fsm}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{fsm}{fsm}}
+{\footnotesize\ttfamily \label{src_2main_8c_a3cdbaf41c8d20ef6a9e9a42a7ba77aa7} 
+\mbox{\hyperlink{struct_state_machine}{State\+Machine}} fsm\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}},\ \mbox{\hyperlink{general_2gamelogic1_8c_a3ae06b4f684ab23f714e117b63520232}{fn\_START}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a9bc3ac94eccdcd5c172392dceeb48f49}{KEY\_WOUT\_DOUB}},\ \mbox{\hyperlink{general_2gamelogic1_8c_a6dfdeacaef5a5d37960e2575015b6516}{fn\_KEY\_WOUT\_DOUB}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8ada0e9b62b9e2732c057858d4cba06de9}{KEY\_WH\_DOUB}},\ \mbox{\hyperlink{general_2gamelogic1_8c_a7b7577b178ce9de2be9e5ab17053f6e5}{fn\_KEY\_WH\_DOUB}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800}{RESET\_TENT}},\ \mbox{\hyperlink{general_2gamelogic1_8c_aea19573b1ff72f6c1ccf31fca44008e0}{fn\_RESET\_TENT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a79a322ccb4b29b85b3cab52dbccefd17}{WAIT}},\ \mbox{\hyperlink{general_2gamelogic2_8c_a816c5d4caf1a402f87e1e28b641884b4}{fn\_WAIT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229}{ELABORATE}},\ \mbox{\hyperlink{general_2gamelogic2_8c_a4a4f4707af922a7b84fdd6bdd358691e}{fn\_ELABORATE}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6}{INSERT\_COLOR}},\ \mbox{\hyperlink{general_2gamelogic2_8c_a6639e69c4f94296b4ed63b9471ba37e8}{fn\_INSERT\_COLOR}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a636c8eac8610f47dc4228a0fb1ca5309}{WAIT\_FULL}},\ \mbox{\hyperlink{general_2gamelogic2_8c_acd23a7b6b2abbeebb6c6bde26e35040a}{fn\_WAIT\_FULL}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629}{ELIMINATE\_COLOR}},\ \mbox{\hyperlink{general_2gamelogic2_8c_a135da966b746514db883735bf010382f}{fn\_ELIMINATE\_COLOR}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f}{ELABORATE\_TENT}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a8c8ec768cc25ef34d7b4cee105ff1ce2}{fn\_ELABORATE\_TENT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aef18bcb4a935d141625d0cc4f058b7d9}{INCREMENT\_TENT}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a0f8b9f3f374b53b9e58424bf9d735544}{fn\_INCREMENT\_TENT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a871723195985a4ae22d7e10d99bf8a00}{GAME\_OVER}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a21e4af8db8fc5212546f86edd08d0ba1}{fn\_GAME\_OVER}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425}{EASY\_MODE}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a839aba7dda7c72bae6c207708a47b207}{fn\_EASY\_MODE}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abab75a02f9e6c8bcf2b41d58044ecba7}{MEDIUM\_MODE}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a20f17247635a3f55d199db1bb7dfdc7d}{fn\_MEDIUM\_MODE}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a2c26fbc1fdd523c99380ac97dda96187}{DIFFICULT\_MODE}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a676922e1563163dc4a5df61b09f26162}{fn\_DIFFICULT\_MODE}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4e1ec298bdc63da1022042568b5935ad}{ELABORATE\_RESULT}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a4965965e6c1b73519655decb209180b1}{fn\_ELABORATE\_RESULT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a843dff91ff0b0e5b98a110a512b2f531}{WIN}},\ \mbox{\hyperlink{general_2gamelogic3_8c_aff6bb300f90bfa5964af3b5251b4f650}{fn\_WIN}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{src_2main_8c_ac6a5ed6191fcf3a5bf0445921feb4f48}\index{main.c@{main.c}!game@{game}}
+\index{game@{game}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily \label{src_2main_8c_ac6a5ed6191fcf3a5bf0445921feb4f48} 
+\mbox{\hyperlink{struct_game}{Game}} game}
+
+\Hypertarget{src_2main_8c_a645ef54f5ed9e77e09c0edb057a4d15a}\index{main.c@{main.c}!tentative@{tentative}}
+\index{tentative@{tentative}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{tentative}{tentative}}
+{\footnotesize\ttfamily \label{src_2main_8c_a645ef54f5ed9e77e09c0edb057a4d15a} 
+\mbox{\hyperlink{struct_tentative}{Tentative}} tentative}
+

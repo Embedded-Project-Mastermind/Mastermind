@@ -1,9 +1,20 @@
 var searchData=
 [
-  ['code_20overview_0',['Code Overview',['../md__r_e_a_d_m_e.html#autotoc_md21',1,'']]],
-  ['configuration_1',['Installation and Configuration',['../md__r_e_a_d_m_e.html#autotoc_md12',1,'']]],
-  ['connectivity_20sensors_20and_20msp432_2',['Connectivity Sensors and MSP432',['../md__r_e_a_d_m_e.html#autotoc_md26',1,'']]],
-  ['contacts_3',['Contacts',['../md__r_e_a_d_m_e.html#autotoc_md32',1,'']]],
-  ['contents_4',['Table of Contents',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]],
-  ['contribution_5',['Work Contribution',['../md__r_e_a_d_m_e.html#autotoc_md28',1,'']]]
+  ['acquiremutex_0',['acquireMutex',['../general_2fsm_8h.html#a2b8f386c98b90f3eb1b93b5c35f8bd44',1,'acquireMutex(void):&#160;implementations.c'],['../implementations_8c.html#aca49222800e07bf4638969b29685b388',1,'acquireMutex():&#160;implementations.c']]],
+  ['adc14_5fctl0_5fsht_5f64_5fclk_1',['ADC14_CTL0_SHT_64_CLK',['../joystick_8h.html#a7c0d885501342d883294c731346a7b67',1,'joystick.h']]],
+  ['adc14_5fctl0_5fsref_5fvref_5fplus_5favcc_2',['ADC14_CTL0_SREF_VREF_PLUS_AVCC',['../joystick_8h.html#a5950cd8b0f0b1eb610fd34796c0fa2c4',1,'joystick.h']]],
+  ['adc14_5firqhandler_3',['ADC14_IRQHandler',['../general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5',1,'main.c']]],
+  ['adc_5fenableinterrupts_4',['ADC_EnableInterrupts',['../joystick_8c.html#aba5554d566a1a96bb319050ee2a87ea5',1,'ADC_EnableInterrupts(void):&#160;joystick.c'],['../joystick_8h.html#aba5554d566a1a96bb319050ee2a87ea5',1,'ADC_EnableInterrupts(void):&#160;joystick.c']]],
+  ['adc_5fstartconversion_5',['ADC_StartConversion',['../joystick_8c.html#af96ee69b063edcebc656d0ca0450c12c',1,'ADC_StartConversion(void):&#160;joystick.c'],['../joystick_8h.html#af96ee69b063edcebc656d0ca0450c12c',1,'ADC_StartConversion(void):&#160;joystick.c']]],
+  ['algorithm_6',['Software Algorithm',['../md__r_e_a_d_m_e.html#autotoc_md22',1,'']]],
+  ['allocate_5fin_5fheap_5fbool_7',['allocate_in_Heap_Bool',['../general_2gamelogic1_8c.html#a26e20921c3fb3ec3b86ce90e18514575',1,'allocate_in_Heap_Bool(bool **array, int16_t par1, int16_t par2):&#160;gamelogic1.c'],['../general_2gamelogic1_8h.html#a26e20921c3fb3ec3b86ce90e18514575',1,'allocate_in_Heap_Bool(bool **array, int16_t par1, int16_t par2):&#160;gamelogic1.c'],['../src_2gamelogic1_8c.html#a9e39464d13bda2ea16881b5a1e29d97f',1,'allocate_in_Heap_Bool(bool **array, int par1, int par2):&#160;gamelogic1.c'],['../src_2gamelogic1_8h.html#a9e39464d13bda2ea16881b5a1e29d97f',1,'allocate_in_Heap_Bool(bool **array, int par1, int par2):&#160;gamelogic1.c']]],
+  ['allocate_5fin_5fheap_5fchar_8',['allocate_in_Heap_Char',['../general_2gamelogic1_8c.html#a465d18eab656a2e0ed6ba52d433751f0',1,'allocate_in_Heap_Char(int8_t **array, int16_t par1, int16_t par2):&#160;gamelogic1.c'],['../general_2gamelogic1_8h.html#a465d18eab656a2e0ed6ba52d433751f0',1,'allocate_in_Heap_Char(int8_t **array, int16_t par1, int16_t par2):&#160;gamelogic1.c'],['../src_2gamelogic1_8c.html#a07dea4bebe013769da080e8939d48ccf',1,'allocate_in_Heap_Char(char **array, int par1, int par2):&#160;gamelogic1.c'],['../src_2gamelogic1_8h.html#a07dea4bebe013769da080e8939d48ccf',1,'allocate_in_Heap_Char(char **array, int par1, int par2):&#160;gamelogic1.c']]],
+  ['allocate_5fin_5fheap_5fint_9',['allocate_in_Heap_Int',['../general_2gamelogic1_8c.html#a69fca538b5b36e3923f0f33c8f62f262',1,'allocate_in_Heap_Int(int16_t **array, int16_t par1, int16_t par2):&#160;gamelogic1.c'],['../general_2gamelogic1_8h.html#a69fca538b5b36e3923f0f33c8f62f262',1,'allocate_in_Heap_Int(int16_t **array, int16_t par1, int16_t par2):&#160;gamelogic1.c'],['../src_2gamelogic1_8c.html#a9f10db332961593d68a369dae823491f',1,'allocate_in_Heap_Int(int **array, int par1, int par2):&#160;gamelogic1.c'],['../src_2gamelogic1_8h.html#a9f10db332961593d68a369dae823491f',1,'allocate_in_Heap_Int(int **array, int par1, int par2):&#160;gamelogic1.c']]],
+  ['and_20configuration_10',['Installation and Configuration',['../md__r_e_a_d_m_e.html#autotoc_md12',1,'']]],
+  ['and_20hardware_20requirements_11',['Software and Hardware Requirements',['../md__r_e_a_d_m_e.html#autotoc_md7',1,'']]],
+  ['and_20msp432_12',['Connectivity Sensors and MSP432',['../md__r_e_a_d_m_e.html#autotoc_md26',1,'']]],
+  ['array_13',['array',['../input_8c.html#acfee743be70af26f7fb63dc854b1c429',1,'array:&#160;input.c'],['../input_8h.html#acfee743be70af26f7fb63dc854b1c429',1,'array:&#160;input.c'],['../_interrupt_01_code_01for_01_breadboard_8c.html#acfee743be70af26f7fb63dc854b1c429',1,'array:&#160;Interrupt Code for Breadboard.c']]],
+  ['array_5fsize_14',['ARRAY_SIZE',['../general_2fsm_8h.html#a3c7c6a69f690fc8d2abf0e385280a532',1,'fsm.h']]],
+  ['atleastonetrue_15',['atLeastOneTrue',['../input_8c.html#afc6f8d83006ea3fd3139fe320edb4ec3',1,'atLeastOneTrue(void):&#160;input.c'],['../input_8h.html#afc6f8d83006ea3fd3139fe320edb4ec3',1,'atLeastOneTrue(void):&#160;input.c'],['../_interrupt_01_code_01for_01_breadboard_8c.html#af6d9dad0497883c74612996ef4198f7f',1,'atLeastOneTrue():&#160;Interrupt Code for Breadboard.c']]],
+  ['authors_16',['authors',['../namespacecomment.html#a9a153e02c76fb5857e2ee916e0a64bca',1,'comment']]]
 ];

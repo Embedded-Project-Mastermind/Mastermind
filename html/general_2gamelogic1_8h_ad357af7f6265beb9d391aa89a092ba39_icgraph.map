@@ -1,0 +1,21 @@
+<map id="int_Conversion_to_Char" name="int_Conversion_to_Char">
+<area shape="rect" id="Node000001" title="Convertion of a element from the integer format to the char format." alt="" coords="650,80,812,106"/>
+<area shape="rect" id="Node000002" href="$src_2gamelogic1_8c.html#a7b86d9f5415318d184de153f13f52fcd" title=" " alt="" coords="432,5,602,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="683,76,601,45,568,34,569,29,603,40,685,71"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#ad98031ef2f3f36bce040eaab871947a0" title="Convertion of an array from the integer format to the char format." alt="" coords="432,55,602,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="635,84,602,80,603,75,635,79"/>
+<area shape="rect" id="Node000008" href="$src_2gamelogic2_8c.html#a9404d06774140db68ea7459e9bef6e56" title=" " alt="" coords="480,104,554,130"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="635,106,555,115,555,110,634,101"/>
+<area shape="rect" id="Node000009" href="$general_2gamelogic2_8c.html#aaf32eada42d315c1c42b5e21d002f1aa" title="inserts the selected color into the user&#39;s sequence if space is available" alt="" coords="473,153,561,179"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="684,114,603,145,563,157,561,152,601,140,682,109"/>
+<area shape="rect" id="Node000004" href="$src_2gamelogic1_8c.html#a8b4ee684b1ca644f070b168b3c6fb54c" title=" " alt="" coords="214,31,384,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="416,59,384,56,385,50,417,54"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a2700fd085c33e4ef923ab449276a578f" title="Analysis and parsing of the integer sequence to the char one, with an appropriate deallocation of the..." alt="" coords="214,80,384,106"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="417,82,385,86,384,80,416,76"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#a7b7577b178ce9de2be9e5ab17053f6e5" title=" " alt="" coords="14,56,157,82"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="198,84,157,79,157,74,198,79"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#a6dfdeacaef5a5d37960e2575015b6516" title=" " alt="" coords="5,105,166,131"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="198,107,167,111,166,106,198,102"/>
+<area shape="rect" id="Node000010" href="$general_2gamelogic2_8c.html#a6639e69c4f94296b4ed63b9471ba37e8" title=" " alt="" coords="227,153,370,179"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="458,169,371,169,371,164,458,164"/>
+</map>

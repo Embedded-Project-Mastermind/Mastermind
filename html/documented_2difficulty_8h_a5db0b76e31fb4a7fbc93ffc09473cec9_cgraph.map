@@ -1,0 +1,11 @@
+<map id="upStick_DIFFICULTY" name="upStick_DIFFICULTY">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="5,55,156,80"/>
+<area shape="rect" id="Node000002" href="$difficulty_8c.html#abe9c02f90a494b0d60669e280db89c2d" title="Draw Text Description according to the difficulty selected in order to explain to the user what that ..." alt="" coords="207,5,281,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,51,191,31,193,36,127,57"/>
+<area shape="rect" id="Node000004" href="$documented_2implementations_8c.html#a0f3ea1e3abed721e539b1332079664c4" title="TODO: Describe function." alt="" coords="209,55,279,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,65,193,65,193,70,156,70"/>
+<area shape="rect" id="Node000005" href="$documented_2implementations_8c.html#a7850b120bb168cda34d0ff446cd53845" title="TODO: Describe function." alt="" coords="204,104,284,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="127,78,189,98,188,103,125,84"/>
+<area shape="rect" id="Node000003" href="$documented_2implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title="TODO: Describe function." alt="" coords="332,5,425,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="282,16,316,16,316,21,282,21"/>
+</map>

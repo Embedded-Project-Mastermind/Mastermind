@@ -1,0 +1,32 @@
+<map id="general/joystick.h" name="general/joystick.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="563,5,686,31"/>
+<area shape="rect" id="Node000002" href="$chronology_8c.html" title=" " alt="" coords="5,153,145,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="564,38,396,82,121,155,119,150,394,76,562,33"/>
+<area shape="rect" id="Node000003" href="$game_8c.html" title=" " alt="" coords="169,153,280,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="578,39,259,155,257,150,576,34"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8h.html" title=" " alt="" coords="472,79,616,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="601,43,559,81,556,77,598,39"/>
+<area shape="rect" id="Node000009" href="$general_2main_8c.html" title=" " alt="" coords="606,226,712,252"/>
+<area shape="poly" id="edge17_Node000001_Node000009" title=" " alt="" coords="634,46,656,152,661,226,656,226,651,153,629,47"/>
+<area shape="rect" id="Node000012" href="$implementations_8c.html" title=" " alt="" coords="742,79,915,105"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="674,34,794,76,793,81,672,39"/>
+<area shape="rect" id="Node000013" href="$joystick_8c.html" title=" " alt="" coords="939,79,1062,105"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="702,31,939,76,938,81,701,37"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="457,109,146,156,145,151,456,104"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="475,111,279,155,278,149,474,106"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html" title=" " alt="" coords="472,153,616,178"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="547,120,547,152,542,152,542,120"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic2_8h.html" title=" " alt="" coords="742,153,886,178"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="605,106,768,149,767,155,604,112"/>
+<area shape="poly" id="edge14_Node000004_Node000009" title=" " alt="" coords="583,111,608,128,630,151,650,190,660,225,654,226,645,192,626,154,605,132,580,115"/>
+<area shape="rect" id="Node000010" href="$general_2gamelogic3_8h.html" title=" " alt="" coords="304,153,448,178"/>
+<area shape="poly" id="edge11_Node000004_Node000010" title=" " alt="" coords="503,114,406,155,404,150,501,109"/>
+<area shape="rect" id="Node000007" href="$buttons_8c.html" title=" " alt="" coords="746,226,868,252"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="814,194,811,226,805,226,808,194"/>
+<area shape="rect" id="Node000008" href="$general_2gamelogic2_8c.html" title=" " alt="" coords="892,226,1036,252"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="854,183,940,223,938,228,852,188"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="775,188,686,228,684,223,773,183"/>
+<area shape="poly" id="edge13_Node000010_Node000009" title=" " alt="" coords="440,180,611,223,610,228,438,185"/>
+<area shape="rect" id="Node000011" href="$general_2gamelogic3_8c.html" title=" " alt="" coords="304,226,448,252"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="379,194,379,226,374,226,374,194"/>
+</map>

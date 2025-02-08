@@ -1,0 +1,14 @@
+<map id="resetTentative" name="resetTentative">
+<area shape="rect" id="Node000001" title="After each input sequence is analyzed the tentative is all reinitialized with an incrementation of th..." alt="" coords="5,55,109,80"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a465d18eab656a2e0ed6ba52d433751f0" title="Allocation for a character array, ensuring that it is not already allocated." alt="" coords="157,55,313,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,65,141,65,141,70,109,70"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="566,5,682,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="295,51,361,40,460,28,551,20,551,25,460,33,361,45,296,57"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="397,55,482,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="313,65,382,65,382,70,313,70"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#abf0d75f005530b95f776456baa7840c2" title="Initialization for a character array setting to its default state." alt="" coords="361,104,518,130"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="292,78,369,97,368,102,291,84"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="482,54,558,33,560,38,483,59"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="567,55,681,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="483,65,552,65,552,70,483,70"/>
+</map>

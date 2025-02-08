@@ -340,30 +340,45 @@ void resetTentative(void) {
     pos_chronology=0;
     fn_GAME();
 }
-
-/* Function for the START state */
-//ABILITATE initGame HERE and disable in fn_GAME
+/**
+ * @brief Call function when START of the finite state machine is called and initializes the game after selecting the elements
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void fn_START(void) {
     initGame(game.dim, game.difficulty, game.doubles, game.tentatives); // Initialize the game
     //initGame(3, 'A', true, 7); // Initialize the game
     current_state = game.doubles ? KEY_WH_DOUB : KEY_WOUT_DOUB; // Transition to the next state based on doubles flag
 }
-
-/* Function for the KEY_WOUT_DOUB state */
+/**
+ * @brief Call function when KEY_WOUT_DOUB of the finite state machine is called and generates a sequence to find with no duplicates
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void fn_KEY_WOUT_DOUB(void) {
     int16_t* sequence = key_generation_wout_doub(); // Generate key without doubles
     continue_Key_Decryption(sequence); // Continue the decryption process
     current_state = RESET_TENT; // Transition to the next state
 }
-
-/* Function for the KEY_WH_DOUB state */
+/**
+ * @brief Call function when KEY_WH_DOUB of the finite state machine is called and generates a sequence to find with duplicates
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void fn_KEY_WH_DOUB(void) {
     int16_t* sequence = key_generation_wh_doub(); // Generate key with doubles
     continue_Key_Decryption(sequence); // Continue the decryption process
     current_state = RESET_TENT; // Transition to the next state
 }
-
-/* Function for the RESET_TENT state */
+/**
+ * @brief Call function when RESET_TENT of the finite state machine is called after each tentative is sent successfully and resets the elements of the current Tentative
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void fn_RESET_TENT(void) {
     resetTentative(); // Reset user's tentative state
     current_state = WAIT; // Transition to the ERROR state

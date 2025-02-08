@@ -1,0 +1,9 @@
+<map id="read_input" name="read_input">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,87,80"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic2_8c.html#a4ac8a4eccf1b52c5f4f162807ba7a172" title=" " alt="" coords="152,5,220,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,52,136,33,138,38,86,57"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic2_8c.html#a2d9418eed626aa95f8198811a970a254" title="returns if the user’s sequence is empty or not" alt="" coords="149,55,223,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="87,65,133,65,133,70,87,70"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic2_8c.html#a6916b14296a6350be813f853d9e08796" title=" " alt="" coords="135,104,237,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="86,78,134,96,132,101,84,83"/>
+</map>

@@ -1,0 +1,299 @@
+\doxysection{general/gamelogic2.c File Reference}
+\hypertarget{general_2gamelogic2_8c}{}\label{general_2gamelogic2_8c}\index{general/gamelogic2.c@{general/gamelogic2.c}}
+{\ttfamily \#include "{}gamelogic2.\+h"{}}\newline
+{\ttfamily \#include "{}game.\+h"{}}\newline
+Include dependency graph for gamelogic2.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2gamelogic2_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{general_2gamelogic2_8c_a2d9418eed626aa95f8198811a970a254}{is\+\_\+empty}} (void)
+\begin{DoxyCompactList}\small\item\em returns if the user’s sequence is empty or not \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{general_2gamelogic2_8c_a76f39e933c88d089d6bfbfff4a7d570f}{is\+\_\+full}} (void)
+\begin{DoxyCompactList}\small\item\em returns if the user’s sequence is full or not \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general_2gamelogic2_8c_a6916b14296a6350be813f853d9e08796}{text\+\_\+selection}} (bool sel)
+\item 
+void \mbox{\hyperlink{general_2gamelogic2_8c_a4ac8a4eccf1b52c5f4f162807ba7a172}{full\+\_\+text}} ()
+\item 
+void \mbox{\hyperlink{general_2gamelogic2_8c_a06225a4a6c2b59418a1af229d7c24c06}{print\+\_\+sequence}} (int8\+\_\+t \texorpdfstring{$\ast$}{*}seq, int16\+\_\+t dim)
+\item 
+void \mbox{\hyperlink{general_2gamelogic2_8c_aaf32eada42d315c1c42b5e21d002f1aa}{insert\+\_\+color}} ()
+\begin{DoxyCompactList}\small\item\em inserts the selected color into the user\textquotesingle{}s sequence if space is available \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general_2gamelogic2_8c_a2aac7e2824658f8ac7c8b8446fff0c9c}{eliminate\+\_\+color}} (void)
+\begin{DoxyCompactList}\small\item\em deletes the last color into the user\textquotesingle{}s sequence if it is not empty \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general_2gamelogic2_8c_a816c5d4caf1a402f87e1e28b641884b4}{fn\+\_\+\+WAIT}} (void)
+\item 
+void \mbox{\hyperlink{general_2gamelogic2_8c_a4a4f4707af922a7b84fdd6bdd358691e}{fn\+\_\+\+ELABORATE}} (void)
+\item 
+void \mbox{\hyperlink{general_2gamelogic2_8c_a6639e69c4f94296b4ed63b9471ba37e8}{fn\+\_\+\+INSERT\+\_\+\+COLOR}} (void)
+\item 
+void \mbox{\hyperlink{general_2gamelogic2_8c_acd23a7b6b2abbeebb6c6bde26e35040a}{fn\+\_\+\+WAIT\+\_\+\+FULL}} (void)
+\item 
+void \mbox{\hyperlink{general_2gamelogic2_8c_a135da966b746514db883735bf010382f}{fn\+\_\+\+ELIMINATE\+\_\+\+COLOR}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \mbox{\hyperlink{general_2gamelogic2_8c_a029a87658f39852c58465c723e31eb29}{temp}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a}{value}}
+\item 
+bool \mbox{\hyperlink{general_2gamelogic2_8c_aca9069b00c7ce881e22b5030f80c7c53}{selection}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{general_2gamelogic2_8c_a2aac7e2824658f8ac7c8b8446fff0c9c}\index{gamelogic2.c@{gamelogic2.c}!eliminate\_color@{eliminate\_color}}
+\index{eliminate\_color@{eliminate\_color}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{eliminate\_color()}{eliminate\_color()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a2aac7e2824658f8ac7c8b8446fff0c9c} 
+void eliminate\+\_\+color (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+deletes the last color into the user\textquotesingle{}s sequence if it is not empty 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alessandro Benassi \& Daniele Calvo (Primary Author) 
+
+Matteo Gottardelli (Helper) 
+
+Alessandro Benassi (Maintainer Member) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2gamelogic2_8c_a2aac7e2824658f8ac7c8b8446fff0c9c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{general_2gamelogic2_8c_a2aac7e2824658f8ac7c8b8446fff0c9c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2gamelogic2_8c_a4a4f4707af922a7b84fdd6bdd358691e}\index{gamelogic2.c@{gamelogic2.c}!fn\_ELABORATE@{fn\_ELABORATE}}
+\index{fn\_ELABORATE@{fn\_ELABORATE}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{fn\_ELABORATE()}{fn\_ELABORATE()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a4a4f4707af922a7b84fdd6bdd358691e} 
+void fn\+\_\+\+ELABORATE (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{general_2gamelogic2_8c_a135da966b746514db883735bf010382f}\index{gamelogic2.c@{gamelogic2.c}!fn\_ELIMINATE\_COLOR@{fn\_ELIMINATE\_COLOR}}
+\index{fn\_ELIMINATE\_COLOR@{fn\_ELIMINATE\_COLOR}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{fn\_ELIMINATE\_COLOR()}{fn\_ELIMINATE\_COLOR()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a135da966b746514db883735bf010382f} 
+void fn\+\_\+\+ELIMINATE\+\_\+\+COLOR (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2gamelogic2_8c_a135da966b746514db883735bf010382f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2gamelogic2_8c_a6639e69c4f94296b4ed63b9471ba37e8}\index{gamelogic2.c@{gamelogic2.c}!fn\_INSERT\_COLOR@{fn\_INSERT\_COLOR}}
+\index{fn\_INSERT\_COLOR@{fn\_INSERT\_COLOR}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{fn\_INSERT\_COLOR()}{fn\_INSERT\_COLOR()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a6639e69c4f94296b4ed63b9471ba37e8} 
+void fn\+\_\+\+INSERT\+\_\+\+COLOR (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2gamelogic2_8c_a6639e69c4f94296b4ed63b9471ba37e8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2gamelogic2_8c_a816c5d4caf1a402f87e1e28b641884b4}\index{gamelogic2.c@{gamelogic2.c}!fn\_WAIT@{fn\_WAIT}}
+\index{fn\_WAIT@{fn\_WAIT}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{fn\_WAIT()}{fn\_WAIT()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a816c5d4caf1a402f87e1e28b641884b4} 
+void fn\+\_\+\+WAIT (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{general_2gamelogic2_8c_acd23a7b6b2abbeebb6c6bde26e35040a}\index{gamelogic2.c@{gamelogic2.c}!fn\_WAIT\_FULL@{fn\_WAIT\_FULL}}
+\index{fn\_WAIT\_FULL@{fn\_WAIT\_FULL}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{fn\_WAIT\_FULL()}{fn\_WAIT\_FULL()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_acd23a7b6b2abbeebb6c6bde26e35040a} 
+void fn\+\_\+\+WAIT\+\_\+\+FULL (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{general_2gamelogic2_8c_a4ac8a4eccf1b52c5f4f162807ba7a172}\index{gamelogic2.c@{gamelogic2.c}!full\_text@{full\_text}}
+\index{full\_text@{full\_text}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{full\_text()}{full\_text()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a4ac8a4eccf1b52c5f4f162807ba7a172} 
+void full\+\_\+text (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{general_2gamelogic2_8c_a4ac8a4eccf1b52c5f4f162807ba7a172_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2gamelogic2_8c_aaf32eada42d315c1c42b5e21d002f1aa}\index{gamelogic2.c@{gamelogic2.c}!insert\_color@{insert\_color}}
+\index{insert\_color@{insert\_color}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{insert\_color()}{insert\_color()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_aaf32eada42d315c1c42b5e21d002f1aa} 
+void insert\+\_\+color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+inserts the selected color into the user\textquotesingle{}s sequence if space is available 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alessandro Benassi \& Daniele Calvo (Primary Author) 
+
+Matteo Gottardelli (Helper) 
+
+Alessandro Benassi (Maintainer Member) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2gamelogic2_8c_aaf32eada42d315c1c42b5e21d002f1aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{general_2gamelogic2_8c_aaf32eada42d315c1c42b5e21d002f1aa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2gamelogic2_8c_a2d9418eed626aa95f8198811a970a254}\index{gamelogic2.c@{gamelogic2.c}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a2d9418eed626aa95f8198811a970a254} 
+bool is\+\_\+empty (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+returns if the user’s sequence is empty or not 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alessandro Benassi \& Daniele Calvo (Primary Author) 
+
+Matteo Gottardelli (Helper) 
+
+Alessandro Benassi (Maintainer Member) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2gamelogic2_8c_a2d9418eed626aa95f8198811a970a254_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2gamelogic2_8c_a76f39e933c88d089d6bfbfff4a7d570f}\index{gamelogic2.c@{gamelogic2.c}!is\_full@{is\_full}}
+\index{is\_full@{is\_full}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{is\_full()}{is\_full()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a76f39e933c88d089d6bfbfff4a7d570f} 
+bool is\+\_\+full (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+returns if the user’s sequence is full or not 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alessandro Benassi \& Daniele Calvo (Primary Author) 
+
+Matteo Gottardelli (Helper) 
+
+Alessandro Benassi (Maintainer Member) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2gamelogic2_8c_a76f39e933c88d089d6bfbfff4a7d570f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2gamelogic2_8c_a06225a4a6c2b59418a1af229d7c24c06}\index{gamelogic2.c@{gamelogic2.c}!print\_sequence@{print\_sequence}}
+\index{print\_sequence@{print\_sequence}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{print\_sequence()}{print\_sequence()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a06225a4a6c2b59418a1af229d7c24c06} 
+void print\+\_\+sequence (\begin{DoxyParamCaption}\item[{int8\+\_\+t \texorpdfstring{$\ast$}{*}}]{seq}{, }\item[{int16\+\_\+t}]{dim}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2gamelogic2_8c_a06225a4a6c2b59418a1af229d7c24c06_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2gamelogic2_8c_a6916b14296a6350be813f853d9e08796}\index{gamelogic2.c@{gamelogic2.c}!text\_selection@{text\_selection}}
+\index{text\_selection@{text\_selection}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{text\_selection()}{text\_selection()}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a6916b14296a6350be813f853d9e08796} 
+void text\+\_\+selection (\begin{DoxyParamCaption}\item[{bool}]{sel}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2gamelogic2_8c_a6916b14296a6350be813f853d9e08796_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{general_2gamelogic2_8c_aca9069b00c7ce881e22b5030f80c7c53}\index{gamelogic2.c@{gamelogic2.c}!selection@{selection}}
+\index{selection@{selection}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{selection}{selection}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_aca9069b00c7ce881e22b5030f80c7c53} 
+bool selection}
+
+\Hypertarget{general_2gamelogic2_8c_a029a87658f39852c58465c723e31eb29}\index{gamelogic2.c@{gamelogic2.c}!temp@{temp}}
+\index{temp@{temp}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a029a87658f39852c58465c723e31eb29} 
+int8\+\_\+t temp}
+
+\Hypertarget{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a}\index{gamelogic2.c@{gamelogic2.c}!value@{value}}
+\index{value@{value}!gamelogic2.c@{gamelogic2.c}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a} 
+int16\+\_\+t value}
+

@@ -1,6 +1,6 @@
 \doxysection{joystick.\+h}
 \hypertarget{joystick_8h_source}{}\label{joystick_8h_source}\index{general/joystick.h@{general/joystick.h}}
-
+\mbox{\hyperlink{joystick_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ joystick.h}}
@@ -12,32 +12,32 @@
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ JOYSTICK\_H\_}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ JOYSTICK\_H\_}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}graphics.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graphics_8h}{graphics.h}}"{}}}
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ ADC14\_CTL0\_SREF\_VREF\_PLUS\_AVCC\ \ (0x00000000)\ }\textcolor{comment}{//\ V+\ =\ AVcc,\ V-\/\ =\ AVss}}
 \DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ ADC14\_CTL0\_SHT\_64\_CLK\ \ \ \ \ \ \ \ \ \ \ \ \ (0x00000000)\ }\textcolor{comment}{//\ Sample\ time\ 64\ ADC\ clocks}}
 \DoxyCodeLine{00014\ \textcolor{comment}{/*\ ADC\ results\ buffer\ */}}
 \DoxyCodeLine{00015\ \textcolor{keyword}{static}\ uint16\_t\ resultsBuffer[2];}
-\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{UP,\ DOWN,\ LEFT,\ RIGHT,\ CENTER\}\ Move;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388aba595d8bca8bc5e67c37c0a9d89becfa}{UP}},\ \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388a9b0b4a95b99523966e0e34ffdadac9da}{DOWN}},\ \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388adb45120aafd37a973140edee24708065}{LEFT}},\ \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388aec8379af7490bb9eaaf579cf17876f38}{RIGHT}},\ \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388a2159ffbd3a68037511ab5ab4dd35ace7}{CENTER}}\}\ \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}};}
 \DoxyCodeLine{00017\ \textcolor{comment}{/*\ UP\ -\/\ Y>16200}}
 \DoxyCodeLine{00018\ \textcolor{comment}{\ *\ DOWN\ -\/\ Y<200}}
 \DoxyCodeLine{00019\ \textcolor{comment}{\ *\ LEFT\ -\/\ X<200}}
 \DoxyCodeLine{00020\ \textcolor{comment}{\ *\ RIGHT\ -\/\ X\ >15500}}
 \DoxyCodeLine{00021\ \textcolor{comment}{\ *\ CENTER\ -\/\ DEFAULT}}
 \DoxyCodeLine{00022\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ upfunctions();}
-\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ downfunctions();}
-\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ leftfunctions();}
-\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ rightfunctions();}
-\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ Timer\_Init(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ ADC\_StartConversion(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ ADC\_EnableInterrupts(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ setupPriorities();}
-\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ NavigateMenu(Move\ direction);}
-\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \_adcInit();}
-\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ before\_ADC();}
-\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ initHW();}
-\DoxyCodeLine{00035\ Move\ findDirection(uint16\_t\ x,\ uint16\_t\ y);}
-\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ delay\_ms(uint32\_t\ milliseconds);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_a08201f4ea948492041d839c98233e00a}{upfunctions}}();}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_a3e5a790b378f645099a2f8fc5f694b84}{downfunctions}}();}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_a52c88d60c03461488d6285f39e252627}{leftfunctions}}();}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_a301de98bfda59c46e55821dee762f5cb}{rightfunctions}}();}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_a92a70e2775796b1a7a6b49a983f570e3}{Timer\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_af96ee69b063edcebc656d0ca0450c12c}{ADC\_StartConversion}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_aba5554d566a1a96bb319050ee2a87ea5}{ADC\_EnableInterrupts}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_a4023d983e6edbb9ec1c19264b9f5d063}{setupPriorities}}();}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_adde06bcb4c1eb7d1c081dacc7ac2152c}{NavigateMenu}}(\mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}}\ direction);}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_ac2ba05e83436748b14c78b42942f30ec}{\_adcInit}}();}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_ac024e21f4a895774cbc85c22395d7892}{before\_ADC}}();}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_a144df1b67eee7bbf15b632fe43c106fe}{initHW}}();}
+\DoxyCodeLine{00035\ \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}}\ \mbox{\hyperlink{joystick_8h_a46814585d7265ab89bb7bc3d77f967aa}{findDirection}}(uint16\_t\ x,\ uint16\_t\ y);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{joystick_8h_a17d2aabe37f3c529c960176fe55d5fd5}{delay\_ms}}(uint32\_t\ milliseconds);}
 \DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ JOYSTICK\_H\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

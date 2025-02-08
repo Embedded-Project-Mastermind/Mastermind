@@ -1,0 +1,7 @@
+<map id="makeArrayEmpty_Char" name="makeArrayEmpty_Char">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="210,31,367,56"/>
+<area shape="rect" id="Node000002" href="$src_2gamelogic1_8c.html#a07dea4bebe013769da080e8939d48ccf" title=" " alt="" coords="5,5,162,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,35,162,31,163,25,195,29"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a465d18eab656a2e0ed6ba52d433751f0" title="Allocation for a character array, ensuring that it is not already allocated." alt="" coords="5,55,162,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,57,163,61,162,56,194,52"/>
+</map>

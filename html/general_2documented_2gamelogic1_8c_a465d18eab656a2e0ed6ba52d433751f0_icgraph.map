@@ -1,0 +1,9 @@
+<map id="allocate_in_Heap_Char" name="allocate_in_Heap_Char">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="157,55,313,80"/>
+<area shape="rect" id="Node000002" href="$src_2gamelogic1_8c.html#a7006bf7f12ca8e5bd3b45872b396129c" title=" " alt="" coords="20,5,94,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,53,93,31,95,26,172,47"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#afb2e75602fcc752a18fcfc0ba165ad00" title="Initialize the game with parameters selected from the GUI interface from DIMENSION,..." alt="" coords="20,55,94,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,70,94,70,94,65,141,65"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a349e30260991f4d42dc6e3b575108891" title="After each input sequence is analyzed the tentative is all reinitialized with an incrementation of th..." alt="" coords="5,104,109,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="172,88,107,106,105,101,171,82"/>
+</map>

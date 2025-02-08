@@ -1,0 +1,5 @@
+<map id="initGame" name="initGame">
+<area shape="rect" id="Node000001" title="Initialize the game with parameters selected from the GUI interface from DIMENSION,..." alt="" coords="136,5,209,31"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a3ae06b4f684ab23f714e117b63520232" title=" " alt="" coords="5,5,88,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,21,88,21,88,16,120,16"/>
+</map>

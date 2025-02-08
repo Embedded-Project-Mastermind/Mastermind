@@ -1,0 +1,7 @@
+<map id="create_doubles_buttons" name="create_doubles_buttons">
+<area shape="rect" id="Node000001" title="initializes the buttons, putting them on an ordered array and drawing them" alt="" coords="328,5,487,31"/>
+<area shape="rect" id="Node000002" href="$doubles_8c.html#a5d30196b11160b96f048c2d32df19db5" title="manages how to set all doubles&#39; interface, also calling the functions to create the texts and the but..." alt="" coords="157,5,280,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="312,21,281,21,281,16,312,16"/>
+<area shape="rect" id="Node000003" href="$doubles_8c.html#abde8d52331b6dfefc0394c653238ea16" title="calls all needed functions to change the previous interface with the one of the doubles&#39; state" alt="" coords="5,5,109,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="141,21,109,21,109,16,141,16"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="buttonBackAction" name="buttonBackAction">
+<area shape="rect" id="Node000001" title="Implements back button action that redirects in eliminate colored circle state if there was at least ..." alt="" coords="5,31,130,56"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic2_8c.html#a2d9418eed626aa95f8198811a970a254" title="returns if the user’s sequence is empty or not" alt="" coords="204,5,278,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,32,188,23,189,28,130,37"/>
+<area shape="rect" id="Node000003" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="178,55,304,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,49,162,54,162,59,130,55"/>
+<area shape="rect" id="Node000004" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="352,29,453,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="304,55,336,50,337,55,305,60"/>
+<area shape="rect" id="Node000005" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="352,79,453,104"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="305,74,337,79,336,84,304,80"/>
+</map>

@@ -1,6 +1,6 @@
 \doxysection{implementations.\+h}
 \hypertarget{implementations_8h_source}{}\label{implementations_8h_source}\index{general/implementations.h@{general/implementations.h}}
-
+\mbox{\hyperlink{implementations_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ implementations.c}}
@@ -15,41 +15,41 @@
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ IMPLEMENTATIONS\_H\_}}
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
 \DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}stdlib.h"{}}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}graphics.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graphics_8h}{graphics.h}}"{}}}
 \DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ BORDER\ 2}}
 \DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ graphics\_Init(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ hardware\_Init(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ reset\_Screen(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_abd724b53de6eb2de11d29407bb874691}{graphics\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_a5ade24c45f4fa85ba7f02d04a3f86e6b}{hardware\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_a5b980628dc75e57228c103881e9246af}{reset\_Screen}}(\textcolor{keywordtype}{void});}
 \DoxyCodeLine{00020\ \textcolor{comment}{//FOLLOWING\ DEFINE\ THE\ GRAPHIC\ FUNCTIONS\ USED\ IN\ C\ FILE}}
-\DoxyCodeLine{00021\ \textcolor{keyword}{extern}\ Graphics\_Rectangle\ upperRect;}
-\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ prevButton;}
-\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ nextButton;}
-\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ Graphics\_Rectangle\ upperRectCH;}
-\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ labelText;}
-\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ uint8\_t\ position;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{extern}\ Graphics\_Rectangle\ \mbox{\hyperlink{implementations_8h_a927a054ae58b010f8f71dc355d70ecb8}{upperRect}};}
+\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{implementations_8h_a6348ae18e208879a23577d6992d715c6}{prevButton}};}
+\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{implementations_8h_a8ffa7b16d9b24e226a6085792b4f80f0}{nextButton}};}
+\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ Graphics\_Rectangle\ \mbox{\hyperlink{implementations_8h_af939cfc01a16f191190492de0c53caea}{upperRectCH}};}
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ \mbox{\hyperlink{implementations_8h_ac84babd437237123707c9a56b2d2da07}{labelText}};}
+\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ uint8\_t\ \mbox{\hyperlink{implementations_8h_a1e1320cfd39f6febcf8e4eb2b542f424}{position}};}
 \DoxyCodeLine{00027\ \textcolor{comment}{//FIND\ POSITION\ RECT}}
-\DoxyCodeLine{00028\ int32\_t\ getCenteredX(Graphics\_Rectangle\ rect);}
-\DoxyCodeLine{00029\ int32\_t\ getCenteredY(Graphics\_Rectangle\ rect);}
+\DoxyCodeLine{00028\ int32\_t\ \mbox{\hyperlink{implementations_8h_ae3d236b3ca1dca7c0d774ecd718bc62f}{getCenteredX}}(Graphics\_Rectangle\ rect);}
+\DoxyCodeLine{00029\ int32\_t\ \mbox{\hyperlink{implementations_8h_ae57d3f9fa9c50aaabe2f4824209ebe51}{getCenteredY}}(Graphics\_Rectangle\ rect);}
 \DoxyCodeLine{00030\ \textcolor{comment}{//COLOR\ CHOICE\ FUNCTIONS}}
-\DoxyCodeLine{00031\ int32\_t\ chooseColorRect(Button\_State\ state,\ int32\_t\ color);}
-\DoxyCodeLine{00032\ int32\_t\ chooseColorText(Button\_State\ state,\ int32\_t\ color);}
+\DoxyCodeLine{00031\ int32\_t\ \mbox{\hyperlink{implementations_8h_a17fb5785fa10393596b1c10e580fee1b}{chooseColorRect}}(\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\_State}}\ state,\ int32\_t\ color);}
+\DoxyCodeLine{00032\ int32\_t\ \mbox{\hyperlink{implementations_8h_ac2bb0254f8bef6f471cc1e1e4aff3fb2}{chooseColorText}}(\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\_State}}\ state,\ int32\_t\ color);}
 \DoxyCodeLine{00033\ \textcolor{comment}{//FUNCTIONS\ STATUS}}
-\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ handleOut(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[],\ uint8\_t\ position,\ int8\_t\ size);}
-\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ handleIn(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[],\ uint8\_t\ position,\ int8\_t\ size);}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_a7850b120bb168cda34d0ff446cd53845}{handleOut}}(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}[],\ uint8\_t\ \mbox{\hyperlink{implementations_8h_a1e1320cfd39f6febcf8e4eb2b542f424}{position}},\ int8\_t\ size);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_a0f3ea1e3abed721e539b1332079664c4}{handleIn}}(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}[],\ uint8\_t\ \mbox{\hyperlink{implementations_8h_a1e1320cfd39f6febcf8e4eb2b542f424}{position}},\ int8\_t\ size);}
 \DoxyCodeLine{00036\ \textcolor{comment}{//FUNCTIONS\ DRAW}}
-\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ rectangleWithText(Graphics\_Rectangle\ rect,\ int32\_t\ colorRect,\ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ text,\ int32\_t\ colorText);}
-\DoxyCodeLine{00038\ int8\_t\ findSelected(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[],\ int8\_t\ size);}
-\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ drawButton(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ button,\ int32\_t\ rect\_color,\ int32\_t\ text\_color,\ int8\_t\ pos\_selected);}
-\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ focusedHandle(Button\_State\ state,\ Graphics\_Rectangle\ rect,\ int32\_t\ color);}
-\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ handleSelection(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[]);}
-\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ handleDeselection(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[]);}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_ad52f2c05d7aee61aba7bfcc147efcab5}{rectangleWithText}}(Graphics\_Rectangle\ rect,\ int32\_t\ colorRect,\ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ text,\ int32\_t\ colorText);}
+\DoxyCodeLine{00038\ int8\_t\ \mbox{\hyperlink{implementations_8h_aea1dda1e46fe79f2ce1e1f4afb8391e0}{findSelected}}(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}[],\ int8\_t\ size);}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_ada4cd14b9689d4fe9b9de328e4724964}{drawButton}}(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ button,\ int32\_t\ rect\_color,\ int32\_t\ text\_color,\ int8\_t\ pos\_selected);}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_a31478dc280589a9d9a03061c244de91d}{focusedHandle}}(\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\_State}}\ state,\ Graphics\_Rectangle\ rect,\ int32\_t\ color);}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_a7b8a1f6ee64675c2f14e0c4d61b10092}{handleSelection}}(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}[]);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_af4097a2a104a8d16ccf1344d0e9f25b1}{handleDeselection}}(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}[]);}
 \DoxyCodeLine{00043\ \textcolor{comment}{//buttons\ back\ and\ next\ handler}}
-\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ handle\_buttons(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[]);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_ae6b98301bc187c6f3b974c2283459932}{handle\_buttons}}(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}[]);}
 \DoxyCodeLine{00045\ \textcolor{comment}{//FUNCTION\ INIT}}
-\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ initArray(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[],\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_ad356fdfc13b47974aa06a7924485fd66}{initArray}}(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}[],\ \textcolor{keywordtype}{int}\ size);}
 \DoxyCodeLine{00047\ \textcolor{comment}{//FUNCTIONS\ FOR\ STATES}}
-\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ fn\_END(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{implementations_8h_abac9d0b896bc0d5ed74672684b47805e}{fn\_END}}(\textcolor{keywordtype}{void});}
 \DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ IMPLEMENTATIONS\_H\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

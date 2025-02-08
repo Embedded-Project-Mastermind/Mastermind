@@ -1,0 +1,365 @@
+\doxysection{general/difficulty.h File Reference}
+\hypertarget{difficulty_8h}{}\label{difficulty_8h}\index{general/difficulty.h@{general/difficulty.h}}
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}stdlib.\+h"{}}\newline
+{\ttfamily \#include "{}implementations.\+h"{}}\newline
+Include dependency graph for difficulty.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{difficulty_8h_a086264544772c58c2bb8d1a85699f25a}{DIFF\+\_\+\+DIM}}~20
+\item 
+\#define \mbox{\hyperlink{difficulty_8h_a0ae3f25fa9904dbcffbacdc19eb50acc}{DIFF\+\_\+\+TEXT}}~4
+\item 
+\#define \mbox{\hyperlink{difficulty_8h_a5db07c224380f95ce080330a43a1a160}{DIFF\+\_\+\+TYPES}}~4
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{difficulty_8h_abe499c3970af43df2a6f606181935882}{fn\+\_\+\+DIFFICULTY}} (void)
+\begin{DoxyCompactList}\small\item\em Implicit Call that is invoked when we arrive at DIFFICULTY state in GUI FSM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{difficulty_8h_a1834148a96e06042ee734794f17f9714}{draw\+Difficulty}} ()
+\begin{DoxyCompactList}\small\item\em Function that draws the interface of difficulty section, 3 buttons to select difficulty and the others for prev (go to DIMENSION) and next (go to TENTATIVES) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{difficulty_8h_a5db0b76e31fb4a7fbc93ffc09473cec9}{up\+Stick\+\_\+\+DIFFICULTY}} ()
+\begin{DoxyCompactList}\small\item\em Action that the menu performs when the stick goes up, primarly changing selection and imposing logic visual limits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{difficulty_8h_a79c72c85a3b49834d1182393768679b3}{down\+Stick\+\_\+\+DIFFICULTY}} ()
+\begin{DoxyCompactList}\small\item\em Action that the menu performs when the stick goes down, primarly changing selection and imposing logic visual limits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{difficulty_8h_ada1c7d825f7d0d6084a4b004f91d570c}{left\+Stick\+\_\+\+DIFFICULTY}} ()
+\begin{DoxyCompactList}\small\item\em Action that the menu performs when the stick goes left, primarly changing selection and imposing logic visual limits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{difficulty_8h_a857aed146f25be6eafd6029c4cae888f}{right\+Stick\+\_\+\+DIFFICULTY}} ()
+\begin{DoxyCompactList}\small\item\em Action that the menu performs when the stick goes right, primarly changing selection and imposing logic visual limits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{difficulty_8h_a55037b2df6de8e644fb78a0b591e8ac2}{handle\+Pressure\+\_\+\+DIFFICULTY}} ()
+\begin{DoxyCompactList}\small\item\em Function that handles pressure of confirm button when we are in DIFFICULTY section. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{difficulty_8h_abe9c02f90a494b0d60669e280db89c2d}{draw\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Draw Text Description according to the difficulty selected in order to explain to the user what that means. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{difficulty_8h_a22d4ee3d2e640c505429eda51dae5a3d}{diff\+\_\+buttons}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} \mbox{\hyperlink{difficulty_8h_a6d5c465b6b9880f7c6afd1f7f4371e4f}{explain}} \mbox{[}\mbox{\hyperlink{difficulty_8h_a0ae3f25fa9904dbcffbacdc19eb50acc}{DIFF\+\_\+\+TEXT}}\mbox{]}\mbox{[}\mbox{\hyperlink{difficulty_8h_a5db07c224380f95ce080330a43a1a160}{DIFF\+\_\+\+TYPES}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{difficulty_8h_a086264544772c58c2bb8d1a85699f25a}\index{difficulty.h@{difficulty.h}!DIFF\_DIM@{DIFF\_DIM}}
+\index{DIFF\_DIM@{DIFF\_DIM}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{DIFF\_DIM}{DIFF\_DIM}}
+{\footnotesize\ttfamily \label{difficulty_8h_a086264544772c58c2bb8d1a85699f25a} 
+\#define DIFF\+\_\+\+DIM~20}
+
+\Hypertarget{difficulty_8h_a0ae3f25fa9904dbcffbacdc19eb50acc}\index{difficulty.h@{difficulty.h}!DIFF\_TEXT@{DIFF\_TEXT}}
+\index{DIFF\_TEXT@{DIFF\_TEXT}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{DIFF\_TEXT}{DIFF\_TEXT}}
+{\footnotesize\ttfamily \label{difficulty_8h_a0ae3f25fa9904dbcffbacdc19eb50acc} 
+\#define DIFF\+\_\+\+TEXT~4}
+
+\Hypertarget{difficulty_8h_a5db07c224380f95ce080330a43a1a160}\index{difficulty.h@{difficulty.h}!DIFF\_TYPES@{DIFF\_TYPES}}
+\index{DIFF\_TYPES@{DIFF\_TYPES}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{DIFF\_TYPES}{DIFF\_TYPES}}
+{\footnotesize\ttfamily \label{difficulty_8h_a5db07c224380f95ce080330a43a1a160} 
+\#define DIFF\+\_\+\+TYPES~4}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{difficulty_8h_a79c72c85a3b49834d1182393768679b3}\index{difficulty.h@{difficulty.h}!downStick\_DIFFICULTY@{downStick\_DIFFICULTY}}
+\index{downStick\_DIFFICULTY@{downStick\_DIFFICULTY}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{downStick\_DIFFICULTY()}{downStick\_DIFFICULTY()}}
+{\footnotesize\ttfamily \label{difficulty_8h_a79c72c85a3b49834d1182393768679b3} 
+void down\+Stick\+\_\+\+DIFFICULTY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Action that the menu performs when the stick goes down, primarly changing selection and imposing logic visual limits. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_a79c72c85a3b49834d1182393768679b3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_a79c72c85a3b49834d1182393768679b3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{difficulty_8h_a1834148a96e06042ee734794f17f9714}\index{difficulty.h@{difficulty.h}!drawDifficulty@{drawDifficulty}}
+\index{drawDifficulty@{drawDifficulty}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{drawDifficulty()}{drawDifficulty()}}
+{\footnotesize\ttfamily \label{difficulty_8h_a1834148a96e06042ee734794f17f9714} 
+void draw\+Difficulty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function that draws the interface of difficulty section, 3 buttons to select difficulty and the others for prev (go to DIMENSION) and next (go to TENTATIVES) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_a1834148a96e06042ee734794f17f9714_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{difficulty_8h_a1834148a96e06042ee734794f17f9714_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{difficulty_8h_abe9c02f90a494b0d60669e280db89c2d}\index{difficulty.h@{difficulty.h}!drawText@{drawText}}
+\index{drawText@{drawText}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
+{\footnotesize\ttfamily \label{difficulty_8h_abe9c02f90a494b0d60669e280db89c2d} 
+void draw\+Text (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draw Text Description according to the difficulty selected in order to explain to the user what that means. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{difficulty_8h_abe9c02f90a494b0d60669e280db89c2d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_abe9c02f90a494b0d60669e280db89c2d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{difficulty_8h_abe499c3970af43df2a6f606181935882}\index{difficulty.h@{difficulty.h}!fn\_DIFFICULTY@{fn\_DIFFICULTY}}
+\index{fn\_DIFFICULTY@{fn\_DIFFICULTY}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{fn\_DIFFICULTY()}{fn\_DIFFICULTY()}}
+{\footnotesize\ttfamily \label{difficulty_8h_abe499c3970af43df2a6f606181935882} 
+void fn\+\_\+\+DIFFICULTY (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Implicit Call that is invoked when we arrive at DIFFICULTY state in GUI FSM. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_abe499c3970af43df2a6f606181935882_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{difficulty_8h_a55037b2df6de8e644fb78a0b591e8ac2}\index{difficulty.h@{difficulty.h}!handlePressure\_DIFFICULTY@{handlePressure\_DIFFICULTY}}
+\index{handlePressure\_DIFFICULTY@{handlePressure\_DIFFICULTY}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{handlePressure\_DIFFICULTY()}{handlePressure\_DIFFICULTY()}}
+{\footnotesize\ttfamily \label{difficulty_8h_a55037b2df6de8e644fb78a0b591e8ac2} 
+void handle\+Pressure\+\_\+\+DIFFICULTY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function that handles pressure of confirm button when we are in DIFFICULTY section. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{difficulty_8h_a55037b2df6de8e644fb78a0b591e8ac2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_a55037b2df6de8e644fb78a0b591e8ac2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{difficulty_8h_ada1c7d825f7d0d6084a4b004f91d570c}\index{difficulty.h@{difficulty.h}!leftStick\_DIFFICULTY@{leftStick\_DIFFICULTY}}
+\index{leftStick\_DIFFICULTY@{leftStick\_DIFFICULTY}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{leftStick\_DIFFICULTY()}{leftStick\_DIFFICULTY()}}
+{\footnotesize\ttfamily \label{difficulty_8h_ada1c7d825f7d0d6084a4b004f91d570c} 
+void left\+Stick\+\_\+\+DIFFICULTY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Action that the menu performs when the stick goes left, primarly changing selection and imposing logic visual limits. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_ada1c7d825f7d0d6084a4b004f91d570c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_ada1c7d825f7d0d6084a4b004f91d570c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{difficulty_8h_a857aed146f25be6eafd6029c4cae888f}\index{difficulty.h@{difficulty.h}!rightStick\_DIFFICULTY@{rightStick\_DIFFICULTY}}
+\index{rightStick\_DIFFICULTY@{rightStick\_DIFFICULTY}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{rightStick\_DIFFICULTY()}{rightStick\_DIFFICULTY()}}
+{\footnotesize\ttfamily \label{difficulty_8h_a857aed146f25be6eafd6029c4cae888f} 
+void right\+Stick\+\_\+\+DIFFICULTY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Action that the menu performs when the stick goes right, primarly changing selection and imposing logic visual limits. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_a857aed146f25be6eafd6029c4cae888f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_a857aed146f25be6eafd6029c4cae888f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{difficulty_8h_a5db0b76e31fb4a7fbc93ffc09473cec9}\index{difficulty.h@{difficulty.h}!upStick\_DIFFICULTY@{upStick\_DIFFICULTY}}
+\index{upStick\_DIFFICULTY@{upStick\_DIFFICULTY}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{upStick\_DIFFICULTY()}{upStick\_DIFFICULTY()}}
+{\footnotesize\ttfamily \label{difficulty_8h_a5db0b76e31fb4a7fbc93ffc09473cec9} 
+void up\+Stick\+\_\+\+DIFFICULTY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Action that the menu performs when the stick goes up, primarly changing selection and imposing logic visual limits. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_a5db0b76e31fb4a7fbc93ffc09473cec9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h_a5db0b76e31fb4a7fbc93ffc09473cec9_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{difficulty_8h_a22d4ee3d2e640c505429eda51dae5a3d}\index{difficulty.h@{difficulty.h}!diff\_buttons@{diff\_buttons}}
+\index{diff\_buttons@{diff\_buttons}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{diff\_buttons}{diff\_buttons}}
+{\footnotesize\ttfamily \label{difficulty_8h_a22d4ee3d2e640c505429eda51dae5a3d} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} diff\+\_\+buttons\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{difficulty_8h_a6d5c465b6b9880f7c6afd1f7f4371e4f}\index{difficulty.h@{difficulty.h}!explain@{explain}}
+\index{explain@{explain}!difficulty.h@{difficulty.h}}
+\doxysubsubsection{\texorpdfstring{explain}{explain}}
+{\footnotesize\ttfamily \label{difficulty_8h_a6d5c465b6b9880f7c6afd1f7f4371e4f} 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} explain\mbox{[}\mbox{\hyperlink{difficulty_8h_a0ae3f25fa9904dbcffbacdc19eb50acc}{DIFF\+\_\+\+TEXT}}\mbox{]}\mbox{[}\mbox{\hyperlink{difficulty_8h_a5db07c224380f95ce080330a43a1a160}{DIFF\+\_\+\+TYPES}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+

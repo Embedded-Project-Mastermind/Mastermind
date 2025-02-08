@@ -1,0 +1,27 @@
+<map id="drawChronology" name="drawChronology">
+<area shape="rect" id="Node000001" title="function that create buttons and text for the Chronology screen" alt="" coords="5,208,121,234"/>
+<area shape="rect" id="Node000002" href="$implementations_8c.html#ada4cd14b9689d4fe9b9de328e4724964" title=" " alt="" coords="358,107,445,132"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,205,115,173,140,156,168,142,212,129,258,121,342,115,342,120,259,126,213,134,170,147,143,160,118,177,79,209"/>
+<area shape="rect" id="Node000008" href="$game_8c.html#a1d704afea01300efda83ee14d72bf132" title="Management and color of the circles on screen." alt="" coords="184,259,274,284"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="109,232,171,251,170,256,107,237"/>
+<area shape="rect" id="Node000009" href="$chronology_8c.html#a0009722d580b5fc3a2c6ae32efadd8bb" title="TODO: Describe function." alt="" coords="169,157,290,183"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="107,205,170,185,171,191,109,210"/>
+<area shape="rect" id="Node000010" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="338,181,464,207"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="121,214,322,198,323,203,121,219"/>
+<area shape="rect" id="Node000011" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title=" " alt="" coords="183,308,276,334"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="82,232,121,263,170,295,178,299,176,304,167,299,118,267,78,236"/>
+<area shape="rect" id="Node000003" href="$implementations_8c.html#a17fb5785fa10393596b1c10e580fee1b" title=" " alt="" coords="680,31,802,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="445,107,512,92,664,57,665,63,513,97,446,112"/>
+<area shape="rect" id="Node000004" href="$implementations_8c.html#ac2bb0254f8bef6f471cc1e1e4aff3fb2" title=" " alt="" coords="512,107,632,132"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="445,117,497,117,497,122,445,122"/>
+<area shape="rect" id="Node000005" href="$implementations_8c.html#aaa2bed682fe325d72adc6d9ee50b15b9" title=" " alt="" coords="519,5,625,31"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="422,104,511,48,531,36,534,41,514,52,424,108"/>
+<area shape="rect" id="Node000006" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="521,205,623,231"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="421,131,462,160,514,192,522,196,520,201,511,196,459,165,418,135"/>
+<area shape="rect" id="Node000007" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="521,156,623,182"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="446,130,511,149,510,154,445,135"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="625,23,665,29,664,35,625,29"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="291,176,323,181,322,186,290,181"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="465,200,506,206,506,212,464,206"/>
+<area shape="poly" id="edge12_Node000010_Node000007" title=" " alt="" coords="464,182,506,176,506,181,465,187"/>
+</map>

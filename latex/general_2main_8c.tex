@@ -1,0 +1,673 @@
+\doxysection{general/main.c File Reference}
+\hypertarget{general_2main_8c}{}\label{general_2main_8c}\index{general/main.c@{general/main.c}}
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}implementations.\+h"{}}\newline
+{\ttfamily \#include "{}graphics.\+h"{}}\newline
+{\ttfamily \#include "{}fsm.\+h"{}}\newline
+{\ttfamily \#include "{}start.\+h"{}}\newline
+{\ttfamily \#include "{}dimension.\+h"{}}\newline
+{\ttfamily \#include "{}tentatives.\+h"{}}\newline
+{\ttfamily \#include "{}doubles.\+h"{}}\newline
+{\ttfamily \#include "{}difficulty.\+h"{}}\newline
+{\ttfamily \#include "{}info.\+h"{}}\newline
+{\ttfamily \#include "{}joystick.\+h"{}}\newline
+{\ttfamily \#include "{}buttons.\+h"{}}\newline
+{\ttfamily \#include "{}input.\+h"{}}\newline
+{\ttfamily \#include "{}game.\+h"{}}\newline
+{\ttfamily \#include "{}gamelogic1.\+h"{}}\newline
+{\ttfamily \#include "{}gamelogic2.\+h"{}}\newline
+{\ttfamily \#include "{}gamelogic3.\+h"{}}\newline
+{\ttfamily \#include "{}chronology.\+h"{}}\newline
+{\ttfamily \#include "{}end.\+h"{}}\newline
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_graphics___state_machine}{Graphics\+\_\+\+State\+Machine}}
+\item 
+struct \mbox{\hyperlink{struct_state_machine}{State\+Machine}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Graphics\+\_\+\+State\+Machine \mbox{\hyperlink{general_2main_8c_a8a17d22398d1e3b61fdfce314055229a}{Graphics\+\_\+\+State\+Machine}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{general_2main_8c_ad39718205d76330aa2cc59317e9c58b2}{label\+Defining}} (\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\+\_\+\+State}} pos)
+\item 
+void \mbox{\hyperlink{general_2main_8c_a2b623fea4e0341cf400ff7cbc4e15dfa}{set\+Sizes}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{general_2main_8c_a81e0c66f747f54f5fd84f084a9c88cda}{Timer\+\_\+get\+Value}} (void)
+\item 
+int \mbox{\hyperlink{general_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\item 
+void \mbox{\hyperlink{general_2main_8c_aa043ad73982965a208022e707ed9c892}{PORT1\+\_\+\+IRQHandler}} ()
+\item 
+void \mbox{\hyperlink{general_2main_8c_a7ca37072ef5f4704e442fad813e4fa31}{PORT3\+\_\+\+IRQHandler}} (void)
+\item 
+void \mbox{\hyperlink{general_2main_8c_a577f5dcafa13712fe070504ad7c45f54}{PORT4\+\_\+\+IRQHandler}} ()
+\item 
+void \mbox{\hyperlink{general_2main_8c_a04037b417a195722074c0ea44dbc430c}{PORT5\+\_\+\+IRQHandler}} (void)
+\item 
+void \mbox{\hyperlink{general_2main_8c_a6fd48de2ba4b6f4f8bd9c275878cb52f}{PORT6\+\_\+\+IRQHandler}} ()
+\item 
+void \mbox{\hyperlink{general_2main_8c_a9b3c0e9afd83afa34c0070f88d7860bc}{TA0\+\_\+\+N\+\_\+\+IRQHandler}} ()
+\item 
+void \mbox{\hyperlink{general_2main_8c_a9fa2875556d48df2ba3c9c148667b8f5}{ADC14\+\_\+\+IRQHandler}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_graphics___state_machine}{Graphics\+\_\+\+State\+Machine}} \mbox{\hyperlink{general_2main_8c_a4a44fa5a4c57d374eb572f3fc75b16fa}{gfsm}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_state_machine}{State\+Machine}} \mbox{\hyperlink{general_2main_8c_a3cdbaf41c8d20ef6a9e9a42a7ba77aa7}{fsm}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_game}{Game}} \mbox{\hyperlink{general_2main_8c_ac6a5ed6191fcf3a5bf0445921feb4f48}{game}}
+\item 
+\mbox{\hyperlink{struct_tentative}{Tentative}} \mbox{\hyperlink{general_2main_8c_a645ef54f5ed9e77e09c0edb057a4d15a}{tentative}}
+\item 
+\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\+\_\+\+State}} \mbox{\hyperlink{general_2main_8c_adf89d24d3f59b9ae77dc9340316f59f8}{display\+\_\+position}} =\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca9ff8b8c78539457b03a06689f98c6579}{START\+\_\+\+GR}}
+\item 
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{general_2main_8c_a54138d08678dd972a2c9b13e069fd91a}{current\+\_\+state}} =\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}}
+\item 
+Graphics\+\_\+\+Rectangle \mbox{\hyperlink{general_2main_8c_a927a054ae58b010f8f71dc355d70ecb8}{upper\+Rect}} =\{0, 0, 128, 32\}
+\item 
+Graphics\+\_\+\+Rectangle \mbox{\hyperlink{general_2main_8c_af939cfc01a16f191190492de0c53caea}{upper\+Rect\+CH}} =\{0, 0, 128-\/16-\/1, 16\}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_a6348ae18e208879a23577d6992d715c6}{prev\+Button}} =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}}, \{0, 97, 63, 128\}, \{\{"{}Back"{}\}, false\}\}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_a8ffa7b16d9b24e226a6085792b4f80f0}{next\+Button}} =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4}{DISABLED}}, \{65, 97, 128, 128\}, \{\{"{}Next"{}\}, false\}\}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{general_2main_8c_a1e1320cfd39f6febcf8e4eb2b542f424}{position}} =0
+\item 
+int16\+\_\+t \mbox{\hyperlink{general_2main_8c_a0351fbc096999109025b02345f8f1a92}{pos\+\_\+chronology}} =0
+\item 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} \mbox{\hyperlink{general_2main_8c_ac84babd437237123707c9a56b2d2da07}{label\+Text}} =\{"{}"{}, false\}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_a51fc6efa97595e2f75cb3e7073d4c7b3}{dim\+\_\+buttons}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_a22d4ee3d2e640c505429eda51dae5a3d}{diff\+\_\+buttons}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_a33b950bd690e84864160e326b102607b}{tent\+\_\+buttons}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_a150621294c90549cd3d5ab6e39ed3b91}{text\+\_\+no\+\_\+tent}} =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4}{DISABLED}}, \{\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\+\_\+\+DIM}}+1, 32+2, \mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\+\_\+\+DIM}}\texorpdfstring{$\ast$}{*}4-\/1, 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\+\_\+\+DIM}}-\/1\}, \{"{}NO TRIES"{}, false\}\}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_a850f4e76542f9c2f545acfa2f1296630}{start\+\_\+button}} =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}}, \{32, 96, 96, 112\}, \{"{}START"{}, false\}\}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_a1ce3002eee040ed0a11295cb65b66542}{gameover\+\_\+button}} =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}}, \{24, 96, 104, 112\}, \{"{}GAME OVER!"{}, false\}\}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_a494f2c08df14c2c6c7d8c091e353b828}{win\+\_\+button}} =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}}, \{32, 96, 96, 122\}, \{"{}YOU WIN"{}, false\}\}
+\item 
+\mbox{\hyperlink{struct_graphics___chronology}{Graphics\+\_\+\+Chronology}} \mbox{\hyperlink{general_2main_8c_a38e59e2a27b779c4dc37f0900bd268c1}{chronology}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_a7cae3b9d656c300e3d6f8fddc9eaf0f9}{other\+\_\+buttons}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} \mbox{\hyperlink{general_2main_8c_a05683f2df5d32f43f8a19379eabf495a}{doubles\+\_\+text}} =\{\{"{}Doubles"{}\}, false\}
+\item 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} \mbox{\hyperlink{general_2main_8c_aa07bc5f30e0865feedebed4a8373efb1}{doubles\+\_\+description}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_ad2b2e5367e88e717f2586c3aae57a9c8}{doubles\+\_\+buttons}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} \mbox{\hyperlink{general_2main_8c_aca98e1110d8aa3fdc0290dd183479847}{info\+\_\+texts}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} \mbox{\hyperlink{general_2main_8c_a7d7671ef429973db9fb81dd77fe3c0f1}{info\+\_\+texts\+\_\+results}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{general_2main_8c_afcd95735cff8ff72015d886db76587e9}{info\+\_\+buttons}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___circle}{Graphics\+\_\+\+Circle}} \mbox{\hyperlink{general_2main_8c_aa8a9bf909df59a05214737a1e445a854}{circles}} \mbox{[}$\,$\mbox{]}
+\item 
+int8\+\_\+t \mbox{\hyperlink{general_2main_8c_af632d8673901ae9a66343372f04d391f}{sizes}} \mbox{[}\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca244ec924285947908ff227bdc3aa8a40}{ERROR\+\_\+\+GR}}\mbox{]}
+\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{general_2main_8c_adeea6b5407ba6e1de07eb93ed996c467}{timer\+Ticks}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{general_2main_8c_a38d5fc0c95c1ee3a483fe4c245abda8c}{color\+\_\+selected}}
+\item 
+volatile bool \mbox{\hyperlink{general_2main_8c_a8401524759ad65a7d2cf99141ae1c5c3}{interrupt\+Flag}} =false
+\item 
+bool \mbox{\hyperlink{general_2main_8c_a58f3ca86b0154bbcc1b597f684487c9b}{exit\+\_\+gamelogic}} =false
+\item 
+bool \mbox{\hyperlink{general_2main_8c_a6c3d027526fd8a85929e6ab6805add7e}{definitive\+\_\+exit}} =false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{general_2main_8c_a8a17d22398d1e3b61fdfce314055229a}\index{main.c@{main.c}!Graphics\_StateMachine@{Graphics\_StateMachine}}
+\index{Graphics\_StateMachine@{Graphics\_StateMachine}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Graphics\_StateMachine}{Graphics\_StateMachine}}
+{\footnotesize\ttfamily \label{general_2main_8c_a8a17d22398d1e3b61fdfce314055229a} 
+typedef struct Graphics\+\_\+\+State\+Machine Graphics\+\_\+\+State\+Machine}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{general_2main_8c_a9fa2875556d48df2ba3c9c148667b8f5}\index{main.c@{main.c}!ADC14\_IRQHandler@{ADC14\_IRQHandler}}
+\index{ADC14\_IRQHandler@{ADC14\_IRQHandler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{ADC14\_IRQHandler()}{ADC14\_IRQHandler()}}
+{\footnotesize\ttfamily \label{general_2main_8c_a9fa2875556d48df2ba3c9c148667b8f5} 
+void ADC14\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2main_8c_a9fa2875556d48df2ba3c9c148667b8f5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2main_8c_ad39718205d76330aa2cc59317e9c58b2}\index{main.c@{main.c}!labelDefining@{labelDefining}}
+\index{labelDefining@{labelDefining}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{labelDefining()}{labelDefining()}}
+{\footnotesize\ttfamily \label{general_2main_8c_ad39718205d76330aa2cc59317e9c58b2} 
+void label\+Defining (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\+\_\+\+State}}}]{pos}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{general_2main_8c_ad39718205d76330aa2cc59317e9c58b2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{general_2main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2main_8c_aa043ad73982965a208022e707ed9c892}\index{main.c@{main.c}!PORT1\_IRQHandler@{PORT1\_IRQHandler}}
+\index{PORT1\_IRQHandler@{PORT1\_IRQHandler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{PORT1\_IRQHandler()}{PORT1\_IRQHandler()}}
+{\footnotesize\ttfamily \label{general_2main_8c_aa043ad73982965a208022e707ed9c892} 
+void PORT1\+\_\+\+IRQHandler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{general_2main_8c_a7ca37072ef5f4704e442fad813e4fa31}\index{main.c@{main.c}!PORT3\_IRQHandler@{PORT3\_IRQHandler}}
+\index{PORT3\_IRQHandler@{PORT3\_IRQHandler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{PORT3\_IRQHandler()}{PORT3\_IRQHandler()}}
+{\footnotesize\ttfamily \label{general_2main_8c_a7ca37072ef5f4704e442fad813e4fa31} 
+void PORT3\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2main_8c_a7ca37072ef5f4704e442fad813e4fa31_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2main_8c_a577f5dcafa13712fe070504ad7c45f54}\index{main.c@{main.c}!PORT4\_IRQHandler@{PORT4\_IRQHandler}}
+\index{PORT4\_IRQHandler@{PORT4\_IRQHandler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{PORT4\_IRQHandler()}{PORT4\_IRQHandler()}}
+{\footnotesize\ttfamily \label{general_2main_8c_a577f5dcafa13712fe070504ad7c45f54} 
+void PORT4\+\_\+\+IRQHandler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2main_8c_a577f5dcafa13712fe070504ad7c45f54_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2main_8c_a04037b417a195722074c0ea44dbc430c}\index{main.c@{main.c}!PORT5\_IRQHandler@{PORT5\_IRQHandler}}
+\index{PORT5\_IRQHandler@{PORT5\_IRQHandler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{PORT5\_IRQHandler()}{PORT5\_IRQHandler()}}
+{\footnotesize\ttfamily \label{general_2main_8c_a04037b417a195722074c0ea44dbc430c} 
+void PORT5\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2main_8c_a04037b417a195722074c0ea44dbc430c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2main_8c_a6fd48de2ba4b6f4f8bd9c275878cb52f}\index{main.c@{main.c}!PORT6\_IRQHandler@{PORT6\_IRQHandler}}
+\index{PORT6\_IRQHandler@{PORT6\_IRQHandler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{PORT6\_IRQHandler()}{PORT6\_IRQHandler()}}
+{\footnotesize\ttfamily \label{general_2main_8c_a6fd48de2ba4b6f4f8bd9c275878cb52f} 
+void PORT6\+\_\+\+IRQHandler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2main_8c_a6fd48de2ba4b6f4f8bd9c275878cb52f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2main_8c_a2b623fea4e0341cf400ff7cbc4e15dfa}\index{main.c@{main.c}!setSizes@{setSizes}}
+\index{setSizes@{setSizes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{setSizes()}{setSizes()}}
+{\footnotesize\ttfamily \label{general_2main_8c_a2b623fea4e0341cf400ff7cbc4e15dfa} 
+void set\+Sizes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{general_2main_8c_a2b623fea4e0341cf400ff7cbc4e15dfa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2main_8c_a9b3c0e9afd83afa34c0070f88d7860bc}\index{main.c@{main.c}!TA0\_N\_IRQHandler@{TA0\_N\_IRQHandler}}
+\index{TA0\_N\_IRQHandler@{TA0\_N\_IRQHandler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TA0\_N\_IRQHandler()}{TA0\_N\_IRQHandler()}}
+{\footnotesize\ttfamily \label{general_2main_8c_a9b3c0e9afd83afa34c0070f88d7860bc} 
+void TA0\+\_\+\+N\+\_\+\+IRQHandler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2main_8c_a9b3c0e9afd83afa34c0070f88d7860bc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2main_8c_a81e0c66f747f54f5fd84f084a9c88cda}\index{main.c@{main.c}!Timer\_getValue@{Timer\_getValue}}
+\index{Timer\_getValue@{Timer\_getValue}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Timer\_getValue()}{Timer\_getValue()}}
+{\footnotesize\ttfamily \label{general_2main_8c_a81e0c66f747f54f5fd84f084a9c88cda} 
+uint32\+\_\+t Timer\+\_\+get\+Value (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{general_2main_8c_a38e59e2a27b779c4dc37f0900bd268c1}\index{main.c@{main.c}!chronology@{chronology}}
+\index{chronology@{chronology}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{chronology}{chronology}}
+{\footnotesize\ttfamily \label{general_2main_8c_a38e59e2a27b779c4dc37f0900bd268c1} 
+\mbox{\hyperlink{struct_graphics___chronology}{Graphics\+\_\+\+Chronology}} chronology\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{}
+\DoxyCodeLine{\ \ \ \ \ \ \{\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4}{DISABLED}},\ \{1,\ 34,\ 128-\/1,\ 72\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\}\},\ \{1,\ 25,\ 128,\ 33\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\},.chrono\_circles=\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\}\},.chrono\_buttons=\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}a"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}a"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}a"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}a"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}a"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}a"{}},\ \textcolor{keyword}{false}\}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \{\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4}{DISABLED}},\ \{1,\ 82,\ 128-\/1,\ 120\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\}\},\ \{1,\ 73,\ 128,\ 81\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\},.chrono\_circles=\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{0,\ 0,\ 0,\ 0\}\},.chrono\_buttons=\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}."{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}."{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}."{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}."{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}."{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}."{}},\ \textcolor{keyword}{false}\}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_aa8a9bf909df59a05214737a1e445a854}\index{main.c@{main.c}!circles@{circles}}
+\index{circles@{circles}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{circles}{circles}}
+{\footnotesize\ttfamily \label{general_2main_8c_aa8a9bf909df59a05214737a1e445a854} 
+\mbox{\hyperlink{struct_graphics___circle}{Graphics\+\_\+\+Circle}} circles\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{}
+\DoxyCodeLine{\ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \{0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \{0,\ 0,\ 0,\ 0\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_a38d5fc0c95c1ee3a483fe4c245abda8c}\index{main.c@{main.c}!color\_selected@{color\_selected}}
+\index{color\_selected@{color\_selected}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{color\_selected}{color\_selected}}
+{\footnotesize\ttfamily \label{general_2main_8c_a38d5fc0c95c1ee3a483fe4c245abda8c} 
+int16\+\_\+t color\+\_\+selected}
+
+\Hypertarget{general_2main_8c_a54138d08678dd972a2c9b13e069fd91a}\index{main.c@{main.c}!current\_state@{current\_state}}
+\index{current\_state@{current\_state}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{current\_state}{current\_state}}
+{\footnotesize\ttfamily \label{general_2main_8c_a54138d08678dd972a2c9b13e069fd91a} 
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} current\+\_\+state =\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}}}
+
+\Hypertarget{general_2main_8c_a6c3d027526fd8a85929e6ab6805add7e}\index{main.c@{main.c}!definitive\_exit@{definitive\_exit}}
+\index{definitive\_exit@{definitive\_exit}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{definitive\_exit}{definitive\_exit}}
+{\footnotesize\ttfamily \label{general_2main_8c_a6c3d027526fd8a85929e6ab6805add7e} 
+bool definitive\+\_\+exit =false}
+
+\Hypertarget{general_2main_8c_a22d4ee3d2e640c505429eda51dae5a3d}\index{main.c@{main.c}!diff\_buttons@{diff\_buttons}}
+\index{diff\_buttons@{diff\_buttons}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{diff\_buttons}{diff\_buttons}}
+{\footnotesize\ttfamily \label{general_2main_8c_a22d4ee3d2e640c505429eda51dae5a3d} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} diff\+\_\+buttons\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}},\ \{1,\ 32+2,\ \mbox{\hyperlink{difficulty_8h_a086264544772c58c2bb8d1a85699f25a}{DIFF\_DIM}},\ 32+\mbox{\hyperlink{difficulty_8h_a086264544772c58c2bb8d1a85699f25a}{DIFF\_DIM}}\},\ \{\textcolor{stringliteral}{"{}A"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{1,\ 32+\mbox{\hyperlink{difficulty_8h_a086264544772c58c2bb8d1a85699f25a}{DIFF\_DIM}}+2,\ \mbox{\hyperlink{difficulty_8h_a086264544772c58c2bb8d1a85699f25a}{DIFF\_DIM}},\ 32+2*\mbox{\hyperlink{difficulty_8h_a086264544772c58c2bb8d1a85699f25a}{DIFF\_DIM}}+1\},\ \{\textcolor{stringliteral}{"{}B"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{1,\ 96-\/\mbox{\hyperlink{difficulty_8h_a086264544772c58c2bb8d1a85699f25a}{DIFF\_DIM}}-\/1,\ \mbox{\hyperlink{difficulty_8h_a086264544772c58c2bb8d1a85699f25a}{DIFF\_DIM}},\ 96-\/2\},\ \{\textcolor{stringliteral}{"{}C"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_a51fc6efa97595e2f75cb3e7073d4c7b3}\index{main.c@{main.c}!dim\_buttons@{dim\_buttons}}
+\index{dim\_buttons@{dim\_buttons}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{dim\_buttons}{dim\_buttons}}
+{\footnotesize\ttfamily \label{general_2main_8c_a51fc6efa97595e2f75cb3e7073d4c7b3} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} dim\+\_\+buttons\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}},\ \{0,\ 34,\ 63,\ 63\ \},\ \{\textcolor{stringliteral}{"{}3"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{65,\ 34,\ 128,\ 63\},\ \{\textcolor{stringliteral}{"{}4"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 65,\ 63,\ 96\},\ \{\textcolor{stringliteral}{"{}5"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{65,\ 65,\ 128,\ 96\},\ \{\textcolor{stringliteral}{"{}6"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_adf89d24d3f59b9ae77dc9340316f59f8}\index{main.c@{main.c}!display\_position@{display\_position}}
+\index{display\_position@{display\_position}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{display\_position}{display\_position}}
+{\footnotesize\ttfamily \label{general_2main_8c_adf89d24d3f59b9ae77dc9340316f59f8} 
+\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\+\_\+\+State}} display\+\_\+position =\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca9ff8b8c78539457b03a06689f98c6579}{START\+\_\+\+GR}}}
+
+\Hypertarget{general_2main_8c_ad2b2e5367e88e717f2586c3aae57a9c8}\index{main.c@{main.c}!doubles\_buttons@{doubles\_buttons}}
+\index{doubles\_buttons@{doubles\_buttons}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{doubles\_buttons}{doubles\_buttons}}
+{\footnotesize\ttfamily \label{general_2main_8c_ad2b2e5367e88e717f2586c3aae57a9c8} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} doubles\+\_\+buttons\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{\ }
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}},\ \{80,\ 37,\ 110,\ 57\},\ \{\{\textcolor{stringliteral}{"{}No"{}}\},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,0,0,0\},\ \{\{\textcolor{stringliteral}{"{}"{}}\},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,0,0,0\},\ \{\{\textcolor{stringliteral}{"{}"{}}\},\ \textcolor{keyword}{false}\}\}\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_aa07bc5f30e0865feedebed4a8373efb1}\index{main.c@{main.c}!doubles\_description@{doubles\_description}}
+\index{doubles\_description@{doubles\_description}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{doubles\_description}{doubles\_description}}
+{\footnotesize\ttfamily \label{general_2main_8c_aa07bc5f30e0865feedebed4a8373efb1} 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} doubles\+\_\+description\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{\ }
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}Possibility\ of\ "{}}\},\ \textcolor{keyword}{false}\},}
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}the\ same\ color\ "{}}\},\ \textcolor{keyword}{false}\},}
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}repeated\ or\ not"{}}\},\ \textcolor{keyword}{false}\}\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_a05683f2df5d32f43f8a19379eabf495a}\index{main.c@{main.c}!doubles\_text@{doubles\_text}}
+\index{doubles\_text@{doubles\_text}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{doubles\_text}{doubles\_text}}
+{\footnotesize\ttfamily \label{general_2main_8c_a05683f2df5d32f43f8a19379eabf495a} 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} doubles\+\_\+text =\{\{"{}Doubles"{}\}, false\}}
+
+\Hypertarget{general_2main_8c_a58f3ca86b0154bbcc1b597f684487c9b}\index{main.c@{main.c}!exit\_gamelogic@{exit\_gamelogic}}
+\index{exit\_gamelogic@{exit\_gamelogic}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{exit\_gamelogic}{exit\_gamelogic}}
+{\footnotesize\ttfamily \label{general_2main_8c_a58f3ca86b0154bbcc1b597f684487c9b} 
+bool exit\+\_\+gamelogic =false}
+
+\Hypertarget{general_2main_8c_a3cdbaf41c8d20ef6a9e9a42a7ba77aa7}\index{main.c@{main.c}!fsm@{fsm}}
+\index{fsm@{fsm}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{fsm}{fsm}}
+{\footnotesize\ttfamily \label{general_2main_8c_a3cdbaf41c8d20ef6a9e9a42a7ba77aa7} 
+\mbox{\hyperlink{struct_state_machine}{State\+Machine}} fsm\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}},\ \mbox{\hyperlink{general_2gamelogic1_8c_a3ae06b4f684ab23f714e117b63520232}{fn\_START}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a9bc3ac94eccdcd5c172392dceeb48f49}{KEY\_WOUT\_DOUB}},\ \mbox{\hyperlink{general_2gamelogic1_8c_a6dfdeacaef5a5d37960e2575015b6516}{fn\_KEY\_WOUT\_DOUB}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8ada0e9b62b9e2732c057858d4cba06de9}{KEY\_WH\_DOUB}},\ \mbox{\hyperlink{general_2gamelogic1_8c_a7b7577b178ce9de2be9e5ab17053f6e5}{fn\_KEY\_WH\_DOUB}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800}{RESET\_TENT}},\ \mbox{\hyperlink{general_2gamelogic1_8c_aea19573b1ff72f6c1ccf31fca44008e0}{fn\_RESET\_TENT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a79a322ccb4b29b85b3cab52dbccefd17}{WAIT}},\ \mbox{\hyperlink{general_2gamelogic2_8c_a816c5d4caf1a402f87e1e28b641884b4}{fn\_WAIT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229}{ELABORATE}},\ \mbox{\hyperlink{general_2gamelogic2_8c_a4a4f4707af922a7b84fdd6bdd358691e}{fn\_ELABORATE}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6}{INSERT\_COLOR}},\ \mbox{\hyperlink{general_2gamelogic2_8c_a6639e69c4f94296b4ed63b9471ba37e8}{fn\_INSERT\_COLOR}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a636c8eac8610f47dc4228a0fb1ca5309}{WAIT\_FULL}},\ \mbox{\hyperlink{general_2gamelogic2_8c_acd23a7b6b2abbeebb6c6bde26e35040a}{fn\_WAIT\_FULL}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629}{ELIMINATE\_COLOR}},\ \mbox{\hyperlink{general_2gamelogic2_8c_a135da966b746514db883735bf010382f}{fn\_ELIMINATE\_COLOR}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f}{ELABORATE\_TENT}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a8c8ec768cc25ef34d7b4cee105ff1ce2}{fn\_ELABORATE\_TENT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aef18bcb4a935d141625d0cc4f058b7d9}{INCREMENT\_TENT}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a0f8b9f3f374b53b9e58424bf9d735544}{fn\_INCREMENT\_TENT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a871723195985a4ae22d7e10d99bf8a00}{GAME\_OVER}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a21e4af8db8fc5212546f86edd08d0ba1}{fn\_GAME\_OVER}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425}{EASY\_MODE}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a839aba7dda7c72bae6c207708a47b207}{fn\_EASY\_MODE}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abab75a02f9e6c8bcf2b41d58044ecba7}{MEDIUM\_MODE}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a20f17247635a3f55d199db1bb7dfdc7d}{fn\_MEDIUM\_MODE}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a2c26fbc1fdd523c99380ac97dda96187}{DIFFICULT\_MODE}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a676922e1563163dc4a5df61b09f26162}{fn\_DIFFICULT\_MODE}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4e1ec298bdc63da1022042568b5935ad}{ELABORATE\_RESULT}},\ \mbox{\hyperlink{general_2gamelogic3_8c_a4965965e6c1b73519655decb209180b1}{fn\_ELABORATE\_RESULT}}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a843dff91ff0b0e5b98a110a512b2f531}{WIN}},\ \mbox{\hyperlink{general_2gamelogic3_8c_aff6bb300f90bfa5964af3b5251b4f650}{fn\_WIN}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_ac6a5ed6191fcf3a5bf0445921feb4f48}\index{main.c@{main.c}!game@{game}}
+\index{game@{game}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily \label{general_2main_8c_ac6a5ed6191fcf3a5bf0445921feb4f48} 
+\mbox{\hyperlink{struct_game}{Game}} game}
+
+\Hypertarget{general_2main_8c_a1ce3002eee040ed0a11295cb65b66542}\index{main.c@{main.c}!gameover\_button@{gameover\_button}}
+\index{gameover\_button@{gameover\_button}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{gameover\_button}{gameover\_button}}
+{\footnotesize\ttfamily \label{general_2main_8c_a1ce3002eee040ed0a11295cb65b66542} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} gameover\+\_\+button =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}}, \{24, 96, 104, 112\}, \{"{}GAME OVER!"{}, false\}\}}
+
+\Hypertarget{general_2main_8c_a4a44fa5a4c57d374eb572f3fc75b16fa}\index{main.c@{main.c}!gfsm@{gfsm}}
+\index{gfsm@{gfsm}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{gfsm}{gfsm}}
+{\footnotesize\ttfamily \label{general_2main_8c_a4a44fa5a4c57d374eb572f3fc75b16fa} 
+\mbox{\hyperlink{struct_graphics___state_machine}{Graphics\+\_\+\+State\+Machine}} gfsm\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{}
+\DoxyCodeLine{\ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca9ff8b8c78539457b03a06689f98c6579}{START\_GR}},\ \mbox{\hyperlink{start_8c_a442dc71ecc2ace42458fdc9532365549}{fn\_START\_GR}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807cab76859fb31ae59096e234a3f32eac4f7}{DIMENSION}},\ \mbox{\hyperlink{dimension_8c_a06c057d2723c369756cef6908ccdaa99}{fn\_DIMENSION}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{\mbox{\hyperlink{src_2fsm_8h_a1a48a93520a5fcc9d754a515c48c0231}{DIFFICULTY}},\ \mbox{\hyperlink{difficulty_8c_abe499c3970af43df2a6f606181935882}{fn\_DIFFICULTY}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca661b0215f708ebf8454810da5c4fe2e5}{TENTATIVE}},\ \mbox{\hyperlink{tentatives_8c_a10cf934f39aa68531a7a6bd03b9d837f}{fn\_TENTATIVE}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{\mbox{\hyperlink{src_2fsm_8h_a188837cf0ec4a8e95bf406b45cf6ff76}{DOUBLES}},\ \mbox{\hyperlink{doubles_8c_abde8d52331b6dfefc0394c653238ea16}{fn\_DOUBLES}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca748005382152808a72b1a9177d9dc806}{INFO}},\ \mbox{\hyperlink{info_8c_a95182df57add0ef8f2ec22d0337b14cf}{fn\_INFO}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807cad50cf309d7568040619ed26ee6835a84}{GAME}},\ \mbox{\hyperlink{game_8c_add55822234a04e4988e3f9716a8e3cd9}{fn\_GAME}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca391100608a514cd425d071136fac498c}{CHRONOLOGY}},\ \mbox{\hyperlink{chronology_8c_a77703c37a23665ce74ccea44a084a247}{fn\_CHRONOLOGY}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807cadc6f24fd6915a3f2786a1b7045406924}{END}},\ \mbox{\hyperlink{end_8c_abac9d0b896bc0d5ed74672684b47805e}{fn\_END}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_afcd95735cff8ff72015d886db76587e9}\index{main.c@{main.c}!info\_buttons@{info\_buttons}}
+\index{info\_buttons@{info\_buttons}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{info\_buttons}{info\_buttons}}
+{\footnotesize\ttfamily \label{general_2main_8c_afcd95735cff8ff72015d886db76587e9} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} info\+\_\+buttons\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{\ }
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,0,0,0\},\ \{\{\textcolor{stringliteral}{"{}"{}}\},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,0,0,0\},\ \{\{\textcolor{stringliteral}{"{}"{}}\},\ \textcolor{keyword}{false}\}\}\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_aca98e1110d8aa3fdc0290dd183479847}\index{main.c@{main.c}!info\_texts@{info\_texts}}
+\index{info\_texts@{info\_texts}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{info\_texts}{info\_texts}}
+{\footnotesize\ttfamily \label{general_2main_8c_aca98e1110d8aa3fdc0290dd183479847} 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} info\+\_\+texts\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{\ \ \ }
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}\ "{}}\},\ \textcolor{keyword}{false}\},}
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}Dimension:\ "{}}\},\ \textcolor{keyword}{false}\},}
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}Difficulty:\ "{}}\},\ \textcolor{keyword}{false}\},}
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}Doubles:\ "{}}\},\ \textcolor{keyword}{false}\},}
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}Tentatives:\ "{}}\},\ \textcolor{keyword}{false}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_a7d7671ef429973db9fb81dd77fe3c0f1}\index{main.c@{main.c}!info\_texts\_results@{info\_texts\_results}}
+\index{info\_texts\_results@{info\_texts\_results}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{info\_texts\_results}{info\_texts\_results}}
+{\footnotesize\ttfamily \label{general_2main_8c_a7d7671ef429973db9fb81dd77fe3c0f1} 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} info\+\_\+texts\+\_\+results\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{\ }
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}\ "{}}\},\ \textcolor{keyword}{false}\},}
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}\ "{}}\},\ \textcolor{keyword}{false}\},}
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}\ "{}}\},\ \textcolor{keyword}{false}\},}
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}\ "{}}\},\ \textcolor{keyword}{false}\},}
+\DoxyCodeLine{\ \ \ \ \{\{\textcolor{stringliteral}{"{}\ "{}}\},\ \textcolor{keyword}{false}\}\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_a8401524759ad65a7d2cf99141ae1c5c3}\index{main.c@{main.c}!interruptFlag@{interruptFlag}}
+\index{interruptFlag@{interruptFlag}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{interruptFlag}{interruptFlag}}
+{\footnotesize\ttfamily \label{general_2main_8c_a8401524759ad65a7d2cf99141ae1c5c3} 
+volatile bool interrupt\+Flag =false}
+
+\Hypertarget{general_2main_8c_ac84babd437237123707c9a56b2d2da07}\index{main.c@{main.c}!labelText@{labelText}}
+\index{labelText@{labelText}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{labelText}{labelText}}
+{\footnotesize\ttfamily \label{general_2main_8c_ac84babd437237123707c9a56b2d2da07} 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} label\+Text =\{"{}"{}, false\}}
+
+\Hypertarget{general_2main_8c_a8ffa7b16d9b24e226a6085792b4f80f0}\index{main.c@{main.c}!nextButton@{nextButton}}
+\index{nextButton@{nextButton}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{nextButton}{nextButton}}
+{\footnotesize\ttfamily \label{general_2main_8c_a8ffa7b16d9b24e226a6085792b4f80f0} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} next\+Button =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4}{DISABLED}}, \{65, 97, 128, 128\}, \{\{"{}Next"{}\}, false\}\}}
+
+\Hypertarget{general_2main_8c_a7cae3b9d656c300e3d6f8fddc9eaf0f9}\index{main.c@{main.c}!other\_buttons@{other\_buttons}}
+\index{other\_buttons@{other\_buttons}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{other\_buttons}{other\_buttons}}
+{\footnotesize\ttfamily \label{general_2main_8c_a7cae3b9d656c300e3d6f8fddc9eaf0f9} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} other\+\_\+buttons\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4}{DISABLED}},\ \{1,\ 16+1,\ 128-\/1,\ 24-\/1\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4}{DISABLED}},\ \{1,\ 120+1,\ 128-\/1,\ 128-\/1\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_a0351fbc096999109025b02345f8f1a92}\index{main.c@{main.c}!pos\_chronology@{pos\_chronology}}
+\index{pos\_chronology@{pos\_chronology}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{pos\_chronology}{pos\_chronology}}
+{\footnotesize\ttfamily \label{general_2main_8c_a0351fbc096999109025b02345f8f1a92} 
+int16\+\_\+t pos\+\_\+chronology =0}
+
+\Hypertarget{general_2main_8c_a1e1320cfd39f6febcf8e4eb2b542f424}\index{main.c@{main.c}!position@{position}}
+\index{position@{position}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \label{general_2main_8c_a1e1320cfd39f6febcf8e4eb2b542f424} 
+uint8\+\_\+t position =0}
+
+\Hypertarget{general_2main_8c_a6348ae18e208879a23577d6992d715c6}\index{main.c@{main.c}!prevButton@{prevButton}}
+\index{prevButton@{prevButton}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{prevButton}{prevButton}}
+{\footnotesize\ttfamily \label{general_2main_8c_a6348ae18e208879a23577d6992d715c6} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} prev\+Button =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}}, \{0, 97, 63, 128\}, \{\{"{}Back"{}\}, false\}\}}
+
+\Hypertarget{general_2main_8c_af632d8673901ae9a66343372f04d391f}\index{main.c@{main.c}!sizes@{sizes}}
+\index{sizes@{sizes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{sizes}{sizes}}
+{\footnotesize\ttfamily \label{general_2main_8c_af632d8673901ae9a66343372f04d391f} 
+int8\+\_\+t sizes\mbox{[}\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca244ec924285947908ff227bdc3aa8a40}{ERROR\+\_\+\+GR}}\mbox{]}}
+
+\Hypertarget{general_2main_8c_a850f4e76542f9c2f545acfa2f1296630}\index{main.c@{main.c}!start\_button@{start\_button}}
+\index{start\_button@{start\_button}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{start\_button}{start\_button}}
+{\footnotesize\ttfamily \label{general_2main_8c_a850f4e76542f9c2f545acfa2f1296630} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} start\+\_\+button =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}}, \{32, 96, 96, 112\}, \{"{}START"{}, false\}\}}
+
+\Hypertarget{general_2main_8c_a33b950bd690e84864160e326b102607b}\index{main.c@{main.c}!tent\_buttons@{tent\_buttons}}
+\index{tent\_buttons@{tent\_buttons}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{tent\_buttons}{tent\_buttons}}
+{\footnotesize\ttfamily \label{general_2main_8c_a33b950bd690e84864160e326b102607b} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} tent\+\_\+buttons\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{\ \ }
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}},\ \{\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}/4+1,\ 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}/4+1,\ \mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}/2+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}/4-\/1,\ 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}/2+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}/4-\/1\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{1,\ 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}+1,\ \mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}-\/1,\ 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}*2-\/1\},\ \{\textcolor{stringliteral}{"{}3"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}+1,\ 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}+1,\ \mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}*2-\/1,\ 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}*2-\/1\},\ \{\textcolor{stringliteral}{"{}5"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}*2+1,\ 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}+1,\ \mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}*3-\/1,\ 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}*2-\/1\},\ \{\textcolor{stringliteral}{"{}7"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}*3+1,\ 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}+1,\ \mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}*4-\/1,\ 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\_DIM}}*2-\/1\},\ \{\textcolor{stringliteral}{"{}10"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\}\},}
+\DoxyCodeLine{\ \ \ \ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \{0,\ 0,\ 0,\ 0\},\ \{\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{false}\}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{general_2main_8c_a645ef54f5ed9e77e09c0edb057a4d15a}\index{main.c@{main.c}!tentative@{tentative}}
+\index{tentative@{tentative}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{tentative}{tentative}}
+{\footnotesize\ttfamily \label{general_2main_8c_a645ef54f5ed9e77e09c0edb057a4d15a} 
+\mbox{\hyperlink{struct_tentative}{Tentative}} tentative}
+
+\Hypertarget{general_2main_8c_a150621294c90549cd3d5ab6e39ed3b91}\index{main.c@{main.c}!text\_no\_tent@{text\_no\_tent}}
+\index{text\_no\_tent@{text\_no\_tent}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{text\_no\_tent}{text\_no\_tent}}
+{\footnotesize\ttfamily \label{general_2main_8c_a150621294c90549cd3d5ab6e39ed3b91} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} text\+\_\+no\+\_\+tent =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4}{DISABLED}}, \{\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\+\_\+\+DIM}}+1, 32+2, \mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\+\_\+\+DIM}}\texorpdfstring{$\ast$}{*}4-\/1, 32+\mbox{\hyperlink{tentatives_8h_a96bfd54706539e7a0370a184cd741ea8}{TENT\+\_\+\+DIM}}-\/1\}, \{"{}NO TRIES"{}, false\}\}}
+
+\Hypertarget{general_2main_8c_adeea6b5407ba6e1de07eb93ed996c467}\index{main.c@{main.c}!timerTicks@{timerTicks}}
+\index{timerTicks@{timerTicks}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{timerTicks}{timerTicks}}
+{\footnotesize\ttfamily \label{general_2main_8c_adeea6b5407ba6e1de07eb93ed996c467} 
+volatile uint32\+\_\+t timer\+Ticks = 0}
+
+\Hypertarget{general_2main_8c_a927a054ae58b010f8f71dc355d70ecb8}\index{main.c@{main.c}!upperRect@{upperRect}}
+\index{upperRect@{upperRect}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{upperRect}{upperRect}}
+{\footnotesize\ttfamily \label{general_2main_8c_a927a054ae58b010f8f71dc355d70ecb8} 
+Graphics\+\_\+\+Rectangle upper\+Rect =\{0, 0, 128, 32\}}
+
+\Hypertarget{general_2main_8c_af939cfc01a16f191190492de0c53caea}\index{main.c@{main.c}!upperRectCH@{upperRectCH}}
+\index{upperRectCH@{upperRectCH}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{upperRectCH}{upperRectCH}}
+{\footnotesize\ttfamily \label{general_2main_8c_af939cfc01a16f191190492de0c53caea} 
+Graphics\+\_\+\+Rectangle upper\+Rect\+CH =\{0, 0, 128-\/16-\/1, 16\}}
+
+\Hypertarget{general_2main_8c_a494f2c08df14c2c6c7d8c091e353b828}\index{main.c@{main.c}!win\_button@{win\_button}}
+\index{win\_button@{win\_button}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{win\_button}{win\_button}}
+{\footnotesize\ttfamily \label{general_2main_8c_a494f2c08df14c2c6c7d8c091e353b828} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} win\+\_\+button =\{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}}, \{32, 96, 96, 122\}, \{"{}YOU WIN"{}, false\}\}}
+

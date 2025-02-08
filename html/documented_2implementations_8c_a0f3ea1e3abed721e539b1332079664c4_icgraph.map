@@ -1,0 +1,51 @@
+<map id="handleIn" name="handleIn">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="374,425,444,451"/>
+<area shape="rect" id="Node000002" href="$difficulty_8c.html#a79c72c85a3b49834d1182393768679b3" title="Action that the menu performs when the stick goes down, primarly changing selection and imposing logi..." alt="" coords="159,5,326,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="403,410,395,326,379,216,356,112,341,71,324,44,311,34,314,29,328,40,346,69,361,110,385,215,400,325,408,409"/>
+<area shape="rect" id="Node000004" href="$dimension_8c.html#a6fb20cec8a94509cc42b47b543ea64d7" title="handles the down movement of the stick" alt="" coords="159,55,326,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="402,410,392,336,376,241,353,151,339,117,324,93,311,83,314,79,328,90,344,114,358,150,381,240,398,335,407,410"/>
+<area shape="rect" id="Node000005" href="$doubles_8c.html#a36ebb11703991f98a2d4b86daece9fb6" title="manage what to do when the user moves the stick down" alt="" coords="166,104,319,130"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="406,410,403,354,392,282,382,244,368,207,349,173,324,143,310,132,313,128,328,139,353,170,372,205,387,243,398,281,409,353,411,410"/>
+<area shape="rect" id="Node000006" href="$tentatives_8c.html#ab4a631d3b20279de42665f2bb16dc3df" title="TODO: Describe function." alt="" coords="161,153,324,179"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="404,410,399,363,386,304,362,244,345,216,324,192,310,182,313,177,328,188,349,213,367,241,391,303,404,362,409,410"/>
+<area shape="rect" id="Node000007" href="$difficulty_8c.html#ada1c7d825f7d0d6084a4b004f91d570c" title="Action that the menu performs when the stick goes left, primarly changing selection and imposing logi..." alt="" coords="165,203,320,228"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="401,410,393,372,379,327,356,281,324,241,308,231,311,227,328,238,361,278,384,325,398,371,407,409"/>
+<area shape="rect" id="Node000009" href="$dimension_8c.html#aa1457a920eebe81a6fc619946c6fa746" title="handles the down movement of the stick" alt="" coords="166,252,319,278"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="397,411,371,350,351,318,324,291,307,281,310,276,328,287,355,315,376,347,402,409"/>
+<area shape="rect" id="Node000010" href="$doubles_8c.html#aaede89cc2d77369f26c4bdd81d8ce776" title="manage what to do when the user moves the stick left" alt="" coords="172,301,312,327"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="391,414,363,376,345,357,325,340,304,330,307,325,327,336,348,353,367,372,395,411"/>
+<area shape="rect" id="Node000011" href="$info_8c.html#acab983649d0b96fe33a93d904a6e380a" title="TODO: Describe function." alt="" coords="188,351,296,376"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="376,419,325,390,296,379,298,374,327,385,379,414"/>
+<area shape="rect" id="Node000012" href="$tentatives_8c.html#a0df6996c317be48a5e0a5c5e192dfcd9" title="TODO: Describe function." alt="" coords="168,400,317,426"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="358,433,317,427,318,422,359,428"/>
+<area shape="rect" id="Node000013" href="$difficulty_8c.html#a857aed146f25be6eafd6029c4cae888f" title="Action that the menu performs when the stick goes right, primarly changing selection and imposing log..." alt="" coords="162,449,323,475"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="359,448,324,453,323,448,358,443"/>
+<area shape="rect" id="Node000015" href="$dimension_8c.html#aa7966b0e409d1f5a41bb210277319673" title="handles the right movement of the stick" alt="" coords="162,499,322,524"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="378,462,327,490,298,501,296,496,325,485,375,457"/>
+<area shape="rect" id="Node000016" href="$doubles_8c.html#a32374ef584a5874a75624a4bf91c40d3" title="manage what to do when the user moves the stick right" alt="" coords="169,548,316,574"/>
+<area shape="poly" id="edge18_Node000001_Node000016" title=" " alt="" coords="395,466,367,504,328,539,306,550,304,545,324,535,363,500,390,462"/>
+<area shape="rect" id="Node000017" href="$info_8c.html#a46185e9cb9550ef5f53ac4acfa3fa070" title="TODO: Describe function." alt="" coords="185,597,300,623"/>
+<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="402,467,376,528,355,561,328,588,302,602,299,598,324,584,350,557,371,526,397,465"/>
+<area shape="rect" id="Node000018" href="$tentatives_8c.html#a5a9a7d0ba677cf2073ce07d87abaa8ba" title="TODO: Describe function." alt="" coords="164,647,320,672"/>
+<area shape="poly" id="edge20_Node000001_Node000018" title=" " alt="" coords="407,467,398,505,384,551,361,597,328,637,311,648,308,644,324,634,356,595,379,549,393,504,401,466"/>
+<area shape="rect" id="Node000019" href="$difficulty_8c.html#a5db0b76e31fb4a7fbc93ffc09473cec9" title="Action that the menu performs when the stick goes up, primarly changing selection and imposing logic ..." alt="" coords="167,696,318,722"/>
+<area shape="poly" id="edge21_Node000001_Node000019" title=" " alt="" coords="409,467,404,514,391,573,367,634,349,662,328,687,313,698,309,693,324,683,345,659,362,632,386,572,399,513,404,466"/>
+<area shape="rect" id="Node000021" href="$dimension_8c.html#a68da15d7a690c47b33fa100902f82420" title="handles the up movement of the stick" alt="" coords="168,745,317,771"/>
+<area shape="poly" id="edge23_Node000001_Node000021" title=" " alt="" coords="411,467,409,523,397,595,387,633,372,670,353,705,328,736,313,747,310,743,324,732,348,702,367,668,382,631,392,594,403,523,406,467"/>
+<area shape="rect" id="Node000022" href="$doubles_8c.html#a73b8fe01f7507192f7e9bf9b2a916df9" title="manage what to do when the user moves the stick up" alt="" coords="174,795,310,820"/>
+<area shape="poly" id="edge25_Node000001_Node000022" title=" " alt="" coords="407,467,398,541,381,636,358,726,344,761,328,785,313,797,309,793,324,782,339,758,353,724,376,635,392,540,402,466"/>
+<area shape="rect" id="Node000023" href="$tentatives_8c.html#a2f3f309351ef49408ab306d80f801256" title="TODO: Describe function." alt="" coords="170,844,315,870"/>
+<area shape="poly" id="edge26_Node000001_Node000023" title=" " alt="" coords="408,467,400,551,385,660,361,765,346,806,328,835,314,846,311,841,324,831,341,804,356,763,379,659,395,550,403,466"/>
+<area shape="rect" id="Node000003" href="$joystick_8c.html#a3e5a790b378f645099a2f8fc5f694b84" title="TODO: Describe function." alt="" coords="5,31,111,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="143,34,111,39,111,34,143,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="143,57,111,53,112,48,144,52"/>
+<area shape="rect" id="Node000008" href="$joystick_8c.html#a52c88d60c03461488d6285f39e252627" title="TODO: Describe function." alt="" coords="12,227,104,252"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="150,230,105,236,104,231,150,225"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="150,255,104,248,105,243,150,249"/>
+<area shape="rect" id="Node000014" href="$joystick_8c.html#a301de98bfda59c46e55821dee762f5cb" title="TODO: Describe function." alt="" coords="8,473,108,499"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="147,477,108,482,108,477,146,472"/>
+<area shape="poly" id="edge17_Node000015_Node000014" title=" " alt="" coords="146,501,108,496,108,490,147,496"/>
+<area shape="rect" id="Node000020" href="$joystick_8c.html#a08201f4ea948492041d839c98233e00a" title="TODO: Describe function." alt="" coords="14,720,102,746"/>
+<area shape="poly" id="edge22_Node000019_Node000020" title=" " alt="" coords="152,723,103,730,102,724,151,718"/>
+<area shape="poly" id="edge24_Node000021_Node000020" title=" " alt="" coords="152,748,102,741,103,736,152,743"/>
+</map>

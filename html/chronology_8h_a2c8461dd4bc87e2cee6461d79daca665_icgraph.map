@@ -1,0 +1,18 @@
+<map id="updatePos" name="updatePos">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="734,55,817,80"/>
+<area shape="rect" id="Node000002" href="$chronology_8c.html#a200291275b68705ac77fdde64e026b27" title="manage what to do when the user moves the stick down" alt="" coords="500,5,686,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="718,54,685,45,645,34,647,29,686,40,719,49"/>
+<area shape="rect" id="Node000006" href="$chronology_8c.html#a77703c37a23665ce74ccea44a084a247" title="functions that create the Chronology screen starting from resetting the previous screen" alt="" coords="525,55,661,80"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="718,70,661,70,661,65,718,65"/>
+<area shape="rect" id="Node000007" href="$chronology_8c.html#ad774f58034bd7f8cb0c570021307df20" title="manage what to do when the user moves the stick up" alt="" coords="509,104,677,130"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="719,86,686,95,647,106,645,101,685,90,718,81"/>
+<area shape="rect" id="Node000003" href="$joystick_8c.html#a3e5a790b378f645099a2f8fc5f694b84" title=" " alt="" coords="347,19,452,44"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="485,28,453,31,452,25,484,23"/>
+<area shape="rect" id="Node000004" href="$joystick_8c.html#adde06bcb4c1eb7d1c081dacc7ac2152c" title=" " alt="" coords="194,56,299,82"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="333,51,300,59,299,53,331,45"/>
+<area shape="rect" id="Node000005" href="$general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="5,56,146,82"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="178,72,146,72,146,66,178,66"/>
+<area shape="rect" id="Node000008" href="$joystick_8c.html#a08201f4ea948492041d839c98233e00a" title=" " alt="" coords="356,80,444,106"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="493,107,444,101,444,96,494,102"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="340,86,299,80,300,74,341,81"/>
+</map>

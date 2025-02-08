@@ -1,0 +1,352 @@
+\doxysection{general/game.c File Reference}
+\hypertarget{game_8c}{}\label{game_8c}\index{general/game.c@{general/game.c}}
+{\ttfamily \#include "{}game.\+h"{}}\newline
+{\ttfamily \#include "{}gamelogic1.\+h"{}}\newline
+{\ttfamily \#include "{}joystick.\+h"{}}\newline
+Include dependency graph for game.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game_8c_add55822234a04e4988e3f9716a8e3cd9}{fn\+\_\+\+GAME}} (void)
+\begin{DoxyCompactList}\small\item\em Implicit Call that is invoked when we arrive at GAME state in GUI FSM and primarly draw the static elements and dynamic ones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_ae75b7a2c4cacd669fec7a8d14c925898}{elaborate\+Color}} (int16\+\_\+t c)
+\begin{DoxyCompactList}\small\item\em According to the inputed color, the leds are turned on according to that color (ORANGE case it will be P1.\+0, for the others will be a direct correspondes to combination of P2.\+0, P2.\+1, P2.\+2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_ac269fe8cc886e12dfde77c659f786cd6}{init\+Circles}} ()
+\begin{DoxyCompactList}\small\item\em According to the dimension selected in GUI menu, are preallocated empty circles that change dynamically position and size according to the number, because they have to fit on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a8e2dbff3a9441175f6bfcf1b7bc56fee}{populate\+Circles}} (int16\+\_\+t offset, int16\+\_\+t radius, int16\+\_\+t value\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Initialization effective of the circles according to the inputed parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a1d704afea01300efda83ee14d72bf132}{draw\+Circles}} (\mbox{\hyperlink{struct_graphics___circle}{Graphics\+\_\+\+Circle}} \texorpdfstring{$\ast$}{*}circs)
+\begin{DoxyCompactList}\small\item\em Management and color of the circles on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_afe0d26e602acbce56a513dd0d2b02999}{left\+Stick\+\_\+\+GAME}} ()
+\begin{DoxyCompactList}\small\item\em Action that the menu performs when the stick goes left, primarly changing selection and imposing logic visual limits. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{game_8c_afe0d6ca1d0ba6b6e45490d996b21cdac}{select\+Color}} (int16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Action that the menu performs when the stick goes left, primarly changing selection and imposing logic visual limits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_ad2c393fb906ee594fa13863ad5aed0ae}{display\+Results\+On\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Effective function that refresh the status of GAME Section, when an update happen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{game_8c_a0ece1beb6b0cf624280dc0a734764cb6}{configuration\+Game}} =false
+\item 
+Graphics\+\_\+\+Rectangle \mbox{\hyperlink{game_8c_ad9f20a2ad70b19e30ebfb3bba59f7501}{text\+Rect}} =\{1, 70, 126, 106\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game_8c_ad2c393fb906ee594fa13863ad5aed0ae}\index{game.c@{game.c}!displayResultsOnScreen@{displayResultsOnScreen}}
+\index{displayResultsOnScreen@{displayResultsOnScreen}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{displayResultsOnScreen()}{displayResultsOnScreen()}}
+{\footnotesize\ttfamily \label{game_8c_ad2c393fb906ee594fa13863ad5aed0ae} 
+void display\+Results\+On\+Screen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Effective function that refresh the status of GAME Section, when an update happen. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_ad2c393fb906ee594fa13863ad5aed0ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_ad2c393fb906ee594fa13863ad5aed0ae_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a1d704afea01300efda83ee14d72bf132}\index{game.c@{game.c}!drawCircles@{drawCircles}}
+\index{drawCircles@{drawCircles}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{drawCircles()}{drawCircles()}}
+{\footnotesize\ttfamily \label{game_8c_a1d704afea01300efda83ee14d72bf132} 
+void draw\+Circles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graphics___circle}{Graphics\+\_\+\+Circle}} \texorpdfstring{$\ast$}{*}}]{circs}{}\end{DoxyParamCaption})}
+
+
+
+Management and color of the circles on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em circs} & The circle initialized array that handles the handle the color of each element in the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a1d704afea01300efda83ee14d72bf132_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_ae75b7a2c4cacd669fec7a8d14c925898}\index{game.c@{game.c}!elaborateColor@{elaborateColor}}
+\index{elaborateColor@{elaborateColor}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{elaborateColor()}{elaborateColor()}}
+{\footnotesize\ttfamily \label{game_8c_ae75b7a2c4cacd669fec7a8d14c925898} 
+void elaborate\+Color (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{c}{}\end{DoxyParamCaption})}
+
+
+
+According to the inputed color, the leds are turned on according to that color (ORANGE case it will be P1.\+0, for the others will be a direct correspondes to combination of P2.\+0, P2.\+1, P2.\+2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Consist in an integer denoting a custom coding of colors (more clarity in \doxylink{input_8c}{input.\+c}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_ae75b7a2c4cacd669fec7a8d14c925898_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_ae75b7a2c4cacd669fec7a8d14c925898_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_add55822234a04e4988e3f9716a8e3cd9}\index{game.c@{game.c}!fn\_GAME@{fn\_GAME}}
+\index{fn\_GAME@{fn\_GAME}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{fn\_GAME()}{fn\_GAME()}}
+{\footnotesize\ttfamily \label{game_8c_add55822234a04e4988e3f9716a8e3cd9} 
+void fn\+\_\+\+GAME (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Implicit Call that is invoked when we arrive at GAME state in GUI FSM and primarly draw the static elements and dynamic ones. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_add55822234a04e4988e3f9716a8e3cd9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_add55822234a04e4988e3f9716a8e3cd9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_ac269fe8cc886e12dfde77c659f786cd6}\index{game.c@{game.c}!initCircles@{initCircles}}
+\index{initCircles@{initCircles}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{initCircles()}{initCircles()}}
+{\footnotesize\ttfamily \label{game_8c_ac269fe8cc886e12dfde77c659f786cd6} 
+void init\+Circles (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+According to the dimension selected in GUI menu, are preallocated empty circles that change dynamically position and size according to the number, because they have to fit on the screen. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{game_8c_ac269fe8cc886e12dfde77c659f786cd6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_ac269fe8cc886e12dfde77c659f786cd6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_afe0d26e602acbce56a513dd0d2b02999}\index{game.c@{game.c}!leftStick\_GAME@{leftStick\_GAME}}
+\index{leftStick\_GAME@{leftStick\_GAME}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{leftStick\_GAME()}{leftStick\_GAME()}}
+{\footnotesize\ttfamily \label{game_8c_afe0d26e602acbce56a513dd0d2b02999} 
+void left\+Stick\+\_\+\+GAME (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Action that the menu performs when the stick goes left, primarly changing selection and imposing logic visual limits. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{game_8c_afe0d26e602acbce56a513dd0d2b02999_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_afe0d26e602acbce56a513dd0d2b02999_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a8e2dbff3a9441175f6bfcf1b7bc56fee}\index{game.c@{game.c}!populateCircles@{populateCircles}}
+\index{populateCircles@{populateCircles}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{populateCircles()}{populateCircles()}}
+{\footnotesize\ttfamily \label{game_8c_a8e2dbff3a9441175f6bfcf1b7bc56fee} 
+void populate\+Circles (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{offset}{, }\item[{int16\+\_\+t}]{radius}{, }\item[{int16\+\_\+t}]{value\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+Initialization effective of the circles according to the inputed parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Determine the distance from the leftest pixel of the leftest circle and the left border \\
+\hline
+{\em radius} & Circle radius, distance from the center to the circle border \\
+\hline
+{\em value\+\_\+y} & Position of y axis according to the screen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a8e2dbff3a9441175f6bfcf1b7bc56fee_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_afe0d6ca1d0ba6b6e45490d996b21cdac}\index{game.c@{game.c}!selectColor@{selectColor}}
+\index{selectColor@{selectColor}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{selectColor()}{selectColor()}}
+{\footnotesize\ttfamily \label{game_8c_afe0d6ca1d0ba6b6e45490d996b21cdac} 
+int32\+\_\+t select\+Color (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Action that the menu performs when the stick goes left, primarly changing selection and imposing logic visual limits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & Graphics color definition according to the integer inputed and according to that the circle will be colored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int32, returns the graphics color in order to color the circle 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_afe0d6ca1d0ba6b6e45490d996b21cdac_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{game_8c_a0ece1beb6b0cf624280dc0a734764cb6}\index{game.c@{game.c}!configurationGame@{configurationGame}}
+\index{configurationGame@{configurationGame}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{configurationGame}{configurationGame}}
+{\footnotesize\ttfamily \label{game_8c_a0ece1beb6b0cf624280dc0a734764cb6} 
+bool configuration\+Game =false}
+
+\Hypertarget{game_8c_ad9f20a2ad70b19e30ebfb3bba59f7501}\index{game.c@{game.c}!textRect@{textRect}}
+\index{textRect@{textRect}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{textRect}{textRect}}
+{\footnotesize\ttfamily \label{game_8c_ad9f20a2ad70b19e30ebfb3bba59f7501} 
+Graphics\+\_\+\+Rectangle text\+Rect =\{1, 70, 126, 106\}}
+

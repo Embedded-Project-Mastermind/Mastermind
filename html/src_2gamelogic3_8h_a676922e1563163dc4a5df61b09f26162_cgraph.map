@@ -1,0 +1,11 @@
+<map id="fn_DIFFICULT_MODE" name="fn_DIFFICULT_MODE">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,161,31"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a75f0aa97e826eb82b32948cd435d6185" title=" " alt="" coords="209,5,371,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,16,193,16,193,21,161,21"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic3_8c.html#a1d23c4adc9c272ed1461ee228cf73036" title=" " alt="" coords="419,5,582,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,16,403,16,403,21,372,21"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic3_8c.html#a1ae9537a5e4b0e166d93c4997448030c" title=" " alt="" coords="630,5,778,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="582,16,615,16,615,21,582,21"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#afbe438781ebff37a81c93cfb218bb0cf" title="Initialization for a boolean array setting to its default state." alt="" coords="826,5,981,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="778,16,810,16,810,21,778,21"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="key_generation_wout_doub" name="key_generation_wout_doub">
+<area shape="rect" id="Node000001" title="Generation of a random key that doesn&#39;t allow the presence of duplicates colors." alt="" coords="5,104,185,130"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a69fca538b5b36e3923f0f33c8f62f262" title="Allocation for an integer array, ensuring that it is not already allocated." alt="" coords="233,55,376,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,101,231,82,232,87,153,106"/>
+<area shape="rect" id="Node000008" href="$general_2gamelogic1_8c.html#af42b50d4086354e6b49eac80239cd8d4" title="Check if the array has already a value that I would like to insert in it." alt="" coords="243,104,366,130"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="185,114,228,114,228,120,185,120"/>
+<area shape="rect" id="Node000009" href="$general_2gamelogic1_8c.html#a5e9db8c78f3d92aa520e8ebd811aa3a9" title="Generation of a random integer with two limits." alt="" coords="262,153,347,179"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="153,128,247,150,246,155,152,133"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#abde743d0b9f0e17fd8bf287087cf5f06" title="Deallocate memory for an integer array setting then that allocation to null for being sure." alt="" coords="445,5,547,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="357,51,429,33,430,38,358,57"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="454,55,539,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="377,65,438,65,438,70,377,70"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#a85f585c5cf928dd3f6aa31b07f4ff1f1" title="Initialization for an integer array setting to its default state." alt="" coords="424,104,568,130"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="358,78,430,97,428,102,357,84"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="617,31,731,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="539,59,602,51,602,56,540,64"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="616,80,732,106"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="540,71,601,80,601,85,539,76"/>
+</map>

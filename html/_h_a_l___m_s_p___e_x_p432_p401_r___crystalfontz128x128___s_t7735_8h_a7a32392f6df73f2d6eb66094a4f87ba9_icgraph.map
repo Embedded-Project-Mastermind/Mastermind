@@ -1,0 +1,17 @@
+<map id="HAL_LCD_writeData" name="HAL_LCD_writeData">
+<area shape="rect" id="Node000001" title=" " alt="" coords="797,31,941,56"/>
+<area shape="rect" id="Node000002" href="$_crystalfontz128x128___s_t7735_8c.html#a57fc5401db822d071b765c1da259cbbb" title=" " alt="" coords="393,31,560,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="813,28,749,14,678,8,608,14,522,32,521,27,607,9,678,3,749,9,814,23"/>
+<area shape="rect" id="Node000006" href="$_crystalfontz128x128___s_t7735_8c.html#ad9797a45a3c4294a68b645f07ac55709" title=" " alt="" coords="608,23,749,64"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="782,46,750,46,750,41,782,41"/>
+<area shape="rect" id="Node000007" href="$_crystalfontz128x128___s_t7735_8c.html#abadfb1254106e9afffc448eb6feefeeb" title=" " alt="" coords="406,80,547,121"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="811,63,749,78,644,92,548,100,547,95,643,87,749,73,810,58"/>
+<area shape="rect" id="Node000003" href="$implementations_8c.html#abd724b53de6eb2de11d29407bb874691" title=" " alt="" coords="250,60,345,86"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="380,62,346,68,345,62,379,57"/>
+<area shape="rect" id="Node000004" href="$implementations_8c.html#ad37616d1eaf8c88801edb04ba22d15c6" title=" " alt="" coords="103,60,202,86"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="234,75,202,75,202,70,234,70"/>
+<area shape="rect" id="Node000005" href="$general_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,60,55,86"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,75,55,75,55,70,87,70"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="592,46,560,46,560,41,592,41"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="390,90,346,83,346,78,391,85"/>
+</map>

@@ -148,11 +148,54 @@ Introduction</h1>
 <h1><a class="anchor" id="autotoc_md5"></a>
 Project Layout</h1>
 <div class="fragment"><div class="line">Mastermind</div>
-<div class="line">┣ general</div>
-<div class="line">┃ ┗ ...</div>
-<div class="line">┣ src</div>
-<div class="line">┃ ┗ ...</div>
-<div class="line">┗ ...</div>
+<div class="line">┣ general                                  # </div>
+<div class="line">┃ ┣ bitmap.h                               # </div>
+<div class="line">┃ ┣ buttons.c                              # </div>
+<div class="line">┃ ┣ buttons.h                              # </div>
+<div class="line">┃ ┣ chronology.c                           # </div>
+<div class="line">┃ ┣ chronology.h                           # </div>
+<div class="line">┃ ┣ difficulty.c                           # </div>
+<div class="line">┃ ┣ difficulty.h                           # </div>
+<div class="line">┃ ┣ dimension.c                            # </div>
+<div class="line">┃ ┣ dimension.h                            # </div>
+<div class="line">┃ ┣ doubles.c                              # </div>
+<div class="line">┃ ┣ doubles.h                              # </div>
+<div class="line">┃ ┣ end.c                                  # </div>
+<div class="line">┃ ┣ end.h                                  # </div>
+<div class="line">┃ ┣ fsm.h                                  # </div>
+<div class="line">┃ ┣ game.c                                 # </div>
+<div class="line">┃ ┣ game.h                                 # </div>
+<div class="line">┃ ┣ gamelogic1.c                           # </div>
+<div class="line">┃ ┣ gamelocig1.h                           # </div>
+<div class="line">┃ ┣ gamelogic2.c                           # </div>
+<div class="line">┃ ┣ gamelocig2.h                           # </div>
+<div class="line">┃ ┣ gamelogic3.c                           # </div>
+<div class="line">┃ ┣ gamelocig3.h                           # </div>
+<div class="line">┃ ┣ graphics.h                             # </div>
+<div class="line">┃ ┣ implementations.c                      # </div>
+<div class="line">┃ ┣ implementations.h                      # </div>
+<div class="line">┃ ┣ info.c                                 # </div>
+<div class="line">┃ ┣ info.h                                 # </div>
+<div class="line">┃ ┣ input.c                                # </div>
+<div class="line">┃ ┣ input.h                                # </div>
+<div class="line">┃ ┣ joystick.c                             # </div>
+<div class="line">┃ ┣ joystick.h                             # </div>
+<div class="line">┃ ┣ main.c                                 # </div>
+<div class="line">┃ ┣ read_me.c                              # </div>
+<div class="line">┃ ┣ start.c                                # </div>
+<div class="line">┃ ┣ start.h                                # </div>
+<div class="line">┃ ┣ tentatives.c                           # </div>
+<div class="line">┃ ┗ tentatives.h                           # </div>
+<div class="line">┣ src                                      # </div>
+<div class="line">┃ ┣ fsm.h                                  # </div>
+<div class="line">┃ ┣ gamelogic1.c                           # </div>
+<div class="line">┃ ┣ gamelogic1.h                           # </div>
+<div class="line">┃ ┣ gamelogic2.c                           # </div>
+<div class="line">┃ ┣ gamelogic2.h                           # </div>
+<div class="line">┃ ┣ gamelogic3.c                           # </div>
+<div class="line">┃ ┣ gamelogic3.h                           # </div>
+<div class="line">┃ ┗ main.c                                 # </div>
+<div class="line">┗ </div>
 </div><!-- fragment --><p>Back to top</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md7"></a>
@@ -164,7 +207,7 @@ Hardware Requirements</h2>
  • Buttons for Breadboard<br  />
  • Wires<br  />
 <br  />
- Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...<br  />
+ Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in <a class="el" href="input_8c.html">input.c</a>, function ... lines...<br  />
  </p><table class="doxtable">
 <tr>
 <th>MSP432 pin </th><th>Color  ... </th></tr>
@@ -190,11 +233,8 @@ Software Requirements</h2>
 Installation and Configuration</h1>
 <h2><a class="anchor" id="autotoc_md13"></a>
 Setup IDE</h2>
-<ul>
-<li>Customization of CCS after installation<br  />
-<br  />
-</li>
-</ul>
+<p>After the installation of CCS, version 12.8.0, open the file <code>ccs_setup_12.8.0.00012.exe</code>. On the opened window, press <code>next</code> one time. Accept the agreement and press <code>next</code> again four times. Then, in <code>Select Components</code> select <code>SimpleLink™ MSP432™ low power + performance MCUs</code>. In <code>Install debug probes</code> leave it as it clicking <code>next</code>. To conclude, press <code>next</code> until the launcher begins the download.</p>
+<p>(da finire)</p>
 <p>Back to top</p>
 <hr  />
 <h2><a class="anchor" id="autotoc_md15"></a>
@@ -258,13 +298,50 @@ Connectivity Sensors and MSP432</h2>
 <hr  />
 <h1><a class="anchor" id="autotoc_md28"></a>
 Work Contribution</h1>
-<table class="doxtable">
+<p>[X] - Complete<br  />
+ [?] - To finish<br  />
+ [!] - To start<br  />
+ [*] - Consider expanding briefs<br  />
+<br  />
+ This is referred to the TODO section, search TODO in those files and fill the missing information<br  />
+ </p><table class="doxtable">
 <tr>
-<th>Topic/Section </th><th>Responsible Member </th><th>Helper Member  </th></tr>
+<th>Topic/Section </th><th>Responsible Member </th><th>Helper Member </th><th>Maintainer Member </th><th>Comments .c </th><th>Integration .h  </th></tr>
 <tr>
-</tr>
+<th><a class="el" href="buttons_8c.html">buttons.c</a> </th><th>Gottardelli Matteo </th><th>Benassi Alessandro </th><th>Gottardelli Matteo </th><th>X </th><th>X  </th></tr>
+<tr>
+<th><a class="el" href="chronology_8c.html">chronology.c</a> </th><th>Cristoforetti Niccolò </th><th>Gottardelli Matteo </th><th>Cristoforetti Niccolò &amp; Gottardelli Matteo </th><th>? </th><th>!  </th></tr>
+<tr>
+<th><a class="el" href="difficulty_8c.html">difficulty.c</a> </th><th>Gottardelli Matteo </th><th>- </th><th>Gottardelli Matteo </th><th>X </th><th>X  </th></tr>
+<tr>
+<th><a class="el" href="dimension_8c.html">dimension.c</a> </th><th>Benassi Alessandro </th><th>- </th><th>Benassi Alessandro </th><th>X* </th><th>!  </th></tr>
+<tr>
+<th><a class="el" href="doubles_8c.html">doubles.c</a> </th><th>Calvo Daniele </th><th>Benassi Alessandro </th><th>Gottardelli Matteo </th><th>X* </th><th>!  </th></tr>
+<tr>
+<th><a class="el" href="end_8c.html">end.c</a> </th><th>Cristoforetti Niccolò </th><th>- </th><th>Cristoforetti Niccolò </th><th>! </th><th>!  </th></tr>
+<tr>
+<th><a class="el" href="game_8c.html">game.c</a> </th><th>Gottardelli Matteo </th><th>Benassi Alessandro </th><th>Benassi Alessandro &amp; Gottardelli Matteo </th><th>X </th><th>X  </th></tr>
+<tr>
+<th>gamelogic1.c </th><th>Gottardelli Matteo </th><th>- </th><th>Gottardelli Matteo </th><th>? </th><th>!  </th></tr>
+<tr>
+<th>gamelogic2.c </th><th>Benassi Alessandro &amp; Calvo Daniele </th><th>Gottardelli Matteo </th><th>Benassi Alessandro </th><th>! </th><th>!  </th></tr>
+<tr>
+<th>gamelogic3.c </th><th>Cristoforetti Niccolò </th><th>- </th><th>Cristoforetti Niccolò </th><th>! </th><th>!  </th></tr>
+<tr>
+<th><a class="el" href="implementations_8c.html">implementations.c</a> </th><th>Gottardelli Matteo </th><th>Cristoforetti Niccolò </th><th>Calvo Daniele </th><th>! </th><th>!  </th></tr>
+<tr>
+<th><a class="el" href="info_8c.html">info.c</a> </th><th>Calvo Daniele </th><th>Gottardelli Matteo </th><th>Gottardelli Matteo </th><th>! </th><th>!  </th></tr>
+<tr>
+<th><a class="el" href="input_8c.html">input.c</a> </th><th>Gottardelli Matteo </th><th>Benassi Alessandro </th><th>Gottardelli Matteo </th><th>! </th><th>!  </th></tr>
+<tr>
+<th><a class="el" href="joystick_8c.html">joystick.c</a> </th><th>Gottardelli Matteo </th><th>- </th><th>Gottardelli Matteo </th><th>! </th><th>!  </th></tr>
+<tr>
+<th>main.c </th><th>All </th><th>- </th><th>All </th><th>! </th><th>NONE  </th></tr>
+<tr>
+<th><a class="el" href="start_8c.html">start.c</a> </th><th>Cristoforetti Niccolò </th><th>Gottardelli Matteo </th><th>Cristoforetti Niccolò </th><th>! </th><th>!  </th></tr>
+<tr>
+<th><a class="el" href="tentatives_8c.html">tentatives.c</a> </th><th>Cristoforetti Niccolò </th><th>- </th><th>Cristoforetti Niccolò </th><th>! </th><th>!  </th></tr>
 </table>
-<p>... </p>
 <p>Back to top</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md30"></a>

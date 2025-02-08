@@ -105,7 +105,7 @@ $(function(){initNavTree('input_8h_source.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">input.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="input_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Title: input.c</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Primary Authors: Matteo Gottardelli</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Helpers: Alessandro Benassi</span></div>
@@ -121,44 +121,62 @@ $(function(){initNavTree('input_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;ti/devices/msp432p4xx/inc/msp.h&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;ti/devices/msp432p4xx/driverlib/driverlib.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;ti/grlib/grlib.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;LcdDriver/Crystalfontz128x128_ST7735.h&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.h&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="_crystalfontz128x128___s_t7735_8h.html">LcdDriver/Crystalfontz128x128_ST7735.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h.html">LcdDriver/HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.h</a>&quot;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// Macros</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//#define P1_D 0</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define P3_D 0</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define P4_D 1</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define P5_D 2</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define P6_D 3</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define DIMIO 32</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define BYTE 8</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="input_8h.html#a9a3daadf2fb658c36aca602997926a23">   22</a></span><span class="preprocessor">#define P3_D 0</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="input_8h.html#a29f2e4091a62c74c0de0c1309dbd7f46">   23</a></span><span class="preprocessor">#define P4_D 1</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="input_8h.html#abbc99cf8a47083f66264fe507bd198ab">   24</a></span><span class="preprocessor">#define P5_D 2</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="input_8h.html#ab22a65e12114a098f78b78ed2eb96cb5">   25</a></span><span class="preprocessor">#define P6_D 3</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="input_8h.html#a71333493c284b7a54417135cffe0b8b5">   26</a></span><span class="preprocessor">#define DIMIO 32</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="input_8h.html#aec93e83855ac17c3c25c55c37ca186dd">   27</a></span><span class="preprocessor">#define BYTE 8</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// Global variables</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> array[DIMIO];</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> buzzerBeepFlag;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">extern</span> uint8_t overflow_counter;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="input_8c.html#acfee743be70af26f7fb63dc854b1c429">array</a>[<a class="code hl_define" href="input_8h.html#a71333493c284b7a54417135cffe0b8b5">DIMIO</a>];</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="input_8h.html#a95e691940593b42c83cbc76e147e85e3">buzzerBeepFlag</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">extern</span> uint8_t <a class="code hl_variable" href="input_8c.html#a91c43a08db7dcacca600434acdf805a5">overflow_counter</a>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// Function declarations</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> resetArrayInput(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> setArrayInput(<span class="keywordtype">int</span> val);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> configurePortsInput(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> configureInterruptPortInput(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">int</span> counterTrue(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">int</span> findTrue(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> elaborateOutput(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> configureTimersInput(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>uint8_t bitofstatus(uint8_t status);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> switching(uint8_t status, int8_t port);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">bool</span> atLeastOneTrue(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> triggerPinInterrupt();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="input_8h.html#aad3f0b26686a346707670914702aeaad">resetArrayInput</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> <a class="code hl_function" href="input_8h.html#a75d92ac43d65d743ff159105e3e33b60">setArrayInput</a>(<span class="keywordtype">int</span> val);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="input_8h.html#aa947a586c72671cffe8f528abc7f5bda">configurePortsInput</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="input_8h.html#aead6b5c0c9e2aee938cff12f269c3216">configureInterruptPortInput</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">int</span> <a class="code hl_function" href="input_8h.html#a0e001e6590fdf593eeac0f10ee1c18ff">counterTrue</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">int</span> <a class="code hl_function" href="input_8h.html#aa21ddc994860540031b8ee0b3a81f5f2">findTrue</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="input_8h.html#a445b36ad7315b9af24ac6cde2f307d5e">elaborateOutput</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="input_8h.html#a880c69c873b56ebc5af5a1c8186854cb">configureTimersInput</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>uint8_t <a class="code hl_function" href="input_8h.html#a649025105fd573f4021b9aa4b3ba5e44">bitofstatus</a>(uint8_t status);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="input_8h.html#a23a5061c21b189449ac63eef4edc75d8">switching</a>(uint8_t status, int8_t port);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">bool</span> <a class="code hl_function" href="input_8h.html#afc6f8d83006ea3fd3139fe320edb4ec3">atLeastOneTrue</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="input_8h.html#a961a43ddc52b1c2b16aab7f30f4ad0d9">triggerPinInterrupt</a>();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">// INPUT_H</span></div>
+<div class="ttc" id="a_crystalfontz128x128___s_t7735_8h_html"><div class="ttname"><a href="_crystalfontz128x128___s_t7735_8h.html">Crystalfontz128x128_ST7735.h</a></div></div>
+<div class="ttc" id="a_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_html"><div class="ttname"><a href="_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h.html">HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.h</a></div></div>
+<div class="ttc" id="ainput_8c_html_a91c43a08db7dcacca600434acdf805a5"><div class="ttname"><a href="input_8c.html#a91c43a08db7dcacca600434acdf805a5">overflow_counter</a></div><div class="ttdeci">uint8_t overflow_counter</div><div class="ttdef"><b>Definition</b> input.c:15</div></div>
+<div class="ttc" id="ainput_8c_html_acfee743be70af26f7fb63dc854b1c429"><div class="ttname"><a href="input_8c.html#acfee743be70af26f7fb63dc854b1c429">array</a></div><div class="ttdeci">bool array[DIMIO]</div><div class="ttdef"><b>Definition</b> input.c:14</div></div>
+<div class="ttc" id="ainput_8h_html_a0e001e6590fdf593eeac0f10ee1c18ff"><div class="ttname"><a href="input_8h.html#a0e001e6590fdf593eeac0f10ee1c18ff">counterTrue</a></div><div class="ttdeci">int counterTrue(void)</div><div class="ttdef"><b>Definition</b> input.c:107</div></div>
+<div class="ttc" id="ainput_8h_html_a23a5061c21b189449ac63eef4edc75d8"><div class="ttname"><a href="input_8h.html#a23a5061c21b189449ac63eef4edc75d8">switching</a></div><div class="ttdeci">void switching(uint8_t status, int8_t port)</div><div class="ttdef"><b>Definition</b> input.c:194</div></div>
+<div class="ttc" id="ainput_8h_html_a445b36ad7315b9af24ac6cde2f307d5e"><div class="ttname"><a href="input_8h.html#a445b36ad7315b9af24ac6cde2f307d5e">elaborateOutput</a></div><div class="ttdeci">void elaborateOutput(void)</div><div class="ttdef"><b>Definition</b> input.c:127</div></div>
+<div class="ttc" id="ainput_8h_html_a649025105fd573f4021b9aa4b3ba5e44"><div class="ttname"><a href="input_8h.html#a649025105fd573f4021b9aa4b3ba5e44">bitofstatus</a></div><div class="ttdeci">uint8_t bitofstatus(uint8_t status)</div><div class="ttdef"><b>Definition</b> input.c:182</div></div>
+<div class="ttc" id="ainput_8h_html_a71333493c284b7a54417135cffe0b8b5"><div class="ttname"><a href="input_8h.html#a71333493c284b7a54417135cffe0b8b5">DIMIO</a></div><div class="ttdeci">#define DIMIO</div><div class="ttdef"><b>Definition</b> input.h:26</div></div>
+<div class="ttc" id="ainput_8h_html_a75d92ac43d65d743ff159105e3e33b60"><div class="ttname"><a href="input_8h.html#a75d92ac43d65d743ff159105e3e33b60">setArrayInput</a></div><div class="ttdeci">void setArrayInput(int val)</div><div class="ttdef"><b>Definition</b> input.c:25</div></div>
+<div class="ttc" id="ainput_8h_html_a880c69c873b56ebc5af5a1c8186854cb"><div class="ttname"><a href="input_8h.html#a880c69c873b56ebc5af5a1c8186854cb">configureTimersInput</a></div><div class="ttdeci">void configureTimersInput(void)</div><div class="ttdef"><b>Definition</b> input.c:207</div></div>
+<div class="ttc" id="ainput_8h_html_a95e691940593b42c83cbc76e147e85e3"><div class="ttname"><a href="input_8h.html#a95e691940593b42c83cbc76e147e85e3">buzzerBeepFlag</a></div><div class="ttdeci">bool buzzerBeepFlag</div><div class="ttdef"><b>Definition</b> Interrupt Code for Breadboard.c:18</div></div>
+<div class="ttc" id="ainput_8h_html_a961a43ddc52b1c2b16aab7f30f4ad0d9"><div class="ttname"><a href="input_8h.html#a961a43ddc52b1c2b16aab7f30f4ad0d9">triggerPinInterrupt</a></div><div class="ttdeci">void triggerPinInterrupt()</div><div class="ttdef"><b>Definition</b> input.c:102</div></div>
+<div class="ttc" id="ainput_8h_html_aa21ddc994860540031b8ee0b3a81f5f2"><div class="ttname"><a href="input_8h.html#aa21ddc994860540031b8ee0b3a81f5f2">findTrue</a></div><div class="ttdeci">int findTrue(void)</div><div class="ttdef"><b>Definition</b> input.c:117</div></div>
+<div class="ttc" id="ainput_8h_html_aa947a586c72671cffe8f528abc7f5bda"><div class="ttname"><a href="input_8h.html#aa947a586c72671cffe8f528abc7f5bda">configurePortsInput</a></div><div class="ttdeci">void configurePortsInput(void)</div><div class="ttdef"><b>Definition</b> input.c:33</div></div>
+<div class="ttc" id="ainput_8h_html_aad3f0b26686a346707670914702aeaad"><div class="ttname"><a href="input_8h.html#aad3f0b26686a346707670914702aeaad">resetArrayInput</a></div><div class="ttdeci">void resetArrayInput(void)</div><div class="ttdef"><b>Definition</b> input.c:18</div></div>
+<div class="ttc" id="ainput_8h_html_aead6b5c0c9e2aee938cff12f269c3216"><div class="ttname"><a href="input_8h.html#aead6b5c0c9e2aee938cff12f269c3216">configureInterruptPortInput</a></div><div class="ttdeci">void configureInterruptPortInput(void)</div><div class="ttdef"><b>Definition</b> input.c:74</div></div>
+<div class="ttc" id="ainput_8h_html_afc6f8d83006ea3fd3139fe320edb4ec3"><div class="ttname"><a href="input_8h.html#afc6f8d83006ea3fd3139fe320edb4ec3">atLeastOneTrue</a></div><div class="ttdeci">bool atLeastOneTrue(void)</div><div class="ttdef"><b>Definition</b> input.c:215</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bba024cd03edd7f9d6096b84e1006209.html">general</a></li><li class="navelem"><b>input.h</b></li>
+    <li class="navelem"><a class="el" href="dir_bba024cd03edd7f9d6096b84e1006209.html">general</a></li><li class="navelem"><a class="el" href="input_8h.html">input.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

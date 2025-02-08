@@ -1,0 +1,12 @@
+<map id="allocate_in_Heap_Bool" name="allocate_in_Heap_Bool">
+<area shape="rect" id="Node000001" title="Allocation for a boolean array, ensuring that it is not already allocated." alt="" coords="5,55,160,80"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="412,5,525,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,51,207,40,306,28,396,20,396,25,306,33,208,45,143,57"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="243,55,328,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,65,227,65,227,70,160,70"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#afbe438781ebff37a81c93cfb218bb0cf" title="Initialization for a boolean array setting to its default state." alt="" coords="208,104,363,130"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="139,78,215,97,214,102,138,84"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="328,53,403,33,404,38,329,59"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="411,55,526,80"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="329,65,395,65,395,70,329,70"/>
+</map>

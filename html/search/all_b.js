@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['sensors_20and_20msp432_0',['Connectivity Sensors and MSP432',['../md__r_e_a_d_m_e.html#autotoc_md26',1,'']]],
-  ['setup_20ide_1',['Setup IDE',['../md__r_e_a_d_m_e.html#autotoc_md13',1,'']]],
-  ['software_20algorithm_2',['Software Algorithm',['../md__r_e_a_d_m_e.html#autotoc_md22',1,'']]],
-  ['software_20and_20hardware_20requirements_3',['Software and Hardware Requirements',['../md__r_e_a_d_m_e.html#autotoc_md7',1,'']]],
-  ['software_20requirements_4',['Software Requirements',['../md__r_e_a_d_m_e.html#autotoc_md10',1,'']]],
-  ['statemachine_5',['StateMachine',['../struct_state_machine.html',1,'']]]
+  ['key_5fgeneration_5fwh_5fdoub_0',['key_generation_wh_doub',['../general_2gamelogic1_8c.html#a88ad662207fa03ea53b1f6be039fa066',1,'key_generation_wh_doub(void):&#160;gamelogic1.c'],['../general_2gamelogic1_8h.html#a88ad662207fa03ea53b1f6be039fa066',1,'key_generation_wh_doub(void):&#160;gamelogic1.c'],['../src_2gamelogic1_8c.html#a8a0765690991bf338af33420e3651932',1,'key_generation_wh_doub(void):&#160;gamelogic1.c'],['../src_2gamelogic1_8h.html#a8a0765690991bf338af33420e3651932',1,'key_generation_wh_doub(void):&#160;gamelogic1.c']]],
+  ['key_5fgeneration_5fwout_5fdoub_1',['key_generation_wout_doub',['../general_2gamelogic1_8c.html#a3abce2284f44af7203a666506074b873',1,'key_generation_wout_doub(void):&#160;gamelogic1.c'],['../general_2gamelogic1_8h.html#a3abce2284f44af7203a666506074b873',1,'key_generation_wout_doub(void):&#160;gamelogic1.c'],['../src_2gamelogic1_8c.html#a8cbeb0a38d8e7b88b9724387a9c0b0e5',1,'key_generation_wout_doub(void):&#160;gamelogic1.c'],['../src_2gamelogic1_8h.html#a8cbeb0a38d8e7b88b9724387a9c0b0e5',1,'key_generation_wout_doub(void):&#160;gamelogic1.c']]],
+  ['key_5fwh_5fdoub_2',['KEY_WH_DOUB',['../general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8ada0e9b62b9e2732c057858d4cba06de9',1,'KEY_WH_DOUB:&#160;fsm.h'],['../src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8ada0e9b62b9e2732c057858d4cba06de9',1,'KEY_WH_DOUB:&#160;fsm.h']]],
+  ['key_5fwout_5fdoub_3',['KEY_WOUT_DOUB',['../general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a9bc3ac94eccdcd5c172392dceeb48f49',1,'KEY_WOUT_DOUB:&#160;fsm.h'],['../src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a9bc3ac94eccdcd5c172392dceeb48f49',1,'KEY_WOUT_DOUB:&#160;fsm.h']]]
 ];

@@ -1,0 +1,235 @@
+\doxysection{general/buttons.h File Reference}
+\hypertarget{buttons_8h}{}\label{buttons_8h}\index{general/buttons.h@{general/buttons.h}}
+{\ttfamily \#include "{}fsm.\+h"{}}\newline
+Include dependency graph for buttons.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{buttons_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{buttons_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{buttons_8h_a00aef9e8dd001a49f8717031d84b2c6c}{DEBOUNCE\+\_\+\+TIME}}~20
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{buttons_8h_add7c33cb7e4e2291fb3eb89f42db6992}{button\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Sets up launchpad pins connected for the buttons (P3.\+5 and P5.\+1) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{buttons_8h_a1009f4e791fd062c1654ef5ccff2993a}{button\+Back\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Implements back button action that redirects in eliminate colored circle state if there was at least one input, instead outputs that is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{buttons_8h_a4fe9599165d47017fa954f8ec9016d4f}{button\+Confirm\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Implements confirm button action that manage its input according to the state you are in. STARTGR has only one button, so directly redicts; DIMENSION, DIFFICULTY, TENTATIVE, DOUBLES, INFO are menu features and they have their own logic; GAME allows sequence processing only if the sequence is full; CHRONOLOGY and END don\textquotesingle{}t use this button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{buttons_8h_afefe41188707848ce20054caacaefbd9}{function\+Pins\+Default}} (uint8\+\_\+t status, int8\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Deprecated, using switching function, it is only a bridge function now. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{buttons_8h_a00aef9e8dd001a49f8717031d84b2c6c}\index{buttons.h@{buttons.h}!DEBOUNCE\_TIME@{DEBOUNCE\_TIME}}
+\index{DEBOUNCE\_TIME@{DEBOUNCE\_TIME}!buttons.h@{buttons.h}}
+\doxysubsubsection{\texorpdfstring{DEBOUNCE\_TIME}{DEBOUNCE\_TIME}}
+{\footnotesize\ttfamily \label{buttons_8h_a00aef9e8dd001a49f8717031d84b2c6c} 
+\#define DEBOUNCE\+\_\+\+TIME~20}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{buttons_8h_add7c33cb7e4e2291fb3eb89f42db6992}\index{buttons.h@{buttons.h}!button\_Init@{button\_Init}}
+\index{button\_Init@{button\_Init}!buttons.h@{buttons.h}}
+\doxysubsubsection{\texorpdfstring{button\_Init()}{button\_Init()}}
+{\footnotesize\ttfamily \label{buttons_8h_add7c33cb7e4e2291fb3eb89f42db6992} 
+void button\+\_\+\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sets up launchpad pins connected for the buttons (P3.\+5 and P5.\+1) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/11
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/11 
+\end{DoxyDate}
+\Hypertarget{buttons_8h_a1009f4e791fd062c1654ef5ccff2993a}\index{buttons.h@{buttons.h}!buttonBackAction@{buttonBackAction}}
+\index{buttonBackAction@{buttonBackAction}!buttons.h@{buttons.h}}
+\doxysubsubsection{\texorpdfstring{buttonBackAction()}{buttonBackAction()}}
+{\footnotesize\ttfamily \label{buttons_8h_a1009f4e791fd062c1654ef5ccff2993a} 
+void button\+Back\+Action (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Implements back button action that redirects in eliminate colored circle state if there was at least one input, instead outputs that is empty. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/11
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/11 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{buttons_8h_a1009f4e791fd062c1654ef5ccff2993a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{buttons_8h_a1009f4e791fd062c1654ef5ccff2993a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{buttons_8h_a4fe9599165d47017fa954f8ec9016d4f}\index{buttons.h@{buttons.h}!buttonConfirmAction@{buttonConfirmAction}}
+\index{buttonConfirmAction@{buttonConfirmAction}!buttons.h@{buttons.h}}
+\doxysubsubsection{\texorpdfstring{buttonConfirmAction()}{buttonConfirmAction()}}
+{\footnotesize\ttfamily \label{buttons_8h_a4fe9599165d47017fa954f8ec9016d4f} 
+void button\+Confirm\+Action (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Implements confirm button action that manage its input according to the state you are in. STARTGR has only one button, so directly redicts; DIMENSION, DIFFICULTY, TENTATIVE, DOUBLES, INFO are menu features and they have their own logic; GAME allows sequence processing only if the sequence is full; CHRONOLOGY and END don\textquotesingle{}t use this button. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/11
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/11 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{buttons_8h_a4fe9599165d47017fa954f8ec9016d4f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{buttons_8h_a4fe9599165d47017fa954f8ec9016d4f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{buttons_8h_afefe41188707848ce20054caacaefbd9}\index{buttons.h@{buttons.h}!functionPinsDefault@{functionPinsDefault}}
+\index{functionPinsDefault@{functionPinsDefault}!buttons.h@{buttons.h}}
+\doxysubsubsection{\texorpdfstring{functionPinsDefault()}{functionPinsDefault()}}
+{\footnotesize\ttfamily \label{buttons_8h_afefe41188707848ce20054caacaefbd9} 
+void function\+Pins\+Default (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{status}{, }\item[{int8\+\_\+t}]{port}{}\end{DoxyParamCaption})}
+
+
+
+Deprecated, using switching function, it is only a bridge function now. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & int that represents the current configuration of IFG register, so the flag register that handles interrupts on a port \\
+\hline
+{\em port} & int that represents a port on which an interrupt has occurred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/11
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em status} & int that represents the current configuration of IFG register, so the flag register that handles interrupts on a port \\
+\hline
+{\em port} & int that represents a port on which an interrupt has occurred \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/11 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{buttons_8h_afefe41188707848ce20054caacaefbd9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{buttons_8h_afefe41188707848ce20054caacaefbd9_icgraph}
+\end{center}
+\end{figure}

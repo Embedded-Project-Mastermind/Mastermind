@@ -1,0 +1,7 @@
+<map id="emergency" name="emergency">
+<area shape="rect" id="Node000001" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="5,31,91,56"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="140,5,253,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,34,124,28,125,33,92,39"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="139,55,254,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="92,48,124,53,123,58,91,53"/>
+</map>

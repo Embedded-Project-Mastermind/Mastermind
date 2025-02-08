@@ -1,0 +1,38 @@
+var src_2fsm_8h =
+[
+    [ "Game", "struct_game.html", "struct_game" ],
+    [ "Tentative", "struct_tentative.html", "struct_tentative" ],
+    [ "COLORS", "src_2fsm_8h.html#a883046b8f0d1f6368a9b9eaf5ca36af3", null ],
+    [ "DIFFICULTY", "src_2fsm_8h.html#a1a48a93520a5fcc9d754a515c48c0231", null ],
+    [ "DIM", "src_2fsm_8h.html#ac25189db92959bff3c6c2adf4c34b50a", null ],
+    [ "DOUBLES", "src_2fsm_8h.html#a188837cf0ec4a8e95bf406b45cf6ff76", null ],
+    [ "TENTATIVES", "src_2fsm_8h.html#ab1d09ef382d5e337de8d384fd1e188ee", null ],
+    [ "State", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8", [
+      [ "START", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2", null ],
+      [ "KEY_WOUT_DOUB", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a9bc3ac94eccdcd5c172392dceeb48f49", null ],
+      [ "KEY_WH_DOUB", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8ada0e9b62b9e2732c057858d4cba06de9", null ],
+      [ "RESET_TENT", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800", null ],
+      [ "WAIT", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a79a322ccb4b29b85b3cab52dbccefd17", null ],
+      [ "ELABORATE", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229", null ],
+      [ "INSERT_COLOR", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6", null ],
+      [ "WAIT_FULL", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a636c8eac8610f47dc4228a0fb1ca5309", null ],
+      [ "ELIMINATE_COLOR", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629", null ],
+      [ "ELABORATE_TENT", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f", null ],
+      [ "INCREMENT_TENT", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8aef18bcb4a935d141625d0cc4f058b7d9", null ],
+      [ "GAME_OVER", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a871723195985a4ae22d7e10d99bf8a00", null ],
+      [ "EASY_MODE", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425", null ],
+      [ "MEDIUM_MODE", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8abab75a02f9e6c8bcf2b41d58044ecba7", null ],
+      [ "DIFFICULT_MODE", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a2c26fbc1fdd523c99380ac97dda96187", null ],
+      [ "ELABORATE_RESULT", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a4e1ec298bdc63da1022042568b5935ad", null ],
+      [ "WIN", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a843dff91ff0b0e5b98a110a512b2f531", null ],
+      [ "ERROR", "src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a2fd6f336d08340583bd620a7f5694c90", null ]
+    ] ],
+    [ "current_state", "src_2fsm_8h.html#a54138d08678dd972a2c9b13e069fd91a", null ],
+    [ "game", "src_2fsm_8h.html#ac6a5ed6191fcf3a5bf0445921feb4f48", null ],
+    [ "i", "src_2fsm_8h.html#acb559820d9ca11295b4500f179ef6392", null ],
+    [ "j", "src_2fsm_8h.html#a37d972ae0b47b9099e30983131d31916", null ],
+    [ "selection", "src_2fsm_8h.html#aca9069b00c7ce881e22b5030f80c7c53", null ],
+    [ "temp", "src_2fsm_8h.html#a2643ad9dd7301f6523ce47c52fab0058", null ],
+    [ "tentative", "src_2fsm_8h.html#a645ef54f5ed9e77e09c0edb057a4d15a", null ],
+    [ "value", "src_2fsm_8h.html#ac4f474c82e82cbb89ca7c36dd52be0ed", null ]
+];

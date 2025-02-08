@@ -1,0 +1,5 @@
+<map id="populateCircles" name="populateCircles">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="133,5,244,31"/>
+<area shape="rect" id="Node000002" href="$game_8c.html#ac269fe8cc886e12dfde77c659f786cd6" title="According to the dimension selected in GUI menu, are preallocated empty circles that change dynamical..." alt="" coords="5,5,85,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,21,85,21,85,16,117,16"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="is_empty" name="is_empty">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="339,55,413,80"/>
+<area shape="rect" id="Node000002" href="$buttons_8c.html#a1009f4e791fd062c1654ef5ccff2993a" title="Implements back button action that redirects in eliminate colored circle state if there was at least ..." alt="" coords="167,5,291,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="323,53,269,34,270,29,325,48"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic2_8c.html#a2aac7e2824658f8ac7c8b8446fff0c9c" title="deletes the last color into the user&#39;s sequence if it is not empty" alt="" coords="175,55,283,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="323,70,283,70,283,65,323,65"/>
+<area shape="rect" id="Node000005" href="$src_2gamelogic2_8c.html#a711f83e83296a13ef71ed10315779fed" title=" " alt="" coords="188,104,270,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="325,87,270,106,269,101,323,82"/>
+<area shape="rect" id="Node000003" href="$input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title="TODO: Describe function." alt="" coords="5,5,119,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="151,21,119,21,119,16,151,16"/>
+</map>

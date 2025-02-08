@@ -1,0 +1,9 @@
+<map id="fn_ELABORATE_TENT" name="fn_ELABORATE_TENT">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,166,56"/>
+<area shape="rect" id="Node000002" href="$src_2gamelogic3_8c.html#a69557878ed149c80e5393e38a540eff9" title=" " alt="" coords="229,5,360,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,31,214,25,215,30,166,36"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic3_8c.html#ad8d2b7851ce243d4f35cb39782bab2de" title=" " alt="" coords="214,55,375,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="166,50,198,54,198,59,166,55"/>
+<area shape="rect" id="Node000003" href="$src_2gamelogic3_8c.html#ad3d2d227e5de9f5614af5a9898df57d1" title=" " alt="" coords="423,5,593,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="360,16,408,16,408,21,360,21"/>
+</map>

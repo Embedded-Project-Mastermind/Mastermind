@@ -1,0 +1,248 @@
+\doxysection{Lcd\+Driver/\+HAL\+\_\+\+MSP\+\_\+\+EXP432\+P401\+R\+\_\+\+Crystalfontz128x128\+\_\+\+ST7735.h File Reference}
+\hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h}{}\label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h}\index{LcdDriver/HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{LcdDriver/HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$ti/devices/msp432p4xx/driverlib/driverlib.\+h$>$}\newline
+Include dependency graph for HAL\+\_\+\+MSP\+\_\+\+EXP432\+P401\+R\+\_\+\+Crystalfontz128x128\+\_\+\+ST7735.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a9ae4af464a0b06634cf41bc00ee601f1}{LCD\+\_\+\+SYSTEM\+\_\+\+CLOCK\+\_\+\+SPEED}}~48000000
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a4f6b8d99ad4ecb585d4da5b988c0ed52}{LCD\+\_\+\+SPI\+\_\+\+CLOCK\+\_\+\+SPEED}}~16000000
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a56a502991a1c0f3ccc2378bdf551b718}{LCD\+\_\+\+SCK\+\_\+\+PORT}}~GPIO\+\_\+\+PORT\+\_\+\+P1
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_aed0f95de9d6c09438fde5ec1d38b7c1f}{LCD\+\_\+\+SCK\+\_\+\+PIN\+\_\+\+FUNCTION}}~GPIO\+\_\+\+PRIMARY\+\_\+\+MODULE\+\_\+\+FUNCTION
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a2a198ade19d53f22c340cf0c3d096137}{LCD\+\_\+\+MOSI\+\_\+\+PORT}}~GPIO\+\_\+\+PORT\+\_\+\+P1
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a1621da098932c2ed57d37daaf39e00a4}{LCD\+\_\+\+MOSI\+\_\+\+PIN\+\_\+\+FUNCTION}}~GPIO\+\_\+\+PRIMARY\+\_\+\+MODULE\+\_\+\+FUNCTION
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a774d1462751965473d6cc3a4ec270336}{LCD\+\_\+\+RST\+\_\+\+PORT}}~GPIO\+\_\+\+PORT\+\_\+\+P5
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a786e250780c1500731386381212e5dbb}{LCD\+\_\+\+CS\+\_\+\+PORT}}~GPIO\+\_\+\+PORT\+\_\+\+P5
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a9d7ba5e3ae28efced2a48e390fd38434}{LCD\+\_\+\+DC\+\_\+\+PORT}}~GPIO\+\_\+\+PORT\+\_\+\+P3
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a5d62783aaf9f3988d72c2f82213e9c62}{LCD\+\_\+\+SCK\+\_\+\+PIN}}~GPIO\+\_\+\+PIN5
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a6e017a8fc269f29da6204f360385a65b}{LCD\+\_\+\+MOSI\+\_\+\+PIN}}~GPIO\+\_\+\+PIN6
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a9d11073f149e02e0a07937196d1e5a8e}{LCD\+\_\+\+RST\+\_\+\+PIN}}~GPIO\+\_\+\+PIN7
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a50d72083b1ed4dd0bc2eaabb4a0332c8}{LCD\+\_\+\+CS\+\_\+\+PIN}}~GPIO\+\_\+\+PIN0
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a402d8ccd0bb0a6cc377222e75b8e050e}{LCD\+\_\+\+DC\+\_\+\+PIN}}~GPIO\+\_\+\+PIN7
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_aadc88d48bd102c99af5ae559de75ec82}{LCD\+\_\+\+EUSCI\+\_\+\+BASE}}~EUSCI\+\_\+\+B0\+\_\+\+BASE
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_ad5b23b4e5aa476e553e73925f351dd7d}{\+\_\+\+\_\+delay\+\_\+cycles}}(x)
+\item 
+\#define \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_aa3e1e98abf57166c60dd62b5b274357d}{HAL\+\_\+\+LCD\+\_\+delay}}(x)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a0dd2289c8e98a83916862ea6a7518026}{HAL\+\_\+\+LCD\+\_\+write\+Command}} (uint8\+\_\+t command)
+\item 
+void \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a7a32392f6df73f2d6eb66094a4f87ba9}{HAL\+\_\+\+LCD\+\_\+write\+Data}} (uint8\+\_\+t data)
+\item 
+void \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a59c7845fa51a58fb1e1718e8ed150b7a}{HAL\+\_\+\+LCD\+\_\+\+Port\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a8fc5d511659315bff08e6629c3c4fc7d}{HAL\+\_\+\+LCD\+\_\+\+Spi\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a7d54b8ce9be4e6514db4a24f74129406}{Sys\+Ctl\+Delay}} (uint32\+\_\+t)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_ad5b23b4e5aa476e553e73925f351dd7d}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!\_\_delay\_cycles@{\_\_delay\_cycles}}
+\index{\_\_delay\_cycles@{\_\_delay\_cycles}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{\_\_delay\_cycles}{\_\_delay\_cycles}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_ad5b23b4e5aa476e553e73925f351dd7d} 
+\#define \+\_\+\+\_\+delay\+\_\+cycles(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a7d54b8ce9be4e6514db4a24f74129406}{SysCtlDelay}}(x)}
+
+\end{DoxyCode}
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_aa3e1e98abf57166c60dd62b5b274357d}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!HAL\_LCD\_delay@{HAL\_LCD\_delay}}
+\index{HAL\_LCD\_delay@{HAL\_LCD\_delay}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_LCD\_delay}{HAL\_LCD\_delay}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_aa3e1e98abf57166c60dd62b5b274357d} 
+\#define HAL\+\_\+\+LCD\+\_\+delay(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_ad5b23b4e5aa476e553e73925f351dd7d}{\_\_delay\_cycles}}(x\ *\ 48)}
+
+\end{DoxyCode}
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a50d72083b1ed4dd0bc2eaabb4a0332c8}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_CS\_PIN@{LCD\_CS\_PIN}}
+\index{LCD\_CS\_PIN@{LCD\_CS\_PIN}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_CS\_PIN}{LCD\_CS\_PIN}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a50d72083b1ed4dd0bc2eaabb4a0332c8} 
+\#define LCD\+\_\+\+CS\+\_\+\+PIN~GPIO\+\_\+\+PIN0}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a786e250780c1500731386381212e5dbb}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_CS\_PORT@{LCD\_CS\_PORT}}
+\index{LCD\_CS\_PORT@{LCD\_CS\_PORT}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_CS\_PORT}{LCD\_CS\_PORT}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a786e250780c1500731386381212e5dbb} 
+\#define LCD\+\_\+\+CS\+\_\+\+PORT~GPIO\+\_\+\+PORT\+\_\+\+P5}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a402d8ccd0bb0a6cc377222e75b8e050e}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_DC\_PIN@{LCD\_DC\_PIN}}
+\index{LCD\_DC\_PIN@{LCD\_DC\_PIN}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DC\_PIN}{LCD\_DC\_PIN}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a402d8ccd0bb0a6cc377222e75b8e050e} 
+\#define LCD\+\_\+\+DC\+\_\+\+PIN~GPIO\+\_\+\+PIN7}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a9d7ba5e3ae28efced2a48e390fd38434}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_DC\_PORT@{LCD\_DC\_PORT}}
+\index{LCD\_DC\_PORT@{LCD\_DC\_PORT}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DC\_PORT}{LCD\_DC\_PORT}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a9d7ba5e3ae28efced2a48e390fd38434} 
+\#define LCD\+\_\+\+DC\+\_\+\+PORT~GPIO\+\_\+\+PORT\+\_\+\+P3}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_aadc88d48bd102c99af5ae559de75ec82}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_EUSCI\_BASE@{LCD\_EUSCI\_BASE}}
+\index{LCD\_EUSCI\_BASE@{LCD\_EUSCI\_BASE}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_EUSCI\_BASE}{LCD\_EUSCI\_BASE}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_aadc88d48bd102c99af5ae559de75ec82} 
+\#define LCD\+\_\+\+EUSCI\+\_\+\+BASE~EUSCI\+\_\+\+B0\+\_\+\+BASE}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a6e017a8fc269f29da6204f360385a65b}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_MOSI\_PIN@{LCD\_MOSI\_PIN}}
+\index{LCD\_MOSI\_PIN@{LCD\_MOSI\_PIN}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_MOSI\_PIN}{LCD\_MOSI\_PIN}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a6e017a8fc269f29da6204f360385a65b} 
+\#define LCD\+\_\+\+MOSI\+\_\+\+PIN~GPIO\+\_\+\+PIN6}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a1621da098932c2ed57d37daaf39e00a4}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_MOSI\_PIN\_FUNCTION@{LCD\_MOSI\_PIN\_FUNCTION}}
+\index{LCD\_MOSI\_PIN\_FUNCTION@{LCD\_MOSI\_PIN\_FUNCTION}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_MOSI\_PIN\_FUNCTION}{LCD\_MOSI\_PIN\_FUNCTION}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a1621da098932c2ed57d37daaf39e00a4} 
+\#define LCD\+\_\+\+MOSI\+\_\+\+PIN\+\_\+\+FUNCTION~GPIO\+\_\+\+PRIMARY\+\_\+\+MODULE\+\_\+\+FUNCTION}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a2a198ade19d53f22c340cf0c3d096137}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_MOSI\_PORT@{LCD\_MOSI\_PORT}}
+\index{LCD\_MOSI\_PORT@{LCD\_MOSI\_PORT}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_MOSI\_PORT}{LCD\_MOSI\_PORT}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a2a198ade19d53f22c340cf0c3d096137} 
+\#define LCD\+\_\+\+MOSI\+\_\+\+PORT~GPIO\+\_\+\+PORT\+\_\+\+P1}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a9d11073f149e02e0a07937196d1e5a8e}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_RST\_PIN@{LCD\_RST\_PIN}}
+\index{LCD\_RST\_PIN@{LCD\_RST\_PIN}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_RST\_PIN}{LCD\_RST\_PIN}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a9d11073f149e02e0a07937196d1e5a8e} 
+\#define LCD\+\_\+\+RST\+\_\+\+PIN~GPIO\+\_\+\+PIN7}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a774d1462751965473d6cc3a4ec270336}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_RST\_PORT@{LCD\_RST\_PORT}}
+\index{LCD\_RST\_PORT@{LCD\_RST\_PORT}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_RST\_PORT}{LCD\_RST\_PORT}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a774d1462751965473d6cc3a4ec270336} 
+\#define LCD\+\_\+\+RST\+\_\+\+PORT~GPIO\+\_\+\+PORT\+\_\+\+P5}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a5d62783aaf9f3988d72c2f82213e9c62}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_SCK\_PIN@{LCD\_SCK\_PIN}}
+\index{LCD\_SCK\_PIN@{LCD\_SCK\_PIN}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SCK\_PIN}{LCD\_SCK\_PIN}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a5d62783aaf9f3988d72c2f82213e9c62} 
+\#define LCD\+\_\+\+SCK\+\_\+\+PIN~GPIO\+\_\+\+PIN5}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_aed0f95de9d6c09438fde5ec1d38b7c1f}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_SCK\_PIN\_FUNCTION@{LCD\_SCK\_PIN\_FUNCTION}}
+\index{LCD\_SCK\_PIN\_FUNCTION@{LCD\_SCK\_PIN\_FUNCTION}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SCK\_PIN\_FUNCTION}{LCD\_SCK\_PIN\_FUNCTION}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_aed0f95de9d6c09438fde5ec1d38b7c1f} 
+\#define LCD\+\_\+\+SCK\+\_\+\+PIN\+\_\+\+FUNCTION~GPIO\+\_\+\+PRIMARY\+\_\+\+MODULE\+\_\+\+FUNCTION}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a56a502991a1c0f3ccc2378bdf551b718}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_SCK\_PORT@{LCD\_SCK\_PORT}}
+\index{LCD\_SCK\_PORT@{LCD\_SCK\_PORT}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SCK\_PORT}{LCD\_SCK\_PORT}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a56a502991a1c0f3ccc2378bdf551b718} 
+\#define LCD\+\_\+\+SCK\+\_\+\+PORT~GPIO\+\_\+\+PORT\+\_\+\+P1}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a4f6b8d99ad4ecb585d4da5b988c0ed52}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_SPI\_CLOCK\_SPEED@{LCD\_SPI\_CLOCK\_SPEED}}
+\index{LCD\_SPI\_CLOCK\_SPEED@{LCD\_SPI\_CLOCK\_SPEED}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SPI\_CLOCK\_SPEED}{LCD\_SPI\_CLOCK\_SPEED}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a4f6b8d99ad4ecb585d4da5b988c0ed52} 
+\#define LCD\+\_\+\+SPI\+\_\+\+CLOCK\+\_\+\+SPEED~16000000}
+
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a9ae4af464a0b06634cf41bc00ee601f1}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!LCD\_SYSTEM\_CLOCK\_SPEED@{LCD\_SYSTEM\_CLOCK\_SPEED}}
+\index{LCD\_SYSTEM\_CLOCK\_SPEED@{LCD\_SYSTEM\_CLOCK\_SPEED}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SYSTEM\_CLOCK\_SPEED}{LCD\_SYSTEM\_CLOCK\_SPEED}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a9ae4af464a0b06634cf41bc00ee601f1} 
+\#define LCD\+\_\+\+SYSTEM\+\_\+\+CLOCK\+\_\+\+SPEED~48000000}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a59c7845fa51a58fb1e1718e8ed150b7a}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!HAL\_LCD\_PortInit@{HAL\_LCD\_PortInit}}
+\index{HAL\_LCD\_PortInit@{HAL\_LCD\_PortInit}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_LCD\_PortInit()}{HAL\_LCD\_PortInit()}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a59c7845fa51a58fb1e1718e8ed150b7a} 
+void HAL\+\_\+\+LCD\+\_\+\+Port\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a59c7845fa51a58fb1e1718e8ed150b7a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a8fc5d511659315bff08e6629c3c4fc7d}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!HAL\_LCD\_SpiInit@{HAL\_LCD\_SpiInit}}
+\index{HAL\_LCD\_SpiInit@{HAL\_LCD\_SpiInit}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_LCD\_SpiInit()}{HAL\_LCD\_SpiInit()}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a8fc5d511659315bff08e6629c3c4fc7d} 
+void HAL\+\_\+\+LCD\+\_\+\+Spi\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a8fc5d511659315bff08e6629c3c4fc7d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a0dd2289c8e98a83916862ea6a7518026}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!HAL\_LCD\_writeCommand@{HAL\_LCD\_writeCommand}}
+\index{HAL\_LCD\_writeCommand@{HAL\_LCD\_writeCommand}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_LCD\_writeCommand()}{HAL\_LCD\_writeCommand()}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a0dd2289c8e98a83916862ea6a7518026} 
+void HAL\+\_\+\+LCD\+\_\+write\+Command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a0dd2289c8e98a83916862ea6a7518026_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a7a32392f6df73f2d6eb66094a4f87ba9}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!HAL\_LCD\_writeData@{HAL\_LCD\_writeData}}
+\index{HAL\_LCD\_writeData@{HAL\_LCD\_writeData}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_LCD\_writeData()}{HAL\_LCD\_writeData()}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a7a32392f6df73f2d6eb66094a4f87ba9} 
+void HAL\+\_\+\+LCD\+\_\+write\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a7a32392f6df73f2d6eb66094a4f87ba9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a7d54b8ce9be4e6514db4a24f74129406}\index{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}!SysCtlDelay@{SysCtlDelay}}
+\index{SysCtlDelay@{SysCtlDelay}!HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h@{HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{SysCtlDelay()}{SysCtlDelay()}}
+{\footnotesize\ttfamily \label{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h_a7d54b8ce9be4e6514db4a24f74129406} 
+void Sys\+Ctl\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{}{}\end{DoxyParamCaption})}
+

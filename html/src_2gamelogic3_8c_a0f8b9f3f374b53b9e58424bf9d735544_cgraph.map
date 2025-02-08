@@ -1,0 +1,9 @@
+<map id="fn_INCREMENT_TENT" name="fn_INCREMENT_TENT">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,168,80"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a7033367b04d502387b7ee238f8accedf" title=" " alt="" coords="223,5,336,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,51,211,33,212,38,140,57"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic3_8c.html#a4ed6d290973d5c7cf85aad8061fd4587" title=" " alt="" coords="216,55,343,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,65,200,65,200,70,168,70"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic3_8c.html#a06c9a6238e3949f058de48815ce0be49" title=" " alt="" coords="228,104,331,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="140,78,213,97,212,102,139,84"/>
+</map>

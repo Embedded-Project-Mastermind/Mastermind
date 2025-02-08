@@ -1,0 +1,7 @@
+<map id="allocate_in_Heap_Bool" name="allocate_in_Heap_Bool">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,160,56"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="229,5,342,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,31,213,24,214,30,160,36"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#afbe438781ebff37a81c93cfb218bb0cf" title="Initialization for a boolean array setting to its default state." alt="" coords="208,55,363,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,50,193,54,192,59,160,55"/>
+</map>

@@ -1,0 +1,25 @@
+<map id="fn_ELABORATE_RESULT" name="fn_ELABORATE_RESULT">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,129,184,155"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a4ed6d290973d5c7cf85aad8061fd4587" title=" " alt="" coords="269,5,396,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,127,159,84,194,60,231,40,253,31,255,36,233,45,196,65,163,88,111,131"/>
+<area shape="rect" id="Node000003" href="$game_8c.html#ad2c393fb906ee594fa13863ad5aed0ae" title="Effective function that refresh the status of GAME Section, when an update happen." alt="" coords="250,55,415,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,126,231,89,255,82,256,87,232,94,129,131"/>
+<area shape="rect" id="Node000008" href="$src_2gamelogic3_8c.html#a69557878ed149c80e5393e38a540eff9" title=" " alt="" coords="267,104,398,130"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="184,130,252,123,252,128,184,135"/>
+<area shape="rect" id="Node000010" href="$general_2gamelogic3_8c.html#a846367f19d2c8d77fa60d2dcd8c983df" title=" " alt="" coords="255,153,410,179"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="184,149,240,154,239,159,184,154"/>
+<area shape="rect" id="Node000011" href="$general_2gamelogic3_8c.html#aa1804c7734b17ce9285763af7df44751" title=" " alt="" coords="232,203,433,228"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="130,153,232,189,257,196,255,201,231,194,129,158"/>
+<area shape="rect" id="Node000012" href="$general_2gamelogic3_8c.html#af1faa7e0b10021c413bf5fb4188cfa9a" title=" " alt="" coords="284,252,380,278"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="112,153,163,196,197,219,233,238,270,251,268,256,231,243,194,223,160,200,108,158"/>
+<area shape="rect" id="Node000004" href="$joystick_8c.html#a17d2aabe37f3c529c960176fe55d5fd5" title=" " alt="" coords="528,5,605,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="396,51,512,27,513,32,397,57"/>
+<area shape="rect" id="Node000005" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="503,55,629,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="415,65,488,65,488,70,415,70"/>
+<area shape="rect" id="Node000006" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="699,31,801,56"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="629,57,683,49,684,55,630,62"/>
+<area shape="rect" id="Node000007" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="699,80,801,106"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="630,74,684,81,683,86,629,79"/>
+<area shape="rect" id="Node000009" href="$src_2gamelogic3_8c.html#ad3d2d227e5de9f5614af5a9898df57d1" title=" " alt="" coords="481,104,651,130"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="398,114,466,114,466,120,398,120"/>
+</map>

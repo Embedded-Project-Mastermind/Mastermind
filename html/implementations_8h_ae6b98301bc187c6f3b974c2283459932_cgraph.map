@@ -1,0 +1,18 @@
+<map id="handle_buttons" name="handle_buttons">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,115,106"/>
+<area shape="rect" id="Node000002" href="$difficulty_8c.html#a55037b2df6de8e644fb78a0b591e8ac2" title="Function that handles pressure of confirm button when we are in DIFFICULTY section." alt="" coords="163,5,359,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,77,119,58,162,40,181,33,183,38,164,45,122,63,86,82"/>
+<area shape="rect" id="Node000004" href="$dimension_8c.html#a58364c9a26deb9ae50fe27b33f41a221" title="extern declaretion" alt="" coords="163,55,358,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="115,83,147,79,148,84,115,89"/>
+<area shape="rect" id="Node000005" href="$doubles_8c.html#a0cb8c2347e6040b6d06a0642ef95643a" title="manages the changes of our doubles variable and the shown text on our button (except to prev and next..." alt="" coords="170,153,352,179"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="86,104,164,140,183,146,181,151,162,145,84,109"/>
+<area shape="rect" id="Node000007" href="$tentatives_8c.html#ab21c36ca2c0c622eefddddf5c0023d4c" title=" " alt="" coords="165,104,356,130"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="115,97,150,101,149,106,115,102"/>
+<area shape="rect" id="Node000003" href="$implementations_8c.html#a7b8a1f6ee64675c2f14e0c4d61b10092" title=" " alt="" coords="414,80,528,106"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="324,29,360,40,432,70,429,75,358,45,323,34"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="359,77,400,82,399,87,358,82"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="323,150,358,140,429,110,431,115,360,145,324,155"/>
+<area shape="rect" id="Node000006" href="$implementations_8c.html#af4097a2a104a8d16ccf1344d0e9f25b1" title=" " alt="" coords="407,153,535,179"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="353,164,391,164,391,169,353,169"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="357,103,399,98,400,104,357,109"/>
+</map>

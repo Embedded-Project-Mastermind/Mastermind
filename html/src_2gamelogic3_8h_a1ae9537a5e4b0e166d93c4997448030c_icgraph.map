@@ -1,0 +1,13 @@
+<map id="correctionsEasyMode" name="correctionsEasyMode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="630,55,778,80"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a1d23c4adc9c272ed1461ee228cf73036" title=" " alt="" coords="419,29,582,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="615,59,583,55,583,50,616,54"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic3_8c.html#a839aba7dda7c72bae6c207708a47b207" title=" " alt="" coords="440,79,562,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="616,81,563,87,562,82,615,75"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic3_8c.html#a75f0aa97e826eb82b32948cd435d6185" title=" " alt="" coords="209,5,371,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,34,371,30,372,25,404,28"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic3_8c.html#a20f17247635a3f55d199db1bb7dfdc7d" title=" " alt="" coords="219,55,360,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="404,56,361,62,361,56,404,51"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic3_8c.html#a676922e1563163dc4a5df61b09f26162" title=" " alt="" coords="5,5,161,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="193,21,161,21,161,16,193,16"/>
+</map>

@@ -1,0 +1,30 @@
+<map id="general/joystick.h" name="general/joystick.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="565,5,689,31"/>
+<area shape="rect" id="Node000002" href="$graphics_8h.html" title=" " alt="" coords="586,79,668,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="630,31,630,63,624,63,624,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,160,161,201"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="586,99,409,119,294,135,180,155,164,159,163,153,178,150,294,130,408,113,586,94"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="256,256,411,297"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="586,95,497,97,387,105,334,113,287,123,249,137,225,154,217,167,215,179,225,207,243,229,267,247,264,251,240,233,221,210,210,180,212,165,221,151,247,132,286,118,333,107,387,100,496,92,586,90"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="609,264,704,290"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="641,103,659,124,674,152,678,177,678,204,668,250,663,249,673,203,673,178,668,154,655,127,637,107"/>
+<area shape="rect" id="Node000006" href="$_crystalfontz128x128___s_t7735_8h.html" title=" " alt="" coords="457,160,658,201"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="619,107,585,150,581,147,615,103"/>
+<area shape="rect" id="Node000008" href="$_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h.html" title=" " alt="" coords="234,153,433,208"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="587,108,441,151,439,145,585,103"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="734,168,794,193"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="648,103,733,157,731,161,645,107"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="795,264,870,290"/>
+<area shape="poly" id="edge13_Node000002_Node000010" title=" " alt="" coords="668,93,703,98,741,108,778,125,809,151,824,174,832,199,837,248,831,249,827,201,819,176,805,154,775,130,739,113,702,103,668,98"/>
+<area shape="rect" id="Node000011" href="$general_2fsm_8h.html" title=" " alt="" coords="869,168,924,193"/>
+<area shape="poly" id="edge14_Node000002_Node000011" title=" " alt="" coords="669,98,754,118,852,150,866,157,864,162,850,155,753,123,668,103"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="512,204,396,252,394,247,510,199"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="580,199,635,251,631,255,576,203"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="480,264,544,290"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="551,202,527,251,522,249,546,200"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="336,209,336,241,331,241,331,209"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="387,207,477,254,475,259,384,211"/>
+<area shape="poly" id="edge16_Node000011_Node000010" title=" " alt="" coords="890,195,851,252,847,249,886,192"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="893,264,950,290"/>
+<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="902,193,917,248,912,250,897,194"/>
+</map>
