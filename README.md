@@ -199,7 +199,7 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>Cristoforetti Niccolò</th>
     <th>-</th>
     <th>Cristoforetti Niccolò</th>
-    <th>X</th>
+    <th>!</th>
     <th>!</th>
   </tr>
 </table>
