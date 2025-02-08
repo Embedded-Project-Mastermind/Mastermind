@@ -140,9 +140,9 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 ---
 
 # Work Contribution
-X - Complete
-? - To finish
-! - To start
+X - Complete<br>
+? - To finish<br>
+! - To start<br><br>
 This is referred to the TODO section, search TODO in those files and fill the missing information<br>
 <table>
   <tr>
@@ -163,9 +163,11 @@ This is referred to the TODO section, search TODO in those files and fill the mi
   </tr>
   <tr>
     <th>chronology.c</th>
-    <th>Cristoforetti Niccolò<\th>
+    <th>Cristoforetti Niccolò</th>
     <th>Gottardelli Matteo</th>
     <th>Cristoforetti Niccolò & Gottardelli Matteo</th>
+    <th>?</th>
+    <th>!</th>
   </tr>
   <tr>
     <th>difficulty.c</th>
