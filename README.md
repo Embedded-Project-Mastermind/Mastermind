@@ -147,16 +147,21 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
     <th>Responsible Member</th>
     <th>Helper Member</th>
     <th>Maintainer Member</th>
+    <th>Comments .c</th>
+    <th>Integration .h</th>
   </tr>
   <tr>
     <th>buttons.c</th>
     <th>Gottardelli Matteo</th>
     <th>Benassi Alessandro</th>
     <th>Gottardelli Matteo</th>
+    <th>- [X]</th>
+    <th>- [X]</th>
   </tr>
   <tr>
     <th>chronology.c</th>
     <th>Cristoforetti Niccolò</th>
+    <th>Gottardelli Matteo</th>
     <th>Gottardelli Matteo & Cristoforetti Niccolò</th>
   </tr>
   
