@@ -146,10 +146,20 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
     <th>Topic/Section</th>
     <th>Responsible Member</th>
     <th>Helper Member</th>
+    <th>Maintainer Member</th>
   </tr>
   <tr>
-    
+    <th>buttons.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>Benassi Alessandro</th>
+    <th>Gottardelli Matteo</th>
   </tr>
+  <tr>
+    <th>chronology.c</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>Gottardelli Matteo & Cristoforetti Niccolò</th>
+  </tr>
+  
   ...
 </table>
 
