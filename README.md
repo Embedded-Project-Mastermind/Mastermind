@@ -140,10 +140,10 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 ---
 
 # Work Contribution
-X - Complete<br>
-? - To finish<br>
-! - To start<br>
-* - Consider expanding briefs<br><br>
+[X] - Complete<br>
+[?] - To finish<br>
+[!] - To start<br>
+[*] - Consider expanding briefs<br><br>
 This is referred to the TODO section, search TODO in those files and fill the missing information<br>
 <table>
   <tr>
