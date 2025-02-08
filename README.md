@@ -162,15 +162,13 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>X</th>
   </tr>
   <tr>
-    <th>chronology.c</th>
-    <th>Cristoforetti Niccolò</th>
+    <th>difficulty.c</th>
     <th>Gottardelli Matteo</th>
-    <th>Gottardelli Matteo & Cristoforetti Niccolò</th>
-    <th>?</th>
-    <th>!</th>
+    <th>-</th>
+    <th>Gottardelli Matteo</th>
+    <th>X</th>
+    <th>X</th>
   </tr>
-  
-  ...
 </table>
 
 [Back to top](#table-of-contents)
