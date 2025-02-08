@@ -140,17 +140,156 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 ---
 
 # Work Contribution
-
+[X] - Complete<br>
+[?] - To finish<br>
+[!] - To start<br>
+[*] - Consider expanding briefs<br><br>
+This is referred to the TODO section, search TODO in those files and fill the missing information<br>
 <table>
   <tr>
     <th>Topic/Section</th>
     <th>Responsible Member</th>
     <th>Helper Member</th>
+    <th>Maintainer Member</th>
+    <th>Comments .c</th>
+    <th>Integration .h</th>
   </tr>
   <tr>
-    
+    <th>buttons.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>Benassi Alessandro</th>
+    <th>Gottardelli Matteo</th>
+    <th>X</th>
+    <th>X</th>
   </tr>
-  ...
+  <tr>
+    <th>chronology.c</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>Gottardelli Matteo</th>
+    <th>Cristoforetti Niccolò & Gottardelli Matteo</th>
+    <th>?</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>difficulty.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>-</th>
+    <th>Gottardelli Matteo</th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+  <tr>
+    <th>dimension.c</th>
+    <th>Benassi Alessandro</th>
+    <th>-</th>
+    <th>Benassi Alessandro</th>
+    <th>X*</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>doubles.c</th>
+    <th>Calvo Daniele</th>
+    <th>Benassi Alessandro</th>
+    <th>Gottardelli Matteo</th>
+    <th>X*</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>end.c</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>-</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>game.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>Benassi Alessandro</th>
+    <th>Benassi Alessandro & Gottardelli Matteo</th>
+    <th>X</th>
+    <th>X</th>
+  </tr>
+  <tr>
+    <th>gamelogic1.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>-</th>
+    <th>Gottardelli Matteo</th>
+    <th>?</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>gamelogic2.c</th>
+    <th>Benassi Alessandro & Calvo Daniele</th>
+    <th>Gottardelli Matteo</th>
+    <th>Benassi Alessandro</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>gamelogic3.c</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>-</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>implementations.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>Gottardelli Matteo</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>info.c</th>
+    <th>Calvo Daniele</th>
+    <th>Gottardelli Matteo</th>
+    <th>Gottardelli Matteo</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+   <tr>
+    <th>input.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>Benassi Alessandro</th>
+    <th>Gottardelli Matteo</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>joystick.c</th>
+    <th>Gottardelli Matteo</th>
+    <th>-</th>
+    <th>Gottardelli Matteo</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>main.c</th>
+    <th>All</th>
+    <th>-</th>
+    <th>All</th>
+    <th>!</th>
+    <th>NONE</th>
+  </tr>
+  <tr>
+    <th>start.c</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>Gottardelli Matteo</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
+  <tr>
+    <th>tentatives.c</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>-</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>!</th>
+    <th>!</th>
+  </tr>
 </table>
 
 [Back to top](#table-of-contents)
