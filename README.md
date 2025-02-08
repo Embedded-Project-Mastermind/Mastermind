@@ -191,8 +191,16 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>Calvo Daniele</th>
     <th>Benassi Alessandro</th>
     <th>Gottardelli Matteo</th>
-    <th>X</th>
+    <th>X*</th>
     <th>!</th>
+  </tr>
+  <tr>
+    <th>end.c</th>
+    <th>Cristoforetti Niccolò</th>
+    <th>-</th>
+    <th>Gottardelli Matteo</th>
+    <th>X</th>
+    <th>X</th>
   </tr>
 </table>
 
