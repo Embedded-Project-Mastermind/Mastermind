@@ -1,0 +1,54 @@
+\doxysection{input.\+h}
+\hypertarget{input_8h_source}{}\label{input_8h_source}\index{general/input.h@{general/input.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ input.c}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Primary\ Authors:\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Helpers:\ Alessandro\ Benassi}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Maintainability:\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Date\ Creation:\ 27\ ott\ 2024}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ INPUT\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ INPUT\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}msp.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}stdbool.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <ti/devices/msp432p4xx/inc/msp.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <ti/devices/msp432p4xx/driverlib/driverlib.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <ti/grlib/grlib.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}LcdDriver/Crystalfontz128x128\_ST7735.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}LcdDriver/HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Macros}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\#define\ P1\_D\ 0}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ P3\_D\ 0}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ P4\_D\ 1}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ P5\_D\ 2}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ P6\_D\ 3}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ DIMIO\ 32}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ BYTE\ 8}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ Global\ variables}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ array[DIMIO];}
+\DoxyCodeLine{00031\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ buzzerBeepFlag;}
+\DoxyCodeLine{00032\ \textcolor{keyword}{extern}\ uint8\_t\ overflow\_counter;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ Function\ declarations}}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ resetArrayInput(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ setArrayInput(\textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ configurePortsInput(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ configureInterruptPortInput(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ counterTrue(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{int}\ findTrue(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ elaborateOutput(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ configureTimersInput(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00043\ uint8\_t\ bitofstatus(uint8\_t\ status);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ switching(uint8\_t\ status,\ int8\_t\ port);}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{bool}\ atLeastOneTrue(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ triggerPinInterrupt();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INPUT\_H}}
+
+\end{DoxyCode}

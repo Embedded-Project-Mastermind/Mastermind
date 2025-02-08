@@ -12,6 +12,13 @@
 bool configurationGame=false;
 Graphics_Rectangle textRect={1, 70, 126, 106};
 
+/**
+ * @brief Implicit Call that is invoked when we arrive at GAME state in GUI FSM and primarly draw the static elements and dynamic ones
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void fn_GAME(void) {
     if(!configurationGame) {//TO REMOVE ONLY FOR EXAMPLE
        // initGame(3, 'A', true, 7); //REMOVE WHEN CONNECTED TO ALL
@@ -40,6 +47,14 @@ void fn_GAME(void) {
         rectangleWithText((Graphics_Rectangle){0, 110, 128, 128}, FILL_MOVEMENT, (Graphics_Text){{"<- CHRONOLOGY"}, false}, STANDARD_COLOR);
     }
 }
+/**
+ * @brief According to the inputed color, the leds are turned on according to that color (ORANGE case it will be P1.0, for the others will be a direct correspondes to combination of P2.0, P2.1, P2.2
+ * @param c Consist in an integer denoting a custom coding of colors (more clarity in input.c)
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void elaborateColor(int16_t c) {
     if(configurationGame) {
         if (game.dim!=tentative.count) {
@@ -66,6 +81,13 @@ void elaborateColor(int16_t c) {
         }
     }
 }
+/**
+ * @brief According to the dimension selected in GUI menu, are preallocated empty circles that change dynamically position and size according to the number, because they have to fit on the screen
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void initCircles() {
     switch(game.dim) {
         case 3: populateCircles(25, 13, 56); break;
@@ -75,6 +97,16 @@ void initCircles() {
         default: exit(1);
     }
 }
+/**
+ * @brief Initialization effective of the circles according to the inputed parameters
+ * @param offset Determine the distance from the leftest pixel of the leftest circle and the left border
+ * @param radius Circle radius, distance from the center to the circle border
+ * @param value_y Position of y axis according to the screen
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper & Maintainer)
+ * @date 2024-10-31
+*/
 void populateCircles(int16_t offset, int16_t radius, int16_t value_y){
     int i;
     for (i=0; i<game.dim; i++) {
@@ -89,6 +121,14 @@ void populateCircles(int16_t offset, int16_t radius, int16_t value_y){
             circles[i].color=STANDARD_COLOR;
     }
 }
+/**
+ * @brief Management and color of the circles on screen
+ * @param circs The circle initialized array that handles the handle the color of each element in the array
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper & Maintainer)
+ * @date 2024-10-31
+*/
 void drawCircles(Graphics_Circle* circs) {
     int k;
     for (k=0; k<game.dim; k++) {
@@ -100,7 +140,13 @@ void drawCircles(Graphics_Circle* circs) {
         }
     }
 }
-
+/**
+ * @brief Action that the menu performs when the stick goes left, primarly changing selection and imposing logic visual limits
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper & Maintainer)
+ * @date 2024-10-31
+*/
 void leftStick_GAME() {
     if (game.count_tent!=0){
         display_position++;
@@ -108,6 +154,14 @@ void leftStick_GAME() {
         delay_ms(100);
     }
 }
+/**
+ * @brief Action that the menu performs when the stick goes left, primarly changing selection and imposing logic visual limits
+ * @param color Graphics color definition according to the integer inputed and according to that the circle will be colored
+ * @return int32, returns the graphics color in order to color the circle
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper & Maintainer)
+ * @date 2024-10-31
+*/
 int32_t selectColor(int16_t color) {
     int32_t c;
     switch(color) {
@@ -123,6 +177,13 @@ int32_t selectColor(int16_t color) {
     }
     return c;
 }
+/**
+ * @brief Effective function that refresh the status of GAME Section, when an update happen
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper & Maintainer)
+ * @date 2024-10-31
+*/
 void displayResultsOnScreen() {
     for (i=0; i<game.dim; i++) {
         Graphics_setForegroundColor(&grContext, SELECTED_COLOR);

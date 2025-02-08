@@ -1,0 +1,34 @@
+\doxysection{game.\+h}
+\hypertarget{game_8h_source}{}\label{game_8h_source}\index{general/game.h@{general/game.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ game.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Primary\ Authors:\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Helpers:\ Alessandro\ Benassi}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Maintainability:\ Alessandro\ Benassi,\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Date\ Creation:\ 31\ ott\ 2024}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ GAME\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ GAME\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}graphics.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}implementations.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}input.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ YLEVEL\_OFFSET\ 32}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ configurationGame;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___circle}{Graphics\_Circle}}\ circles[];}
+\DoxyCodeLine{00018\ \textcolor{keyword}{extern}\ Graphics\_Rectangle\ textRect;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{extern}\ int16\_t\ color\_selected;}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ fn\_GAME(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ elaborateColor(int16\_t\ c);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ initCircles();}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ populateCircles(int16\_t\ offset,\ int16\_t\ radius,\ int16\_t\ value\_y);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ drawCircles(\mbox{\hyperlink{struct_graphics___circle}{Graphics\_Circle}}*\ circs);}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ leftStick\_GAME();}
+\DoxyCodeLine{00026\ int32\_t\ selectColor(int16\_t\ color);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ displayResultsOnScreen();}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ GAME\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

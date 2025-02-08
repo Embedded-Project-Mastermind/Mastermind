@@ -1,0 +1,51 @@
+\doxysection{fsm.\+h}
+\hypertarget{src_2fsm_8h_source}{}\label{src_2fsm_8h_source}\index{src/fsm.h@{src/fsm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ fsm.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ Mastermind\ Program}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Created\ by\ Matteo\ Gottardelli\ on\ 27/09/24.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ fsm\_h}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ fsm\_h}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{/*\ Constants\ */}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ COLORS\ 6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Number\ of\ colors\ available}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ DIFFICULTY\ 'A'\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Default\ difficulty\ level}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ TENTATIVES\ 10\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Number\ of\ attempts\ allowed}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ DIM\ 4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Dimension\ of\ the\ sequence}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ DOUBLES\ false\ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Whether\ doubles\ are\ allowed}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ ENUM\ Declaration\ */}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{START,\ KEY\_WOUT\_DOUB,\ KEY\_WH\_DOUB,\ RESET\_TENT,\ WAIT,\ ELABORATE,\ INSERT\_COLOR,\ WAIT\_FULL,\ ELIMINATE\_COLOR,\ ELABORATE\_TENT,\ INCREMENT\_TENT,\ GAME\_OVER,\ EASY\_MODE,\ MEDIUM\_MODE,\ DIFFICULT\_MODE,\ ELABORATE\_RESULT,\ WIN,\ ERROR\}\ State;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/*\ Struct\ declarations\ */}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ dim;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dimension\ of\ the\ sequence}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{char}\ difficulty;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Difficulty\ level\ of\ the\ game}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ doubles;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flag\ to\ indicate\ if\ doubles\ are\ allowed}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ count\_tent;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Count\ of\ current\ attempts}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ tentatives;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Total\ number\ of\ allowed\ attempts}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{char}*\ seq\_to\_guess;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sequence\ to\ be\ guessed}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{char}*\ chronology;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ History\ of\ attempts}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}*\ flags;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flag\ of\ boolean}}
+\DoxyCodeLine{00030\ \}\ \mbox{\hyperlink{struct_game}{Game}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ count;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Count\ of\ user\ attempts}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ dim;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dimension\ of\ user's\ sequence}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{char}*\ seq\_user;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ User's\ guessed\ sequence}}
+\DoxyCodeLine{00036\ \}\ \mbox{\hyperlink{struct_tentative}{Tentative}};}
+\DoxyCodeLine{00037\ \textcolor{comment}{/*\ Global\ variables\ */}}
+\DoxyCodeLine{00038\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_game}{Game}}\ game;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Game\ struct\ instance}}
+\DoxyCodeLine{00039\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_tentative}{Tentative}}\ tentative;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tentative\ struct\ instance}}
+\DoxyCodeLine{00040\ \textcolor{keyword}{extern}\ State\ current\_state;\ \ \ \ \textcolor{comment}{//\ Initialize\ current\ state}}
+\DoxyCodeLine{00041\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ i,\ j;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Variables\ acting\ like\ counters\ for\ for-\/cycles}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ temp;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ used\ to\ pass\ converted\ vale\ into\ char(color)\ crom\ a\ function\ to\ another}}
+\DoxyCodeLine{00043\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ value;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//used\ to\ pass\ input\ value\ from\ a\ function\ to\ another}}
+\DoxyCodeLine{00044\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ selection;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ true\ if\ text\_selection\ -\/>\ buttons\ menu,\ false\ if\ text\ selection\ -\/>\ colors\ menu}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ fsm\_h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

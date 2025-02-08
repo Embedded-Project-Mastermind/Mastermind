@@ -1,0 +1,71 @@
+\doxysection{graphics.\+h}
+\hypertarget{graphics_8h_source}{}\label{graphics_8h_source}\index{general/graphics.h@{general/graphics.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ fsm.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Primary\ Authors:\ Alessandro\ Benassi,\ Daniele\ Calvo,\ Matteo\ Gottardelli,\ Niccolò\ Cristoforetti}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Helpers:\ -\/}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ •\ Maintainability:\ Alessandro\ Benassi,\ Daniele\ Calvo,\ Matteo\ Gottardelli,\ Niccolò\ Cristoforetti}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Date\ Creation:\ 5\ ott\ 2024}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ GRAPHICS\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ GRAPHICS\_H\_}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <ti/devices/msp432p4xx/inc/msp.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <ti/devices/msp432p4xx/driverlib/driverlib.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <ti/grlib/grlib.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}LcdDriver/Crystalfontz128x128\_ST7735.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}LcdDriver/HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <fsm.h>}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//1.\ DEFINITION\ OF\ CONTEXT}}
+\DoxyCodeLine{00021\ Graphics\_Context\ grContext;}
+\DoxyCodeLine{00022\ \textcolor{comment}{//2.\ DEFINITION\ OF\ COLORS}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//BACKGROUND\ COLORS}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ BACKGROUND\_STANDARD\_COLOR\ GRAPHICS\_COLOR\_WHITE}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//FOREGROUND\ COLORS}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ SELECTED\_COLOR\ GRAPHICS\_COLOR\_WHITE}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ STANDARD\_COLOR\ GRAPHICS\_COLOR\_BLACK}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ DISABLED\_COLOR\ GRAPHICS\_COLOR\_GRAY}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ BORDER\_FOCUSED\_COLOR\ GRAPHICS\_COLOR\_RED}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ BORDER\_SELECTED\_COLOR\ GRAPHICS\_COLOR\_BLACK}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ FILL\_UPPER\_RECT\ GRAPHICS\_COLOR\_BLUE}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ FILL\_MOVEMENT\ GRAPHICS\_COLOR\_CYAN}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ STANDARD\_TEXT\ GRAPHICS\_COLOR\_BLACK}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{//Enum\ Declaration\ for\ display\ changes}}
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ Graphics\_State\ \{START\_GR,\ DIMENSION,\ DIFFICULTY,\ TENTATIVE,\ DOUBLES,\ INFO,\ GAME,\ CHRONOLOGY,\ END,\ ERROR\_GR\}\ Graphics\_State;}
+\DoxyCodeLine{00038\ \textcolor{comment}{//Button\ possible\ states}}
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ Button\_State\ \{STANDARD,\ FOCUSED,\ SELECTED,\ DISABLED\}\ Button\_State;}
+\DoxyCodeLine{00040\ \textcolor{comment}{//Struct\ Declarations}}
+\DoxyCodeLine{00041\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ int8\_t*\ string;\ \textcolor{comment}{//Content\ of\ the\ text}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//int16\_t\ x;\ //upper-\/left\ corner\ x\ position}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//int16\_t\ y;\ //upper-\/left\ corner\ x\ position}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ opacity;\ \textcolor{comment}{//0\ no\ opacity,\ 1\ yes\ opacity}}
+\DoxyCodeLine{00046\ \}\ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graphics___circle}{Graphics\_Circle}}\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ int16\_t\ x;\ \textcolor{comment}{//Center\ of\ figure\ x\ position}}
+\DoxyCodeLine{00050\ \ \ \ \ int16\_t\ y;\ \textcolor{comment}{//Center\ of\ figure\ y\ position}}
+\DoxyCodeLine{00051\ \ \ \ \ int16\_t\ radius;\ \textcolor{comment}{//Radius\ of\ figure}}
+\DoxyCodeLine{00052\ \ \ \ \ int32\_t\ color;\ \textcolor{comment}{//Fill\ color\ of\ the\ figure}}
+\DoxyCodeLine{00053\ \}\ \mbox{\hyperlink{struct_graphics___circle}{Graphics\_Circle}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ Button\_State\ state;\ \textcolor{comment}{//Current\ button\ state}}
+\DoxyCodeLine{00057\ \ \ \ \ Graphics\_Rectangle\ rect;\ \textcolor{comment}{//Rectangle\ Struct}}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ text;\ \textcolor{comment}{//A\ positioned\ text\ with\ a\ content\ inside}}
+\DoxyCodeLine{00059\ \}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}};}
+\DoxyCodeLine{00060\ \textcolor{comment}{//Extern\ Variables}}
+\DoxyCodeLine{00061\ \textcolor{keyword}{extern}\ Graphics\_State\ display\_position;}
+\DoxyCodeLine{00062\ \textcolor{keyword}{extern}\ int8\_t\ sizes[ERROR\_GR];}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ GRAPHICS\_H\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+
+\end{DoxyCode}

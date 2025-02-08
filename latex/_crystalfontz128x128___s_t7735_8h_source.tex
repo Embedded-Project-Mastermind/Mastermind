@@ -1,0 +1,118 @@
+\doxysection{Crystalfontz128x128\+\_\+\+ST7735.\+h}
+\hypertarget{_crystalfontz128x128___s_t7735_8h_source}{}\label{_crystalfontz128x128___s_t7735_8h_source}\index{LcdDriver/Crystalfontz128x128\_ST7735.h@{LcdDriver/Crystalfontz128x128\_ST7735.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ -\/-\/COPYRIGHT-\/-\/,BSD}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2015,\ Texas\ Instruments\ Incorporated}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ All\ rights\ reserved.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ are\ met:}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ *\ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ *\ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ distribution.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ *\ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ \ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ \ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ "{}AS\ IS"{}}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ LIMITED\ TO,}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR\ A\ PARTICULAR}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ OWNER\ OR}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ SPECIAL,}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT\ LIMITED\ TO,}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,\ DATA,\ OR\ PROFITS;}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY\ THEORY\ OF\ LIABILITY,}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ (INCLUDING\ NEGLIGENCE\ OR}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ OF\ THIS\ SOFTWARE,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ -\/-\//COPYRIGHT-\/-\/*/}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ Crystalfontz128x128.h\ -\/\ Prototypes\ for\ the\ display\ driver\ for\ the\ Crystalfontz}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 128x128\ display\ with\ ST7735\ controller.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#ifndef\ \_\_CRYSTALFONTZLCD\_H\_\_}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ \_\_CRYSTALFONTZLCD\_H\_\_}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ <ti/devices/msp432p4xx/driverlib/driverlib.h>}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ <ti/grlib/grlib.h>}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ LCD\ Screen\ Dimensions}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ LCD\_VERTICAL\_MAX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 128}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ LCD\_HORIZONTAL\_MAX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 128}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ LCD\_ORIENTATION\_UP\ \ \ \ 0}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ LCD\_ORIENTATION\_LEFT\ \ 1}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ LCD\_ORIENTATION\_DOWN\ \ 2}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ LCD\_ORIENTATION\_RIGHT\ 3}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ ST7735\ LCD\ controller\ Command\ Set}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ CM\_NOP\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ CM\_SWRESET\ \ \ \ \ \ \ \ \ 0x01}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ CM\_RDDID\ \ \ \ \ \ \ \ \ \ \ 0x04}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ CM\_RDDST\ \ \ \ \ \ \ \ \ \ \ 0x09}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ CM\_SLPIN\ \ \ \ \ \ \ \ \ \ \ 0x10}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ CM\_SLPOUT\ \ \ \ \ \ \ \ \ \ 0x11}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ CM\_PTLON\ \ \ \ \ \ \ \ \ \ \ 0x12}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ CM\_NORON\ \ \ \ \ \ \ \ \ \ \ 0x13}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ CM\_INVOFF\ \ \ \ \ \ \ \ \ \ 0x20}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ CM\_INVON\ \ \ \ \ \ \ \ \ \ \ 0x21}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ CM\_GAMSET\ \ \ \ \ \ \ \ \ \ 0x26}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ CM\_DISPOFF\ \ \ \ \ \ \ \ \ 0x28}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ CM\_DISPON\ \ \ \ \ \ \ \ \ \ 0x29}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ CM\_CASET\ \ \ \ \ \ \ \ \ \ \ 0x2A}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ CM\_RASET\ \ \ \ \ \ \ \ \ \ \ 0x2B}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ CM\_RAMWR\ \ \ \ \ \ \ \ \ \ \ 0x2C}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ CM\_RGBSET\ \ \ \ \ \ \ \ \ \ 0x2d}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ CM\_RAMRD\ \ \ \ \ \ \ \ \ \ \ 0x2E}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ CM\_PTLAR\ \ \ \ \ \ \ \ \ \ \ 0x30}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ CM\_MADCTL\ \ \ \ \ \ \ \ \ \ 0x36}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ CM\_COLMOD\ \ \ \ \ \ \ \ \ \ 0x3A}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ CM\_SETPWCTR\ \ \ \ \ \ \ \ 0xB1}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ CM\_SETDISPL\ \ \ \ \ \ \ \ 0xB2}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ CM\_FRMCTR3\ \ \ \ \ \ \ \ \ 0xB3}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ CM\_SETCYC\ \ \ \ \ \ \ \ \ \ 0xB4}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ CM\_SETBGP\ \ \ \ \ \ \ \ \ \ 0xb5}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ CM\_SETVCOM\ \ \ \ \ \ \ \ \ 0xB6}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ CM\_SETSTBA\ \ \ \ \ \ \ \ \ 0xC0}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ CM\_SETID\ \ \ \ \ \ \ \ \ \ \ 0xC3}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ CM\_GETHID\ \ \ \ \ \ \ \ \ \ 0xd0}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ CM\_SETGAMMA\ \ \ \ \ \ \ \ 0xE0}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ CM\_MADCTL\_MY\ \ \ \ \ \ \ 0x80}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ CM\_MADCTL\_MX\ \ \ \ \ \ \ 0x40}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ CM\_MADCTL\_MV\ \ \ \ \ \ \ 0x20}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ CM\_MADCTL\_ML\ \ \ \ \ \ \ 0x10}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ CM\_MADCTL\_BGR\ \ \ \ \ \ 0x08}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ CM\_MADCTL\_MH\ \ \ \ \ \ \ 0x04}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{extern}\ uint8\_t\ Lcd\_Orientation;}
+\DoxyCodeLine{00096\ \textcolor{keyword}{extern}\ uint16\_t\ Lcd\_ScreenWidth,\ Lcd\_ScreenHeigth;}
+\DoxyCodeLine{00097\ \textcolor{keyword}{extern}\ uint8\_t\ Lcd\_PenSolid,\ Lcd\_FontSolid,\ Lcd\_FlagRead;}
+\DoxyCodeLine{00098\ \textcolor{keyword}{extern}\ uint16\_t\ Lcd\_TouchTrim;}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{extern}\ Graphics\_Display\ g\_sCrystalfontz128x128;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ Graphics\_Display\_Functions\ g\_sCrystalfontz128x128\_funcs;}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ Crystalfontz128x128\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ Crystalfontz128x128\_SetDrawFrame(uint16\_t\ x0,\ uint16\_t\ y0,\ uint16\_t\ x1,\ uint16\_t\ y1);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ Crystalfontz128x128\_SetOrientation(uint8\_t\ orientation);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_CRYSTALFONTZLCD\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

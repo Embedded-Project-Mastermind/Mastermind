@@ -1,8 +1,8 @@
 /*
  * Title: chronology.h
- * Primary Authors: NiccolÃ² Cristoforetti
+ * Primary Authors: Niccolò Cristoforetti
  * Helpers: Matteo Gottardelli
- * Maintainability: NiccolÃ² Cristoforetti, Matteo Gottardelli
+ * Maintainability: Niccolò Cristoforetti, Matteo Gottardelli
  * Date Creation: 31 ott 2024
  */
 #include "chronology.h"
@@ -14,15 +14,13 @@
 #include "gamelogic1.h"
 #include "string.h"
 
-/***************************************
-*
-* drawChronology() - function that create
-* buttons and text for the Chronology screen
-* no input
-* no output
-*
-***************************************/
-
+/**
+ * @brief function that create buttons and text for the Chronology screen
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void drawChronology(void) {
     Graphics_Button return_to={STANDARD, {128-16+1, 1, 128-1, 16-1}, {"->", false}};
     int i;
@@ -41,17 +39,13 @@ void drawChronology(void) {
     drawButton(return_to, GRAPHICS_COLOR_CYAN, STANDARD, findSelected(&return_to, 1));
 }
 
-/***************************************
-*
-* fn_CHRONOLOGY() - functions that create
-* the Chronology screen starting from
-* resetting the previous screen
-* no input
-* no output
-*
-***************************************/
-
-
+/**
+ * @brief functions that create the Chronology screen starting from resetting the previous screen
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void fn_CHRONOLOGY(void) {
     int i;
     //DRAW FUNCTION
@@ -70,7 +64,14 @@ void fn_CHRONOLOGY(void) {
 
 }
 
-
+/**
+ * @brief TODO: Describe function.
+ * @param index TODO: Describe parameter.
+ * @return TODO: Describe return value.
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 int16_t char_Conversion_to_Int(int8_t index) {
     int16_t c=0;
     switch (index) {
@@ -86,7 +87,17 @@ int16_t char_Conversion_to_Int(int8_t index) {
     }
     return c; // Return the character representation
 }
-
+/**
+ * @brief TODO: Describe function.
+ * @param offset TODO: Describe parameter.
+ * @param radius TODO: Describe parameter.
+ * @param value TODO: Describe parameter.
+ * @param index TODO: Describe parameter.
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void populateChronologyCircles(int16_t offset, int16_t radius, int16_t value, int16_t index){
     int j;
     for (j=0; j<game.dim; j++) {
@@ -97,7 +108,15 @@ void populateChronologyCircles(int16_t offset, int16_t radius, int16_t value, in
         chronology[value].chrono_circles[j].color=selectColor(tmp);
     }
 }
-
+/**
+ * @brief TODO: Describe function.
+ * @param value TODO: Describe parameter.
+ * @param index TODO: Describe parameter.
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void populateChronologyButtons(int16_t value, int16_t index){
     int i;
     for (i=0; i<game.dim; i++) {
@@ -120,7 +139,14 @@ void populateChronologyButtons(int16_t value, int16_t index){
         }
 }
 
-
+/**
+ * @brief TODO: Describe function.
+ * @param buttons TODO: Describe parameter.
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void drawPastResults(Graphics_Button* buttons){
     int i;
     for (i=0; i<game.dim; i++) {
@@ -132,16 +158,13 @@ void drawPastResults(Graphics_Button* buttons){
 
 }
 
-/***************************************
-*
-* upStick_CHRONOLOGY() / douwnStick_CHRONOLOGY() / rightStick_CHRONOLOGY()
-* they manage what to do when the user
-* moves the stick
-* no input
-* no output
-*
-***************************************/
-
+/**
+ * @brief manage what to do when the user moves the stick up
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void upStick_CHRONOLOGY() {
     if(position!=0) {
         chronology[position].button.state=STANDARD;
@@ -161,6 +184,13 @@ void upStick_CHRONOLOGY() {
         updatePos();
     }
 }
+/**
+ * @brief manage what to do when the user moves the stick down
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void downStick_CHRONOLOGY() {
     if(position<game.count_tent-1) {
         if(position<sizes[CHRONOLOGY]-1) {
@@ -183,20 +213,25 @@ void downStick_CHRONOLOGY() {
         }
     }
 }
+/**
+ * @brief manage what to do when the user moves the stick right
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void rightStick_CHRONOLOGY() {
     display_position--;
     configurationGame=true;
 }
-/***************************************
-*
-* updatePos()
-* they manage what to do when the user
-* moves the stick
-* no input
-* no output
-*
-***************************************/
 
+/**
+ * @brief TODO: Describe function.
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void updatePos(){
         int i, j;
         for (i=0; i<sizes[CHRONOLOGY]; i++){

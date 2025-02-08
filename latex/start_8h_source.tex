@@ -1,0 +1,41 @@
+\doxysection{start.\+h}
+\hypertarget{start_8h_source}{}\label{start_8h_source}\index{general/start.h@{general/start.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ start.c}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Primary\ Authors:\ Niccolò\ Cristoforetti}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Helpers:\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Maintainability:\ Niccolò\ Cristoforetti}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Date\ Creation:\ 10\ ott\ 2024}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ START\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ START\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stdlib.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}implementations.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}graphics.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}bitmap.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ UPPER\_LEFT\_X\ 18}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ UPPER\_LEFT\_Y\ 16}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ start\_button;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ drawStart(\textcolor{keywordtype}{int}\ elems);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ fn\_START\_GR(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00024\ uint16\_t\ encodeColor(uint8\_t\ r,\ uint8\_t\ g,\ uint8\_t\ b);}
+\DoxyCodeLine{00025\ \textcolor{comment}{//void\ drawImage(uint32\_t\ x,\ uint32\_t\ y);}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ Graphics\_Image\ grImage=\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ .bPP=IMAGE\_FMT\_8BPP\_UNCOMP,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ .numColors=256,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ .pPalette=(\textcolor{keyword}{const}\ uint32\_t\ *)palette,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ .pPixel=(\textcolor{keyword}{const}\ uint8\_t\ *)image,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ .xSize=SIZE\_IMAGE\_X,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ .ySize=SIZE\_IMAGE\_Y}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ START\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

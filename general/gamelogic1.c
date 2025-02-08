@@ -10,6 +10,12 @@
 #include "game.h"
 #include "chronology.h"
 int i, j;
+/**
+ * @brief Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in the code
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void emergency() {
     deallocate_Char(game.seq_to_guess); // Deallocate sequence memory
     deallocate_Char(game.chronology); // Deallocate chronology memory
@@ -25,23 +31,48 @@ void emergency() {
         }
     }
 }
-/* Deallocate memory for a character array */
+/**
+ * @brief Deallocate memory for a character array setting then that allocation to null for being sure
+ * @param array Char array reference for a deallocation
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void deallocate_Char(int8_t* array) {
     free(array);    // Free allocated memory
     array = NULL;   // Set pointer to NULL
 }
-
-/* Deallocate memory for an integer array */
+/**
+ * @brief Deallocate memory for an integer array setting then that allocation to null for being sure
+ * @param array Integer array reference for a deallocation
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void deallocate_Int(int16_t* array) {
     free(array);    // Free allocated memory
     array = NULL;   // Set pointer to NULL
 }
-/* Deallocates boolean array memory */
+/**
+ * @brief Deallocate memory for a boolean array setting then that allocation to null for being sure
+ * @param array Boolean array reference for a deallocation
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void deallocate_Bool(bool* array){
     free(array);    // Free allocated memory
     array = NULL;   // Set pointer to NULL
 }
-/* Function to clean a character array */
+/**
+ * @brief Initialization for a character array setting to its default state
+ * @param array Char array reference for a deallocation
+ * @param par1 First dimension of the matrix
+ * @param par2 Second dimension of the matrix
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void makeArrayEmpty_Char(int8_t* array, int16_t par1, int16_t par2) {
     for (i = 0; i < par1; i++) {
         for (j = 0; j < par2; j++) {
@@ -49,7 +80,15 @@ void makeArrayEmpty_Char(int8_t* array, int16_t par1, int16_t par2) {
         }
     }
 }
-/* Function to clean an integer array */
+/**
+ * @brief Initialization for an integer array setting to its default state
+ * @param array Integer array reference for a deallocation
+ * @param par1 First dimension of the matrix
+ * @param par2 Second dimension of the matrix
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void makeArrayEmpty_Int(int16_t* array, int16_t par1, int16_t par2) {
     for (i = 0; i < par1; i++) {
         for (j = 0; j < par2; j++) {
@@ -57,7 +96,16 @@ void makeArrayEmpty_Int(int16_t* array, int16_t par1, int16_t par2) {
         }
     }
 }
-/* Initializes a boolean array to false */
+
+/**
+ * @brief Initialization for a boolean array setting to its default state
+ * @param array Boolean array reference for a deallocation
+ * @param par1 First dimension of the matrix
+ * @param par2 Second dimension of the matrix
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void makeArrayEmpty_Bool(bool* array, int16_t par1, int16_t par2){
     for (i = 0; i < par1; i++) {
         for (j = 0; j < par2; j++) {
@@ -65,8 +113,15 @@ void makeArrayEmpty_Bool(bool* array, int16_t par1, int16_t par2){
         }
     }
 }
-
-/* Memory allocation for a character array */
+/**
+ * @brief Allocation for a character array, ensuring that it is not already allocated
+ * @param array Double Char Reference for allocation Matrix
+ * @param par1 First dimension of the matrix
+ * @param par2 Second dimension of the matrix
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void allocate_in_Heap_Char(int8_t** array, int16_t par1, int16_t par2) {
     if (*array!=NULL) {
         deallocate_Char(*array);
@@ -81,8 +136,15 @@ void allocate_in_Heap_Char(int8_t** array, int16_t par1, int16_t par2) {
             makeArrayEmpty_Char(*array, par1, par2); // Initialize the allocated array
         }
 }
-
-/* Memory allocation for an integer array */
+/**
+ * @brief Allocation for an integer array, ensuring that it is not already allocated
+ * @param array Double Integer Reference for allocation Matrix
+ * @param par1 First dimension of the matrix
+ * @param par2 Second dimension of the matrix
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void allocate_in_Heap_Int(int16_t** array, int16_t par1, int16_t par2) {
     if (*array!=NULL) {
         deallocate_Int(*array);
@@ -97,8 +159,15 @@ void allocate_in_Heap_Int(int16_t** array, int16_t par1, int16_t par2) {
             makeArrayEmpty_Int(*array, par1, par2); // Initialize the allocated array
         }
 }
-
-/*Memory allocation for a boolean array*/
+/**
+ * @brief Allocation for a boolean array, ensuring that it is not already allocated
+ * @param array Double Boolean Reference for allocation Matrix
+ * @param par1 First dimension of the matrix
+ * @param par2 Second dimension of the matrix
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void allocate_in_Heap_Bool(bool** array, int16_t par1, int16_t par2){
     if (array!=NULL) {
         deallocate_Bool(*array);
@@ -114,7 +183,12 @@ void allocate_in_Heap_Bool(bool** array, int16_t par1, int16_t par2){
     }
 }
 
-/* Initialize the game with parameters */
+/**
+ * @brief Initialize the game with parameters selected from the GUI interface from DIMENSION, DIFFICULTY, TENTATIVES, DOUBLES
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void initGame(int16_t dim, int8_t diff, bool doubles, int16_t tents) {
     game.dim = dim;                     // Set the dimension
     game.difficulty = diff;             // Set the difficulty
@@ -130,13 +204,23 @@ void initGame(int16_t dim, int8_t diff, bool doubles, int16_t tents) {
     }
     allocate_in_Heap_Bool(&game.flags, 1, game.dim);  //allocate memory for flags
 }
-
-/* Generate a random integer between min and max */
+/**
+ * @brief Generation of a random integer with two limits
+ * @param min Minimum value of the interval
+ * @param max Maximum value of the interval
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 int random_int(int16_t min, int16_t max) {
     return rand() % (max - min + 1) + min; // Return a random integer within the specified range
 }
-
-/* Generate a key with doubles allowed */
+/**
+ * @brief Generation of a random key that allows the presence of duplicates colors
+ * @return returns the array generated to a reference
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 int16_t* key_generation_wh_doub(void) {
     int16_t* array = NULL;
     allocate_in_Heap_Int(&array, 1, game.dim); // Allocate memory for the key
@@ -145,8 +229,15 @@ int16_t* key_generation_wh_doub(void) {
     }
     return array; // Return the generated key
 }
-
-/* Check if a value is already present in the array */
+/**
+ * @brief Check if the array has already a value that I would like to insert in it
+ * @param array Current array from which we would want to verify the presence
+ * @param value Corresponds to the value we would like to verify the presence of
+ * @param dim Total length of the array, we are currently passing
+ * @return bool - returns the result of this if - TRUE it is already present, FALSE that color is not present in the sequence
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 bool presence_Double(int16_t* array, int16_t value, int16_t dim) {
     if (dim == 1) return false; // If array has only one element, no duplicates possible
     for (i = 0; i < dim - 1; i++) {
@@ -154,8 +245,12 @@ bool presence_Double(int16_t* array, int16_t value, int16_t dim) {
     }
     return false; // Return false if the value is not found
 }
-
-/* Generate a key without allowing doubles */
+/**
+ * @brief Generation of a random key that doesn't allow the presence of duplicates colors
+ * @return returns the array generated to a reference
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 int16_t* key_generation_wout_doub(void) {
     int16_t* array = NULL;
     allocate_in_Heap_Int(&array, 1, game.dim); // Allocate memory for the key
@@ -169,8 +264,13 @@ int16_t* key_generation_wout_doub(void) {
     }
     return array; // Return the generated key
 }
-
-/* Convert an integer index to a character */
+/**
+ * @brief Convertion of a element from the integer format to the char format
+ * @param index Integer format value
+ * @return int8t returned char format value
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 int8_t int_Conversion_to_Char(int16_t index) {
     char c = '\0';
     switch (index) {
@@ -186,15 +286,27 @@ int8_t int_Conversion_to_Char(int16_t index) {
     }
     return c; // Return the character representation
 }
-
-/* Convert an integer array to a character array */
+/**
+ * @brief Convertion of an array from the integer format to the char format
+ * @param arr1 Integer format array
+ * @param arr2 Char format array
+ * @param dim Total dimension of the array
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void crypt_sequence_Int_Char(int16_t* arr1, int8_t* arr2, int16_t dim) {
     for (i = 0; i < dim; i++) {
         arr2[i] = int_Conversion_to_Char(arr1[i]); // Convert each integer to character
     }
 }
-
-/* Continue the key decryption process */
+/**
+ * @brief Analysis and parsing of the integer sequence to the char one, with an appropriate deallocation of the integer one
+ * @param sequence Parsed sequence in integer format
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void continue_Key_Decryption(int16_t* sequence) {
     for (i=0; i<game.dim; i++) {
         printf("%d", sequence[i]);
@@ -207,8 +319,12 @@ void continue_Key_Decryption(int16_t* sequence) {
     printf("\n");
     deallocate_Int(sequence); // Free the sequence memory
 }
-
-/* Reset the user's tentative state */
+/**
+ * @brief After each input sequence is analyzed the tentative is all reinitialized with an incrementation of the tentative count
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @date 2024-09-27
+ */
 void resetTentative(void) {
     deallocate_Char(tentative.seq_user);
     deallocate_Char(tentative.sol_user);

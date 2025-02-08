@@ -1,0 +1,44 @@
+\doxysection{gamelogic3.\+h}
+\hypertarget{src_2gamelogic3_8h_source}{}\label{src_2gamelogic3_8h_source}\index{src/gamelogic3.h@{src/gamelogic3.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ gamelogic3.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ Mastermind}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Created\ by\ Niccolò\ Cristoforetti\ on\ 29/09/24.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ GAMELOGIC3\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ GAMELOGIC3\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stdlib.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}time.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}stdbool.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}fsm.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}gamelogic1.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//Function\ declarations}}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ fn\_ELABORATE\_TENT(\textcolor{keywordtype}{void});\ \ \textcolor{comment}{//Function\ for\ ELABORATE\_TENT\ state}}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ fn\_INCREMENT\_TENT(\textcolor{keywordtype}{void});\ \ \textcolor{comment}{//Function\ for\ INCREMENT\_TENT\ state}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ fn\_GAME\_OVER(\textcolor{keywordtype}{void});\ \ \textcolor{comment}{//Function\ for\ GAME\_OVER\ state}}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ fn\_EASY\_MODE(\textcolor{keywordtype}{void});\ \ \textcolor{comment}{//Function\ for\ EASY\_MODE\ state}}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ fn\_MEDIUM\_MODE(\textcolor{keywordtype}{void});\ \textcolor{comment}{//Function\ for\ MEDIUM\_MODE\ state}}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ fn\_DIFFICULT\_MODE(\textcolor{keywordtype}{void});\ \ \textcolor{comment}{//Function\ for\ DIFFICULT\_MODE\ state}}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ fn\_ELABORATE\_RESULT(\textcolor{keywordtype}{void});\ \textcolor{comment}{//Function\ for\ ELABORATE\_RESULT\ state}}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ fn\_WIN(\textcolor{keywordtype}{void});\ \ \textcolor{comment}{//Function\ for\ WIN\ state}}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ checkIfTenctOrCorrection(\textcolor{keywordtype}{char}\ c);\ \textcolor{comment}{//Function\ that\ checks\ if\ the\ sequence\ is\ a\ tenctative\ or\ a\ correction.\ Returns\ a\ int\ for\ set\ the\ right\ index\ in\ the\ chronology}}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ insertInChronology(\textcolor{keywordtype}{char}*\ seq);\ \textcolor{comment}{//Function\ that\ inserts\ sequence\ or\ sequence\ correction\ in\ chronology}}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ incrementTent(\textcolor{keywordtype}{void});\ \textcolor{comment}{//Function\ that\ increases\ the\ number\ of\ tenctative}}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{bool}\ checkIfGameOver(\textcolor{keywordtype}{void});\ \ \textcolor{comment}{//Function\ that\ checks\ if\ the\ maximum\ number\ of\ attempts\ has\ been\ reached}}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{char}\ check\_difficulty(\textcolor{keywordtype}{void});\ \ \textcolor{comment}{//Function\ that\ checks\ the\ difficulty\ degree}}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ correctionsEasyMode(\textcolor{keywordtype}{void});\ \textcolor{comment}{//Function\ that\ transforms\ the\ seq\_user\ into\ corrections\ in\ EASY\_MODE}}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ correctionsMediumMode(\textcolor{keywordtype}{void});\ \textcolor{comment}{//Function\ that\ transforms\ the\ seq\_user\ into\ corrections\ in\ MEDIUM\_MODE}}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ correctionsDifficultMode(\textcolor{keywordtype}{void});\ \textcolor{comment}{//Function\ that\ transforms\ the\ seq\_user\ into\ corrections\ in\ DIFFICULT\_MODE}}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ printLastTentativeInChronology(\textcolor{keywordtype}{void});\ \ \textcolor{comment}{//Function\ that\ prints\ the\ last\ sequence\ the\ last\ sequence\ inserted\ in\ the\ chronology\ with\ the\ respective\ corrections}}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{bool}\ winCondition(\textcolor{keywordtype}{void});\ \textcolor{comment}{//Function\ that\ checks\ if\ the\ next\ state\ is\ WIN\ or\ not}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

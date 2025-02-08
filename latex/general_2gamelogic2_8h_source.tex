@@ -1,0 +1,46 @@
+\doxysection{gamelogic2.\+h}
+\hypertarget{general_2gamelogic2_8h_source}{}\label{general_2gamelogic2_8h_source}\index{general/gamelogic2.h@{general/gamelogic2.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ gamelogic2.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Primary\ Authors:\ Alessandro\ Benassi,\ Daniele\ Calvo}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Helpers:\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Maintainability:\ Alessandro\ Benassi}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Date\ Creation:\ 27\ set\ 2024}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ GAMELOGIC2\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ GAMELOGIC2\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stdlib.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}time.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}stdbool.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}fsm.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}gamelogic1.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}game.h"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ OPTIONS\ 3\ \ }\textcolor{comment}{//number\ of\ button\ options:\ 1=input,\ 2=confirm,\ 3=back}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ Function\ declarations\ */}}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ fn\_WAIT(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Function\ for\ WAIT\ state}}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ fn\_ELABORATE(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Function\ for\ ELABORATE\ state}}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ fn\_INSERT\_COLOR(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Function\ for\ INSERT\_COLOR\ state}}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ fn\_WAIT\_FULL(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Function\ for\ WAIT\_FULL\ state}}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ fn\_ELIMINATE\_COLOR(\textcolor{keywordtype}{void});\ \ \ \ \ \ \textcolor{comment}{//Function\ for\ ELIMINATE\_COLOR\ state}}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{bool}\ is\_empty(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ checks\ if\ the\ array\ seq\_user\ \ is\ empty}}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{bool}\ is\_full(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ checks\ if\ the\ array\ seq\_user\ \ is\ full}}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ text\_selection(\textcolor{keywordtype}{bool}\ sel);\ \ \ \ \ \ \textcolor{comment}{//selects\ the\ test\ to\ display}}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ full\_text(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//displays\ the\ text\ if\ the\ arrya\ is\ full}}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ read\_input(int16\_t\ dim);\ \ \ \ \ \ \ \ \textcolor{comment}{//reads\ input\ value\ from\ keyboard\ and\ verifies\ if\ correct}}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ handle\_wait(int16\_t\ value);\ \ \ \ \ \ \textcolor{comment}{//menu\ selection(buttons\ or\ colors)}}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ print\_sequence(int8\_t*\ seq,\ int16\_t\ dim);\ \ \textcolor{comment}{//to\ print\ the\ sequence}}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ wait\_handle(\textcolor{keywordtype}{void});\ \ \ \textcolor{comment}{//Function\ that\ waits\ for\ an\ input\ from\ the\ buttons(interrupt)}}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ wait\_full(\textcolor{keywordtype}{void});\ \ \ \ \ \textcolor{comment}{//Function\ to\ wait\ if\ the\ array\ is\ full\ }}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ insert\_color();\ \ \ \textcolor{comment}{//Function\ to\ insert\ color\ in\ the\ array\ seq\_user}}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ eliminate\_color(\textcolor{keywordtype}{void});\ \ \ \textcolor{comment}{//Function\ to\ eliminate\ color\ from\ the\ array\ seq\_user}}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{bool}\ elaborate(\textcolor{keywordtype}{void});\ \ \ \textcolor{comment}{//Function\ to\ verify\ if\ the\ input\ is\ valid\ (work\ in\ progress)}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

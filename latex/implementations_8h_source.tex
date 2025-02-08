@@ -1,0 +1,55 @@
+\doxysection{implementations.\+h}
+\hypertarget{implementations_8h_source}{}\label{implementations_8h_source}\index{general/implementations.h@{general/implementations.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ implementations.c}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Primary\ Authors:\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Helpers:\ Niccolò\ Cristoforetti}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Maintainability:\ Matteo\ Gottardelli}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Date\ Creation:\ 5\ ott\ 2024}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ IMPLEMENTATIONS\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ IMPLEMENTATIONS\_H\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}stdlib.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}graphics.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ BORDER\ 2}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ graphics\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ hardware\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ reset\_Screen(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00020\ \textcolor{comment}{//FOLLOWING\ DEFINE\ THE\ GRAPHIC\ FUNCTIONS\ USED\ IN\ C\ FILE}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{extern}\ Graphics\_Rectangle\ upperRect;}
+\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ prevButton;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ nextButton;}
+\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ Graphics\_Rectangle\ upperRectCH;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ labelText;}
+\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ uint8\_t\ position;}
+\DoxyCodeLine{00027\ \textcolor{comment}{//FIND\ POSITION\ RECT}}
+\DoxyCodeLine{00028\ int32\_t\ getCenteredX(Graphics\_Rectangle\ rect);}
+\DoxyCodeLine{00029\ int32\_t\ getCenteredY(Graphics\_Rectangle\ rect);}
+\DoxyCodeLine{00030\ \textcolor{comment}{//COLOR\ CHOICE\ FUNCTIONS}}
+\DoxyCodeLine{00031\ int32\_t\ chooseColorRect(Button\_State\ state,\ int32\_t\ color);}
+\DoxyCodeLine{00032\ int32\_t\ chooseColorText(Button\_State\ state,\ int32\_t\ color);}
+\DoxyCodeLine{00033\ \textcolor{comment}{//FUNCTIONS\ STATUS}}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ handleOut(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[],\ uint8\_t\ position,\ int8\_t\ size);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ handleIn(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[],\ uint8\_t\ position,\ int8\_t\ size);}
+\DoxyCodeLine{00036\ \textcolor{comment}{//FUNCTIONS\ DRAW}}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ rectangleWithText(Graphics\_Rectangle\ rect,\ int32\_t\ colorRect,\ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ text,\ int32\_t\ colorText);}
+\DoxyCodeLine{00038\ int8\_t\ findSelected(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[],\ int8\_t\ size);}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ drawButton(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ button,\ int32\_t\ rect\_color,\ int32\_t\ text\_color,\ int8\_t\ pos\_selected);}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ focusedHandle(Button\_State\ state,\ Graphics\_Rectangle\ rect,\ int32\_t\ color);}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ handleSelection(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[]);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ handleDeselection(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[]);}
+\DoxyCodeLine{00043\ \textcolor{comment}{//buttons\ back\ and\ next\ handler}}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ handle\_buttons(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[]);}
+\DoxyCodeLine{00045\ \textcolor{comment}{//FUNCTION\ INIT}}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ initArray(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ array[],\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00047\ \textcolor{comment}{//FUNCTIONS\ FOR\ STATES}}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ fn\_END(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ IMPLEMENTATIONS\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
