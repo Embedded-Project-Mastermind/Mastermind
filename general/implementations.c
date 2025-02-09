@@ -117,10 +117,7 @@ int32_t chooseColorText(Button_State state, int32_t color) {
     return c;
 }
 /**
-
-da capire e sistemare
-
- * @brief handles drawing of focused buttons
+ * @brief visually updates a button when it is focused
  * @param the state of the button
  * @param the button
  * @param the button's color
