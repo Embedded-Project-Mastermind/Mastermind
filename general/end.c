@@ -2,7 +2,7 @@
  * Title: end.c
  * Primary Authors: Niccolò Cristoforetti
  * Helpers: -
- * Maintainability: Niccolò Cristoforetti
+ * Maintainability: Daniele Calvo
  * Date Creation: 7 nov 2024
  */
 #include "end.h"
@@ -10,13 +10,13 @@
 #include "graphics.h"
 
 /**
- * @brief TODO: Describe function.
- * @param elems TODO: Describe parameter.
+ * @brief draws the end screen, displaying either a win or game over message.
  * @return void
- * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Niccolò Cristoforetti (Primary author)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-11-07
  */
-void drawEnd(int elems) {
+void drawEnd() {
     if(current_state==WIN){
         drawButton(win_button, STANDARD_COLOR, SELECTED_COLOR, -1);
     } else {
@@ -39,9 +39,10 @@ void drawEnd(int elems) {
 }
 
 /**
- * @brief TODO: Describe function.
+ * @brief initializes and displays the end screen
  * @return void
- * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Niccolò Cristoforetti (Primary author)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-11-07
  */
 void fn_END(void) {
@@ -49,6 +50,6 @@ void fn_END(void) {
     Graphics_setBackgroundColor(&grContext, STANDARD_COLOR);
     Graphics_clearDisplay(&grContext);
     //DRAW FUNCTION
-    drawEnd(sizes[START_GR]);
+    drawEnd();
     //FOLLOWING POSITION
 }

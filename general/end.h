@@ -20,7 +20,24 @@
 extern Graphics_Button gameover_button;
 extern Graphics_Button win_button;
 
-void drawEnd(int elems);
+/**
+ * @brief draws the end screen, displaying either a win or game over message.
+ * @return void
+ * @author Niccolò Cristoforetti (Primary author)
+ * @author Daniele Calvo (Maintainer)
+ * @date 2024-11-07
+ */
+void drawEnd();
+/**
+ * @brief initializes and displays the end screen
+ * @return void
+ * @author Niccolò Cristoforetti (Primary author)
+ * @author Daniele Calvo (Maintainer)
+ * @date 2024-11-07
+ */
 void fn_END(void);
+
+//From start.h
 uint16_t encodeColor(uint8_t r, uint8_t g, uint8_t b);
-#endif /* START_H_ */
+
+#endif /* END_H_ */

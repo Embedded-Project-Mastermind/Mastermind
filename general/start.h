@@ -19,17 +19,45 @@
 
 extern Graphics_Button start_button;
 
-void drawStart(int elems);
+/**
+ * @brief draws the start screen, including the start button and an image
+ * @param
+ * @return void
+ * @author Niccolò Cristoforetti (Primary author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Daniele Calvo (Maintainer)
+ * @date 2024-10-10
+ */
+void drawStart();
+/**
+ * @brief initializes and displays the start screen
+ * @return void
+ * @author Niccolò Cristoforetti (Primary author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Daniele Calvo (Maintainer)
+ * @date 2024-10-10
+ */
 void fn_START_GR(void);
+/**
+ * @brief encodes an RGB color into a 16-bit format suitable for the display
+ * @param red presence in the pixel
+ * @param green presence in the pixel
+ * @param blue presence in the pixel
+ * @return single 16-bit color code for the display
+ * @author Niccolò Cristoforetti (Primary author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Daniele Calvo (Maintainer)
+ * @date 2024-10-10
+ */
 uint16_t encodeColor(uint8_t r, uint8_t g, uint8_t b);
 //void drawImage(uint32_t x, uint32_t y);
-static const Graphics_Image grImage={
-      .bPP=IMAGE_FMT_8BPP_UNCOMP,
-      .numColors=256,
-      .pPalette=(const uint32_t *)palette,
-      .pPixel=(const uint8_t *)image,
-      .xSize=SIZE_IMAGE_X,
-      .ySize=SIZE_IMAGE_Y
+static const Graphics_Image grImage={            //Logo of our game, called both in start.c and end.c
+      .bPP=IMAGE_FMT_8BPP_UNCOMP,                //Image format
+      .numColors=256,                            //Image palette
+      .pPalette=(const uint32_t *)palette,       //Pointer to the color palette
+      .pPixel=(const uint8_t *)image,            //Pointer to the pixel data of the image
+      .xSize=SIZE_IMAGE_X,                       //Image's x size
+      .ySize=SIZE_IMAGE_Y                        //Image's y size
 
 };
 #endif /* START_H_ */
