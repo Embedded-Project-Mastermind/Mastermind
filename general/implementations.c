@@ -319,8 +319,8 @@ void handle_buttons(Graphics_Button array[]){
     }
 }
 /**
- * @brief initializes the display and drivers
- * @param
+ * @brief selects the currently focused button
+ * @param buttons' array
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
@@ -337,8 +337,8 @@ void handleSelection(Graphics_Button array[]) {
     array[position].state=FOCUSED;
 }
 /**
- * @brief initializes the display and drivers
- * @param
+ * @brief Resets all buttons to "STANDARD"
+ * @param buttons' array
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
