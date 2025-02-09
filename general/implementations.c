@@ -145,7 +145,7 @@ void focusedhandle(Button_State state, Graphics_Rectangle rect, int32_t color) {
 }
 /**
  * @brief finds the selected button in all the buttons of an interface
- * @param the button's array
+ * @param the buttons' array
  * @param the size of the array
  * @return the position of the button in the "selected" state (if no button is selected, -1)
  * @author Matteo Gottardelli (Primary author)
@@ -189,10 +189,10 @@ void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color, 
 }
 /**
  * @brief it draws a rectangle with a text centered in it
- * @param
- * @param
- * @param
- * @param
+ * @param the rectangle
+ * @param the rectangle's color
+ * @param the text
+ * @param the text's color
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
@@ -209,10 +209,10 @@ void rectangleWithText(Graphics_Rectangle rect, int32_t colorRect, Graphics_Text
     Graphics_drawStringCentered(&grContext, (int8_t *)text.string, AUTO_STRING_LENGTH, getCenteredX(rect),  getCenteredY(rect), text.opacity);
 }
 /**
- * @brief initializes the display and drivers
- * @param
- * @param
- * @param
+ * @brief it handles the status change of old focused button
+ * @param the buttons' array
+ * @param the position of the old focused button
+ * @param the size opf the array
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
@@ -248,10 +248,10 @@ void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
     }
 }
 /**
- * @brief initializes the display and drivers
- * @param
- * @param
- * @param
+ * @brief it handles the status change of new focused button
+ * @param the buttons' array
+ * @param the position of the new focused button
+ * @param the size opf the array
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
@@ -268,7 +268,7 @@ void handleIn(Graphics_Button array[], uint8_t position, int8_t size) {
     }
 }
 /**
- * @brief initializes the display and drivers
+ * @brief initializa all the hardware, including ports and interrupts
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
@@ -283,8 +283,8 @@ void hardware_Init() {
     _adcInit();
 }
 /**
- * @brief initializes the display and drivers
- * @param
+ * @brief handles the prev and next buttons
+ * @param the buttons' array of the current interface
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
@@ -354,9 +354,9 @@ void handleDeselection(Graphics_Button array[]) {
     array[position].state=DISABLED;
 }
 /**
- * @brief initializes the display and drivers
- * @param
- * @param
+ * @brief it finalizes out buttons' array putting in it the prev and next button and modifing the states
+ * @param the buttons' array of the current interface
+ * @param the size of the array
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
@@ -378,7 +378,7 @@ void initArray(Graphics_Button array[], int size) {
     }
 }
 /**
- * @brief initializes the display and drivers
+ * @brief it activates the mutex
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
@@ -394,7 +394,7 @@ void acquireMutex() {
     __enable_irq();
 }
 /**
- * @brief initializes the display and drivers
+ * @brief it releases the mutex
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
