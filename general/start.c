@@ -57,7 +57,6 @@ uint16_t encodeColor(uint8_t r, uint8_t g, uint8_t b) {
     // Combine the values into a single uint16_t
     return (uint16_t)( (g << 10) | (r << 5) | b );
 }
-
 /**
  * @brief initializes and displays the start screen
  * @return void
