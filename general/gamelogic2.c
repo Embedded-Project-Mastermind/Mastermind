@@ -2,7 +2,7 @@
  * Title: gamelogic2.c
  * Primary Authors: Alessandro Benassi, Daniele Calvo
  * Helpers: Matteo Gottardelli
- * Maintainability: Alessandro Benassi
+ * Maintainability: Alessandro Benassi, Daniele Calvo
  * Date Creation: 27 set 2024
  */
 #include "gamelogic2.h"
@@ -14,10 +14,10 @@ bool selection;
 
 /**
  * @brief returns if the user’s sequence is empty or not
- * @return bool
+ * @return boolean
  * @author Alessandro Benassi & Daniele Calvo (Primary Author)
  * @author Matteo Gottardelli (Helper)
- * @author Alessandro Benassi (Maintainer Member)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
  * @date 2024-09-27
  */
 bool is_empty(void){ 
@@ -26,16 +26,25 @@ bool is_empty(void){
 
 /**
  * @brief returns if the user’s sequence is full or not
- * @return bool
+ * @return boolean
  * @author Alessandro Benassi & Daniele Calvo (Primary Author)
  * @author Matteo Gottardelli (Helper)
- * @author Alessandro Benassi (Maintainer Member)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
  * @date 2024-09-27
  */
 bool is_full(void){
      return (tentative.count  == tentative.dim);
 }
 
+/**
+ * @brief (Outdated) it was the main menu for the logic test on console
+ * @param a boolean to switch from two distinct menu
+ * @return void
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
+ * @date 2024-09-27
+ */
 void text_selection(bool sel){     //selects which text to display
     if(sel){             //if true -> button menu
     printf("Selection menu: \n- Type 1 to insert an input \n- Type 2 to press confirm\n- Type 3 to press back \nSelection: ");
@@ -45,6 +54,14 @@ void text_selection(bool sel){     //selects which text to display
     }
 }
 
+/**
+ * @brief (Outdated) print to indicate the full state of the array on console
+ * @return void
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
+ * @date 2024-09-27
+ */
 void full_text(){
      printf("The array is full, click 2 to confirm and 3 to go back.\nSelection: ");    
 }
@@ -66,6 +83,16 @@ int read_input(int16_t dim){     //reads the input from keyboard and verifies if
     return value;
 }*/
 
+/**
+ * @brief (Outdated) print on console of the user's sequence
+ * @param a pointer to the sequence
+ * @param the dimension of the array for the user's sequence
+ * @return void
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
+ * @date 2024-09-27
+ */
 void print_sequence(int8_t* seq, int16_t dim){
      for(i=0; i<dim; i++){
              printf("%c ", seq[i]);
@@ -96,12 +123,13 @@ void wait_full(void) {  //wait function when the array is full
 //not useful    value = read_input(OPTIONS);   //gets the value from the keyboard
 }*/
 
+
 /**
  * @brief inserts the selected color into the user's sequence if space is available
  * @return void
  * @author Alessandro Benassi & Daniele Calvo (Primary Author)
  * @author Matteo Gottardelli (Helper)
- * @author Alessandro Benassi (Maintainer Member)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
  * @date 2024-09-27
  */
 void insert_color(){
@@ -121,7 +149,7 @@ void insert_color(){
  * @return void
  * @author Alessandro Benassi & Daniele Calvo (Primary Author)
  * @author Matteo Gottardelli (Helper)
- * @author Alessandro Benassi (Maintainer Member)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
  * @date 2024-09-27
  */
 void eliminate_color(void){
@@ -144,17 +172,39 @@ bool elaborate(void){
 }
 */
 
+/**
+ * @brief state while he's waiting an input
+ * @return void
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
+ * @date 2024-09-27
+ */
 void fn_WAIT(void) {
 //  wait_handle();  //actions of wait state
 //  handle_wait(value);     //calls handle_wait(), which handles the input and redirects to the correct state
 }
-
+/**
+ * @brief state for when he received an input (now useless)
+ * @return void
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
+ * @date 2024-09-27
+ */
 void fn_ELABORATE(void){ //da rimuovere
 /*  if(elaborate()){ current_state = INSERT_COLOR; }
     else { current_state = WAIT; }*/
     //current_state = (elaborate()) ? INSERT_COLOR : WAIT;  //if the input is correct it changes state to insert the color, otherwise returns to wait
 }
-
+/**
+ * @brief state for inserting the color choosen by the user in its sequence
+ * @return void
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
+ * @date 2024-09-27
+ */
 void fn_INSERT_COLOR(void){
     insert_color();  // calls insert_color(char color) function
  //verifies if the array is full or not and based on that decides in which state to jump
@@ -162,13 +212,26 @@ void fn_INSERT_COLOR(void){
 /*  if(is_full()){ current_state= WAIT_FULL;}
     else { current_state= WAIT; }*/
 }
-
+/**
+ * @brief state while he's waiting an input with the user's sequence full
+ * @return void
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
+ * @date 2024-09-27
+ */
 void fn_WAIT_FULL(void) {
 //  wait_full(); //actions of wait_full state
 //  handle_wait(value);     //calls handle_wait(), which handles the input and redirects to the correct state
-
 }
-
+/**
+ * @brief state for deleting the last color of the user's sequence
+ * @return void
+ * @author Alessandro Benassi & Daniele Calvo (Primary Author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Alessandro Benassi & Daniele Calvo (Maintainer)
+ * @date 2024-09-27
+ */
 void fn_ELIMINATE_COLOR(void){
     eliminate_color();   //calls function eliminate_color
     current_state= WAIT;  //changes the current_state to WAIT
