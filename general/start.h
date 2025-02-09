@@ -51,13 +51,13 @@ void fn_START_GR(void);
  */
 uint16_t encodeColor(uint8_t r, uint8_t g, uint8_t b);
 //void drawImage(uint32_t x, uint32_t y);
-static const Graphics_Image grImage={
-      .bPP=IMAGE_FMT_8BPP_UNCOMP,
-      .numColors=256,
-      .pPalette=(const uint32_t *)palette,
-      .pPixel=(const uint8_t *)image,
-      .xSize=SIZE_IMAGE_X,
-      .ySize=SIZE_IMAGE_Y
+static const Graphics_Image grImage={            //Logo of our game, called both in start.c and end.c
+      .bPP=IMAGE_FMT_8BPP_UNCOMP,                //Image format
+      .numColors=256,                            //Image palette
+      .pPalette=(const uint32_t *)palette,       //Pointer to the color palette
+      .pPixel=(const uint8_t *)image,            //Pointer to the pixel data of the image
+      .xSize=SIZE_IMAGE_X,                       //Image's x size
+      .ySize=SIZE_IMAGE_Y                        //Image's y size
 
 };
 #endif /* START_H_ */
