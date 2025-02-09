@@ -214,7 +214,7 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>chronology.c</th>
     <th>Cristoforetti Niccolò</th>
     <th>Gottardelli Matteo</th>
-    <th>Cristoforetti Niccolò & Gottardelli Matteo</th>
+    <th>Cristoforetti Niccolò</th>
     <th>🟡</th>
     <th>🔴</th>
   </tr>
