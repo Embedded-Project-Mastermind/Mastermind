@@ -23,9 +23,9 @@
 
 # Introduction
 - Present the purpose of the project and its main functionalities<br>
-The purpose of the project is to develop a simple version of th egame Mastermind(...) where the user can choose some settings for the game, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the precence of doubles. Then the game starts and the purpose is to guess the sequence within the number of tries previously chosen. At every sequence inserted the system tells wheter the color is in the right position(O???), is in the sequence but in the wrong position(!???), and if it isn't present at all X???. 
+The purpose of the project is to develop a simple version of th egame Mastermind. It is a simple and funny game where the user has to guess a sequence of colors within a certain number of attempts. Some settings for the game can be chosen, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the precence of doubles. Then the game starts and at every sequence inserted, the system tells wheter the color is in the right position(O???), is in the sequence but in the wrong position(!???), and if it isn't present at all X???. The clues given are also based on the difficulty levels, which are three...
 - Describe shortly how the MSP432 is used<br><br>
-The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit
+The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit. Disegno del circuito e controllare la resistenza.........
 
 [Back to top](#table-of-contents)
 
@@ -111,7 +111,7 @@ Suggested connection - Considering that the connections are done in order to avo
 
 ## Software Requirements
 • Code Composer Studio (Link)
-
+Code Composer Studio (CCS) is an integrated development environment (IDE) designed for embedded systems, particularly for programming and debugging microcontrollers and processors. Developed by Texas Instruments, CCS supports a wide range of TI’s hardware, offering tools for writing, compiling, and testing code.
 - Really brief description of what this is<br><br>
 
 [Back to top](#table-of-contents)
