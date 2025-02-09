@@ -18,7 +18,7 @@
  * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
-void drawStart(int elems) {
+void drawStart() {
      drawButton(start_button, STANDARD_COLOR, SELECTED_COLOR, -1);
      //Graphics_drawImage(&grContext, &grImage, UPPER_LEFT_X, UPPER_LEFT_Y);
      uint16_t x, y;
@@ -70,6 +70,6 @@ void fn_START_GR(void) {
     Graphics_setBackgroundColor(&grContext, STANDARD_COLOR);
     Graphics_clearDisplay(&grContext);
     //DRAW FUNCTION
-    drawStart(sizes[START_GR]);
+    drawStart();
     //FOLLOWING POSITION
 }
