@@ -14,14 +14,27 @@
 bool array[DIMIO];
 uint8_t overflow_counter=0;
 
-// Function implementations
+/**
+ * @brief Function to reset the global bool array, simulating the activation of the ports
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 void resetArrayInput(void) {
     int i;
     for (i = 0; i < DIMIO; i++) {
         array[i] = false;
     }
 }
-
+/**
+ * @brief Set array values based on the value inputed
+ * @param val In case the value belongd to the interval 0 DIMIO, then it will be set to true, like an activation, instead it will mean that the try is over and it is reseted
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 void setArrayInput(int val) {
     if (val < 0 || val >= DIMIO) {
         resetArrayInput();
@@ -29,7 +42,13 @@ void setArrayInput(int val) {
         array[val] = true;
     }
 }
-
+/**
+ * @brief Setup the various ports from 1 to 6 in order, but not all the pins, because they have already active sensors connected to them, limitating the choice
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 void configurePortsInput(void) {
     //P4.4 ADC, P6.0 ADC, P5.0
     int port;
@@ -70,7 +89,13 @@ void configurePortsInput(void) {
     //GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P2, GPIO_PIN6); BUZZER
     //GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P2, GPIO_PIN7);
 }
-
+/**
+ * @brief Setup the interrupt enabling only for some ports in order to make not append some undesired behavior
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 void configureInterruptPortInput(void) {
     P1->IES = 0xFF;
     P1->IE = 0xFF;
@@ -98,12 +123,24 @@ void configureInterruptPortInput(void) {
     P6->IFG = 0x00;
     NVIC->ISER[1] |= 1 << (PORT6_IRQn & 31);
 }
-
+/**
+ * @brief A via for creating a dummy trigger on P1.1, in order to reactivate an undesired stop of the system
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 void triggerPinInterrupt() {
     P1->IFG |= BIT1;
     __NVIC_SetPendingIRQ(PORT1_IRQn);
 }
-
+/**
+ * @brief Verify how many inputs in a period of time were performed in the array generated
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 int counterTrue(void) {
     int i, counter = 0;
     for (i = 0; i < DIMIO; i++) {
@@ -113,7 +150,13 @@ int counterTrue(void) {
     }
     return counter;
 }
-
+/**
+ * @brief Verify the true input in a period of time, in order to see a clear output
+ * @return int returning the array position that has a true value
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 int findTrue(void) {
     int i;
     for (i = 0; i < DIMIO; i++) {
@@ -123,7 +166,13 @@ int findTrue(void) {
     }
     return -1;
 }
-
+/**
+ * @brief Determine which is the output action after pressing a button, it can be trigger a color or give a particular behavior if it is the back one or the confirm one
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 void elaborateOutput(void) {
     if (counterTrue() == 1) {
         switch (findTrue()) {
@@ -179,6 +228,14 @@ void elaborateOutput(void) {
         }
     }
 }
+/**
+ * @brief Verify on a specific port IFG which is the bit activated
+ * @param status The IFG port status, that symbolizes the status of the pins on a port
+ * @return returns a uint8 corresponding to the actual bit position searched in the status
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 uint8_t bitofstatus(uint8_t status) {
     int bit_pos=-1;
     int i;
@@ -191,6 +248,15 @@ uint8_t bitofstatus(uint8_t status) {
     return bit_pos;
     //exit(1);
 }
+/**
+ * @brief Sets the position of the array according to an input pin on a port
+ * @param status The IFG port status, that symbolizes the status of the pins on a port
+ * @param port The port, that could not correspond to the reality, but to a convension with the define in .h file
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 void switching(uint8_t status, int8_t port){
     switch(bitofstatus(status)){
         case 0: setArrayInput(port*BYTE); break;
@@ -204,6 +270,13 @@ void switching(uint8_t status, int8_t port){
         //default: exit(1);
     }
 }
+/**
+ * @brief Setup the timer TIMER A0 in order to be continuous tracking and usable to get some frames of time
+ * @return void
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 void configureTimersInput(void) {
     TIMER_A0->CTL = TIMER_A_CTL_SSEL__SMCLK;
     TIMER_A0->CTL |= TIMER_A_CTL_MC__CONTINUOUS;
@@ -211,7 +284,13 @@ void configureTimersInput(void) {
     TIMER_A0->CTL |= TIMER_A_CTL_IE;
     NVIC->ISER[0] = 1 << ((TA0_N_IRQn) & 31);
 }
-
+/**
+ * @brief Verify that there is only one true input in a period of time, in order to see a clear output
+ * @return bool returning the result TRUE if there was only one input and FALSE if not
+ * @author Matteo Gottardelli (Primary Author & Maintainer)
+ * @author Alessandro Benassi (Helper)
+ * @date 2024-10-05
+ */
 bool atLeastOneTrue(void) {
     int i;
     for (i = 0; i < DIMIO; i++) {
