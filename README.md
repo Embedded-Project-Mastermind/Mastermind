@@ -323,7 +323,7 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>!</th>
     <th>NONE</th>
   </tr>
-  <tr>
+  $${\color{red}Red}$$<tr>
     <th>start.c</th>
     <th>Cristoforetti Niccolò</th>
     <th>Gottardelli Matteo</th>
