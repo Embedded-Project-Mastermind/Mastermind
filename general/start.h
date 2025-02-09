@@ -28,7 +28,7 @@ extern Graphics_Button start_button;
  * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
-void drawStart(int elems);
+void drawStart();
 /**
  * @brief initializes and displays the start screen
  * @return void
