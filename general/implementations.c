@@ -120,7 +120,10 @@ int32_t chooseColorText(Button_State state, int32_t color) {
 
 da capire e sistemare
 
- * @brief initializes the display and drivers
+ * @brief handles drawing of focused buttons
+ * @param the state of the button
+ * @param the button
+ * @param the button's color
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
