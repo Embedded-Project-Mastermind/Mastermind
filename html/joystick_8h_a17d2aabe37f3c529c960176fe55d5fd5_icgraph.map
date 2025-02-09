@@ -1,0 +1,16 @@
+<map id="delay_ms" name="delay_ms">
+<area shape="rect" id="Node000001" title=" " alt="" coords="787,33,864,58"/>
+<area shape="rect" id="Node000002" href="$general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="5,31,146,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="772,30,738,23,656,14,573,10,407,12,260,23,146,36,146,31,259,17,407,6,573,4,657,9,739,18,773,25"/>
+<area shape="rect" id="Node000003" href="$game_8c.html#ad2c393fb906ee594fa13863ad5aed0ae" title="Effective function that refresh the status of GAME Section, when an update happen." alt="" coords="573,33,739,58"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="771,48,739,48,739,43,771,43"/>
+<area shape="rect" id="Node000005" href="$game_8c.html#afe0d26e602acbce56a513dd0d2b02999" title="Action that the menu performs when the stick goes left, primarly changing selection and imposing logi..." alt="" coords="598,82,714,108"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="772,64,739,73,704,84,702,79,738,68,771,59"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic3_8c.html#a4965965e6c1b73519655decb209180b1" title=" " alt="" coords="347,33,525,58"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="558,48,526,48,526,43,558,43"/>
+<area shape="rect" id="Node000006" href="$joystick_8c.html#a52c88d60c03461488d6285f39e252627" title=" " alt="" coords="390,82,482,108"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="583,98,483,98,483,92,583,92"/>
+<area shape="rect" id="Node000007" href="$joystick_8c.html#adde06bcb4c1eb7d1c081dacc7ac2152c" title=" " alt="" coords="194,57,299,82"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="374,89,299,79,300,74,375,84"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="178,62,146,57,147,52,179,57"/>
+</map>

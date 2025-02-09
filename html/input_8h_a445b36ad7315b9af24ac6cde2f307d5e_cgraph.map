@@ -1,0 +1,44 @@
+<map id="elaborateOutput" name="elaborateOutput">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,153,119,179"/>
+<area shape="rect" id="Node000002" href="$buttons_8c.html#a1009f4e791fd062c1654ef5ccff2993a" title="Implements back button action that redirects in eliminate colored circle state if there was at least ..." alt="" coords="175,5,299,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,151,106,98,133,67,165,40,172,36,175,40,168,44,137,71,110,101,73,154"/>
+<area shape="rect" id="Node000007" href="$buttons_8c.html#a4fe9599165d47017fa954f8ec9016d4f" title="Implements confirm button action that manage its input according to the state you are in...." alt="" coords="167,104,307,130"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="110,150,173,132,174,137,111,155"/>
+<area shape="rect" id="Node000015" href="$_interrupt_01_code_01for_01_breadboard_8c.html#afd06039489adbf62add2e5f77b09c1b3" title=" " alt="" coords="192,153,282,179"/>
+<area shape="poly" id="edge18_Node000001_Node000015" title=" " alt="" coords="119,164,176,164,176,169,119,169"/>
+<area shape="rect" id="Node000016" href="$input_8c.html#a0e001e6590fdf593eeac0f10ee1c18ff" title=" " alt="" coords="192,203,282,228"/>
+<area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="111,177,178,196,176,201,110,182"/>
+<area shape="rect" id="Node000017" href="$game_8c.html#ae75b7a2c4cacd669fec7a8d14c925898" title="According to the inputed color, the leds are turned on according to that color (ORANGE case it will b..." alt="" coords="184,55,290,80"/>
+<area shape="poly" id="edge20_Node000001_Node000017" title=" " alt="" coords="77,151,116,120,165,89,176,84,178,89,168,94,119,125,80,155"/>
+<area shape="rect" id="Node000018" href="$_interrupt_01_code_01for_01_breadboard_8c.html#a4dab3d68b43210e47c00819d54bb5895" title=" " alt="" coords="203,252,271,278"/>
+<area shape="poly" id="edge22_Node000001_Node000018" title=" " alt="" coords="80,178,119,208,168,238,189,248,187,253,165,243,116,212,77,182"/>
+<area shape="rect" id="Node000019" href="$input_8c.html#aa21ddc994860540031b8ee0b3a81f5f2" title=" " alt="" coords="203,301,271,327"/>
+<area shape="poly" id="edge23_Node000001_Node000019" title=" " alt="" coords="73,178,110,231,137,261,168,288,189,299,187,304,165,292,133,265,106,234,69,181"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic2_8c.html#a2d9418eed626aa95f8198811a970a254" title="returns if the user’s sequence is empty or not" alt="" coords="381,5,455,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,16,366,16,366,21,300,21"/>
+<area shape="rect" id="Node000004" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="355,55,481,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="288,29,354,47,353,53,286,34"/>
+<area shape="rect" id="Node000005" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="577,5,678,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="475,51,561,31,562,36,477,57"/>
+<area shape="rect" id="Node000006" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="577,55,678,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="482,65,561,65,561,70,482,70"/>
+<area shape="poly" id="edge17_Node000007_Node000004" title=" " alt="" coords="286,101,353,82,354,88,288,106"/>
+<area shape="rect" id="Node000008" href="$implementations_8c.html#ae6b98301bc187c6f3b974c2283459932" title=" " alt="" coords="364,153,473,179"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="288,128,354,146,353,151,286,133"/>
+<area shape="rect" id="Node000009" href="$difficulty_8c.html#a55037b2df6de8e644fb78a0b591e8ac2" title="Function that handles pressure of confirm button when we are in DIFFICULTY section." alt="" coords="529,104,726,130"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="473,151,554,131,556,136,474,156"/>
+<area shape="rect" id="Node000011" href="$dimension_8c.html#a58364c9a26deb9ae50fe27b33f41a221" title="extern declaretion" alt="" coords="530,153,725,179"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="473,164,514,164,514,169,473,169"/>
+<area shape="rect" id="Node000012" href="$doubles_8c.html#a0cb8c2347e6040b6d06a0642ef95643a" title="manages the changes of our doubles variable and the shown text on our button (except to prev and next..." alt="" coords="536,252,719,278"/>
+<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="437,177,478,208,530,238,546,244,544,249,528,243,475,213,434,182"/>
+<area shape="rect" id="Node000014" href="$tentatives_8c.html#ab21c36ca2c0c622eefddddf5c0023d4c" title=" " alt="" coords="532,203,723,228"/>
+<area shape="poly" id="edge15_Node000008_Node000014" title=" " alt="" coords="474,176,556,196,554,201,473,182"/>
+<area shape="rect" id="Node000010" href="$implementations_8c.html#a7b8a1f6ee64675c2f14e0c4d61b10092" title=" " alt="" coords="781,179,894,204"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="691,128,727,138,798,169,796,174,725,143,690,133"/>
+<area shape="poly" id="edge11_Node000011_Node000010" title=" " alt="" coords="726,175,766,180,766,186,725,181"/>
+<area shape="poly" id="edge14_Node000012_Node000010" title=" " alt="" coords="690,249,725,238,796,209,798,214,727,243,691,254"/>
+<area shape="rect" id="Node000013" href="$implementations_8c.html#af4097a2a104a8d16ccf1344d0e9f25b1" title=" " alt="" coords="774,252,902,278"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="719,262,758,262,758,268,719,268"/>
+<area shape="poly" id="edge16_Node000014_Node000010" title=" " alt="" coords="723,202,766,197,766,202,724,207"/>
+<area shape="poly" id="edge21_Node000017_Node000004" title=" " alt="" coords="290,65,339,65,339,70,290,70"/>
+</map>

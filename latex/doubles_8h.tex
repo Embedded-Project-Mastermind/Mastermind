@@ -1,0 +1,381 @@
+\doxysection{general/doubles.h File Reference}
+\hypertarget{doubles_8h}{}\label{doubles_8h}\index{general/doubles.h@{general/doubles.h}}
+{\ttfamily \#include "{}implementations.\+h"{}}\newline
+Include dependency graph for doubles.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{doubles_8h_a7f92f2015a813bc7e6ea7884cdedbca5}{create\+\_\+doubles\+\_\+text}} (void)
+\begin{DoxyCompactList}\small\item\em initializes the texts and draw them \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doubles_8h_a6dc1396a2fe2b341f485612437933d4b}{create\+\_\+doubles\+\_\+button}} (void)
+\item 
+void \mbox{\hyperlink{doubles_8h_a5d30196b11160b96f048c2d32df19db5}{change\+\_\+screen\+\_\+d}} (void)
+\begin{DoxyCompactList}\small\item\em manages how to set all doubles\textquotesingle{} interface, also calling the functions to create the texts and the buttons \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doubles_8h_abde8d52331b6dfefc0394c653238ea16}{fn\+\_\+\+DOUBLES}} (void)
+\begin{DoxyCompactList}\small\item\em calls all needed functions to change the previous interface with the one of the doubles\textquotesingle{} state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doubles_8h_a0cb8c2347e6040b6d06a0642ef95643a}{handle\+Pressure\+\_\+\+DOUBLES}} ()
+\begin{DoxyCompactList}\small\item\em manages the changes of our doubles variable and the shown text on our button (except to prev and next) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doubles_8h_a73b8fe01f7507192f7e9bf9b2a916df9}{up\+Stick\+\_\+\+DOUBLES}} ()
+\begin{DoxyCompactList}\small\item\em manage what to do when the user moves the stick up \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doubles_8h_a36ebb11703991f98a2d4b86daece9fb6}{down\+Stick\+\_\+\+DOUBLES}} ()
+\begin{DoxyCompactList}\small\item\em manage what to do when the user moves the stick down \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doubles_8h_aaede89cc2d77369f26c4bdd81d8ce776}{left\+Stick\+\_\+\+DOUBLES}} ()
+\begin{DoxyCompactList}\small\item\em manage what to do when the user moves the stick left \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doubles_8h_a32374ef584a5874a75624a4bf91c40d3}{right\+Stick\+\_\+\+DOUBLES}} ()
+\begin{DoxyCompactList}\small\item\em manage what to do when the user moves the stick right \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{doubles_8h_aac43eea0479c23fdee8f078dade265bf}{buttons\+\_\+\+DOUBLES}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} \mbox{\hyperlink{doubles_8h_a05683f2df5d32f43f8a19379eabf495a}{doubles\+\_\+text}}
+\item 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} \mbox{\hyperlink{doubles_8h_aa07bc5f30e0865feedebed4a8373efb1}{doubles\+\_\+description}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{doubles_8h_ad2b2e5367e88e717f2586c3aae57a9c8}{doubles\+\_\+buttons}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{doubles_8h_aac43eea0479c23fdee8f078dade265bf}\index{doubles.h@{doubles.h}!buttons\_DOUBLES@{buttons\_DOUBLES}}
+\index{buttons\_DOUBLES@{buttons\_DOUBLES}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{buttons\_DOUBLES()}{buttons\_DOUBLES()}}
+{\footnotesize\ttfamily \label{doubles_8h_aac43eea0479c23fdee8f078dade265bf} 
+void buttons\+\_\+\+DOUBLES (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{doubles_8h_a5d30196b11160b96f048c2d32df19db5}\index{doubles.h@{doubles.h}!change\_screen\_d@{change\_screen\_d}}
+\index{change\_screen\_d@{change\_screen\_d}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{change\_screen\_d()}{change\_screen\_d()}}
+{\footnotesize\ttfamily \label{doubles_8h_a5d30196b11160b96f048c2d32df19db5} 
+void change\+\_\+screen\+\_\+d (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+manages how to set all doubles\textquotesingle{} interface, also calling the functions to create the texts and the buttons 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniele Calvo (Primary author) 
+
+Alessandro Benassi (Helper) 
+
+Matteo Gottardelli (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_a5d30196b11160b96f048c2d32df19db5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{doubles_8h_a5d30196b11160b96f048c2d32df19db5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{doubles_8h_a6dc1396a2fe2b341f485612437933d4b}\index{doubles.h@{doubles.h}!create\_doubles\_button@{create\_doubles\_button}}
+\index{create\_doubles\_button@{create\_doubles\_button}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{create\_doubles\_button()}{create\_doubles\_button()}}
+{\footnotesize\ttfamily \label{doubles_8h_a6dc1396a2fe2b341f485612437933d4b} 
+void create\+\_\+doubles\+\_\+button (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{doubles_8h_a7f92f2015a813bc7e6ea7884cdedbca5}\index{doubles.h@{doubles.h}!create\_doubles\_text@{create\_doubles\_text}}
+\index{create\_doubles\_text@{create\_doubles\_text}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{create\_doubles\_text()}{create\_doubles\_text()}}
+{\footnotesize\ttfamily \label{doubles_8h_a7f92f2015a813bc7e6ea7884cdedbca5} 
+void create\+\_\+doubles\+\_\+text (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+initializes the texts and draw them 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniele Calvo (Primary author) 
+
+Alessandro Benassi (Helper) 
+
+Matteo Gottardelli (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_a7f92f2015a813bc7e6ea7884cdedbca5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{doubles_8h_a36ebb11703991f98a2d4b86daece9fb6}\index{doubles.h@{doubles.h}!downStick\_DOUBLES@{downStick\_DOUBLES}}
+\index{downStick\_DOUBLES@{downStick\_DOUBLES}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{downStick\_DOUBLES()}{downStick\_DOUBLES()}}
+{\footnotesize\ttfamily \label{doubles_8h_a36ebb11703991f98a2d4b86daece9fb6} 
+void down\+Stick\+\_\+\+DOUBLES (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+manage what to do when the user moves the stick down 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniele Calvo (Primary author) 
+
+Alessandro Benassi (Helper) 
+
+Matteo Gottardelli (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_a36ebb11703991f98a2d4b86daece9fb6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_a36ebb11703991f98a2d4b86daece9fb6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{doubles_8h_abde8d52331b6dfefc0394c653238ea16}\index{doubles.h@{doubles.h}!fn\_DOUBLES@{fn\_DOUBLES}}
+\index{fn\_DOUBLES@{fn\_DOUBLES}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{fn\_DOUBLES()}{fn\_DOUBLES()}}
+{\footnotesize\ttfamily \label{doubles_8h_abde8d52331b6dfefc0394c653238ea16} 
+void fn\+\_\+\+DOUBLES (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+calls all needed functions to change the previous interface with the one of the doubles\textquotesingle{} state 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniele Calvo (Primary author) 
+
+Alessandro Benassi (Helper) 
+
+Matteo Gottardelli (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_abde8d52331b6dfefc0394c653238ea16_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{doubles_8h_a0cb8c2347e6040b6d06a0642ef95643a}\index{doubles.h@{doubles.h}!handlePressure\_DOUBLES@{handlePressure\_DOUBLES}}
+\index{handlePressure\_DOUBLES@{handlePressure\_DOUBLES}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{handlePressure\_DOUBLES()}{handlePressure\_DOUBLES()}}
+{\footnotesize\ttfamily \label{doubles_8h_a0cb8c2347e6040b6d06a0642ef95643a} 
+void handle\+Pressure\+\_\+\+DOUBLES (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+manages the changes of our doubles variable and the shown text on our button (except to prev and next) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniele Calvo (Primary author) 
+
+Alessandro Benassi (Helper) 
+
+Matteo Gottardelli (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{doubles_8h_a0cb8c2347e6040b6d06a0642ef95643a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_a0cb8c2347e6040b6d06a0642ef95643a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{doubles_8h_aaede89cc2d77369f26c4bdd81d8ce776}\index{doubles.h@{doubles.h}!leftStick\_DOUBLES@{leftStick\_DOUBLES}}
+\index{leftStick\_DOUBLES@{leftStick\_DOUBLES}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{leftStick\_DOUBLES()}{leftStick\_DOUBLES()}}
+{\footnotesize\ttfamily \label{doubles_8h_aaede89cc2d77369f26c4bdd81d8ce776} 
+void left\+Stick\+\_\+\+DOUBLES (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+manage what to do when the user moves the stick left 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniele Calvo (Primary author) 
+
+Alessandro Benassi (Helper) 
+
+Matteo Gottardelli (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_aaede89cc2d77369f26c4bdd81d8ce776_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_aaede89cc2d77369f26c4bdd81d8ce776_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{doubles_8h_a32374ef584a5874a75624a4bf91c40d3}\index{doubles.h@{doubles.h}!rightStick\_DOUBLES@{rightStick\_DOUBLES}}
+\index{rightStick\_DOUBLES@{rightStick\_DOUBLES}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{rightStick\_DOUBLES()}{rightStick\_DOUBLES()}}
+{\footnotesize\ttfamily \label{doubles_8h_a32374ef584a5874a75624a4bf91c40d3} 
+void right\+Stick\+\_\+\+DOUBLES (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+manage what to do when the user moves the stick right 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniele Calvo (Primary author) 
+
+Alessandro Benassi (Helper) 
+
+Matteo Gottardelli (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_a32374ef584a5874a75624a4bf91c40d3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_a32374ef584a5874a75624a4bf91c40d3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{doubles_8h_a73b8fe01f7507192f7e9bf9b2a916df9}\index{doubles.h@{doubles.h}!upStick\_DOUBLES@{upStick\_DOUBLES}}
+\index{upStick\_DOUBLES@{upStick\_DOUBLES}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{upStick\_DOUBLES()}{upStick\_DOUBLES()}}
+{\footnotesize\ttfamily \label{doubles_8h_a73b8fe01f7507192f7e9bf9b2a916df9} 
+void up\+Stick\+\_\+\+DOUBLES (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+manage what to do when the user moves the stick up 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Daniele Calvo (Primary author) 
+
+Alessandro Benassi (Helper) 
+
+Matteo Gottardelli (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_a73b8fe01f7507192f7e9bf9b2a916df9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{doubles_8h_a73b8fe01f7507192f7e9bf9b2a916df9_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{doubles_8h_ad2b2e5367e88e717f2586c3aae57a9c8}\index{doubles.h@{doubles.h}!doubles\_buttons@{doubles\_buttons}}
+\index{doubles\_buttons@{doubles\_buttons}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{doubles\_buttons}{doubles\_buttons}}
+{\footnotesize\ttfamily \label{doubles_8h_ad2b2e5367e88e717f2586c3aae57a9c8} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} doubles\+\_\+buttons\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{doubles_8h_aa07bc5f30e0865feedebed4a8373efb1}\index{doubles.h@{doubles.h}!doubles\_description@{doubles\_description}}
+\index{doubles\_description@{doubles\_description}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{doubles\_description}{doubles\_description}}
+{\footnotesize\ttfamily \label{doubles_8h_aa07bc5f30e0865feedebed4a8373efb1} 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} doubles\+\_\+description\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{doubles_8h_a05683f2df5d32f43f8a19379eabf495a}\index{doubles.h@{doubles.h}!doubles\_text@{doubles\_text}}
+\index{doubles\_text@{doubles\_text}!doubles.h@{doubles.h}}
+\doxysubsubsection{\texorpdfstring{doubles\_text}{doubles\_text}}
+{\footnotesize\ttfamily \label{doubles_8h_a05683f2df5d32f43f8a19379eabf495a} 
+\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} doubles\+\_\+text\hspace{0.3cm}{\ttfamily [extern]}}
+

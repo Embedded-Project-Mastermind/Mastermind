@@ -105,7 +105,7 @@ $(function(){initNavTree('bitmap_8h_source.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">bitmap.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="bitmap_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Title: buttons.c</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Primary Authors: Niccolò Cristoforetti</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Helpers: Matteo Gottardelli</span></div>
@@ -115,11 +115,11 @@ $(function(){initNavTree('bitmap_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef BITMAP_H</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define BITMAP_H</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define SIZE_IMAGE_Y 64</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define SIZE_IMAGE_X 92</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define PALETTE 256</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="bitmap_8h.html#a205d70d350dde8c799d2ba3f12199ac1">   11</a></span><span class="preprocessor">#define SIZE_IMAGE_Y 64</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="bitmap_8h.html#a5aacc2169d7880de0d16f060bf781260">   12</a></span><span class="preprocessor">#define SIZE_IMAGE_X 92</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="bitmap_8h.html#a284af3b711f4d2f8d61e643b7f8b0f65">   13</a></span><span class="preprocessor">#define PALETTE 256</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">static</span> <span class="keyword">const</span> uint32_t palette[PALETTE][3]={</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">static</span> <span class="keyword">const</span> uint32_t palette[<a class="code hl_define" href="bitmap_8h.html#a284af3b711f4d2f8d61e643b7f8b0f65">PALETTE</a>][3]={</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {0x00, 0x00, 0x00},</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        {0x01, 0x01, 0x01},</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {0x02, 0x02, 0x02},</div>
@@ -378,7 +378,7 @@ $(function(){initNavTree('bitmap_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        {0xFF, 0xFF, 0xFF},</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>};</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="keyword">static</span> <span class="keyword">const</span> uint8_t image[SIZE_IMAGE_Y][SIZE_IMAGE_X] = {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="keyword">static</span> <span class="keyword">const</span> uint8_t image[<a class="code hl_define" href="bitmap_8h.html#a205d70d350dde8c799d2ba3f12199ac1">SIZE_IMAGE_Y</a>][<a class="code hl_define" href="bitmap_8h.html#a5aacc2169d7880de0d16f060bf781260">SIZE_IMAGE_X</a>] = {</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x26, 0x17, 0x00, 0x00, 0x94, 0x49, 0x92, 0x36, 0x56, 0x45, 0x45, 0x29, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x16, 0x29, 0x29, 0x45, 0x56, 0x36, 0x92, 0x49, 0x79, 0x00, 0x00, 0x17, 0x26, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 },</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7B, 0x00, 0x00, 0x91, 0x36, 0x29, 0x28, 0x3F, 0x3F, 0x3F, 0x11, 0x28, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x28, 0x3F, 0x3F, 0x3F, 0x28, 0x29, 0x36, 0xB8, 0x00, 0x00, 0x7B, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 },</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x17, 0x00, 0xA8, 0x36, 0x16, 0x3F, 0x11, 0x29, 0x55, 0x8A, 0x47, 0x47, 0x19, 0x46, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x19, 0x46, 0x19, 0x47, 0x47, 0x8A, 0x55, 0x29, 0x28, 0xBA, 0x29, 0x36, 0xAB, 0x00, 0x17, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 },</div>
@@ -445,12 +445,15 @@ $(function(){initNavTree('bitmap_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x26, 0x65, 0x00, 0x00, 0x72, 0x52, 0x8D, 0x53, 0x48, 0x2D, 0x2D, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x2D, 0x2D, 0x48, 0x51, 0x8D, 0x52, 0x25, 0x00, 0x00, 0x65, 0x26, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 },</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>};</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="preprocessor">#endif </span><span class="comment">// BITMAP_H</span></div>
+<div class="ttc" id="abitmap_8h_html_a205d70d350dde8c799d2ba3f12199ac1"><div class="ttname"><a href="bitmap_8h.html#a205d70d350dde8c799d2ba3f12199ac1">SIZE_IMAGE_Y</a></div><div class="ttdeci">#define SIZE_IMAGE_Y</div><div class="ttdef"><b>Definition</b> bitmap.h:11</div></div>
+<div class="ttc" id="abitmap_8h_html_a284af3b711f4d2f8d61e643b7f8b0f65"><div class="ttname"><a href="bitmap_8h.html#a284af3b711f4d2f8d61e643b7f8b0f65">PALETTE</a></div><div class="ttdeci">#define PALETTE</div><div class="ttdef"><b>Definition</b> bitmap.h:13</div></div>
+<div class="ttc" id="abitmap_8h_html_a5aacc2169d7880de0d16f060bf781260"><div class="ttname"><a href="bitmap_8h.html#a5aacc2169d7880de0d16f060bf781260">SIZE_IMAGE_X</a></div><div class="ttdeci">#define SIZE_IMAGE_X</div><div class="ttdef"><b>Definition</b> bitmap.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bba024cd03edd7f9d6096b84e1006209.html">general</a></li><li class="navelem"><b>bitmap.h</b></li>
+    <li class="navelem"><a class="el" href="dir_bba024cd03edd7f9d6096b84e1006209.html">general</a></li><li class="navelem"><a class="el" href="bitmap_8h.html">bitmap.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

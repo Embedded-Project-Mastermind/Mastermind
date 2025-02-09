@@ -1,0 +1,9 @@
+<map id="switching" name="switching">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,82,56"/>
+<area shape="rect" id="Node000002" href="$input_8c.html#a649025105fd573f4021b9aa4b3ba5e44" title=" " alt="" coords="138,5,220,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,34,122,26,123,31,83,39"/>
+<area shape="rect" id="Node000003" href="$input_8c.html#a75d92ac43d65d743ff159105e3e33b60" title=" " alt="" coords="130,55,229,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="83,48,115,53,114,59,82,53"/>
+<area shape="rect" id="Node000004" href="$input_8c.html#aad3f0b26686a346707670914702aeaad" title=" " alt="" coords="277,55,387,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="229,65,261,65,261,70,229,70"/>
+</map>

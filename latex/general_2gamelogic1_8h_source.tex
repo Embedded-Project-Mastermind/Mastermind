@@ -1,6 +1,6 @@
 \doxysection{gamelogic1.\+h}
 \hypertarget{general_2gamelogic1_8h_source}{}\label{general_2gamelogic1_8h_source}\index{general/gamelogic1.h@{general/gamelogic1.h}}
-
+\mbox{\hyperlink{general_2gamelogic1_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ gamelogic1.c}}
@@ -16,32 +16,32 @@
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stdlib.h"{}}}
 \DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}time.h"{}}}
 \DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}stdbool.h"{}}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}fsm.h"{}}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}joystick.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{general_2fsm_8h}{fsm.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{joystick_8h}{joystick.h}}"{}}}
 \DoxyCodeLine{00017\ }
 \DoxyCodeLine{00018\ \textcolor{comment}{/*\ Function\ declarations\ */}}
-\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ emergency();}
-\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ fn\_START(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Function\ for\ the\ START\ state}}
-\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ fn\_KEY\_WOUT\_DOUB(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Function\ for\ the\ KEY\_WOUT\_DOUB\ state}}
-\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ fn\_KEY\_WH\_DOUB(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Function\ for\ the\ KEY\_WH\_DOUB\ state}}
-\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ fn\_RESET\_TENT(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Function\ for\ the\ RESET\_TENT\ state}}
-\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ initGame(int16\_t\ dim,\ int8\_t\ diff,\ \textcolor{keywordtype}{bool}\ doubles,\ int16\_t\ tents);\ \textcolor{comment}{//\ Initializes\ the\ game\ parameters}}
-\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ allocate\_in\_Heap\_Int(int16\_t**\ array,\ int16\_t\ par1,\ int16\_t\ par2);\ \ \ \textcolor{comment}{//Memory\ allocation\ for\ a\ int16\_t\ array}}
-\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ allocate\_in\_Heap\_Char(int8\_t**\ array,\ int16\_t\ par1,\ int16\_t\ par2);\ \ \textcolor{comment}{//Memory\ allocation\ for\ a\ int8\_tacter\ array}}
-\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ allocate\_in\_Heap\_Bool(\textcolor{keywordtype}{bool}**\ array,\ int16\_t\ par1,\ int16\_t\ par2);\ \ \textcolor{comment}{//Memory\ allocation\ for\ a\ boolean\ array}}
-\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ deallocate\_Char(int8\_t*\ array);\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deallocates\ int8\_tacter\ array\ memory}}
-\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ deallocate\_Int(int16\_t*\ array);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deallocates\ int16\_teger\ array\ memory}}
-\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ deallocate\_Bool(\textcolor{keywordtype}{bool}*\ array);\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deallocates\ boolean\ array\ memory}}
-\DoxyCodeLine{00031\ int16\_t*\ key\_generation\_wout\_doub(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Generates\ key\ without\ doubles}}
-\DoxyCodeLine{00032\ int16\_t*\ key\_generation\_wh\_doub(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Generates\ key\ with\ doubles}}
-\DoxyCodeLine{00033\ \textcolor{keywordtype}{bool}\ presence\_Double(int16\_t*\ array,\ int16\_t\ value,\ int16\_t\ dim);\ \textcolor{comment}{//\ Checks\ if\ a\ value\ is\ already\ present\ in\ the\ array}}
-\DoxyCodeLine{00034\ int8\_t\ int\_Conversion\_to\_Char(int16\_t\ index);\ \ \ \ \ \ \ \textcolor{comment}{//\ Converts\ an\ int16\_teger\ index\ to\ a\ int8\_tacter}}
-\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ crypt\_sequence\_Int\_Char(int16\_t*\ arr1,\ int8\_t*\ arr2,\ int16\_t\ dim);\ \textcolor{comment}{//\ Crypts\ an\ int16\_teger\ array\ int16\_to\ a\ int8\_tacter\ array}}
-\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ continue\_Key\_Decryption(int16\_t*\ sequence);\ \ \textcolor{comment}{//\ Continues\ decryption\ process\ for\ the\ generated\ key}}
-\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ resetTentative(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Resets\ the\ tentative\ state\ for\ the\ user's\ guesses}}
-\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ makeArrayEmpty\_Char(int8\_t*\ array,\ int16\_t\ par1,\ int16\_t\ par2);\ \textcolor{comment}{//\ Initializes\ a\ int8\_tacter\ array\ to\ zero}}
-\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ makeArrayEmpty\_Int(int16\_t*\ array,\ int16\_t\ par1,\ int16\_t\ par2);\ \ \ \textcolor{comment}{//\ Initializes\ a\ boolean\ array\ to\ zero}}
-\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ makeArrayEmpty\_Bool(\textcolor{keywordtype}{bool}*\ array,\ int16\_t\ par1,\ int16\_t\ par2);\ \ \ \textcolor{comment}{//\ Initializes\ a\ boolean\ array\ to\ false}}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_a5de9beb50528513eff761d89deb0fe39}{emergency}}();}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_a3ae06b4f684ab23f714e117b63520232}{fn\_START}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Function\ for\ the\ START\ state}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_a6dfdeacaef5a5d37960e2575015b6516}{fn\_KEY\_WOUT\_DOUB}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Function\ for\ the\ KEY\_WOUT\_DOUB\ state}}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_a7b7577b178ce9de2be9e5ab17053f6e5}{fn\_KEY\_WH\_DOUB}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Function\ for\ the\ KEY\_WH\_DOUB\ state}}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_aea19573b1ff72f6c1ccf31fca44008e0}{fn\_RESET\_TENT}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Function\ for\ the\ RESET\_TENT\ state}}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_afb2e75602fcc752a18fcfc0ba165ad00}{initGame}}(int16\_t\ dim,\ int8\_t\ diff,\ \textcolor{keywordtype}{bool}\ doubles,\ int16\_t\ tents);\ \textcolor{comment}{//\ Initializes\ the\ game\ parameters}}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_a69fca538b5b36e3923f0f33c8f62f262}{allocate\_in\_Heap\_Int}}(int16\_t**\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}},\ int16\_t\ par1,\ int16\_t\ par2);\ \ \ \textcolor{comment}{//Memory\ allocation\ for\ a\ int16\_t\ array}}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_a465d18eab656a2e0ed6ba52d433751f0}{allocate\_in\_Heap\_Char}}(int8\_t**\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}},\ int16\_t\ par1,\ int16\_t\ par2);\ \ \textcolor{comment}{//Memory\ allocation\ for\ a\ int8\_tacter\ array}}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_a26e20921c3fb3ec3b86ce90e18514575}{allocate\_in\_Heap\_Bool}}(\textcolor{keywordtype}{bool}**\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}},\ int16\_t\ par1,\ int16\_t\ par2);\ \ \textcolor{comment}{//Memory\ allocation\ for\ a\ boolean\ array}}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_a3b3176d6777adfb7086ceb88f5224380}{deallocate\_Char}}(int8\_t*\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}});\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deallocates\ int8\_tacter\ array\ memory}}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_abde743d0b9f0e17fd8bf287087cf5f06}{deallocate\_Int}}(int16\_t*\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deallocates\ int16\_teger\ array\ memory}}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_aba3f992fdc05554a125bb9c1c299a622}{deallocate\_Bool}}(\textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}});\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deallocates\ boolean\ array\ memory}}
+\DoxyCodeLine{00031\ int16\_t*\ \mbox{\hyperlink{general_2gamelogic1_8h_a3abce2284f44af7203a666506074b873}{key\_generation\_wout\_doub}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Generates\ key\ without\ doubles}}
+\DoxyCodeLine{00032\ int16\_t*\ \mbox{\hyperlink{general_2gamelogic1_8h_a88ad662207fa03ea53b1f6be039fa066}{key\_generation\_wh\_doub}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Generates\ key\ with\ doubles}}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{general_2gamelogic1_8h_af42b50d4086354e6b49eac80239cd8d4}{presence\_Double}}(int16\_t*\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}},\ int16\_t\ \mbox{\hyperlink{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a}{value}},\ int16\_t\ dim);\ \textcolor{comment}{//\ Checks\ if\ a\ value\ is\ already\ present\ in\ the\ array}}
+\DoxyCodeLine{00034\ int8\_t\ \mbox{\hyperlink{general_2gamelogic1_8h_ad357af7f6265beb9d391aa89a092ba39}{int\_Conversion\_to\_Char}}(int16\_t\ index);\ \ \ \ \ \ \ \textcolor{comment}{//\ Converts\ an\ int16\_teger\ index\ to\ a\ int8\_tacter}}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_ad98031ef2f3f36bce040eaab871947a0}{crypt\_sequence\_Int\_Char}}(int16\_t*\ arr1,\ int8\_t*\ arr2,\ int16\_t\ dim);\ \textcolor{comment}{//\ Crypts\ an\ int16\_teger\ array\ int16\_to\ a\ int8\_tacter\ array}}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_a2700fd085c33e4ef923ab449276a578f}{continue\_Key\_Decryption}}(int16\_t*\ sequence);\ \ \textcolor{comment}{//\ Continues\ decryption\ process\ for\ the\ generated\ key}}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_a349e30260991f4d42dc6e3b575108891}{resetTentative}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Resets\ the\ tentative\ state\ for\ the\ user's\ guesses}}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_abf0d75f005530b95f776456baa7840c2}{makeArrayEmpty\_Char}}(int8\_t*\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}},\ int16\_t\ par1,\ int16\_t\ par2);\ \textcolor{comment}{//\ Initializes\ a\ int8\_tacter\ array\ to\ zero}}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_a85f585c5cf928dd3f6aa31b07f4ff1f1}{makeArrayEmpty\_Int}}(int16\_t*\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}},\ int16\_t\ par1,\ int16\_t\ par2);\ \ \ \textcolor{comment}{//\ Initializes\ a\ boolean\ array\ to\ zero}}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2gamelogic1_8h_afbe438781ebff37a81c93cfb218bb0cf}{makeArrayEmpty\_Bool}}(\textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}},\ int16\_t\ par1,\ int16\_t\ par2);\ \ \ \textcolor{comment}{//\ Initializes\ a\ boolean\ array\ to\ false}}
 \DoxyCodeLine{00041\ }
 \DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
 

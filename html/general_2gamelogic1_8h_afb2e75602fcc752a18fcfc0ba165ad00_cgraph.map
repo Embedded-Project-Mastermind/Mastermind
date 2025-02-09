@@ -1,0 +1,20 @@
+<map id="initGame" name="initGame">
+<area shape="rect" id="Node000001" title="Initialize the game with parameters selected from the GUI interface from DIMENSION,..." alt="" coords="5,80,79,105"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a26e20921c3fb3ec3b86ce90e18514575" title="Allocation for a boolean array, ensuring that it is not already allocated." alt="" coords="128,54,282,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,84,112,79,113,84,80,89"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#a465d18eab656a2e0ed6ba52d433751f0" title="Allocation for a character array, ensuring that it is not already allocated." alt="" coords="127,104,283,129"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="80,95,112,100,111,105,79,100"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="537,54,651,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,51,276,30,330,14,375,6,410,3,445,5,489,14,527,27,560,43,558,48,525,32,488,19,444,11,410,8,375,11,332,19,278,35,232,56"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="367,78,452,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="283,73,352,82,351,87,282,79"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#afbe438781ebff37a81c93cfb218bb0cf" title="Initialization for a boolean array setting to its default state." alt="" coords="332,29,487,55"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="282,55,316,51,317,56,283,60"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="452,83,521,74,522,79,453,88"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="536,104,652,129"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="453,94,521,104,520,109,452,99"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="283,104,351,95,352,101,284,109"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="283,114,521,114,521,119,283,119"/>
+<area shape="rect" id="Node000008" href="$general_2gamelogic1_8c.html#abf0d75f005530b95f776456baa7840c2" title="Initialization for a character array setting to its default state." alt="" coords="331,180,488,205"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="243,127,359,171,358,176,241,132"/>
+</map>

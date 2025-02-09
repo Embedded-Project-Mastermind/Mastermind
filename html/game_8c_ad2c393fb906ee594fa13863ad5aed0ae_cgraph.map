@@ -1,0 +1,11 @@
+<map id="displayResultsOnScreen" name="displayResultsOnScreen">
+<area shape="rect" id="Node000001" title="Effective function that refresh the status of GAME Section, when an update happen." alt="" coords="5,31,171,56"/>
+<area shape="rect" id="Node000002" href="$joystick_8c.html#a17d2aabe37f3c529c960176fe55d5fd5" title=" " alt="" coords="243,5,320,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,30,228,22,228,28,171,35"/>
+<area shape="rect" id="Node000003" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="219,55,345,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,51,203,55,203,60,171,56"/>
+<area shape="rect" id="Node000004" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="393,29,494,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="345,55,377,50,378,55,346,60"/>
+<area shape="rect" id="Node000005" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="393,79,494,104"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="346,74,378,79,377,84,345,80"/>
+</map>

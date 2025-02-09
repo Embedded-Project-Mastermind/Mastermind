@@ -1,0 +1,5 @@
+<map id="drawDifficulty" name="drawDifficulty">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="171,5,272,31"/>
+<area shape="rect" id="Node000002" href="$difficulty_8c.html#abe499c3970af43df2a6f606181935882" title="Implicit Call that is invoked when we arrive at DIFFICULTY state in GUI FSM." alt="" coords="5,5,123,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,21,123,21,123,16,155,16"/>
+</map>

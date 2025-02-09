@@ -1,0 +1,13 @@
+<map id="general/doubles.h" name="general/doubles.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="323,5,446,31"/>
+<area shape="rect" id="Node000002" href="$buttons_8c.html" title=" " alt="" coords="5,79,127,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="316,38,121,81,120,76,315,32"/>
+<area shape="rect" id="Node000003" href="$doubles_8c.html" title=" " alt="" coords="151,79,274,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="343,40,243,81,241,76,341,35"/>
+<area shape="rect" id="Node000004" href="$implementations_8c.html" title=" " alt="" coords="298,79,471,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="387,46,387,79,382,79,382,46"/>
+<area shape="rect" id="Node000005" href="$joystick_8c.html" title=" " alt="" coords="495,79,618,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="429,35,528,76,526,81,427,40"/>
+<area shape="rect" id="Node000006" href="$general_2main_8c.html" title=" " alt="" coords="642,79,748,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="453,32,643,76,642,81,452,38"/>
+</map>

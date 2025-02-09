@@ -1,0 +1,17 @@
+<map id="makeArrayEmpty_Char" name="makeArrayEmpty_Char">
+<area shape="rect" id="Node000001" title="Initialization for a character array setting to its default state." alt="" coords="535,31,693,56"/>
+<area shape="rect" id="Node000002" href="$src_2gamelogic1_8c.html#a07dea4bebe013769da080e8939d48ccf" title=" " alt="" coords="331,5,487,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="520,35,488,31,488,25,520,29"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a465d18eab656a2e0ed6ba52d433751f0" title="Allocation for a character array, ensuring that it is not already allocated." alt="" coords="331,55,487,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="520,57,488,61,488,56,520,52"/>
+<area shape="rect" id="Node000004" href="$src_2gamelogic1_8c.html#a7006bf7f12ca8e5bd3b45872b396129c" title=" " alt="" coords="195,5,268,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="345,53,268,31,269,26,346,47"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#afb2e75602fcc752a18fcfc0ba165ad00" title="Initialize the game with parameters selected from the GUI interface from DIMENSION,..." alt="" coords="195,55,268,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="315,70,268,70,268,65,315,65"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#a349e30260991f4d42dc6e3b575108891" title="After each input sequence is analyzed the tentative is all reinitialized with an incrementation of th..." alt="" coords="180,104,283,130"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="346,88,281,106,280,101,345,82"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#a3ae06b4f684ab23f714e117b63520232" title=" " alt="" coords="27,55,110,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="179,70,110,70,110,65,179,65"/>
+<area shape="rect" id="Node000008" href="$general_2gamelogic1_8c.html#aea19573b1ff72f6c1ccf31fca44008e0" title=" " alt="" coords="5,104,132,130"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="164,120,132,120,132,114,164,114"/>
+</map>

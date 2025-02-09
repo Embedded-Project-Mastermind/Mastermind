@@ -1,0 +1,301 @@
+\doxysection{general/fsm.h File Reference}
+\hypertarget{general_2fsm_8h}{}\label{general_2fsm_8h}\index{general/fsm.h@{general/fsm.h}}
+{\ttfamily \#include "{}msp.\+h"{}}\newline
+{\ttfamily \#include "{}stdbool.\+h"{}}\newline
+Include dependency graph for fsm.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{general_2fsm_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{general_2fsm_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_game}{Game}}
+\item 
+struct \mbox{\hyperlink{struct_tentative}{Tentative}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{general_2fsm_8h_a883046b8f0d1f6368a9b9eaf5ca36af3}{COLORS}}~8
+\item 
+\#define \mbox{\hyperlink{general_2fsm_8h_af7e78ec58347efeb423c787119cff8e3}{MAX\+\_\+\+TENTS}}~30
+\item 
+\#define \mbox{\hyperlink{general_2fsm_8h_aa6e4937ae5987253253733170451ff6f}{EMERGERCY\+\_\+\+TENT}}~7
+\item 
+\#define \mbox{\hyperlink{general_2fsm_8h_a3c7c6a69f690fc8d2abf0e385280a532}{ARRAY\+\_\+\+SIZE}}(arr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Game \mbox{\hyperlink{general_2fsm_8h_a69b5df78d315f81ed77df30fdbfb7002}{Game}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \{ \newline
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a9bc3ac94eccdcd5c172392dceeb48f49}{KEY\+\_\+\+WOUT\+\_\+\+DOUB}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8ada0e9b62b9e2732c057858d4cba06de9}{KEY\+\_\+\+WH\+\_\+\+DOUB}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800}{RESET\+\_\+\+TENT}}
+, \newline
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a79a322ccb4b29b85b3cab52dbccefd17}{WAIT}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229}{ELABORATE}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6}{INSERT\+\_\+\+COLOR}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a636c8eac8610f47dc4228a0fb1ca5309}{WAIT\+\_\+\+FULL}}
+, \newline
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629}{ELIMINATE\+\_\+\+COLOR}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f}{ELABORATE\+\_\+\+TENT}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aef18bcb4a935d141625d0cc4f058b7d9}{INCREMENT\+\_\+\+TENT}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a871723195985a4ae22d7e10d99bf8a00}{GAME\+\_\+\+OVER}}
+, \newline
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425}{EASY\+\_\+\+MODE}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abab75a02f9e6c8bcf2b41d58044ecba7}{MEDIUM\+\_\+\+MODE}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a2c26fbc1fdd523c99380ac97dda96187}{DIFFICULT\+\_\+\+MODE}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4e1ec298bdc63da1022042568b5935ad}{ELABORATE\+\_\+\+RESULT}}
+, \newline
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a843dff91ff0b0e5b98a110a512b2f531}{WIN}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a2fd6f336d08340583bd620a7f5694c90}{ERROR}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{general_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44}{acquire\+Mutex}} (void)
+\item 
+void \mbox{\hyperlink{general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5}{release\+Mutex}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_game}{Game}} \mbox{\hyperlink{general_2fsm_8h_ac6a5ed6191fcf3a5bf0445921feb4f48}{game}}
+\item 
+\mbox{\hyperlink{struct_tentative}{Tentative}} \mbox{\hyperlink{general_2fsm_8h_a645ef54f5ed9e77e09c0edb057a4d15a}{tentative}}
+\item 
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{general_2fsm_8h_a54138d08678dd972a2c9b13e069fd91a}{current\+\_\+state}}
+\item 
+int \mbox{\hyperlink{general_2fsm_8h_acb559820d9ca11295b4500f179ef6392}{i}}
+\item 
+int \mbox{\hyperlink{general_2fsm_8h_a37d972ae0b47b9099e30983131d31916}{j}}
+\item 
+volatile bool \mbox{\hyperlink{general_2fsm_8h_a8401524759ad65a7d2cf99141ae1c5c3}{interrupt\+Flag}}
+\item 
+volatile bool \mbox{\hyperlink{general_2fsm_8h_ade160ca745bd047c50bd978a3546b708}{mutex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{general_2fsm_8h_a3c7c6a69f690fc8d2abf0e385280a532}\index{fsm.h@{fsm.h}!ARRAY\_SIZE@{ARRAY\_SIZE}}
+\index{ARRAY\_SIZE@{ARRAY\_SIZE}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{ARRAY\_SIZE}{ARRAY\_SIZE}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_a3c7c6a69f690fc8d2abf0e385280a532} 
+\#define ARRAY\+\_\+\+SIZE(\begin{DoxyParamCaption}\item[{}]{arr}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\textcolor{keyword}{sizeof}(arr)/\textcolor{keyword}{sizeof}(arr[0]))}
+
+\end{DoxyCode}
+\Hypertarget{general_2fsm_8h_a883046b8f0d1f6368a9b9eaf5ca36af3}\index{fsm.h@{fsm.h}!COLORS@{COLORS}}
+\index{COLORS@{COLORS}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{COLORS}{COLORS}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_a883046b8f0d1f6368a9b9eaf5ca36af3} 
+\#define COLORS~8}
+
+\Hypertarget{general_2fsm_8h_aa6e4937ae5987253253733170451ff6f}\index{fsm.h@{fsm.h}!EMERGERCY\_TENT@{EMERGERCY\_TENT}}
+\index{EMERGERCY\_TENT@{EMERGERCY\_TENT}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{EMERGERCY\_TENT}{EMERGERCY\_TENT}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_aa6e4937ae5987253253733170451ff6f} 
+\#define EMERGERCY\+\_\+\+TENT~7}
+
+\Hypertarget{general_2fsm_8h_af7e78ec58347efeb423c787119cff8e3}\index{fsm.h@{fsm.h}!MAX\_TENTS@{MAX\_TENTS}}
+\index{MAX\_TENTS@{MAX\_TENTS}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_TENTS}{MAX\_TENTS}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_af7e78ec58347efeb423c787119cff8e3} 
+\#define MAX\+\_\+\+TENTS~30}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{general_2fsm_8h_a69b5df78d315f81ed77df30fdbfb7002}\index{fsm.h@{fsm.h}!Game@{Game}}
+\index{Game@{Game}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{Game}{Game}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_a69b5df78d315f81ed77df30fdbfb7002} 
+typedef struct Game Game}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}\index{fsm.h@{fsm.h}!State@{State}}
+\index{State@{State}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8} 
+enum \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{START@{START}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!START@{START}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2} 
+START&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_WOUT\_DOUB@{KEY\_WOUT\_DOUB}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!KEY\_WOUT\_DOUB@{KEY\_WOUT\_DOUB}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a9bc3ac94eccdcd5c172392dceeb48f49}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a9bc3ac94eccdcd5c172392dceeb48f49} 
+KEY\+\_\+\+WOUT\+\_\+\+DOUB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEY\_WH\_DOUB@{KEY\_WH\_DOUB}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!KEY\_WH\_DOUB@{KEY\_WH\_DOUB}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8ada0e9b62b9e2732c057858d4cba06de9}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8ada0e9b62b9e2732c057858d4cba06de9} 
+KEY\+\_\+\+WH\+\_\+\+DOUB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESET\_TENT@{RESET\_TENT}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!RESET\_TENT@{RESET\_TENT}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800} 
+RESET\+\_\+\+TENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAIT@{WAIT}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!WAIT@{WAIT}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a79a322ccb4b29b85b3cab52dbccefd17}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a79a322ccb4b29b85b3cab52dbccefd17} 
+WAIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELABORATE@{ELABORATE}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!ELABORATE@{ELABORATE}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229} 
+ELABORATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INSERT\_COLOR@{INSERT\_COLOR}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!INSERT\_COLOR@{INSERT\_COLOR}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6} 
+INSERT\+\_\+\+COLOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAIT\_FULL@{WAIT\_FULL}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!WAIT\_FULL@{WAIT\_FULL}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a636c8eac8610f47dc4228a0fb1ca5309}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a636c8eac8610f47dc4228a0fb1ca5309} 
+WAIT\+\_\+\+FULL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELIMINATE\_COLOR@{ELIMINATE\_COLOR}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!ELIMINATE\_COLOR@{ELIMINATE\_COLOR}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629} 
+ELIMINATE\+\_\+\+COLOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELABORATE\_TENT@{ELABORATE\_TENT}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!ELABORATE\_TENT@{ELABORATE\_TENT}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f} 
+ELABORATE\+\_\+\+TENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INCREMENT\_TENT@{INCREMENT\_TENT}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!INCREMENT\_TENT@{INCREMENT\_TENT}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aef18bcb4a935d141625d0cc4f058b7d9}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aef18bcb4a935d141625d0cc4f058b7d9} 
+INCREMENT\+\_\+\+TENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_OVER@{GAME\_OVER}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!GAME\_OVER@{GAME\_OVER}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a871723195985a4ae22d7e10d99bf8a00}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a871723195985a4ae22d7e10d99bf8a00} 
+GAME\+\_\+\+OVER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EASY\_MODE@{EASY\_MODE}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!EASY\_MODE@{EASY\_MODE}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425} 
+EASY\+\_\+\+MODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEDIUM\_MODE@{MEDIUM\_MODE}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!MEDIUM\_MODE@{MEDIUM\_MODE}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abab75a02f9e6c8bcf2b41d58044ecba7}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abab75a02f9e6c8bcf2b41d58044ecba7} 
+MEDIUM\+\_\+\+MODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIFFICULT\_MODE@{DIFFICULT\_MODE}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!DIFFICULT\_MODE@{DIFFICULT\_MODE}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a2c26fbc1fdd523c99380ac97dda96187}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a2c26fbc1fdd523c99380ac97dda96187} 
+DIFFICULT\+\_\+\+MODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELABORATE\_RESULT@{ELABORATE\_RESULT}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!ELABORATE\_RESULT@{ELABORATE\_RESULT}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4e1ec298bdc63da1022042568b5935ad}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4e1ec298bdc63da1022042568b5935ad} 
+ELABORATE\+\_\+\+RESULT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WIN@{WIN}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!WIN@{WIN}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a843dff91ff0b0e5b98a110a512b2f531}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a843dff91ff0b0e5b98a110a512b2f531} 
+WIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!ERROR@{ERROR}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a2fd6f336d08340583bd620a7f5694c90}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a2fd6f336d08340583bd620a7f5694c90} 
+ERROR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{general_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44}\index{fsm.h@{fsm.h}!acquireMutex@{acquireMutex}}
+\index{acquireMutex@{acquireMutex}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{acquireMutex()}{acquireMutex()}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44} 
+void acquire\+Mutex (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{general_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5}\index{fsm.h@{fsm.h}!releaseMutex@{releaseMutex}}
+\index{releaseMutex@{releaseMutex}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{releaseMutex()}{releaseMutex()}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5} 
+void release\+Mutex (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{general_2fsm_8h_a54138d08678dd972a2c9b13e069fd91a}\index{fsm.h@{fsm.h}!current\_state@{current\_state}}
+\index{current\_state@{current\_state}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{current\_state}{current\_state}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_a54138d08678dd972a2c9b13e069fd91a} 
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} current\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{general_2fsm_8h_ac6a5ed6191fcf3a5bf0445921feb4f48}\index{fsm.h@{fsm.h}!game@{game}}
+\index{game@{game}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_ac6a5ed6191fcf3a5bf0445921feb4f48} 
+\mbox{\hyperlink{struct_game}{Game}} game\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{general_2fsm_8h_acb559820d9ca11295b4500f179ef6392}\index{fsm.h@{fsm.h}!i@{i}}
+\index{i@{i}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_acb559820d9ca11295b4500f179ef6392} 
+int i\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{general_2fsm_8h_a8401524759ad65a7d2cf99141ae1c5c3}\index{fsm.h@{fsm.h}!interruptFlag@{interruptFlag}}
+\index{interruptFlag@{interruptFlag}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{interruptFlag}{interruptFlag}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_a8401524759ad65a7d2cf99141ae1c5c3} 
+volatile bool interrupt\+Flag\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{general_2fsm_8h_a37d972ae0b47b9099e30983131d31916}\index{fsm.h@{fsm.h}!j@{j}}
+\index{j@{j}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{j}{j}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_a37d972ae0b47b9099e30983131d31916} 
+int j}
+
+\Hypertarget{general_2fsm_8h_ade160ca745bd047c50bd978a3546b708}\index{fsm.h@{fsm.h}!mutex@{mutex}}
+\index{mutex@{mutex}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_ade160ca745bd047c50bd978a3546b708} 
+volatile bool mutex\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{general_2fsm_8h_a645ef54f5ed9e77e09c0edb057a4d15a}\index{fsm.h@{fsm.h}!tentative@{tentative}}
+\index{tentative@{tentative}!fsm.h@{fsm.h}}
+\doxysubsubsection{\texorpdfstring{tentative}{tentative}}
+{\footnotesize\ttfamily \label{general_2fsm_8h_a645ef54f5ed9e77e09c0edb057a4d15a} 
+\mbox{\hyperlink{struct_tentative}{Tentative}} tentative\hspace{0.3cm}{\ttfamily [extern]}}
+

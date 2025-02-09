@@ -1,0 +1,31 @@
+<map id="resetTentative" name="resetTentative">
+<area shape="rect" id="Node000001" title="After each input sequence is analyzed the tentative is all reinitialized with an incrementation of th..." alt="" coords="5,156,109,182"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a465d18eab656a2e0ed6ba52d433751f0" title="Allocation for a character array, ensuring that it is not already allocated." alt="" coords="157,80,313,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,153,188,110,190,115,90,158"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="566,105,682,131"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="109,162,550,122,551,127,109,167"/>
+<area shape="rect" id="Node000007" href="$game_8c.html#add55822234a04e4988e3f9716a8e3cd9" title="Implicit Call that is invoked when we arrive at GAME state in GUI FSM and primarly draw the static el..." alt="" coords="196,256,274,282"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="83,180,198,246,196,250,81,185"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="314,95,551,111,551,116,313,101"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="397,5,482,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="266,77,360,40,381,33,383,38,362,45,268,82"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#abf0d75f005530b95f776456baa7840c2" title="Initialization for a character array setting to its default state." alt="" coords="361,55,518,80"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="313,81,345,76,346,82,314,86"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="484,26,520,40,562,66,598,93,595,97,559,70,517,45,482,31"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="567,5,681,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="483,16,552,16,552,21,483,21"/>
+<area shape="rect" id="Node000008" href="$game_8c.html#a1d704afea01300efda83ee14d72bf132" title="Management and color of the circles on screen." alt="" coords="394,207,485,232"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="274,257,379,231,380,236,275,262"/>
+<area shape="rect" id="Node000009" href="$game_8c.html#ac269fe8cc886e12dfde77c659f786cd6" title="According to the dimension selected in GUI menu, are preallocated empty circles that change dynamical..." alt="" coords="400,256,479,282"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="274,266,384,266,384,272,274,272"/>
+<area shape="rect" id="Node000011" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="376,305,503,331"/>
+<area shape="poly" id="edge12_Node000007_Node000011" title=" " alt="" coords="275,276,369,299,368,304,274,281"/>
+<area shape="rect" id="Node000014" href="$implementations_8c.html#a5b980628dc75e57228c103881e9246af" title=" " alt="" coords="390,355,489,380"/>
+<area shape="poly" id="edge15_Node000007_Node000014" title=" " alt="" coords="257,280,304,310,362,341,377,347,375,352,360,346,301,315,254,284"/>
+<area shape="rect" id="Node000010" href="$game_8c.html#a8e2dbff3a9441175f6bfcf1b7bc56fee" title="Initialization effective of the circles according to the inputed parameters." alt="" coords="568,256,680,282"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="480,266,553,266,553,272,480,272"/>
+<area shape="rect" id="Node000012" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="573,355,675,380"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="491,329,559,348,558,353,490,334"/>
+<area shape="rect" id="Node000013" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="573,305,675,331"/>
+<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="503,316,558,316,558,321,503,321"/>
+</map>

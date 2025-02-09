@@ -1,0 +1,9 @@
+<map id="delay_ms" name="delay_ms">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="219,55,296,80"/>
+<area shape="rect" id="Node000002" href="$general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="18,5,158,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,55,170,45,134,34,136,29,171,40,204,49"/>
+<area shape="rect" id="Node000003" href="$game_8c.html#ad2c393fb906ee594fa13863ad5aed0ae" title="Effective function that refresh the status of GAME Section, when an update happen." alt="" coords="5,55,171,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="203,70,171,70,171,65,203,65"/>
+<area shape="rect" id="Node000004" href="$game_8c.html#afe0d26e602acbce56a513dd0d2b02999" title="Action that the menu performs when the stick goes left, primarly changing selection and imposing logi..." alt="" coords="30,104,146,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="204,86,171,95,136,106,134,101,170,90,203,80"/>
+</map>

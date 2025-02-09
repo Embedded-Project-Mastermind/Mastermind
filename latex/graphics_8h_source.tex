@@ -1,6 +1,6 @@
 \doxysection{graphics.\+h}
 \hypertarget{graphics_8h_source}{}\label{graphics_8h_source}\index{general/graphics.h@{general/graphics.h}}
-
+\mbox{\hyperlink{graphics_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
 \DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Title:\ fsm.h}}
@@ -16,13 +16,13 @@
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <ti/devices/msp432p4xx/inc/msp.h>}}
 \DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <ti/devices/msp432p4xx/driverlib/driverlib.h>}}
 \DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <ti/grlib/grlib.h>}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}LcdDriver/Crystalfontz128x128\_ST7735.h"{}}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}LcdDriver/HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h}{LcdDriver/Crystalfontz128x128\_ST7735.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_h_a_l___m_s_p___e_x_p432_p401_r___crystalfontz128x128___s_t7735_8h}{LcdDriver/HAL\_MSP\_EXP432P401R\_Crystalfontz128x128\_ST7735.h}}"{}}}
 \DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
 \DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <fsm.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{general_2fsm_8h}{fsm.h}}>}}
 \DoxyCodeLine{00020\ \textcolor{comment}{//1.\ DEFINITION\ OF\ CONTEXT}}
-\DoxyCodeLine{00021\ Graphics\_Context\ grContext;}
+\DoxyCodeLine{00021\ Graphics\_Context\ \mbox{\hyperlink{graphics_8h_a4569fd65666f10032b41cedc7f846aed}{grContext}};}
 \DoxyCodeLine{00022\ \textcolor{comment}{//2.\ DEFINITION\ OF\ COLORS}}
 \DoxyCodeLine{00023\ \textcolor{comment}{//BACKGROUND\ COLORS}}
 \DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ BACKGROUND\_STANDARD\_COLOR\ GRAPHICS\_COLOR\_WHITE}}
@@ -38,32 +38,32 @@
 \DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ STANDARD\_TEXT\ GRAPHICS\_COLOR\_BLACK}}
 \DoxyCodeLine{00035\ }
 \DoxyCodeLine{00036\ \textcolor{comment}{//Enum\ Declaration\ for\ display\ changes}}
-\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ Graphics\_State\ \{START\_GR,\ DIMENSION,\ DIFFICULTY,\ TENTATIVE,\ DOUBLES,\ INFO,\ GAME,\ CHRONOLOGY,\ END,\ ERROR\_GR\}\ Graphics\_State;}
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\_State}}\ \{\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca9ff8b8c78539457b03a06689f98c6579}{START\_GR}},\ \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807cab76859fb31ae59096e234a3f32eac4f7}{DIMENSION}},\ \mbox{\hyperlink{src_2fsm_8h_a1a48a93520a5fcc9d754a515c48c0231}{DIFFICULTY}},\ \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca661b0215f708ebf8454810da5c4fe2e5}{TENTATIVE}},\ \mbox{\hyperlink{src_2fsm_8h_a188837cf0ec4a8e95bf406b45cf6ff76}{DOUBLES}},\ \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca748005382152808a72b1a9177d9dc806}{INFO}},\ \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807cad50cf309d7568040619ed26ee6835a84}{GAME}},\ \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca391100608a514cd425d071136fac498c}{CHRONOLOGY}},\ \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807cadc6f24fd6915a3f2786a1b7045406924}{END}},\ \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca244ec924285947908ff227bdc3aa8a40}{ERROR\_GR}}\}\ \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\_State}};}
 \DoxyCodeLine{00038\ \textcolor{comment}{//Button\ possible\ states}}
-\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ Button\_State\ \{STANDARD,\ FOCUSED,\ SELECTED,\ DISABLED\}\ Button\_State;}
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\_State}}\ \{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}},\ \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}},\ \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa02b0fb84d46d585b477a6509abf32b5d}{SELECTED}},\ \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4}{DISABLED}}\}\ \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\_State}};}
 \DoxyCodeLine{00040\ \textcolor{comment}{//Struct\ Declarations}}
 \DoxyCodeLine{00041\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ \{}
-\DoxyCodeLine{00042\ \ \ \ \ int8\_t*\ string;\ \textcolor{comment}{//Content\ of\ the\ text}}
+\DoxyCodeLine{00042\ \ \ \ \ int8\_t*\ \mbox{\hyperlink{struct_graphics___text_a32853e8aa909b92ae66c3522f6b8a065}{string}};\ \textcolor{comment}{//Content\ of\ the\ text}}
 \DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//int16\_t\ x;\ //upper-\/left\ corner\ x\ position}}
 \DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//int16\_t\ y;\ //upper-\/left\ corner\ x\ position}}
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ opacity;\ \textcolor{comment}{//0\ no\ opacity,\ 1\ yes\ opacity}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_graphics___text_aa3e51b8fdca69be0230ea34e01e5e123}{opacity}};\ \textcolor{comment}{//0\ no\ opacity,\ 1\ yes\ opacity}}
 \DoxyCodeLine{00046\ \}\ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}};}
 \DoxyCodeLine{00047\ }
 \DoxyCodeLine{00048\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graphics___circle}{Graphics\_Circle}}\ \{}
-\DoxyCodeLine{00049\ \ \ \ \ int16\_t\ x;\ \textcolor{comment}{//Center\ of\ figure\ x\ position}}
-\DoxyCodeLine{00050\ \ \ \ \ int16\_t\ y;\ \textcolor{comment}{//Center\ of\ figure\ y\ position}}
-\DoxyCodeLine{00051\ \ \ \ \ int16\_t\ radius;\ \textcolor{comment}{//Radius\ of\ figure}}
-\DoxyCodeLine{00052\ \ \ \ \ int32\_t\ color;\ \textcolor{comment}{//Fill\ color\ of\ the\ figure}}
+\DoxyCodeLine{00049\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_graphics___circle_a9689779fb3aea44c26ce0614980c052e}{x}};\ \textcolor{comment}{//Center\ of\ figure\ x\ position}}
+\DoxyCodeLine{00050\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_graphics___circle_aeee3c9a29ead4dc55a3236d986de4ac0}{y}};\ \textcolor{comment}{//Center\ of\ figure\ y\ position}}
+\DoxyCodeLine{00051\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_graphics___circle_a61f19d6838f1a4048bbc539cbe4c356a}{radius}};\ \textcolor{comment}{//Radius\ of\ figure}}
+\DoxyCodeLine{00052\ \ \ \ \ int32\_t\ \mbox{\hyperlink{struct_graphics___circle_a4676abf65226c526ab5e407ba9549d21}{color}};\ \textcolor{comment}{//Fill\ color\ of\ the\ figure}}
 \DoxyCodeLine{00053\ \}\ \mbox{\hyperlink{struct_graphics___circle}{Graphics\_Circle}};}
 \DoxyCodeLine{00054\ }
 \DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \{}
-\DoxyCodeLine{00056\ \ \ \ \ Button\_State\ state;\ \textcolor{comment}{//Current\ button\ state}}
-\DoxyCodeLine{00057\ \ \ \ \ Graphics\_Rectangle\ rect;\ \textcolor{comment}{//Rectangle\ Struct}}
-\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ text;\ \textcolor{comment}{//A\ positioned\ text\ with\ a\ content\ inside}}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\_State}}\ \mbox{\hyperlink{struct_graphics___button_ac9d10f64126a388f2f424430f39dd9f7}{state}};\ \textcolor{comment}{//Current\ button\ state}}
+\DoxyCodeLine{00057\ \ \ \ \ Graphics\_Rectangle\ \mbox{\hyperlink{struct_graphics___button_a22c80b18439335053299c6924f71477a}{rect}};\ \textcolor{comment}{//Rectangle\ Struct}}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ \mbox{\hyperlink{struct_graphics___button_a17be590d56b3cde5f7294c970b6df1d8}{text}};\ \textcolor{comment}{//A\ positioned\ text\ with\ a\ content\ inside}}
 \DoxyCodeLine{00059\ \}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}};}
 \DoxyCodeLine{00060\ \textcolor{comment}{//Extern\ Variables}}
-\DoxyCodeLine{00061\ \textcolor{keyword}{extern}\ Graphics\_State\ display\_position;}
-\DoxyCodeLine{00062\ \textcolor{keyword}{extern}\ int8\_t\ sizes[ERROR\_GR];}
+\DoxyCodeLine{00061\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\_State}}\ \mbox{\hyperlink{graphics_8h_adf89d24d3f59b9ae77dc9340316f59f8}{display\_position}};}
+\DoxyCodeLine{00062\ \textcolor{keyword}{extern}\ int8\_t\ \mbox{\hyperlink{graphics_8h_af632d8673901ae9a66343372f04d391f}{sizes}}[\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca244ec924285947908ff227bdc3aa8a40}{ERROR\_GR}}];}
 \DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ GRAPHICS\_H\_\ */}\textcolor{preprocessor}{}}
 \DoxyCodeLine{00064\ }
 \DoxyCodeLine{00065\ }

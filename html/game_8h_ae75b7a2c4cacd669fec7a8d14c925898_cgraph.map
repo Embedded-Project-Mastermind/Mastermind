@@ -1,0 +1,9 @@
+<map id="elaborateColor" name="elaborateColor">
+<area shape="rect" id="Node000001" title="According to the inputed color, the leds are turned on according to that color (ORANGE case it will b..." alt="" coords="5,31,111,56"/>
+<area shape="rect" id="Node000002" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="159,31,285,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,41,143,41,143,46,111,46"/>
+<area shape="rect" id="Node000003" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="333,5,434,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,31,317,26,318,31,286,36"/>
+<area shape="rect" id="Node000004" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="333,55,434,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="286,50,318,55,317,60,285,56"/>
+</map>

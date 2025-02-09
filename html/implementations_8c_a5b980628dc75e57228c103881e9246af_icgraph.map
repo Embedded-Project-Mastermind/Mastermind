@@ -1,0 +1,40 @@
+<map id="reset_Screen" name="reset_Screen">
+<area shape="rect" id="Node000001" title=" " alt="" coords="556,252,655,278"/>
+<area shape="rect" id="Node000002" href="$chronology_8c.html#a77703c37a23665ce74ccea44a084a247" title="functions that create the Chronology screen starting from resetting the previous screen" alt="" coords="373,5,508,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="597,237,587,195,570,143,543,90,526,66,507,44,492,34,495,29,510,40,530,62,548,87,574,141,592,194,602,236"/>
+<area shape="rect" id="Node000003" href="$difficulty_8c.html#abe499c3970af43df2a6f606181935882" title="Implicit Call that is invoked when we arrive at DIFFICULTY state in GUI FSM." alt="" coords="382,55,499,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="593,238,581,205,562,166,538,127,507,94,490,83,493,79,510,89,542,124,567,164,586,203,598,236"/>
+<area shape="rect" id="Node000004" href="$dimension_8c.html#a06c057d2723c369756cef6908ccdaa99" title="general function for scenario drawing" alt="" coords="382,104,499,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="588,240,554,191,532,165,507,143,488,133,491,128,510,139,536,161,559,187,592,237"/>
+<area shape="rect" id="Node000005" href="$doubles_8c.html#abde8d52331b6dfefc0394c653238ea16" title="calls all needed functions to change the previous interface with the one of the doubles&#39; state" alt="" coords="389,153,492,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="577,244,545,217,507,192,484,182,486,177,510,188,548,213,580,239"/>
+<area shape="rect" id="Node000006" href="$end_8c.html#abac9d0b896bc0d5ed74672684b47805e" title="TODO: Describe function." alt="" coords="406,203,475,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="544,249,475,228,476,223,546,244"/>
+<area shape="rect" id="Node000007" href="$game_8c.html#add55822234a04e4988e3f9716a8e3cd9" title="Implicit Call that is invoked when we arrive at GAME state in GUI FSM and primarly draw the static el..." alt="" coords="402,252,480,278"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="541,267,480,267,480,262,541,262"/>
+<area shape="rect" id="Node000014" href="$info_8c.html#a95182df57add0ef8f2ec22d0337b14cf" title=" " alt="" coords="405,301,476,327"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="547,285,477,306,476,301,545,280"/>
+<area shape="rect" id="Node000015" href="$start_8c.html#a442dc71ecc2ace42458fdc9532365549" title=" " alt="" coords="386,351,495,376"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="580,290,548,317,510,342,486,352,484,348,507,337,545,312,577,286"/>
+<area shape="rect" id="Node000016" href="$tentatives_8c.html#a10cf934f39aa68531a7a6bd03b9d837f" title=" " alt="" coords="384,400,497,426"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="592,293,559,342,536,368,510,391,491,402,488,397,507,387,532,365,554,339,588,290"/>
+<area shape="rect" id="Node000017" href="$implementations_8c.html#abd724b53de6eb2de11d29407bb874691" title=" " alt="" coords="393,449,488,475"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="598,293,586,327,567,366,542,406,510,440,490,452,488,448,507,436,538,402,562,363,581,325,593,292"/>
+<area shape="rect" id="Node000019" href="$general_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="62,475,112,500"/>
+<area shape="poly" id="edge19_Node000001_Node000019" title=" " alt="" coords="604,294,596,339,580,393,552,447,533,470,510,490,458,515,403,530,345,536,288,534,234,528,184,518,112,498,113,493,186,513,234,522,288,529,345,530,402,525,457,510,507,485,529,467,548,444,575,391,591,338,599,293"/>
+<area shape="rect" id="Node000008" href="$general_2gamelogic2_8c.html#a2aac7e2824658f8ac7c8b8446fff0c9c" title="deletes the last color into the user&#39;s sequence if it is not empty" alt="" coords="217,203,325,228"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="386,252,317,231,318,226,387,247"/>
+<area shape="rect" id="Node000010" href="$general_2gamelogic2_8c.html#aaf32eada42d315c1c42b5e21d002f1aa" title="inserts the selected color into the user&#39;s sequence if space is available" alt="" coords="227,252,315,278"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="386,267,316,267,316,262,386,262"/>
+<area shape="rect" id="Node000012" href="$general_2gamelogic1_8c.html#a349e30260991f4d42dc6e3b575108891" title="After each input sequence is analyzed the tentative is all reinitialized with an incrementation of th..." alt="" coords="219,301,322,327"/>
+<area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="387,283,318,303,317,298,386,278"/>
+<area shape="rect" id="Node000009" href="$general_2gamelogic2_8c.html#a135da966b746514db883735bf010382f" title=" " alt="" coords="5,203,169,228"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="201,218,169,218,169,213,201,213"/>
+<area shape="rect" id="Node000011" href="$general_2gamelogic2_8c.html#a6639e69c4f94296b4ed63b9471ba37e8" title=" " alt="" coords="15,252,159,278"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="211,267,159,267,159,262,211,262"/>
+<area shape="rect" id="Node000013" href="$general_2gamelogic1_8c.html#aea19573b1ff72f6c1ccf31fca44008e0" title=" " alt="" coords="24,301,150,327"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="204,317,150,317,150,311,204,311"/>
+<area shape="rect" id="Node000018" href="$implementations_8c.html#ad37616d1eaf8c88801edb04ba22d15c6" title=" " alt="" coords="221,449,320,475"/>
+<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="378,465,321,465,321,460,378,460"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="206,474,112,487,112,482,206,468"/>
+</map>

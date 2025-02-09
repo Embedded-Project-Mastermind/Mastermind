@@ -1,0 +1,29 @@
+<map id="drawButton" name="drawButton">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="396,228,483,254"/>
+<area shape="rect" id="Node000002" href="$info_8c.html#ab24932a5f71a434088aa80f08b1569e7" title="TODO: Describe function." alt="" coords="209,5,328,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="431,213,421,175,404,129,380,84,346,44,327,32,330,28,350,40,384,81,409,127,426,173,436,212"/>
+<area shape="rect" id="Node000003" href="$doubles_8c.html#aae1cd7468e621231385de2136ac1b828" title="initializes the buttons, putting them on an ordered array and drawing them" alt="" coords="189,55,348,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="426,215,397,153,374,121,346,94,329,83,331,79,350,89,378,118,401,150,431,212"/>
+<area shape="rect" id="Node000004" href="$chronology_8c.html#a81594cf52b75532bb168949c0d58ed93" title="function that create buttons and text for the Chronology screen" alt="" coords="211,104,326,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="419,217,388,179,347,143,325,133,328,128,349,139,392,175,423,214"/>
+<area shape="rect" id="Node000006" href="$difficulty_8c.html#a1834148a96e06042ee734794f17f9714" title="Function that draws the interface of difficulty section, 3 buttons to select difficulty and the other..." alt="" coords="218,153,319,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="403,222,347,193,318,182,320,177,349,188,406,217"/>
+<area shape="rect" id="Node000008" href="$dimension_8c.html#a82bf35c4ebbd7865c3aaae6e83e0d8f0" title="draws buttons" alt="" coords="213,203,324,228"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="380,235,324,226,324,221,381,230"/>
+<area shape="rect" id="Node000010" href="$end_8c.html#a9cfc14acd4b06827524e4ba00559b574" title="TODO: Describe function." alt="" coords="232,252,304,278"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="381,252,305,262,304,257,380,246"/>
+<area shape="rect" id="Node000011" href="$start_8c.html#a52ac5595ea6e32fc694344402f33695b" title="TODO: Describe function." alt="" coords="230,301,307,327"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="405,264,349,293,308,307,306,302,347,288,403,259"/>
+<area shape="rect" id="Node000012" href="$tentatives_8c.html#a9bb2fdb0385e964851945754e519d785" title="TODO: Describe function." alt="" coords="214,351,323,376"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="423,268,391,306,349,342,325,354,322,349,347,337,388,302,419,265"/>
+<area shape="rect" id="Node000013" href="$implementations_8c.html#a0f3ea1e3abed721e539b1332079664c4" title="TODO: Describe function." alt="" coords="233,400,304,426"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="431,269,401,330,378,363,350,391,328,403,305,411,303,405,326,398,346,387,374,360,396,328,426,267"/>
+<area shape="rect" id="Node000014" href="$implementations_8c.html#a7850b120bb168cda34d0ff446cd53845" title="TODO: Describe function." alt="" coords="228,449,308,475"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="436,270,426,308,409,354,384,400,350,440,331,452,310,459,308,454,328,447,346,436,380,397,404,351,421,306,431,268"/>
+<area shape="rect" id="Node000005" href="$chronology_8c.html#a77703c37a23665ce74ccea44a084a247" title="functions that create the Chronology screen starting from resetting the previous screen" alt="" coords="5,104,141,130"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="195,120,141,120,141,114,195,114"/>
+<area shape="rect" id="Node000007" href="$difficulty_8c.html#abe499c3970af43df2a6f606181935882" title="Implicit Call that is invoked when we arrive at DIFFICULTY state in GUI FSM." alt="" coords="14,153,132,179"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="202,169,132,169,132,164,202,164"/>
+<area shape="rect" id="Node000009" href="$dimension_8c.html#a06c057d2723c369756cef6908ccdaa99" title="general function for scenario drawing" alt="" coords="15,203,131,228"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="197,218,132,218,132,213,197,213"/>
+</map>

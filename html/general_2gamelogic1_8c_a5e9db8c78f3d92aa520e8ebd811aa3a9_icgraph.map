@@ -1,0 +1,11 @@
+<map id="random_int" name="random_int">
+<area shape="rect" id="Node000001" title="Generation of a random integer with two limits." alt="" coords="441,31,526,56"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a88ad662207fa03ea53b1f6be039fa066" title="Generation of a random key that allows the presence of duplicates colors." alt="" coords="219,5,388,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="425,38,388,33,388,27,426,33"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a3abce2284f44af7203a666506074b873" title="Generation of a random key that doesn&#39;t allow the presence of duplicates colors." alt="" coords="214,55,393,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="426,54,394,58,393,53,425,49"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a7b7577b178ce9de2be9e5ab17053f6e5" title=" " alt="" coords="14,5,157,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="204,21,157,21,157,16,204,16"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a6dfdeacaef5a5d37960e2575015b6516" title=" " alt="" coords="5,55,166,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="198,70,166,70,166,65,198,65"/>
+</map>

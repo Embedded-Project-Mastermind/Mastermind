@@ -1,0 +1,9 @@
+<map id="populateChronologyButtons" name="populateChronologyButtons">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="5,31,187,56"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="235,31,320,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,41,219,41,219,46,187,46"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="369,5,482,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="320,34,353,28,354,33,321,39"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="368,55,483,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="321,48,353,53,352,58,320,53"/>
+</map>

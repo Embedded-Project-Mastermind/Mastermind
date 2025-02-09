@@ -1,0 +1,10 @@
+<map id="ADC_EnableInterrupts" name="ADC_EnableInterrupts">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="341,29,493,55"/>
+<area shape="rect" id="Node000002" href="$general_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="51,5,100,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="325,38,100,23,101,17,326,33"/>
+<area shape="rect" id="Node000003" href="$implementations_8c.html#a02156d12d2735f76feebf107ff4346a9" title="TODO: Describe function." alt="" coords="194,55,293,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="326,58,294,63,293,58,325,53"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="182,52,100,28,101,23,183,47"/>
+<area shape="rect" id="Node000004" href="$general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="5,55,146,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="178,70,146,70,146,65,178,65"/>
+</map>

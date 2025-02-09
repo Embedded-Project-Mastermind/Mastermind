@@ -1,0 +1,219 @@
+\doxysection{Lcd\+Driver/\+Crystalfontz128x128\+\_\+\+ST7735.c File Reference}
+\hypertarget{_crystalfontz128x128___s_t7735_8c}{}\label{_crystalfontz128x128___s_t7735_8c}\index{LcdDriver/Crystalfontz128x128\_ST7735.c@{LcdDriver/Crystalfontz128x128\_ST7735.c}}
+{\ttfamily \#include $<$ti/grlib/grlib.\+h$>$}\newline
+{\ttfamily \#include "{}Crystalfontz128x128\+\_\+\+ST7735.\+h"{}}\newline
+{\ttfamily \#include $<$ti/devices/msp432p4xx/driverlib/driverlib.\+h$>$}\newline
+{\ttfamily \#include "{}HAL\+\_\+\+MSP\+\_\+\+EXP432\+P401\+R\+\_\+\+Crystalfontz128x128\+\_\+\+ST7735.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for Crystalfontz128x128\+\_\+\+ST7735.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_a57fc5401db822d071b765c1da259cbbb}{Crystalfontz128x128\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_ad9797a45a3c4294a68b645f07ac55709}{Crystalfontz128x128\+\_\+\+Set\+Draw\+Frame}} (uint16\+\_\+t x0, uint16\+\_\+t y0, uint16\+\_\+t x1, uint16\+\_\+t y1)
+\item 
+void \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_abadfb1254106e9afffc448eb6feefeeb}{Crystalfontz128x128\+\_\+\+Set\+Orientation}} (uint8\+\_\+t orientation)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_ac795b16144e4966736f3b26a330fbe3b}{Lcd\+\_\+\+Orientation}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_a3507ce8d7321c6322734e843c1c2e449}{Lcd\+\_\+\+Screen\+Width}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_ab2e849d49c54e8f4a897ee7a2c38add6}{Lcd\+\_\+\+Screen\+Heigth}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_a86ff3802845e32cbe44c3766374ba5a2}{Lcd\+\_\+\+Pen\+Solid}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_a01b82ab1a0b89dda64219f2a0e56fdbc}{Lcd\+\_\+\+Font\+Solid}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_a8cffaf6cacf0e2c4e453d208da65e3e9}{Lcd\+\_\+\+Flag\+Read}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_a12bb9018fc8117660b31d6650fd077d5}{Lcd\+\_\+\+Touch\+Trim}}
+\item 
+Graphics\+\_\+\+Display \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_ac7889de27d0b644f0da5c3a6158011fb}{g\+\_\+s\+Crystalfontz128x128}}
+\item 
+const Graphics\+\_\+\+Display\+\_\+\+Functions \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8c_a9553353f2fcf8d55ddcc16a681fab741}{g\+\_\+s\+Crystalfontz128x128\+\_\+funcs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_crystalfontz128x128___s_t7735_8c_a57fc5401db822d071b765c1da259cbbb}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!Crystalfontz128x128\_Init@{Crystalfontz128x128\_Init}}
+\index{Crystalfontz128x128\_Init@{Crystalfontz128x128\_Init}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{Crystalfontz128x128\_Init()}{Crystalfontz128x128\_Init()}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_a57fc5401db822d071b765c1da259cbbb} 
+void Crystalfontz128x128\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Initializes the display driver.
+
+This function initializes the ST7735 display controller on the panel, preparing it to display data.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8c_a57fc5401db822d071b765c1da259cbbb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8c_a57fc5401db822d071b765c1da259cbbb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_crystalfontz128x128___s_t7735_8c_ad9797a45a3c4294a68b645f07ac55709}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!Crystalfontz128x128\_SetDrawFrame@{Crystalfontz128x128\_SetDrawFrame}}
+\index{Crystalfontz128x128\_SetDrawFrame@{Crystalfontz128x128\_SetDrawFrame}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{Crystalfontz128x128\_SetDrawFrame()}{Crystalfontz128x128\_SetDrawFrame()}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_ad9797a45a3c4294a68b645f07ac55709} 
+void Crystalfontz128x128\+\_\+\+Set\+Draw\+Frame (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x0}{, }\item[{uint16\+\_\+t}]{y0}{, }\item[{uint16\+\_\+t}]{x1}{, }\item[{uint16\+\_\+t}]{y1}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8c_ad9797a45a3c4294a68b645f07ac55709_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8c_ad9797a45a3c4294a68b645f07ac55709_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_crystalfontz128x128___s_t7735_8c_abadfb1254106e9afffc448eb6feefeeb}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!Crystalfontz128x128\_SetOrientation@{Crystalfontz128x128\_SetOrientation}}
+\index{Crystalfontz128x128\_SetOrientation@{Crystalfontz128x128\_SetOrientation}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{Crystalfontz128x128\_SetOrientation()}{Crystalfontz128x128\_SetOrientation()}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_abadfb1254106e9afffc448eb6feefeeb} 
+void Crystalfontz128x128\+\_\+\+Set\+Orientation (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{orientation}{}\end{DoxyParamCaption})}
+
+Sets the LCD Orientation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em orientation} & is the desired orientation for the LCD. Valid values are\+:
+\begin{DoxyItemize}
+\item {\bfseries{LCD\+\_\+\+ORIENTATION\+\_\+\+UP}},
+\item {\bfseries{LCD\+\_\+\+ORIENTATION\+\_\+\+LEFT}},
+\item {\bfseries{LCD\+\_\+\+ORIENTATION\+\_\+\+DOWN}},
+\item {\bfseries{LCD\+\_\+\+ORIENTATION\+\_\+\+RIGHT}},
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function sets the orientation of the LCD
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8c_abadfb1254106e9afffc448eb6feefeeb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8c_abadfb1254106e9afffc448eb6feefeeb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_crystalfontz128x128___s_t7735_8c_ac7889de27d0b644f0da5c3a6158011fb}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!g\_sCrystalfontz128x128@{g\_sCrystalfontz128x128}}
+\index{g\_sCrystalfontz128x128@{g\_sCrystalfontz128x128}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{g\_sCrystalfontz128x128}{g\_sCrystalfontz128x128}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_ac7889de27d0b644f0da5c3a6158011fb} 
+Graphics\+\_\+\+Display g\+\_\+s\+Crystalfontz128x128}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{sizeof}(Graphics\_Display),}
+\DoxyCodeLine{\ \ \ \ 0,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_afa86a7acc44d76290436f989ca29c947}{LCD\_VERTICAL\_MAX}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a50814282962649853dea54d976b468fb}{LCD\_HORIZONTAL\_MAX}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+The display structure that describes the driver for the Kitronix K350\+QVG-\/\+V1-\/F TFT panel with an SSD2119 controller. \Hypertarget{_crystalfontz128x128___s_t7735_8c_a9553353f2fcf8d55ddcc16a681fab741}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!g\_sCrystalfontz128x128\_funcs@{g\_sCrystalfontz128x128\_funcs}}
+\index{g\_sCrystalfontz128x128\_funcs@{g\_sCrystalfontz128x128\_funcs}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{g\_sCrystalfontz128x128\_funcs}{g\_sCrystalfontz128x128\_funcs}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_a9553353f2fcf8d55ddcc16a681fab741} 
+const Graphics\+\_\+\+Display\+\_\+\+Functions g\+\_\+s\+Crystalfontz128x128\+\_\+funcs}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Crystalfontz128x128\_PixelDraw,}
+\DoxyCodeLine{\ \ \ \ Crystalfontz128x128\_PixelDrawMultiple,}
+\DoxyCodeLine{\ \ \ \ Crystalfontz128x128\_LineDrawH,}
+\DoxyCodeLine{\ \ \ \ Crystalfontz128x128\_LineDrawV,}
+\DoxyCodeLine{\ \ \ \ Crystalfontz128x128\_RectFill,}
+\DoxyCodeLine{\ \ \ \ Crystalfontz128x128\_ColorTranslate,}
+\DoxyCodeLine{\ \ \ \ Crystalfontz128x128\_Flush,}
+\DoxyCodeLine{\ \ \ \ Crystalfontz128x128\_ClearScreen}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{_crystalfontz128x128___s_t7735_8c_a8cffaf6cacf0e2c4e453d208da65e3e9}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!Lcd\_FlagRead@{Lcd\_FlagRead}}
+\index{Lcd\_FlagRead@{Lcd\_FlagRead}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{Lcd\_FlagRead}{Lcd\_FlagRead}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_a8cffaf6cacf0e2c4e453d208da65e3e9} 
+uint8\+\_\+t Lcd\+\_\+\+Flag\+Read}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8c_a01b82ab1a0b89dda64219f2a0e56fdbc}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!Lcd\_FontSolid@{Lcd\_FontSolid}}
+\index{Lcd\_FontSolid@{Lcd\_FontSolid}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{Lcd\_FontSolid}{Lcd\_FontSolid}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_a01b82ab1a0b89dda64219f2a0e56fdbc} 
+uint8\+\_\+t Lcd\+\_\+\+Font\+Solid}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8c_ac795b16144e4966736f3b26a330fbe3b}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!Lcd\_Orientation@{Lcd\_Orientation}}
+\index{Lcd\_Orientation@{Lcd\_Orientation}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{Lcd\_Orientation}{Lcd\_Orientation}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_ac795b16144e4966736f3b26a330fbe3b} 
+uint8\+\_\+t Lcd\+\_\+\+Orientation}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8c_a86ff3802845e32cbe44c3766374ba5a2}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!Lcd\_PenSolid@{Lcd\_PenSolid}}
+\index{Lcd\_PenSolid@{Lcd\_PenSolid}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{Lcd\_PenSolid}{Lcd\_PenSolid}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_a86ff3802845e32cbe44c3766374ba5a2} 
+uint8\+\_\+t Lcd\+\_\+\+Pen\+Solid}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8c_ab2e849d49c54e8f4a897ee7a2c38add6}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!Lcd\_ScreenHeigth@{Lcd\_ScreenHeigth}}
+\index{Lcd\_ScreenHeigth@{Lcd\_ScreenHeigth}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{Lcd\_ScreenHeigth}{Lcd\_ScreenHeigth}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_ab2e849d49c54e8f4a897ee7a2c38add6} 
+uint16\+\_\+t Lcd\+\_\+\+Screen\+Heigth}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8c_a3507ce8d7321c6322734e843c1c2e449}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!Lcd\_ScreenWidth@{Lcd\_ScreenWidth}}
+\index{Lcd\_ScreenWidth@{Lcd\_ScreenWidth}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{Lcd\_ScreenWidth}{Lcd\_ScreenWidth}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_a3507ce8d7321c6322734e843c1c2e449} 
+uint16\+\_\+t Lcd\+\_\+\+Screen\+Width}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8c_a12bb9018fc8117660b31d6650fd077d5}\index{Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}!Lcd\_TouchTrim@{Lcd\_TouchTrim}}
+\index{Lcd\_TouchTrim@{Lcd\_TouchTrim}!Crystalfontz128x128\_ST7735.c@{Crystalfontz128x128\_ST7735.c}}
+\doxysubsubsection{\texorpdfstring{Lcd\_TouchTrim}{Lcd\_TouchTrim}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8c_a12bb9018fc8117660b31d6650fd077d5} 
+uint16\+\_\+t Lcd\+\_\+\+Touch\+Trim}
+

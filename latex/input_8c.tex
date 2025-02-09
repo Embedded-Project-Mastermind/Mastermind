@@ -1,0 +1,249 @@
+\doxysection{general/input.c File Reference}
+\hypertarget{input_8c}{}\label{input_8c}\index{general/input.c@{general/input.c}}
+{\ttfamily \#include "{}input.\+h"{}}\newline
+{\ttfamily \#include "{}fsm.\+h"{}}\newline
+{\ttfamily \#include "{}buttons.\+h"{}}\newline
+{\ttfamily \#include "{}game.\+h"{}}\newline
+Include dependency graph for input.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{input_8c_aad3f0b26686a346707670914702aeaad}{reset\+Array\+Input}} (void)
+\item 
+void \mbox{\hyperlink{input_8c_a75d92ac43d65d743ff159105e3e33b60}{set\+Array\+Input}} (int val)
+\item 
+void \mbox{\hyperlink{input_8c_aa947a586c72671cffe8f528abc7f5bda}{configure\+Ports\+Input}} (void)
+\item 
+void \mbox{\hyperlink{input_8c_aead6b5c0c9e2aee938cff12f269c3216}{configure\+Interrupt\+Port\+Input}} (void)
+\item 
+void \mbox{\hyperlink{input_8c_a961a43ddc52b1c2b16aab7f30f4ad0d9}{trigger\+Pin\+Interrupt}} ()
+\item 
+int \mbox{\hyperlink{input_8c_a0e001e6590fdf593eeac0f10ee1c18ff}{counter\+True}} (void)
+\item 
+int \mbox{\hyperlink{input_8c_aa21ddc994860540031b8ee0b3a81f5f2}{find\+True}} (void)
+\item 
+void \mbox{\hyperlink{input_8c_a445b36ad7315b9af24ac6cde2f307d5e}{elaborate\+Output}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{input_8c_a649025105fd573f4021b9aa4b3ba5e44}{bitofstatus}} (uint8\+\_\+t status)
+\item 
+void \mbox{\hyperlink{input_8c_a23a5061c21b189449ac63eef4edc75d8}{switching}} (uint8\+\_\+t status, int8\+\_\+t port)
+\item 
+void \mbox{\hyperlink{input_8c_a880c69c873b56ebc5af5a1c8186854cb}{configure\+Timers\+Input}} (void)
+\item 
+bool \mbox{\hyperlink{input_8c_afc6f8d83006ea3fd3139fe320edb4ec3}{at\+Least\+One\+True}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}} \mbox{[}\mbox{\hyperlink{input_8h_a71333493c284b7a54417135cffe0b8b5}{DIMIO}}\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{input_8c_a91c43a08db7dcacca600434acdf805a5}{overflow\+\_\+counter}} =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{input_8c_afc6f8d83006ea3fd3139fe320edb4ec3}\index{input.c@{input.c}!atLeastOneTrue@{atLeastOneTrue}}
+\index{atLeastOneTrue@{atLeastOneTrue}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{atLeastOneTrue()}{atLeastOneTrue()}}
+{\footnotesize\ttfamily \label{input_8c_afc6f8d83006ea3fd3139fe320edb4ec3} 
+bool at\+Least\+One\+True (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{input_8c_afc6f8d83006ea3fd3139fe320edb4ec3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8c_a649025105fd573f4021b9aa4b3ba5e44}\index{input.c@{input.c}!bitofstatus@{bitofstatus}}
+\index{bitofstatus@{bitofstatus}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{bitofstatus()}{bitofstatus()}}
+{\footnotesize\ttfamily \label{input_8c_a649025105fd573f4021b9aa4b3ba5e44} 
+uint8\+\_\+t bitofstatus (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{status}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c_a649025105fd573f4021b9aa4b3ba5e44_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8c_aead6b5c0c9e2aee938cff12f269c3216}\index{input.c@{input.c}!configureInterruptPortInput@{configureInterruptPortInput}}
+\index{configureInterruptPortInput@{configureInterruptPortInput}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{configureInterruptPortInput()}{configureInterruptPortInput()}}
+{\footnotesize\ttfamily \label{input_8c_aead6b5c0c9e2aee938cff12f269c3216} 
+void configure\+Interrupt\+Port\+Input (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c_aead6b5c0c9e2aee938cff12f269c3216_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8c_aa947a586c72671cffe8f528abc7f5bda}\index{input.c@{input.c}!configurePortsInput@{configurePortsInput}}
+\index{configurePortsInput@{configurePortsInput}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{configurePortsInput()}{configurePortsInput()}}
+{\footnotesize\ttfamily \label{input_8c_aa947a586c72671cffe8f528abc7f5bda} 
+void configure\+Ports\+Input (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c_aa947a586c72671cffe8f528abc7f5bda_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8c_a880c69c873b56ebc5af5a1c8186854cb}\index{input.c@{input.c}!configureTimersInput@{configureTimersInput}}
+\index{configureTimersInput@{configureTimersInput}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{configureTimersInput()}{configureTimersInput()}}
+{\footnotesize\ttfamily \label{input_8c_a880c69c873b56ebc5af5a1c8186854cb} 
+void configure\+Timers\+Input (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{input_8c_a0e001e6590fdf593eeac0f10ee1c18ff}\index{input.c@{input.c}!counterTrue@{counterTrue}}
+\index{counterTrue@{counterTrue}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{counterTrue()}{counterTrue()}}
+{\footnotesize\ttfamily \label{input_8c_a0e001e6590fdf593eeac0f10ee1c18ff} 
+int counter\+True (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c_a0e001e6590fdf593eeac0f10ee1c18ff_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8c_a445b36ad7315b9af24ac6cde2f307d5e}\index{input.c@{input.c}!elaborateOutput@{elaborateOutput}}
+\index{elaborateOutput@{elaborateOutput}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{elaborateOutput()}{elaborateOutput()}}
+{\footnotesize\ttfamily \label{input_8c_a445b36ad7315b9af24ac6cde2f307d5e} 
+void elaborate\+Output (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c_a445b36ad7315b9af24ac6cde2f307d5e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{input_8c_a445b36ad7315b9af24ac6cde2f307d5e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8c_aa21ddc994860540031b8ee0b3a81f5f2}\index{input.c@{input.c}!findTrue@{findTrue}}
+\index{findTrue@{findTrue}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{findTrue()}{findTrue()}}
+{\footnotesize\ttfamily \label{input_8c_aa21ddc994860540031b8ee0b3a81f5f2} 
+int find\+True (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c_aa21ddc994860540031b8ee0b3a81f5f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8c_aad3f0b26686a346707670914702aeaad}\index{input.c@{input.c}!resetArrayInput@{resetArrayInput}}
+\index{resetArrayInput@{resetArrayInput}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{resetArrayInput()}{resetArrayInput()}}
+{\footnotesize\ttfamily \label{input_8c_aad3f0b26686a346707670914702aeaad} 
+void reset\+Array\+Input (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c_aad3f0b26686a346707670914702aeaad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8c_a75d92ac43d65d743ff159105e3e33b60}\index{input.c@{input.c}!setArrayInput@{setArrayInput}}
+\index{setArrayInput@{setArrayInput}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{setArrayInput()}{setArrayInput()}}
+{\footnotesize\ttfamily \label{input_8c_a75d92ac43d65d743ff159105e3e33b60} 
+void set\+Array\+Input (\begin{DoxyParamCaption}\item[{int}]{val}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{input_8c_a75d92ac43d65d743ff159105e3e33b60_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c_a75d92ac43d65d743ff159105e3e33b60_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8c_a23a5061c21b189449ac63eef4edc75d8}\index{input.c@{input.c}!switching@{switching}}
+\index{switching@{switching}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{switching()}{switching()}}
+{\footnotesize\ttfamily \label{input_8c_a23a5061c21b189449ac63eef4edc75d8} 
+void switching (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{status}{, }\item[{int8\+\_\+t}]{port}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c_a23a5061c21b189449ac63eef4edc75d8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input_8c_a23a5061c21b189449ac63eef4edc75d8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8c_a961a43ddc52b1c2b16aab7f30f4ad0d9}\index{input.c@{input.c}!triggerPinInterrupt@{triggerPinInterrupt}}
+\index{triggerPinInterrupt@{triggerPinInterrupt}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{triggerPinInterrupt()}{triggerPinInterrupt()}}
+{\footnotesize\ttfamily \label{input_8c_a961a43ddc52b1c2b16aab7f30f4ad0d9} 
+void trigger\+Pin\+Interrupt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{input_8c_a961a43ddc52b1c2b16aab7f30f4ad0d9_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{input_8c_acfee743be70af26f7fb63dc854b1c429}\index{input.c@{input.c}!array@{array}}
+\index{array@{array}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{array}{array}}
+{\footnotesize\ttfamily \label{input_8c_acfee743be70af26f7fb63dc854b1c429} 
+bool array\mbox{[}\mbox{\hyperlink{input_8h_a71333493c284b7a54417135cffe0b8b5}{DIMIO}}\mbox{]}}
+
+\Hypertarget{input_8c_a91c43a08db7dcacca600434acdf805a5}\index{input.c@{input.c}!overflow\_counter@{overflow\_counter}}
+\index{overflow\_counter@{overflow\_counter}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{overflow\_counter}{overflow\_counter}}
+{\footnotesize\ttfamily \label{input_8c_a91c43a08db7dcacca600434acdf805a5} 
+uint8\+\_\+t overflow\+\_\+counter =0}
+

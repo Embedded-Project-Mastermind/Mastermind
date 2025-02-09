@@ -1,0 +1,5 @@
+<map id="drawDimension" name="drawDimension">
+<area shape="rect" id="Node000001" title="draws buttons" alt="" coords="170,5,281,31"/>
+<area shape="rect" id="Node000002" href="$dimension_8c.html#a06c057d2723c369756cef6908ccdaa99" title="general function for scenario drawing" alt="" coords="5,5,122,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,21,122,21,122,16,154,16"/>
+</map>

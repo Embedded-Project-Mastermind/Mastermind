@@ -1,0 +1,286 @@
+\doxysection{general/graphics.h File Reference}
+\hypertarget{graphics_8h}{}\label{graphics_8h}\index{general/graphics.h@{general/graphics.h}}
+{\ttfamily \#include $<$ti/devices/msp432p4xx/inc/msp.\+h$>$}\newline
+{\ttfamily \#include $<$ti/devices/msp432p4xx/driverlib/driverlib.\+h$>$}\newline
+{\ttfamily \#include $<$ti/grlib/grlib.\+h$>$}\newline
+{\ttfamily \#include "{}Lcd\+Driver/\+Crystalfontz128x128\+\_\+\+ST7735.\+h"{}}\newline
+{\ttfamily \#include "{}Lcd\+Driver/\+HAL\+\_\+\+MSP\+\_\+\+EXP432\+P401\+R\+\_\+\+Crystalfontz128x128\+\_\+\+ST7735.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$fsm.\+h$>$}\newline
+Include dependency graph for graphics.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}}
+\item 
+struct \mbox{\hyperlink{struct_graphics___circle}{Graphics\+\_\+\+Circle}}
+\item 
+struct \mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{graphics_8h_a42f7447fc6bf1635714d5568348f3e18}{BACKGROUND\+\_\+\+STANDARD\+\_\+\+COLOR}}~GRAPHICS\+\_\+\+COLOR\+\_\+\+WHITE
+\item 
+\#define \mbox{\hyperlink{graphics_8h_a081ec3045cbcbfb1d4e12db0ab094bcc}{SELECTED\+\_\+\+COLOR}}~GRAPHICS\+\_\+\+COLOR\+\_\+\+WHITE
+\item 
+\#define \mbox{\hyperlink{graphics_8h_af72601ff9dd4a9c49ac9ba750ee17553}{STANDARD\+\_\+\+COLOR}}~GRAPHICS\+\_\+\+COLOR\+\_\+\+BLACK
+\item 
+\#define \mbox{\hyperlink{graphics_8h_ad87fb76705c96c65a07cfd4be2181da0}{DISABLED\+\_\+\+COLOR}}~GRAPHICS\+\_\+\+COLOR\+\_\+\+GRAY
+\item 
+\#define \mbox{\hyperlink{graphics_8h_a282a82183c454fa5a58576d70e5d3b6d}{BORDER\+\_\+\+FOCUSED\+\_\+\+COLOR}}~GRAPHICS\+\_\+\+COLOR\+\_\+\+RED
+\item 
+\#define \mbox{\hyperlink{graphics_8h_a8dea70f4f3d0da8542a16fd0457acfae}{BORDER\+\_\+\+SELECTED\+\_\+\+COLOR}}~GRAPHICS\+\_\+\+COLOR\+\_\+\+BLACK
+\item 
+\#define \mbox{\hyperlink{graphics_8h_a87d6014c8c5062ea98d740402e3ca656}{FILL\+\_\+\+UPPER\+\_\+\+RECT}}~GRAPHICS\+\_\+\+COLOR\+\_\+\+BLUE
+\item 
+\#define \mbox{\hyperlink{graphics_8h_a23e93df8e4d47d69b865c32294c78944}{FILL\+\_\+\+MOVEMENT}}~GRAPHICS\+\_\+\+COLOR\+\_\+\+CYAN
+\item 
+\#define \mbox{\hyperlink{graphics_8h_a4d97b672844d05d81c13221afee52d08}{STANDARD\+\_\+\+TEXT}}~GRAPHICS\+\_\+\+COLOR\+\_\+\+BLACK
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\+\_\+\+State}} \mbox{\hyperlink{graphics_8h_a1cae37ba5d722de4ee5605bc2b4917ba}{Graphics\+\_\+\+State}}
+\item 
+typedef enum \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\+\_\+\+State}} \mbox{\hyperlink{graphics_8h_a635cd2b2c025e0faca83524f99497521}{Button\+\_\+\+State}}
+\item 
+typedef struct Graphics\+\_\+\+Text \mbox{\hyperlink{graphics_8h_a746b158abfda08e932f08f16761dd2c1}{Graphics\+\_\+\+Text}}
+\item 
+typedef struct Graphics\+\_\+\+Circle \mbox{\hyperlink{graphics_8h_a62d81805167d8ee31299c7c2197a113e}{Graphics\+\_\+\+Circle}}
+\item 
+typedef struct Graphics\+\_\+\+Button \mbox{\hyperlink{graphics_8h_a37f0efc94429c07727a0dba3bf2e48b7}{Graphics\+\_\+\+Button}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\+\_\+\+State}} \{ \newline
+\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca9ff8b8c78539457b03a06689f98c6579}{START\+\_\+\+GR}}
+, \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807cab76859fb31ae59096e234a3f32eac4f7}{DIMENSION}}
+, \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca2db221072c42a368311e9ff9e591c584}{DIFFICULTY}}
+, \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca661b0215f708ebf8454810da5c4fe2e5}{TENTATIVE}}
+, \newline
+\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca6d440938d91224d2c2351b32d522bb40}{DOUBLES}}
+, \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca748005382152808a72b1a9177d9dc806}{INFO}}
+, \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807cad50cf309d7568040619ed26ee6835a84}{GAME}}
+, \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca391100608a514cd425d071136fac498c}{CHRONOLOGY}}
+, \newline
+\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807cadc6f24fd6915a3f2786a1b7045406924}{END}}
+, \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca244ec924285947908ff227bdc3aa8a40}{ERROR\+\_\+\+GR}}
+ \}
+\item 
+enum \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\+\_\+\+State}} \{ \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}{STANDARD}}
+, \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}{FOCUSED}}
+, \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa02b0fb84d46d585b477a6509abf32b5d}{SELECTED}}
+, \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4}{DISABLED}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Graphics\+\_\+\+Context \mbox{\hyperlink{graphics_8h_a4569fd65666f10032b41cedc7f846aed}{gr\+Context}}
+\item 
+\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\+\_\+\+State}} \mbox{\hyperlink{graphics_8h_adf89d24d3f59b9ae77dc9340316f59f8}{display\+\_\+position}}
+\item 
+int8\+\_\+t \mbox{\hyperlink{graphics_8h_af632d8673901ae9a66343372f04d391f}{sizes}} \mbox{[}\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca244ec924285947908ff227bdc3aa8a40}{ERROR\+\_\+\+GR}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{graphics_8h_a42f7447fc6bf1635714d5568348f3e18}\index{graphics.h@{graphics.h}!BACKGROUND\_STANDARD\_COLOR@{BACKGROUND\_STANDARD\_COLOR}}
+\index{BACKGROUND\_STANDARD\_COLOR@{BACKGROUND\_STANDARD\_COLOR}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{BACKGROUND\_STANDARD\_COLOR}{BACKGROUND\_STANDARD\_COLOR}}
+{\footnotesize\ttfamily \label{graphics_8h_a42f7447fc6bf1635714d5568348f3e18} 
+\#define BACKGROUND\+\_\+\+STANDARD\+\_\+\+COLOR~GRAPHICS\+\_\+\+COLOR\+\_\+\+WHITE}
+
+\Hypertarget{graphics_8h_a282a82183c454fa5a58576d70e5d3b6d}\index{graphics.h@{graphics.h}!BORDER\_FOCUSED\_COLOR@{BORDER\_FOCUSED\_COLOR}}
+\index{BORDER\_FOCUSED\_COLOR@{BORDER\_FOCUSED\_COLOR}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{BORDER\_FOCUSED\_COLOR}{BORDER\_FOCUSED\_COLOR}}
+{\footnotesize\ttfamily \label{graphics_8h_a282a82183c454fa5a58576d70e5d3b6d} 
+\#define BORDER\+\_\+\+FOCUSED\+\_\+\+COLOR~GRAPHICS\+\_\+\+COLOR\+\_\+\+RED}
+
+\Hypertarget{graphics_8h_a8dea70f4f3d0da8542a16fd0457acfae}\index{graphics.h@{graphics.h}!BORDER\_SELECTED\_COLOR@{BORDER\_SELECTED\_COLOR}}
+\index{BORDER\_SELECTED\_COLOR@{BORDER\_SELECTED\_COLOR}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{BORDER\_SELECTED\_COLOR}{BORDER\_SELECTED\_COLOR}}
+{\footnotesize\ttfamily \label{graphics_8h_a8dea70f4f3d0da8542a16fd0457acfae} 
+\#define BORDER\+\_\+\+SELECTED\+\_\+\+COLOR~GRAPHICS\+\_\+\+COLOR\+\_\+\+BLACK}
+
+\Hypertarget{graphics_8h_ad87fb76705c96c65a07cfd4be2181da0}\index{graphics.h@{graphics.h}!DISABLED\_COLOR@{DISABLED\_COLOR}}
+\index{DISABLED\_COLOR@{DISABLED\_COLOR}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{DISABLED\_COLOR}{DISABLED\_COLOR}}
+{\footnotesize\ttfamily \label{graphics_8h_ad87fb76705c96c65a07cfd4be2181da0} 
+\#define DISABLED\+\_\+\+COLOR~GRAPHICS\+\_\+\+COLOR\+\_\+\+GRAY}
+
+\Hypertarget{graphics_8h_a23e93df8e4d47d69b865c32294c78944}\index{graphics.h@{graphics.h}!FILL\_MOVEMENT@{FILL\_MOVEMENT}}
+\index{FILL\_MOVEMENT@{FILL\_MOVEMENT}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{FILL\_MOVEMENT}{FILL\_MOVEMENT}}
+{\footnotesize\ttfamily \label{graphics_8h_a23e93df8e4d47d69b865c32294c78944} 
+\#define FILL\+\_\+\+MOVEMENT~GRAPHICS\+\_\+\+COLOR\+\_\+\+CYAN}
+
+\Hypertarget{graphics_8h_a87d6014c8c5062ea98d740402e3ca656}\index{graphics.h@{graphics.h}!FILL\_UPPER\_RECT@{FILL\_UPPER\_RECT}}
+\index{FILL\_UPPER\_RECT@{FILL\_UPPER\_RECT}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{FILL\_UPPER\_RECT}{FILL\_UPPER\_RECT}}
+{\footnotesize\ttfamily \label{graphics_8h_a87d6014c8c5062ea98d740402e3ca656} 
+\#define FILL\+\_\+\+UPPER\+\_\+\+RECT~GRAPHICS\+\_\+\+COLOR\+\_\+\+BLUE}
+
+\Hypertarget{graphics_8h_a081ec3045cbcbfb1d4e12db0ab094bcc}\index{graphics.h@{graphics.h}!SELECTED\_COLOR@{SELECTED\_COLOR}}
+\index{SELECTED\_COLOR@{SELECTED\_COLOR}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{SELECTED\_COLOR}{SELECTED\_COLOR}}
+{\footnotesize\ttfamily \label{graphics_8h_a081ec3045cbcbfb1d4e12db0ab094bcc} 
+\#define SELECTED\+\_\+\+COLOR~GRAPHICS\+\_\+\+COLOR\+\_\+\+WHITE}
+
+\Hypertarget{graphics_8h_af72601ff9dd4a9c49ac9ba750ee17553}\index{graphics.h@{graphics.h}!STANDARD\_COLOR@{STANDARD\_COLOR}}
+\index{STANDARD\_COLOR@{STANDARD\_COLOR}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{STANDARD\_COLOR}{STANDARD\_COLOR}}
+{\footnotesize\ttfamily \label{graphics_8h_af72601ff9dd4a9c49ac9ba750ee17553} 
+\#define STANDARD\+\_\+\+COLOR~GRAPHICS\+\_\+\+COLOR\+\_\+\+BLACK}
+
+\Hypertarget{graphics_8h_a4d97b672844d05d81c13221afee52d08}\index{graphics.h@{graphics.h}!STANDARD\_TEXT@{STANDARD\_TEXT}}
+\index{STANDARD\_TEXT@{STANDARD\_TEXT}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{STANDARD\_TEXT}{STANDARD\_TEXT}}
+{\footnotesize\ttfamily \label{graphics_8h_a4d97b672844d05d81c13221afee52d08} 
+\#define STANDARD\+\_\+\+TEXT~GRAPHICS\+\_\+\+COLOR\+\_\+\+BLACK}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{graphics_8h_a635cd2b2c025e0faca83524f99497521}\index{graphics.h@{graphics.h}!Button\_State@{Button\_State}}
+\index{Button\_State@{Button\_State}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{Button\_State}{Button\_State}}
+{\footnotesize\ttfamily \label{graphics_8h_a635cd2b2c025e0faca83524f99497521} 
+typedef enum \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\+\_\+\+State}} \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\+\_\+\+State}}}
+
+\Hypertarget{graphics_8h_a37f0efc94429c07727a0dba3bf2e48b7}\index{graphics.h@{graphics.h}!Graphics\_Button@{Graphics\_Button}}
+\index{Graphics\_Button@{Graphics\_Button}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{Graphics\_Button}{Graphics\_Button}}
+{\footnotesize\ttfamily \label{graphics_8h_a37f0efc94429c07727a0dba3bf2e48b7} 
+typedef struct Graphics\+\_\+\+Button Graphics\+\_\+\+Button}
+
+\Hypertarget{graphics_8h_a62d81805167d8ee31299c7c2197a113e}\index{graphics.h@{graphics.h}!Graphics\_Circle@{Graphics\_Circle}}
+\index{Graphics\_Circle@{Graphics\_Circle}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{Graphics\_Circle}{Graphics\_Circle}}
+{\footnotesize\ttfamily \label{graphics_8h_a62d81805167d8ee31299c7c2197a113e} 
+typedef struct Graphics\+\_\+\+Circle Graphics\+\_\+\+Circle}
+
+\Hypertarget{graphics_8h_a1cae37ba5d722de4ee5605bc2b4917ba}\index{graphics.h@{graphics.h}!Graphics\_State@{Graphics\_State}}
+\index{Graphics\_State@{Graphics\_State}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{Graphics\_State}{Graphics\_State}}
+{\footnotesize\ttfamily \label{graphics_8h_a1cae37ba5d722de4ee5605bc2b4917ba} 
+typedef enum \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\+\_\+\+State}} \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\+\_\+\+State}}}
+
+\Hypertarget{graphics_8h_a746b158abfda08e932f08f16761dd2c1}\index{graphics.h@{graphics.h}!Graphics\_Text@{Graphics\_Text}}
+\index{Graphics\_Text@{Graphics\_Text}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{Graphics\_Text}{Graphics\_Text}}
+{\footnotesize\ttfamily \label{graphics_8h_a746b158abfda08e932f08f16761dd2c1} 
+typedef struct Graphics\+\_\+\+Text Graphics\+\_\+\+Text}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}\index{graphics.h@{graphics.h}!Button\_State@{Button\_State}}
+\index{Button\_State@{Button\_State}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{Button\_State}{Button\_State}}
+{\footnotesize\ttfamily \label{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f} 
+enum \mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\+\_\+\+State}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STANDARD@{STANDARD}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!STANDARD@{STANDARD}}}\Hypertarget{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e}\label{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa9de934790934fe831fe946c851e8338e} 
+STANDARD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FOCUSED@{FOCUSED}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!FOCUSED@{FOCUSED}}}\Hypertarget{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d}\label{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa73ed127a679816b5f99c07df94c4f04d} 
+FOCUSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SELECTED@{SELECTED}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!SELECTED@{SELECTED}}}\Hypertarget{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa02b0fb84d46d585b477a6509abf32b5d}\label{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa02b0fb84d46d585b477a6509abf32b5d} 
+SELECTED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISABLED@{DISABLED}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!DISABLED@{DISABLED}}}\Hypertarget{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4}\label{graphics_8h_a7fd021312aff57a6c6959f0e7990e21fa40f39385238042f6ec0cbac821a19fc4} 
+DISABLED&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}\index{graphics.h@{graphics.h}!Graphics\_State@{Graphics\_State}}
+\index{Graphics\_State@{Graphics\_State}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{Graphics\_State}{Graphics\_State}}
+{\footnotesize\ttfamily \label{graphics_8h_a007742ee04d240ec30c27eb99ff4807c} 
+enum \mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\+\_\+\+State}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{START\_GR@{START\_GR}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!START\_GR@{START\_GR}}}\Hypertarget{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca9ff8b8c78539457b03a06689f98c6579}\label{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca9ff8b8c78539457b03a06689f98c6579} 
+START\+\_\+\+GR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIMENSION@{DIMENSION}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!DIMENSION@{DIMENSION}}}\Hypertarget{graphics_8h_a007742ee04d240ec30c27eb99ff4807cab76859fb31ae59096e234a3f32eac4f7}\label{graphics_8h_a007742ee04d240ec30c27eb99ff4807cab76859fb31ae59096e234a3f32eac4f7} 
+DIMENSION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIFFICULTY@{DIFFICULTY}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!DIFFICULTY@{DIFFICULTY}}}\Hypertarget{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca2db221072c42a368311e9ff9e591c584}\label{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca2db221072c42a368311e9ff9e591c584} 
+DIFFICULTY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TENTATIVE@{TENTATIVE}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!TENTATIVE@{TENTATIVE}}}\Hypertarget{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca661b0215f708ebf8454810da5c4fe2e5}\label{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca661b0215f708ebf8454810da5c4fe2e5} 
+TENTATIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOUBLES@{DOUBLES}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!DOUBLES@{DOUBLES}}}\Hypertarget{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca6d440938d91224d2c2351b32d522bb40}\label{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca6d440938d91224d2c2351b32d522bb40} 
+DOUBLES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFO@{INFO}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!INFO@{INFO}}}\Hypertarget{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca748005382152808a72b1a9177d9dc806}\label{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca748005382152808a72b1a9177d9dc806} 
+INFO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME@{GAME}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!GAME@{GAME}}}\Hypertarget{graphics_8h_a007742ee04d240ec30c27eb99ff4807cad50cf309d7568040619ed26ee6835a84}\label{graphics_8h_a007742ee04d240ec30c27eb99ff4807cad50cf309d7568040619ed26ee6835a84} 
+GAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHRONOLOGY@{CHRONOLOGY}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!CHRONOLOGY@{CHRONOLOGY}}}\Hypertarget{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca391100608a514cd425d071136fac498c}\label{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca391100608a514cd425d071136fac498c} 
+CHRONOLOGY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{END@{END}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!END@{END}}}\Hypertarget{graphics_8h_a007742ee04d240ec30c27eb99ff4807cadc6f24fd6915a3f2786a1b7045406924}\label{graphics_8h_a007742ee04d240ec30c27eb99ff4807cadc6f24fd6915a3f2786a1b7045406924} 
+END&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_GR@{ERROR\_GR}!graphics.h@{graphics.h}}\index{graphics.h@{graphics.h}!ERROR\_GR@{ERROR\_GR}}}\Hypertarget{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca244ec924285947908ff227bdc3aa8a40}\label{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca244ec924285947908ff227bdc3aa8a40} 
+ERROR\+\_\+\+GR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{graphics_8h_adf89d24d3f59b9ae77dc9340316f59f8}\index{graphics.h@{graphics.h}!display\_position@{display\_position}}
+\index{display\_position@{display\_position}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_position}{display\_position}}
+{\footnotesize\ttfamily \label{graphics_8h_adf89d24d3f59b9ae77dc9340316f59f8} 
+\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807c}{Graphics\+\_\+\+State}} display\+\_\+position\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{graphics_8h_a4569fd65666f10032b41cedc7f846aed}\index{graphics.h@{graphics.h}!grContext@{grContext}}
+\index{grContext@{grContext}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{grContext}{grContext}}
+{\footnotesize\ttfamily \label{graphics_8h_a4569fd65666f10032b41cedc7f846aed} 
+Graphics\+\_\+\+Context gr\+Context}
+
+\Hypertarget{graphics_8h_af632d8673901ae9a66343372f04d391f}\index{graphics.h@{graphics.h}!sizes@{sizes}}
+\index{sizes@{sizes}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{sizes}{sizes}}
+{\footnotesize\ttfamily \label{graphics_8h_af632d8673901ae9a66343372f04d391f} 
+int8\+\_\+t sizes\mbox{[}\mbox{\hyperlink{graphics_8h_a007742ee04d240ec30c27eb99ff4807ca244ec924285947908ff227bdc3aa8a40}{ERROR\+\_\+\+GR}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+

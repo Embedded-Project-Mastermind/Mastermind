@@ -1,0 +1,21 @@
+<map id="drawCircles" name="drawCircles">
+<area shape="rect" id="Node000001" title="Management and color of the circles on screen." alt="" coords="563,56,654,82"/>
+<area shape="rect" id="Node000002" href="$chronology_8c.html#a81594cf52b75532bb168949c0d58ed93" title="function that create buttons and text for the Chronology screen" alt="" coords="400,19,515,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="547,57,512,48,513,42,549,51"/>
+<area shape="rect" id="Node000004" href="$game_8c.html#add55822234a04e4988e3f9716a8e3cd9" title="Implicit Call that is invoked when we arrive at GAME state in GUI FSM and primarly draw the static el..." alt="" coords="418,80,497,106"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="548,81,498,89,497,84,547,76"/>
+<area shape="rect" id="Node000003" href="$chronology_8c.html#a77703c37a23665ce74ccea44a084a247" title="functions that create the Chronology screen starting from resetting the previous screen" alt="" coords="217,5,352,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="384,29,352,26,353,21,384,23"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic2_8c.html#a2aac7e2824658f8ac7c8b8446fff0c9c" title="deletes the last color into the user&#39;s sequence if it is not empty" alt="" coords="230,55,338,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="403,88,338,78,339,73,403,82"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic2_8c.html#aaf32eada42d315c1c42b5e21d002f1aa" title="inserts the selected color into the user&#39;s sequence if space is available" alt="" coords="240,104,328,130"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="403,103,329,113,328,108,403,98"/>
+<area shape="rect" id="Node000009" href="$general_2gamelogic1_8c.html#a349e30260991f4d42dc6e3b575108891" title="After each input sequence is analyzed the tentative is all reinitialized with an incrementation of th..." alt="" coords="233,153,336,179"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="417,115,353,145,326,155,324,150,351,140,415,111"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic2_8c.html#a135da966b746514db883735bf010382f" title=" " alt="" coords="5,55,169,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="215,70,169,70,169,65,215,65"/>
+<area shape="rect" id="Node000008" href="$general_2gamelogic2_8c.html#a6639e69c4f94296b4ed63b9471ba37e8" title=" " alt="" coords="15,104,159,130"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="225,120,159,120,159,114,225,114"/>
+<area shape="rect" id="Node000010" href="$general_2gamelogic1_8c.html#aea19573b1ff72f6c1ccf31fca44008e0" title=" " alt="" coords="24,153,150,179"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="217,169,151,169,151,164,217,164"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="crypt_sequence_Int_Char" name="crypt_sequence_Int_Char">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="224,31,394,56"/>
+<area shape="rect" id="Node000002" href="$src_2gamelogic1_8c.html#a8b4ee684b1ca644f070b168b3c6fb54c" title=" " alt="" coords="5,5,176,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,35,176,31,177,25,209,29"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a2700fd085c33e4ef923ab449276a578f" title="Analysis and parsing of the integer sequence to the char one, with an appropriate deallocation of the..." alt="" coords="5,55,176,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,57,177,61,176,55,208,52"/>
+</map>

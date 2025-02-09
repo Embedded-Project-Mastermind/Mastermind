@@ -1,0 +1,65 @@
+<map id="upfunctions" name="upfunctions">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,281,94,307"/>
+<area shape="rect" id="Node000002" href="$chronology_8c.html#ad774f58034bd7f8cb0c570021307df20" title="manage what to do when the user moves the stick up" alt="" coords="142,132,310,158"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,279,93,238,140,192,183,164,186,168,143,196,97,242,63,282"/>
+<area shape="rect" id="Node000011" href="$difficulty_8c.html#a5db0b76e31fb4a7fbc93ffc09473cec9" title="Action that the menu performs when the stick goes up, primarly changing selection and imposing logic ..." alt="" coords="151,207,301,232"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="70,279,141,241,156,235,158,240,143,246,73,283"/>
+<area shape="rect" id="Node000022" href="$dimension_8c.html#a68da15d7a690c47b33fa100902f82420" title="handles the up movement of the stick" alt="" coords="151,355,300,380"/>
+<area shape="poly" id="edge27_Node000001_Node000022" title=" " alt="" coords="73,305,143,341,158,347,157,352,141,346,71,310"/>
+<area shape="rect" id="Node000024" href="$doubles_8c.html#a73b8fe01f7507192f7e9bf9b2a916df9" title="manage what to do when the user moves the stick up" alt="" coords="158,256,294,282"/>
+<area shape="poly" id="edge31_Node000001_Node000024" title=" " alt="" coords="94,285,142,278,142,284,95,290"/>
+<area shape="rect" id="Node000025" href="$info_8c.html#acd0f3a05db618f1ed3def25ff22bba2d" title=" " alt="" coords="174,404,278,430"/>
+<area shape="poly" id="edge34_Node000001_Node000025" title=" " alt="" coords="62,306,94,348,117,371,143,391,160,399,158,404,140,395,114,375,90,351,57,309"/>
+<area shape="rect" id="Node000026" href="$tentatives_8c.html#a2f3f309351ef49408ab306d80f801256" title=" " alt="" coords="153,305,298,331"/>
+<area shape="poly" id="edge35_Node000001_Node000026" title=" " alt="" coords="95,298,138,304,137,309,94,303"/>
+<area shape="rect" id="Node000003" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="TODO: Describe function." alt="" coords="359,131,442,156"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,142,344,141,344,147,310,147"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="932,181,1047,207"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="443,144,916,185,916,191,442,150"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="758,131,843,156"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="443,141,742,141,742,146,443,146"/>
+<area shape="rect" id="Node000007" href="$chronology_8c.html#af95f3e53eb47667a4ae3da13fecc23d1" title="TODO: Describe function." alt="" coords="491,80,673,106"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="442,129,518,108,520,113,444,134"/>
+<area shape="rect" id="Node000008" href="$chronology_8c.html#a7ec7903a95121d6e773888be9b0176eb" title="TODO: Describe function." alt="" coords="493,31,671,56"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="412,128,445,97,490,65,501,60,504,65,493,70,449,101,416,132"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="844,152,924,174,923,179,843,157"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="932,131,1046,156"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="843,141,917,141,917,146,843,146"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="641,104,743,128,742,133,640,109"/>
+<area shape="rect" id="Node000009" href="$chronology_8c.html#af4804828a994a0d76b79da462ad1580a" title="TODO: Describe function." alt="" coords="721,55,880,80"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="671,51,705,54,705,60,671,56"/>
+<area shape="rect" id="Node000010" href="$game_8c.html#afe0d6ca1d0ba6b6e45490d996b21cdac" title="Action that the menu performs when the stick goes left, primarly changing selection and imposing logi..." alt="" coords="757,5,844,31"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="671,31,741,22,742,28,671,36"/>
+<area shape="rect" id="Node000012" href="$difficulty_8c.html#abe9c02f90a494b0d60669e280db89c2d" title="Draw Text Description according to the difficulty selected in order to explain to the user what that ..." alt="" coords="364,207,438,232"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="301,217,348,217,348,222,301,222"/>
+<area shape="rect" id="Node000014" href="$implementations_8c.html#a0f3ea1e3abed721e539b1332079664c4" title=" " alt="" coords="366,256,436,282"/>
+<area shape="poly" id="edge15_Node000011_Node000014" title=" " alt="" coords="275,230,351,252,350,257,273,236"/>
+<area shape="rect" id="Node000021" href="$implementations_8c.html#a7850b120bb168cda34d0ff446cd53845" title=" " alt="" coords="360,305,441,331"/>
+<area shape="poly" id="edge24_Node000011_Node000021" title=" " alt="" coords="289,230,311,241,327,254,337,266,346,279,360,292,363,295,360,299,356,296,342,282,333,269,323,257,309,246,286,235"/>
+<area shape="rect" id="Node000013" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title=" " alt="" coords="535,256,629,282"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="439,227,521,250,520,255,437,232"/>
+<area shape="poly" id="edge23_Node000014_Node000013" title=" " alt="" coords="436,266,519,266,519,272,436,272"/>
+<area shape="rect" id="Node000015" href="$implementations_8c.html#ada4cd14b9689d4fe9b9de328e4724964" title=" " alt="" coords="538,305,626,331"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="437,276,492,292,524,300,523,305,491,297,436,281"/>
+<area shape="rect" id="Node000016" href="$implementations_8c.html#a17fb5785fa10393596b1c10e580fee1b" title=" " alt="" coords="928,356,1050,382"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="612,329,662,350,721,366,770,373,820,375,912,373,912,379,820,381,770,378,720,371,660,355,610,334"/>
+<area shape="rect" id="Node000017" href="$implementations_8c.html#ac2bb0254f8bef6f471cc1e1e4aff3fb2" title=" " alt="" coords="741,432,860,458"/>
+<area shape="poly" id="edge18_Node000015_Node000017" title=" " alt="" coords="601,329,654,368,722,410,749,423,746,428,719,415,651,372,598,334"/>
+<area shape="rect" id="Node000018" href="$implementations_8c.html#aaa2bed682fe325d72adc6d9ee50b15b9" title=" " alt="" coords="748,331,853,356"/>
+<area shape="poly" id="edge19_Node000015_Node000018" title=" " alt="" coords="626,321,733,333,732,338,626,326"/>
+<area shape="rect" id="Node000019" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="750,232,851,258"/>
+<area shape="poly" id="edge21_Node000015_Node000019" title=" " alt="" coords="625,306,672,292,695,279,720,266,735,261,737,266,722,271,698,284,674,297,627,311"/>
+<area shape="rect" id="Node000020" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="750,281,851,307"/>
+<area shape="poly" id="edge22_Node000015_Node000020" title=" " alt="" coords="626,311,734,299,735,304,626,316"/>
+<area shape="poly" id="edge20_Node000018_Node000016" title=" " alt="" coords="854,348,913,356,912,361,853,353"/>
+<area shape="poly" id="edge26_Node000021_Node000013" title=" " alt="" coords="440,304,491,290,519,282,521,288,492,295,442,310"/>
+<area shape="poly" id="edge25_Node000021_Node000015" title=" " alt="" coords="441,316,523,316,523,321,441,321"/>
+<area shape="poly" id="edge29_Node000022_Node000014" title=" " alt="" coords="286,352,309,341,323,330,333,318,342,305,356,291,360,288,363,292,360,295,346,308,337,321,327,333,311,346,289,357"/>
+<area shape="poly" id="edge30_Node000022_Node000021" title=" " alt="" coords="273,351,345,331,346,336,275,357"/>
+<area shape="rect" id="Node000023" href="$dimension_8c.html#aa38b30924148a4b57c31d71a60aa6e4f" title="manages the font dimension for the buttons" alt="" coords="358,355,443,380"/>
+<area shape="poly" id="edge28_Node000022_Node000023" title=" " alt="" coords="301,365,342,365,342,370,301,370"/>
+<area shape="poly" id="edge32_Node000024_Node000014" title=" " alt="" coords="294,266,350,266,350,272,294,272"/>
+<area shape="poly" id="edge33_Node000024_Node000021" title=" " alt="" coords="275,280,346,300,345,305,273,285"/>
+<area shape="poly" id="edge36_Node000026_Node000014" title=" " alt="" coords="273,302,350,280,351,285,275,307"/>
+<area shape="poly" id="edge37_Node000026_Node000021" title=" " alt="" coords="299,316,345,316,345,321,299,321"/>
+</map>

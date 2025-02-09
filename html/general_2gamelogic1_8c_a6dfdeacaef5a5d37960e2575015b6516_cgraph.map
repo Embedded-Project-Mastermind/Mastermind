@@ -1,0 +1,28 @@
+<map id="fn_KEY_WOUT_DOUB" name="fn_KEY_WOUT_DOUB">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,105,166,131"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a2700fd085c33e4ef923ab449276a578f" title="Analysis and parsing of the integer sequence to the char one, with an appropriate deallocation of the..." alt="" coords="218,56,388,82"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,102,228,83,229,88,146,107"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#a3abce2284f44af7203a666506074b873" title="Generation of a random key that doesn&#39;t allow the presence of duplicates colors." alt="" coords="214,131,393,156"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="166,125,199,129,198,134,165,130"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#ad98031ef2f3f36bce040eaab871947a0" title="Convertion of an array from the integer format to the char format." alt="" coords="441,5,611,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,53,451,32,452,38,364,58"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#abde743d0b9f0e17fd8bf287087cf5f06" title="Deallocate memory for an integer array setting then that allocation to null for being sure." alt="" coords="689,56,791,82"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="389,66,674,66,674,72,389,72"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#ad357af7f6265beb9d391aa89a092ba39" title="Convertion of a element from the integer format to the char format." alt="" coords="659,5,821,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="612,16,644,16,644,21,612,21"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#a69fca538b5b36e3923f0f33c8f62f262" title="Allocation for an integer array, ensuring that it is not already allocated." alt="" coords="454,107,598,132"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="393,131,438,126,439,132,394,136"/>
+<area shape="rect" id="Node000012" href="$general_2gamelogic1_8c.html#af42b50d4086354e6b49eac80239cd8d4" title="Check if the array has already a value that I would like to insert in it." alt="" coords="465,156,587,182"/>
+<area shape="poly" id="edge12_Node000006_Node000012" title=" " alt="" coords="394,151,450,158,449,163,393,156"/>
+<area shape="rect" id="Node000013" href="$general_2gamelogic1_8c.html#a5e9db8c78f3d92aa520e8ebd811aa3a9" title="Generation of a random integer with two limits." alt="" coords="484,205,569,231"/>
+<area shape="poly" id="edge13_Node000006_Node000013" title=" " alt="" coords="339,154,442,192,469,200,468,205,440,197,338,159"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="583,103,673,82,675,87,584,109"/>
+<area shape="rect" id="Node000008" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="697,107,783,132"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="598,117,682,117,682,122,598,122"/>
+<area shape="rect" id="Node000011" href="$general_2gamelogic1_8c.html#a85f585c5cf928dd3f6aa31b07f4ff1f1" title="Initialization for an integer array setting to its default state." alt="" coords="668,156,812,182"/>
+<area shape="poly" id="edge11_Node000007_Node000011" title=" " alt="" coords="586,130,667,149,666,155,585,136"/>
+<area shape="rect" id="Node000009" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="870,83,983,108"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="783,111,854,102,855,107,783,117"/>
+<area shape="rect" id="Node000010" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="869,132,984,158"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="783,123,854,132,853,138,783,128"/>
+</map>

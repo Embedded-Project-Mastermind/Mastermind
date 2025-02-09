@@ -1,0 +1,547 @@
+\doxysection{Lcd\+Driver/\+Crystalfontz128x128\+\_\+\+ST7735.h File Reference}
+\hypertarget{_crystalfontz128x128___s_t7735_8h}{}\label{_crystalfontz128x128___s_t7735_8h}\index{LcdDriver/Crystalfontz128x128\_ST7735.h@{LcdDriver/Crystalfontz128x128\_ST7735.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$ti/devices/msp432p4xx/driverlib/driverlib.\+h$>$}\newline
+{\ttfamily \#include $<$ti/grlib/grlib.\+h$>$}\newline
+Include dependency graph for Crystalfontz128x128\+\_\+\+ST7735.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_afa86a7acc44d76290436f989ca29c947}{LCD\+\_\+\+VERTICAL\+\_\+\+MAX}}~128
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a50814282962649853dea54d976b468fb}{LCD\+\_\+\+HORIZONTAL\+\_\+\+MAX}}~128
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a0b6562b48782835a7786ac16aa789398}{LCD\+\_\+\+ORIENTATION\+\_\+\+UP}}~0
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a2501cb4d06dc32a66722633803d0b3aa}{LCD\+\_\+\+ORIENTATION\+\_\+\+LEFT}}~1
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a6c7cc2f72a05cf469dd94d5cba327b39}{LCD\+\_\+\+ORIENTATION\+\_\+\+DOWN}}~2
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a69911fe7d020d10ced9ad557b71c0c6c}{LCD\+\_\+\+ORIENTATION\+\_\+\+RIGHT}}~3
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a31f42ac66b875abe771893c8cce4b5dd}{CM\+\_\+\+NOP}}~0x00
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_aae5e6f0c51934f407731ce1cccaade54}{CM\+\_\+\+SWRESET}}~0x01
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_af34ecd484c1db47403d6348b73297de0}{CM\+\_\+\+RDDID}}~0x04
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a5df08f74d722c95578fb37baba35fa8b}{CM\+\_\+\+RDDST}}~0x09
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a9b8a42c3bcc9f90bc5f8b9dc070235e5}{CM\+\_\+\+SLPIN}}~0x10
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_adde0fef70d997f02c472a92103aef3ce}{CM\+\_\+\+SLPOUT}}~0x11
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a24a09ce3b108ccafd0a5c23c3f893961}{CM\+\_\+\+PTLON}}~0x12
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a768a76022ebe0885ca1d5ca2fc2220f4}{CM\+\_\+\+NORON}}~0x13
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_ac6889a04163d68e8ca40846d53c5fbcc}{CM\+\_\+\+INVOFF}}~0x20
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_aade492180cc630124eab43c71741f0fb}{CM\+\_\+\+INVON}}~0x21
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_ae1bdc83e01d56907428452bd1a363f69}{CM\+\_\+\+GAMSET}}~0x26
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_aeaba2128de13dad505bb030a4cfd695f}{CM\+\_\+\+DISPOFF}}~0x28
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_adf687b27699974b2175e890903acfd7d}{CM\+\_\+\+DISPON}}~0x29
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_aec59c38e3b974ffada574582a7079acb}{CM\+\_\+\+CASET}}~0x2A
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a5b82f6adbf7db717236b80db5c52843e}{CM\+\_\+\+RASET}}~0x2B
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a8a3c0ca2a15778603b48ea2938e0c921}{CM\+\_\+\+RAMWR}}~0x2C
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a9caeda318495230fe347e9f046ec75ab}{CM\+\_\+\+RGBSET}}~0x2d
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a8359acdd7c9a3b9f3089802c1af27261}{CM\+\_\+\+RAMRD}}~0x2E
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a85e9bbcce6a2d2a56687d0ae57450736}{CM\+\_\+\+PTLAR}}~0x30
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a3f95462f91f936e1c574b0ebbfac5e01}{CM\+\_\+\+MADCTL}}~0x36
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a3639e7e3c526589a81349bc0427d30db}{CM\+\_\+\+COLMOD}}~0x3A
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_ac607bc3d615bee8dc4e78fe25ce03f4c}{CM\+\_\+\+SETPWCTR}}~0x\+B1
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_aef37f319f58c29f2f187fd7fb9de4968}{CM\+\_\+\+SETDISPL}}~0x\+B2
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a65dfdaa82c4f5378ab510bada425a34b}{CM\+\_\+\+FRMCTR3}}~0x\+B3
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_ad00e20c790e630d8d8a545744e9b976b}{CM\+\_\+\+SETCYC}}~0x\+B4
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_aaa2c731c5de3c484eb70ba0f81dfa7da}{CM\+\_\+\+SETBGP}}~0xb5
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a083e05393c8fd090cd612693b22ed9d5}{CM\+\_\+\+SETVCOM}}~0x\+B6
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a396b168fff855b82d715fd44572756fe}{CM\+\_\+\+SETSTBA}}~0x\+C0
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a982e72ec41ef20fa18aef58aedc0bc54}{CM\+\_\+\+SETID}}~0x\+C3
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a21b7b8c2b55f29b94ce32915f900c764}{CM\+\_\+\+GETHID}}~0xd0
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_aa9154a67efc63fa5aebaee6cbadd6a6e}{CM\+\_\+\+SETGAMMA}}~0x\+E0
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a38495b3b5d517e3e1655df7db8d5e96c}{CM\+\_\+\+MADCTL\+\_\+\+MY}}~0x80
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a58db1cc44ce37ef4b0d92a2313084c33}{CM\+\_\+\+MADCTL\+\_\+\+MX}}~0x40
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a3f54c205a1800a41a8c1e08fa769e563}{CM\+\_\+\+MADCTL\+\_\+\+MV}}~0x20
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a90d5b70fdb5556a7b87303c01e65176a}{CM\+\_\+\+MADCTL\+\_\+\+ML}}~0x10
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_ac41180d504f3cb3919f1e981e5faf2fc}{CM\+\_\+\+MADCTL\+\_\+\+BGR}}~0x08
+\item 
+\#define \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_ae3d4870fd43f455336d4ed12234f220f}{CM\+\_\+\+MADCTL\+\_\+\+MH}}~0x04
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a57fc5401db822d071b765c1da259cbbb}{Crystalfontz128x128\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_ad9797a45a3c4294a68b645f07ac55709}{Crystalfontz128x128\+\_\+\+Set\+Draw\+Frame}} (uint16\+\_\+t x0, uint16\+\_\+t y0, uint16\+\_\+t x1, uint16\+\_\+t y1)
+\item 
+void \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_abadfb1254106e9afffc448eb6feefeeb}{Crystalfontz128x128\+\_\+\+Set\+Orientation}} (uint8\+\_\+t orientation)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_ac795b16144e4966736f3b26a330fbe3b}{Lcd\+\_\+\+Orientation}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a3507ce8d7321c6322734e843c1c2e449}{Lcd\+\_\+\+Screen\+Width}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_ab2e849d49c54e8f4a897ee7a2c38add6}{Lcd\+\_\+\+Screen\+Heigth}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a86ff3802845e32cbe44c3766374ba5a2}{Lcd\+\_\+\+Pen\+Solid}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a01b82ab1a0b89dda64219f2a0e56fdbc}{Lcd\+\_\+\+Font\+Solid}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a8cffaf6cacf0e2c4e453d208da65e3e9}{Lcd\+\_\+\+Flag\+Read}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a12bb9018fc8117660b31d6650fd077d5}{Lcd\+\_\+\+Touch\+Trim}}
+\item 
+Graphics\+\_\+\+Display \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_ac7889de27d0b644f0da5c3a6158011fb}{g\+\_\+s\+Crystalfontz128x128}}
+\item 
+const Graphics\+\_\+\+Display\+\_\+\+Functions \mbox{\hyperlink{_crystalfontz128x128___s_t7735_8h_a9553353f2fcf8d55ddcc16a681fab741}{g\+\_\+s\+Crystalfontz128x128\+\_\+funcs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_aec59c38e3b974ffada574582a7079acb}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_CASET@{CM\_CASET}}
+\index{CM\_CASET@{CM\_CASET}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_CASET}{CM\_CASET}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_aec59c38e3b974ffada574582a7079acb} 
+\#define CM\+\_\+\+CASET~0x2A}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a3639e7e3c526589a81349bc0427d30db}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_COLMOD@{CM\_COLMOD}}
+\index{CM\_COLMOD@{CM\_COLMOD}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_COLMOD}{CM\_COLMOD}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a3639e7e3c526589a81349bc0427d30db} 
+\#define CM\+\_\+\+COLMOD~0x3A}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_aeaba2128de13dad505bb030a4cfd695f}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_DISPOFF@{CM\_DISPOFF}}
+\index{CM\_DISPOFF@{CM\_DISPOFF}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_DISPOFF}{CM\_DISPOFF}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_aeaba2128de13dad505bb030a4cfd695f} 
+\#define CM\+\_\+\+DISPOFF~0x28}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_adf687b27699974b2175e890903acfd7d}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_DISPON@{CM\_DISPON}}
+\index{CM\_DISPON@{CM\_DISPON}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_DISPON}{CM\_DISPON}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_adf687b27699974b2175e890903acfd7d} 
+\#define CM\+\_\+\+DISPON~0x29}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a65dfdaa82c4f5378ab510bada425a34b}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_FRMCTR3@{CM\_FRMCTR3}}
+\index{CM\_FRMCTR3@{CM\_FRMCTR3}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_FRMCTR3}{CM\_FRMCTR3}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a65dfdaa82c4f5378ab510bada425a34b} 
+\#define CM\+\_\+\+FRMCTR3~0x\+B3}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_ae1bdc83e01d56907428452bd1a363f69}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_GAMSET@{CM\_GAMSET}}
+\index{CM\_GAMSET@{CM\_GAMSET}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_GAMSET}{CM\_GAMSET}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_ae1bdc83e01d56907428452bd1a363f69} 
+\#define CM\+\_\+\+GAMSET~0x26}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a21b7b8c2b55f29b94ce32915f900c764}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_GETHID@{CM\_GETHID}}
+\index{CM\_GETHID@{CM\_GETHID}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_GETHID}{CM\_GETHID}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a21b7b8c2b55f29b94ce32915f900c764} 
+\#define CM\+\_\+\+GETHID~0xd0}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_ac6889a04163d68e8ca40846d53c5fbcc}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_INVOFF@{CM\_INVOFF}}
+\index{CM\_INVOFF@{CM\_INVOFF}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_INVOFF}{CM\_INVOFF}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_ac6889a04163d68e8ca40846d53c5fbcc} 
+\#define CM\+\_\+\+INVOFF~0x20}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_aade492180cc630124eab43c71741f0fb}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_INVON@{CM\_INVON}}
+\index{CM\_INVON@{CM\_INVON}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_INVON}{CM\_INVON}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_aade492180cc630124eab43c71741f0fb} 
+\#define CM\+\_\+\+INVON~0x21}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a3f95462f91f936e1c574b0ebbfac5e01}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_MADCTL@{CM\_MADCTL}}
+\index{CM\_MADCTL@{CM\_MADCTL}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_MADCTL}{CM\_MADCTL}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a3f95462f91f936e1c574b0ebbfac5e01} 
+\#define CM\+\_\+\+MADCTL~0x36}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_ac41180d504f3cb3919f1e981e5faf2fc}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_MADCTL\_BGR@{CM\_MADCTL\_BGR}}
+\index{CM\_MADCTL\_BGR@{CM\_MADCTL\_BGR}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_MADCTL\_BGR}{CM\_MADCTL\_BGR}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_ac41180d504f3cb3919f1e981e5faf2fc} 
+\#define CM\+\_\+\+MADCTL\+\_\+\+BGR~0x08}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_ae3d4870fd43f455336d4ed12234f220f}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_MADCTL\_MH@{CM\_MADCTL\_MH}}
+\index{CM\_MADCTL\_MH@{CM\_MADCTL\_MH}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_MADCTL\_MH}{CM\_MADCTL\_MH}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_ae3d4870fd43f455336d4ed12234f220f} 
+\#define CM\+\_\+\+MADCTL\+\_\+\+MH~0x04}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a90d5b70fdb5556a7b87303c01e65176a}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_MADCTL\_ML@{CM\_MADCTL\_ML}}
+\index{CM\_MADCTL\_ML@{CM\_MADCTL\_ML}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_MADCTL\_ML}{CM\_MADCTL\_ML}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a90d5b70fdb5556a7b87303c01e65176a} 
+\#define CM\+\_\+\+MADCTL\+\_\+\+ML~0x10}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a3f54c205a1800a41a8c1e08fa769e563}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_MADCTL\_MV@{CM\_MADCTL\_MV}}
+\index{CM\_MADCTL\_MV@{CM\_MADCTL\_MV}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_MADCTL\_MV}{CM\_MADCTL\_MV}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a3f54c205a1800a41a8c1e08fa769e563} 
+\#define CM\+\_\+\+MADCTL\+\_\+\+MV~0x20}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a58db1cc44ce37ef4b0d92a2313084c33}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_MADCTL\_MX@{CM\_MADCTL\_MX}}
+\index{CM\_MADCTL\_MX@{CM\_MADCTL\_MX}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_MADCTL\_MX}{CM\_MADCTL\_MX}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a58db1cc44ce37ef4b0d92a2313084c33} 
+\#define CM\+\_\+\+MADCTL\+\_\+\+MX~0x40}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a38495b3b5d517e3e1655df7db8d5e96c}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_MADCTL\_MY@{CM\_MADCTL\_MY}}
+\index{CM\_MADCTL\_MY@{CM\_MADCTL\_MY}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_MADCTL\_MY}{CM\_MADCTL\_MY}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a38495b3b5d517e3e1655df7db8d5e96c} 
+\#define CM\+\_\+\+MADCTL\+\_\+\+MY~0x80}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a31f42ac66b875abe771893c8cce4b5dd}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_NOP@{CM\_NOP}}
+\index{CM\_NOP@{CM\_NOP}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_NOP}{CM\_NOP}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a31f42ac66b875abe771893c8cce4b5dd} 
+\#define CM\+\_\+\+NOP~0x00}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a768a76022ebe0885ca1d5ca2fc2220f4}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_NORON@{CM\_NORON}}
+\index{CM\_NORON@{CM\_NORON}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_NORON}{CM\_NORON}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a768a76022ebe0885ca1d5ca2fc2220f4} 
+\#define CM\+\_\+\+NORON~0x13}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a85e9bbcce6a2d2a56687d0ae57450736}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_PTLAR@{CM\_PTLAR}}
+\index{CM\_PTLAR@{CM\_PTLAR}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_PTLAR}{CM\_PTLAR}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a85e9bbcce6a2d2a56687d0ae57450736} 
+\#define CM\+\_\+\+PTLAR~0x30}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a24a09ce3b108ccafd0a5c23c3f893961}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_PTLON@{CM\_PTLON}}
+\index{CM\_PTLON@{CM\_PTLON}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_PTLON}{CM\_PTLON}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a24a09ce3b108ccafd0a5c23c3f893961} 
+\#define CM\+\_\+\+PTLON~0x12}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a8359acdd7c9a3b9f3089802c1af27261}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_RAMRD@{CM\_RAMRD}}
+\index{CM\_RAMRD@{CM\_RAMRD}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_RAMRD}{CM\_RAMRD}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a8359acdd7c9a3b9f3089802c1af27261} 
+\#define CM\+\_\+\+RAMRD~0x2E}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a8a3c0ca2a15778603b48ea2938e0c921}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_RAMWR@{CM\_RAMWR}}
+\index{CM\_RAMWR@{CM\_RAMWR}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_RAMWR}{CM\_RAMWR}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a8a3c0ca2a15778603b48ea2938e0c921} 
+\#define CM\+\_\+\+RAMWR~0x2C}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a5b82f6adbf7db717236b80db5c52843e}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_RASET@{CM\_RASET}}
+\index{CM\_RASET@{CM\_RASET}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_RASET}{CM\_RASET}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a5b82f6adbf7db717236b80db5c52843e} 
+\#define CM\+\_\+\+RASET~0x2B}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_af34ecd484c1db47403d6348b73297de0}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_RDDID@{CM\_RDDID}}
+\index{CM\_RDDID@{CM\_RDDID}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_RDDID}{CM\_RDDID}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_af34ecd484c1db47403d6348b73297de0} 
+\#define CM\+\_\+\+RDDID~0x04}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a5df08f74d722c95578fb37baba35fa8b}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_RDDST@{CM\_RDDST}}
+\index{CM\_RDDST@{CM\_RDDST}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_RDDST}{CM\_RDDST}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a5df08f74d722c95578fb37baba35fa8b} 
+\#define CM\+\_\+\+RDDST~0x09}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a9caeda318495230fe347e9f046ec75ab}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_RGBSET@{CM\_RGBSET}}
+\index{CM\_RGBSET@{CM\_RGBSET}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_RGBSET}{CM\_RGBSET}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a9caeda318495230fe347e9f046ec75ab} 
+\#define CM\+\_\+\+RGBSET~0x2d}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_aaa2c731c5de3c484eb70ba0f81dfa7da}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_SETBGP@{CM\_SETBGP}}
+\index{CM\_SETBGP@{CM\_SETBGP}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_SETBGP}{CM\_SETBGP}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_aaa2c731c5de3c484eb70ba0f81dfa7da} 
+\#define CM\+\_\+\+SETBGP~0xb5}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_ad00e20c790e630d8d8a545744e9b976b}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_SETCYC@{CM\_SETCYC}}
+\index{CM\_SETCYC@{CM\_SETCYC}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_SETCYC}{CM\_SETCYC}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_ad00e20c790e630d8d8a545744e9b976b} 
+\#define CM\+\_\+\+SETCYC~0x\+B4}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_aef37f319f58c29f2f187fd7fb9de4968}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_SETDISPL@{CM\_SETDISPL}}
+\index{CM\_SETDISPL@{CM\_SETDISPL}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_SETDISPL}{CM\_SETDISPL}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_aef37f319f58c29f2f187fd7fb9de4968} 
+\#define CM\+\_\+\+SETDISPL~0x\+B2}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_aa9154a67efc63fa5aebaee6cbadd6a6e}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_SETGAMMA@{CM\_SETGAMMA}}
+\index{CM\_SETGAMMA@{CM\_SETGAMMA}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_SETGAMMA}{CM\_SETGAMMA}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_aa9154a67efc63fa5aebaee6cbadd6a6e} 
+\#define CM\+\_\+\+SETGAMMA~0x\+E0}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a982e72ec41ef20fa18aef58aedc0bc54}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_SETID@{CM\_SETID}}
+\index{CM\_SETID@{CM\_SETID}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_SETID}{CM\_SETID}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a982e72ec41ef20fa18aef58aedc0bc54} 
+\#define CM\+\_\+\+SETID~0x\+C3}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_ac607bc3d615bee8dc4e78fe25ce03f4c}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_SETPWCTR@{CM\_SETPWCTR}}
+\index{CM\_SETPWCTR@{CM\_SETPWCTR}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_SETPWCTR}{CM\_SETPWCTR}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_ac607bc3d615bee8dc4e78fe25ce03f4c} 
+\#define CM\+\_\+\+SETPWCTR~0x\+B1}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a396b168fff855b82d715fd44572756fe}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_SETSTBA@{CM\_SETSTBA}}
+\index{CM\_SETSTBA@{CM\_SETSTBA}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_SETSTBA}{CM\_SETSTBA}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a396b168fff855b82d715fd44572756fe} 
+\#define CM\+\_\+\+SETSTBA~0x\+C0}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a083e05393c8fd090cd612693b22ed9d5}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_SETVCOM@{CM\_SETVCOM}}
+\index{CM\_SETVCOM@{CM\_SETVCOM}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_SETVCOM}{CM\_SETVCOM}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a083e05393c8fd090cd612693b22ed9d5} 
+\#define CM\+\_\+\+SETVCOM~0x\+B6}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a9b8a42c3bcc9f90bc5f8b9dc070235e5}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_SLPIN@{CM\_SLPIN}}
+\index{CM\_SLPIN@{CM\_SLPIN}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_SLPIN}{CM\_SLPIN}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a9b8a42c3bcc9f90bc5f8b9dc070235e5} 
+\#define CM\+\_\+\+SLPIN~0x10}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_adde0fef70d997f02c472a92103aef3ce}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_SLPOUT@{CM\_SLPOUT}}
+\index{CM\_SLPOUT@{CM\_SLPOUT}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_SLPOUT}{CM\_SLPOUT}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_adde0fef70d997f02c472a92103aef3ce} 
+\#define CM\+\_\+\+SLPOUT~0x11}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_aae5e6f0c51934f407731ce1cccaade54}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!CM\_SWRESET@{CM\_SWRESET}}
+\index{CM\_SWRESET@{CM\_SWRESET}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{CM\_SWRESET}{CM\_SWRESET}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_aae5e6f0c51934f407731ce1cccaade54} 
+\#define CM\+\_\+\+SWRESET~0x01}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a50814282962649853dea54d976b468fb}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!LCD\_HORIZONTAL\_MAX@{LCD\_HORIZONTAL\_MAX}}
+\index{LCD\_HORIZONTAL\_MAX@{LCD\_HORIZONTAL\_MAX}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_HORIZONTAL\_MAX}{LCD\_HORIZONTAL\_MAX}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a50814282962649853dea54d976b468fb} 
+\#define LCD\+\_\+\+HORIZONTAL\+\_\+\+MAX~128}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a6c7cc2f72a05cf469dd94d5cba327b39}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!LCD\_ORIENTATION\_DOWN@{LCD\_ORIENTATION\_DOWN}}
+\index{LCD\_ORIENTATION\_DOWN@{LCD\_ORIENTATION\_DOWN}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_ORIENTATION\_DOWN}{LCD\_ORIENTATION\_DOWN}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a6c7cc2f72a05cf469dd94d5cba327b39} 
+\#define LCD\+\_\+\+ORIENTATION\+\_\+\+DOWN~2}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a2501cb4d06dc32a66722633803d0b3aa}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!LCD\_ORIENTATION\_LEFT@{LCD\_ORIENTATION\_LEFT}}
+\index{LCD\_ORIENTATION\_LEFT@{LCD\_ORIENTATION\_LEFT}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_ORIENTATION\_LEFT}{LCD\_ORIENTATION\_LEFT}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a2501cb4d06dc32a66722633803d0b3aa} 
+\#define LCD\+\_\+\+ORIENTATION\+\_\+\+LEFT~1}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a69911fe7d020d10ced9ad557b71c0c6c}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!LCD\_ORIENTATION\_RIGHT@{LCD\_ORIENTATION\_RIGHT}}
+\index{LCD\_ORIENTATION\_RIGHT@{LCD\_ORIENTATION\_RIGHT}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_ORIENTATION\_RIGHT}{LCD\_ORIENTATION\_RIGHT}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a69911fe7d020d10ced9ad557b71c0c6c} 
+\#define LCD\+\_\+\+ORIENTATION\+\_\+\+RIGHT~3}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a0b6562b48782835a7786ac16aa789398}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!LCD\_ORIENTATION\_UP@{LCD\_ORIENTATION\_UP}}
+\index{LCD\_ORIENTATION\_UP@{LCD\_ORIENTATION\_UP}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_ORIENTATION\_UP}{LCD\_ORIENTATION\_UP}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a0b6562b48782835a7786ac16aa789398} 
+\#define LCD\+\_\+\+ORIENTATION\+\_\+\+UP~0}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_afa86a7acc44d76290436f989ca29c947}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!LCD\_VERTICAL\_MAX@{LCD\_VERTICAL\_MAX}}
+\index{LCD\_VERTICAL\_MAX@{LCD\_VERTICAL\_MAX}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_VERTICAL\_MAX}{LCD\_VERTICAL\_MAX}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_afa86a7acc44d76290436f989ca29c947} 
+\#define LCD\+\_\+\+VERTICAL\+\_\+\+MAX~128}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a57fc5401db822d071b765c1da259cbbb}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!Crystalfontz128x128\_Init@{Crystalfontz128x128\_Init}}
+\index{Crystalfontz128x128\_Init@{Crystalfontz128x128\_Init}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{Crystalfontz128x128\_Init()}{Crystalfontz128x128\_Init()}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a57fc5401db822d071b765c1da259cbbb} 
+void Crystalfontz128x128\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Initializes the display driver.
+
+This function initializes the ST7735 display controller on the panel, preparing it to display data.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8h_a57fc5401db822d071b765c1da259cbbb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8h_a57fc5401db822d071b765c1da259cbbb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_ad9797a45a3c4294a68b645f07ac55709}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!Crystalfontz128x128\_SetDrawFrame@{Crystalfontz128x128\_SetDrawFrame}}
+\index{Crystalfontz128x128\_SetDrawFrame@{Crystalfontz128x128\_SetDrawFrame}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{Crystalfontz128x128\_SetDrawFrame()}{Crystalfontz128x128\_SetDrawFrame()}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_ad9797a45a3c4294a68b645f07ac55709} 
+void Crystalfontz128x128\+\_\+\+Set\+Draw\+Frame (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x0}{, }\item[{uint16\+\_\+t}]{y0}{, }\item[{uint16\+\_\+t}]{x1}{, }\item[{uint16\+\_\+t}]{y1}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8h_ad9797a45a3c4294a68b645f07ac55709_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8h_ad9797a45a3c4294a68b645f07ac55709_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_abadfb1254106e9afffc448eb6feefeeb}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!Crystalfontz128x128\_SetOrientation@{Crystalfontz128x128\_SetOrientation}}
+\index{Crystalfontz128x128\_SetOrientation@{Crystalfontz128x128\_SetOrientation}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{Crystalfontz128x128\_SetOrientation()}{Crystalfontz128x128\_SetOrientation()}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_abadfb1254106e9afffc448eb6feefeeb} 
+void Crystalfontz128x128\+\_\+\+Set\+Orientation (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{orientation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Sets the LCD Orientation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em orientation} & is the desired orientation for the LCD. Valid values are\+:
+\begin{DoxyItemize}
+\item {\bfseries{LCD\+\_\+\+ORIENTATION\+\_\+\+UP}},
+\item {\bfseries{LCD\+\_\+\+ORIENTATION\+\_\+\+LEFT}},
+\item {\bfseries{LCD\+\_\+\+ORIENTATION\+\_\+\+DOWN}},
+\item {\bfseries{LCD\+\_\+\+ORIENTATION\+\_\+\+RIGHT}},
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function sets the orientation of the LCD
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8h_abadfb1254106e9afffc448eb6feefeeb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_crystalfontz128x128___s_t7735_8h_abadfb1254106e9afffc448eb6feefeeb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_ac7889de27d0b644f0da5c3a6158011fb}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!g\_sCrystalfontz128x128@{g\_sCrystalfontz128x128}}
+\index{g\_sCrystalfontz128x128@{g\_sCrystalfontz128x128}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{g\_sCrystalfontz128x128}{g\_sCrystalfontz128x128}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_ac7889de27d0b644f0da5c3a6158011fb} 
+Graphics\+\_\+\+Display g\+\_\+s\+Crystalfontz128x128\hspace{0.3cm}{\ttfamily [extern]}}
+
+The display structure that describes the driver for the Kitronix K350\+QVG-\/\+V1-\/F TFT panel with an SSD2119 controller. \Hypertarget{_crystalfontz128x128___s_t7735_8h_a9553353f2fcf8d55ddcc16a681fab741}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!g\_sCrystalfontz128x128\_funcs@{g\_sCrystalfontz128x128\_funcs}}
+\index{g\_sCrystalfontz128x128\_funcs@{g\_sCrystalfontz128x128\_funcs}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{g\_sCrystalfontz128x128\_funcs}{g\_sCrystalfontz128x128\_funcs}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a9553353f2fcf8d55ddcc16a681fab741} 
+const Graphics\+\_\+\+Display\+\_\+\+Functions g\+\_\+s\+Crystalfontz128x128\+\_\+funcs\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a8cffaf6cacf0e2c4e453d208da65e3e9}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!Lcd\_FlagRead@{Lcd\_FlagRead}}
+\index{Lcd\_FlagRead@{Lcd\_FlagRead}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{Lcd\_FlagRead}{Lcd\_FlagRead}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a8cffaf6cacf0e2c4e453d208da65e3e9} 
+uint8\+\_\+t Lcd\+\_\+\+Flag\+Read}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a01b82ab1a0b89dda64219f2a0e56fdbc}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!Lcd\_FontSolid@{Lcd\_FontSolid}}
+\index{Lcd\_FontSolid@{Lcd\_FontSolid}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{Lcd\_FontSolid}{Lcd\_FontSolid}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a01b82ab1a0b89dda64219f2a0e56fdbc} 
+uint8\+\_\+t Lcd\+\_\+\+Font\+Solid}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_ac795b16144e4966736f3b26a330fbe3b}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!Lcd\_Orientation@{Lcd\_Orientation}}
+\index{Lcd\_Orientation@{Lcd\_Orientation}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{Lcd\_Orientation}{Lcd\_Orientation}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_ac795b16144e4966736f3b26a330fbe3b} 
+uint8\+\_\+t Lcd\+\_\+\+Orientation\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a86ff3802845e32cbe44c3766374ba5a2}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!Lcd\_PenSolid@{Lcd\_PenSolid}}
+\index{Lcd\_PenSolid@{Lcd\_PenSolid}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{Lcd\_PenSolid}{Lcd\_PenSolid}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a86ff3802845e32cbe44c3766374ba5a2} 
+uint8\+\_\+t Lcd\+\_\+\+Pen\+Solid\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_ab2e849d49c54e8f4a897ee7a2c38add6}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!Lcd\_ScreenHeigth@{Lcd\_ScreenHeigth}}
+\index{Lcd\_ScreenHeigth@{Lcd\_ScreenHeigth}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{Lcd\_ScreenHeigth}{Lcd\_ScreenHeigth}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_ab2e849d49c54e8f4a897ee7a2c38add6} 
+uint16\+\_\+t Lcd\+\_\+\+Screen\+Heigth}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a3507ce8d7321c6322734e843c1c2e449}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!Lcd\_ScreenWidth@{Lcd\_ScreenWidth}}
+\index{Lcd\_ScreenWidth@{Lcd\_ScreenWidth}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{Lcd\_ScreenWidth}{Lcd\_ScreenWidth}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a3507ce8d7321c6322734e843c1c2e449} 
+uint16\+\_\+t Lcd\+\_\+\+Screen\+Width\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_crystalfontz128x128___s_t7735_8h_a12bb9018fc8117660b31d6650fd077d5}\index{Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}!Lcd\_TouchTrim@{Lcd\_TouchTrim}}
+\index{Lcd\_TouchTrim@{Lcd\_TouchTrim}!Crystalfontz128x128\_ST7735.h@{Crystalfontz128x128\_ST7735.h}}
+\doxysubsubsection{\texorpdfstring{Lcd\_TouchTrim}{Lcd\_TouchTrim}}
+{\footnotesize\ttfamily \label{_crystalfontz128x128___s_t7735_8h_a12bb9018fc8117660b31d6650fd077d5} 
+uint16\+\_\+t Lcd\+\_\+\+Touch\+Trim\hspace{0.3cm}{\ttfamily [extern]}}
+

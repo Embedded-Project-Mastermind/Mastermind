@@ -1,0 +1,51 @@
+<map id="leftfunctions" name="leftfunctions">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,132,98,158"/>
+<area shape="rect" id="Node000002" href="$difficulty_8c.html#ada1c7d825f7d0d6084a4b004f91d570c" title="Action that the menu performs when the stick goes left, primarly changing selection and imposing logi..." alt="" coords="146,8,300,34"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,130,93,87,117,63,144,43,152,38,155,43,147,47,121,67,97,91,64,133"/>
+<area shape="rect" id="Node000013" href="$dimension_8c.html#aa1457a920eebe81a6fc619946c6fa746" title="handles the down movement of the stick" alt="" coords="146,205,300,231"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="76,156,147,192,161,197,159,202,145,197,74,161"/>
+<area shape="rect" id="Node000015" href="$doubles_8c.html#aaede89cc2d77369f26c4bdd81d8ce776" title="manage what to do when the user moves the stick left" alt="" coords="153,57,293,83"/>
+<area shape="poly" id="edge20_Node000001_Node000015" title=" " alt="" coords="73,129,145,92,159,86,161,91,147,97,76,134"/>
+<area shape="rect" id="Node000016" href="$game_8c.html#afe0d26e602acbce56a513dd0d2b02999" title="Action that the menu performs when the stick goes left, primarly changing selection and imposing logi..." alt="" coords="165,255,280,280"/>
+<area shape="poly" id="edge23_Node000001_Node000016" title=" " alt="" coords="64,156,98,198,121,221,147,241,155,246,152,250,144,246,117,225,94,202,60,160"/>
+<area shape="rect" id="Node000018" href="$info_8c.html#acab983649d0b96fe33a93d904a6e380a" title=" " alt="" coords="169,107,277,132"/>
+<area shape="poly" id="edge25_Node000001_Node000018" title=" " alt="" coords="98,135,153,127,154,132,98,141"/>
+<area shape="rect" id="Node000019" href="$tentatives_8c.html#a0df6996c317be48a5e0a5c5e192dfcd9" title=" " alt="" coords="148,156,298,182"/>
+<area shape="poly" id="edge28_Node000001_Node000019" title=" " alt="" coords="98,149,133,154,132,159,98,154"/>
+<area shape="rect" id="Node000003" href="$difficulty_8c.html#abe9c02f90a494b0d60669e280db89c2d" title="Draw Text Description according to the difficulty selected in order to explain to the user what that ..." alt="" coords="354,8,428,34"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,18,338,18,338,24,300,24"/>
+<area shape="rect" id="Node000005" href="$implementations_8c.html#a0f3ea1e3abed721e539b1332079664c4" title=" " alt="" coords="356,57,426,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="270,32,342,53,340,58,269,37"/>
+<area shape="rect" id="Node000012" href="$implementations_8c.html#a7850b120bb168cda34d0ff446cd53845" title=" " alt="" coords="350,107,431,132"/>
+<area shape="poly" id="edge13_Node000002_Node000012" title=" " alt="" coords="279,32,301,43,317,55,327,68,336,80,350,93,353,96,350,100,346,98,332,84,323,71,313,59,299,47,277,37"/>
+<area shape="rect" id="Node000004" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title=" " alt="" coords="481,57,575,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="429,32,477,49,475,54,428,37"/>
+<area shape="poly" id="edge12_Node000005_Node000004" title=" " alt="" coords="426,68,466,68,466,73,426,73"/>
+<area shape="rect" id="Node000006" href="$implementations_8c.html#ada4cd14b9689d4fe9b9de328e4724964" title=" " alt="" coords="484,107,572,132"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="427,80,477,98,475,103,425,85"/>
+<area shape="rect" id="Node000007" href="$implementations_8c.html#a17fb5785fa10393596b1c10e580fee1b" title=" " alt="" coords="790,31,912,56"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="571,105,622,92,774,57,775,62,623,97,573,110"/>
+<area shape="rect" id="Node000008" href="$implementations_8c.html#ac2bb0254f8bef6f471cc1e1e4aff3fb2" title=" " alt="" coords="623,107,742,132"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="572,117,607,117,607,122,572,122"/>
+<area shape="rect" id="Node000009" href="$implementations_8c.html#aaa2bed682fe325d72adc6d9ee50b15b9" title=" " alt="" coords="630,5,735,31"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="556,104,573,93,597,71,621,48,639,36,642,41,624,52,601,75,576,98,559,108"/>
+<area shape="rect" id="Node000010" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="632,156,733,182"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="572,130,626,148,625,153,570,136"/>
+<area shape="rect" id="Node000011" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="632,205,733,231"/>
+<area shape="poly" id="edge11_Node000006_Node000011" title=" " alt="" coords="545,130,579,160,624,192,632,196,629,201,621,196,576,165,541,135"/>
+<area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="736,23,775,29,774,35,735,29"/>
+<area shape="poly" id="edge15_Node000012_Node000004" title=" " alt="" coords="428,104,475,86,476,91,430,109"/>
+<area shape="poly" id="edge14_Node000012_Node000006" title=" " alt="" coords="431,117,469,117,469,122,431,122"/>
+<area shape="poly" id="edge18_Node000013_Node000005" title=" " alt="" coords="282,203,298,192,316,169,323,145,329,119,346,93,347,91,351,95,350,96,334,122,328,146,321,171,302,196,285,207"/>
+<area shape="poly" id="edge19_Node000013_Node000012" title=" " alt="" coords="275,202,299,192,334,168,364,141,368,145,338,172,301,196,277,207"/>
+<area shape="rect" id="Node000014" href="$dimension_8c.html#aa38b30924148a4b57c31d71a60aa6e4f" title="manages the font dimension for the buttons" alt="" coords="348,205,433,231"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="300,216,332,216,332,221,300,221"/>
+<area shape="poly" id="edge21_Node000015_Node000005" title=" " alt="" coords="293,68,340,68,340,73,293,73"/>
+<area shape="poly" id="edge22_Node000015_Node000012" title=" " alt="" coords="270,81,336,101,335,106,269,86"/>
+<area shape="rect" id="Node000017" href="$joystick_8c.html#a17d2aabe37f3c529c960176fe55d5fd5" title=" " alt="" coords="352,255,429,280"/>
+<area shape="poly" id="edge24_Node000016_Node000017" title=" " alt="" coords="281,265,337,265,337,270,281,270"/>
+<area shape="poly" id="edge26_Node000018_Node000005" title=" " alt="" coords="269,103,340,82,342,87,270,109"/>
+<area shape="poly" id="edge27_Node000018_Node000012" title=" " alt="" coords="277,117,335,117,335,122,277,122"/>
+<area shape="poly" id="edge29_Node000019_Node000005" title=" " alt="" coords="277,153,299,143,313,131,323,119,332,106,346,92,350,90,353,94,350,96,336,110,327,122,317,135,301,147,279,158"/>
+<area shape="poly" id="edge30_Node000019_Node000012" title=" " alt="" coords="269,153,335,133,336,138,270,158"/>
+</map>

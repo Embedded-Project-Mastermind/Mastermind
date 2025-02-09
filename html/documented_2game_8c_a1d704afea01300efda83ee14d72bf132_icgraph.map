@@ -1,0 +1,9 @@
+<map id="drawCircles" name="drawCircles">
+<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="352,31,442,56"/>
+<area shape="rect" id="Node000002" href="$chronology_8c.html#a81594cf52b75532bb168949c0d58ed93" title="function that create buttons and text for the Chronology screen" alt="" coords="189,5,304,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="336,36,304,30,305,25,337,31"/>
+<area shape="rect" id="Node000004" href="$game_8c.html#add55822234a04e4988e3f9716a8e3cd9" title="Implicit Call that is invoked when we arrive at GAME state in GUI FSM and primarly draw the static el..." alt="" coords="207,55,286,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="337,56,286,64,286,59,336,51"/>
+<area shape="rect" id="Node000003" href="$chronology_8c.html#a77703c37a23665ce74ccea44a084a247" title="functions that create the Chronology screen starting from resetting the previous screen" alt="" coords="5,5,141,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="173,21,141,21,141,16,173,16"/>
+</map>

@@ -1,0 +1,344 @@
+\doxysection{general/joystick.h File Reference}
+\hypertarget{joystick_8h}{}\label{joystick_8h}\index{general/joystick.h@{general/joystick.h}}
+{\ttfamily \#include "{}graphics.\+h"{}}\newline
+Include dependency graph for joystick.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{joystick_8h_a5950cd8b0f0b1eb610fd34796c0fa2c4}{ADC14\+\_\+\+CTL0\+\_\+\+SREF\+\_\+\+VREF\+\_\+\+PLUS\+\_\+\+AVCC}}~(0x00000000)
+\item 
+\#define \mbox{\hyperlink{joystick_8h_a7c0d885501342d883294c731346a7b67}{ADC14\+\_\+\+CTL0\+\_\+\+SHT\+\_\+64\+\_\+\+CLK}}~(0x00000000)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}} \{ \newline
+\mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388aba595d8bca8bc5e67c37c0a9d89becfa}{UP}}
+, \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388a9b0b4a95b99523966e0e34ffdadac9da}{DOWN}}
+, \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388adb45120aafd37a973140edee24708065}{LEFT}}
+, \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388aec8379af7490bb9eaaf579cf17876f38}{RIGHT}}
+, \newline
+\mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388a2159ffbd3a68037511ab5ab4dd35ace7}{CENTER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{joystick_8h_a08201f4ea948492041d839c98233e00a}{upfunctions}} ()
+\item 
+void \mbox{\hyperlink{joystick_8h_a3e5a790b378f645099a2f8fc5f694b84}{downfunctions}} ()
+\item 
+void \mbox{\hyperlink{joystick_8h_a52c88d60c03461488d6285f39e252627}{leftfunctions}} ()
+\item 
+void \mbox{\hyperlink{joystick_8h_a301de98bfda59c46e55821dee762f5cb}{rightfunctions}} ()
+\item 
+void \mbox{\hyperlink{joystick_8h_a92a70e2775796b1a7a6b49a983f570e3}{Timer\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{joystick_8h_af96ee69b063edcebc656d0ca0450c12c}{ADC\+\_\+\+Start\+Conversion}} (void)
+\item 
+void \mbox{\hyperlink{joystick_8h_aba5554d566a1a96bb319050ee2a87ea5}{ADC\+\_\+\+Enable\+Interrupts}} (void)
+\item 
+void \mbox{\hyperlink{joystick_8h_a4023d983e6edbb9ec1c19264b9f5d063}{setup\+Priorities}} ()
+\item 
+void \mbox{\hyperlink{joystick_8h_adde06bcb4c1eb7d1c081dacc7ac2152c}{Navigate\+Menu}} (\mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}} direction)
+\item 
+void \mbox{\hyperlink{joystick_8h_ac2ba05e83436748b14c78b42942f30ec}{\+\_\+adc\+Init}} ()
+\item 
+void \mbox{\hyperlink{joystick_8h_ac024e21f4a895774cbc85c22395d7892}{before\+\_\+\+ADC}} ()
+\item 
+void \mbox{\hyperlink{joystick_8h_a144df1b67eee7bbf15b632fe43c106fe}{init\+HW}} ()
+\item 
+\mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}} \mbox{\hyperlink{joystick_8h_a46814585d7265ab89bb7bc3d77f967aa}{find\+Direction}} (uint16\+\_\+t x, uint16\+\_\+t y)
+\item 
+void \mbox{\hyperlink{joystick_8h_a17d2aabe37f3c529c960176fe55d5fd5}{delay\+\_\+ms}} (uint32\+\_\+t milliseconds)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{joystick_8h_a7c0d885501342d883294c731346a7b67}\index{joystick.h@{joystick.h}!ADC14\_CTL0\_SHT\_64\_CLK@{ADC14\_CTL0\_SHT\_64\_CLK}}
+\index{ADC14\_CTL0\_SHT\_64\_CLK@{ADC14\_CTL0\_SHT\_64\_CLK}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{ADC14\_CTL0\_SHT\_64\_CLK}{ADC14\_CTL0\_SHT\_64\_CLK}}
+{\footnotesize\ttfamily \label{joystick_8h_a7c0d885501342d883294c731346a7b67} 
+\#define ADC14\+\_\+\+CTL0\+\_\+\+SHT\+\_\+64\+\_\+\+CLK~(0x00000000)}
+
+\Hypertarget{joystick_8h_a5950cd8b0f0b1eb610fd34796c0fa2c4}\index{joystick.h@{joystick.h}!ADC14\_CTL0\_SREF\_VREF\_PLUS\_AVCC@{ADC14\_CTL0\_SREF\_VREF\_PLUS\_AVCC}}
+\index{ADC14\_CTL0\_SREF\_VREF\_PLUS\_AVCC@{ADC14\_CTL0\_SREF\_VREF\_PLUS\_AVCC}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{ADC14\_CTL0\_SREF\_VREF\_PLUS\_AVCC}{ADC14\_CTL0\_SREF\_VREF\_PLUS\_AVCC}}
+{\footnotesize\ttfamily \label{joystick_8h_a5950cd8b0f0b1eb610fd34796c0fa2c4} 
+\#define ADC14\+\_\+\+CTL0\+\_\+\+SREF\+\_\+\+VREF\+\_\+\+PLUS\+\_\+\+AVCC~(0x00000000)}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}\index{joystick.h@{joystick.h}!Move@{Move}}
+\index{Move@{Move}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{Move}{Move}}
+{\footnotesize\ttfamily \label{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388} 
+enum \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UP@{UP}!joystick.h@{joystick.h}}\index{joystick.h@{joystick.h}!UP@{UP}}}\Hypertarget{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388aba595d8bca8bc5e67c37c0a9d89becfa}\label{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388aba595d8bca8bc5e67c37c0a9d89becfa} 
+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOWN@{DOWN}!joystick.h@{joystick.h}}\index{joystick.h@{joystick.h}!DOWN@{DOWN}}}\Hypertarget{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388a9b0b4a95b99523966e0e34ffdadac9da}\label{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388a9b0b4a95b99523966e0e34ffdadac9da} 
+DOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!joystick.h@{joystick.h}}\index{joystick.h@{joystick.h}!LEFT@{LEFT}}}\Hypertarget{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388adb45120aafd37a973140edee24708065}\label{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388adb45120aafd37a973140edee24708065} 
+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!joystick.h@{joystick.h}}\index{joystick.h@{joystick.h}!RIGHT@{RIGHT}}}\Hypertarget{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388aec8379af7490bb9eaaf579cf17876f38}\label{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388aec8379af7490bb9eaaf579cf17876f38} 
+RIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CENTER@{CENTER}!joystick.h@{joystick.h}}\index{joystick.h@{joystick.h}!CENTER@{CENTER}}}\Hypertarget{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388a2159ffbd3a68037511ab5ab4dd35ace7}\label{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388a2159ffbd3a68037511ab5ab4dd35ace7} 
+CENTER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{joystick_8h_ac2ba05e83436748b14c78b42942f30ec}\index{joystick.h@{joystick.h}!\_adcInit@{\_adcInit}}
+\index{\_adcInit@{\_adcInit}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{\_adcInit()}{\_adcInit()}}
+{\footnotesize\ttfamily \label{joystick_8h_ac2ba05e83436748b14c78b42942f30ec} 
+void \+\_\+adc\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{joystick_8h_ac2ba05e83436748b14c78b42942f30ec_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_aba5554d566a1a96bb319050ee2a87ea5}\index{joystick.h@{joystick.h}!ADC\_EnableInterrupts@{ADC\_EnableInterrupts}}
+\index{ADC\_EnableInterrupts@{ADC\_EnableInterrupts}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_EnableInterrupts()}{ADC\_EnableInterrupts()}}
+{\footnotesize\ttfamily \label{joystick_8h_aba5554d566a1a96bb319050ee2a87ea5} 
+void ADC\+\_\+\+Enable\+Interrupts (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_aba5554d566a1a96bb319050ee2a87ea5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_af96ee69b063edcebc656d0ca0450c12c}\index{joystick.h@{joystick.h}!ADC\_StartConversion@{ADC\_StartConversion}}
+\index{ADC\_StartConversion@{ADC\_StartConversion}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_StartConversion()}{ADC\_StartConversion()}}
+{\footnotesize\ttfamily \label{joystick_8h_af96ee69b063edcebc656d0ca0450c12c} 
+void ADC\+\_\+\+Start\+Conversion (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{joystick_8h_af96ee69b063edcebc656d0ca0450c12c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_ac024e21f4a895774cbc85c22395d7892}\index{joystick.h@{joystick.h}!before\_ADC@{before\_ADC}}
+\index{before\_ADC@{before\_ADC}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{before\_ADC()}{before\_ADC()}}
+{\footnotesize\ttfamily \label{joystick_8h_ac024e21f4a895774cbc85c22395d7892} 
+void before\+\_\+\+ADC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{joystick_8h_ac024e21f4a895774cbc85c22395d7892_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_a17d2aabe37f3c529c960176fe55d5fd5}\index{joystick.h@{joystick.h}!delay\_ms@{delay\_ms}}
+\index{delay\_ms@{delay\_ms}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{delay\_ms()}{delay\_ms()}}
+{\footnotesize\ttfamily \label{joystick_8h_a17d2aabe37f3c529c960176fe55d5fd5} 
+void delay\+\_\+ms (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{milliseconds}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_a17d2aabe37f3c529c960176fe55d5fd5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_a3e5a790b378f645099a2f8fc5f694b84}\index{joystick.h@{joystick.h}!downfunctions@{downfunctions}}
+\index{downfunctions@{downfunctions}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{downfunctions()}{downfunctions()}}
+{\footnotesize\ttfamily \label{joystick_8h_a3e5a790b378f645099a2f8fc5f694b84} 
+void downfunctions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_a3e5a790b378f645099a2f8fc5f694b84_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_a3e5a790b378f645099a2f8fc5f694b84_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_a46814585d7265ab89bb7bc3d77f967aa}\index{joystick.h@{joystick.h}!findDirection@{findDirection}}
+\index{findDirection@{findDirection}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{findDirection()}{findDirection()}}
+{\footnotesize\ttfamily \label{joystick_8h_a46814585d7265ab89bb7bc3d77f967aa} 
+\mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}} find\+Direction (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{joystick_8h_a46814585d7265ab89bb7bc3d77f967aa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_a144df1b67eee7bbf15b632fe43c106fe}\index{joystick.h@{joystick.h}!initHW@{initHW}}
+\index{initHW@{initHW}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{initHW()}{initHW()}}
+{\footnotesize\ttfamily \label{joystick_8h_a144df1b67eee7bbf15b632fe43c106fe} 
+void init\+HW (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{joystick_8h_a52c88d60c03461488d6285f39e252627}\index{joystick.h@{joystick.h}!leftfunctions@{leftfunctions}}
+\index{leftfunctions@{leftfunctions}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{leftfunctions()}{leftfunctions()}}
+{\footnotesize\ttfamily \label{joystick_8h_a52c88d60c03461488d6285f39e252627} 
+void leftfunctions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_a52c88d60c03461488d6285f39e252627_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_a52c88d60c03461488d6285f39e252627_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_adde06bcb4c1eb7d1c081dacc7ac2152c}\index{joystick.h@{joystick.h}!NavigateMenu@{NavigateMenu}}
+\index{NavigateMenu@{NavigateMenu}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{NavigateMenu()}{NavigateMenu()}}
+{\footnotesize\ttfamily \label{joystick_8h_adde06bcb4c1eb7d1c081dacc7ac2152c} 
+void Navigate\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}}}]{direction}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_adde06bcb4c1eb7d1c081dacc7ac2152c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{joystick_8h_adde06bcb4c1eb7d1c081dacc7ac2152c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_a301de98bfda59c46e55821dee762f5cb}\index{joystick.h@{joystick.h}!rightfunctions@{rightfunctions}}
+\index{rightfunctions@{rightfunctions}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{rightfunctions()}{rightfunctions()}}
+{\footnotesize\ttfamily \label{joystick_8h_a301de98bfda59c46e55821dee762f5cb} 
+void rightfunctions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_a301de98bfda59c46e55821dee762f5cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_a301de98bfda59c46e55821dee762f5cb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_a4023d983e6edbb9ec1c19264b9f5d063}\index{joystick.h@{joystick.h}!setupPriorities@{setupPriorities}}
+\index{setupPriorities@{setupPriorities}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{setupPriorities()}{setupPriorities()}}
+{\footnotesize\ttfamily \label{joystick_8h_a4023d983e6edbb9ec1c19264b9f5d063} 
+void setup\+Priorities (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_a4023d983e6edbb9ec1c19264b9f5d063_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_a92a70e2775796b1a7a6b49a983f570e3}\index{joystick.h@{joystick.h}!Timer\_Init@{Timer\_Init}}
+\index{Timer\_Init@{Timer\_Init}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{Timer\_Init()}{Timer\_Init()}}
+{\footnotesize\ttfamily \label{joystick_8h_a92a70e2775796b1a7a6b49a983f570e3} 
+void Timer\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{joystick_8h_a92a70e2775796b1a7a6b49a983f570e3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{joystick_8h_a08201f4ea948492041d839c98233e00a}\index{joystick.h@{joystick.h}!upfunctions@{upfunctions}}
+\index{upfunctions@{upfunctions}!joystick.h@{joystick.h}}
+\doxysubsubsection{\texorpdfstring{upfunctions()}{upfunctions()}}
+{\footnotesize\ttfamily \label{joystick_8h_a08201f4ea948492041d839c98233e00a} 
+void upfunctions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_a08201f4ea948492041d839c98233e00a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{joystick_8h_a08201f4ea948492041d839c98233e00a_icgraph}
+\end{center}
+\end{figure}

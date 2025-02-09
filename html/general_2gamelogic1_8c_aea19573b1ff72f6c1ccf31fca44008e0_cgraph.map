@@ -1,0 +1,33 @@
+<map id="fn_RESET_TENT" name="fn_RESET_TENT">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,156,132,182"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a349e30260991f4d42dc6e3b575108891" title="After each input sequence is analyzed the tentative is all reinitialized with an incrementation of th..." alt="" coords="180,156,283,182"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,166,164,166,164,172,132,172"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a465d18eab656a2e0ed6ba52d433751f0" title="Allocation for a character array, ensuring that it is not already allocated." alt="" coords="331,80,487,106"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="263,153,362,110,364,115,265,158"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="741,105,856,131"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="283,162,725,122,725,127,283,167"/>
+<area shape="rect" id="Node000008" href="$game_8c.html#add55822234a04e4988e3f9716a8e3cd9" title="Implicit Call that is invoked when we arrive at GAME state in GUI FSM and primarly draw the static el..." alt="" coords="370,256,448,282"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="258,180,373,246,370,250,255,185"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="488,95,726,111,725,116,488,101"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="571,5,657,31"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="441,77,534,40,555,33,557,38,536,45,442,82"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#abf0d75f005530b95f776456baa7840c2" title="Initialization for a character array setting to its default state." alt="" coords="535,55,693,80"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="487,81,519,76,520,82,488,86"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="658,26,694,40,736,66,772,93,769,97,733,70,691,45,656,31"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="742,5,855,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="657,16,726,16,726,21,657,21"/>
+<area shape="rect" id="Node000009" href="$game_8c.html#a1d704afea01300efda83ee14d72bf132" title="Management and color of the circles on screen." alt="" coords="569,207,659,232"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="448,257,553,231,555,236,449,262"/>
+<area shape="rect" id="Node000010" href="$game_8c.html#ac269fe8cc886e12dfde77c659f786cd6" title="According to the dimension selected in GUI menu, are preallocated empty circles that change dynamical..." alt="" coords="574,256,654,282"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="449,266,559,266,559,272,449,272"/>
+<area shape="rect" id="Node000012" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="551,305,677,331"/>
+<area shape="poly" id="edge13_Node000008_Node000012" title=" " alt="" coords="449,276,544,299,542,304,448,281"/>
+<area shape="rect" id="Node000015" href="$implementations_8c.html#a5b980628dc75e57228c103881e9246af" title=" " alt="" coords="565,355,663,380"/>
+<area shape="poly" id="edge16_Node000008_Node000015" title=" " alt="" coords="431,280,478,310,536,341,551,347,549,352,534,346,475,315,428,284"/>
+<area shape="rect" id="Node000011" href="$game_8c.html#a8e2dbff3a9441175f6bfcf1b7bc56fee" title="Initialization effective of the circles according to the inputed parameters." alt="" coords="743,256,854,282"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="654,266,727,266,727,272,654,272"/>
+<area shape="rect" id="Node000013" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="748,355,849,380"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="666,329,734,348,732,353,664,334"/>
+<area shape="rect" id="Node000014" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="748,305,849,331"/>
+<area shape="poly" id="edge15_Node000012_Node000014" title=" " alt="" coords="677,316,732,316,732,321,677,321"/>
+</map>

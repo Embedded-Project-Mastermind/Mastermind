@@ -1,0 +1,507 @@
+\doxysection{general/chronology.h File Reference}
+\hypertarget{chronology_8h}{}\label{chronology_8h}\index{general/chronology.h@{general/chronology.h}}
+{\ttfamily \#include "{}graphics.\+h"{}}\newline
+{\ttfamily \#include "{}implementations.\+h"{}}\newline
+{\ttfamily \#include "{}input.\+h"{}}\newline
+{\ttfamily \#include "{}game.\+h"{}}\newline
+Include dependency graph for chronology.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_graphics___chronology}{Graphics\+\_\+\+Chronology}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{chronology_8h_af509da23f87b2a84e4e0e709feaed014}{BASIC\+\_\+\+OFFSET}}~15
+\item 
+\#define \mbox{\hyperlink{chronology_8h_aa4f8ea40228c3c3a9a7143b1d1ad8956}{RADIUS}}~6
+\item 
+\#define \mbox{\hyperlink{chronology_8h_a7ba3949b1f197baf0354d41124bdbe88}{MAX\+\_\+\+DIM}}~6
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Graphics\+\_\+\+Chronology \mbox{\hyperlink{chronology_8h_a5a4d50ba255a7cc54031c63b17d9a9bd}{Graphics\+\_\+\+Chronology}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{chronology_8h_a81594cf52b75532bb168949c0d58ed93}{draw\+Chronology}} (void)
+\begin{DoxyCompactList}\small\item\em function that create buttons and text for the Chronology screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{chronology_8h_a77703c37a23665ce74ccea44a084a247}{fn\+\_\+\+CHRONOLOGY}} (void)
+\begin{DoxyCompactList}\small\item\em functions that create the Chronology screen starting from resetting the previous screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{chronology_8h_a7ec7903a95121d6e773888be9b0176eb}{populate\+Chronology\+Circles}} (int16\+\_\+t offset, int16\+\_\+t radius, int16\+\_\+t \mbox{\hyperlink{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a}{value}}, int16\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em TODO\+: Describe function. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{chronology_8h_af4804828a994a0d76b79da462ad1580a}{char\+\_\+\+Conversion\+\_\+to\+\_\+\+Int}} (int8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em TODO\+: Describe function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{chronology_8h_af95f3e53eb47667a4ae3da13fecc23d1}{populate\+Chronology\+Buttons}} (int16\+\_\+t \mbox{\hyperlink{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a}{value}}, int16\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em TODO\+: Describe function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{chronology_8h_a0009722d580b5fc3a2c6ae32efadd8bb}{draw\+Past\+Results}} (\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \texorpdfstring{$\ast$}{*}buttons)
+\begin{DoxyCompactList}\small\item\em TODO\+: Describe function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{chronology_8h_ad774f58034bd7f8cb0c570021307df20}{up\+Stick\+\_\+\+CHRONOLOGY}} ()
+\begin{DoxyCompactList}\small\item\em manage what to do when the user moves the stick up \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{chronology_8h_a200291275b68705ac77fdde64e026b27}{down\+Stick\+\_\+\+CHRONOLOGY}} ()
+\begin{DoxyCompactList}\small\item\em manage what to do when the user moves the stick down \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{chronology_8h_ab6199fff7dce2a49d3b5329e51570fbe}{right\+Stick\+\_\+\+CHRONOLOGY}} ()
+\begin{DoxyCompactList}\small\item\em manage what to do when the user moves the stick right \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{chronology_8h_a2c8461dd4bc87e2cee6461d79daca665}{update\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em TODO\+: Describe function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{chronology_8h_a7cae3b9d656c300e3d6f8fddc9eaf0f9}{other\+\_\+buttons}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{chronology_8h_a86dc877eb37cf5f7afbab29b4d3017b8}{return\+\_\+to}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{chronology_8h_a0351fbc096999109025b02345f8f1a92}{pos\+\_\+chronology}}
+\item 
+\mbox{\hyperlink{struct_graphics___chronology}{Graphics\+\_\+\+Chronology}} \mbox{\hyperlink{chronology_8h_a38e59e2a27b779c4dc37f0900bd268c1}{chronology}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{chronology_8h_af509da23f87b2a84e4e0e709feaed014}\index{chronology.h@{chronology.h}!BASIC\_OFFSET@{BASIC\_OFFSET}}
+\index{BASIC\_OFFSET@{BASIC\_OFFSET}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{BASIC\_OFFSET}{BASIC\_OFFSET}}
+{\footnotesize\ttfamily \label{chronology_8h_af509da23f87b2a84e4e0e709feaed014} 
+\#define BASIC\+\_\+\+OFFSET~15}
+
+\Hypertarget{chronology_8h_a7ba3949b1f197baf0354d41124bdbe88}\index{chronology.h@{chronology.h}!MAX\_DIM@{MAX\_DIM}}
+\index{MAX\_DIM@{MAX\_DIM}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_DIM}{MAX\_DIM}}
+{\footnotesize\ttfamily \label{chronology_8h_a7ba3949b1f197baf0354d41124bdbe88} 
+\#define MAX\+\_\+\+DIM~6}
+
+\Hypertarget{chronology_8h_aa4f8ea40228c3c3a9a7143b1d1ad8956}\index{chronology.h@{chronology.h}!RADIUS@{RADIUS}}
+\index{RADIUS@{RADIUS}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{RADIUS}{RADIUS}}
+{\footnotesize\ttfamily \label{chronology_8h_aa4f8ea40228c3c3a9a7143b1d1ad8956} 
+\#define RADIUS~6}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{chronology_8h_a5a4d50ba255a7cc54031c63b17d9a9bd}\index{chronology.h@{chronology.h}!Graphics\_Chronology@{Graphics\_Chronology}}
+\index{Graphics\_Chronology@{Graphics\_Chronology}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{Graphics\_Chronology}{Graphics\_Chronology}}
+{\footnotesize\ttfamily \label{chronology_8h_a5a4d50ba255a7cc54031c63b17d9a9bd} 
+typedef struct Graphics\+\_\+\+Chronology Graphics\+\_\+\+Chronology}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{chronology_8h_af4804828a994a0d76b79da462ad1580a}\index{chronology.h@{chronology.h}!char\_Conversion\_to\_Int@{char\_Conversion\_to\_Int}}
+\index{char\_Conversion\_to\_Int@{char\_Conversion\_to\_Int}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{char\_Conversion\_to\_Int()}{char\_Conversion\_to\_Int()}}
+{\footnotesize\ttfamily \label{chronology_8h_af4804828a994a0d76b79da462ad1580a} 
+int16\+\_\+t char\+\_\+\+Conversion\+\_\+to\+\_\+\+Int (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{index}{}\end{DoxyParamCaption})}
+
+
+
+TODO\+: Describe function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & TODO\+: Describe parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TODO\+: Describe return value. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary Author \& Maintainer) 
+
+Matteo Gottardelli (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_af4804828a994a0d76b79da462ad1580a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{chronology_8h_a200291275b68705ac77fdde64e026b27}\index{chronology.h@{chronology.h}!downStick\_CHRONOLOGY@{downStick\_CHRONOLOGY}}
+\index{downStick\_CHRONOLOGY@{downStick\_CHRONOLOGY}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{downStick\_CHRONOLOGY()}{downStick\_CHRONOLOGY()}}
+{\footnotesize\ttfamily \label{chronology_8h_a200291275b68705ac77fdde64e026b27} 
+void down\+Stick\+\_\+\+CHRONOLOGY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+manage what to do when the user moves the stick down 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary Author \& Maintainer) 
+
+Matteo Gottardelli (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_a200291275b68705ac77fdde64e026b27_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_a200291275b68705ac77fdde64e026b27_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{chronology_8h_a81594cf52b75532bb168949c0d58ed93}\index{chronology.h@{chronology.h}!drawChronology@{drawChronology}}
+\index{drawChronology@{drawChronology}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{drawChronology()}{drawChronology()}}
+{\footnotesize\ttfamily \label{chronology_8h_a81594cf52b75532bb168949c0d58ed93} 
+void draw\+Chronology (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+function that create buttons and text for the Chronology screen 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary Author \& Maintainer) 
+
+Matteo Gottardelli (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_a81594cf52b75532bb168949c0d58ed93_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{chronology_8h_a81594cf52b75532bb168949c0d58ed93_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{chronology_8h_a0009722d580b5fc3a2c6ae32efadd8bb}\index{chronology.h@{chronology.h}!drawPastResults@{drawPastResults}}
+\index{drawPastResults@{drawPastResults}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{drawPastResults()}{drawPastResults()}}
+{\footnotesize\ttfamily \label{chronology_8h_a0009722d580b5fc3a2c6ae32efadd8bb} 
+void draw\+Past\+Results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \texorpdfstring{$\ast$}{*}}]{buttons}{}\end{DoxyParamCaption})}
+
+
+
+TODO\+: Describe function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buttons} & TODO\+: Describe parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary Author \& Maintainer) 
+
+Matteo Gottardelli (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_a0009722d580b5fc3a2c6ae32efadd8bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_a0009722d580b5fc3a2c6ae32efadd8bb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{chronology_8h_a77703c37a23665ce74ccea44a084a247}\index{chronology.h@{chronology.h}!fn\_CHRONOLOGY@{fn\_CHRONOLOGY}}
+\index{fn\_CHRONOLOGY@{fn\_CHRONOLOGY}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{fn\_CHRONOLOGY()}{fn\_CHRONOLOGY()}}
+{\footnotesize\ttfamily \label{chronology_8h_a77703c37a23665ce74ccea44a084a247} 
+void fn\+\_\+\+CHRONOLOGY (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+functions that create the Chronology screen starting from resetting the previous screen 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary Author \& Maintainer) 
+
+Matteo Gottardelli (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_a77703c37a23665ce74ccea44a084a247_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{chronology_8h_af95f3e53eb47667a4ae3da13fecc23d1}\index{chronology.h@{chronology.h}!populateChronologyButtons@{populateChronologyButtons}}
+\index{populateChronologyButtons@{populateChronologyButtons}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{populateChronologyButtons()}{populateChronologyButtons()}}
+{\footnotesize\ttfamily \label{chronology_8h_af95f3e53eb47667a4ae3da13fecc23d1} 
+void populate\+Chronology\+Buttons (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{value}{, }\item[{int16\+\_\+t}]{index}{}\end{DoxyParamCaption})}
+
+
+
+TODO\+: Describe function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & TODO\+: Describe parameter. \\
+\hline
+{\em index} & TODO\+: Describe parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary Author \& Maintainer) 
+
+Matteo Gottardelli (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_af95f3e53eb47667a4ae3da13fecc23d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_af95f3e53eb47667a4ae3da13fecc23d1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{chronology_8h_a7ec7903a95121d6e773888be9b0176eb}\index{chronology.h@{chronology.h}!populateChronologyCircles@{populateChronologyCircles}}
+\index{populateChronologyCircles@{populateChronologyCircles}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{populateChronologyCircles()}{populateChronologyCircles()}}
+{\footnotesize\ttfamily \label{chronology_8h_a7ec7903a95121d6e773888be9b0176eb} 
+void populate\+Chronology\+Circles (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{offset}{, }\item[{int16\+\_\+t}]{radius}{, }\item[{int16\+\_\+t}]{value}{, }\item[{int16\+\_\+t}]{index}{}\end{DoxyParamCaption})}
+
+
+
+TODO\+: Describe function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & TODO\+: Describe parameter. \\
+\hline
+{\em radius} & TODO\+: Describe parameter. \\
+\hline
+{\em value} & TODO\+: Describe parameter. \\
+\hline
+{\em index} & TODO\+: Describe parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary Author \& Maintainer) 
+
+Matteo Gottardelli (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_a7ec7903a95121d6e773888be9b0176eb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_a7ec7903a95121d6e773888be9b0176eb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{chronology_8h_ab6199fff7dce2a49d3b5329e51570fbe}\index{chronology.h@{chronology.h}!rightStick\_CHRONOLOGY@{rightStick\_CHRONOLOGY}}
+\index{rightStick\_CHRONOLOGY@{rightStick\_CHRONOLOGY}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{rightStick\_CHRONOLOGY()}{rightStick\_CHRONOLOGY()}}
+{\footnotesize\ttfamily \label{chronology_8h_ab6199fff7dce2a49d3b5329e51570fbe} 
+void right\+Stick\+\_\+\+CHRONOLOGY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+manage what to do when the user moves the stick right 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary Author \& Maintainer) 
+
+Matteo Gottardelli (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_ab6199fff7dce2a49d3b5329e51570fbe_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{chronology_8h_a2c8461dd4bc87e2cee6461d79daca665}\index{chronology.h@{chronology.h}!updatePos@{updatePos}}
+\index{updatePos@{updatePos}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{updatePos()}{updatePos()}}
+{\footnotesize\ttfamily \label{chronology_8h_a2c8461dd4bc87e2cee6461d79daca665} 
+void update\+Pos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+TODO\+: Describe function. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary Author \& Maintainer) 
+
+Matteo Gottardelli (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_a2c8461dd4bc87e2cee6461d79daca665_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_a2c8461dd4bc87e2cee6461d79daca665_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{chronology_8h_ad774f58034bd7f8cb0c570021307df20}\index{chronology.h@{chronology.h}!upStick\_CHRONOLOGY@{upStick\_CHRONOLOGY}}
+\index{upStick\_CHRONOLOGY@{upStick\_CHRONOLOGY}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{upStick\_CHRONOLOGY()}{upStick\_CHRONOLOGY()}}
+{\footnotesize\ttfamily \label{chronology_8h_ad774f58034bd7f8cb0c570021307df20} 
+void up\+Stick\+\_\+\+CHRONOLOGY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+manage what to do when the user moves the stick up 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary Author \& Maintainer) 
+
+Matteo Gottardelli (Helper \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/31 
+\end{DoxyDate}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_ad774f58034bd7f8cb0c570021307df20_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chronology_8h_ad774f58034bd7f8cb0c570021307df20_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{chronology_8h_a38e59e2a27b779c4dc37f0900bd268c1}\index{chronology.h@{chronology.h}!chronology@{chronology}}
+\index{chronology@{chronology}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{chronology}{chronology}}
+{\footnotesize\ttfamily \label{chronology_8h_a38e59e2a27b779c4dc37f0900bd268c1} 
+\mbox{\hyperlink{struct_graphics___chronology}{Graphics\+\_\+\+Chronology}} chronology\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{chronology_8h_a7cae3b9d656c300e3d6f8fddc9eaf0f9}\index{chronology.h@{chronology.h}!other\_buttons@{other\_buttons}}
+\index{other\_buttons@{other\_buttons}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{other\_buttons}{other\_buttons}}
+{\footnotesize\ttfamily \label{chronology_8h_a7cae3b9d656c300e3d6f8fddc9eaf0f9} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} other\+\_\+buttons\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{chronology_8h_a0351fbc096999109025b02345f8f1a92}\index{chronology.h@{chronology.h}!pos\_chronology@{pos\_chronology}}
+\index{pos\_chronology@{pos\_chronology}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{pos\_chronology}{pos\_chronology}}
+{\footnotesize\ttfamily \label{chronology_8h_a0351fbc096999109025b02345f8f1a92} 
+int16\+\_\+t pos\+\_\+chronology\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{chronology_8h_a86dc877eb37cf5f7afbab29b4d3017b8}\index{chronology.h@{chronology.h}!return\_to@{return\_to}}
+\index{return\_to@{return\_to}!chronology.h@{chronology.h}}
+\doxysubsubsection{\texorpdfstring{return\_to}{return\_to}}
+{\footnotesize\ttfamily \label{chronology_8h_a86dc877eb37cf5f7afbab29b4d3017b8} 
+\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} return\+\_\+to}
+

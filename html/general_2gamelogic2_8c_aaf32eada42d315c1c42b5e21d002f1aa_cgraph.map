@@ -1,0 +1,27 @@
+<map id="insert_color" name="insert_color">
+<area shape="rect" id="Node000001" title="inserts the selected color into the user&#39;s sequence if space is available" alt="" coords="5,177,94,203"/>
+<area shape="rect" id="Node000002" href="$game_8c.html#add55822234a04e4988e3f9716a8e3cd9" title="Implicit Call that is invoked when we arrive at GAME state in GUI FSM and primarly draw the static el..." alt="" coords="183,79,262,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,175,96,144,140,113,167,102,169,107,143,118,99,148,66,179"/>
+<area shape="rect" id="Node000010" href="$general_2gamelogic1_8c.html#ad357af7f6265beb9d391aa89a092ba39" title="Convertion of a element from the integer format to the char format." alt="" coords="142,128,303,154"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="93,175,159,156,161,161,95,180"/>
+<area shape="rect" id="Node000011" href="$general_2gamelogic2_8c.html#a76f39e933c88d089d6bfbfff4a7d570f" title="returns if the user’s sequence is full or not" alt="" coords="195,177,250,203"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="94,188,179,188,179,193,94,193"/>
+<area shape="rect" id="Node000012" href="$general_2gamelogic2_8c.html#a06225a4a6c2b59418a1af229d7c24c06" title=" " alt="" coords="168,227,277,252"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="95,200,161,219,159,224,93,205"/>
+<area shape="rect" id="Node000013" href="$game_8c.html#afe0d6ca1d0ba6b6e45490d996b21cdac" title="Action that the menu performs when the stick goes left, primarly changing selection and imposing logi..." alt="" coords="179,276,266,302"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="66,202,99,232,143,263,165,272,163,277,140,267,96,236,62,206"/>
+<area shape="rect" id="Node000003" href="$game_8c.html#a1d704afea01300efda83ee14d72bf132" title="Management and color of the circles on screen." alt="" coords="369,5,459,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,76,363,34,365,39,259,81"/>
+<area shape="rect" id="Node000004" href="$game_8c.html#ac269fe8cc886e12dfde77c659f786cd6" title="According to the dimension selected in GUI menu, are preallocated empty circles that change dynamical..." alt="" coords="374,55,454,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="262,84,359,72,359,77,262,89"/>
+<area shape="rect" id="Node000006" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="351,104,477,130"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="262,94,336,104,335,109,262,99"/>
+<area shape="rect" id="Node000009" href="$implementations_8c.html#a5b980628dc75e57228c103881e9246af" title=" " alt="" coords="365,153,463,179"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="263,99,304,113,352,140,363,145,361,149,350,145,302,118,261,104"/>
+<area shape="rect" id="Node000005" href="$game_8c.html#a8e2dbff3a9441175f6bfcf1b7bc56fee" title="Initialization effective of the circles according to the inputed parameters." alt="" coords="525,55,637,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="454,65,510,65,510,70,454,70"/>
+<area shape="rect" id="Node000007" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="530,104,632,130"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="478,114,515,114,515,120,478,120"/>
+<area shape="rect" id="Node000008" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="530,153,632,179"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="461,128,521,146,519,151,460,133"/>
+</map>

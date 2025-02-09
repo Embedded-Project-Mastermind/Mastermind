@@ -1,0 +1,26 @@
+<map id="handleFont" name="handleFont">
+<area shape="rect" id="Node000001" title="manages the font dimension for the buttons" alt="" coords="715,80,800,106"/>
+<area shape="rect" id="Node000002" href="$dimension_8c.html#a6fb20cec8a94509cc42b47b543ea64d7" title="handles the down movement of the stick" alt="" coords="500,5,667,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="722,74,666,45,637,34,638,29,668,40,724,69"/>
+<area shape="rect" id="Node000006" href="$dimension_8c.html#aa1457a920eebe81a6fc619946c6fa746" title="handles the down movement of the stick" alt="" coords="507,55,660,80"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="699,87,660,81,661,76,699,82"/>
+<area shape="rect" id="Node000008" href="$dimension_8c.html#aa7966b0e409d1f5a41bb210277319673" title="handles the right movement of the stick" alt="" coords="503,104,664,130"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="700,103,664,108,664,103,699,98"/>
+<area shape="rect" id="Node000010" href="$dimension_8c.html#a68da15d7a690c47b33fa100902f82420" title="handles the up movement of the stick" alt="" coords="509,153,658,179"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="723,116,668,145,638,155,636,150,666,140,721,111"/>
+<area shape="rect" id="Node000003" href="$joystick_8c.html#a3e5a790b378f645099a2f8fc5f694b84" title=" " alt="" coords="347,5,452,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="485,21,453,21,453,16,485,16"/>
+<area shape="rect" id="Node000004" href="$joystick_8c.html#adde06bcb4c1eb7d1c081dacc7ac2152c" title=" " alt="" coords="194,80,299,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="357,40,348,45,274,82,272,77,346,40,355,36"/>
+<area shape="rect" id="Node000005" href="$general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="5,80,146,106"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="178,96,146,96,146,90,178,90"/>
+<area shape="rect" id="Node000007" href="$joystick_8c.html#a52c88d60c03461488d6285f39e252627" title=" " alt="" coords="354,55,446,80"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="491,70,446,70,446,65,491,65"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="339,80,300,87,299,82,338,75"/>
+<area shape="rect" id="Node000009" href="$joystick_8c.html#a301de98bfda59c46e55821dee762f5cb" title=" " alt="" coords="350,104,449,130"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="487,120,450,120,450,114,487,114"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="334,109,299,104,300,98,335,104"/>
+<area shape="rect" id="Node000011" href="$joystick_8c.html#a08201f4ea948492041d839c98233e00a" title=" " alt="" coords="356,153,444,179"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="494,169,444,169,444,164,494,164"/>
+<area shape="poly" id="edge13_Node000011_Node000004" title=" " alt="" coords="355,149,346,145,273,109,275,104,348,140,357,144"/>
+</map>

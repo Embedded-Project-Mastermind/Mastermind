@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['radius_0',['RADIUS',['../chronology_8h.html#aa4f8ea40228c3c3a9a7143b1d1ad8956',1,'chronology.h']]],
+  ['radius_1',['radius',['../struct_graphics___circle.html#a61f19d6838f1a4048bbc539cbe4c356a',1,'Graphics_Circle']]],
+  ['random_5fint_2',['random_int',['../general_2gamelogic1_8c.html#a5e9db8c78f3d92aa520e8ebd811aa3a9',1,'random_int(int16_t min, int16_t max):&#160;gamelogic1.c'],['../src_2gamelogic1_8c.html#ad7954e6a1b9ea073c7bc894dc5af85a9',1,'random_int(int min, int max):&#160;gamelogic1.c']]],
+  ['read_5finput_3',['read_input',['../general_2gamelogic2_8h.html#aa420506c95821062bb71ea20f9bd1e80',1,'read_input(int16_t dim):&#160;gamelogic2.h'],['../src_2gamelogic2_8c.html#a711f83e83296a13ef71ed10315779fed',1,'read_input(int dim):&#160;gamelogic2.c'],['../src_2gamelogic2_8h.html#a711f83e83296a13ef71ed10315779fed',1,'read_input(int dim):&#160;gamelogic2.c']]],
+  ['read_5fme_2ec_4',['read_me.c',['../read__me_8c.html',1,'']]],
+  ['readme_2emd_5',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['rect_6',['rect',['../struct_graphics___button.html#a22c80b18439335053299c6924f71477a',1,'Graphics_Button']]],
+  ['rectanglewithtext_7',['rectangleWithText',['../implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5',1,'rectangleWithText(Graphics_Rectangle rect, int32_t colorRect, Graphics_Text text, int32_t colorText):&#160;implementations.c'],['../implementations_8h.html#ad52f2c05d7aee61aba7bfcc147efcab5',1,'rectangleWithText(Graphics_Rectangle rect, int32_t colorRect, Graphics_Text text, int32_t colorText):&#160;implementations.c']]],
+  ['releasemutex_8',['releaseMutex',['../general_2fsm_8h.html#a499c227b2251935bad6eef854ba5ffe5',1,'releaseMutex(void):&#160;implementations.c'],['../implementations_8c.html#a02156d12d2735f76feebf107ff4346a9',1,'releaseMutex():&#160;implementations.c']]],
+  ['requirements_9',['Requirements',['../md__r_e_a_d_m_e.html#autotoc_md8',1,'Hardware Requirements'],['../md__r_e_a_d_m_e.html#autotoc_md7',1,'Software and Hardware Requirements'],['../md__r_e_a_d_m_e.html#autotoc_md10',1,'Software Requirements']]],
+  ['reset_5fscreen_10',['reset_Screen',['../implementations_8c.html#a5b980628dc75e57228c103881e9246af',1,'reset_Screen(void):&#160;implementations.c'],['../implementations_8h.html#a5b980628dc75e57228c103881e9246af',1,'reset_Screen(void):&#160;implementations.c']]],
+  ['reset_5ftent_11',['RESET_TENT',['../general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800',1,'RESET_TENT:&#160;fsm.h'],['../src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800',1,'RESET_TENT:&#160;fsm.h']]],
+  ['resetarray_12',['resetArray',['../_interrupt_01_code_01for_01_breadboard_8c.html#a8c6fcb44ae5c1dfdec91e83b8d70c3f5',1,'Interrupt Code for Breadboard.c']]],
+  ['resetarrayinput_13',['resetArrayInput',['../input_8c.html#aad3f0b26686a346707670914702aeaad',1,'resetArrayInput(void):&#160;input.c'],['../input_8h.html#aad3f0b26686a346707670914702aeaad',1,'resetArrayInput(void):&#160;input.c']]],
+  ['resettentative_14',['resetTentative',['../general_2gamelogic1_8c.html#a349e30260991f4d42dc6e3b575108891',1,'resetTentative(void):&#160;gamelogic1.c'],['../general_2gamelogic1_8h.html#a349e30260991f4d42dc6e3b575108891',1,'resetTentative(void):&#160;gamelogic1.c'],['../src_2gamelogic1_8c.html#a349e30260991f4d42dc6e3b575108891',1,'resetTentative(void):&#160;gamelogic1.c'],['../src_2gamelogic1_8h.html#a349e30260991f4d42dc6e3b575108891',1,'resetTentative(void):&#160;gamelogic1.c']]],
+  ['return_5fto_15',['return_to',['../chronology_8h.html#a86dc877eb37cf5f7afbab29b4d3017b8',1,'chronology.h']]],
+  ['right_16',['RIGHT',['../joystick_8h.html#a19b869a01ca1a58f4164b4f75c2df388aec8379af7490bb9eaaf579cf17876f38',1,'joystick.h']]],
+  ['rightfunctions_17',['rightfunctions',['../joystick_8c.html#a301de98bfda59c46e55821dee762f5cb',1,'rightfunctions():&#160;joystick.c'],['../joystick_8h.html#a301de98bfda59c46e55821dee762f5cb',1,'rightfunctions():&#160;joystick.c']]],
+  ['rightstick_5fchronology_18',['rightStick_CHRONOLOGY',['../chronology_8c.html#ab6199fff7dce2a49d3b5329e51570fbe',1,'rightStick_CHRONOLOGY():&#160;chronology.c'],['../chronology_8h.html#ab6199fff7dce2a49d3b5329e51570fbe',1,'rightStick_CHRONOLOGY():&#160;chronology.c']]],
+  ['rightstick_5fdifficulty_19',['rightStick_DIFFICULTY',['../difficulty_8c.html#a857aed146f25be6eafd6029c4cae888f',1,'rightStick_DIFFICULTY():&#160;difficulty.c'],['../difficulty_8h.html#a857aed146f25be6eafd6029c4cae888f',1,'rightStick_DIFFICULTY():&#160;difficulty.c']]],
+  ['rightstick_5fdimension_20',['rightStick_DIMENSION',['../dimension_8c.html#aa7966b0e409d1f5a41bb210277319673',1,'rightStick_DIMENSION():&#160;dimension.c'],['../dimension_8h.html#aa7966b0e409d1f5a41bb210277319673',1,'rightStick_DIMENSION():&#160;dimension.c']]],
+  ['rightstick_5fdoubles_21',['rightStick_DOUBLES',['../doubles_8c.html#a32374ef584a5874a75624a4bf91c40d3',1,'rightStick_DOUBLES():&#160;doubles.c'],['../doubles_8h.html#a32374ef584a5874a75624a4bf91c40d3',1,'rightStick_DOUBLES():&#160;doubles.c']]],
+  ['rightstick_5finfo_22',['rightStick_INFO',['../info_8c.html#a46185e9cb9550ef5f53ac4acfa3fa070',1,'rightStick_INFO():&#160;info.c'],['../info_8h.html#a46185e9cb9550ef5f53ac4acfa3fa070',1,'rightStick_INFO():&#160;info.c']]],
+  ['rightstick_5ftentative_23',['rightStick_TENTATIVE',['../tentatives_8c.html#a5a9a7d0ba677cf2073ce07d87abaa8ba',1,'rightStick_TENTATIVE():&#160;tentatives.c'],['../tentatives_8h.html#a5a9a7d0ba677cf2073ce07d87abaa8ba',1,'rightStick_TENTATIVE():&#160;tentatives.c']]],
+  ['run_20project_24',['Run Project',['../md__r_e_a_d_m_e.html#autotoc_md19',1,'']]]
+];

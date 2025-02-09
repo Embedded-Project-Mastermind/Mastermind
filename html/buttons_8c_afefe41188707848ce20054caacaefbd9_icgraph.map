@@ -1,0 +1,11 @@
+<map id="functionPinsDefault" name="functionPinsDefault">
+<area shape="rect" id="Node000001" title="Deprecated, using switching function, it is only a bridge function now." alt="" coords="195,80,330,106"/>
+<area shape="rect" id="Node000002" href="$general_2main_8c.html#a7ca37072ef5f4704e442fad813e4fa31" title=" " alt="" coords="5,5,147,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,76,146,45,117,34,119,29,148,40,220,71"/>
+<area shape="rect" id="Node000003" href="$general_2main_8c.html#a577f5dcafa13712fe070504ad7c45f54" title=" " alt="" coords="5,55,147,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,84,147,80,147,74,180,79"/>
+<area shape="rect" id="Node000004" href="$general_2main_8c.html#a04037b417a195722074c0ea44dbc430c" title=" " alt="" coords="5,104,147,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="179,106,147,110,147,105,179,101"/>
+<area shape="rect" id="Node000005" href="$general_2main_8c.html#a6fd48de2ba4b6f4f8bd9c275878cb52f" title=" " alt="" coords="5,153,147,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="219,115,148,145,119,155,117,150,146,140,217,110"/>
+</map>
