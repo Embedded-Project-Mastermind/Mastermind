@@ -7,15 +7,15 @@
  */
 
 #include "info.h"
-/***************************************
-*
-* change_screen_i - manages how to set
-* all info' interface
-* no input
-* no output
-*
-***************************************/
 
+/**
+ * @brief manages how to set all info's interface, also calling the functions to create the texts and the buttons
+ * @return void
+ * @author Daniele Calvo (Primary author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Matteo Gottardelli (Maintainer)
+ * @date 2024-10-10
+ */
 void change_screen_i(void){
     rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
     char buffer[sizeof(long)*8+1][2];
@@ -38,15 +38,16 @@ void change_screen_i(void){
 
     for(i=0; i<2; i++){drawButton(info_buttons[i], FILL_MOVEMENT, STANDARD_COLOR, position);}
 }
-/***************************************
-*
-* fn_INFO() - calls all needed
-* functions to change the previous interface
-* with the one of the info's state
-* no input
-* no output
-*
-***************************************/
+/**
+ * @brief calls all needed
+ * functions to change the previous interface
+ * with the one of the doubles' state
+ * @return void
+ * @author Daniele Calvo (Primary author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Matteo Gottardelli (Maintainer)
+ * @date 2024-10-10
+ */
 void fn_INFO(void) {
     reset_Screen();
     initArray(info_buttons, sizes[INFO]);
@@ -55,21 +56,32 @@ void fn_INFO(void) {
     }
     change_screen_i();
 }
-/***************************************
-*
-* upStick_INFO() / douwnStick_INFO() / leftStick_INFO() / rightStick_INFO()
-* they manage what to do when the user
-* moves the stick
-* no input
-* no output
-*
-***************************************/
-void upStick_INFO(){
-
-}
-void downStick_INFO(){
-
-}
+/**
+ * @brief manage what to do when the user moves the stick up
+ * @return void
+ * @author Daniele Calvo (Primary author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Matteo Gottardelli (Maintainer)
+ * @date 2024-10-10
+ */
+void upStick_INFO(){}
+/**
+ * @brief manage what to do when the user moves the stick down
+ * @return void
+ * @author Daniele Calvo (Primary author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Matteo Gottardelli (Maintainer)
+ * @date 2024-10-10
+ */
+void downStick_INFO(){}
+/**
+ * @brief manage what to do when the user moves the stick left
+ * @return void
+ * @author Daniele Calvo (Primary author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Matteo Gottardelli (Maintainer)
+ * @date 2024-10-10
+ */
 void leftStick_INFO(){
     if(position==1){
         handleOut(info_buttons, position, sizes[INFO]);
@@ -77,6 +89,14 @@ void leftStick_INFO(){
         handleIn(info_buttons, position, sizes[INFO]);
        }
 }
+/**
+ * @brief manage what to do when the user moves the stick right
+ * @return void
+ * @author Daniele Calvo (Primary author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Matteo Gottardelli (Maintainer)
+ * @date 2024-10-10
+ */
 void rightStick_INFO(){
     if(position==0){
         handleOut(info_buttons, position, sizes[INFO]);
@@ -84,15 +104,14 @@ void rightStick_INFO(){
         handleIn(info_buttons, position, sizes[INFO]);
        }
 }
-/***************************************
-*
-* handlePressure_INFO() - calls the handle
-* to when you press the "back" or "next" buttons,
-* being this interface without any other button
-* no input
-* no output
-*
-***************************************/
+/**
+ * @brief calls the function for the "back" and "next" button's handle
+ * @return void
+ * @author Daniele Calvo (Primary author)
+ * @author Matteo Gottardelli (Helper)
+ * @author Matteo Gottardelli (Maintainer)
+ * @date 2024-10-10
+ */
 void handlePressure_INFO() {
     handleSelection(info_buttons);
 }
