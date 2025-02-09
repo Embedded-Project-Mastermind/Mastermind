@@ -35,44 +35,44 @@ The MSP432 board is used to take the input of 8 buttons setted up on an external
 
 ```
 Mastermind
-┣ general                                  # 
+┣ general                                  # All the source code
 ┃ ┣ bitmap.h                               # 
-┃ ┣ buttons.c                              # 
-┃ ┣ buttons.h                              # 
-┃ ┣ chronology.c                           # 
-┃ ┣ chronology.h                           # 
-┃ ┣ difficulty.c                           # 
-┃ ┣ difficulty.h                           # 
-┃ ┣ dimension.c                            # 
-┃ ┣ dimension.h                            # 
-┃ ┣ doubles.c                              # 
-┃ ┣ doubles.h                              # 
+┃ ┣ buttons.c                              # Manage physical buttons + "back" and "next" buttons
+┃ ┣ buttons.h                              # Headers for buttons.c
+┃ ┣ chronology.c                           # Manage the interface to show on screen the chronology of previous tentatives
+┃ ┣ chronology.h                           # Headers for chronology.c
+┃ ┣ difficulty.c                           # Manage the interface to select the difficulty of the game (from easy to hard)
+┃ ┣ difficulty.h                           # Headers for difficulty.c
+┃ ┣ dimension.c                            # Manage the interface to select 
+┃ ┣ dimension.h                            # Headers for dimension.c
+┃ ┣ doubles.c                              # Manage the interface to able/disable doubles in the sequence
+┃ ┣ doubles.h                              # Headers for doubles.c
 ┃ ┣ end.c                                  # 
-┃ ┣ end.h                                  # 
+┃ ┣ end.h                                  # Headers for end.c
 ┃ ┣ fsm.h                                  # 
 ┃ ┣ game.c                                 # 
-┃ ┣ game.h                                 # 
+┃ ┣ game.h                                 # Headers for game.c
 ┃ ┣ gamelogic1.c                           # 
-┃ ┣ gamelocig1.h                           # 
+┃ ┣ gamelogic1.h                           # Headers for gamelogic1.c
 ┃ ┣ gamelogic2.c                           # 
-┃ ┣ gamelocig2.h                           # 
+┃ ┣ gamelogic2.h                           # Headers for gamelogic2.c
 ┃ ┣ gamelogic3.c                           # 
-┃ ┣ gamelocig3.h                           # 
+┃ ┣ gamelogic3.h                           # Headers for gamelogic3.c
 ┃ ┣ graphics.h                             # 
-┃ ┣ implementations.c                      # 
-┃ ┣ implementations.h                      # 
-┃ ┣ info.c                                 # 
-┃ ┣ info.h                                 # 
+┃ ┣ implementations.c                      # Basic functions for the right functioning of all the interfaces
+┃ ┣ implementations.h                      # Headers for implementations.c
+┃ ┣ info.c                                 # Manage the interface that summarize all the game characteristics
+┃ ┣ info.h                                 # Headers for info.c
 ┃ ┣ input.c                                # 
-┃ ┣ input.h                                # 
+┃ ┣ input.h                                # Headers for input.c
 ┃ ┣ joystick.c                             # 
-┃ ┣ joystick.h                             # 
-┃ ┣ main.c                                 # 
+┃ ┣ joystick.h                             # Headers for joystick.c
+┃ ┣ main.c                                 # Calls the various states in out state machine
 ┃ ┣ read_me.c                              # 
 ┃ ┣ start.c                                # 
-┃ ┣ start.h                                # 
-┃ ┣ tentatives.c                           # 
-┃ ┗ tentatives.h                           # 
+┃ ┣ start.h                                # Headers for start.c
+┃ ┣ tentatives.c                           # Manage the interface to select the number of tentatives you want to have to guess the sequence
+┃ ┗ tentatives.h                           # Headers for tentatives.c
 ┣ src                                      # 
 ┃ ┣ fsm.h                                  # 
 ┃ ┣ gamelogic1.c                           # 
