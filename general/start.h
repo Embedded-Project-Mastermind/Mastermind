@@ -30,11 +30,8 @@ extern Graphics_Button start_button;
  */
 void drawStart(int elems);
 /**
- * @brief encodes an RGB color into a 16-bit format suitable for the display
- * @param red presence in the pixel
- * @param green presence in the pixel
- * @param blue presence in the pixel
- * @return single 16-bit color code for the display
+ * @brief initializes and displays the start screen
+ * @return void
  * @author Niccolò Cristoforetti (Primary author)
  * @author Matteo Gottardelli (Helper)
  * @author Daniele Calvo (Maintainer)
@@ -42,8 +39,11 @@ void drawStart(int elems);
  */
 void fn_START_GR(void);
 /**
- * @brief initializes and displays the start screen
- * @return void
+ * @brief encodes an RGB color into a 16-bit format suitable for the display
+ * @param red presence in the pixel
+ * @param green presence in the pixel
+ * @param blue presence in the pixel
+ * @return single 16-bit color code for the display
  * @author Niccolò Cristoforetti (Primary author)
  * @author Matteo Gottardelli (Helper)
  * @author Daniele Calvo (Maintainer)
