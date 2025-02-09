@@ -27,7 +27,7 @@ extern Graphics_Button win_button;
  * @author Daniele Calvo (Maintainer)
  * @date 2024-11-07
  */
-void drawEnd(int elems);
+void drawEnd();
 /**
  * @brief initializes and displays the end screen
  * @return void
