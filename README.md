@@ -272,7 +272,7 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>Benassi Alessandro & Calvo Daniele</th>
     <th>Gottardelli Matteo</th>
     <th>Benassi Alessandro</th>
-    <th>X</th>
+    <th>?</th>
     <th>!</th>
   </tr>
   <tr>
@@ -288,16 +288,16 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>Gottardelli Matteo</th>
     <th>Cristoforetti Niccolò</th>
     <th>Calvo Daniele</th>
-    <th>!</th>
-    <th>!</th>
+    <th>X</th>
+    <th>X</th>
   </tr>
   <tr>
     <th>info.c</th>
     <th>Calvo Daniele</th>
     <th>Gottardelli Matteo</th>
     <th>Calvo Daniele</th>
-    <th>!</th>
-    <th>!</th>
+    <th>X</th>
+    <th>X</th>
   </tr>
    <tr>
     <th>input.c</th>
