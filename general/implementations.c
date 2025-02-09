@@ -24,7 +24,7 @@ volatile bool mutex=false;
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void reset_Screen(void) {
@@ -38,7 +38,7 @@ void reset_Screen(void) {
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void graphics_Init(void) {
@@ -56,7 +56,7 @@ void graphics_Init(void) {
  * @return the x of the center of the given rectangle
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 int32_t getCenteredX(Graphics_Rectangle rect) {
@@ -68,7 +68,7 @@ int32_t getCenteredX(Graphics_Rectangle rect) {
  * @return the y of the center of the given rectangle
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 int32_t getCenteredY(Graphics_Rectangle rect) {
@@ -81,7 +81,7 @@ int32_t getCenteredY(Graphics_Rectangle rect) {
  * @return the choosen color
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 int32_t chooseColorRect(Button_State state, int32_t color) {
@@ -102,7 +102,7 @@ int32_t chooseColorRect(Button_State state, int32_t color) {
  * @return the choosen color
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 int32_t chooseColorText(Button_State state, int32_t color) {
@@ -124,7 +124,7 @@ int32_t chooseColorText(Button_State state, int32_t color) {
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void focusedhandle(Button_State state, Graphics_Rectangle rect, int32_t color) {
@@ -150,7 +150,7 @@ void focusedhandle(Button_State state, Graphics_Rectangle rect, int32_t color) {
  * @return the position of the button in the "selected" state (if no button is selected, -1)
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 int8_t findSelected(Graphics_Button array[], int8_t size) {
@@ -171,7 +171,7 @@ int8_t findSelected(Graphics_Button array[], int8_t size) {
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color, int8_t pos_selected) {
@@ -196,7 +196,7 @@ void drawButton(Graphics_Button button, int32_t rect_color, int32_t text_color, 
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void rectangleWithText(Graphics_Rectangle rect, int32_t colorRect, Graphics_Text text, int32_t colorText) {
@@ -216,7 +216,7 @@ void rectangleWithText(Graphics_Rectangle rect, int32_t colorRect, Graphics_Text
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
@@ -255,7 +255,7 @@ void handleOut(Graphics_Button array[], uint8_t position, int8_t size) {
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void handleIn(Graphics_Button array[], uint8_t position, int8_t size) {
@@ -272,7 +272,7 @@ void handleIn(Graphics_Button array[], uint8_t position, int8_t size) {
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void hardware_Init() {
@@ -288,7 +288,7 @@ void hardware_Init() {
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void handle_buttons(Graphics_Button array[]){
@@ -324,7 +324,7 @@ void handle_buttons(Graphics_Button array[]){
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void handleSelection(Graphics_Button array[]) {
@@ -342,7 +342,7 @@ void handleSelection(Graphics_Button array[]) {
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void handleDeselection(Graphics_Button array[]) {
@@ -360,7 +360,7 @@ void handleDeselection(Graphics_Button array[]) {
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void initArray(Graphics_Button array[], int size) {
@@ -382,7 +382,7 @@ void initArray(Graphics_Button array[], int size) {
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void acquireMutex() {
@@ -398,7 +398,7 @@ void acquireMutex() {
  * @return void
  * @author Matteo Gottardelli (Primary author)
  * @author Niccolo Cristoforetti (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-5
  */
 void releaseMutex() {

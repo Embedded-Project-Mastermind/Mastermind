@@ -12,7 +12,7 @@
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Alessandro Benassi (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void create_doubles_text(void){
@@ -28,7 +28,7 @@ void create_doubles_text(void){
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Alessandro Benassi (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void create_doubles_buttons(void){
@@ -48,7 +48,7 @@ void create_doubles_buttons(void){
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Alessandro Benassi (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void change_screen_d(void){
@@ -65,7 +65,7 @@ void change_screen_d(void){
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Alessandro Benassi (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void fn_DOUBLES(void) {
@@ -81,7 +81,7 @@ void fn_DOUBLES(void) {
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Alessandro Benassi (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void upStick_DOUBLES(){
@@ -96,7 +96,7 @@ void upStick_DOUBLES(){
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Alessandro Benassi (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void downStick_DOUBLES(){
@@ -111,7 +111,7 @@ void downStick_DOUBLES(){
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Alessandro Benassi (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void leftStick_DOUBLES(){
@@ -126,7 +126,7 @@ void leftStick_DOUBLES(){
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Alessandro Benassi (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void rightStick_DOUBLES(){
@@ -141,7 +141,7 @@ void rightStick_DOUBLES(){
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Alessandro Benassi (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void handlePressure_DOUBLES() {
