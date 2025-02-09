@@ -1,6 +1,7 @@
 /*
  * Title: start.c
  * Primary Authors: Niccolò Cristoforetti
+ * Helper: Matteo Gottardelli
  * Maintainability: Daniele Calvo
  * Date Creation: 10 ott 2024
  */
@@ -13,6 +14,7 @@
  * @param
  * @return void
  * @author Niccolò Cristoforetti (Primary author)
+ * @author Matteo Gottardelli (Helper)
  * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
@@ -42,6 +44,7 @@ void drawStart(int elems) {
  * @param blue presence in the pixel
  * @return single 16-bit color code for the display
  * @author Niccolò Cristoforetti (Primary author)
+ * @author Matteo Gottardelli (Helper)
  * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
@@ -58,6 +61,7 @@ uint16_t encodeColor(uint8_t r, uint8_t g, uint8_t b) {
  * @brief initializes and displays the start screen
  * @return void
  * @author Niccolò Cristoforetti (Primary author)
+ * @author Matteo Gottardelli (Helper)
  * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
