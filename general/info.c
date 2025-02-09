@@ -2,7 +2,7 @@
  * Title: info.c
  * Primary Authors: Daniele Calvo
  * Helpers: Matteo Gottardelli
- * Maintainability: Matteo Gottardelli
+ * Maintainability: Daniele Calvo
  * Date Creation: 5 ott 2024
  */
 
@@ -13,7 +13,7 @@
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Matteo Gottardelli (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void change_screen_i(void){
@@ -45,7 +45,7 @@ void change_screen_i(void){
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Matteo Gottardelli (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void fn_INFO(void) {
@@ -61,7 +61,7 @@ void fn_INFO(void) {
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Matteo Gottardelli (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void upStick_INFO(){}
@@ -70,7 +70,7 @@ void upStick_INFO(){}
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Matteo Gottardelli (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void downStick_INFO(){}
@@ -79,7 +79,7 @@ void downStick_INFO(){}
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Matteo Gottardelli (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void leftStick_INFO(){
@@ -94,7 +94,7 @@ void leftStick_INFO(){
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Matteo Gottardelli (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void rightStick_INFO(){
@@ -109,7 +109,7 @@ void rightStick_INFO(){
  * @return void
  * @author Daniele Calvo (Primary author)
  * @author Matteo Gottardelli (Helper)
- * @author Matteo Gottardelli (Maintainer)
+ * @author Daniele Calvo (Maintainer)
  * @date 2024-10-10
  */
 void handlePressure_INFO() {
