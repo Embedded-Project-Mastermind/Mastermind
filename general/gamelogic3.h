@@ -91,6 +91,7 @@ void fn_ELABORATE_RESULT(void);
 void fn_WIN(void);
 
 /**
+ * FUNCTION DEPRECATED
  * @brief Function that checks if the sequence is a tentative or a correction.
  * @param integer
  * @return integer for set the right index in the chronology
