@@ -8,7 +8,7 @@
 #include "dimension.h"
 #include "implementations.h"
 /**
- * @brief dFunction that draws the interface of dimension section, 4 buttons to select the dimension and the others for prev (go to START_GR) and next (go to DIFFICULTY)
+ * @brief Function that draws the interface of dimension section, 4 buttons to select the dimension and the others for prev (go to START_GR) and next (go to DIFFICULTY)
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
