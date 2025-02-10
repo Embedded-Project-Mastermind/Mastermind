@@ -8,8 +8,8 @@
 #include "dimension.h"
 #include "implementations.h"
 /**
- * @brief draws buttons
- * @return TODO: Describe return value.
+ * @brief dFunction that draws the interface of dimension section, 4 buttons to select the dimension and the others for prev (go to START_GR) and next (go to DIFFICULTY)
+ * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
  */
@@ -27,7 +27,7 @@ void drawDimension() {
     }
 }
 /**
- * @brief manages the font dimension for the buttons
+ * @brief makes the font of the DIMENSION's buttons bigger and avoids conflict with next and prev buttons
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
@@ -41,20 +41,19 @@ void handleFont(){
     }
 }
 /**
- * @brief general function for scenario drawing
+ * @brief Implicit Call, invoked when we arrive at DIMENSION state in GUI FSM, initializes variables and draws the interface
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
  */
 void fn_DIMENSION(void) {
-    reset_Screen();  //screen reset function
+    reset_Screen();
     initArray(dim_buttons, sizes[DIMENSION]);
-    rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR); //default draw function, draws top part, back and next buttons
+    rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
     drawDimension();
-    //FOLLOWING POSITION
 }
 /**
- * @brief handles the up movement of the stick
+ * @brief handles the up movement of the stick, changing the selected element if the action can be performed
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
@@ -64,12 +63,12 @@ void upStick_DIMENSION(){
         handleFont();
         handleOut(dim_buttons, position, sizes[DIMENSION]);
         position=position-2;
-        handleFont(); //sarebbe da ottimizzare
+        handleFont();
         handleIn(dim_buttons, position, sizes[DIMENSION]);
     }
 }
 /**
- * @brief handles the down movement of the stick
+ * @brief handles the down movement of the stick, changing the selected element if the action can be performed
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
@@ -91,13 +90,12 @@ void downStick_DIMENSION(){
     }
 }
 /**
- * @brief handles the down movement of the stick
+ * @brief handles the left movement of the stick, changing the selected element if the action can be performed
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
  */
 void leftStick_DIMENSION(){
-    //int num=position%2;
     if((position%2)==1){
         handleFont();
         handleOut(dim_buttons, position, sizes[DIMENSION]);
@@ -107,13 +105,12 @@ void leftStick_DIMENSION(){
     }
 }
 /**
- * @brief handles the right movement of the stick
+ * @brief handles the right movement of the stick, changing the selected element if the action can be performed
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
  */
 void rightStick_DIMENSION(){
-    //int num=position%2;
     if((position%2)==0){
         if(position<4){
             handleFont();
@@ -132,7 +129,7 @@ void rightStick_DIMENSION(){
      }
 }
 /**
- * @brief extern declaretion
+ * @brief Handles the pressure of confirm button in the DIMENSION section
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
@@ -141,7 +138,3 @@ void handlePressure_DIMENSION() {
     game.dim=atoi((char*)dim_buttons[position].text.string);
     handleSelection(dim_buttons);
 }
-
-
-
-
