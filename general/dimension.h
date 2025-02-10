@@ -11,64 +11,63 @@
 
 #include "implementations.h"
 #include "graphics.h"
-
 /**
- * @brief draws buttons
- * @return TODO: Describe return value.
- * @author Alessandro Benassi (Primary Author & Maintainer)
- * @date 2024-10-10
- */
-void drawDimension(); //draws buttons
-/**
- * @brief general function for scenario drawing
+ * @brief Function that draws the interface of dimension section, 4 buttons to select the dimension and the others for prev (go to START_GR) and next (go to DIFFICULTY)
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
  */
-void fn_DIMENSION(void); //general function for scenario drawing
+void drawDimension();
 /**
- * @brief manages the font dimension for the buttons
+ * @brief Implicit Call, invoked when we arrive at DIMENSION state in GUI FSM, initializes variables and draws the interface
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
  */
-void handleFont(); //manages the font dimension for the buttons
+void fn_DIMENSION(void);
 /**
- * @brief handles the up movement of the stick
+ * @brief makes the font of the DIMENSION's buttons bigger and avoids conflict with next and prev buttons
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
  */
-void upStick_DIMENSION(); //handles the up movement of the stick
+void handleFont();
 /**
- * @brief handles the down movement of the stick
+ * @brief handles the up movement of the stick, changing the selected element if the action can be performed
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
  */
-void downStick_DIMENSION(); //handles the down movement of the stick
+void upStick_DIMENSION();
 /**
- * @brief handles the down movement of the stick
+ * @brief handles the down movement of the stick, changing the selected element if the action can be performed
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
  */
-void leftStick_DIMENSION(); //handles the left movement of the stick
+void downStick_DIMENSION();
 /**
- * @brief handles the right movement of the stick
+ * @brief handles the left movement of the stick, changing the selected element if the action can be performed
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
  */
-void rightStick_DIMENSION(); //handles the right movement of the stick
+void leftStick_DIMENSION();
 /**
- * @brief extern declaretion
+ * @brief handles the right movement of the stick, changing the selected element if the action can be performed
+ * @return void
+ * @author Alessandro Benassi (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
+void rightStick_DIMENSION();
+/**
+ * @brief Handles the pressure of confirm button in the DIMENSION section
  * @return void
  * @author Alessandro Benassi (Primary Author & Maintainer)
  * @date 2024-10-10
  */
 void handlePressure_DIMENSION();
 //extern declaretion
-extern Graphics_Button dim_buttons[];  //array of buttons declaration
+extern Graphics_Button dim_buttons[];
 
 #endif /* DIMENSION_H_ */
