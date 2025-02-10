@@ -10,6 +10,7 @@
 #include "game.h"
 
 /**
+ * FUNCTION DEPRECATED
  * @brief Function that checks if the sequence is a tentative or a correction.
  * @param integer
  * @return integer for set the right index in the chronology
