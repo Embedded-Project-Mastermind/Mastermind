@@ -280,8 +280,8 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>Benassi Alessandro & Calvo Daniele</th>
     <th>Gottardelli Matteo</th>
     <th>Benassi Alessandro</th>
-    <th>🟡</th>
-    <th>🔴</th>
+    <th>🟢</th>
+    <th>🟢</th>
   </tr>
   <tr>
     <th>gamelogic3.c</th>
