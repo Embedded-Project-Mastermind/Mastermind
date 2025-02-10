@@ -14,15 +14,13 @@ Graphics_Button other_things[]={
     {DISABLED, {1, 32+2, TENT_DIM-1, 32+TENT_DIM-1}, {"", false}}
 };
 
-/***************************************
-*
-* drawTentatives() - function that create
-* buttons and text for the Tentatives screen
-* no input
-* no output
-*
-***************************************/
-
+/**
+ * @brief function that create buttons and text for the Tentatives screen
+ * @param integer for the number of buttons of the Tentatives screen
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void drawTentatives(int elems) {
     int i;
     for (i=0; i<2; i++) {
@@ -38,16 +36,13 @@ void drawTentatives(int elems) {
        }
 }
 
-/***************************************
-*
-* fn_TENTATIVE() - functions that create
-* the tentatives screen starting from
-* resetting the previous screen
-* no input
-* no output
-*
-***************************************/
-
+/**
+ * @brief functions that create the tentatives screen starting from resetting the previous screen
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void fn_TENTATIVE(void) {
     reset_Screen();
     //DRAW FUNCTION
@@ -55,19 +50,15 @@ void fn_TENTATIVE(void) {
     initArray(tent_buttons, sizes[TENTATIVE]);
     rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
     drawTentatives(sizes[TENTATIVE]);
-    //FOLLOWING POSITION
 }
 
-/***************************************
-*
-* upStick_TENTATIVE() / douwnStick_TENTATIVE() / leftStick_TENTATIVE() / rightStick_TENTATIVE()
-* they manage what to do when the user
-* moves the stick
-* no input
-* no output
-*
-***************************************/
-
+/**
+ * @brief manage what to do when the user moves the stick up
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void upStick_TENTATIVE() {
     if(position>=1 && position<=4) {
         handleOut(tent_buttons, position, sizes[TENTATIVE]);
@@ -93,6 +84,14 @@ void upStick_TENTATIVE() {
             handleIn(tent_buttons, position, sizes[TENTATIVE]);
     }
 }
+
+/**
+ * @brief manage what to do when the user moves the stick down
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void downStick_TENTATIVE() {
     if(position==0) {
         handleOut(tent_buttons, position, sizes[TENTATIVE]);
@@ -118,6 +117,14 @@ void downStick_TENTATIVE() {
             handleIn(tent_buttons, position, sizes[TENTATIVE]);
     }
 }
+
+/**
+ * @brief manage what to do when the user moves the stick to the left
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void leftStick_TENTATIVE() {
     if(position>=1 && position<sizes[TENTATIVE]) {
             handleOut(tent_buttons, position, sizes[TENTATIVE]);
@@ -129,6 +136,14 @@ void leftStick_TENTATIVE() {
             handleIn(tent_buttons, position, sizes[TENTATIVE]);
     }
 }
+
+/**
+ * @brief manage what to do when the user moves the stick to the right
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void rightStick_TENTATIVE() {
     if(position<sizes[TENTATIVE]) {
 
@@ -144,16 +159,13 @@ void rightStick_TENTATIVE() {
     }
 }
 
-/***************************************
-*
-* handlePressure_TENTATIVE() - manages the choice
-* of tentative trough the pressure of the
-* button (except to prev and next)
-* no input
-* no output
-*
-***************************************/
-
+/**
+ * @brief manages the choice of tentative trough the pressure of the button (except to prev and next)
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-10-10
+ */
 void handlePressure_TENTATIVE() {
     if (position!=0) {
         game.tentatives=atoi((char*)tent_buttons[position].text.string);
