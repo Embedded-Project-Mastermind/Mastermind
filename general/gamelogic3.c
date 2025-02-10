@@ -9,7 +9,13 @@
 #include "gamelogic3.h"
 #include "game.h"
 
-//Function that checks if the sequence is a tenctative or a correction. Returns a int for set the right index in the chronology
+/**
+ * @brief Function that checks if the sequence is a tentative or a correction.
+ * @param integer
+ * @return integer for set the right index in the chronology
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 /*int16_t checkIfTenctOrCorrection(int8_t c){
     if( c=='X' || c== 'O' || c=='!' ){  //Check if the output isn't a correction
         return game.dim;
@@ -17,7 +23,13 @@
     return 0;
 }*/
 
-//Function that inserts sequence or sequence corrections in chronology
+/**
+ * @brief Function that inserts sequence in chronology
+ * @param array integer for the sequence
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void insertInChronologyColor(int8_t* seq){
     //j=checkIfTenctOrCorrection(seq[0]);  //The j index is used to insert correctly in the chronology the sequence or corrections
     for(i=0; i<game.dim; i++){
@@ -25,6 +37,14 @@ void insertInChronologyColor(int8_t* seq){
         game.chronology[ game.dim * 2 * game.count_tent + i ]=seq[i];
     }
 }
+
+/**
+ * @brief Function that inserts sequence results in chronology
+ * @param array integer for the sequence results
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void insertInChronologyRes(int8_t* seq){
     //j=checkIfTenctOrCorrection(seq[0]);  //The j index is used to insert correctly in the chronology the sequence or corrections
     for(i=0; i<game.dim; i++){
@@ -33,28 +53,52 @@ void insertInChronologyRes(int8_t* seq){
     }
 }
 
-//Function that increases the number of tenctative
+/**
+ * @brief Function that increases the number of tentative
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void incrementTent(void){
     game.count_tent++;
     printf("Number of current tentative: %d of %d \n",
            game.count_tent,
-           game.tentatives);  //print number of count_tent/tentatives
+           game.tentatives);  //print number of count_tent/tentative
 }
 
-//Function that checks if the maximum number of attempts has been reached
+/**
+ * @brief Function that checks if the maximum number of attempts has been reached
+ * @param void
+ * @return boolean that check the gameover state
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 bool checkIfGameOver(void){
     if(game.count_tent<game.tentatives){
-        return false;  //if the number of count_tent is less then tentatives the Game over condition isn't verified
+        return false;  //if the number of count_tent is less then tentative the Game over condition isn't verified
     }
-    return true;  //if the number of count_tent is equal (or more) than tentatives the Game over condition is verified
+    return true;  //if the number of count_tent is equal (or more) than tentative the Game over condition is verified
 }
 
-//Function that checks the difficulty degree
+/**
+ * @brief Function that checks the difficulty degree
+ * @param void
+ * @return integer that shows the difficulty degree
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 int8_t check_difficulty(void){
     return game.difficulty;
 }
 
-//Function that transforms the seq_user into corrections in EASY_MODE
+/**
+ * @brief Function that transforms the seq_user into corrections in EASY_MODE
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void correctionsEasyMode(void){
     makeArrayEmpty_Bool(game.flags, 1, game.dim);  //Function for set all the flags to false
     for(i=0; i<game.dim; i++){
@@ -78,7 +122,14 @@ void correctionsEasyMode(void){
         }
     }
 }
-//Function that transforms the seq_user into corrections in MEDIUM_MODE
+
+/**
+ * @brief Function that transforms the seq_user into corrections in MEDIUM_MODE
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void correctionsMediumMode(void){
     int16_t o=0; int16_t x=0;
     correctionsEasyMode();
@@ -103,7 +154,13 @@ void correctionsMediumMode(void){
     }
 }
 
-//Function that transforms the seq_user into corrections in DIFFICULT_MODE
+/**
+ * @brief Function that transforms the seq_user into corrections in MEDIUM_MODE
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void correctionsDifficultMode(void){
     correctionsMediumMode();
     for(i=0; i<game.dim; i++){
@@ -113,7 +170,13 @@ void correctionsDifficultMode(void){
     }
 }
 
-//Function that prints the last sequence inserted in the chronology with the respective corrections
+/**
+ * @brief Function that prints the last sequence inserted in the chronology with the respective corrections
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void printLastTentativeInChronology(void){
     printf("Sequence: ");
     for(i=0; i<game.dim; i++){
@@ -127,7 +190,13 @@ void printLastTentativeInChronology(void){
     }printf("\n");
 }
 
-//Function that checks if the next state is WIN or not
+/**
+ * @brief Function that checks if the next state is WIN or not
+ * @param void
+ * @return boolean that check the gameover state
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 bool winCondition(void){
     int i;
     for(i=0; i<game.dim; i++){
@@ -137,13 +206,25 @@ bool winCondition(void){
     } return true;  //If all value of the last sequence inserted in the chronology correspond to the sequence to guess the win condition is true
 }
 
-//Function for ELABORATE_TENT state
+/**
+ * @brief Function for ELABORATE_TENT state
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void fn_ELABORATE_TENT(void){
     insertInChronologyColor(tentative.seq_user);  //Insert sequence in chronology
     current_state = INCREMENT_TENT;  // Transition to the INCREMENT_TENT state;
 }
 
-//Function for INCREMENT_TENT state
+/**
+ * @brief Function for INCREMENT_TENT state
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void fn_INCREMENT_TENT(void){
     incrementTent();  //increment the number of count_tent
     switch (check_difficulty()) {  //otherwise a check_difficult must be made
@@ -154,31 +235,61 @@ void fn_INCREMENT_TENT(void){
     }
 }
 
-//Function for GAME_OVER state
+/**
+ * @brief Function for GAME_OVER state
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void fn_GAME_OVER(void){
     printf("you have reached the maximum number of attempts: GAME OVER!\n");  //Game over state
     current_state=ERROR;  //Transition to the ERROR state
 }
 
-//Function for EASY_MODE state
+/**
+ * @brief Function for EASY_MODE state
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void fn_EASY_MODE(void){
     correctionsEasyMode();  //Set corrections for the easy mode in seq_user
     current_state=ELABORATE_RESULT;  //Transition to the ELABORATE_RESULT state
 }
 
-//Function for MEDIUM_MODE state
+/**
+ * @brief Function for MEDIUM_MODE state
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void fn_MEDIUM_MODE(void){
     correctionsMediumMode();  //Set corrections for the medium mode in seq_user
     current_state=ELABORATE_RESULT;  //Transition to the ELABORATE_RESULT state
 }
 
-//Function for DIFFICULT_MODE state
+/**
+ * @brief Function for DIFFICULT_MODE state
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void fn_DIFFICULT_MODE(void){
     correctionsDifficultMode();  //Set corrections for the difficult mode in seq_user
     current_state=ELABORATE_RESULT;  //Transition to the ELABORATE_RESULT state
 }
 
-//Function for ELABORATE_RESULT state
+/**
+ * @brief Function for ELABORATE_RESULT state
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void fn_ELABORATE_RESULT(void){
     insertInChronologyRes(tentative.sol_user);  //Insert corrections in chronology
     printLastTentativeInChronology();  //Print the complete output of the last tentative
@@ -199,7 +310,13 @@ void fn_ELABORATE_RESULT(void){
     }
 }
 
-//Function for WIN state
+/**
+ * @brief Function for WIN state
+ * @param void
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @date 2024-09-29
+ */
 void fn_WIN(void){
     printf("The sequence is correct: WIN in %d tenctatives!!!\n",
            game.count_tent);  //WIN state
