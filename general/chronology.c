@@ -65,9 +65,9 @@ void fn_CHRONOLOGY(void) {
 }
 
 /**
- * @brief TODO: Describe function.
- * @param index TODO: Describe parameter.
- * @return TODO: Describe return value.
+ * @brief converts the number associated to the color to its color char
+ * @param integer
+ * @return char
  * @author Niccolò Cristoforetti (Primary Author & Maintainer)
  * @author Matteo Gottardelli (Helper & Maintainer)
  * @date 2024-10-31
@@ -88,17 +88,16 @@ int16_t char_Conversion_to_Int(int8_t index) {
     return c; // Return the character representation
 }
 /**
- * @brief TODO: Describe function.
- * @param offset TODO: Describe parameter.
- * @param radius TODO: Describe parameter.
- * @param value TODO: Describe parameter.
- * @param index TODO: Describe parameter.
+ * @brief populate the cHronology circle with their colors
+ * @param radius dimension of the circle
+ * @param value position of the sequence
+ * @param index that indicates History of attempts
  * @return void
  * @author Niccolò Cristoforetti (Primary Author & Maintainer)
  * @author Matteo Gottardelli (Helper & Maintainer)
  * @date 2024-10-31
  */
-void populateChronologyCircles(int16_t offset, int16_t radius, int16_t value, int16_t index){
+void populateChronologyCircles(int16_t radius, int16_t value, int16_t index){
     int j;
     for (j=0; j<game.dim; j++) {
         chronology[value].chrono_circles[j].radius=radius;
@@ -109,9 +108,9 @@ void populateChronologyCircles(int16_t offset, int16_t radius, int16_t value, in
     }
 }
 /**
- * @brief TODO: Describe function.
- * @param value TODO: Describe parameter.
- * @param index TODO: Describe parameter.
+ * @brief function that populate chronology buttons
+ * @param value position of the sequence
+ * @param index that indicates History of attempts
  * @return void
  * @author Niccolò Cristoforetti (Primary Author & Maintainer)
  * @author Matteo Gottardelli (Helper & Maintainer)
@@ -180,7 +179,7 @@ void upStick_CHRONOLOGY() {
         if(game.count_tent-1>pos_chronology+sizes[CHRONOLOGY]){
             other_buttons[1].state=STANDARD;
         }
-        //Modifica le schermate precedenti
+        //Modified previous screens
         updatePos();
     }
 }
@@ -208,7 +207,7 @@ void downStick_CHRONOLOGY() {
             if(game.count_tent<=pos_chronology+sizes[CHRONOLOGY]){
                 other_buttons[1].state=DISABLED;
             }
-            //Modifica le schermate precedenti
+            //Modified previous screens
             updatePos();
         }
     }
@@ -226,7 +225,7 @@ void rightStick_CHRONOLOGY() {
 }
 
 /**
- * @brief TODO: Describe function.
+ * @brief show the last attempts of the chronology or the ones that were selected by the joystick
  * @return void
  * @author Niccolò Cristoforetti (Primary Author & Maintainer)
  * @author Matteo Gottardelli (Helper & Maintainer)
