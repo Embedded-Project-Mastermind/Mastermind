@@ -281,7 +281,6 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>-</th>
     <th>Gottardelli Matteo</th>
     <th>🟢</th>
-    <th>🟢</th>
   </tr>
   <tr>
     <th>dimension.c</th>
