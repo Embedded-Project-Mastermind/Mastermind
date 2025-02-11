@@ -29,15 +29,6 @@
  */
 void fn_WAIT(void);                 //Function for WAIT state
 /**
- * @brief state for when he received an input (now useless)
- * @return void
- * @author Alessandro Benassi & Daniele Calvo (Primary Author)
- * @author Matteo Gottardelli (Helper)
- * @author Alessandro Benassi & Daniele Calvo (Maintainer)
- * @date 2024-09-27
- */
-void fn_ELABORATE(void);            //Function for ELABORATE state
-/**
  * @brief state for inserting the color choosen by the user in its sequence
  * @return void
  * @author Alessandro Benassi & Daniele Calvo (Primary Author)
