@@ -71,8 +71,25 @@ void populateChronologyCircles(int16_t radius, int16_t value, int16_t index);
  */
 int16_t char_Conversion_to_Int(int8_t index);
 
-
+/**
+ * @brief function that populate chronology buttons (related to corrections)
+ * @param value position of the sequence
+ * @param index that indicates History of attempts
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void populateChronologyButtons(int16_t value, int16_t index);
+
+/**
+ * @brief function that draw corrections below circles
+ * @param buttons buttons related to corrections
+ * @return void
+ * @author Niccolò Cristoforetti (Primary Author & Maintainer)
+ * @author Matteo Gottardelli (Helper & Maintainer)
+ * @date 2024-10-31
+ */
 void drawPastResults(Graphics_Button* buttons);
 
 /**
@@ -103,7 +120,7 @@ void downStick_CHRONOLOGY();
 void rightStick_CHRONOLOGY();
 
 /**
- * @brief show the last attempts of the chronology or the ones that were selected by the joystick
+ * @brief populate the last attempts of the chronology or the ones that were selected by the joystick
  * @return void
  * @author Niccolò Cristoforetti (Primary Author & Maintainer)
  * @author Matteo Gottardelli (Helper & Maintainer)
