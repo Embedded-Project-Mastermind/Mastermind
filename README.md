@@ -9,7 +9,7 @@
     </div>
 </div>
 
-<img src="images/logo.jpeg" alt="logo" width="500">
+<img src="images/logo.png" alt="logo" width="500">
 
 ## Table of Contents
 - [Introduction](#introduction)
