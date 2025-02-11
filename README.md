@@ -77,6 +77,7 @@ Disegno del circuito e tabella con i pin
   <img src="images/board_configuration.jpg" alt="Board Configuration" width="300">
 </div>
 
+
 [Back to top](#table-of-contents)
 
 ---
