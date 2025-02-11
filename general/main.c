@@ -53,7 +53,6 @@ StateMachine fsm[] = {
     {KEY_WH_DOUB, fn_KEY_WH_DOUB},
     {RESET_TENT, fn_RESET_TENT},
     {WAIT, fn_WAIT},
-    {ELABORATE, fn_ELABORATE},
     {INSERT_COLOR, fn_INSERT_COLOR},
     {WAIT_FULL, fn_WAIT_FULL},
     {ELIMINATE_COLOR, fn_ELIMINATE_COLOR},

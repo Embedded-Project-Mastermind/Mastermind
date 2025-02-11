@@ -251,7 +251,7 @@ void updatePos(){
                     }
                     chronology[i].num.string[strlen(str)] = '\0';
                     printf("Chronology[%d] num.string: %s %s\n", i, str, chronology[i].num.string);
-                    populateChronologyCircles(BASIC_OFFSET,RADIUS,i, result-1);
+                    populateChronologyCircles(RADIUS,i, result-1);
                     populateChronologyButtons(i, result-1);
                 }
             }
