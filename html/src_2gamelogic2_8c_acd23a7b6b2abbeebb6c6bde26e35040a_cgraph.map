@@ -1,16 +1,16 @@
 <map id="fn_WAIT_FULL" name="fn_WAIT_FULL">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,117,56"/>
+<area shape="rect" id="Node000001" title="state while he&#39;s waiting an input with the user&#39;s sequence full" alt="" coords="5,31,117,56"/>
 <area shape="rect" id="Node000002" href="$src_2gamelogic2_8c.html#ad15b778b3386a7200ec4c77c9445194e" title=" " alt="" coords="165,5,255,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,31,149,26,150,31,118,37"/>
 <area shape="rect" id="Node000003" href="$src_2gamelogic2_8c.html#aa6688872ceac509c3164b94875dc3763" title=" " alt="" coords="175,55,244,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="118,50,160,57,159,62,117,55"/>
-<area shape="rect" id="Node000004" href="$general_2gamelogic2_8c.html#a4ac8a4eccf1b52c5f4f162807ba7a172" title=" " alt="" coords="450,29,517,55"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic2_8c.html#a4ac8a4eccf1b52c5f4f162807ba7a172" title="(Outdated) print to indicate the full state of the array on console" alt="" coords="450,29,517,55"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="245,62,434,44,434,49,245,67"/>
 <area shape="rect" id="Node000005" href="$src_2gamelogic2_8c.html#a711f83e83296a13ef71ed10315779fed" title=" " alt="" coords="303,80,384,106"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="245,71,288,80,287,85,244,77"/>
 <area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="380,77,434,57,436,62,382,82"/>
 <area shape="rect" id="Node000006" href="$general_2gamelogic2_8c.html#a2d9418eed626aa95f8198811a970a254" title="returns if the user’s sequence is empty or not" alt="" coords="446,79,521,104"/>
 <area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="385,90,431,89,431,95,385,95"/>
-<area shape="rect" id="Node000007" href="$general_2gamelogic2_8c.html#a6916b14296a6350be813f853d9e08796" title=" " alt="" coords="432,128,535,154"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic2_8c.html#a6916b14296a6350be813f853d9e08796" title="(Outdated) it was the main menu for the logic test on console" alt="" coords="432,128,535,154"/>
 <area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="384,104,431,120,429,125,383,109"/>
 </map>

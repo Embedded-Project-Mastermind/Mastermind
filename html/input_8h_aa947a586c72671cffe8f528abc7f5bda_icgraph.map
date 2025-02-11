@@ -1,6 +1,6 @@
 <map id="configurePortsInput" name="configurePortsInput">
-<area shape="rect" id="Node000001" title=" " alt="" coords="250,5,384,31"/>
-<area shape="rect" id="Node000002" href="$implementations_8c.html#ad37616d1eaf8c88801edb04ba22d15c6" title=" " alt="" coords="103,5,202,31"/>
+<area shape="rect" id="Node000001" title="Setup the various ports from 1 to 6 in order, but not all the pins, because they have already active ..." alt="" coords="250,5,384,31"/>
+<area shape="rect" id="Node000002" href="$implementations_8c.html#ad37616d1eaf8c88801edb04ba22d15c6" title="initializa all the hardware, including ports and interrupts" alt="" coords="103,5,202,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,21,202,21,202,16,234,16"/>
 <area shape="rect" id="Node000003" href="$general_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>

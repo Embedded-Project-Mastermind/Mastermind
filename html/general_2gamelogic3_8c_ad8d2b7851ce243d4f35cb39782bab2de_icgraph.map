@@ -1,5 +1,5 @@
 <map id="insertInChronologyColor" name="insertInChronologyColor">
-<area shape="rect" id="Node000001" title=" " alt="" coords="214,5,375,31"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a8c8ec768cc25ef34d7b4cee105ff1ce2" title=" " alt="" coords="5,5,166,31"/>
+<area shape="rect" id="Node000001" title="Function that checks if the sequence is a tentative or a correction." alt="" coords="214,5,375,31"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a8c8ec768cc25ef34d7b4cee105ff1ce2" title="Function for ELABORATE_TENT state." alt="" coords="5,5,166,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,21,166,21,166,16,198,16"/>
 </map>

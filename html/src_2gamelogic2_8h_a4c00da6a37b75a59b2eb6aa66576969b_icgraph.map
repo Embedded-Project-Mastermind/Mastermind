@@ -1,5 +1,5 @@
 <map id="wait_handle" name="wait_handle">
 <area shape="rect" id="Node000001" title=" " alt="" coords="126,5,216,31"/>
-<area shape="rect" id="Node000002" href="$src_2gamelogic2_8c.html#a816c5d4caf1a402f87e1e28b641884b4" title=" " alt="" coords="5,5,78,31"/>
+<area shape="rect" id="Node000002" href="$src_2gamelogic2_8c.html#a816c5d4caf1a402f87e1e28b641884b4" title="state while he&#39;s waiting an input" alt="" coords="5,5,78,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,21,78,21,78,16,110,16"/>
 </map>

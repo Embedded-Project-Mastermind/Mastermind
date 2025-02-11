@@ -2,8 +2,8 @@ var searchData=
 [
   ['radius_0',['RADIUS',['../chronology_8h.html#aa4f8ea40228c3c3a9a7143b1d1ad8956',1,'chronology.h']]],
   ['radius_1',['radius',['../struct_graphics___circle.html#a61f19d6838f1a4048bbc539cbe4c356a',1,'Graphics_Circle']]],
-  ['random_5fint_2',['random_int',['../general_2gamelogic1_8c.html#a5e9db8c78f3d92aa520e8ebd811aa3a9',1,'random_int(int16_t min, int16_t max):&#160;gamelogic1.c'],['../src_2gamelogic1_8c.html#ad7954e6a1b9ea073c7bc894dc5af85a9',1,'random_int(int min, int max):&#160;gamelogic1.c']]],
-  ['read_5finput_3',['read_input',['../general_2gamelogic2_8h.html#aa420506c95821062bb71ea20f9bd1e80',1,'read_input(int16_t dim):&#160;gamelogic2.h'],['../src_2gamelogic2_8c.html#a711f83e83296a13ef71ed10315779fed',1,'read_input(int dim):&#160;gamelogic2.c'],['../src_2gamelogic2_8h.html#a711f83e83296a13ef71ed10315779fed',1,'read_input(int dim):&#160;gamelogic2.c']]],
+  ['random_5fint_2',['random_int',['../general_2gamelogic1_8c.html#a5e9db8c78f3d92aa520e8ebd811aa3a9',1,'random_int(int16_t min, int16_t max):&#160;gamelogic1.c'],['../general_2gamelogic1_8h.html#a5e9db8c78f3d92aa520e8ebd811aa3a9',1,'random_int(int16_t min, int16_t max):&#160;gamelogic1.c'],['../src_2gamelogic1_8c.html#ad7954e6a1b9ea073c7bc894dc5af85a9',1,'random_int(int min, int max):&#160;gamelogic1.c']]],
+  ['read_5finput_3',['read_input',['../src_2gamelogic2_8c.html#a711f83e83296a13ef71ed10315779fed',1,'read_input(int dim):&#160;gamelogic2.c'],['../src_2gamelogic2_8h.html#a711f83e83296a13ef71ed10315779fed',1,'read_input(int dim):&#160;gamelogic2.c']]],
   ['read_5fme_2ec_4',['read_me.c',['../read__me_8c.html',1,'']]],
   ['readme_2emd_5',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
   ['rect_6',['rect',['../struct_graphics___button.html#a22c80b18439335053299c6924f71477a',1,'Graphics_Button']]],

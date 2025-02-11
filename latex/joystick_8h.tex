@@ -38,33 +38,33 @@ enum \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}} \{ \
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{joystick_8h_a08201f4ea948492041d839c98233e00a}{upfunctions}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Functions that handles the up stick movement according to the different screens, the ones that doesn\textquotesingle{}t have that option have their field empty. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_a3e5a790b378f645099a2f8fc5f694b84}{downfunctions}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Functions that handles the down stick movement according to the different screens, the ones that doesn\textquotesingle{}t have that option have their field empty. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_a52c88d60c03461488d6285f39e252627}{leftfunctions}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Functions that handles the left stick movement according to the different screens, the ones that doesn\textquotesingle{}t have that option have their field empty. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_a301de98bfda59c46e55821dee762f5cb}{rightfunctions}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Functions that handles the right stick movement according to the different screens, the ones that doesn\textquotesingle{}t have that option have their field empty. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_a92a70e2775796b1a7a6b49a983f570e3}{Timer\+\_\+\+Init}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialization of the timer corresponds to the first invocation of the timer and its functionality in order to measure the time passing. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_af96ee69b063edcebc656d0ca0450c12c}{ADC\+\_\+\+Start\+Conversion}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em method that trigger the activation of the next read of ADC sensor \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_aba5554d566a1a96bb319050ee2a87ea5}{ADC\+\_\+\+Enable\+Interrupts}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em enabling the interrupts for the two joystick channels P6.\+0 and P4.\+4 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_a4023d983e6edbb9ec1c19264b9f5d063}{setup\+Priorities}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em In order to handle the various interrupts, we have to setup the various sending of interrupts according to an hierarchy. If an interrupt with a higher priority arises, then the below level ones stops. The bottons, so the ports from 1 to 6 have the highest level, because is an instantaneous input, the timer a lower priority, because it has a period of time, but it is not always active, the adc of the joystick instead is always active and continously reads the input of it. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_adde06bcb4c1eb7d1c081dacc7ac2152c}{Navigate\+Menu}} (\mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}} direction)
-\item 
+\begin{DoxyCompactList}\small\item\em According to the Enum declared redirects to one of the appove directional functions. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_ac2ba05e83436748b14c78b42942f30ec}{\+\_\+adc\+Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialization of the adc signal for the joystick, done activationg P6.\+0 and P4.\+4, an setting them up witht the tertiary mode. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_ac024e21f4a895774cbc85c22395d7892}{before\+\_\+\+ADC}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialization of the adc signal for the joystick, done activationg P6.\+0 and P4.\+4, an setting them up witht the tertiary mode. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_a144df1b67eee7bbf15b632fe43c106fe}{init\+HW}} ()
 \item 
 \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}} \mbox{\hyperlink{joystick_8h_a46814585d7265ab89bb7bc3d77f967aa}{find\+Direction}} (uint16\+\_\+t x, uint16\+\_\+t y)
-\item 
+\begin{DoxyCompactList}\small\item\em Choosing the direction of the joystick according to the position of it. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{joystick_8h_a17d2aabe37f3c529c960176fe55d5fd5}{delay\+\_\+ms}} (uint32\+\_\+t milliseconds)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function that stops the system for an amount of time, used primarly for synchronization. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -120,8 +120,20 @@ CENTER&\\
 {\footnotesize\ttfamily \label{joystick_8h_ac2ba05e83436748b14c78b42942f30ec} 
 void \+\_\+adc\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Initialization of the adc signal for the joystick, done activationg P6.\+0 and P4.\+4, an setting them up witht the tertiary mode. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -134,8 +146,20 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{joystick_8h_aba5554d566a1a96bb319050ee2a87ea5} 
 void ADC\+\_\+\+Enable\+Interrupts (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+enabling the interrupts for the two joystick channels P6.\+0 and P4.\+4 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -148,8 +172,20 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{joystick_8h_af96ee69b063edcebc656d0ca0450c12c} 
 void ADC\+\_\+\+Start\+Conversion (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+method that trigger the activation of the next read of ADC sensor 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -162,8 +198,20 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{joystick_8h_ac024e21f4a895774cbc85c22395d7892} 
 void before\+\_\+\+ADC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Initialization of the adc signal for the joystick, done activationg P6.\+0 and P4.\+4, an setting them up witht the tertiary mode. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -176,8 +224,25 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{joystick_8h_a17d2aabe37f3c529c960176fe55d5fd5} 
 void delay\+\_\+ms (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{milliseconds}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Function that stops the system for an amount of time, used primarly for synchronization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em milliseconds} & Consists in the amount of time we desire to delay \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -190,16 +255,27 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{joystick_8h_a3e5a790b378f645099a2f8fc5f694b84} 
 void downfunctions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Functions that handles the down stick movement according to the different screens, the ones that doesn\textquotesingle{}t have that option have their field empty. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{joystick_8h_a3e5a790b378f645099a2f8fc5f694b84_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -212,8 +288,27 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{joystick_8h_a46814585d7265ab89bb7bc3d77f967aa} 
 \mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}} find\+Direction (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Choosing the direction of the joystick according to the position of it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x position from 0 on left to 15700 c.\+a. on right \\
+\hline
+{\em y} & The y position from 0 on top to 16200 c.\+a. on bottom \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move} gives and enum in order to determine visually to which category belongs that position 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -232,16 +327,27 @@ void init\+HW (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 {\footnotesize\ttfamily \label{joystick_8h_a52c88d60c03461488d6285f39e252627} 
 void leftfunctions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Functions that handles the left stick movement according to the different screens, the ones that doesn\textquotesingle{}t have that option have their field empty. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{joystick_8h_a52c88d60c03461488d6285f39e252627_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -254,16 +360,32 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{joystick_8h_adde06bcb4c1eb7d1c081dacc7ac2152c} 
 void Navigate\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{joystick_8h_a19b869a01ca1a58f4164b4f75c2df388}{Move}}}]{direction}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+According to the Enum declared redirects to one of the appove directional functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Indicates the direction that each element performs according to the stick position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{joystick_8h_adde06bcb4c1eb7d1c081dacc7ac2152c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -276,16 +398,27 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{joystick_8h_a301de98bfda59c46e55821dee762f5cb} 
 void rightfunctions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Functions that handles the right stick movement according to the different screens, the ones that doesn\textquotesingle{}t have that option have their field empty. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{joystick_8h_a301de98bfda59c46e55821dee762f5cb_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -298,8 +431,20 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{joystick_8h_a4023d983e6edbb9ec1c19264b9f5d063} 
 void setup\+Priorities (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+In order to handle the various interrupts, we have to setup the various sending of interrupts according to an hierarchy. If an interrupt with a higher priority arises, then the below level ones stops. The bottons, so the ports from 1 to 6 have the highest level, because is an instantaneous input, the timer a lower priority, because it has a period of time, but it is not always active, the adc of the joystick instead is always active and continously reads the input of it. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -312,8 +457,20 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{joystick_8h_a92a70e2775796b1a7a6b49a983f570e3} 
 void Timer\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Initialization of the timer corresponds to the first invocation of the timer and its functionality in order to measure the time passing. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -326,16 +483,27 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{joystick_8h_a08201f4ea948492041d839c98233e00a} 
 void upfunctions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Functions that handles the up stick movement according to the different screens, the ones that doesn\textquotesingle{}t have that option have their field empty. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{joystick_8h_a08201f4ea948492041d839c98233e00a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

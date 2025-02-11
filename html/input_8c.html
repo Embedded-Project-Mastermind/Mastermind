@@ -173,28 +173,40 @@ Include dependency graph for input.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aad3f0b26686a346707670914702aeaad" id="r_aad3f0b26686a346707670914702aeaad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad3f0b26686a346707670914702aeaad">resetArrayInput</a> (void)</td></tr>
+<tr class="memdesc:aad3f0b26686a346707670914702aeaad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to reset the global bool array, simulating the activation of the ports.  <br /></td></tr>
 <tr class="separator:aad3f0b26686a346707670914702aeaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75d92ac43d65d743ff159105e3e33b60" id="r_a75d92ac43d65d743ff159105e3e33b60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75d92ac43d65d743ff159105e3e33b60">setArrayInput</a> (int val)</td></tr>
+<tr class="memdesc:a75d92ac43d65d743ff159105e3e33b60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set array values based on the value inputed.  <br /></td></tr>
 <tr class="separator:a75d92ac43d65d743ff159105e3e33b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa947a586c72671cffe8f528abc7f5bda" id="r_aa947a586c72671cffe8f528abc7f5bda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa947a586c72671cffe8f528abc7f5bda">configurePortsInput</a> (void)</td></tr>
+<tr class="memdesc:aa947a586c72671cffe8f528abc7f5bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the various ports from 1 to 6 in order, but not all the pins, because they have already active sensors connected to them, limitating the choice.  <br /></td></tr>
 <tr class="separator:aa947a586c72671cffe8f528abc7f5bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aead6b5c0c9e2aee938cff12f269c3216" id="r_aead6b5c0c9e2aee938cff12f269c3216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aead6b5c0c9e2aee938cff12f269c3216">configureInterruptPortInput</a> (void)</td></tr>
+<tr class="memdesc:aead6b5c0c9e2aee938cff12f269c3216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the interrupt enabling only for some ports in order to make not append some undesired behavior.  <br /></td></tr>
 <tr class="separator:aead6b5c0c9e2aee938cff12f269c3216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a961a43ddc52b1c2b16aab7f30f4ad0d9" id="r_a961a43ddc52b1c2b16aab7f30f4ad0d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a961a43ddc52b1c2b16aab7f30f4ad0d9">triggerPinInterrupt</a> ()</td></tr>
+<tr class="memdesc:a961a43ddc52b1c2b16aab7f30f4ad0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A via for creating a dummy trigger on P1.1, in order to reactivate an undesired stop of the system.  <br /></td></tr>
 <tr class="separator:a961a43ddc52b1c2b16aab7f30f4ad0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e001e6590fdf593eeac0f10ee1c18ff" id="r_a0e001e6590fdf593eeac0f10ee1c18ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e001e6590fdf593eeac0f10ee1c18ff">counterTrue</a> (void)</td></tr>
+<tr class="memdesc:a0e001e6590fdf593eeac0f10ee1c18ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify how many inputs in a period of time were performed in the array generated.  <br /></td></tr>
 <tr class="separator:a0e001e6590fdf593eeac0f10ee1c18ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa21ddc994860540031b8ee0b3a81f5f2" id="r_aa21ddc994860540031b8ee0b3a81f5f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa21ddc994860540031b8ee0b3a81f5f2">findTrue</a> (void)</td></tr>
+<tr class="memdesc:aa21ddc994860540031b8ee0b3a81f5f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the true input in a period of time, in order to see a clear output.  <br /></td></tr>
 <tr class="separator:aa21ddc994860540031b8ee0b3a81f5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a445b36ad7315b9af24ac6cde2f307d5e" id="r_a445b36ad7315b9af24ac6cde2f307d5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a445b36ad7315b9af24ac6cde2f307d5e">elaborateOutput</a> (void)</td></tr>
+<tr class="memdesc:a445b36ad7315b9af24ac6cde2f307d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine which is the output action after pressing a button, it can be trigger a color or give a particular behavior if it is the back one or the confirm one.  <br /></td></tr>
 <tr class="separator:a445b36ad7315b9af24ac6cde2f307d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a649025105fd573f4021b9aa4b3ba5e44" id="r_a649025105fd573f4021b9aa4b3ba5e44"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a649025105fd573f4021b9aa4b3ba5e44">bitofstatus</a> (uint8_t status)</td></tr>
+<tr class="memdesc:a649025105fd573f4021b9aa4b3ba5e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify on a specific port IFG which is the bit activated.  <br /></td></tr>
 <tr class="separator:a649025105fd573f4021b9aa4b3ba5e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23a5061c21b189449ac63eef4edc75d8" id="r_a23a5061c21b189449ac63eef4edc75d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23a5061c21b189449ac63eef4edc75d8">switching</a> (uint8_t status, int8_t port)</td></tr>
+<tr class="memdesc:a23a5061c21b189449ac63eef4edc75d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the array according to an input pin on a port.  <br /></td></tr>
 <tr class="separator:a23a5061c21b189449ac63eef4edc75d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a880c69c873b56ebc5af5a1c8186854cb" id="r_a880c69c873b56ebc5af5a1c8186854cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a880c69c873b56ebc5af5a1c8186854cb">configureTimersInput</a> (void)</td></tr>
+<tr class="memdesc:a880c69c873b56ebc5af5a1c8186854cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the timer TIMER A0 in order to be continuous tracking and usable to get some frames of time.  <br /></td></tr>
 <tr class="separator:a880c69c873b56ebc5af5a1c8186854cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc6f8d83006ea3fd3139fe320edb4ec3" id="r_afc6f8d83006ea3fd3139fe320edb4ec3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc6f8d83006ea3fd3139fe320edb4ec3">atLeastOneTrue</a> (void)</td></tr>
+<tr class="memdesc:afc6f8d83006ea3fd3139fe320edb4ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify that there is only one true input in a period of time, in order to see a clear output.  <br /></td></tr>
 <tr class="separator:afc6f8d83006ea3fd3139fe320edb4ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -219,12 +231,19 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verify that there is only one true input in a period of time, in order to see a clear output. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool returning the result TRUE if there was only one input and FALSE if not </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_afc6f8d83006ea3fd3139fe320edb4ec3_icgraph.png" border="0" usemap="#ainput_8c_afc6f8d83006ea3fd3139fe320edb4ec3_icgraph" alt=""/></div>
 <map name="ainput_8c_afc6f8d83006ea3fd3139fe320edb4ec3_icgraph" id="ainput_8c_afc6f8d83006ea3fd3139fe320edb4ec3_icgraph">
-<area shape="rect" title=" " alt="" coords="191,5,305,31"/>
+<area shape="rect" title="Verify that there is only one true input in a period of time, in order to see a clear output." alt="" coords="191,5,305,31"/>
 <area shape="rect" href="general_2main_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,5,143,31"/>
 <area shape="poly" title=" " alt="" coords="175,21,143,21,143,16,175,16"/>
 </map>
@@ -246,13 +265,26 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verify on a specific port IFG which is the bit activated. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>The IFG port status, that symbolizes the status of the pins on a port </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns a uint8 corresponding to the actual bit position searched in the status </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_a649025105fd573f4021b9aa4b3ba5e44_icgraph.png" border="0" usemap="#ainput_8c_a649025105fd573f4021b9aa4b3ba5e44_icgraph" alt=""/></div>
 <map name="ainput_8c_a649025105fd573f4021b9aa4b3ba5e44_icgraph" id="ainput_8c_a649025105fd573f4021b9aa4b3ba5e44_icgraph">
-<area shape="rect" title=" " alt="" coords="502,80,585,106"/>
-<area shape="rect" href="input_8c.html#a23a5061c21b189449ac63eef4edc75d8" title=" " alt="" coords="378,80,454,106"/>
+<area shape="rect" title="Verify on a specific port IFG which is the bit activated." alt="" coords="502,80,585,106"/>
+<area shape="rect" href="input_8c.html#a23a5061c21b189449ac63eef4edc75d8" title="Sets the position of the array according to an input pin on a port." alt="" coords="378,80,454,106"/>
 <area shape="poly" title=" " alt="" coords="486,96,455,96,455,90,486,90"/>
 <area shape="rect" href="buttons_8c.html#afefe41188707848ce20054caacaefbd9" title="Deprecated, using switching function, it is only a bridge function now." alt="" coords="195,80,330,106"/>
 <area shape="poly" title=" " alt="" coords="362,96,331,96,331,90,362,90"/>
@@ -283,13 +315,20 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Setup the interrupt enabling only for some ports in order to make not append some undesired behavior. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_aead6b5c0c9e2aee938cff12f269c3216_icgraph.png" border="0" usemap="#ainput_8c_aead6b5c0c9e2aee938cff12f269c3216_icgraph" alt=""/></div>
 <map name="ainput_8c_aead6b5c0c9e2aee938cff12f269c3216_icgraph" id="ainput_8c_aead6b5c0c9e2aee938cff12f269c3216_icgraph">
-<area shape="rect" title=" " alt="" coords="250,5,425,31"/>
-<area shape="rect" href="implementations_8c.html#ad37616d1eaf8c88801edb04ba22d15c6" title=" " alt="" coords="103,5,202,31"/>
+<area shape="rect" title="Setup the interrupt enabling only for some ports in order to make not append some undesired behavior." alt="" coords="250,5,425,31"/>
+<area shape="rect" href="implementations_8c.html#ad37616d1eaf8c88801edb04ba22d15c6" title="initializa all the hardware, including ports and interrupts" alt="" coords="103,5,202,31"/>
 <area shape="poly" title=" " alt="" coords="235,21,203,21,203,16,235,16"/>
 <area shape="rect" href="general_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,31"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
@@ -312,13 +351,20 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Setup the various ports from 1 to 6 in order, but not all the pins, because they have already active sensors connected to them, limitating the choice. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_aa947a586c72671cffe8f528abc7f5bda_icgraph.png" border="0" usemap="#ainput_8c_aa947a586c72671cffe8f528abc7f5bda_icgraph" alt=""/></div>
 <map name="ainput_8c_aa947a586c72671cffe8f528abc7f5bda_icgraph" id="ainput_8c_aa947a586c72671cffe8f528abc7f5bda_icgraph">
-<area shape="rect" title=" " alt="" coords="250,5,384,31"/>
-<area shape="rect" href="implementations_8c.html#ad37616d1eaf8c88801edb04ba22d15c6" title=" " alt="" coords="103,5,202,31"/>
+<area shape="rect" title="Setup the various ports from 1 to 6 in order, but not all the pins, because they have already active ..." alt="" coords="250,5,384,31"/>
+<area shape="rect" href="implementations_8c.html#ad37616d1eaf8c88801edb04ba22d15c6" title="initializa all the hardware, including ports and interrupts" alt="" coords="103,5,202,31"/>
 <area shape="poly" title=" " alt="" coords="234,21,202,21,202,16,234,16"/>
 <area shape="rect" href="general_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,31"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
@@ -342,6 +388,13 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Setup the timer TIMER A0 in order to be continuous tracking and usable to get some frames of time. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
+
 </div>
 </div>
 <a id="a0e001e6590fdf593eeac0f10ee1c18ff" name="a0e001e6590fdf593eeac0f10ee1c18ff"></a>
@@ -358,13 +411,20 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verify how many inputs in a period of time were performed in the array generated. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_a0e001e6590fdf593eeac0f10ee1c18ff_icgraph.png" border="0" usemap="#ainput_8c_a0e001e6590fdf593eeac0f10ee1c18ff_icgraph" alt=""/></div>
 <map name="ainput_8c_a0e001e6590fdf593eeac0f10ee1c18ff_icgraph" id="ainput_8c_a0e001e6590fdf593eeac0f10ee1c18ff_icgraph">
-<area shape="rect" title=" " alt="" coords="352,5,442,31"/>
-<area shape="rect" href="input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title=" " alt="" coords="191,5,304,31"/>
+<area shape="rect" title="Verify how many inputs in a period of time were performed in the array generated." alt="" coords="352,5,442,31"/>
+<area shape="rect" href="input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="191,5,304,31"/>
 <area shape="poly" title=" " alt="" coords="336,21,304,21,304,16,336,16"/>
 <area shape="rect" href="general_2main_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,5,143,31"/>
 <area shape="poly" title=" " alt="" coords="175,21,143,21,143,16,175,16"/>
@@ -387,46 +447,53 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Determine which is the output action after pressing a button, it can be trigger a color or give a particular behavior if it is the back one or the confirm one. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_a445b36ad7315b9af24ac6cde2f307d5e_cgraph.png" border="0" usemap="#ainput_8c_a445b36ad7315b9af24ac6cde2f307d5e_cgraph" alt=""/></div>
 <map name="ainput_8c_a445b36ad7315b9af24ac6cde2f307d5e_cgraph" id="ainput_8c_a445b36ad7315b9af24ac6cde2f307d5e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,104,119,130"/>
+<area shape="rect" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="5,104,119,130"/>
 <area shape="rect" href="buttons_8c.html#a1009f4e791fd062c1654ef5ccff2993a" title="Implements back button action that redirects in eliminate colored circle state if there was at least ..." alt="" coords="175,5,299,31"/>
 <area shape="poly" title=" " alt="" coords="77,101,116,71,165,40,176,35,178,40,168,45,119,75,80,105"/>
 <area shape="rect" href="buttons_8c.html#a4fe9599165d47017fa954f8ec9016d4f" title="Implements confirm button action that manage its input according to the state you are in...." alt="" coords="167,104,307,130"/>
 <area shape="poly" title=" " alt="" coords="119,114,151,114,151,120,119,120"/>
-<area shape="rect" href="input_8c.html#a0e001e6590fdf593eeac0f10ee1c18ff" title=" " alt="" coords="192,153,282,179"/>
+<area shape="rect" href="input_8c.html#a0e001e6590fdf593eeac0f10ee1c18ff" title="Verify how many inputs in a period of time were performed in the array generated." alt="" coords="192,153,282,179"/>
 <area shape="poly" title=" " alt="" coords="111,128,178,147,176,152,110,133"/>
 <area shape="rect" href="game_8c.html#ae75b7a2c4cacd669fec7a8d14c925898" title="According to the inputed color, the leds are turned on according to that color (ORANGE case it will b..." alt="" coords="184,55,290,80"/>
 <area shape="poly" title=" " alt="" coords="110,101,173,83,174,88,111,106"/>
-<area shape="rect" href="input_8c.html#aa21ddc994860540031b8ee0b3a81f5f2" title=" " alt="" coords="203,203,271,228"/>
+<area shape="rect" href="input_8c.html#aa21ddc994860540031b8ee0b3a81f5f2" title="Verify the true input in a period of time, in order to see a clear output." alt="" coords="203,203,271,228"/>
 <area shape="poly" title=" " alt="" coords="80,128,119,158,168,189,189,199,187,203,165,194,116,163,77,132"/>
 <area shape="rect" href="general_2gamelogic2_8c.html#a2d9418eed626aa95f8198811a970a254" title="returns if the user’s sequence is empty or not" alt="" coords="381,5,455,31"/>
 <area shape="poly" title=" " alt="" coords="300,16,366,16,366,21,300,21"/>
-<area shape="rect" href="implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="355,55,481,80"/>
+<area shape="rect" href="implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title="it draws a rectangle with a text centered in it" alt="" coords="355,55,481,80"/>
 <area shape="poly" title=" " alt="" coords="288,29,354,47,353,53,286,34"/>
-<area shape="rect" href="implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="577,5,678,31"/>
+<area shape="rect" href="implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title="gives back the x of the center of the given rectangle" alt="" coords="577,5,678,31"/>
 <area shape="poly" title=" " alt="" coords="475,51,561,31,562,36,477,57"/>
-<area shape="rect" href="implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="577,55,678,80"/>
+<area shape="rect" href="implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title="gives back the y of the center of the given rectangle" alt="" coords="577,55,678,80"/>
 <area shape="poly" title=" " alt="" coords="482,65,561,65,561,70,482,70"/>
 <area shape="poly" title=" " alt="" coords="286,101,353,82,354,88,288,106"/>
-<area shape="rect" href="implementations_8c.html#ae6b98301bc187c6f3b974c2283459932" title=" " alt="" coords="364,153,473,179"/>
+<area shape="rect" href="implementations_8c.html#ae6b98301bc187c6f3b974c2283459932" title="handles the prev and next buttons" alt="" coords="364,153,473,179"/>
 <area shape="poly" title=" " alt="" coords="288,128,354,146,353,151,286,133"/>
 <area shape="rect" href="difficulty_8c.html#a55037b2df6de8e644fb78a0b591e8ac2" title="Function that handles pressure of confirm button when we are in DIFFICULTY section." alt="" coords="529,104,726,130"/>
 <area shape="poly" title=" " alt="" coords="473,151,554,131,556,136,474,156"/>
-<area shape="rect" href="dimension_8c.html#a58364c9a26deb9ae50fe27b33f41a221" title="extern declaretion" alt="" coords="530,153,725,179"/>
+<area shape="rect" href="dimension_8c.html#a58364c9a26deb9ae50fe27b33f41a221" title="Handles the pressure of confirm button in the DIMENSION section." alt="" coords="530,153,725,179"/>
 <area shape="poly" title=" " alt="" coords="473,164,514,164,514,169,473,169"/>
 <area shape="rect" href="doubles_8c.html#a0cb8c2347e6040b6d06a0642ef95643a" title="manages the changes of our doubles variable and the shown text on our button (except to prev and next..." alt="" coords="536,252,719,278"/>
 <area shape="poly" title=" " alt="" coords="437,177,478,208,530,238,546,244,544,249,528,243,475,213,434,182"/>
-<area shape="rect" href="tentatives_8c.html#ab21c36ca2c0c622eefddddf5c0023d4c" title=" " alt="" coords="532,203,723,228"/>
+<area shape="rect" href="tentatives_8c.html#ab21c36ca2c0c622eefddddf5c0023d4c" title="manages the choice of tentative trough the pressure of the button (except to prev and next)" alt="" coords="532,203,723,228"/>
 <area shape="poly" title=" " alt="" coords="474,176,556,196,554,201,473,182"/>
-<area shape="rect" href="implementations_8c.html#a7b8a1f6ee64675c2f14e0c4d61b10092" title=" " alt="" coords="781,179,894,204"/>
+<area shape="rect" href="implementations_8c.html#a7b8a1f6ee64675c2f14e0c4d61b10092" title="selects the currently focused button" alt="" coords="781,179,894,204"/>
 <area shape="poly" title=" " alt="" coords="691,128,727,138,798,169,796,174,725,143,690,133"/>
 <area shape="poly" title=" " alt="" coords="726,175,766,180,766,186,725,181"/>
 <area shape="poly" title=" " alt="" coords="690,249,725,238,796,209,798,214,727,243,691,254"/>
-<area shape="rect" href="implementations_8c.html#af4097a2a104a8d16ccf1344d0e9f25b1" title=" " alt="" coords="774,252,902,278"/>
+<area shape="rect" href="implementations_8c.html#af4097a2a104a8d16ccf1344d0e9f25b1" title="Resets all buttons to &quot;STANDARD&quot;." alt="" coords="774,252,902,278"/>
 <area shape="poly" title=" " alt="" coords="719,262,758,262,758,268,719,268"/>
 <area shape="poly" title=" " alt="" coords="723,202,766,197,766,202,724,207"/>
 <area shape="poly" title=" " alt="" coords="290,65,339,65,339,70,290,70"/>
@@ -437,7 +504,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_a445b36ad7315b9af24ac6cde2f307d5e_icgraph.png" border="0" usemap="#ainput_8c_a445b36ad7315b9af24ac6cde2f307d5e_icgraph" alt=""/></div>
 <map name="ainput_8c_a445b36ad7315b9af24ac6cde2f307d5e_icgraph" id="ainput_8c_a445b36ad7315b9af24ac6cde2f307d5e_icgraph">
-<area shape="rect" title=" " alt="" coords="191,5,304,31"/>
+<area shape="rect" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="191,5,304,31"/>
 <area shape="rect" href="general_2main_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,5,143,31"/>
 <area shape="poly" title=" " alt="" coords="175,21,143,21,143,16,175,16"/>
 </map>
@@ -459,13 +526,20 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verify the true input in a period of time, in order to see a clear output. </p>
+<dl class="section return"><dt>Returns</dt><dd>int returning the array position that has a true value </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_aa21ddc994860540031b8ee0b3a81f5f2_icgraph.png" border="0" usemap="#ainput_8c_aa21ddc994860540031b8ee0b3a81f5f2_icgraph" alt=""/></div>
 <map name="ainput_8c_aa21ddc994860540031b8ee0b3a81f5f2_icgraph" id="ainput_8c_aa21ddc994860540031b8ee0b3a81f5f2_icgraph">
-<area shape="rect" title=" " alt="" coords="352,5,420,31"/>
-<area shape="rect" href="input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title=" " alt="" coords="191,5,304,31"/>
+<area shape="rect" title="Verify the true input in a period of time, in order to see a clear output." alt="" coords="352,5,420,31"/>
+<area shape="rect" href="input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="191,5,304,31"/>
 <area shape="poly" title=" " alt="" coords="336,21,304,21,304,16,336,16"/>
 <area shape="rect" href="general_2main_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,5,143,31"/>
 <area shape="poly" title=" " alt="" coords="175,21,143,21,143,16,175,16"/>
@@ -488,17 +562,24 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Function to reset the global bool array, simulating the activation of the ports. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_aad3f0b26686a346707670914702aeaad_icgraph.png" border="0" usemap="#ainput_8c_aad3f0b26686a346707670914702aeaad_icgraph" alt=""/></div>
 <map name="ainput_8c_aad3f0b26686a346707670914702aeaad_icgraph" id="ainput_8c_aad3f0b26686a346707670914702aeaad_icgraph">
-<area shape="rect" title=" " alt="" coords="688,105,798,131"/>
-<area shape="rect" href="input_8c.html#a75d92ac43d65d743ff159105e3e33b60" title=" " alt="" coords="521,80,621,106"/>
+<area shape="rect" title="Function to reset the global bool array, simulating the activation of the ports." alt="" coords="688,105,798,131"/>
+<area shape="rect" href="input_8c.html#a75d92ac43d65d743ff159105e3e33b60" title="Set array values based on the value inputed." alt="" coords="521,80,621,106"/>
 <area shape="poly" title=" " alt="" coords="672,110,621,103,621,97,673,105"/>
 <area shape="rect" href="general_2main_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="502,129,640,155"/>
 <area shape="poly" title=" " alt="" coords="673,131,640,135,639,130,672,125"/>
-<area shape="rect" href="input_8c.html#a23a5061c21b189449ac63eef4edc75d8" title=" " alt="" coords="378,80,454,106"/>
+<area shape="rect" href="input_8c.html#a23a5061c21b189449ac63eef4edc75d8" title="Sets the position of the array according to an input pin on a port." alt="" coords="378,80,454,106"/>
 <area shape="poly" title=" " alt="" coords="506,96,455,96,455,90,506,90"/>
 <area shape="rect" href="buttons_8c.html#afefe41188707848ce20054caacaefbd9" title="Deprecated, using switching function, it is only a bridge function now." alt="" coords="195,80,330,106"/>
 <area shape="poly" title=" " alt="" coords="362,96,331,96,331,90,362,90"/>
@@ -529,13 +610,26 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set array values based on the value inputed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>In case the value belongd to the interval 0 DIMIO, then it will be set to true, like an activation, instead it will mean that the try is over and it is reseted </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_a75d92ac43d65d743ff159105e3e33b60_cgraph.png" border="0" usemap="#ainput_8c_a75d92ac43d65d743ff159105e3e33b60_cgraph" alt=""/></div>
 <map name="ainput_8c_a75d92ac43d65d743ff159105e3e33b60_cgraph" id="ainput_8c_a75d92ac43d65d743ff159105e3e33b60_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,105,31"/>
-<area shape="rect" href="input_8c.html#aad3f0b26686a346707670914702aeaad" title=" " alt="" coords="153,5,263,31"/>
+<area shape="rect" title="Set array values based on the value inputed." alt="" coords="5,5,105,31"/>
+<area shape="rect" href="input_8c.html#aad3f0b26686a346707670914702aeaad" title="Function to reset the global bool array, simulating the activation of the ports." alt="" coords="153,5,263,31"/>
 <area shape="poly" title=" " alt="" coords="105,16,137,16,137,21,105,21"/>
 </map>
 </div>
@@ -544,8 +638,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_a75d92ac43d65d743ff159105e3e33b60_icgraph.png" border="0" usemap="#ainput_8c_a75d92ac43d65d743ff159105e3e33b60_icgraph" alt=""/></div>
 <map name="ainput_8c_a75d92ac43d65d743ff159105e3e33b60_icgraph" id="ainput_8c_a75d92ac43d65d743ff159105e3e33b60_icgraph">
-<area shape="rect" title=" " alt="" coords="502,80,602,106"/>
-<area shape="rect" href="input_8c.html#a23a5061c21b189449ac63eef4edc75d8" title=" " alt="" coords="378,80,454,106"/>
+<area shape="rect" title="Set array values based on the value inputed." alt="" coords="502,80,602,106"/>
+<area shape="rect" href="input_8c.html#a23a5061c21b189449ac63eef4edc75d8" title="Sets the position of the array according to an input pin on a port." alt="" coords="378,80,454,106"/>
 <area shape="poly" title=" " alt="" coords="487,96,455,96,455,90,487,90"/>
 <area shape="rect" href="buttons_8c.html#afefe41188707848ce20054caacaefbd9" title="Deprecated, using switching function, it is only a bridge function now." alt="" coords="195,80,330,106"/>
 <area shape="poly" title=" " alt="" coords="362,96,331,96,331,90,362,90"/>
@@ -580,17 +674,31 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the position of the array according to an input pin on a port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>The IFG port status, that symbolizes the status of the pins on a port </td></tr>
+    <tr><td class="paramname">port</td><td>The port, that could not correspond to the reality, but to a convension with the define in .h file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_a23a5061c21b189449ac63eef4edc75d8_cgraph.png" border="0" usemap="#ainput_8c_a23a5061c21b189449ac63eef4edc75d8_cgraph" alt=""/></div>
 <map name="ainput_8c_a23a5061c21b189449ac63eef4edc75d8_cgraph" id="ainput_8c_a23a5061c21b189449ac63eef4edc75d8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,82,56"/>
-<area shape="rect" href="input_8c.html#a649025105fd573f4021b9aa4b3ba5e44" title=" " alt="" coords="138,5,220,31"/>
+<area shape="rect" title="Sets the position of the array according to an input pin on a port." alt="" coords="5,31,82,56"/>
+<area shape="rect" href="input_8c.html#a649025105fd573f4021b9aa4b3ba5e44" title="Verify on a specific port IFG which is the bit activated." alt="" coords="138,5,220,31"/>
 <area shape="poly" title=" " alt="" coords="82,34,122,26,123,31,83,39"/>
-<area shape="rect" href="input_8c.html#a75d92ac43d65d743ff159105e3e33b60" title=" " alt="" coords="130,55,229,80"/>
+<area shape="rect" href="input_8c.html#a75d92ac43d65d743ff159105e3e33b60" title="Set array values based on the value inputed." alt="" coords="130,55,229,80"/>
 <area shape="poly" title=" " alt="" coords="83,48,115,53,114,59,82,53"/>
-<area shape="rect" href="input_8c.html#aad3f0b26686a346707670914702aeaad" title=" " alt="" coords="277,55,387,80"/>
+<area shape="rect" href="input_8c.html#aad3f0b26686a346707670914702aeaad" title="Function to reset the global bool array, simulating the activation of the ports." alt="" coords="277,55,387,80"/>
 <area shape="poly" title=" " alt="" coords="229,65,261,65,261,70,229,70"/>
 </map>
 </div>
@@ -599,7 +707,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_a23a5061c21b189449ac63eef4edc75d8_icgraph.png" border="0" usemap="#ainput_8c_a23a5061c21b189449ac63eef4edc75d8_icgraph" alt=""/></div>
 <map name="ainput_8c_a23a5061c21b189449ac63eef4edc75d8_icgraph" id="ainput_8c_a23a5061c21b189449ac63eef4edc75d8_icgraph">
-<area shape="rect" title=" " alt="" coords="378,80,454,106"/>
+<area shape="rect" title="Sets the position of the array according to an input pin on a port." alt="" coords="378,80,454,106"/>
 <area shape="rect" href="buttons_8c.html#afefe41188707848ce20054caacaefbd9" title="Deprecated, using switching function, it is only a bridge function now." alt="" coords="195,80,330,106"/>
 <area shape="poly" title=" " alt="" coords="362,96,331,96,331,90,362,90"/>
 <area shape="rect" href="general_2main_8c.html#a7ca37072ef5f4704e442fad813e4fa31" title=" " alt="" coords="5,5,147,31"/>
@@ -629,12 +737,19 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A via for creating a dummy trigger on P1.1, in order to reactivate an undesired stop of the system. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="input_8c_a961a43ddc52b1c2b16aab7f30f4ad0d9_icgraph.png" border="0" usemap="#ainput_8c_a961a43ddc52b1c2b16aab7f30f4ad0d9_icgraph" alt=""/></div>
 <map name="ainput_8c_a961a43ddc52b1c2b16aab7f30f4ad0d9_icgraph" id="ainput_8c_a961a43ddc52b1c2b16aab7f30f4ad0d9_icgraph">
-<area shape="rect" title=" " alt="" coords="194,5,318,31"/>
+<area shape="rect" title="A via for creating a dummy trigger on P1.1, in order to reactivate an undesired stop of the system." alt="" coords="194,5,318,31"/>
 <area shape="rect" href="general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="5,5,146,31"/>
 <area shape="poly" title=" " alt="" coords="178,21,146,21,146,16,178,16"/>
 </map>

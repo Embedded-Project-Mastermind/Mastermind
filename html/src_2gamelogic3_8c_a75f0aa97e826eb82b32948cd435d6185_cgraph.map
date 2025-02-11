@@ -1,8 +1,8 @@
 <map id="correctionsDifficultMode" name="correctionsDifficultMode">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,168,31"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a1d23c4adc9c272ed1461ee228cf73036" title=" " alt="" coords="216,5,379,31"/>
+<area shape="rect" id="Node000001" title="Function that transforms the seq_user into corrections in DIFFICULT_MODE." alt="" coords="5,5,168,31"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a1d23c4adc9c272ed1461ee228cf73036" title="Function that transforms the seq_user into corrections in MEDIUM_MODE." alt="" coords="216,5,379,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,16,200,16,200,21,168,21"/>
-<area shape="rect" id="Node000003" href="$general_2gamelogic3_8c.html#a1ae9537a5e4b0e166d93c4997448030c" title=" " alt="" coords="427,5,574,31"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic3_8c.html#a1ae9537a5e4b0e166d93c4997448030c" title="Function that transforms the seq_user into corrections in EASY_MODE." alt="" coords="427,5,574,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="379,16,412,16,412,21,379,21"/>
 <area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#afbe438781ebff37a81c93cfb218bb0cf" title="Initialization for a boolean array setting to its default state." alt="" coords="622,5,778,31"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="575,16,607,16,607,21,575,21"/>

@@ -1,5 +1,5 @@
 <map id="atLeastOneTrue" name="atLeastOneTrue">
-<area shape="rect" id="Node000001" title=" " alt="" coords="191,5,305,31"/>
+<area shape="rect" id="Node000001" title="Verify that there is only one true input in a period of time, in order to see a clear output." alt="" coords="191,5,305,31"/>
 <area shape="rect" id="Node000002" href="$_interrupt_01_code_01for_01_breadboard_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,5,143,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,21,143,21,143,16,175,16"/>
 </map>

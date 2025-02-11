@@ -6,16 +6,22 @@
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="559,70,519,70,519,65,559,65"/>
 <area shape="rect" id="Node000007" href="$src_2gamelogic2_8c.html#a711f83e83296a13ef71ed10315779fed" title=" " alt="" coords="424,128,505,154"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="571,90,493,130,491,125,569,85"/>
-<area shape="rect" id="Node000003" href="$input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title=" " alt="" coords="216,5,329,31"/>
+<area shape="rect" id="Node000003" href="$input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="216,5,329,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="386,21,330,21,330,16,386,16"/>
 <area shape="rect" id="Node000004" href="$general_2main_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,5,143,31"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="200,21,143,21,143,16,200,16"/>
-<area shape="rect" id="Node000006" href="$general_2gamelogic2_8c.html#a135da966b746514db883735bf010382f" title=" " alt="" coords="191,55,354,80"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic2_8c.html#a135da966b746514db883735bf010382f" title="state for deleting the last color of the user&#39;s sequence" alt="" coords="191,55,354,80"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="395,70,354,70,354,65,395,65"/>
 <area shape="rect" id="Node000008" href="$src_2gamelogic2_8c.html#a9404d06774140db68ea7459e9bef6e56" title=" " alt="" coords="235,104,310,130"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="408,137,310,124,310,119,409,131"/>
-<area shape="rect" id="Node000009" href="$src_2gamelogic2_8c.html#aa6688872ceac509c3164b94875dc3763" title=" " alt="" coords="238,153,307,179"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="409,151,308,164,307,159,408,145"/>
-<area shape="rect" id="Node000010" href="$src_2gamelogic2_8c.html#a4c00da6a37b75a59b2eb6aa66576969b" title=" " alt="" coords="227,203,318,228"/>
-<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="425,163,355,194,319,206,317,201,353,189,423,158"/>
+<area shape="rect" id="Node000010" href="$src_2gamelogic2_8c.html#aa6688872ceac509c3164b94875dc3763" title=" " alt="" coords="238,153,307,179"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="409,151,308,164,307,159,408,145"/>
+<area shape="rect" id="Node000012" href="$src_2gamelogic2_8c.html#a4c00da6a37b75a59b2eb6aa66576969b" title=" " alt="" coords="227,203,318,228"/>
+<area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="425,163,355,194,319,206,317,201,353,189,423,158"/>
+<area shape="rect" id="Node000009" href="$src_2gamelogic2_8c.html#a4a4f4707af922a7b84fdd6bdd358691e" title=" " alt="" coords="15,104,133,130"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="220,120,134,120,134,114,220,114"/>
+<area shape="rect" id="Node000011" href="$src_2gamelogic2_8c.html#acd23a7b6b2abbeebb6c6bde26e35040a" title="state while he&#39;s waiting an input with the user&#39;s sequence full" alt="" coords="18,153,130,179"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="222,169,130,169,130,164,222,164"/>
+<area shape="rect" id="Node000013" href="$src_2gamelogic2_8c.html#a816c5d4caf1a402f87e1e28b641884b4" title="state while he&#39;s waiting an input" alt="" coords="38,203,110,228"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="212,218,110,218,110,213,212,213"/>
 </map>

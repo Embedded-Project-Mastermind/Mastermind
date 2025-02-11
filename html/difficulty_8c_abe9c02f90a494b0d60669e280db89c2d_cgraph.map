@@ -1,5 +1,5 @@
 <map id="drawText" name="drawText">
 <area shape="rect" id="Node000001" title="Draw Text Description according to the difficulty selected in order to explain to the user what that ..." alt="" coords="5,5,80,31"/>
-<area shape="rect" id="Node000002" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title=" " alt="" coords="128,5,221,31"/>
+<area shape="rect" id="Node000002" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title="finds the selected button in all the buttons of an interface" alt="" coords="128,5,221,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,16,112,16,112,21,80,21"/>
 </map>

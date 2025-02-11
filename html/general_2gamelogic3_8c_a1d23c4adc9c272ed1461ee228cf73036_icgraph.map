@@ -1,9 +1,9 @@
 <map id="correctionsMediumMode" name="correctionsMediumMode">
-<area shape="rect" id="Node000001" title=" " alt="" coords="419,31,582,56"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a75f0aa97e826eb82b32948cd435d6185" title=" " alt="" coords="209,5,371,31"/>
+<area shape="rect" id="Node000001" title="Function that transforms the seq_user into corrections in MEDIUM_MODE." alt="" coords="419,31,582,56"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a75f0aa97e826eb82b32948cd435d6185" title="Function that transforms the seq_user into corrections in MEDIUM_MODE." alt="" coords="209,5,371,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="403,35,371,31,372,25,404,29"/>
-<area shape="rect" id="Node000004" href="$general_2gamelogic3_8c.html#a20f17247635a3f55d199db1bb7dfdc7d" title=" " alt="" coords="219,55,360,80"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic3_8c.html#a20f17247635a3f55d199db1bb7dfdc7d" title="Function for MEDIUM_MODE state." alt="" coords="219,55,360,80"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="404,57,361,62,361,57,404,52"/>
-<area shape="rect" id="Node000003" href="$general_2gamelogic3_8c.html#a676922e1563163dc4a5df61b09f26162" title=" " alt="" coords="5,5,161,31"/>
+<area shape="rect" id="Node000003" href="$general_2gamelogic3_8c.html#a676922e1563163dc4a5df61b09f26162" title="Function for DIFFICULT_MODE state." alt="" coords="5,5,161,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="193,21,161,21,161,16,193,16"/>
 </map>

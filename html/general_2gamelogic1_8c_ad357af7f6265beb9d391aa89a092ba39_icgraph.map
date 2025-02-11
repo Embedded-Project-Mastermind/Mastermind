@@ -6,16 +6,18 @@
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="635,84,602,80,603,75,635,79"/>
 <area shape="rect" id="Node000008" href="$src_2gamelogic2_8c.html#a9404d06774140db68ea7459e9bef6e56" title=" " alt="" coords="480,104,554,130"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="635,106,555,115,555,110,634,101"/>
-<area shape="rect" id="Node000009" href="$general_2gamelogic2_8c.html#aaf32eada42d315c1c42b5e21d002f1aa" title="inserts the selected color into the user&#39;s sequence if space is available" alt="" coords="473,153,561,179"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="684,114,603,145,563,157,561,152,601,140,682,109"/>
-<area shape="rect" id="Node000004" href="$src_2gamelogic1_8c.html#a8b4ee684b1ca644f070b168b3c6fb54c" title=" " alt="" coords="214,31,384,56"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="416,59,384,56,385,50,417,54"/>
-<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a2700fd085c33e4ef923ab449276a578f" title="Analysis and parsing of the integer sequence to the char one, with an appropriate deallocation of the..." alt="" coords="214,80,384,106"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="417,82,385,86,384,80,416,76"/>
-<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#a7b7577b178ce9de2be9e5ab17053f6e5" title=" " alt="" coords="14,56,157,82"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="198,84,157,79,157,74,198,79"/>
-<area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#a6dfdeacaef5a5d37960e2575015b6516" title=" " alt="" coords="5,105,166,131"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="198,107,167,111,166,106,198,102"/>
-<area shape="rect" id="Node000010" href="$general_2gamelogic2_8c.html#a6639e69c4f94296b4ed63b9471ba37e8" title=" " alt="" coords="227,153,370,179"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="458,169,371,169,371,164,458,164"/>
+<area shape="rect" id="Node000010" href="$general_2gamelogic2_8c.html#aaf32eada42d315c1c42b5e21d002f1aa" title="inserts the selected color into the user&#39;s sequence if space is available" alt="" coords="473,153,561,179"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="684,114,603,145,563,157,561,152,601,140,682,109"/>
+<area shape="rect" id="Node000004" href="$src_2gamelogic1_8c.html#a8b4ee684b1ca644f070b168b3c6fb54c" title=" " alt="" coords="214,5,384,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="442,53,358,34,360,29,443,48"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a2700fd085c33e4ef923ab449276a578f" title="Analysis and parsing of the integer sequence to the char one, with an appropriate deallocation of the..." alt="" coords="214,55,384,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="417,70,385,70,385,65,417,65"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#a7b7577b178ce9de2be9e5ab17053f6e5" title="Call function when KEY_WH_DOUB of the finite state machine is called and generates a sequence to find..." alt="" coords="14,31,157,56"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="198,59,157,54,157,49,198,54"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#a6dfdeacaef5a5d37960e2575015b6516" title="Call function when KEY_WOUT_DOUB of the finite state machine is called and generates a sequence to fi..." alt="" coords="5,80,166,106"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="198,82,167,86,166,81,198,77"/>
+<area shape="rect" id="Node000009" href="$src_2gamelogic2_8c.html#a4a4f4707af922a7b84fdd6bdd358691e" title=" " alt="" coords="240,104,358,130"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="464,120,358,120,358,114,464,114"/>
+<area shape="rect" id="Node000011" href="$general_2gamelogic2_8c.html#a6639e69c4f94296b4ed63b9471ba37e8" title="state for inserting the color choosen by the user in its sequence" alt="" coords="227,153,370,179"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="458,169,371,169,371,164,458,164"/>
 </map>

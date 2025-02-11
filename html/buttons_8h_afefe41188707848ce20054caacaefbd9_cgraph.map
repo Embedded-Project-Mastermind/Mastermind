@@ -1,11 +1,11 @@
 <map id="functionPinsDefault" name="functionPinsDefault">
 <area shape="rect" id="Node000001" title="Deprecated, using switching function, it is only a bridge function now." alt="" coords="5,31,141,56"/>
-<area shape="rect" id="Node000002" href="$input_8c.html#a23a5061c21b189449ac63eef4edc75d8" title=" " alt="" coords="189,31,265,56"/>
+<area shape="rect" id="Node000002" href="$input_8c.html#a23a5061c21b189449ac63eef4edc75d8" title="Sets the position of the array according to an input pin on a port." alt="" coords="189,31,265,56"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,41,173,41,173,46,141,46"/>
-<area shape="rect" id="Node000003" href="$input_8c.html#a649025105fd573f4021b9aa4b3ba5e44" title=" " alt="" coords="322,5,404,31"/>
+<area shape="rect" id="Node000003" href="$input_8c.html#a649025105fd573f4021b9aa4b3ba5e44" title="Verify on a specific port IFG which is the bit activated." alt="" coords="322,5,404,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,34,305,26,306,31,266,39"/>
-<area shape="rect" id="Node000004" href="$input_8c.html#a75d92ac43d65d743ff159105e3e33b60" title=" " alt="" coords="313,55,412,80"/>
+<area shape="rect" id="Node000004" href="$input_8c.html#a75d92ac43d65d743ff159105e3e33b60" title="Set array values based on the value inputed." alt="" coords="313,55,412,80"/>
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="266,48,298,53,297,59,265,53"/>
-<area shape="rect" id="Node000005" href="$input_8c.html#aad3f0b26686a346707670914702aeaad" title=" " alt="" coords="460,55,571,80"/>
+<area shape="rect" id="Node000005" href="$input_8c.html#aad3f0b26686a346707670914702aeaad" title="Function to reset the global bool array, simulating the activation of the ports." alt="" coords="460,55,571,80"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="413,65,445,65,445,70,413,70"/>
 </map>

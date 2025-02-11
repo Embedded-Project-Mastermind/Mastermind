@@ -1,65 +1,65 @@
 <map id="handleIn" name="handleIn">
-<area shape="rect" id="Node000001" title=" " alt="" coords="716,425,786,451"/>
+<area shape="rect" id="Node000001" title="it handles the status change of new focused button" alt="" coords="716,425,786,451"/>
 <area shape="rect" id="Node000002" href="$difficulty_8c.html#a79c72c85a3b49834d1182393768679b3" title="Action that the menu performs when the stick goes down, primarly changing selection and imposing logi..." alt="" coords="500,5,668,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="745,410,736,326,721,216,698,112,683,71,666,44,652,34,656,29,670,40,688,69,703,110,726,215,742,325,750,409"/>
-<area shape="rect" id="Node000006" href="$dimension_8c.html#a6fb20cec8a94509cc42b47b543ea64d7" title="handles the down movement of the stick" alt="" coords="501,55,667,80"/>
+<area shape="rect" id="Node000006" href="$dimension_8c.html#a6fb20cec8a94509cc42b47b543ea64d7" title="handles the down movement of the stick, changing the selected element if the action can be performed" alt="" coords="501,55,667,80"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="744,410,734,336,718,241,695,151,681,117,666,93,652,83,656,79,670,90,686,114,700,150,723,240,739,335,749,410"/>
 <area shape="rect" id="Node000007" href="$doubles_8c.html#a36ebb11703991f98a2d4b86daece9fb6" title="manage what to do when the user moves the stick down" alt="" coords="507,104,661,130"/>
 <area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="748,410,745,354,734,282,724,244,709,207,690,173,666,143,652,132,655,128,670,139,695,170,714,205,729,243,739,281,750,353,753,410"/>
-<area shape="rect" id="Node000008" href="$tentatives_8c.html#ab4a631d3b20279de42665f2bb16dc3df" title=" " alt="" coords="503,153,665,179"/>
+<area shape="rect" id="Node000008" href="$tentatives_8c.html#ab4a631d3b20279de42665f2bb16dc3df" title="manage what to do when the user moves the stick down" alt="" coords="503,153,665,179"/>
 <area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="746,410,740,363,728,304,704,244,687,216,666,192,651,182,654,177,669,188,691,213,708,241,733,303,746,362,751,410"/>
 <area shape="rect" id="Node000009" href="$difficulty_8c.html#ada1c7d825f7d0d6084a4b004f91d570c" title="Action that the menu performs when the stick goes left, primarly changing selection and imposing logi..." alt="" coords="507,203,661,228"/>
 <area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="743,410,735,372,720,327,698,281,666,241,650,231,653,227,669,238,702,278,725,325,740,371,748,409"/>
-<area shape="rect" id="Node000011" href="$dimension_8c.html#aa1457a920eebe81a6fc619946c6fa746" title="handles the down movement of the stick" alt="" coords="507,252,661,278"/>
+<area shape="rect" id="Node000011" href="$dimension_8c.html#aa1457a920eebe81a6fc619946c6fa746" title="handles the left movement of the stick, changing the selected element if the action can be performed" alt="" coords="507,252,661,278"/>
 <area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="739,411,713,350,692,318,666,291,649,281,652,276,669,287,696,315,718,347,744,409"/>
 <area shape="rect" id="Node000012" href="$doubles_8c.html#aaede89cc2d77369f26c4bdd81d8ce776" title="manage what to do when the user moves the stick left" alt="" coords="514,301,654,327"/>
 <area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="732,414,705,376,686,357,666,340,646,330,648,325,669,336,690,353,709,372,737,411"/>
-<area shape="rect" id="Node000013" href="$info_8c.html#acab983649d0b96fe33a93d904a6e380a" title=" " alt="" coords="530,351,638,376"/>
+<area shape="rect" id="Node000013" href="$info_8c.html#acab983649d0b96fe33a93d904a6e380a" title="manage what to do when the user moves the stick left" alt="" coords="530,351,638,376"/>
 <area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="718,419,667,390,638,379,640,374,669,385,720,414"/>
-<area shape="rect" id="Node000014" href="$tentatives_8c.html#a0df6996c317be48a5e0a5c5e192dfcd9" title=" " alt="" coords="509,400,659,426"/>
+<area shape="rect" id="Node000014" href="$tentatives_8c.html#a0df6996c317be48a5e0a5c5e192dfcd9" title="manage what to do when the user moves the stick to the left" alt="" coords="509,400,659,426"/>
 <area shape="poly" id="edge20_Node000001_Node000014" title=" " alt="" coords="700,433,659,427,660,422,701,428"/>
 <area shape="rect" id="Node000015" href="$difficulty_8c.html#a857aed146f25be6eafd6029c4cae888f" title="Action that the menu performs when the stick goes right, primarly changing selection and imposing log..." alt="" coords="503,449,665,475"/>
 <area shape="poly" id="edge22_Node000001_Node000015" title=" " alt="" coords="701,448,665,453,665,448,700,443"/>
-<area shape="rect" id="Node000017" href="$dimension_8c.html#aa7966b0e409d1f5a41bb210277319673" title="handles the right movement of the stick" alt="" coords="504,499,664,524"/>
+<area shape="rect" id="Node000017" href="$dimension_8c.html#aa7966b0e409d1f5a41bb210277319673" title="handles the right movement of the stick, changing the selected element if the action can be performed" alt="" coords="504,499,664,524"/>
 <area shape="poly" id="edge25_Node000001_Node000017" title=" " alt="" coords="719,462,669,490,640,501,638,496,667,485,717,457"/>
 <area shape="rect" id="Node000018" href="$doubles_8c.html#a32374ef584a5874a75624a4bf91c40d3" title="manage what to do when the user moves the stick right" alt="" coords="510,548,658,574"/>
 <area shape="poly" id="edge27_Node000001_Node000018" title=" " alt="" coords="736,466,708,504,669,539,648,550,645,545,666,535,704,500,732,462"/>
-<area shape="rect" id="Node000019" href="$info_8c.html#a46185e9cb9550ef5f53ac4acfa3fa070" title=" " alt="" coords="526,597,642,623"/>
+<area shape="rect" id="Node000019" href="$info_8c.html#a46185e9cb9550ef5f53ac4acfa3fa070" title="manage what to do when the user moves the stick right" alt="" coords="526,597,642,623"/>
 <area shape="poly" id="edge29_Node000001_Node000019" title=" " alt="" coords="744,467,717,528,696,561,669,588,644,602,641,598,666,584,692,557,713,526,739,465"/>
-<area shape="rect" id="Node000020" href="$tentatives_8c.html#a5a9a7d0ba677cf2073ce07d87abaa8ba" title=" " alt="" coords="506,647,662,672"/>
+<area shape="rect" id="Node000020" href="$tentatives_8c.html#a5a9a7d0ba677cf2073ce07d87abaa8ba" title="manage what to do when the user moves the stick to the right" alt="" coords="506,647,662,672"/>
 <area shape="poly" id="edge31_Node000001_Node000020" title=" " alt="" coords="748,467,740,505,725,551,702,597,669,637,653,648,650,644,666,634,698,595,720,549,735,504,743,466"/>
 <area shape="rect" id="Node000021" href="$difficulty_8c.html#a5db0b76e31fb4a7fbc93ffc09473cec9" title="Action that the menu performs when the stick goes up, primarly changing selection and imposing logic ..." alt="" coords="509,696,659,722"/>
 <area shape="poly" id="edge33_Node000001_Node000021" title=" " alt="" coords="751,467,745,514,732,573,708,634,691,662,669,687,654,698,651,693,666,683,687,659,703,632,727,572,740,513,746,466"/>
-<area shape="rect" id="Node000023" href="$dimension_8c.html#a68da15d7a690c47b33fa100902f82420" title="handles the up movement of the stick" alt="" coords="509,745,659,771"/>
+<area shape="rect" id="Node000023" href="$dimension_8c.html#a68da15d7a690c47b33fa100902f82420" title="handles the up movement of the stick, changing the selected element if the action can be performed" alt="" coords="509,745,659,771"/>
 <area shape="poly" id="edge36_Node000001_Node000023" title=" " alt="" coords="753,467,750,523,739,595,729,633,714,670,695,705,670,736,655,747,652,743,666,732,690,702,709,668,723,631,734,594,745,523,748,467"/>
 <area shape="rect" id="Node000024" href="$doubles_8c.html#a73b8fe01f7507192f7e9bf9b2a916df9" title="manage what to do when the user moves the stick up" alt="" coords="516,795,652,820"/>
 <area shape="poly" id="edge38_Node000001_Node000024" title=" " alt="" coords="749,467,739,541,723,636,700,726,686,761,670,785,654,797,651,793,666,782,681,758,695,724,718,635,734,540,744,466"/>
-<area shape="rect" id="Node000025" href="$tentatives_8c.html#a2f3f309351ef49408ab306d80f801256" title=" " alt="" coords="511,844,657,870"/>
+<area shape="rect" id="Node000025" href="$tentatives_8c.html#a2f3f309351ef49408ab306d80f801256" title="manage what to do when the user moves the stick up" alt="" coords="511,844,657,870"/>
 <area shape="poly" id="edge40_Node000001_Node000025" title=" " alt="" coords="750,467,742,551,726,660,703,765,688,806,670,835,656,846,652,841,666,831,683,804,698,763,721,659,736,550,745,466"/>
-<area shape="rect" id="Node000003" href="$joystick_8c.html#a3e5a790b378f645099a2f8fc5f694b84" title=" " alt="" coords="347,104,452,130"/>
+<area shape="rect" id="Node000003" href="$joystick_8c.html#a3e5a790b378f645099a2f8fc5f694b84" title="Functions that handles the down stick movement according to the different screens,..." alt="" coords="347,104,452,130"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="513,39,502,45,454,75,417,105,414,101,451,71,499,40,511,34"/>
-<area shape="rect" id="Node000004" href="$joystick_8c.html#adde06bcb4c1eb7d1c081dacc7ac2152c" title=" " alt="" coords="194,425,299,451"/>
+<area shape="rect" id="Node000004" href="$joystick_8c.html#adde06bcb4c1eb7d1c081dacc7ac2152c" title="According to the Enum declared redirects to one of the appove directional functions." alt="" coords="194,425,299,451"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="388,145,256,426,252,424,383,143"/>
 <area shape="rect" id="Node000005" href="$general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="5,425,146,451"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="178,441,146,441,146,436,178,436"/>
 <area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="519,87,451,106,450,101,518,82"/>
 <area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="492,120,453,120,453,114,492,114"/>
 <area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="518,151,450,133,451,128,519,146"/>
-<area shape="rect" id="Node000010" href="$joystick_8c.html#a52c88d60c03461488d6285f39e252627" title=" " alt="" coords="354,327,446,352"/>
+<area shape="rect" id="Node000010" href="$joystick_8c.html#a52c88d60c03461488d6285f39e252627" title="Functions that handles the left stick movement according to the different screens,..." alt="" coords="354,327,446,352"/>
 <area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="511,237,502,242,474,262,449,285,413,328,409,324,445,282,470,258,499,237,508,232"/>
 <area shape="poly" id="edge13_Node000010_Node000004" title=" " alt="" coords="367,363,270,427,267,423,364,359"/>
 <area shape="poly" id="edge15_Node000011_Node000010" title=" " alt="" coords="518,285,501,291,425,329,423,324,499,286,516,280"/>
 <area shape="poly" id="edge17_Node000012_Node000010" title=" " alt="" coords="499,329,447,336,446,331,498,323"/>
 <area shape="poly" id="edge19_Node000013_Node000010" title=" " alt="" coords="515,357,446,348,447,343,515,352"/>
 <area shape="poly" id="edge21_Node000014_Node000010" title=" " alt="" coords="516,397,499,391,424,355,426,350,501,386,518,392"/>
-<area shape="rect" id="Node000016" href="$joystick_8c.html#a301de98bfda59c46e55821dee762f5cb" title=" " alt="" coords="350,524,449,550"/>
+<area shape="rect" id="Node000016" href="$joystick_8c.html#a301de98bfda59c46e55821dee762f5cb" title="Functions that handles the right stick movement according to the different screens,..." alt="" coords="350,524,449,550"/>
 <area shape="poly" id="edge23_Node000015_Node000016" title=" " alt="" coords="518,483,501,489,425,526,423,521,499,484,516,478"/>
 <area shape="poly" id="edge24_Node000016_Node000004" title=" " alt="" coords="364,518,267,454,270,449,367,513"/>
 <area shape="poly" id="edge26_Node000017_Node000016" title=" " alt="" coords="489,527,450,533,449,527,488,522"/>
 <area shape="poly" id="edge28_Node000018_Node000016" title=" " alt="" coords="495,552,450,546,450,541,495,547"/>
 <area shape="poly" id="edge30_Node000019_Node000016" title=" " alt="" coords="516,595,499,589,424,553,426,548,501,584,518,590"/>
 <area shape="poly" id="edge32_Node000020_Node000016" title=" " alt="" coords="508,643,499,638,471,618,445,594,409,552,413,548,449,590,474,613,502,633,511,638"/>
-<area shape="rect" id="Node000022" href="$joystick_8c.html#a08201f4ea948492041d839c98233e00a" title=" " alt="" coords="356,745,444,771"/>
+<area shape="rect" id="Node000022" href="$joystick_8c.html#a08201f4ea948492041d839c98233e00a" title="Functions that handles the up stick movement according to the different screens, the ones that doesn&#39;..." alt="" coords="356,745,444,771"/>
 <area shape="poly" id="edge34_Node000021_Node000022" title=" " alt="" coords="519,729,445,749,444,744,518,724"/>
 <area shape="poly" id="edge35_Node000022_Node000004" title=" " alt="" coords="383,732,252,453,256,450,388,730"/>
 <area shape="poly" id="edge37_Node000023_Node000022" title=" " alt="" coords="494,761,444,761,444,756,494,756"/>

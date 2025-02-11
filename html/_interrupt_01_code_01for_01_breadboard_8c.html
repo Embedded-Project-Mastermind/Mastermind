@@ -178,16 +178,20 @@ Functions</h2></td></tr>
 <tr class="memitem:a5385f2217ae5079e380dd5da28f7ca53" id="r_a5385f2217ae5079e380dd5da28f7ca53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5385f2217ae5079e380dd5da28f7ca53">configureInterruptPort</a> ()</td></tr>
 <tr class="separator:a5385f2217ae5079e380dd5da28f7ca53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd06039489adbf62add2e5f77b09c1b3" id="r_afd06039489adbf62add2e5f77b09c1b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd06039489adbf62add2e5f77b09c1b3">counterTrue</a> ()</td></tr>
+<tr class="memdesc:afd06039489adbf62add2e5f77b09c1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify how many inputs in a period of time were performed in the array generated.  <br /></td></tr>
 <tr class="separator:afd06039489adbf62add2e5f77b09c1b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dab3d68b43210e47c00819d54bb5895" id="r_a4dab3d68b43210e47c00819d54bb5895"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dab3d68b43210e47c00819d54bb5895">findTrue</a> ()</td></tr>
+<tr class="memdesc:a4dab3d68b43210e47c00819d54bb5895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the true input in a period of time, in order to see a clear output.  <br /></td></tr>
 <tr class="separator:a4dab3d68b43210e47c00819d54bb5895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d8886aceb84e5f0fd3bbd265ce72e6a" id="r_a8d8886aceb84e5f0fd3bbd265ce72e6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d8886aceb84e5f0fd3bbd265ce72e6a">elaborateOutput</a> ()</td></tr>
+<tr class="memdesc:a8d8886aceb84e5f0fd3bbd265ce72e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine which is the output action after pressing a button, it can be trigger a color or give a particular behavior if it is the back one or the confirm one.  <br /></td></tr>
 <tr class="separator:a8d8886aceb84e5f0fd3bbd265ce72e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa85749cc81575765206a36f58b4ca568" id="r_aa85749cc81575765206a36f58b4ca568"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa85749cc81575765206a36f58b4ca568">configureTimers</a> ()</td></tr>
 <tr class="separator:aa85749cc81575765206a36f58b4ca568"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a297065465a63035201f2dc2586c635" id="r_a6a297065465a63035201f2dc2586c635"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a297065465a63035201f2dc2586c635">switching</a> (uint8_t status, int port)</td></tr>
 <tr class="separator:a6a297065465a63035201f2dc2586c635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6d9dad0497883c74612996ef4198f7f" id="r_af6d9dad0497883c74612996ef4198f7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6d9dad0497883c74612996ef4198f7f">atLeastOneTrue</a> ()</td></tr>
+<tr class="memdesc:af6d9dad0497883c74612996ef4198f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify that there is only one true input in a period of time, in order to see a clear output.  <br /></td></tr>
 <tr class="separator:af6d9dad0497883c74612996ef4198f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6288eba0f8e8ad3ab1544ad731eb7667" id="r_a6288eba0f8e8ad3ab1544ad731eb7667"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6288eba0f8e8ad3ab1544ad731eb7667">main</a> (void)</td></tr>
 <tr class="separator:a6288eba0f8e8ad3ab1544ad731eb7667"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -339,12 +343,19 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verify that there is only one true input in a period of time, in order to see a clear output. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool returning the result TRUE if there was only one input and FALSE if not </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_interrupt_01_code_01for_01_breadboard_8c_af6d9dad0497883c74612996ef4198f7f_icgraph.png" border="0" usemap="#a_interrupt_01_code_01for_01_breadboard_8c_af6d9dad0497883c74612996ef4198f7f_icgraph" alt=""/></div>
 <map name="a_interrupt_01_code_01for_01_breadboard_8c_af6d9dad0497883c74612996ef4198f7f_icgraph" id="a_interrupt_01_code_01for_01_breadboard_8c_af6d9dad0497883c74612996ef4198f7f_icgraph">
-<area shape="rect" title=" " alt="" coords="191,5,305,31"/>
+<area shape="rect" title="Verify that there is only one true input in a period of time, in order to see a clear output." alt="" coords="191,5,305,31"/>
 <area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,5,143,31"/>
 <area shape="poly" title=" " alt="" coords="175,21,143,21,143,16,175,16"/>
 </map>
@@ -447,13 +458,20 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verify how many inputs in a period of time were performed in the array generated. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_interrupt_01_code_01for_01_breadboard_8c_afd06039489adbf62add2e5f77b09c1b3_icgraph.png" border="0" usemap="#a_interrupt_01_code_01for_01_breadboard_8c_afd06039489adbf62add2e5f77b09c1b3_icgraph" alt=""/></div>
 <map name="a_interrupt_01_code_01for_01_breadboard_8c_afd06039489adbf62add2e5f77b09c1b3_icgraph" id="a_interrupt_01_code_01for_01_breadboard_8c_afd06039489adbf62add2e5f77b09c1b3_icgraph">
-<area shape="rect" title=" " alt="" coords="352,5,442,31"/>
-<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a8d8886aceb84e5f0fd3bbd265ce72e6a" title=" " alt="" coords="191,5,304,31"/>
+<area shape="rect" title="Verify how many inputs in a period of time were performed in the array generated." alt="" coords="352,5,442,31"/>
+<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a8d8886aceb84e5f0fd3bbd265ce72e6a" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="191,5,304,31"/>
 <area shape="poly" title=" " alt="" coords="336,21,304,21,304,16,336,16"/>
 <area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,5,143,31"/>
 <area shape="poly" title=" " alt="" coords="175,21,143,21,143,16,175,16"/>
@@ -476,15 +494,22 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Determine which is the output action after pressing a button, it can be trigger a color or give a particular behavior if it is the back one or the confirm one. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_interrupt_01_code_01for_01_breadboard_8c_a8d8886aceb84e5f0fd3bbd265ce72e6a_cgraph.png" border="0" usemap="#a_interrupt_01_code_01for_01_breadboard_8c_a8d8886aceb84e5f0fd3bbd265ce72e6a_cgraph" alt=""/></div>
 <map name="a_interrupt_01_code_01for_01_breadboard_8c_a8d8886aceb84e5f0fd3bbd265ce72e6a_cgraph" id="a_interrupt_01_code_01for_01_breadboard_8c_a8d8886aceb84e5f0fd3bbd265ce72e6a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,119,56"/>
-<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#afd06039489adbf62add2e5f77b09c1b3" title=" " alt="" coords="167,5,257,31"/>
+<area shape="rect" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="5,31,119,56"/>
+<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#afd06039489adbf62add2e5f77b09c1b3" title="Verify how many inputs in a period of time were performed in the array generated." alt="" coords="167,5,257,31"/>
 <area shape="poly" title=" " alt="" coords="119,31,151,26,152,31,119,37"/>
-<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a4dab3d68b43210e47c00819d54bb5895" title=" " alt="" coords="178,55,246,80"/>
+<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a4dab3d68b43210e47c00819d54bb5895" title="Verify the true input in a period of time, in order to see a clear output." alt="" coords="178,55,246,80"/>
 <area shape="poly" title=" " alt="" coords="119,50,163,57,162,62,119,55"/>
 </map>
 </div>
@@ -493,7 +518,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_interrupt_01_code_01for_01_breadboard_8c_a8d8886aceb84e5f0fd3bbd265ce72e6a_icgraph.png" border="0" usemap="#a_interrupt_01_code_01for_01_breadboard_8c_a8d8886aceb84e5f0fd3bbd265ce72e6a_icgraph" alt=""/></div>
 <map name="a_interrupt_01_code_01for_01_breadboard_8c_a8d8886aceb84e5f0fd3bbd265ce72e6a_icgraph" id="a_interrupt_01_code_01for_01_breadboard_8c_a8d8886aceb84e5f0fd3bbd265ce72e6a_icgraph">
-<area shape="rect" title=" " alt="" coords="191,5,304,31"/>
+<area shape="rect" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="191,5,304,31"/>
 <area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,5,143,31"/>
 <area shape="poly" title=" " alt="" coords="175,21,143,21,143,16,175,16"/>
 </map>
@@ -515,13 +540,20 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verify the true input in a period of time, in order to see a clear output. </p>
+<dl class="section return"><dt>Returns</dt><dd>int returning the array position that has a true value </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd>
+<dd>
+Alessandro Benassi (Helper) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-05 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_interrupt_01_code_01for_01_breadboard_8c_a4dab3d68b43210e47c00819d54bb5895_icgraph.png" border="0" usemap="#a_interrupt_01_code_01for_01_breadboard_8c_a4dab3d68b43210e47c00819d54bb5895_icgraph" alt=""/></div>
 <map name="a_interrupt_01_code_01for_01_breadboard_8c_a4dab3d68b43210e47c00819d54bb5895_icgraph" id="a_interrupt_01_code_01for_01_breadboard_8c_a4dab3d68b43210e47c00819d54bb5895_icgraph">
-<area shape="rect" title=" " alt="" coords="352,5,420,31"/>
-<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a8d8886aceb84e5f0fd3bbd265ce72e6a" title=" " alt="" coords="191,5,304,31"/>
+<area shape="rect" title="Verify the true input in a period of time, in order to see a clear output." alt="" coords="352,5,420,31"/>
+<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a8d8886aceb84e5f0fd3bbd265ce72e6a" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="191,5,304,31"/>
 <area shape="poly" title=" " alt="" coords="336,21,304,21,304,16,336,16"/>
 <area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,5,143,31"/>
 <area shape="poly" title=" " alt="" coords="175,21,143,21,143,16,175,16"/>
@@ -879,15 +911,15 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="_interrupt_01_code_01for_01_breadboard_8c_a9b3c0e9afd83afa34c0070f88d7860bc_cgraph.png" border="0" usemap="#a_interrupt_01_code_01for_01_breadboard_8c_a9b3c0e9afd83afa34c0070f88d7860bc_cgraph" alt=""/></div>
 <map name="a_interrupt_01_code_01for_01_breadboard_8c_a9b3c0e9afd83afa34c0070f88d7860bc_cgraph" id="a_interrupt_01_code_01for_01_breadboard_8c_a9b3c0e9afd83afa34c0070f88d7860bc_cgraph">
 <area shape="rect" title=" " alt="" coords="5,55,143,80"/>
-<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#af6d9dad0497883c74612996ef4198f7f" title=" " alt="" coords="191,5,305,31"/>
+<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#af6d9dad0497883c74612996ef4198f7f" title="Verify that there is only one true input in a period of time, in order to see a clear output." alt="" coords="191,5,305,31"/>
 <area shape="poly" title=" " alt="" coords="121,51,184,33,186,38,123,57"/>
-<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a8d8886aceb84e5f0fd3bbd265ce72e6a" title=" " alt="" coords="191,55,304,80"/>
+<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a8d8886aceb84e5f0fd3bbd265ce72e6a" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="191,55,304,80"/>
 <area shape="poly" title=" " alt="" coords="143,65,176,65,176,70,143,70"/>
 <area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a8c6fcb44ae5c1dfdec91e83b8d70c3f5" title=" " alt="" coords="207,104,288,130"/>
 <area shape="poly" title=" " alt="" coords="123,78,193,99,192,104,121,84"/>
-<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#afd06039489adbf62add2e5f77b09c1b3" title=" " alt="" coords="353,31,443,56"/>
+<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#afd06039489adbf62add2e5f77b09c1b3" title="Verify how many inputs in a period of time were performed in the array generated." alt="" coords="353,31,443,56"/>
 <area shape="poly" title=" " alt="" coords="305,56,337,50,338,56,305,61"/>
-<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a4dab3d68b43210e47c00819d54bb5895" title=" " alt="" coords="364,80,432,106"/>
+<area shape="rect" href="_interrupt_01_code_01for_01_breadboard_8c.html#a4dab3d68b43210e47c00819d54bb5895" title="Verify the true input in a period of time, in order to see a clear output." alt="" coords="364,80,432,106"/>
 <area shape="poly" title=" " alt="" coords="305,74,349,82,348,87,305,80"/>
 </map>
 </div>

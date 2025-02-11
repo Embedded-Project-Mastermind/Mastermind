@@ -8,10 +8,10 @@
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="357,70,315,70,315,65,357,65"/>
 <area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#a349e30260991f4d42dc6e3b575108891" title="After each input sequence is analyzed the tentative is all reinitialized with an incrementation of th..." alt="" coords="219,104,322,130"/>
 <area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="359,89,311,106,309,101,358,84"/>
-<area shape="rect" id="Node000004" href="$general_2gamelogic2_8c.html#a135da966b746514db883735bf010382f" title=" " alt="" coords="5,5,169,31"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic2_8c.html#a135da966b746514db883735bf010382f" title="state for deleting the last color of the user&#39;s sequence" alt="" coords="5,5,169,31"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="201,21,169,21,169,16,201,16"/>
-<area shape="rect" id="Node000006" href="$general_2gamelogic2_8c.html#a6639e69c4f94296b4ed63b9471ba37e8" title=" " alt="" coords="15,55,159,80"/>
+<area shape="rect" id="Node000006" href="$general_2gamelogic2_8c.html#a6639e69c4f94296b4ed63b9471ba37e8" title="state for inserting the color choosen by the user in its sequence" alt="" coords="15,55,159,80"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="211,70,159,70,159,65,211,65"/>
-<area shape="rect" id="Node000008" href="$general_2gamelogic1_8c.html#aea19573b1ff72f6c1ccf31fca44008e0" title=" " alt="" coords="24,104,150,130"/>
+<area shape="rect" id="Node000008" href="$general_2gamelogic1_8c.html#aea19573b1ff72f6c1ccf31fca44008e0" title="Call function when RESET_TENT of the finite state machine is called after each tentative is sent succ..." alt="" coords="24,104,150,130"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="204,120,150,120,150,114,204,114"/>
 </map>

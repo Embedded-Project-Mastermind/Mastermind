@@ -1,5 +1,5 @@
 <map id="setArrayInput" name="setArrayInput">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,105,31"/>
-<area shape="rect" id="Node000002" href="$input_8c.html#aad3f0b26686a346707670914702aeaad" title=" " alt="" coords="153,5,263,31"/>
+<area shape="rect" id="Node000001" title="Set array values based on the value inputed." alt="" coords="5,5,105,31"/>
+<area shape="rect" id="Node000002" href="$input_8c.html#aad3f0b26686a346707670914702aeaad" title="Function to reset the global bool array, simulating the activation of the ports." alt="" coords="153,5,263,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,16,137,16,137,21,105,21"/>
 </map>

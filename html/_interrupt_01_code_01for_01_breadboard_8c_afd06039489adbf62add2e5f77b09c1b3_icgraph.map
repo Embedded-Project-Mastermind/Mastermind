@@ -1,6 +1,6 @@
 <map id="counterTrue" name="counterTrue">
-<area shape="rect" id="Node000001" title=" " alt="" coords="352,5,442,31"/>
-<area shape="rect" id="Node000002" href="$_interrupt_01_code_01for_01_breadboard_8c.html#a8d8886aceb84e5f0fd3bbd265ce72e6a" title=" " alt="" coords="191,5,304,31"/>
+<area shape="rect" id="Node000001" title="Verify how many inputs in a period of time were performed in the array generated." alt="" coords="352,5,442,31"/>
+<area shape="rect" id="Node000002" href="$_interrupt_01_code_01for_01_breadboard_8c.html#a8d8886aceb84e5f0fd3bbd265ce72e6a" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="191,5,304,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="336,21,304,21,304,16,336,16"/>
 <area shape="rect" id="Node000003" href="$_interrupt_01_code_01for_01_breadboard_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,5,143,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="175,21,143,21,143,16,175,16"/>

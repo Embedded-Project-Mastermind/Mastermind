@@ -46,17 +46,17 @@ void \mbox{\hyperlink{_interrupt_01_code_01for_01_breadboard_8c_a74a8ed969bedd6d
 void \mbox{\hyperlink{_interrupt_01_code_01for_01_breadboard_8c_a5385f2217ae5079e380dd5da28f7ca53}{configure\+Interrupt\+Port}} ()
 \item 
 int \mbox{\hyperlink{_interrupt_01_code_01for_01_breadboard_8c_afd06039489adbf62add2e5f77b09c1b3}{counter\+True}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Verify how many inputs in a period of time were performed in the array generated. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{_interrupt_01_code_01for_01_breadboard_8c_a4dab3d68b43210e47c00819d54bb5895}{find\+True}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Verify the true input in a period of time, in order to see a clear output. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_interrupt_01_code_01for_01_breadboard_8c_a8d8886aceb84e5f0fd3bbd265ce72e6a}{elaborate\+Output}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Determine which is the output action after pressing a button, it can be trigger a color or give a particular behavior if it is the back one or the confirm one. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_interrupt_01_code_01for_01_breadboard_8c_aa85749cc81575765206a36f58b4ca568}{configure\+Timers}} ()
 \item 
 void \mbox{\hyperlink{_interrupt_01_code_01for_01_breadboard_8c_a6a297065465a63035201f2dc2586c635}{switching}} (uint8\+\_\+t status, int port)
 \item 
 bool \mbox{\hyperlink{_interrupt_01_code_01for_01_breadboard_8c_af6d9dad0497883c74612996ef4198f7f}{at\+Least\+One\+True}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Verify that there is only one true input in a period of time, in order to see a clear output. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_interrupt_01_code_01for_01_breadboard_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main}} (void)
 \item 
 void \mbox{\hyperlink{_interrupt_01_code_01for_01_breadboard_8c_aa043ad73982965a208022e707ed9c892}{PORT1\+\_\+\+IRQHandler}} ()
@@ -138,8 +138,22 @@ bool \mbox{\hyperlink{_interrupt_01_code_01for_01_breadboard_8c_a95e691940593b42
 {\footnotesize\ttfamily \label{_interrupt_01_code_01for_01_breadboard_8c_af6d9dad0497883c74612996ef4198f7f} 
 bool at\+Least\+One\+True (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Verify that there is only one true input in a period of time, in order to see a clear output. 
+
+\begin{DoxyReturn}{Returns}
+bool returning the result TRUE if there was only one input and FALSE if not 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -191,8 +205,22 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{_interrupt_01_code_01for_01_breadboard_8c_afd06039489adbf62add2e5f77b09c1b3} 
 int counter\+True (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Verify how many inputs in a period of time were performed in the array generated. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -205,16 +233,29 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{_interrupt_01_code_01for_01_breadboard_8c_a8d8886aceb84e5f0fd3bbd265ce72e6a} 
 void elaborate\+Output (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Determine which is the output action after pressing a button, it can be trigger a color or give a particular behavior if it is the back one or the confirm one. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=269pt]{_interrupt_01_code_01for_01_breadboard_8c_a8d8886aceb84e5f0fd3bbd265ce72e6a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -227,8 +268,22 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{_interrupt_01_code_01for_01_breadboard_8c_a4dab3d68b43210e47c00819d54bb5895} 
 int find\+True (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Verify the true input in a period of time, in order to see a clear output. 
+
+\begin{DoxyReturn}{Returns}
+int returning the array position that has a true value 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -372,8 +427,7 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{_interrupt_01_code_01for_01_breadboard_8c_a9b3c0e9afd83afa34c0070f88d7860bc} 
 void TA0\+\_\+\+N\+\_\+\+IRQHandler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

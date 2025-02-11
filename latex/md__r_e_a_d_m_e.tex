@@ -35,10 +35,10 @@
 
 \begin{DoxyItemize}
 \item Present the purpose of the project and its main functionalities~\newline
- The purpose of the project is to develop a simple version of th egame Mastermind(...) where the user can choose some settings for the game, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the precence of doubles. Then the game starts and the purpose is to guess the sequence within the number of tries previously chosen. At every sequence inserted the system tells wheter the color is in the right position(O???), is in the sequence but in the wrong position(!???), and if it isn\textquotesingle{}t present at all X???.
+ The purpose of the project is to develop a simple version of th egame Mastermind. It is a simple and funny game where the user has to guess a sequence of colors within a certain number of attempts. Some settings for the game can be chosen, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the precence of doubles. Then the game starts and at every sequence inserted, the system tells wheter the color is in the right \doxylink{implementations_8h_a1e1320cfd39f6febcf8e4eb2b542f424}{position(\mbox{[}\+X\mbox{]})}, is in the sequence but in the wrong \doxylink{implementations_8h_a1e1320cfd39f6febcf8e4eb2b542f424}{position(\mbox{[}\+O\mbox{]})}, and if it isn\textquotesingle{}t present at all (\mbox{[}!\mbox{]}). The clues given are also based on the difficulty levels, which are three...
 \item Describe shortly how the MSP432 is used~\newline
 ~\newline
- The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit
+ The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit. Disegno del circuito e controllare la resistenza.........
 \end{DoxyItemize}
 
 Back to top
@@ -48,44 +48,44 @@ Back to top
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{Mastermind}
-\DoxyCodeLine{┣\ general\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
+\DoxyCodeLine{┣\ general\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ All\ the\ source\ code}
 \DoxyCodeLine{┃\ ┣\ bitmap.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ buttons.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ buttons.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ chronology.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ chronology.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ difficulty.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ difficulty.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ dimension.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ dimension.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ doubles.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ doubles.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
+\DoxyCodeLine{┃\ ┣\ buttons.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Manage\ physical\ buttons\ +\ "{}back"{}\ and\ "{}next"{}\ buttons}
+\DoxyCodeLine{┃\ ┣\ buttons.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ buttons.c}
+\DoxyCodeLine{┃\ ┣\ chronology.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Manage\ the\ interface\ to\ show\ on\ screen\ the\ chronology\ of\ previous\ tentatives}
+\DoxyCodeLine{┃\ ┣\ chronology.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ chronology.c}
+\DoxyCodeLine{┃\ ┣\ difficulty.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Manage\ the\ interface\ to\ select\ the\ difficulty\ of\ the\ game\ (from\ easy\ to\ hard)}
+\DoxyCodeLine{┃\ ┣\ difficulty.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ difficulty.c}
+\DoxyCodeLine{┃\ ┣\ dimension.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Manage\ the\ interface\ to\ select\ }
+\DoxyCodeLine{┃\ ┣\ dimension.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ dimension.c}
+\DoxyCodeLine{┃\ ┣\ doubles.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Manage\ the\ interface\ to\ able/disable\ doubles\ in\ the\ sequence}
+\DoxyCodeLine{┃\ ┣\ doubles.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ doubles.c}
 \DoxyCodeLine{┃\ ┣\ end.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ end.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
+\DoxyCodeLine{┃\ ┣\ end.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ end.c}
 \DoxyCodeLine{┃\ ┣\ fsm.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
 \DoxyCodeLine{┃\ ┣\ game.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ game.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
+\DoxyCodeLine{┃\ ┣\ game.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ game.c}
 \DoxyCodeLine{┃\ ┣\ gamelogic1.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ gamelocig1.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
+\DoxyCodeLine{┃\ ┣\ gamelogic1.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ gamelogic1.c}
 \DoxyCodeLine{┃\ ┣\ gamelogic2.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ gamelocig2.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
+\DoxyCodeLine{┃\ ┣\ gamelogic2.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ gamelogic2.c}
 \DoxyCodeLine{┃\ ┣\ gamelogic3.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ gamelocig3.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
+\DoxyCodeLine{┃\ ┣\ gamelogic3.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ gamelogic3.c}
 \DoxyCodeLine{┃\ ┣\ graphics.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ implementations.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ implementations.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ info.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ info.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
+\DoxyCodeLine{┃\ ┣\ implementations.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Basic\ functions\ for\ the\ right\ functioning\ of\ all\ the\ interfaces}
+\DoxyCodeLine{┃\ ┣\ implementations.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ implementations.c}
+\DoxyCodeLine{┃\ ┣\ info.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Manage\ the\ interface\ that\ summarize\ all\ the\ game\ characteristics}
+\DoxyCodeLine{┃\ ┣\ info.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ info.c}
 \DoxyCodeLine{┃\ ┣\ input.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ input.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
+\DoxyCodeLine{┃\ ┣\ input.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ input.c}
 \DoxyCodeLine{┃\ ┣\ joystick.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ joystick.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ main.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
+\DoxyCodeLine{┃\ ┣\ joystick.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ joystick.c}
+\DoxyCodeLine{┃\ ┣\ main.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Calls\ the\ various\ states\ in\ out\ state\ machine}
 \DoxyCodeLine{┃\ ┣\ read\_me.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
 \DoxyCodeLine{┃\ ┣\ start.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ start.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┣\ tentatives.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
-\DoxyCodeLine{┃\ ┗\ tentatives.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
+\DoxyCodeLine{┃\ ┣\ start.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ start.c}
+\DoxyCodeLine{┃\ ┣\ tentatives.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Manage\ the\ interface\ to\ select\ the\ number\ of\ tentatives\ you\ want\ to\ have\ to\ guess\ the\ sequence}
+\DoxyCodeLine{┃\ ┗\ tentatives.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Headers\ for\ tentatives.c}
 \DoxyCodeLine{┣\ src\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
 \DoxyCodeLine{┃\ ┣\ fsm.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
 \DoxyCodeLine{┃\ ┣\ gamelogic1.c\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ }
@@ -133,9 +133,7 @@ Back to top
 
 \DoxyHorRuler{0}
 \hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{Software Requirements}{Software Requirements}}\label{md__r_e_a_d_m_e_autotoc_md10}
-• Code Composer Studio (Link)
-
-
+• Code Composer Studio (Link) Code Composer Studio (CCS) is an integrated development environment (IDE) designed for embedded systems, particularly for programming and debugging microcontrollers and processors. Developed by Texas Instruments, CCS supports a wide range of TI’s hardware, offering tools for writing, compiling, and testing code.
 \begin{DoxyItemize}
 \item Really brief description of what this is~\newline
 ~\newline
@@ -174,6 +172,28 @@ Back to top
 \end{DoxyItemize}
 
 \href{https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02}{\texttt{ SIMPLELINK-\/\+MSP432-\/\+SDK Download}}
+
+
+\begin{DoxyEnumerate}
+\item Extract {\ttfamily simplelink\+\_\+msp432p4\+\_\+sdk\+\_\+3\+\_\+40\+\_\+01\+\_\+02.\+zip} file. ~\newline
+
+\item Open {\bfseries{Code Composer Studio (CCS)}} and left-\/click on the {\bfseries{Project Folder}} to select {\bfseries{Properties}}. ~\newline
+
+\item Select {\bfseries{CCS Build}}. ~\newline
+
+\item Click {\bfseries{ARM Compiler}} and then {\bfseries{Include Options}}. ~\newline
+
+\begin{DoxyItemize}
+\item 4.\+1 Add {\ttfamily "{}simplelink\+\_\+msp432p4\+\_\+sdk\+\_\+3\+\_\+40\+\_\+01\+\_\+02/source"{}} directory to the {\ttfamily "{}\+Add dir to \#include search path"{}} window. ~\newline
+
+\end{DoxyItemize}
+\item Click {\bfseries{ARM Linker}} and then {\bfseries{File Search Path}}. ~\newline
+
+\begin{DoxyItemize}
+\item 5.\+1 Add {\ttfamily "{}simplelink\+\_\+msp432p4\+\_\+sdk\+\_\+3\+\_\+40\+\_\+01\+\_\+02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx\+\_\+driverlib.\+lib"{}} to the {\ttfamily "{}\+Include library file..."{}} window. ~\newline
+
+\end{DoxyItemize}
+\end{DoxyEnumerate}
 
 Back to top
 
@@ -226,10 +246,9 @@ Back to top
 
 \DoxyHorRuler{0}
 \hypertarget{md__r_e_a_d_m_e_autotoc_md28}{}\doxysection{\texorpdfstring{Work Contribution}{Work Contribution}}\label{md__r_e_a_d_m_e_autotoc_md28}
-\mbox{[}X\mbox{]} -\/ Complete~\newline
- \mbox{[}?\mbox{]} -\/ To finish~\newline
- \mbox{[}!\mbox{]} -\/ To start~\newline
- \mbox{[}\texorpdfstring{$\ast$}{*}\mbox{]} -\/ Consider expanding briefs~\newline
+🟢 -\/ Complete~\newline
+ 🟡 -\/ To finish~\newline
+ 🔴 -\/ To start~\newline
 ~\newline
  This is referred to the TODO section, search TODO in those files and fill the missing information~\newline
  \tabulinesep=1mm
@@ -242,23 +261,23 @@ Back to top
 \hline
 \cellcolor{\tableheadbgcolor}\textbf{ Topic/\+Section }&\cellcolor{\tableheadbgcolor}\textbf{ Responsible Member }&\cellcolor{\tableheadbgcolor}\textbf{ Helper Member }&\cellcolor{\tableheadbgcolor}\textbf{ Maintainer Member }&\cellcolor{\tableheadbgcolor}\textbf{ Comments .c }&\cellcolor{\tableheadbgcolor}\textbf{ Integration .h  }\\\cline{1-6}
 \endhead
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{buttons_8c}{buttons.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ X }&\cellcolor{\tableheadbgcolor}\textbf{ X  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{chronology_8c}{chronology.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò \& Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ ? }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{difficulty_8c}{difficulty.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ X }&\cellcolor{\tableheadbgcolor}\textbf{ X  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{dimension_8c}{dimension.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ X\texorpdfstring{$\ast$}{*} }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{doubles_8c}{doubles.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ X\texorpdfstring{$\ast$}{*} }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{end_8c}{end.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ ! }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{game_8c}{game.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro \& Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ X }&\cellcolor{\tableheadbgcolor}\textbf{ X  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ gamelogic1.\+c }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ ? }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ gamelogic2.\+c }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro \& Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ ! }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ gamelogic3.\+c }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ ! }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{implementations_8c}{implementations.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ ! }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{info_8c}{info.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ ! }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{input_8c}{input.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ ! }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{joystick_8c}{joystick.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ ! }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ main.\+c }&\cellcolor{\tableheadbgcolor}\textbf{ All }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ All }&\cellcolor{\tableheadbgcolor}\textbf{ ! }&\cellcolor{\tableheadbgcolor}\textbf{ NONE  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{start_8c}{start.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ ! }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
-\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{tentatives_8c}{tentatives.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ ! }&\cellcolor{\tableheadbgcolor}\textbf{ !  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{buttons_8c}{buttons.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{chronology_8c}{chronology.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ 🟡 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟡  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{difficulty_8c}{difficulty.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{dimension_8c}{dimension.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{doubles_8c}{doubles.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{end_8c}{end.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{game_8c}{game.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro \& Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ gamelogic1.\+c }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ gamelogic2.\+c }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro \& Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ gamelogic3.\+c }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{implementations_8c}{implementations.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{info_8c}{info.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{input_8c}{input.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Benassi Alessandro }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{joystick_8c}{joystick.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ main.\+c }&\cellcolor{\tableheadbgcolor}\textbf{ All }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ All }&\cellcolor{\tableheadbgcolor}\textbf{ 🔴 }&\cellcolor{\tableheadbgcolor}\textbf{ NONE  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{start_8c}{start.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ Gottardelli Matteo }&\cellcolor{\tableheadbgcolor}\textbf{ Calvo Daniele }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
+\cellcolor{\tableheadbgcolor}\textbf{ \doxylink{tentatives_8c}{tentatives.\+c} }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ -\/ }&\cellcolor{\tableheadbgcolor}\textbf{ Cristoforetti Niccolò }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢 }&\cellcolor{\tableheadbgcolor}\textbf{ 🟢  }\\\cline{1-6}
 \end{longtabu}
 
 

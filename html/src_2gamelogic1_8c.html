@@ -173,12 +173,16 @@ Functions</h2></td></tr>
 <tr class="memdesc:a349e30260991f4d42dc6e3b575108891"><td class="mdescLeft">&#160;</td><td class="mdescRight">After each input sequence is analyzed the tentative is all reinitialized with an incrementation of the tentative count.  <br /></td></tr>
 <tr class="separator:a349e30260991f4d42dc6e3b575108891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ae06b4f684ab23f714e117b63520232" id="r_a3ae06b4f684ab23f714e117b63520232"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ae06b4f684ab23f714e117b63520232">fn_START</a> (void)</td></tr>
+<tr class="memdesc:a3ae06b4f684ab23f714e117b63520232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call function when START of the finite state machine is called and initializes the game after selecting the elements.  <br /></td></tr>
 <tr class="separator:a3ae06b4f684ab23f714e117b63520232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dfdeacaef5a5d37960e2575015b6516" id="r_a6dfdeacaef5a5d37960e2575015b6516"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dfdeacaef5a5d37960e2575015b6516">fn_KEY_WOUT_DOUB</a> (void)</td></tr>
+<tr class="memdesc:a6dfdeacaef5a5d37960e2575015b6516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call function when KEY_WOUT_DOUB of the finite state machine is called and generates a sequence to find with no duplicates.  <br /></td></tr>
 <tr class="separator:a6dfdeacaef5a5d37960e2575015b6516"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b7577b178ce9de2be9e5ab17053f6e5" id="r_a7b7577b178ce9de2be9e5ab17053f6e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b7577b178ce9de2be9e5ab17053f6e5">fn_KEY_WH_DOUB</a> (void)</td></tr>
+<tr class="memdesc:a7b7577b178ce9de2be9e5ab17053f6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call function when KEY_WH_DOUB of the finite state machine is called and generates a sequence to find with duplicates.  <br /></td></tr>
 <tr class="separator:a7b7577b178ce9de2be9e5ab17053f6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea19573b1ff72f6c1ccf31fca44008e0" id="r_aea19573b1ff72f6c1ccf31fca44008e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea19573b1ff72f6c1ccf31fca44008e0">fn_RESET_TENT</a> (void)</td></tr>
+<tr class="memdesc:aea19573b1ff72f6c1ccf31fca44008e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call function when RESET_TENT of the finite state machine is called after each tentative is sent successfully and resets the elements of the current <a class="el" href="struct_tentative.html">Tentative</a>.  <br /></td></tr>
 <tr class="separator:aea19573b1ff72f6c1ccf31fca44008e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -446,12 +450,17 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Call function when KEY_WH_DOUB of the finite state machine is called and generates a sequence to find with duplicates. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-09-27 </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="src_2gamelogic1_8c_a7b7577b178ce9de2be9e5ab17053f6e5_cgraph.png" border="0" usemap="#asrc_2gamelogic1_8c_a7b7577b178ce9de2be9e5ab17053f6e5_cgraph" alt=""/></div>
 <map name="asrc_2gamelogic1_8c_a7b7577b178ce9de2be9e5ab17053f6e5_cgraph" id="asrc_2gamelogic1_8c_a7b7577b178ce9de2be9e5ab17053f6e5_cgraph">
-<area shape="rect" title=" " alt="" coords="5,81,148,107"/>
+<area shape="rect" title="Call function when KEY_WH_DOUB of the finite state machine is called and generates a sequence to find..." alt="" coords="5,81,148,107"/>
 <area shape="rect" href="general_2gamelogic1_8c.html#a2700fd085c33e4ef923ab449276a578f" title="Analysis and parsing of the integer sequence to the char one, with an appropriate deallocation of the..." alt="" coords="196,56,366,82"/>
 <area shape="poly" title=" " alt="" coords="147,83,180,79,181,84,148,88"/>
 <area shape="rect" href="general_2gamelogic1_8c.html#a88ad662207fa03ea53b1f6be039fa066" title="Generation of a random key that allows the presence of duplicates colors." alt="" coords="197,107,365,132"/>
@@ -494,12 +503,17 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Call function when KEY_WOUT_DOUB of the finite state machine is called and generates a sequence to find with no duplicates. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-09-27 </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="src_2gamelogic1_8c_a6dfdeacaef5a5d37960e2575015b6516_cgraph.png" border="0" usemap="#asrc_2gamelogic1_8c_a6dfdeacaef5a5d37960e2575015b6516_cgraph" alt=""/></div>
 <map name="asrc_2gamelogic1_8c_a6dfdeacaef5a5d37960e2575015b6516_cgraph" id="asrc_2gamelogic1_8c_a6dfdeacaef5a5d37960e2575015b6516_cgraph">
-<area shape="rect" title=" " alt="" coords="5,105,166,131"/>
+<area shape="rect" title="Call function when KEY_WOUT_DOUB of the finite state machine is called and generates a sequence to fi..." alt="" coords="5,105,166,131"/>
 <area shape="rect" href="general_2gamelogic1_8c.html#a2700fd085c33e4ef923ab449276a578f" title="Analysis and parsing of the integer sequence to the char one, with an appropriate deallocation of the..." alt="" coords="218,56,388,82"/>
 <area shape="poly" title=" " alt="" coords="145,102,228,83,229,88,146,107"/>
 <area shape="rect" href="general_2gamelogic1_8c.html#a3abce2284f44af7203a666506074b873" title="Generation of a random key that doesn&#39;t allow the presence of duplicates colors." alt="" coords="214,131,393,156"/>
@@ -544,12 +558,17 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Call function when RESET_TENT of the finite state machine is called after each tentative is sent successfully and resets the elements of the current <a class="el" href="struct_tentative.html">Tentative</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-09-27 </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="src_2gamelogic1_8c_aea19573b1ff72f6c1ccf31fca44008e0_cgraph.png" border="0" usemap="#asrc_2gamelogic1_8c_aea19573b1ff72f6c1ccf31fca44008e0_cgraph" alt=""/></div>
 <map name="asrc_2gamelogic1_8c_aea19573b1ff72f6c1ccf31fca44008e0_cgraph" id="asrc_2gamelogic1_8c_aea19573b1ff72f6c1ccf31fca44008e0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,156,132,182"/>
+<area shape="rect" title="Call function when RESET_TENT of the finite state machine is called after each tentative is sent succ..." alt="" coords="5,156,132,182"/>
 <area shape="rect" href="general_2gamelogic1_8c.html#a349e30260991f4d42dc6e3b575108891" title="After each input sequence is analyzed the tentative is all reinitialized with an incrementation of th..." alt="" coords="180,156,283,182"/>
 <area shape="poly" title=" " alt="" coords="132,166,164,166,164,172,132,172"/>
 <area shape="rect" href="general_2gamelogic1_8c.html#a465d18eab656a2e0ed6ba52d433751f0" title="Allocation for a character array, ensuring that it is not already allocated." alt="" coords="331,80,487,106"/>
@@ -570,15 +589,15 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="448,257,553,231,555,236,449,262"/>
 <area shape="rect" href="game_8c.html#ac269fe8cc886e12dfde77c659f786cd6" title="According to the dimension selected in GUI menu, are preallocated empty circles that change dynamical..." alt="" coords="574,256,654,282"/>
 <area shape="poly" title=" " alt="" coords="449,266,559,266,559,272,449,272"/>
-<area shape="rect" href="implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="551,305,677,331"/>
+<area shape="rect" href="implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title="it draws a rectangle with a text centered in it" alt="" coords="551,305,677,331"/>
 <area shape="poly" title=" " alt="" coords="449,276,544,299,542,304,448,281"/>
-<area shape="rect" href="implementations_8c.html#a5b980628dc75e57228c103881e9246af" title=" " alt="" coords="565,355,663,380"/>
+<area shape="rect" href="implementations_8c.html#a5b980628dc75e57228c103881e9246af" title="it resets all default&#39;s colors and clear the display" alt="" coords="565,355,663,380"/>
 <area shape="poly" title=" " alt="" coords="431,280,478,310,536,341,551,347,549,352,534,346,475,315,428,284"/>
 <area shape="rect" href="game_8c.html#a8e2dbff3a9441175f6bfcf1b7bc56fee" title="Initialization effective of the circles according to the inputed parameters." alt="" coords="743,256,854,282"/>
 <area shape="poly" title=" " alt="" coords="654,266,727,266,727,272,654,272"/>
-<area shape="rect" href="implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="748,355,849,380"/>
+<area shape="rect" href="implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title="gives back the x of the center of the given rectangle" alt="" coords="748,355,849,380"/>
 <area shape="poly" title=" " alt="" coords="666,329,734,348,732,353,664,334"/>
-<area shape="rect" href="implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="748,305,849,331"/>
+<area shape="rect" href="implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title="gives back the y of the center of the given rectangle" alt="" coords="748,305,849,331"/>
 <area shape="poly" title=" " alt="" coords="677,316,732,316,732,321,677,321"/>
 </map>
 </div>
@@ -599,12 +618,17 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Call function when START of the finite state machine is called and initializes the game after selecting the elements. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary Author &amp; Maintainer) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-09-27 </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="src_2gamelogic1_8c_a3ae06b4f684ab23f714e117b63520232_cgraph.png" border="0" usemap="#asrc_2gamelogic1_8c_a3ae06b4f684ab23f714e117b63520232_cgraph" alt=""/></div>
 <map name="asrc_2gamelogic1_8c_a3ae06b4f684ab23f714e117b63520232_cgraph" id="asrc_2gamelogic1_8c_a3ae06b4f684ab23f714e117b63520232_cgraph">
-<area shape="rect" title=" " alt="" coords="5,80,88,105"/>
+<area shape="rect" title="Call function when START of the finite state machine is called and initializes the game after selecti..." alt="" coords="5,80,88,105"/>
 <area shape="rect" href="general_2gamelogic1_8c.html#afb2e75602fcc752a18fcfc0ba165ad00" title="Initialize the game with parameters selected from the GUI interface from DIMENSION,..." alt="" coords="136,80,209,105"/>
 <area shape="poly" title=" " alt="" coords="88,90,120,90,120,95,88,95"/>
 <area shape="rect" href="general_2gamelogic1_8c.html#a26e20921c3fb3ec3b86ce90e18514575" title="Allocation for a boolean array, ensuring that it is not already allocated." alt="" coords="258,54,412,80"/>

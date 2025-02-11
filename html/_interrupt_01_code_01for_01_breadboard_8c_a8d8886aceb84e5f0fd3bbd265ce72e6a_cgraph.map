@@ -1,7 +1,7 @@
 <map id="elaborateOutput" name="elaborateOutput">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,119,56"/>
-<area shape="rect" id="Node000002" href="$_interrupt_01_code_01for_01_breadboard_8c.html#afd06039489adbf62add2e5f77b09c1b3" title=" " alt="" coords="167,5,257,31"/>
+<area shape="rect" id="Node000001" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="5,31,119,56"/>
+<area shape="rect" id="Node000002" href="$_interrupt_01_code_01for_01_breadboard_8c.html#afd06039489adbf62add2e5f77b09c1b3" title="Verify how many inputs in a period of time were performed in the array generated." alt="" coords="167,5,257,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,31,151,26,152,31,119,37"/>
-<area shape="rect" id="Node000003" href="$_interrupt_01_code_01for_01_breadboard_8c.html#a4dab3d68b43210e47c00819d54bb5895" title=" " alt="" coords="178,55,246,80"/>
+<area shape="rect" id="Node000003" href="$_interrupt_01_code_01for_01_breadboard_8c.html#a4dab3d68b43210e47c00819d54bb5895" title="Verify the true input in a period of time, in order to see a clear output." alt="" coords="178,55,246,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,50,163,57,162,62,119,55"/>
 </map>

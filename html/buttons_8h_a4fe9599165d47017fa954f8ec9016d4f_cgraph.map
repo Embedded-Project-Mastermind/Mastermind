@@ -1,26 +1,26 @@
 <map id="buttonConfirmAction" name="buttonConfirmAction">
 <area shape="rect" id="Node000001" title="Implements confirm button action that manage its input according to the state you are in...." alt="" coords="5,153,146,179"/>
-<area shape="rect" id="Node000002" href="$implementations_8c.html#ae6b98301bc187c6f3b974c2283459932" title=" " alt="" coords="202,104,312,130"/>
+<area shape="rect" id="Node000002" href="$implementations_8c.html#ae6b98301bc187c6f3b974c2283459932" title="handles the prev and next buttons" alt="" coords="202,104,312,130"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,150,191,132,193,137,126,155"/>
-<area shape="rect" id="Node000009" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="194,203,320,228"/>
+<area shape="rect" id="Node000009" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title="it draws a rectangle with a text centered in it" alt="" coords="194,203,320,228"/>
 <area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="126,177,193,195,191,201,125,182"/>
 <area shape="rect" id="Node000003" href="$difficulty_8c.html#a55037b2df6de8e644fb78a0b591e8ac2" title="Function that handles pressure of confirm button when we are in DIFFICULTY section." alt="" coords="368,5,564,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="272,101,313,70,367,40,382,34,384,39,369,45,316,75,275,106"/>
-<area shape="rect" id="Node000005" href="$dimension_8c.html#a58364c9a26deb9ae50fe27b33f41a221" title="extern declaretion" alt="" coords="368,55,564,80"/>
+<area shape="rect" id="Node000005" href="$dimension_8c.html#a58364c9a26deb9ae50fe27b33f41a221" title="Handles the pressure of confirm button in the DIMENSION section." alt="" coords="368,55,564,80"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="311,101,393,82,394,87,313,107"/>
 <area shape="rect" id="Node000006" href="$doubles_8c.html#a0cb8c2347e6040b6d06a0642ef95643a" title="manages the changes of our doubles variable and the shown text on our button (except to prev and next..." alt="" coords="375,153,557,179"/>
 <area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="313,127,394,147,393,152,311,132"/>
-<area shape="rect" id="Node000008" href="$tentatives_8c.html#ab21c36ca2c0c622eefddddf5c0023d4c" title=" " alt="" coords="370,104,562,130"/>
+<area shape="rect" id="Node000008" href="$tentatives_8c.html#ab21c36ca2c0c622eefddddf5c0023d4c" title="manages the choice of tentative trough the pressure of the button (except to prev and next)" alt="" coords="370,104,562,130"/>
 <area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="312,114,355,114,355,120,312,120"/>
-<area shape="rect" id="Node000004" href="$implementations_8c.html#a7b8a1f6ee64675c2f14e0c4d61b10092" title=" " alt="" coords="620,80,733,106"/>
+<area shape="rect" id="Node000004" href="$implementations_8c.html#a7b8a1f6ee64675c2f14e0c4d61b10092" title="selects the currently focused button" alt="" coords="620,80,733,106"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="530,29,565,40,637,70,635,75,563,45,528,34"/>
 <area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="564,77,605,82,604,87,564,82"/>
 <area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="528,150,563,140,634,110,636,115,565,145,530,155"/>
-<area shape="rect" id="Node000007" href="$implementations_8c.html#af4097a2a104a8d16ccf1344d0e9f25b1" title=" " alt="" coords="612,153,741,179"/>
+<area shape="rect" id="Node000007" href="$implementations_8c.html#af4097a2a104a8d16ccf1344d0e9f25b1" title="Resets all buttons to &quot;STANDARD&quot;." alt="" coords="612,153,741,179"/>
 <area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="558,164,597,164,597,169,558,169"/>
 <area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="562,103,604,98,605,104,563,109"/>
-<area shape="rect" id="Node000010" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="416,203,517,228"/>
+<area shape="rect" id="Node000010" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title="gives back the x of the center of the given rectangle" alt="" coords="416,203,517,228"/>
 <area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="320,213,400,213,400,218,320,218"/>
-<area shape="rect" id="Node000011" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="416,252,517,278"/>
+<area shape="rect" id="Node000011" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title="gives back the y of the center of the given rectangle" alt="" coords="416,252,517,278"/>
 <area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="315,226,401,247,400,252,314,232"/>
 </map>

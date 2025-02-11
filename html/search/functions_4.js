@@ -17,9 +17,9 @@ var searchData=
   ['drawcircles_14',['drawCircles',['../game_8c.html#a1d704afea01300efda83ee14d72bf132',1,'drawCircles(Graphics_Circle *circs):&#160;game.c'],['../game_8h.html#a1d704afea01300efda83ee14d72bf132',1,'drawCircles(Graphics_Circle *circs):&#160;game.c']]],
   ['drawdifficulty_15',['drawDifficulty',['../difficulty_8c.html#a1834148a96e06042ee734794f17f9714',1,'drawDifficulty():&#160;difficulty.c'],['../difficulty_8h.html#a1834148a96e06042ee734794f17f9714',1,'drawDifficulty():&#160;difficulty.c']]],
   ['drawdimension_16',['drawDimension',['../dimension_8c.html#a82bf35c4ebbd7865c3aaae6e83e0d8f0',1,'drawDimension():&#160;dimension.c'],['../dimension_8h.html#a82bf35c4ebbd7865c3aaae6e83e0d8f0',1,'drawDimension():&#160;dimension.c']]],
-  ['drawend_17',['drawEnd',['../end_8c.html#a9cfc14acd4b06827524e4ba00559b574',1,'drawEnd(int elems):&#160;end.c'],['../end_8h.html#a9cfc14acd4b06827524e4ba00559b574',1,'drawEnd(int elems):&#160;end.c']]],
+  ['drawend_17',['drawEnd',['../end_8c.html#abd6de31a2cbd9c1609338b0f9095e230',1,'drawEnd():&#160;end.c'],['../end_8h.html#abd6de31a2cbd9c1609338b0f9095e230',1,'drawEnd():&#160;end.c']]],
   ['drawpastresults_18',['drawPastResults',['../chronology_8c.html#a0009722d580b5fc3a2c6ae32efadd8bb',1,'drawPastResults(Graphics_Button *buttons):&#160;chronology.c'],['../chronology_8h.html#a0009722d580b5fc3a2c6ae32efadd8bb',1,'drawPastResults(Graphics_Button *buttons):&#160;chronology.c']]],
-  ['drawstart_19',['drawStart',['../start_8c.html#a52ac5595ea6e32fc694344402f33695b',1,'drawStart(int elems):&#160;start.c'],['../start_8h.html#a52ac5595ea6e32fc694344402f33695b',1,'drawStart(int elems):&#160;start.c']]],
+  ['drawstart_19',['drawStart',['../start_8c.html#a7cb9d67dbe12f6022ffea530cff1a0d3',1,'drawStart():&#160;start.c'],['../start_8h.html#a7cb9d67dbe12f6022ffea530cff1a0d3',1,'drawStart():&#160;start.c']]],
   ['drawtentatives_20',['drawTentatives',['../tentatives_8c.html#a9bb2fdb0385e964851945754e519d785',1,'drawTentatives(int elems):&#160;tentatives.c'],['../tentatives_8h.html#a9bb2fdb0385e964851945754e519d785',1,'drawTentatives(int elems):&#160;tentatives.c']]],
   ['drawtext_21',['drawText',['../difficulty_8c.html#abe9c02f90a494b0d60669e280db89c2d',1,'drawText():&#160;difficulty.c'],['../difficulty_8h.html#abe9c02f90a494b0d60669e280db89c2d',1,'drawText():&#160;difficulty.c']]]
 ];

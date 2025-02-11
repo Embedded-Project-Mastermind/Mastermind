@@ -1,9 +1,15 @@
 <map id="read_input" name="read_input">
-<area shape="rect" id="Node000001" title=" " alt="" coords="144,55,225,80"/>
-<area shape="rect" id="Node000002" href="$src_2gamelogic2_8c.html#a9404d06774140db68ea7459e9bef6e56" title=" " alt="" coords="13,5,88,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,51,87,34,89,29,134,46"/>
-<area shape="rect" id="Node000003" href="$src_2gamelogic2_8c.html#aa6688872ceac509c3164b94875dc3763" title=" " alt="" coords="16,55,85,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,70,86,70,86,65,128,65"/>
-<area shape="rect" id="Node000004" href="$src_2gamelogic2_8c.html#a4c00da6a37b75a59b2eb6aa66576969b" title=" " alt="" coords="5,104,96,130"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="134,89,89,106,87,101,132,84"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="310,55,391,80"/>
+<area shape="rect" id="Node000002" href="$src_2gamelogic2_8c.html#a9404d06774140db68ea7459e9bef6e56" title=" " alt="" coords="180,5,254,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="299,51,253,34,255,29,300,46"/>
+<area shape="rect" id="Node000004" href="$src_2gamelogic2_8c.html#aa6688872ceac509c3164b94875dc3763" title=" " alt="" coords="182,55,252,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="294,70,252,70,252,65,294,65"/>
+<area shape="rect" id="Node000006" href="$src_2gamelogic2_8c.html#a4c00da6a37b75a59b2eb6aa66576969b" title=" " alt="" coords="172,104,262,130"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="300,89,255,106,253,101,299,84"/>
+<area shape="rect" id="Node000003" href="$src_2gamelogic2_8c.html#a4a4f4707af922a7b84fdd6bdd358691e" title=" " alt="" coords="5,5,124,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="164,21,124,21,124,16,164,16"/>
+<area shape="rect" id="Node000005" href="$src_2gamelogic2_8c.html#acd23a7b6b2abbeebb6c6bde26e35040a" title="state while he&#39;s waiting an input with the user&#39;s sequence full" alt="" coords="9,55,120,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="166,70,121,70,121,65,166,65"/>
+<area shape="rect" id="Node000007" href="$src_2gamelogic2_8c.html#a816c5d4caf1a402f87e1e28b641884b4" title="state while he&#39;s waiting an input" alt="" coords="28,104,101,130"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="156,120,101,120,101,114,156,114"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="fn_ELABORATE_TENT" name="fn_ELABORATE_TENT">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,166,31"/>
+<area shape="rect" id="Node000001" title="Function for ELABORATE_TENT state." alt="" coords="5,5,166,31"/>
 <area shape="rect" id="Node000002" href="$src_2gamelogic3_8c.html#a69557878ed149c80e5393e38a540eff9" title=" " alt="" coords="214,5,344,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,16,198,16,198,21,166,21"/>
 <area shape="rect" id="Node000003" href="$src_2gamelogic3_8c.html#ad3d2d227e5de9f5614af5a9898df57d1" title=" " alt="" coords="392,5,562,31"/>

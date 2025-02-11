@@ -1,7 +1,7 @@
 <map id="insertInChronology" name="insertInChronology">
 <area shape="rect" id="Node000001" title=" " alt="" coords="232,31,362,56"/>
-<area shape="rect" id="Node000002" href="$src_2gamelogic3_8c.html#a4965965e6c1b73519655decb209180b1" title=" " alt="" coords="5,5,184,31"/>
+<area shape="rect" id="Node000002" href="$src_2gamelogic3_8c.html#a4965965e6c1b73519655decb209180b1" title="Function for ELABORATE_RESULT state." alt="" coords="5,5,184,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,36,184,32,184,27,216,31"/>
-<area shape="rect" id="Node000003" href="$src_2gamelogic3_8c.html#a8c8ec768cc25ef34d7b4cee105ff1ce2" title=" " alt="" coords="14,55,175,80"/>
+<area shape="rect" id="Node000003" href="$src_2gamelogic3_8c.html#a8c8ec768cc25ef34d7b4cee105ff1ce2" title="Function for ELABORATE_TENT state." alt="" coords="14,55,175,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,56,175,61,175,55,216,50"/>
 </map>

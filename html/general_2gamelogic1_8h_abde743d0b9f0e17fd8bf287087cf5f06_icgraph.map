@@ -12,9 +12,9 @@
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="449,139,367,157,366,151,447,134"/>
 <area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#a3abce2284f44af7203a666506074b873" title="Generation of a random key that doesn&#39;t allow the presence of duplicates colors." alt="" coords="214,105,393,131"/>
 <area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="439,122,394,121,394,116,439,116"/>
-<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a7b7577b178ce9de2be9e5ab17053f6e5" title=" " alt="" coords="14,131,157,156"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a7b7577b178ce9de2be9e5ab17053f6e5" title="Call function when KEY_WH_DOUB of the finite state machine is called and generates a sequence to find..." alt="" coords="14,131,157,156"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="204,159,157,154,158,149,204,154"/>
-<area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#a6dfdeacaef5a5d37960e2575015b6516" title=" " alt="" coords="5,69,166,95"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic1_8c.html#a6dfdeacaef5a5d37960e2575015b6516" title="Call function when KEY_WOUT_DOUB of the finite state machine is called and generates a sequence to fi..." alt="" coords="5,69,166,95"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="206,105,166,98,167,93,207,100"/>
 <area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="235,89,215,95,118,133,116,128,213,90,233,84"/>
 <area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="202,78,166,80,166,75,202,72"/>

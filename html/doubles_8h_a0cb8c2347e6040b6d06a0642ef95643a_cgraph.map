@@ -1,7 +1,7 @@
 <map id="handlePressure_DOUBLES" name="handlePressure_DOUBLES">
 <area shape="rect" id="Node000001" title="manages the changes of our doubles variable and the shown text on our button (except to prev and next..." alt="" coords="5,31,188,56"/>
-<area shape="rect" id="Node000002" href="$implementations_8c.html#af4097a2a104a8d16ccf1344d0e9f25b1" title=" " alt="" coords="236,5,364,31"/>
+<area shape="rect" id="Node000002" href="$implementations_8c.html#af4097a2a104a8d16ccf1344d0e9f25b1" title="Resets all buttons to &quot;STANDARD&quot;." alt="" coords="236,5,364,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,29,220,25,220,31,189,35"/>
-<area shape="rect" id="Node000003" href="$implementations_8c.html#a7b8a1f6ee64675c2f14e0c4d61b10092" title=" " alt="" coords="243,55,356,80"/>
+<area shape="rect" id="Node000003" href="$implementations_8c.html#a7b8a1f6ee64675c2f14e0c4d61b10092" title="selects the currently focused button" alt="" coords="243,55,356,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,52,228,56,227,62,188,57"/>
 </map>

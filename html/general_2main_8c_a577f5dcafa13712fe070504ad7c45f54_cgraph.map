@@ -2,12 +2,12 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,31,147,56"/>
 <area shape="rect" id="Node000002" href="$buttons_8c.html#afefe41188707848ce20054caacaefbd9" title="Deprecated, using switching function, it is only a bridge function now." alt="" coords="195,31,330,56"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,41,179,41,179,46,147,46"/>
-<area shape="rect" id="Node000003" href="$input_8c.html#a23a5061c21b189449ac63eef4edc75d8" title=" " alt="" coords="378,31,454,56"/>
+<area shape="rect" id="Node000003" href="$input_8c.html#a23a5061c21b189449ac63eef4edc75d8" title="Sets the position of the array according to an input pin on a port." alt="" coords="378,31,454,56"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="330,41,362,41,362,46,330,46"/>
-<area shape="rect" id="Node000004" href="$input_8c.html#a649025105fd573f4021b9aa4b3ba5e44" title=" " alt="" coords="511,5,593,31"/>
+<area shape="rect" id="Node000004" href="$input_8c.html#a649025105fd573f4021b9aa4b3ba5e44" title="Verify on a specific port IFG which is the bit activated." alt="" coords="511,5,593,31"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="454,34,495,26,496,31,455,39"/>
-<area shape="rect" id="Node000005" href="$input_8c.html#a75d92ac43d65d743ff159105e3e33b60" title=" " alt="" coords="502,55,602,80"/>
+<area shape="rect" id="Node000005" href="$input_8c.html#a75d92ac43d65d743ff159105e3e33b60" title="Set array values based on the value inputed." alt="" coords="502,55,602,80"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="455,48,488,53,487,59,454,53"/>
-<area shape="rect" id="Node000006" href="$input_8c.html#aad3f0b26686a346707670914702aeaad" title=" " alt="" coords="650,55,760,80"/>
+<area shape="rect" id="Node000006" href="$input_8c.html#aad3f0b26686a346707670914702aeaad" title="Function to reset the global bool array, simulating the activation of the ports." alt="" coords="650,55,760,80"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="602,65,634,65,634,70,602,70"/>
 </map>
