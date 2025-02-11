@@ -66,6 +66,7 @@ For the right side the pins are:
   </tr>
 </table>
 
+![Alt Text](images/board_configuration.jpg)
 
 [Back to top](#table-of-contents)
 
