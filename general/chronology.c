@@ -88,7 +88,7 @@ int16_t char_Conversion_to_Int(int8_t index) {
     return c; // Return the character representation
 }
 /**
- * @brief populate the cHronology circle with their colors
+ * @brief populate the cHronology circle with their colors for evry single attempts displayed
  * @param radius dimension of the circle
  * @param value position of the sequence
  * @param index that indicates History of attempts
@@ -108,7 +108,7 @@ void populateChronologyCircles(int16_t radius, int16_t value, int16_t index){
     }
 }
 /**
- * @brief function that populate chronology buttons
+ * @brief function that populate chronology buttons of the corrections for evry single attempts displayed
  * @param value position of the sequence
  * @param index that indicates History of attempts
  * @return void
