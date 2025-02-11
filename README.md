@@ -29,50 +29,45 @@ The MSP432 board is used to take the input of 8 buttons setted up on an external
 
 Disegno del circuito e tabella con i pin
 
-<!-- Left Tables -->
-<div style="float: left; margin-right: 20px;">
-  <!-- Left Table -->
-  <table style="border-collapse: collapse; margin-bottom: 20px;">
-    <tr>
-      <th>Color</th>
-      <th>Ground</th>
-      <th>Orange</th>
-      <th>Green</th>
-      <th>Cyan</th>
-    </tr>
-    <tr>
-      <th>Pin</th>
-      <td>GND</td>
-      <td>3.3</td>
-      <td>4.7</td>
-      <td>5.4</td>
-    </tr>
-  </table>
+For the left side of the board, the connected pins related to the colors are the following:
+<table>
+  <tr>
+    <th>Color</th>
+    <th>Ground</th>
+    <th>Orange</th>
+    <th>Green</th>
+    <th>Cyan</th>
+  </tr>
+  <tr>
+    <th>Pin</th>
+    <th>GND</th>
+    <th>3.3</th>
+    <th>4.7</th>
+    <th>5.4</th>
+  </tr>
+</table>
 
-  <!-- Right Table -->
-  <table style="border-collapse: collapse;">
-    <tr>
-      <th>Color</th>
-      <th>Red</th>
-      <th>White</th>
-      <th>Purple</th>
-      <th>Blue</th>
-      <th>Yellow</th>
-    </tr>
-    <tr>
-      <th>Pin</th>
-      <td>3.0</td>
-      <td>5.6</td>
-      <td>6.6</td>
-      <td>5.2</td>
-      <td>3.6</td>
-    </tr>
-  </table>
-</div>
+For the right side the pins are:
+<table>
+  <tr>
+    <th>Color</th>
+    <th>Red</th>
+    <th>White</th>
+    <th>Purple</th>
+    <th>Blue</th>
+    <th>Yellow</th>
+  </tr>
+  <tr>
+    <th>Pin</th>
+    <th>3.0</th>
+    <th>5.6</th>
+    <th>6.6</th>
+    <th>5.2</th>
+    <th>3.6</th>
+  </tr>
+</table>
 
-<!-- Image on the Right -->
-<img src="images/board_configuration.jpg" alt="Board Configuration" width="250" style="float: right; margin-left: 20px;">
-
+<img src="images/board_configuration.jpg" alt="Alt Text" width="300">
 
 
 [Back to top](#table-of-contents)
