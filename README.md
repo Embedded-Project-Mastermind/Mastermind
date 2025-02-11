@@ -31,50 +31,20 @@ Disegno del circuito e tabella con i pin
 <table align="left">
   <tr>
     <th>Color</th>
-    <th>Pin</th>
-  </tr>
-  <tr>
     <th>Ground</th>
-    <th>GND</th>
-  </tr>
-  <tr>
     <th>Orange</th>
-    <th>3.3</th>
-  </tr>
-  <tr>
     <th>Green</th>
-    <th>4.7</th>
+    <th>Cyan</th>
   </tr>
   <tr>
-    <th>Cyan</th>
+    <th>Pin</th>
+    <th>GND</th>
+    <th>3.3</th>
+    <th>4.7</th>
     <th>5.4</th>
   </tr>
 </table>
 
-<table align="right">
-  <tr>
-    <th>Color</th>
-    <th>Pin</th>
-  </tr>
-  <tr>
-    <td>Contributing</td>
-    <td>How to help</td>
-  </tr>
-  <tr>
-    <td>Issues</td>
-    <td>Bug reports</td>
-  </tr>
-  <tr>
-    <td>License</td>
-    <td>Project license</td>
-  </tr>
-  <tr>
-    <td>Support</td>
-    <td>Contact info</td>
-  </tr>
-</table>
-
-<br clear="all"/>
 
 [Back to top](#table-of-contents)
 
