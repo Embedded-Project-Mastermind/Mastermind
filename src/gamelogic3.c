@@ -46,19 +46,22 @@ char check_difficulty(void){
 
 //Function that transforms the seq_user into corrections in EASY_MODE
 void correctionsEasyMode(void){
-    makeArrayEmpty_Bool(game.flags, 1, game.dim);  //Function for set all the flags to false
+    makeArrayEmpty_Bool(game.flagsGuess, 1, game.dim);  //Function for set all the flags to false
+    makeArrayEmpty_Bool(game.flagsUsr, 1, game.dim);  //Function for set all the flags to false
     for(int i=0; i<game.dim; i++){
         if(tentative.seq_user[i]==game.seq_to_guess[i]){  //If the colour in the seq user corrispond to the colour of the sequence to guess in the same position
             tentative.seq_user[i]= 'X';  //That means the colour is correct and in the right position
-            game.flags[i]=true;
+            game.flagsGuess[i]=true;
+            game.flagsUsr[i]=true;
         }
     }
     for (int i=0; i<game.dim; i++) {
         for(int j=0; j<game.dim; j++){
             if(tentative.seq_user[i]==game.seq_to_guess[j]){  //If the colour in the seq user corrispond to the colour of the sequence to guess in at least one position
-                if(game.flags[j]!=true){  //If the colour in that position of the seq_to_guess was already been selected it must be ! not O
+                if(game.flagsUsr[i]!=true && game.flagsGuess[j]!=true){  //If the colour in that position of the seq_to_guess was already been selected it must be ! not O
                     tentative.seq_user[i]= 'O';  //That means the colour is correct but in wrong position
-                    game.flags[j]=true;
+                    game.flagsUsr[i]=true;
+                    game.flagsGuess[j]=true;
                     break;
                 }
             }
