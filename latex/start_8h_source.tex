@@ -23,19 +23,19 @@
 \DoxyCodeLine{00019\ }
 \DoxyCodeLine{00020\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{general_2main_8c_a850f4e76542f9c2f545acfa2f1296630}{start\_button}};}
 \DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{start_8h_a52ac5595ea6e32fc694344402f33695b}{drawStart}}(\textcolor{keywordtype}{int}\ elems);}
-\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{start_8h_a442dc71ecc2ace42458fdc9532365549}{fn\_START\_GR}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00024\ uint16\_t\ \mbox{\hyperlink{start_8h_afcf30e736c7122706af58017ff143787}{encodeColor}}(uint8\_t\ r,\ uint8\_t\ g,\ uint8\_t\ b);}
-\DoxyCodeLine{00025\ \textcolor{comment}{//void\ drawImage(uint32\_t\ x,\ uint32\_t\ y);}}
-\DoxyCodeLine{00026\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ Graphics\_Image\ grImage=\{}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ .bPP=IMAGE\_FMT\_8BPP\_UNCOMP,}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ .numColors=256,}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ .pPalette=(\textcolor{keyword}{const}\ uint32\_t\ *)palette,}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ .pPixel=(\textcolor{keyword}{const}\ uint8\_t\ *)image,}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ .xSize=\mbox{\hyperlink{bitmap_8h_a5aacc2169d7880de0d16f060bf781260}{SIZE\_IMAGE\_X}},}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ .ySize=\mbox{\hyperlink{bitmap_8h_a205d70d350dde8c799d2ba3f12199ac1}{SIZE\_IMAGE\_Y}}}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \};}
-\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ START\_H\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{start_8h_a7cb9d67dbe12f6022ffea530cff1a0d3}{drawStart}}();}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{start_8h_a442dc71ecc2ace42458fdc9532365549}{fn\_START\_GR}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00052\ uint16\_t\ \mbox{\hyperlink{start_8h_afcf30e736c7122706af58017ff143787}{encodeColor}}(uint8\_t\ r,\ uint8\_t\ g,\ uint8\_t\ b);}
+\DoxyCodeLine{00053\ \textcolor{comment}{//void\ drawImage(uint32\_t\ x,\ uint32\_t\ y);}}
+\DoxyCodeLine{00054\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ Graphics\_Image\ grImage=\{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Logo\ of\ our\ game,\ called\ both\ in\ start.c\ and\ end.c}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ .bPP=IMAGE\_FMT\_8BPP\_UNCOMP,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Image\ format}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ .numColors=256,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Image\ palette}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ .pPalette=(\textcolor{keyword}{const}\ uint32\_t\ *)palette,\ \ \ \ \ \ \ \textcolor{comment}{//Pointer\ to\ the\ color\ palette}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ .pPixel=(\textcolor{keyword}{const}\ uint8\_t\ *)image,\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pointer\ to\ the\ pixel\ data\ of\ the\ image}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ .xSize=\mbox{\hyperlink{bitmap_8h_a5aacc2169d7880de0d16f060bf781260}{SIZE\_IMAGE\_X}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Image's\ x\ size}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ .ySize=\mbox{\hyperlink{bitmap_8h_a205d70d350dde8c799d2ba3f12199ac1}{SIZE\_IMAGE\_Y}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Image's\ y\ size}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ START\_H\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

@@ -1,20 +1,20 @@
 <map id="handleSelection" name="handleSelection">
-<area shape="rect" id="Node000001" title=" " alt="" coords="942,104,1055,130"/>
+<area shape="rect" id="Node000001" title="selects the currently focused button" alt="" coords="942,104,1055,130"/>
 <area shape="rect" id="Node000002" href="$difficulty_8c.html#a55037b2df6de8e644fb78a0b591e8ac2" title="Function that handles pressure of confirm button when we are in DIFFICULTY section." alt="" coords="698,5,894,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="970,96,935,69,893,45,865,34,866,29,895,40,938,65,974,92"/>
-<area shape="rect" id="Node000007" href="$dimension_8c.html#a58364c9a26deb9ae50fe27b33f41a221" title="extern declaretion" alt="" coords="698,55,894,80"/>
+<area shape="rect" id="Node000007" href="$dimension_8c.html#a58364c9a26deb9ae50fe27b33f41a221" title="Handles the pressure of confirm button in the DIMENSION section." alt="" coords="698,55,894,80"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="927,102,851,84,852,78,929,97"/>
 <area shape="rect" id="Node000008" href="$doubles_8c.html#a0cb8c2347e6040b6d06a0642ef95643a" title="manages the changes of our doubles variable and the shown text on our button (except to prev and next..." alt="" coords="705,104,887,130"/>
 <area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="927,120,888,120,888,114,927,114"/>
-<area shape="rect" id="Node000009" href="$info_8c.html#ac828d6737c4f197d070deccc5ba868a6" title=" " alt="" coords="721,153,871,179"/>
+<area shape="rect" id="Node000009" href="$info_8c.html#ac828d6737c4f197d070deccc5ba868a6" title="calls the function for the &quot;back&quot; and &quot;next&quot; button&#39;s handle" alt="" coords="721,153,871,179"/>
 <area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="929,137,852,155,851,150,927,131"/>
-<area shape="rect" id="Node000010" href="$tentatives_8c.html#ab21c36ca2c0c622eefddddf5c0023d4c" title=" " alt="" coords="700,203,892,228"/>
+<area shape="rect" id="Node000010" href="$tentatives_8c.html#ab21c36ca2c0c622eefddddf5c0023d4c" title="manages the choice of tentative trough the pressure of the button (except to prev and next)" alt="" coords="700,203,892,228"/>
 <area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="974,142,938,169,895,194,866,205,865,200,893,189,935,164,970,137"/>
-<area shape="rect" id="Node000003" href="$implementations_8c.html#ae6b98301bc187c6f3b974c2283459932" title=" " alt="" coords="540,80,650,106"/>
+<area shape="rect" id="Node000003" href="$implementations_8c.html#ae6b98301bc187c6f3b974c2283459932" title="handles the prev and next buttons" alt="" coords="540,80,650,106"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="718,38,699,45,657,63,621,82,618,77,654,58,697,40,716,33"/>
 <area shape="rect" id="Node000004" href="$buttons_8c.html#a4fe9599165d47017fa954f8ec9016d4f" title="Implements confirm button action that manage its input according to the state you are in...." alt="" coords="352,80,492,106"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="525,96,493,96,493,90,525,90"/>
-<area shape="rect" id="Node000005" href="$input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title=" " alt="" coords="191,80,304,106"/>
+<area shape="rect" id="Node000005" href="$input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="191,80,304,106"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="337,96,304,96,304,90,337,90"/>
 <area shape="rect" id="Node000006" href="$general_2main_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,80,143,106"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="175,96,143,96,143,90,175,90"/>

@@ -1,9 +1,9 @@
 <map id="drawPastResults" name="drawPastResults">
 <area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="5,31,127,56"/>
-<area shape="rect" id="Node000002" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="175,31,301,56"/>
+<area shape="rect" id="Node000002" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title="it draws a rectangle with a text centered in it" alt="" coords="175,31,301,56"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,41,159,41,159,46,127,46"/>
-<area shape="rect" id="Node000003" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="349,5,450,31"/>
+<area shape="rect" id="Node000003" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title="gives back the x of the center of the given rectangle" alt="" coords="349,5,450,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="301,31,333,26,334,31,302,36"/>
-<area shape="rect" id="Node000004" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="349,55,450,80"/>
+<area shape="rect" id="Node000004" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title="gives back the y of the center of the given rectangle" alt="" coords="349,55,450,80"/>
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="302,50,334,55,333,60,301,56"/>
 </map>

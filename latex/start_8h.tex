@@ -29,12 +29,12 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{start_8h_a52ac5595ea6e32fc694344402f33695b}{draw\+Start}} (int elems)
-\item 
+void \mbox{\hyperlink{start_8h_a7cb9d67dbe12f6022ffea530cff1a0d3}{draw\+Start}} ()
+\begin{DoxyCompactList}\small\item\em draws the start screen, including the start button and an image \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{start_8h_a442dc71ecc2ace42458fdc9532365549}{fn\+\_\+\+START\+\_\+\+GR}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em initializes and displays the start screen \end{DoxyCompactList}\item 
 uint16\+\_\+t \mbox{\hyperlink{start_8h_afcf30e736c7122706af58017ff143787}{encode\+Color}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em encodes an RGB color into a 16-\/bit format suitable for the display \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -58,26 +58,43 @@ uint16\+\_\+t \mbox{\hyperlink{start_8h_afcf30e736c7122706af58017ff143787}{encod
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{start_8h_a52ac5595ea6e32fc694344402f33695b}\index{start.h@{start.h}!drawStart@{drawStart}}
+\Hypertarget{start_8h_a7cb9d67dbe12f6022ffea530cff1a0d3}\index{start.h@{start.h}!drawStart@{drawStart}}
 \index{drawStart@{drawStart}!start.h@{start.h}}
 \doxysubsubsection{\texorpdfstring{drawStart()}{drawStart()}}
-{\footnotesize\ttfamily \label{start_8h_a52ac5595ea6e32fc694344402f33695b} 
-void draw\+Start (\begin{DoxyParamCaption}\item[{int}]{elems}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{start_8h_a7cb9d67dbe12f6022ffea530cff1a0d3} 
+void draw\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+draws the start screen, including the start button and an image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+return void \begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary author) 
+
+Matteo Gottardelli (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{start_8h_a52ac5595ea6e32fc694344402f33695b_cgraph}
+\includegraphics[width=350pt]{start_8h_a7cb9d67dbe12f6022ffea530cff1a0d3_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=256pt]{start_8h_a52ac5595ea6e32fc694344402f33695b_icgraph}
+\includegraphics[width=256pt]{start_8h_a7cb9d67dbe12f6022ffea530cff1a0d3_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{start_8h_afcf30e736c7122706af58017ff143787}\index{start.h@{start.h}!encodeColor@{encodeColor}}
@@ -86,14 +103,56 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{start_8h_afcf30e736c7122706af58017ff143787} 
 uint16\+\_\+t encode\+Color (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r}{, }\item[{uint8\+\_\+t}]{g}{, }\item[{uint8\+\_\+t}]{b}{}\end{DoxyParamCaption})}
 
+
+
+encodes an RGB color into a 16-\/bit format suitable for the display 
+
+
+\begin{DoxyParams}{Parameters}
+{\em red} & presence in the pixel \\
+\hline
+{\em green} & presence in the pixel \\
+\hline
+{\em blue} & presence in the pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+single 16-\/bit color code for the display 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary author) 
+
+Matteo Gottardelli (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
 \Hypertarget{start_8h_a442dc71ecc2ace42458fdc9532365549}\index{start.h@{start.h}!fn\_START\_GR@{fn\_START\_GR}}
 \index{fn\_START\_GR@{fn\_START\_GR}!start.h@{start.h}}
 \doxysubsubsection{\texorpdfstring{fn\_START\_GR()}{fn\_START\_GR()}}
 {\footnotesize\ttfamily \label{start_8h_a442dc71ecc2ace42458fdc9532365549} 
 void fn\+\_\+\+START\+\_\+\+GR (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+initializes and displays the start screen 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary author) 
+
+Matteo Gottardelli (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

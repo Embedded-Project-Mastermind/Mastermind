@@ -18,14 +18,14 @@
 <area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="274,257,379,231,380,236,275,262"/>
 <area shape="rect" id="Node000009" href="$game_8c.html#ac269fe8cc886e12dfde77c659f786cd6" title="According to the dimension selected in GUI menu, are preallocated empty circles that change dynamical..." alt="" coords="400,256,479,282"/>
 <area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="274,266,384,266,384,272,274,272"/>
-<area shape="rect" id="Node000011" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="376,305,503,331"/>
+<area shape="rect" id="Node000011" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title="it draws a rectangle with a text centered in it" alt="" coords="376,305,503,331"/>
 <area shape="poly" id="edge12_Node000007_Node000011" title=" " alt="" coords="275,276,369,299,368,304,274,281"/>
-<area shape="rect" id="Node000014" href="$implementations_8c.html#a5b980628dc75e57228c103881e9246af" title=" " alt="" coords="390,355,489,380"/>
+<area shape="rect" id="Node000014" href="$implementations_8c.html#a5b980628dc75e57228c103881e9246af" title="it resets all default&#39;s colors and clear the display" alt="" coords="390,355,489,380"/>
 <area shape="poly" id="edge15_Node000007_Node000014" title=" " alt="" coords="257,280,304,310,362,341,377,347,375,352,360,346,301,315,254,284"/>
 <area shape="rect" id="Node000010" href="$game_8c.html#a8e2dbff3a9441175f6bfcf1b7bc56fee" title="Initialization effective of the circles according to the inputed parameters." alt="" coords="568,256,680,282"/>
 <area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="480,266,553,266,553,272,480,272"/>
-<area shape="rect" id="Node000012" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="573,355,675,380"/>
+<area shape="rect" id="Node000012" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title="gives back the x of the center of the given rectangle" alt="" coords="573,355,675,380"/>
 <area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="491,329,559,348,558,353,490,334"/>
-<area shape="rect" id="Node000013" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="573,305,675,331"/>
+<area shape="rect" id="Node000013" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title="gives back the y of the center of the given rectangle" alt="" coords="573,305,675,331"/>
 <area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="503,316,558,316,558,321,503,321"/>
 </map>

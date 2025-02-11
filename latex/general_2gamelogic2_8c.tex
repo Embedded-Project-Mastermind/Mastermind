@@ -17,25 +17,23 @@ bool \mbox{\hyperlink{general_2gamelogic2_8c_a2d9418eed626aa95f8198811a970a254}{
 bool \mbox{\hyperlink{general_2gamelogic2_8c_a76f39e933c88d089d6bfbfff4a7d570f}{is\+\_\+full}} (void)
 \begin{DoxyCompactList}\small\item\em returns if the user’s sequence is full or not \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{general_2gamelogic2_8c_a6916b14296a6350be813f853d9e08796}{text\+\_\+selection}} (bool sel)
-\item 
+\begin{DoxyCompactList}\small\item\em (Outdated) it was the main menu for the logic test on console \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{general_2gamelogic2_8c_a4ac8a4eccf1b52c5f4f162807ba7a172}{full\+\_\+text}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em (Outdated) print to indicate the full state of the array on console \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{general_2gamelogic2_8c_a06225a4a6c2b59418a1af229d7c24c06}{print\+\_\+sequence}} (int8\+\_\+t \texorpdfstring{$\ast$}{*}seq, int16\+\_\+t dim)
-\item 
+\begin{DoxyCompactList}\small\item\em (Outdated) print on console of the user\textquotesingle{}s sequence \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{general_2gamelogic2_8c_aaf32eada42d315c1c42b5e21d002f1aa}{insert\+\_\+color}} ()
 \begin{DoxyCompactList}\small\item\em inserts the selected color into the user\textquotesingle{}s sequence if space is available \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{general_2gamelogic2_8c_a2aac7e2824658f8ac7c8b8446fff0c9c}{eliminate\+\_\+color}} (void)
 \begin{DoxyCompactList}\small\item\em deletes the last color into the user\textquotesingle{}s sequence if it is not empty \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{general_2gamelogic2_8c_a816c5d4caf1a402f87e1e28b641884b4}{fn\+\_\+\+WAIT}} (void)
-\item 
-void \mbox{\hyperlink{general_2gamelogic2_8c_a4a4f4707af922a7b84fdd6bdd358691e}{fn\+\_\+\+ELABORATE}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em state while he\textquotesingle{}s waiting an input \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{general_2gamelogic2_8c_a6639e69c4f94296b4ed63b9471ba37e8}{fn\+\_\+\+INSERT\+\_\+\+COLOR}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em state for inserting the color choosen by the user in its sequence \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{general_2gamelogic2_8c_acd23a7b6b2abbeebb6c6bde26e35040a}{fn\+\_\+\+WAIT\+\_\+\+FULL}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em state while he\textquotesingle{}s waiting an input with the user\textquotesingle{}s sequence full \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{general_2gamelogic2_8c_a135da966b746514db883735bf010382f}{fn\+\_\+\+ELIMINATE\+\_\+\+COLOR}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em state for deleting the last color of the user\textquotesingle{}s sequence \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -66,41 +64,49 @@ Alessandro Benassi \& Daniele Calvo (Primary Author)
 
 Matteo Gottardelli (Helper) 
 
-Alessandro Benassi (Maintainer Member) 
+Alessandro Benassi \& Daniele Calvo (Maintainer) 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
 2024-\/09-\/27 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{general_2gamelogic2_8c_a2aac7e2824658f8ac7c8b8446fff0c9c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=320pt]{general_2gamelogic2_8c_a2aac7e2824658f8ac7c8b8446fff0c9c_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{general_2gamelogic2_8c_a4a4f4707af922a7b84fdd6bdd358691e}\index{gamelogic2.c@{gamelogic2.c}!fn\_ELABORATE@{fn\_ELABORATE}}
-\index{fn\_ELABORATE@{fn\_ELABORATE}!gamelogic2.c@{gamelogic2.c}}
-\doxysubsubsection{\texorpdfstring{fn\_ELABORATE()}{fn\_ELABORATE()}}
-{\footnotesize\ttfamily \label{general_2gamelogic2_8c_a4a4f4707af922a7b84fdd6bdd358691e} 
-void fn\+\_\+\+ELABORATE (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
-
 \Hypertarget{general_2gamelogic2_8c_a135da966b746514db883735bf010382f}\index{gamelogic2.c@{gamelogic2.c}!fn\_ELIMINATE\_COLOR@{fn\_ELIMINATE\_COLOR}}
 \index{fn\_ELIMINATE\_COLOR@{fn\_ELIMINATE\_COLOR}!gamelogic2.c@{gamelogic2.c}}
 \doxysubsubsection{\texorpdfstring{fn\_ELIMINATE\_COLOR()}{fn\_ELIMINATE\_COLOR()}}
 {\footnotesize\ttfamily \label{general_2gamelogic2_8c_a135da966b746514db883735bf010382f} 
 void fn\+\_\+\+ELIMINATE\+\_\+\+COLOR (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+state for deleting the last color of the user\textquotesingle{}s sequence 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alessandro Benassi \& Daniele Calvo (Primary Author) 
+
+Matteo Gottardelli (Helper) 
+
+Alessandro Benassi \& Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -113,8 +119,24 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{general_2gamelogic2_8c_a6639e69c4f94296b4ed63b9471ba37e8} 
 void fn\+\_\+\+INSERT\+\_\+\+COLOR (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+state for inserting the color choosen by the user in its sequence 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alessandro Benassi \& Daniele Calvo (Primary Author) 
+
+Matteo Gottardelli (Helper) 
+
+Alessandro Benassi \& Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -127,24 +149,74 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{general_2gamelogic2_8c_a816c5d4caf1a402f87e1e28b641884b4} 
 void fn\+\_\+\+WAIT (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
+
+
+state while he\textquotesingle{}s waiting an input 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alessandro Benassi \& Daniele Calvo (Primary Author) 
+
+Matteo Gottardelli (Helper) 
+
+Alessandro Benassi \& Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
 \Hypertarget{general_2gamelogic2_8c_acd23a7b6b2abbeebb6c6bde26e35040a}\index{gamelogic2.c@{gamelogic2.c}!fn\_WAIT\_FULL@{fn\_WAIT\_FULL}}
 \index{fn\_WAIT\_FULL@{fn\_WAIT\_FULL}!gamelogic2.c@{gamelogic2.c}}
 \doxysubsubsection{\texorpdfstring{fn\_WAIT\_FULL()}{fn\_WAIT\_FULL()}}
 {\footnotesize\ttfamily \label{general_2gamelogic2_8c_acd23a7b6b2abbeebb6c6bde26e35040a} 
 void fn\+\_\+\+WAIT\+\_\+\+FULL (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
+
+
+state while he\textquotesingle{}s waiting an input with the user\textquotesingle{}s sequence full 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alessandro Benassi \& Daniele Calvo (Primary Author) 
+
+Matteo Gottardelli (Helper) 
+
+Alessandro Benassi \& Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
 \Hypertarget{general_2gamelogic2_8c_a4ac8a4eccf1b52c5f4f162807ba7a172}\index{gamelogic2.c@{gamelogic2.c}!full\_text@{full\_text}}
 \index{full\_text@{full\_text}!gamelogic2.c@{gamelogic2.c}}
 \doxysubsubsection{\texorpdfstring{full\_text()}{full\_text()}}
 {\footnotesize\ttfamily \label{general_2gamelogic2_8c_a4ac8a4eccf1b52c5f4f162807ba7a172} 
 void full\+\_\+text (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+(Outdated) print to indicate the full state of the array on console 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alessandro Benassi \& Daniele Calvo (Primary Author) 
+
+Matteo Gottardelli (Helper) 
+
+Alessandro Benassi \& Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=331pt]{general_2gamelogic2_8c_a4ac8a4eccf1b52c5f4f162807ba7a172_icgraph}
+\includegraphics[width=350pt]{general_2gamelogic2_8c_a4ac8a4eccf1b52c5f4f162807ba7a172_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{general_2gamelogic2_8c_aaf32eada42d315c1c42b5e21d002f1aa}\index{gamelogic2.c@{gamelogic2.c}!insert\_color@{insert\_color}}
@@ -165,21 +237,19 @@ Alessandro Benassi \& Daniele Calvo (Primary Author)
 
 Matteo Gottardelli (Helper) 
 
-Alessandro Benassi (Maintainer Member) 
+Alessandro Benassi \& Daniele Calvo (Maintainer) 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
 2024-\/09-\/27 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{general_2gamelogic2_8c_aaf32eada42d315c1c42b5e21d002f1aa_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -197,20 +267,19 @@ bool is\+\_\+empty (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCapti
 returns if the user’s sequence is empty or not 
 
 \begin{DoxyReturn}{Returns}
-bool 
+boolean 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Alessandro Benassi \& Daniele Calvo (Primary Author) 
 
 Matteo Gottardelli (Helper) 
 
-Alessandro Benassi (Maintainer Member) 
+Alessandro Benassi \& Daniele Calvo (Maintainer) 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
 2024-\/09-\/27 
 \end{DoxyDate}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -228,20 +297,19 @@ bool is\+\_\+full (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaptio
 returns if the user’s sequence is full or not 
 
 \begin{DoxyReturn}{Returns}
-bool 
+boolean 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Alessandro Benassi \& Daniele Calvo (Primary Author) 
 
 Matteo Gottardelli (Helper) 
 
-Alessandro Benassi (Maintainer Member) 
+Alessandro Benassi \& Daniele Calvo (Maintainer) 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
 2024-\/09-\/27 
 \end{DoxyDate}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -254,8 +322,31 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{general_2gamelogic2_8c_a06225a4a6c2b59418a1af229d7c24c06} 
 void print\+\_\+sequence (\begin{DoxyParamCaption}\item[{int8\+\_\+t \texorpdfstring{$\ast$}{*}}]{seq}{, }\item[{int16\+\_\+t}]{dim}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+(Outdated) print on console of the user\textquotesingle{}s sequence 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & pointer to the sequence \\
+\hline
+{\em the} & dimension of the array for the user\textquotesingle{}s sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alessandro Benassi \& Daniele Calvo (Primary Author) 
+
+Matteo Gottardelli (Helper) 
+
+Alessandro Benassi \& Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -268,8 +359,29 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{general_2gamelogic2_8c_a6916b14296a6350be813f853d9e08796} 
 void text\+\_\+selection (\begin{DoxyParamCaption}\item[{bool}]{sel}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+(Outdated) it was the main menu for the logic test on console 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & boolean to switch from two distinct menu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Alessandro Benassi \& Daniele Calvo (Primary Author) 
+
+Matteo Gottardelli (Helper) 
+
+Alessandro Benassi \& Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

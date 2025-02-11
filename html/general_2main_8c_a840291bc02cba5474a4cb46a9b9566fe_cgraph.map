@@ -1,38 +1,38 @@
 <map id="main" name="main">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,276,55,302"/>
-<area shape="rect" id="Node000002" href="$joystick_8c.html#aba5554d566a1a96bb319050ee2a87ea5" title=" " alt="" coords="314,11,466,37"/>
+<area shape="rect" id="Node000002" href="$joystick_8c.html#aba5554d566a1a96bb319050ee2a87ea5" title="enabling the interrupts for the two joystick channels P6.0 and P4.4" alt="" coords="314,11,466,37"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="28,276,29,231,37,169,45,135,59,102,77,73,101,47,124,32,149,20,202,6,257,3,308,6,308,11,257,8,203,12,151,25,126,36,104,51,81,76,63,105,51,137,42,170,34,232,33,276"/>
-<area shape="rect" id="Node000003" href="$joystick_8c.html#af96ee69b063edcebc656d0ca0450c12c" title=" " alt="" coords="103,179,254,205"/>
+<area shape="rect" id="Node000003" href="$joystick_8c.html#af96ee69b063edcebc656d0ca0450c12c" title="method that trigger the activation of the next read of ADC sensor" alt="" coords="103,179,254,205"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="39,274,65,244,101,214,109,209,112,214,104,218,69,248,43,278"/>
 <area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="136,228,221,254"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="54,279,122,257,123,262,56,284"/>
-<area shape="rect" id="Node000007" href="$implementations_8c.html#ad37616d1eaf8c88801edb04ba22d15c6" title=" " alt="" coords="129,300,228,326"/>
+<area shape="rect" id="Node000007" href="$implementations_8c.html#ad37616d1eaf8c88801edb04ba22d15c6" title="initializa all the hardware, including ports and interrupts" alt="" coords="129,300,228,326"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="55,291,114,300,113,305,54,296"/>
-<area shape="rect" id="Node000020" href="$implementations_8c.html#a5b980628dc75e57228c103881e9246af" title=" " alt="" coords="559,456,658,482"/>
+<area shape="rect" id="Node000020" href="$implementations_8c.html#a5b980628dc75e57228c103881e9246af" title="it resets all default&#39;s colors and clear the display" alt="" coords="559,456,658,482"/>
 <area shape="poly" id="edge28_Node000001_Node000020" title=" " alt="" coords="49,300,91,331,152,371,225,411,303,441,366,456,430,464,544,469,544,474,430,469,365,461,301,447,222,416,149,376,88,336,46,305"/>
 <area shape="rect" id="Node000021" href="$general_2main_8c.html#ad39718205d76330aa2cc59317e9c58b2" title=" " alt="" coords="130,474,226,499"/>
 <area shape="poly" id="edge24_Node000001_Node000021" title=" " alt="" coords="36,302,43,333,56,373,76,415,105,453,119,464,116,468,101,457,72,418,51,375,38,334,31,303"/>
-<area shape="rect" id="Node000022" href="$implementations_8c.html#a02156d12d2735f76feebf107ff4346a9" title=" " alt="" coords="129,62,228,87"/>
+<area shape="rect" id="Node000022" href="$implementations_8c.html#a02156d12d2735f76feebf107ff4346a9" title="it releases the mutex" alt="" coords="129,62,228,87"/>
 <area shape="poly" id="edge25_Node000001_Node000022" title=" " alt="" coords="31,275,38,243,50,200,71,153,101,110,122,93,126,97,105,114,76,155,55,201,43,245,36,277"/>
-<area shape="rect" id="Node000023" href="$joystick_8c.html#a4023d983e6edbb9ec1c19264b9f5d063" title=" " alt="" coords="338,60,442,86"/>
+<area shape="rect" id="Node000023" href="$joystick_8c.html#a4023d983e6edbb9ec1c19264b9f5d063" title="In order to handle the various interrupts, we have to setup the various sending of interrupts accordi..." alt="" coords="338,60,442,86"/>
 <area shape="poly" id="edge30_Node000001_Node000023" title=" " alt="" coords="33,275,56,222,76,191,101,165,140,143,197,122,322,86,324,91,199,127,142,148,104,169,80,195,61,225,38,277"/>
 <area shape="rect" id="Node000024" href="$general_2main_8c.html#a2b623fea4e0341cf400ff7cbc4e15dfa" title=" " alt="" coords="142,523,214,549"/>
 <area shape="poly" id="edge29_Node000001_Node000024" title=" " alt="" coords="34,302,37,342,48,398,69,458,85,486,104,510,129,525,126,529,101,514,80,489,64,460,43,400,32,343,29,303"/>
-<area shape="rect" id="Node000025" href="$joystick_8c.html#a92a70e2775796b1a7a6b49a983f570e3" title=" " alt="" coords="139,572,218,598"/>
+<area shape="rect" id="Node000025" href="$joystick_8c.html#a92a70e2775796b1a7a6b49a983f570e3" title="Initialization of the timer corresponds to the first invocation of the timer and its functionality in..." alt="" coords="139,572,218,598"/>
 <area shape="poly" id="edge31_Node000001_Node000025" title=" " alt="" coords="33,303,34,351,42,419,51,457,63,494,81,529,104,559,125,573,122,578,101,563,77,532,58,496,45,458,37,420,29,351,28,303"/>
 <area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="333,110,446,135"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="220,231,252,215,268,198,275,181,284,162,300,145,317,135,320,140,304,149,288,165,280,183,272,201,256,219,223,236"/>
 <area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="332,159,447,185"/>
 <area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="221,226,253,215,301,193,320,187,322,192,303,198,255,220,222,231"/>
-<area shape="rect" id="Node000008" href="$joystick_8c.html#ac2ba05e83436748b14c78b42942f30ec" title=" " alt="" coords="356,208,423,234"/>
+<area shape="rect" id="Node000008" href="$joystick_8c.html#ac2ba05e83436748b14c78b42942f30ec" title="Initialization of the adc signal for the joystick, done activationg P6.0 and P4.4,..." alt="" coords="356,208,423,234"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="199,298,245,270,301,243,340,230,342,235,303,248,247,275,201,302"/>
-<area shape="rect" id="Node000009" href="$joystick_8c.html#ac024e21f4a895774cbc85c22395d7892" title=" " alt="" coords="343,258,436,283"/>
+<area shape="rect" id="Node000009" href="$joystick_8c.html#ac024e21f4a895774cbc85c22395d7892" title="Initialization of the adc signal for the joystick, done activationg P6.0 and P4.4,..." alt="" coords="343,258,436,283"/>
 <area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="228,301,327,280,328,286,229,306"/>
-<area shape="rect" id="Node000010" href="$input_8c.html#aead6b5c0c9e2aee938cff12f269c3216" title=" " alt="" coords="302,307,477,333"/>
+<area shape="rect" id="Node000010" href="$input_8c.html#aead6b5c0c9e2aee938cff12f269c3216" title="Setup the interrupt enabling only for some ports in order to make not append some undesired behavior." alt="" coords="302,307,477,333"/>
 <area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="229,312,286,314,286,319,229,318"/>
-<area shape="rect" id="Node000011" href="$input_8c.html#aa947a586c72671cffe8f528abc7f5bda" title=" " alt="" coords="322,356,457,382"/>
+<area shape="rect" id="Node000011" href="$input_8c.html#aa947a586c72671cffe8f528abc7f5bda" title="Setup the various ports from 1 to 6 in order, but not all the pins, because they have already active ..." alt="" coords="322,356,457,382"/>
 <area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="229,324,324,349,323,355,228,329"/>
-<area shape="rect" id="Node000012" href="$implementations_8c.html#abd724b53de6eb2de11d29407bb874691" title=" " alt="" coords="342,406,437,431"/>
+<area shape="rect" id="Node000012" href="$implementations_8c.html#abd724b53de6eb2de11d29407bb874691" title="initializes the display and drivers" alt="" coords="342,406,437,431"/>
 <area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="198,325,244,358,303,392,328,402,326,407,301,397,241,363,195,329"/>
 <area shape="rect" id="Node000013" href="$_crystalfontz128x128___s_t7735_8c.html#a57fc5401db822d071b765c1da259cbbb" title=" " alt="" coords="525,327,692,353"/>
 <area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="437,404,476,392,563,357,565,362,478,397,439,409"/>

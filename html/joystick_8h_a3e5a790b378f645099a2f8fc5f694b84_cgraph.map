@@ -1,62 +1,62 @@
 <map id="downfunctions" name="downfunctions">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,281,111,307"/>
+<area shape="rect" id="Node000001" title="Functions that handles the down stick movement according to the different screens,..." alt="" coords="5,281,111,307"/>
 <area shape="rect" id="Node000002" href="$chronology_8c.html#a200291275b68705ac77fdde64e026b27" title="manage what to do when the user moves the stick down" alt="" coords="159,132,344,158"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,279,106,238,157,192,205,163,208,167,160,196,109,242,72,283"/>
 <area shape="rect" id="Node000011" href="$difficulty_8c.html#a79c72c85a3b49834d1182393768679b3" title="Action that the menu performs when the stick goes down, primarly changing selection and imposing logi..." alt="" coords="168,207,335,232"/>
 <area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="81,278,158,241,176,235,178,240,160,246,83,283"/>
-<area shape="rect" id="Node000022" href="$dimension_8c.html#a6fb20cec8a94509cc42b47b543ea64d7" title="handles the down movement of the stick" alt="" coords="168,355,334,380"/>
+<area shape="rect" id="Node000022" href="$dimension_8c.html#a6fb20cec8a94509cc42b47b543ea64d7" title="handles the down movement of the stick, changing the selected element if the action can be performed" alt="" coords="168,355,334,380"/>
 <area shape="poly" id="edge27_Node000001_Node000022" title=" " alt="" coords="84,305,160,341,178,347,176,352,158,346,82,310"/>
 <area shape="rect" id="Node000024" href="$doubles_8c.html#a36ebb11703991f98a2d4b86daece9fb6" title="manage what to do when the user moves the stick down" alt="" coords="175,256,328,282"/>
 <area shape="poly" id="edge31_Node000001_Node000024" title=" " alt="" coords="111,285,159,278,159,284,111,290"/>
-<area shape="rect" id="Node000025" href="$info_8c.html#a9b9d4f7184674ab8ee983138ffd38d9c" title=" " alt="" coords="191,404,312,430"/>
+<area shape="rect" id="Node000025" href="$info_8c.html#a9b9d4f7184674ab8ee983138ffd38d9c" title="manage what to do when the user moves the stick down" alt="" coords="191,404,312,430"/>
 <area shape="poly" id="edge34_Node000001_Node000025" title=" " alt="" coords="71,306,107,348,132,371,160,391,177,399,175,403,157,395,129,375,103,352,67,309"/>
-<area shape="rect" id="Node000026" href="$tentatives_8c.html#ab4a631d3b20279de42665f2bb16dc3df" title=" " alt="" coords="170,305,332,331"/>
+<area shape="rect" id="Node000026" href="$tentatives_8c.html#ab4a631d3b20279de42665f2bb16dc3df" title="manage what to do when the user moves the stick down" alt="" coords="170,305,332,331"/>
 <area shape="poly" id="edge35_Node000001_Node000026" title=" " alt="" coords="111,298,155,304,154,309,111,303"/>
-<area shape="rect" id="Node000003" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="TODO: Describe function." alt="" coords="393,131,476,156"/>
+<area shape="rect" id="Node000003" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="show the last attempts of the chronology or the ones that were selected by the joystick" alt="" coords="393,131,476,156"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="345,141,377,141,378,147,345,147"/>
 <area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="966,181,1081,207"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="477,144,950,185,950,191,476,150"/>
 <area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="792,131,877,156"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="477,141,776,141,776,146,477,146"/>
-<area shape="rect" id="Node000007" href="$chronology_8c.html#af95f3e53eb47667a4ae3da13fecc23d1" title="TODO: Describe function." alt="" coords="525,80,707,106"/>
+<area shape="rect" id="Node000007" href="$chronology_8c.html#af95f3e53eb47667a4ae3da13fecc23d1" title="function that populate chronology buttons" alt="" coords="525,80,707,106"/>
 <area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="476,129,552,108,554,113,478,134"/>
-<area shape="rect" id="Node000008" href="$chronology_8c.html#a7ec7903a95121d6e773888be9b0176eb" title="TODO: Describe function." alt="" coords="527,31,705,56"/>
+<area shape="rect" id="Node000008" href="$chronology_8c.html#a5cf5997f8c26419de3228a297019b0bc" title="populate the cHronology circle with their colors" alt="" coords="527,31,705,56"/>
 <area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="446,128,479,97,524,65,535,60,538,65,527,70,483,101,450,132"/>
 <area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="878,152,958,174,957,179,877,157"/>
 <area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="966,131,1080,156"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="877,141,951,141,951,146,877,146"/>
 <area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="675,104,777,128,776,133,674,109"/>
-<area shape="rect" id="Node000009" href="$chronology_8c.html#af4804828a994a0d76b79da462ad1580a" title="TODO: Describe function." alt="" coords="755,55,914,80"/>
+<area shape="rect" id="Node000009" href="$chronology_8c.html#af4804828a994a0d76b79da462ad1580a" title="converts the number associated to the color to its color char" alt="" coords="755,55,914,80"/>
 <area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="705,51,739,54,739,60,705,56"/>
 <area shape="rect" id="Node000010" href="$game_8c.html#afe0d6ca1d0ba6b6e45490d996b21cdac" title="Action that the menu performs when the stick goes left, primarly changing selection and imposing logi..." alt="" coords="791,5,878,31"/>
 <area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="705,31,775,22,776,28,705,36"/>
 <area shape="rect" id="Node000012" href="$difficulty_8c.html#abe9c02f90a494b0d60669e280db89c2d" title="Draw Text Description according to the difficulty selected in order to explain to the user what that ..." alt="" coords="398,207,472,232"/>
 <area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="336,217,382,217,382,222,336,222"/>
-<area shape="rect" id="Node000014" href="$implementations_8c.html#a0f3ea1e3abed721e539b1332079664c4" title=" " alt="" coords="400,256,470,282"/>
+<area shape="rect" id="Node000014" href="$implementations_8c.html#a0f3ea1e3abed721e539b1332079664c4" title="it handles the status change of new focused button" alt="" coords="400,256,470,282"/>
 <area shape="poly" id="edge15_Node000011_Node000014" title=" " alt="" coords="305,230,345,241,385,252,384,257,343,246,304,235"/>
-<area shape="rect" id="Node000021" href="$implementations_8c.html#a7850b120bb168cda34d0ff446cd53845" title=" " alt="" coords="394,305,475,331"/>
+<area shape="rect" id="Node000021" href="$implementations_8c.html#a7850b120bb168cda34d0ff446cd53845" title="it handles the status change of old focused button" alt="" coords="394,305,475,331"/>
 <area shape="poly" id="edge24_Node000011_Node000021" title=" " alt="" coords="322,231,345,241,361,253,371,266,380,279,394,292,397,295,394,299,390,296,376,282,367,269,357,257,343,246,320,235"/>
-<area shape="rect" id="Node000013" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title=" " alt="" coords="569,256,663,282"/>
+<area shape="rect" id="Node000013" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title="finds the selected button in all the buttons of an interface" alt="" coords="569,256,663,282"/>
 <area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="473,227,555,250,554,255,471,232"/>
 <area shape="poly" id="edge23_Node000014_Node000013" title=" " alt="" coords="470,266,553,266,553,272,470,272"/>
-<area shape="rect" id="Node000015" href="$implementations_8c.html#ada4cd14b9689d4fe9b9de328e4724964" title=" " alt="" coords="572,305,660,331"/>
+<area shape="rect" id="Node000015" href="$implementations_8c.html#ada4cd14b9689d4fe9b9de328e4724964" title="draws the button in the given position with the right color" alt="" coords="572,305,660,331"/>
 <area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="471,276,526,292,558,300,557,305,525,297,470,281"/>
-<area shape="rect" id="Node000016" href="$implementations_8c.html#a17fb5785fa10393596b1c10e580fee1b" title=" " alt="" coords="962,356,1084,382"/>
+<area shape="rect" id="Node000016" href="$implementations_8c.html#a17fb5785fa10393596b1c10e580fee1b" title="chooses the color of the button given its current state" alt="" coords="962,356,1084,382"/>
 <area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="646,329,696,350,755,366,804,373,854,375,946,373,946,379,854,381,804,378,754,371,694,355,644,334"/>
-<area shape="rect" id="Node000017" href="$implementations_8c.html#ac2bb0254f8bef6f471cc1e1e4aff3fb2" title=" " alt="" coords="775,432,894,458"/>
+<area shape="rect" id="Node000017" href="$implementations_8c.html#ac2bb0254f8bef6f471cc1e1e4aff3fb2" title="chooses the color of the text on the button given the button&#39;s current state" alt="" coords="775,432,894,458"/>
 <area shape="poly" id="edge18_Node000015_Node000017" title=" " alt="" coords="635,329,688,368,756,410,783,423,780,428,753,415,685,372,632,334"/>
-<area shape="rect" id="Node000018" href="$implementations_8c.html#aaa2bed682fe325d72adc6d9ee50b15b9" title=" " alt="" coords="782,331,887,356"/>
+<area shape="rect" id="Node000018" href="$implementations_8c.html#aaa2bed682fe325d72adc6d9ee50b15b9" title="visually updates a button when it is focused" alt="" coords="782,331,887,356"/>
 <area shape="poly" id="edge19_Node000015_Node000018" title=" " alt="" coords="660,321,767,333,766,338,660,326"/>
-<area shape="rect" id="Node000019" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="784,232,885,258"/>
+<area shape="rect" id="Node000019" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title="gives back the x of the center of the given rectangle" alt="" coords="784,232,885,258"/>
 <area shape="poly" id="edge21_Node000015_Node000019" title=" " alt="" coords="659,306,706,292,729,279,754,266,769,261,771,266,756,271,732,284,708,297,661,311"/>
-<area shape="rect" id="Node000020" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="784,281,885,307"/>
+<area shape="rect" id="Node000020" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title="gives back the y of the center of the given rectangle" alt="" coords="784,281,885,307"/>
 <area shape="poly" id="edge22_Node000015_Node000020" title=" " alt="" coords="660,311,768,299,769,304,660,316"/>
 <area shape="poly" id="edge20_Node000018_Node000016" title=" " alt="" coords="888,348,947,356,946,361,887,353"/>
 <area shape="poly" id="edge26_Node000021_Node000013" title=" " alt="" coords="474,304,525,290,553,282,555,288,526,295,476,310"/>
 <area shape="poly" id="edge25_Node000021_Node000015" title=" " alt="" coords="475,316,557,316,557,321,475,321"/>
 <area shape="poly" id="edge29_Node000022_Node000014" title=" " alt="" coords="320,352,343,341,357,330,367,318,376,305,390,291,394,288,397,292,394,295,380,308,371,321,361,334,345,346,322,356"/>
 <area shape="poly" id="edge30_Node000022_Node000021" title=" " alt="" coords="304,352,343,341,379,331,380,336,345,346,305,357"/>
-<area shape="rect" id="Node000023" href="$dimension_8c.html#aa38b30924148a4b57c31d71a60aa6e4f" title="manages the font dimension for the buttons" alt="" coords="392,355,477,380"/>
+<area shape="rect" id="Node000023" href="$dimension_8c.html#aa38b30924148a4b57c31d71a60aa6e4f" title="makes the font of the DIMENSION&#39;s buttons bigger and avoids conflict with next and prev buttons" alt="" coords="392,355,477,380"/>
 <area shape="poly" id="edge28_Node000022_Node000023" title=" " alt="" coords="335,365,376,365,376,370,335,370"/>
 <area shape="poly" id="edge32_Node000024_Node000014" title=" " alt="" coords="328,266,384,266,384,272,328,272"/>
 <area shape="poly" id="edge33_Node000024_Node000021" title=" " alt="" coords="305,280,345,290,380,300,379,305,343,295,304,285"/>

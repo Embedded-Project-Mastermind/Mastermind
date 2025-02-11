@@ -1,5 +1,5 @@
 <map id="eliminate_color" name="eliminate_color">
 <area shape="rect" id="Node000001" title="deletes the last color into the user&#39;s sequence if it is not empty" alt="" coords="217,5,325,31"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic2_8c.html#a135da966b746514db883735bf010382f" title=" " alt="" coords="5,5,169,31"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic2_8c.html#a135da966b746514db883735bf010382f" title="state for deleting the last color of the user&#39;s sequence" alt="" coords="5,5,169,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,21,169,21,169,16,201,16"/>
 </map>

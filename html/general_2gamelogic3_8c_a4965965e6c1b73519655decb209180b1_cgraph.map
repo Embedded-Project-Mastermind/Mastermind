@@ -1,21 +1,21 @@
 <map id="fn_ELABORATE_RESULT" name="fn_ELABORATE_RESULT">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,184,130"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a4ed6d290973d5c7cf85aad8061fd4587" title=" " alt="" coords="269,5,396,31"/>
+<area shape="rect" id="Node000001" title="Function for ELABORATE_RESULT state." alt="" coords="5,104,184,130"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a4ed6d290973d5c7cf85aad8061fd4587" title="Function that checks if the maximum number of attempts has been reached." alt="" coords="269,5,396,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,101,166,71,231,40,253,32,255,37,233,45,169,75,118,106"/>
 <area shape="rect" id="Node000003" href="$game_8c.html#ad2c393fb906ee594fa13863ad5aed0ae" title="Effective function that refresh the status of GAME Section, when an update happen." alt="" coords="250,55,415,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,101,251,81,253,87,161,106"/>
-<area shape="rect" id="Node000008" href="$general_2gamelogic3_8c.html#a846367f19d2c8d77fa60d2dcd8c983df" title=" " alt="" coords="255,104,410,130"/>
+<area shape="rect" id="Node000008" href="$general_2gamelogic3_8c.html#a846367f19d2c8d77fa60d2dcd8c983df" title="Function that inserts sequence results in chronology." alt="" coords="255,104,410,130"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="184,114,240,114,240,120,184,120"/>
-<area shape="rect" id="Node000009" href="$general_2gamelogic3_8c.html#aa1804c7734b17ce9285763af7df44751" title=" " alt="" coords="232,153,433,179"/>
+<area shape="rect" id="Node000009" href="$general_2gamelogic3_8c.html#aa1804c7734b17ce9285763af7df44751" title="Function that prints the last sequence inserted in the chronology with the respective corrections." alt="" coords="232,153,433,179"/>
 <area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="161,128,253,147,251,152,160,133"/>
-<area shape="rect" id="Node000010" href="$general_2gamelogic3_8c.html#af1faa7e0b10021c413bf5fb4188cfa9a" title=" " alt="" coords="284,203,380,228"/>
+<area shape="rect" id="Node000010" href="$general_2gamelogic3_8c.html#af1faa7e0b10021c413bf5fb4188cfa9a" title="Function that checks if the next state is WIN or not." alt="" coords="284,203,380,228"/>
 <area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="118,128,169,158,233,189,270,201,268,206,231,194,166,163,115,133"/>
-<area shape="rect" id="Node000004" href="$joystick_8c.html#a17d2aabe37f3c529c960176fe55d5fd5" title=" " alt="" coords="506,31,583,56"/>
+<area shape="rect" id="Node000004" href="$joystick_8c.html#a17d2aabe37f3c529c960176fe55d5fd5" title="Function that stops the system for an amount of time, used primarly for synchronization." alt="" coords="506,31,583,56"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="415,56,490,47,490,52,415,61"/>
-<area shape="rect" id="Node000005" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="481,80,607,106"/>
+<area shape="rect" id="Node000005" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title="it draws a rectangle with a text centered in it" alt="" coords="481,80,607,106"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="415,75,466,81,466,86,415,80"/>
-<area shape="rect" id="Node000006" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="655,55,757,80"/>
+<area shape="rect" id="Node000006" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title="gives back the x of the center of the given rectangle" alt="" coords="655,55,757,80"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="608,80,639,75,640,80,608,86"/>
-<area shape="rect" id="Node000007" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="655,104,757,130"/>
+<area shape="rect" id="Node000007" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title="gives back the y of the center of the given rectangle" alt="" coords="655,104,757,130"/>
 <area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="608,100,640,104,639,110,608,105"/>
 </map>

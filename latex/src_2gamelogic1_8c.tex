@@ -48,13 +48,13 @@ void \mbox{\hyperlink{src_2gamelogic1_8c_a8b4ee684b1ca644f070b168b3c6fb54c}{cont
 void \mbox{\hyperlink{src_2gamelogic1_8c_a349e30260991f4d42dc6e3b575108891}{reset\+Tentative}} (void)
 \begin{DoxyCompactList}\small\item\em After each input sequence is analyzed the tentative is all reinitialized with an incrementation of the tentative count. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{src_2gamelogic1_8c_a3ae06b4f684ab23f714e117b63520232}{fn\+\_\+\+START}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Call function when START of the finite state machine is called and initializes the game after selecting the elements. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{src_2gamelogic1_8c_a6dfdeacaef5a5d37960e2575015b6516}{fn\+\_\+\+KEY\+\_\+\+WOUT\+\_\+\+DOUB}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Call function when KEY\+\_\+\+WOUT\+\_\+\+DOUB of the finite state machine is called and generates a sequence to find with no duplicates. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{src_2gamelogic1_8c_a7b7577b178ce9de2be9e5ab17053f6e5}{fn\+\_\+\+KEY\+\_\+\+WH\+\_\+\+DOUB}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Call function when KEY\+\_\+\+WH\+\_\+\+DOUB of the finite state machine is called and generates a sequence to find with duplicates. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{src_2gamelogic1_8c_aea19573b1ff72f6c1ccf31fca44008e0}{fn\+\_\+\+RESET\+\_\+\+TENT}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Call function when RESET\+\_\+\+TENT of the finite state machine is called after each tentative is sent successfully and resets the elements of the current \doxylink{struct_tentative}{Tentative}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -71,8 +71,7 @@ int \mbox{\hyperlink{src_2gamelogic1_8c_a37d972ae0b47b9099e30983131d31916}{j}}
 {\footnotesize\ttfamily \label{src_2gamelogic1_8c_a9e39464d13bda2ea16881b5a1e29d97f} 
 void allocate\+\_\+in\+\_\+\+Heap\+\_\+\+Bool (\begin{DoxyParamCaption}\item[{bool \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array}{, }\item[{int}]{par1}{, }\item[{int}]{par2}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -85,8 +84,7 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{src_2gamelogic1_8c_a07dea4bebe013769da080e8939d48ccf} 
 void allocate\+\_\+in\+\_\+\+Heap\+\_\+\+Char (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array}{, }\item[{int}]{par1}{, }\item[{int}]{par2}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -99,8 +97,7 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{src_2gamelogic1_8c_a9f10db332961593d68a369dae823491f} 
 void allocate\+\_\+in\+\_\+\+Heap\+\_\+\+Int (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array}{, }\item[{int}]{par1}{, }\item[{int}]{par2}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -113,8 +110,7 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{src_2gamelogic1_8c_a8b4ee684b1ca644f070b168b3c6fb54c} 
 void continue\+\_\+\+Key\+\_\+\+Decryption (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{sequence}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -127,8 +123,7 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{src_2gamelogic1_8c_a7b86d9f5415318d184de153f13f52fcd} 
 void crypt\+\_\+sequence\+\_\+\+Int\+\_\+\+Char (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{arr1}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{arr2}{, }\item[{int}]{dim}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -177,8 +172,20 @@ void deallocate\+\_\+\+Int (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$
 {\footnotesize\ttfamily \label{src_2gamelogic1_8c_a7b7577b178ce9de2be9e5ab17053f6e5} 
 void fn\+\_\+\+KEY\+\_\+\+WH\+\_\+\+DOUB (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Call function when KEY\+\_\+\+WH\+\_\+\+DOUB of the finite state machine is called and generates a sequence to find with duplicates. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -191,8 +198,20 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{src_2gamelogic1_8c_a6dfdeacaef5a5d37960e2575015b6516} 
 void fn\+\_\+\+KEY\+\_\+\+WOUT\+\_\+\+DOUB (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Call function when KEY\+\_\+\+WOUT\+\_\+\+DOUB of the finite state machine is called and generates a sequence to find with no duplicates. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -205,8 +224,20 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{src_2gamelogic1_8c_aea19573b1ff72f6c1ccf31fca44008e0} 
 void fn\+\_\+\+RESET\+\_\+\+TENT (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Call function when RESET\+\_\+\+TENT of the finite state machine is called after each tentative is sent successfully and resets the elements of the current \doxylink{struct_tentative}{Tentative}. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -219,8 +250,20 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{src_2gamelogic1_8c_a3ae06b4f684ab23f714e117b63520232} 
 void fn\+\_\+\+START (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Call function when START of the finite state machine is called and initializes the game after selecting the elements. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/09-\/27 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -233,8 +276,7 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{src_2gamelogic1_8c_a7006bf7f12ca8e5bd3b45872b396129c} 
 void init\+Game (\begin{DoxyParamCaption}\item[{int}]{dim}{, }\item[{char}]{diff}{, }\item[{bool}]{doubles}{, }\item[{int}]{tents}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -266,8 +308,7 @@ Matteo Gottardelli (Primary Author \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/09-\/27 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -293,8 +334,7 @@ Matteo Gottardelli (Primary Author \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/09-\/27 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -350,8 +390,7 @@ Matteo Gottardelli (Primary Author \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/09-\/27 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

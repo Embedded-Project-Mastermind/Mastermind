@@ -1,5 +1,5 @@
 <map id="ADC_StartConversion" name="ADC_StartConversion">
-<area shape="rect" id="Node000001" title=" " alt="" coords="194,31,345,56"/>
+<area shape="rect" id="Node000001" title="method that trigger the activation of the next read of ADC sensor" alt="" coords="194,31,345,56"/>
 <area shape="rect" id="Node000002" href="$general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="5,5,146,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,34,145,30,146,25,179,29"/>
 <area shape="rect" id="Node000003" href="$general_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="51,55,100,80"/>

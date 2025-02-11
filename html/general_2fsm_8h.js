@@ -13,7 +13,6 @@ var general_2fsm_8h =
       [ "KEY_WH_DOUB", "general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8ada0e9b62b9e2732c057858d4cba06de9", null ],
       [ "RESET_TENT", "general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800", null ],
       [ "WAIT", "general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a79a322ccb4b29b85b3cab52dbccefd17", null ],
-      [ "ELABORATE", "general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229", null ],
       [ "INSERT_COLOR", "general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6", null ],
       [ "WAIT_FULL", "general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a636c8eac8610f47dc4228a0fb1ca5309", null ],
       [ "ELIMINATE_COLOR", "general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629", null ],

@@ -313,22 +313,21 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800">RESET_TENT</a>
 , <br />
 &#160;&#160;<a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a79a322ccb4b29b85b3cab52dbccefd17">WAIT</a>
-, <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229">ELABORATE</a>
 , <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6">INSERT_COLOR</a>
 , <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a636c8eac8610f47dc4228a0fb1ca5309">WAIT_FULL</a>
+, <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629">ELIMINATE_COLOR</a>
 , <br />
-&#160;&#160;<a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629">ELIMINATE_COLOR</a>
-, <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f">ELABORATE_TENT</a>
+&#160;&#160;<a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f">ELABORATE_TENT</a>
 , <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8aef18bcb4a935d141625d0cc4f058b7d9">INCREMENT_TENT</a>
 , <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a871723195985a4ae22d7e10d99bf8a00">GAME_OVER</a>
+, <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425">EASY_MODE</a>
 , <br />
-&#160;&#160;<a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425">EASY_MODE</a>
-, <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8abab75a02f9e6c8bcf2b41d58044ecba7">MEDIUM_MODE</a>
+&#160;&#160;<a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8abab75a02f9e6c8bcf2b41d58044ecba7">MEDIUM_MODE</a>
 , <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a2c26fbc1fdd523c99380ac97dda96187">DIFFICULT_MODE</a>
 , <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a4e1ec298bdc63da1022042568b5935ad">ELABORATE_RESULT</a>
+, <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a843dff91ff0b0e5b98a110a512b2f531">WIN</a>
 , <br />
-&#160;&#160;<a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a843dff91ff0b0e5b98a110a512b2f531">WIN</a>
-, <a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a2fd6f336d08340583bd620a7f5694c90">ERROR</a>
+&#160;&#160;<a class="el" href="#a5d74787dedbc4e11c1ab15bf487e61f8a2fd6f336d08340583bd620a7f5694c90">ERROR</a>
 <br />
  }</td></tr>
 <tr class="separator:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -336,8 +335,10 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2b8f386c98b90f3eb1b93b5c35f8bd44" id="r_a2b8f386c98b90f3eb1b93b5c35f8bd44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b8f386c98b90f3eb1b93b5c35f8bd44">acquireMutex</a> (void)</td></tr>
+<tr class="memdesc:a2b8f386c98b90f3eb1b93b5c35f8bd44"><td class="mdescLeft">&#160;</td><td class="mdescRight">it activates the mutex  <br /></td></tr>
 <tr class="separator:a2b8f386c98b90f3eb1b93b5c35f8bd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a499c227b2251935bad6eef854ba5ffe5" id="r_a499c227b2251935bad6eef854ba5ffe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a499c227b2251935bad6eef854ba5ffe5">releaseMutex</a> (void)</td></tr>
+<tr class="memdesc:a499c227b2251935bad6eef854ba5ffe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">it releases the mutex  <br /></td></tr>
 <tr class="separator:a499c227b2251935bad6eef854ba5ffe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -451,7 +452,6 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8ada0e9b62b9e2732c057858d4cba06de9" name="a5d74787dedbc4e11c1ab15bf487e61f8ada0e9b62b9e2732c057858d4cba06de9"></a>KEY_WH_DOUB&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800" name="a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800"></a>RESET_TENT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a79a322ccb4b29b85b3cab52dbccefd17" name="a5d74787dedbc4e11c1ab15bf487e61f8a79a322ccb4b29b85b3cab52dbccefd17"></a>WAIT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229" name="a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229"></a>ELABORATE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6" name="a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6"></a>INSERT_COLOR&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a636c8eac8610f47dc4228a0fb1ca5309" name="a5d74787dedbc4e11c1ab15bf487e61f8a636c8eac8610f47dc4228a0fb1ca5309"></a>WAIT_FULL&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629" name="a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629"></a>ELIMINATE_COLOR&#160;</td><td class="fielddoc"></td></tr>
@@ -483,12 +483,21 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>it activates the mutex </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary author) </dd>
+<dd>
+Niccolo Cristoforetti (Helper) </dd>
+<dd>
+Daniele Calvo (Maintainer) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-5 </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="general_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44_icgraph.png" border="0" usemap="#ageneral_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44_icgraph" alt=""/></div>
 <map name="ageneral_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44_icgraph" id="ageneral_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44_icgraph">
-<area shape="rect" title=" " alt="" coords="194,5,293,31"/>
+<area shape="rect" title="it activates the mutex" alt="" coords="194,5,293,31"/>
 <area shape="rect" href="general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="5,5,146,31"/>
 <area shape="poly" title=" " alt="" coords="178,21,146,21,146,16,178,16"/>
 </map>
@@ -510,15 +519,24 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>it releases the mutex </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Matteo Gottardelli (Primary author) </dd>
+<dd>
+Niccolo Cristoforetti (Helper) </dd>
+<dd>
+Daniele Calvo (Maintainer) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-10-5 </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5_cgraph.png" border="0" usemap="#ageneral_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5_cgraph" alt=""/></div>
 <map name="ageneral_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5_cgraph" id="ageneral_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,105,56"/>
-<area shape="rect" href="joystick_8c.html#aba5554d566a1a96bb319050ee2a87ea5" title=" " alt="" coords="153,5,305,31"/>
+<area shape="rect" title="it releases the mutex" alt="" coords="5,31,105,56"/>
+<area shape="rect" href="joystick_8c.html#aba5554d566a1a96bb319050ee2a87ea5" title="enabling the interrupts for the two joystick channels P6.0 and P4.4" alt="" coords="153,5,305,31"/>
 <area shape="poly" title=" " alt="" coords="105,34,137,29,138,34,105,39"/>
-<area shape="rect" href="joystick_8c.html#a4023d983e6edbb9ec1c19264b9f5d063" title=" " alt="" coords="177,55,281,80"/>
+<area shape="rect" href="joystick_8c.html#a4023d983e6edbb9ec1c19264b9f5d063" title="In order to handle the various interrupts, we have to setup the various sending of interrupts accordi..." alt="" coords="177,55,281,80"/>
 <area shape="poly" title=" " alt="" coords="105,48,162,56,161,61,105,53"/>
 </map>
 </div>
@@ -527,7 +545,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5_icgraph.png" border="0" usemap="#ageneral_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5_icgraph" alt=""/></div>
 <map name="ageneral_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5_icgraph" id="ageneral_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5_icgraph">
-<area shape="rect" title=" " alt="" coords="194,31,293,56"/>
+<area shape="rect" title="it releases the mutex" alt="" coords="194,31,293,56"/>
 <area shape="rect" href="general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="5,5,146,31"/>
 <area shape="poly" title=" " alt="" coords="178,36,146,31,146,26,179,31"/>
 <area shape="rect" href="general_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="51,55,100,80"/>

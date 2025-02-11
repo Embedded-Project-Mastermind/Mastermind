@@ -1,44 +1,44 @@
 <map id="rightfunctions" name="rightfunctions">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,129,105,155"/>
+<area shape="rect" id="Node000001" title="Functions that handles the right stick movement according to the different screens,..." alt="" coords="5,129,105,155"/>
 <area shape="rect" id="Node000002" href="$chronology_8c.html#ab6199fff7dce2a49d3b5329e51570fbe" title="manage what to do when the user moves the stick right" alt="" coords="153,5,332,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,127,98,84,123,60,151,40,160,35,163,40,154,44,127,64,102,88,67,131"/>
 <area shape="rect" id="Node000003" href="$difficulty_8c.html#a857aed146f25be6eafd6029c4cae888f" title="Action that the menu performs when the stick goes right, primarly changing selection and imposing log..." alt="" coords="162,55,323,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="77,126,152,89,169,83,171,88,154,94,79,131"/>
-<area shape="rect" id="Node000014" href="$dimension_8c.html#aa7966b0e409d1f5a41bb210277319673" title="handles the right movement of the stick" alt="" coords="162,252,322,278"/>
+<area shape="rect" id="Node000014" href="$dimension_8c.html#aa7966b0e409d1f5a41bb210277319673" title="handles the right movement of the stick, changing the selected element if the action can be performed" alt="" coords="162,252,322,278"/>
 <area shape="poly" id="edge17_Node000001_Node000014" title=" " alt="" coords="68,154,103,196,127,219,154,239,163,243,160,248,151,243,123,223,99,200,64,157"/>
 <area shape="rect" id="Node000016" href="$doubles_8c.html#a32374ef584a5874a75624a4bf91c40d3" title="manage what to do when the user moves the stick right" alt="" coords="169,104,316,130"/>
 <area shape="poly" id="edge21_Node000001_Node000016" title=" " alt="" coords="104,133,153,126,153,132,105,138"/>
-<area shape="rect" id="Node000017" href="$info_8c.html#a46185e9cb9550ef5f53ac4acfa3fa070" title=" " alt="" coords="185,153,300,179"/>
+<area shape="rect" id="Node000017" href="$info_8c.html#a46185e9cb9550ef5f53ac4acfa3fa070" title="manage what to do when the user moves the stick right" alt="" coords="185,153,300,179"/>
 <area shape="poly" id="edge24_Node000001_Node000017" title=" " alt="" coords="105,146,170,154,169,160,105,151"/>
-<area shape="rect" id="Node000018" href="$tentatives_8c.html#a5a9a7d0ba677cf2073ce07d87abaa8ba" title=" " alt="" coords="164,203,320,228"/>
+<area shape="rect" id="Node000018" href="$tentatives_8c.html#a5a9a7d0ba677cf2073ce07d87abaa8ba" title="manage what to do when the user moves the stick to the right" alt="" coords="164,203,320,228"/>
 <area shape="poly" id="edge27_Node000001_Node000018" title=" " alt="" coords="80,153,154,189,171,195,170,200,152,194,78,158"/>
 <area shape="rect" id="Node000004" href="$difficulty_8c.html#abe9c02f90a494b0d60669e280db89c2d" title="Draw Text Description according to the difficulty selected in order to explain to the user what that ..." alt="" coords="386,55,460,80"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="324,65,370,65,370,70,324,70"/>
-<area shape="rect" id="Node000006" href="$implementations_8c.html#a0f3ea1e3abed721e539b1332079664c4" title=" " alt="" coords="388,104,458,130"/>
+<area shape="rect" id="Node000006" href="$implementations_8c.html#a0f3ea1e3abed721e539b1332079664c4" title="it handles the status change of new focused button" alt="" coords="388,104,458,130"/>
 <area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="294,78,333,89,373,100,372,105,331,94,293,84"/>
-<area shape="rect" id="Node000013" href="$implementations_8c.html#a7850b120bb168cda34d0ff446cd53845" title=" " alt="" coords="382,153,463,179"/>
+<area shape="rect" id="Node000013" href="$implementations_8c.html#a7850b120bb168cda34d0ff446cd53845" title="it handles the status change of old focused button" alt="" coords="382,153,463,179"/>
 <area shape="poly" id="edge14_Node000003_Node000013" title=" " alt="" coords="310,78,333,89,349,102,359,114,368,127,382,140,385,143,382,147,378,144,364,130,355,117,345,105,331,94,308,83"/>
-<area shape="rect" id="Node000005" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title=" " alt="" coords="513,104,607,130"/>
+<area shape="rect" id="Node000005" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title="finds the selected button in all the buttons of an interface" alt="" coords="513,104,607,130"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="461,78,509,96,507,101,460,83"/>
 <area shape="poly" id="edge13_Node000006_Node000005" title=" " alt="" coords="458,114,498,114,498,120,458,120"/>
-<area shape="rect" id="Node000007" href="$implementations_8c.html#ada4cd14b9689d4fe9b9de328e4724964" title=" " alt="" coords="516,153,604,179"/>
+<area shape="rect" id="Node000007" href="$implementations_8c.html#ada4cd14b9689d4fe9b9de328e4724964" title="draws the button in the given position with the right color" alt="" coords="516,153,604,179"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="459,127,509,145,507,150,457,132"/>
-<area shape="rect" id="Node000008" href="$implementations_8c.html#a17fb5785fa10393596b1c10e580fee1b" title=" " alt="" coords="822,77,944,103"/>
+<area shape="rect" id="Node000008" href="$implementations_8c.html#a17fb5785fa10393596b1c10e580fee1b" title="chooses the color of the button given its current state" alt="" coords="822,77,944,103"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="603,152,654,138,806,103,807,109,655,143,605,157"/>
-<area shape="rect" id="Node000009" href="$implementations_8c.html#ac2bb0254f8bef6f471cc1e1e4aff3fb2" title=" " alt="" coords="655,153,774,179"/>
+<area shape="rect" id="Node000009" href="$implementations_8c.html#ac2bb0254f8bef6f471cc1e1e4aff3fb2" title="chooses the color of the text on the button given the button&#39;s current state" alt="" coords="655,153,774,179"/>
 <area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="604,164,639,164,639,169,604,169"/>
-<area shape="rect" id="Node000010" href="$implementations_8c.html#aaa2bed682fe325d72adc6d9ee50b15b9" title=" " alt="" coords="662,52,767,78"/>
+<area shape="rect" id="Node000010" href="$implementations_8c.html#aaa2bed682fe325d72adc6d9ee50b15b9" title="visually updates a button when it is focused" alt="" coords="662,52,767,78"/>
 <area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="588,151,605,140,629,118,653,95,671,83,674,88,656,99,633,122,608,144,591,155"/>
-<area shape="rect" id="Node000011" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="664,203,765,228"/>
+<area shape="rect" id="Node000011" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title="gives back the x of the center of the given rectangle" alt="" coords="664,203,765,228"/>
 <area shape="poly" id="edge11_Node000007_Node000011" title=" " alt="" coords="604,177,658,195,657,200,602,182"/>
-<area shape="rect" id="Node000012" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="664,252,765,278"/>
+<area shape="rect" id="Node000012" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title="gives back the y of the center of the given rectangle" alt="" coords="664,252,765,278"/>
 <area shape="poly" id="edge12_Node000007_Node000012" title=" " alt="" coords="577,177,611,207,656,239,664,243,661,247,653,243,608,211,573,181"/>
 <area shape="poly" id="edge10_Node000010_Node000008" title=" " alt="" coords="768,70,807,76,806,81,767,75"/>
 <area shape="poly" id="edge16_Node000013_Node000005" title=" " alt="" coords="460,150,507,133,508,138,462,155"/>
 <area shape="poly" id="edge15_Node000013_Node000007" title=" " alt="" coords="463,164,501,164,501,169,463,169"/>
 <area shape="poly" id="edge19_Node000014_Node000006" title=" " alt="" coords="313,249,330,239,348,216,355,192,361,166,378,139,379,138,383,142,382,142,366,168,360,193,353,218,334,243,316,254"/>
 <area shape="poly" id="edge20_Node000014_Node000013" title=" " alt="" coords="305,249,331,238,367,214,397,188,401,192,370,219,333,243,307,254"/>
-<area shape="rect" id="Node000015" href="$dimension_8c.html#aa38b30924148a4b57c31d71a60aa6e4f" title="manages the font dimension for the buttons" alt="" coords="380,252,465,278"/>
+<area shape="rect" id="Node000015" href="$dimension_8c.html#aa38b30924148a4b57c31d71a60aa6e4f" title="makes the font of the DIMENSION&#39;s buttons bigger and avoids conflict with next and prev buttons" alt="" coords="380,252,465,278"/>
 <area shape="poly" id="edge18_Node000014_Node000015" title=" " alt="" coords="323,262,364,262,364,268,323,268"/>
 <area shape="poly" id="edge22_Node000016_Node000006" title=" " alt="" coords="316,114,372,114,372,120,316,120"/>
 <area shape="poly" id="edge23_Node000016_Node000013" title=" " alt="" coords="294,128,333,138,368,148,367,153,331,143,293,133"/>

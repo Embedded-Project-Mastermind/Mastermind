@@ -19,32 +19,43 @@
 \DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ BASIC\_OFFSET\ 15}}
 \DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ RADIUS\ 6}}
 \DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ MAX\_DIM\ 6}}
-\DoxyCodeLine{00018\ \textcolor{comment}{//extern\ bool\ configurationGame;}}
+\DoxyCodeLine{00018\ }
 \DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{chronology_8h_a7cae3b9d656c300e3d6f8fddc9eaf0f9}{other\_buttons}}[];}
-\DoxyCodeLine{00021\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{chronology_8h_a86dc877eb37cf5f7afbab29b4d3017b8}{return\_to}};}
-\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ int16\_t\ \mbox{\hyperlink{chronology_8h_a0351fbc096999109025b02345f8f1a92}{pos\_chronology}};\ \textcolor{comment}{//var\ for\ manage\ the\ tent\ outputs\ after\ having\ overtaken\ three\ tentative}}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graphics___chronology}{Graphics\_Chronology}}\ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{struct_graphics___chronology_a00548db17a68c6e7dcad49f6c565e62b}{button}};}
-\DoxyCodeLine{00026\ \ \ \ \ Graphics\_Rectangle\ \mbox{\hyperlink{struct_graphics___chronology_aeeb662b3f5bc7c23a8d139dc1028d641}{num\_rect}};}
-\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ \mbox{\hyperlink{struct_graphics___chronology_a7795b5bd5415da29b5bc51d25bea94b7}{num}};}
-\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_graphics___circle}{Graphics\_Circle}}\ \mbox{\hyperlink{struct_graphics___chronology_a8b57336f9cb2a151d6f759026ea4bf0a}{chrono\_circles}}[\mbox{\hyperlink{chronology_8h_a7ba3949b1f197baf0354d41124bdbe88}{MAX\_DIM}}];}
-\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{struct_graphics___chronology_abc4d49ab49b918b76bcc9d215695b3e0}{chrono\_buttons}}[\mbox{\hyperlink{chronology_8h_a7ba3949b1f197baf0354d41124bdbe88}{MAX\_DIM}}];}
-\DoxyCodeLine{00030\ \}\ \mbox{\hyperlink{struct_graphics___chronology}{Graphics\_Chronology}};}
-\DoxyCodeLine{00031\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___chronology}{Graphics\_Chronology}}\ \mbox{\hyperlink{chronology_8h_a38e59e2a27b779c4dc37f0900bd268c1}{chronology}}[];}
-\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a81594cf52b75532bb168949c0d58ed93}{drawChronology}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a77703c37a23665ce74ccea44a084a247}{fn\_CHRONOLOGY}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a7ec7903a95121d6e773888be9b0176eb}{populateChronologyCircles}}(int16\_t\ offset,\ int16\_t\ radius,\ int16\_t\ \mbox{\hyperlink{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a}{value}},\ int16\_t\ index);}
-\DoxyCodeLine{00035\ int16\_t\ \mbox{\hyperlink{chronology_8h_af4804828a994a0d76b79da462ad1580a}{char\_Conversion\_to\_Int}}(int8\_t\ index);}
-\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_af95f3e53eb47667a4ae3da13fecc23d1}{populateChronologyButtons}}(int16\_t\ \mbox{\hyperlink{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a}{value}},\ int16\_t\ index);}
-\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a0009722d580b5fc3a2c6ae32efadd8bb}{drawPastResults}}(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}*\ buttons);}
-\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_ad774f58034bd7f8cb0c570021307df20}{upStick\_CHRONOLOGY}}();}
-\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a200291275b68705ac77fdde64e026b27}{downStick\_CHRONOLOGY}}();}
-\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_ab6199fff7dce2a49d3b5329e51570fbe}{rightStick\_CHRONOLOGY}}();}
-\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a2c8461dd4bc87e2cee6461d79daca665}{updatePos}}();}
+\DoxyCodeLine{00020\ \textcolor{comment}{//extern\ bool\ configurationGame;}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{chronology_8h_a7cae3b9d656c300e3d6f8fddc9eaf0f9}{other\_buttons}}[];}
+\DoxyCodeLine{00022\ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{chronology_8h_a86dc877eb37cf5f7afbab29b4d3017b8}{return\_to}};}
+\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ int16\_t\ \mbox{\hyperlink{chronology_8h_a0351fbc096999109025b02345f8f1a92}{pos\_chronology}};\ \textcolor{comment}{//var\ for\ manage\ the\ tent\ outputs\ after\ having\ overtaken\ three\ tentative}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graphics___chronology}{Graphics\_Chronology}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{struct_graphics___chronology_a00548db17a68c6e7dcad49f6c565e62b}{button}};}
+\DoxyCodeLine{00027\ \ \ \ \ Graphics\_Rectangle\ \mbox{\hyperlink{struct_graphics___chronology_aeeb662b3f5bc7c23a8d139dc1028d641}{num\_rect}};}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_graphics___text}{Graphics\_Text}}\ \mbox{\hyperlink{struct_graphics___chronology_a7795b5bd5415da29b5bc51d25bea94b7}{num}};}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{struct_graphics___circle}{Graphics\_Circle}}\ \mbox{\hyperlink{struct_graphics___chronology_a8b57336f9cb2a151d6f759026ea4bf0a}{chrono\_circles}}[\mbox{\hyperlink{chronology_8h_a7ba3949b1f197baf0354d41124bdbe88}{MAX\_DIM}}];}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}\ \mbox{\hyperlink{struct_graphics___chronology_abc4d49ab49b918b76bcc9d215695b3e0}{chrono\_buttons}}[\mbox{\hyperlink{chronology_8h_a7ba3949b1f197baf0354d41124bdbe88}{MAX\_DIM}}];}
+\DoxyCodeLine{00031\ \}\ \mbox{\hyperlink{struct_graphics___chronology}{Graphics\_Chronology}};}
+\DoxyCodeLine{00032\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_graphics___chronology}{Graphics\_Chronology}}\ \mbox{\hyperlink{chronology_8h_a38e59e2a27b779c4dc37f0900bd268c1}{chronology}}[];}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a81594cf52b75532bb168949c0d58ed93}{drawChronology}}(\textcolor{keywordtype}{void});}
 \DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CHRONOLOGY\_H\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a77703c37a23665ce74ccea44a084a247}{fn\_CHRONOLOGY}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a5cf5997f8c26419de3228a297019b0bc}{populateChronologyCircles}}(int16\_t\ radius,\ int16\_t\ \mbox{\hyperlink{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a}{value}},\ int16\_t\ index);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00072\ int16\_t\ \mbox{\hyperlink{chronology_8h_af4804828a994a0d76b79da462ad1580a}{char\_Conversion\_to\_Int}}(int8\_t\ index);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_af95f3e53eb47667a4ae3da13fecc23d1}{populateChronologyButtons}}(int16\_t\ \mbox{\hyperlink{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a}{value}},\ int16\_t\ index);}
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a0009722d580b5fc3a2c6ae32efadd8bb}{drawPastResults}}(\mbox{\hyperlink{struct_graphics___button}{Graphics\_Button}}*\ buttons);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_ad774f58034bd7f8cb0c570021307df20}{upStick\_CHRONOLOGY}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a200291275b68705ac77fdde64e026b27}{downStick\_CHRONOLOGY}}();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_ab6199fff7dce2a49d3b5329e51570fbe}{rightStick\_CHRONOLOGY}}();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{chronology_8h_a2c8461dd4bc87e2cee6461d79daca665}{updatePos}}();}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CHRONOLOGY\_H\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

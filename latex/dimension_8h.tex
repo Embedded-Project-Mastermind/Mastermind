@@ -20,21 +20,21 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{dimension_8h_a82bf35c4ebbd7865c3aaae6e83e0d8f0}{draw\+Dimension}} ()
-\begin{DoxyCompactList}\small\item\em draws buttons \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Function that draws the interface of dimension section, 4 buttons to select the dimension and the others for prev (go to START\+\_\+\+GR) and next (go to DIFFICULTY) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{dimension_8h_a06c057d2723c369756cef6908ccdaa99}{fn\+\_\+\+DIMENSION}} (void)
-\begin{DoxyCompactList}\small\item\em general function for scenario drawing \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Implicit Call, invoked when we arrive at DIMENSION state in GUI FSM, initializes variables and draws the interface. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{dimension_8h_aa38b30924148a4b57c31d71a60aa6e4f}{handle\+Font}} ()
-\begin{DoxyCompactList}\small\item\em manages the font dimension for the buttons \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em makes the font of the DIMENSION\textquotesingle{}s buttons bigger and avoids conflict with next and prev buttons \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{dimension_8h_a68da15d7a690c47b33fa100902f82420}{up\+Stick\+\_\+\+DIMENSION}} ()
-\begin{DoxyCompactList}\small\item\em handles the up movement of the stick \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em handles the up movement of the stick, changing the selected element if the action can be performed \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{dimension_8h_a6fb20cec8a94509cc42b47b543ea64d7}{down\+Stick\+\_\+\+DIMENSION}} ()
-\begin{DoxyCompactList}\small\item\em handles the down movement of the stick \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em handles the down movement of the stick, changing the selected element if the action can be performed \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{dimension_8h_aa1457a920eebe81a6fc619946c6fa746}{left\+Stick\+\_\+\+DIMENSION}} ()
-\begin{DoxyCompactList}\small\item\em handles the down movement of the stick \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em handles the left movement of the stick, changing the selected element if the action can be performed \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{dimension_8h_aa7966b0e409d1f5a41bb210277319673}{right\+Stick\+\_\+\+DIMENSION}} ()
-\begin{DoxyCompactList}\small\item\em handles the right movement of the stick \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em handles the right movement of the stick, changing the selected element if the action can be performed \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{dimension_8h_a58364c9a26deb9ae50fe27b33f41a221}{handle\+Pressure\+\_\+\+DIMENSION}} ()
-\begin{DoxyCompactList}\small\item\em extern declaretion \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handles the pressure of confirm button in the DIMENSION section. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,7 +51,7 @@ void down\+Stick\+\_\+\+DIMENSION (\begin{DoxyParamCaption}{}{}\end{DoxyParamCap
 
 
 
-handles the down movement of the stick 
+handles the down movement of the stick, changing the selected element if the action can be performed 
 
 \begin{DoxyReturn}{Returns}
 void 
@@ -62,16 +62,14 @@ Alessandro Benassi (Primary Author \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/10 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{dimension_8h_a6fb20cec8a94509cc42b47b543ea64d7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -86,10 +84,10 @@ void draw\+Dimension (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-draws buttons 
+Function that draws the interface of dimension section, 4 buttons to select the dimension and the others for prev (go to START\+\_\+\+GR) and next (go to DIFFICULTY) 
 
 \begin{DoxyReturn}{Returns}
-TODO\+: Describe return value. 
+void 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Alessandro Benassi (Primary Author \& Maintainer) 
@@ -97,16 +95,14 @@ Alessandro Benassi (Primary Author \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/10 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{dimension_8h_a82bf35c4ebbd7865c3aaae6e83e0d8f0_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -121,7 +117,7 @@ void fn\+\_\+\+DIMENSION (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyPara
 
 
 
-general function for scenario drawing 
+Implicit Call, invoked when we arrive at DIMENSION state in GUI FSM, initializes variables and draws the interface. 
 
 \begin{DoxyReturn}{Returns}
 void 
@@ -132,8 +128,7 @@ Alessandro Benassi (Primary Author \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/10 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -148,7 +143,7 @@ void handle\+Font (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-manages the font dimension for the buttons 
+makes the font of the DIMENSION\textquotesingle{}s buttons bigger and avoids conflict with next and prev buttons 
 
 \begin{DoxyReturn}{Returns}
 void 
@@ -159,8 +154,7 @@ Alessandro Benassi (Primary Author \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/10 
 \end{DoxyDate}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -175,7 +169,7 @@ void handle\+Pressure\+\_\+\+DIMENSION (\begin{DoxyParamCaption}{}{}\end{DoxyPar
 
 
 
-extern declaretion 
+Handles the pressure of confirm button in the DIMENSION section. 
 
 \begin{DoxyReturn}{Returns}
 void 
@@ -186,16 +180,14 @@ Alessandro Benassi (Primary Author \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/10 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=348pt]{dimension_8h_a58364c9a26deb9ae50fe27b33f41a221_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -210,7 +202,7 @@ void left\+Stick\+\_\+\+DIMENSION (\begin{DoxyParamCaption}{}{}\end{DoxyParamCap
 
 
 
-handles the down movement of the stick 
+handles the left movement of the stick, changing the selected element if the action can be performed 
 
 \begin{DoxyReturn}{Returns}
 void 
@@ -221,16 +213,14 @@ Alessandro Benassi (Primary Author \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/10 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{dimension_8h_aa1457a920eebe81a6fc619946c6fa746_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -245,7 +235,7 @@ void right\+Stick\+\_\+\+DIMENSION (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 
 
 
-handles the right movement of the stick 
+handles the right movement of the stick, changing the selected element if the action can be performed 
 
 \begin{DoxyReturn}{Returns}
 void 
@@ -256,16 +246,14 @@ Alessandro Benassi (Primary Author \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/10 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{dimension_8h_aa7966b0e409d1f5a41bb210277319673_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -280,7 +268,7 @@ void up\+Stick\+\_\+\+DIMENSION (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapti
 
 
 
-handles the up movement of the stick 
+handles the up movement of the stick, changing the selected element if the action can be performed 
 
 \begin{DoxyReturn}{Returns}
 void 
@@ -291,16 +279,14 @@ Alessandro Benassi (Primary Author \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/10 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{dimension_8h_a68da15d7a690c47b33fa100902f82420_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

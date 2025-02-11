@@ -83,9 +83,9 @@ var NAVTREEINDEX =
 [
 "_crystalfontz128x128___s_t7735_8c.html",
 "doubles_8h_source.html",
-"globals.html",
-"namespacecomment.html",
-"tentatives_8h.html#a10cf934f39aa68531a7a6bd03b9d837f"
+"globals_eval.html",
+"namespacemembers_vars.html",
+"tentatives_8h.html#abf1408243b3fa16a256622a95923cea5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

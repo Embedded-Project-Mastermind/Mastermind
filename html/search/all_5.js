@@ -1,8 +1,8 @@
 var searchData=
 [
   ['easy_5fmode_0',['EASY_MODE',['../general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425',1,'EASY_MODE:&#160;fsm.h'],['../src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425',1,'EASY_MODE:&#160;fsm.h']]],
-  ['elaborate_1',['ELABORATE',['../general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229',1,'ELABORATE:&#160;fsm.h'],['../src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229',1,'ELABORATE:&#160;fsm.h']]],
-  ['elaborate_2',['elaborate',['../general_2gamelogic2_8h.html#a9404d06774140db68ea7459e9bef6e56',1,'elaborate(void):&#160;gamelogic2.c'],['../src_2gamelogic2_8c.html#a9404d06774140db68ea7459e9bef6e56',1,'elaborate(void):&#160;gamelogic2.c'],['../src_2gamelogic2_8h.html#a9404d06774140db68ea7459e9bef6e56',1,'elaborate(void):&#160;gamelogic2.c']]],
+  ['elaborate_1',['ELABORATE',['../src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229',1,'fsm.h']]],
+  ['elaborate_2',['elaborate',['../src_2gamelogic2_8c.html#a9404d06774140db68ea7459e9bef6e56',1,'elaborate(void):&#160;gamelogic2.c'],['../src_2gamelogic2_8h.html#a9404d06774140db68ea7459e9bef6e56',1,'elaborate(void):&#160;gamelogic2.c']]],
   ['elaborate_5fresult_3',['ELABORATE_RESULT',['../general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a4e1ec298bdc63da1022042568b5935ad',1,'ELABORATE_RESULT:&#160;fsm.h'],['../src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a4e1ec298bdc63da1022042568b5935ad',1,'ELABORATE_RESULT:&#160;fsm.h']]],
   ['elaborate_5ftent_4',['ELABORATE_TENT',['../general_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f',1,'ELABORATE_TENT:&#160;fsm.h'],['../src_2fsm_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f',1,'ELABORATE_TENT:&#160;fsm.h']]],
   ['elaboratecolor_5',['elaborateColor',['../game_8c.html#ae75b7a2c4cacd669fec7a8d14c925898',1,'elaborateColor(int16_t c):&#160;game.c'],['../game_8h.html#ae75b7a2c4cacd669fec7a8d14c925898',1,'elaborateColor(int16_t c):&#160;game.c']]],

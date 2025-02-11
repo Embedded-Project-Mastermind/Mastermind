@@ -1,11 +1,11 @@
 <map id="encodeColor" name="encodeColor">
-<area shape="rect" id="Node000001" title=" " alt="" coords="288,31,382,56"/>
-<area shape="rect" id="Node000002" href="$end_8c.html#a9cfc14acd4b06827524e4ba00559b574" title="TODO: Describe function." alt="" coords="165,5,238,31"/>
+<area shape="rect" id="Node000001" title="encodes an RGB color into a 16&#45;bit format suitable for the display" alt="" coords="288,31,382,56"/>
+<area shape="rect" id="Node000002" href="$end_8c.html#abd6de31a2cbd9c1609338b0f9095e230" title="draws the end screen, displaying either a win or game over message." alt="" coords="165,5,238,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="272,34,237,28,238,22,273,29"/>
-<area shape="rect" id="Node000004" href="$start_8c.html#a52ac5595ea6e32fc694344402f33695b" title=" " alt="" coords="163,55,240,80"/>
+<area shape="rect" id="Node000004" href="$start_8c.html#a7cb9d67dbe12f6022ffea530cff1a0d3" title="draws the start screen, including the start button and an image" alt="" coords="163,55,240,80"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="273,57,241,63,240,58,272,52"/>
-<area shape="rect" id="Node000003" href="$end_8c.html#abac9d0b896bc0d5ed74672684b47805e" title="TODO: Describe function." alt="" coords="26,5,94,31"/>
+<area shape="rect" id="Node000003" href="$end_8c.html#abac9d0b896bc0d5ed74672684b47805e" title="initializes and displays the end screen" alt="" coords="26,5,94,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="150,21,95,21,95,16,150,16"/>
-<area shape="rect" id="Node000005" href="$start_8c.html#a442dc71ecc2ace42458fdc9532365549" title=" " alt="" coords="5,55,115,80"/>
+<area shape="rect" id="Node000005" href="$start_8c.html#a442dc71ecc2ace42458fdc9532365549" title="initializes and displays the start screen" alt="" coords="5,55,115,80"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="147,70,115,70,115,65,147,65"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="fn_ELABORATE_TENT" name="fn_ELABORATE_TENT">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,166,31"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#ad8d2b7851ce243d4f35cb39782bab2de" title=" " alt="" coords="214,5,375,31"/>
+<area shape="rect" id="Node000001" title="Function for ELABORATE_TENT state." alt="" coords="5,5,166,31"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#ad8d2b7851ce243d4f35cb39782bab2de" title="Function that checks if the sequence is a tentative or a correction." alt="" coords="214,5,375,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,16,198,16,198,21,166,21"/>
 </map>

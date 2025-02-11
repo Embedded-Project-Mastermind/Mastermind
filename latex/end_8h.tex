@@ -24,12 +24,12 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{end_8h_a9cfc14acd4b06827524e4ba00559b574}{draw\+End}} (int elems)
-\begin{DoxyCompactList}\small\item\em TODO\+: Describe function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{end_8h_abd6de31a2cbd9c1609338b0f9095e230}{draw\+End}} ()
+\begin{DoxyCompactList}\small\item\em draws the end screen, displaying either a win or game over message. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{end_8h_abac9d0b896bc0d5ed74672684b47805e}{fn\+\_\+\+END}} (void)
-\begin{DoxyCompactList}\small\item\em TODO\+: Describe function. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em initializes and displays the end screen \end{DoxyCompactList}\item 
 uint16\+\_\+t \mbox{\hyperlink{end_8h_afcf30e736c7122706af58017ff143787}{encode\+Color}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em encodes an RGB color into a 16-\/bit format suitable for the display \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,43 +40,39 @@ uint16\+\_\+t \mbox{\hyperlink{end_8h_afcf30e736c7122706af58017ff143787}{encode\
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{end_8h_a9cfc14acd4b06827524e4ba00559b574}\index{end.h@{end.h}!drawEnd@{drawEnd}}
+\Hypertarget{end_8h_abd6de31a2cbd9c1609338b0f9095e230}\index{end.h@{end.h}!drawEnd@{drawEnd}}
 \index{drawEnd@{drawEnd}!end.h@{end.h}}
 \doxysubsubsection{\texorpdfstring{drawEnd()}{drawEnd()}}
-{\footnotesize\ttfamily \label{end_8h_a9cfc14acd4b06827524e4ba00559b574} 
-void draw\+End (\begin{DoxyParamCaption}\item[{int}]{elems}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{end_8h_abd6de31a2cbd9c1609338b0f9095e230} 
+void draw\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-TODO\+: Describe function. 
+draws the end screen, displaying either a win or game over message. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em elems} & TODO\+: Describe parameter. \\
-\hline
-\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
-Niccolò Cristoforetti (Primary Author \& Maintainer) 
+Niccolò Cristoforetti (Primary author) 
+
+Daniele Calvo (Maintainer) 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
 2024-\/11-\/07 
 \end{DoxyDate}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{end_8h_a9cfc14acd4b06827524e4ba00559b574_cgraph}
+\includegraphics[width=350pt]{end_8h_abd6de31a2cbd9c1609338b0f9095e230_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=222pt]{end_8h_a9cfc14acd4b06827524e4ba00559b574_icgraph}
+\includegraphics[width=222pt]{end_8h_abd6de31a2cbd9c1609338b0f9095e230_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{end_8h_afcf30e736c7122706af58017ff143787}\index{end.h@{end.h}!encodeColor@{encodeColor}}
@@ -85,8 +81,33 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{end_8h_afcf30e736c7122706af58017ff143787} 
 uint16\+\_\+t encode\+Color (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r}{, }\item[{uint8\+\_\+t}]{g}{, }\item[{uint8\+\_\+t}]{b}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+encodes an RGB color into a 16-\/bit format suitable for the display 
+
+
+\begin{DoxyParams}{Parameters}
+{\em red} & presence in the pixel \\
+\hline
+{\em green} & presence in the pixel \\
+\hline
+{\em blue} & presence in the pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+single 16-\/bit color code for the display 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Niccolò Cristoforetti (Primary author) 
+
+Matteo Gottardelli (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/10 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -101,13 +122,15 @@ void fn\+\_\+\+END (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCapti
 
 
 
-TODO\+: Describe function. 
+initializes and displays the end screen 
 
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
-Niccolò Cristoforetti (Primary Author \& Maintainer) 
+Niccolò Cristoforetti (Primary author) 
+
+Daniele Calvo (Maintainer) 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
 2024-\/11-\/07 

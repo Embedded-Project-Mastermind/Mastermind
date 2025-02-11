@@ -49,31 +49,30 @@ enum \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}
 , \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aee21ddfcbd8bfa0a403f79c3e9fcc800}{RESET\+\_\+\+TENT}}
 , \newline
 \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a79a322ccb4b29b85b3cab52dbccefd17}{WAIT}}
-, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229}{ELABORATE}}
 , \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6}{INSERT\+\_\+\+COLOR}}
 , \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a636c8eac8610f47dc4228a0fb1ca5309}{WAIT\+\_\+\+FULL}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629}{ELIMINATE\+\_\+\+COLOR}}
 , \newline
-\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7dc4487d9c954039bf4b83ac8926c629}{ELIMINATE\+\_\+\+COLOR}}
-, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f}{ELABORATE\+\_\+\+TENT}}
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4c9a95dd039c5213b40ee3ba606d588f}{ELABORATE\+\_\+\+TENT}}
 , \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8aef18bcb4a935d141625d0cc4f058b7d9}{INCREMENT\+\_\+\+TENT}}
 , \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a871723195985a4ae22d7e10d99bf8a00}{GAME\+\_\+\+OVER}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425}{EASY\+\_\+\+MODE}}
 , \newline
-\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7a451a4d40f606436ebe7d43f5e43425}{EASY\+\_\+\+MODE}}
-, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abab75a02f9e6c8bcf2b41d58044ecba7}{MEDIUM\+\_\+\+MODE}}
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abab75a02f9e6c8bcf2b41d58044ecba7}{MEDIUM\+\_\+\+MODE}}
 , \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a2c26fbc1fdd523c99380ac97dda96187}{DIFFICULT\+\_\+\+MODE}}
 , \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4e1ec298bdc63da1022042568b5935ad}{ELABORATE\+\_\+\+RESULT}}
+, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a843dff91ff0b0e5b98a110a512b2f531}{WIN}}
 , \newline
-\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a843dff91ff0b0e5b98a110a512b2f531}{WIN}}
-, \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a2fd6f336d08340583bd620a7f5694c90}{ERROR}}
+\mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8a2fd6f336d08340583bd620a7f5694c90}{ERROR}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{general_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44}{acquire\+Mutex}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em it activates the mutex \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5}{release\+Mutex}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em it releases the mutex \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -162,10 +161,6 @@ RESET\+\_\+\+TENT&\\
 WAIT&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ELABORATE@{ELABORATE}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!ELABORATE@{ELABORATE}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8afe519e5f717ba5259a698b63c0530229} 
-ELABORATE&\\
-\hline
-
 \raisebox{\heightof{T}}[0pt][0pt]{\index{INSERT\_COLOR@{INSERT\_COLOR}!fsm.h@{fsm.h}}\index{fsm.h@{fsm.h}!INSERT\_COLOR@{INSERT\_COLOR}}}\Hypertarget{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6}\label{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8abb77f6385e939f1114d2c493e455e1d6} 
 INSERT\+\_\+\+COLOR&\\
 \hline
@@ -224,8 +219,24 @@ ERROR&\\
 {\footnotesize\ttfamily \label{general_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44} 
 void acquire\+Mutex (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+it activates the mutex 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -238,16 +249,31 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5} 
 void release\+Mutex (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+it releases the mutex 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=305pt]{general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

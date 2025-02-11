@@ -1,15 +1,15 @@
 <map id="fn_WAIT" name="fn_WAIT">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,78,56"/>
+<area shape="rect" id="Node000001" title="state while he&#39;s waiting an input" alt="" coords="5,31,78,56"/>
 <area shape="rect" id="Node000002" href="$src_2gamelogic2_8c.html#ad15b778b3386a7200ec4c77c9445194e" title=" " alt="" coords="126,5,216,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,34,110,27,111,33,79,39"/>
 <area shape="rect" id="Node000003" href="$src_2gamelogic2_8c.html#a4c00da6a37b75a59b2eb6aa66576969b" title=" " alt="" coords="126,55,216,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="79,48,111,54,110,59,78,53"/>
 <area shape="rect" id="Node000004" href="$src_2gamelogic2_8c.html#a711f83e83296a13ef71ed10315779fed" title=" " alt="" coords="264,55,345,80"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="217,65,248,65,248,70,217,70"/>
-<area shape="rect" id="Node000005" href="$general_2gamelogic2_8c.html#a4ac8a4eccf1b52c5f4f162807ba7a172" title=" " alt="" coords="411,5,478,31"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic2_8c.html#a4ac8a4eccf1b52c5f4f162807ba7a172" title="(Outdated) print to indicate the full state of the array on console" alt="" coords="411,5,478,31"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="343,52,395,33,397,38,344,57"/>
 <area shape="rect" id="Node000006" href="$general_2gamelogic2_8c.html#a2d9418eed626aa95f8198811a970a254" title="returns if the user’s sequence is empty or not" alt="" coords="407,55,482,80"/>
 <area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="346,65,392,65,392,70,346,70"/>
-<area shape="rect" id="Node000007" href="$general_2gamelogic2_8c.html#a6916b14296a6350be813f853d9e08796" title=" " alt="" coords="393,104,496,130"/>
+<area shape="rect" id="Node000007" href="$general_2gamelogic2_8c.html#a6916b14296a6350be813f853d9e08796" title="(Outdated) it was the main menu for the logic test on console" alt="" coords="393,104,496,130"/>
 <area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="344,78,392,96,391,101,343,83"/>
 </map>

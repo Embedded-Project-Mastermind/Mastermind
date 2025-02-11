@@ -2,30 +2,30 @@
 <area shape="rect" id="Node000001" title="functions that create the Chronology screen starting from resetting the previous screen" alt="" coords="5,161,141,187"/>
 <area shape="rect" id="Node000002" href="$chronology_8c.html#a81594cf52b75532bb168949c0d58ed93" title="function that create buttons and text for the Chronology screen" alt="" coords="189,136,304,161"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,161,173,157,173,162,142,167"/>
-<area shape="rect" id="Node000011" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title=" " alt="" coords="598,112,724,137"/>
+<area shape="rect" id="Node000011" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title="it draws a rectangle with a text centered in it" alt="" coords="598,112,724,137"/>
 <area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="90,159,133,128,195,88,271,49,351,21,402,8,443,3,484,7,534,21,566,36,595,56,641,98,637,102,592,60,563,40,532,26,483,12,444,8,403,14,353,26,273,54,198,93,136,132,93,163"/>
-<area shape="rect" id="Node000013" href="$implementations_8c.html#a5b980628dc75e57228c103881e9246af" title=" " alt="" coords="197,185,296,211"/>
+<area shape="rect" id="Node000013" href="$implementations_8c.html#a5b980628dc75e57228c103881e9246af" title="it resets all default&#39;s colors and clear the display" alt="" coords="197,185,296,211"/>
 <area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="142,181,182,186,181,192,141,186"/>
-<area shape="rect" id="Node000014" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="TODO: Describe function." alt="" coords="205,337,288,363"/>
+<area shape="rect" id="Node000014" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="show the last attempts of the chronology or the ones that were selected by the joystick" alt="" coords="205,337,288,363"/>
 <area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="89,185,223,324,219,327,85,189"/>
-<area shape="rect" id="Node000003" href="$implementations_8c.html#ada4cd14b9689d4fe9b9de328e4724964" title=" " alt="" coords="617,236,705,261"/>
+<area shape="rect" id="Node000003" href="$implementations_8c.html#ada4cd14b9689d4fe9b9de328e4724964" title="draws the button in the given position with the right color" alt="" coords="617,236,705,261"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="287,160,306,170,320,185,329,199,338,211,353,222,416,244,483,254,547,256,602,253,602,259,547,262,482,260,415,249,351,227,334,215,325,202,316,188,302,175,284,164"/>
 <area shape="rect" id="Node000009" href="$game_8c.html#a1d704afea01300efda83ee14d72bf132" title="Management and color of the circles on screen." alt="" coords="398,186,488,212"/>
 <area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="300,159,383,181,382,186,298,165"/>
 <area shape="rect" id="Node000010" href="$chronology_8c.html#a0009722d580b5fc3a2c6ae32efadd8bb" title="TODO: Describe function." alt="" coords="382,36,503,61"/>
 <area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="260,133,300,102,351,70,366,64,368,69,353,75,303,106,264,137"/>
 <area shape="poly" id="edge15_Node000002_Node000011" title=" " alt="" coords="304,143,582,126,582,132,305,148"/>
-<area shape="rect" id="Node000012" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title=" " alt="" coords="396,85,489,111"/>
+<area shape="rect" id="Node000012" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title="finds the selected button in all the buttons of an interface" alt="" coords="396,85,489,111"/>
 <area shape="poly" id="edge14_Node000002_Node000012" title=" " alt="" coords="298,133,380,111,382,116,300,138"/>
-<area shape="rect" id="Node000004" href="$implementations_8c.html#a17fb5785fa10393596b1c10e580fee1b" title=" " alt="" coords="956,285,1078,311"/>
+<area shape="rect" id="Node000004" href="$implementations_8c.html#a17fb5785fa10393596b1c10e580fee1b" title="chooses the color of the button given its current state" alt="" coords="956,285,1078,311"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="705,259,742,273,765,286,789,295,867,305,940,303,941,309,866,310,788,300,763,290,740,278,704,264"/>
-<area shape="rect" id="Node000005" href="$implementations_8c.html#ac2bb0254f8bef6f471cc1e1e4aff3fb2" title=" " alt="" coords="789,210,908,236"/>
+<area shape="rect" id="Node000005" href="$implementations_8c.html#ac2bb0254f8bef6f471cc1e1e4aff3fb2" title="chooses the color of the text on the button given the button&#39;s current state" alt="" coords="789,210,908,236"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="705,240,773,231,774,236,706,245"/>
-<area shape="rect" id="Node000006" href="$implementations_8c.html#aaa2bed682fe325d72adc6d9ee50b15b9" title=" " alt="" coords="796,260,901,285"/>
+<area shape="rect" id="Node000006" href="$implementations_8c.html#aaa2bed682fe325d72adc6d9ee50b15b9" title="visually updates a button when it is focused" alt="" coords="796,260,901,285"/>
 <area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="706,251,780,261,780,266,705,257"/>
-<area shape="rect" id="Node000007" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title=" " alt="" coords="798,161,899,187"/>
+<area shape="rect" id="Node000007" href="$implementations_8c.html#ae3d236b3ca1dca7c0d774ecd718bc62f" title="gives back the x of the center of the given rectangle" alt="" coords="798,161,899,187"/>
 <area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="694,233,798,191,800,196,696,238"/>
-<area shape="rect" id="Node000008" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title=" " alt="" coords="798,112,899,137"/>
+<area shape="rect" id="Node000008" href="$implementations_8c.html#ae57d3f9fa9c50aaabe2f4824209ebe51" title="gives back the y of the center of the given rectangle" alt="" coords="798,112,899,137"/>
 <area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="675,233,723,192,787,146,795,142,798,147,790,151,726,196,678,237"/>
 <area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="902,278,941,284,940,289,901,283"/>
 <area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="499,59,534,70,617,103,615,108,532,75,498,65"/>
@@ -35,15 +35,15 @@
 <area shape="poly" id="edge19_Node000014_Node000015" title=" " alt="" coords="272,361,309,380,353,397,467,422,582,437,689,445,775,448,775,453,688,450,582,443,466,427,351,402,307,385,269,366"/>
 <area shape="rect" id="Node000016" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="618,388,704,413"/>
 <area shape="poly" id="edge20_Node000014_Node000016" title=" " alt="" coords="289,359,352,373,487,388,603,396,603,401,487,394,352,378,288,364"/>
-<area shape="rect" id="Node000018" href="$chronology_8c.html#af95f3e53eb47667a4ae3da13fecc23d1" title="TODO: Describe function." alt="" coords="352,337,533,363"/>
+<area shape="rect" id="Node000018" href="$chronology_8c.html#af95f3e53eb47667a4ae3da13fecc23d1" title="function that populate chronology buttons" alt="" coords="352,337,533,363"/>
 <area shape="poly" id="edge23_Node000014_Node000018" title=" " alt="" coords="288,347,337,347,337,353,288,353"/>
-<area shape="rect" id="Node000019" href="$chronology_8c.html#a7ec7903a95121d6e773888be9b0176eb" title="TODO: Describe function." alt="" coords="354,288,531,313"/>
+<area shape="rect" id="Node000019" href="$chronology_8c.html#a5cf5997f8c26419de3228a297019b0bc" title="populate the cHronology circle with their colors" alt="" coords="354,288,531,313"/>
 <area shape="poly" id="edge25_Node000014_Node000019" title=" " alt="" coords="288,337,373,315,375,320,289,342"/>
 <area shape="poly" id="edge22_Node000016_Node000015" title=" " alt="" coords="705,409,783,430,781,435,704,414"/>
 <area shape="rect" id="Node000017" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="792,388,905,413"/>
 <area shape="poly" id="edge21_Node000016_Node000017" title=" " alt="" coords="704,398,776,398,776,403,704,403"/>
 <area shape="poly" id="edge24_Node000018_Node000016" title=" " alt="" coords="502,361,604,385,603,390,501,366"/>
-<area shape="rect" id="Node000020" href="$chronology_8c.html#af4804828a994a0d76b79da462ad1580a" title="TODO: Describe function." alt="" coords="581,288,741,313"/>
+<area shape="rect" id="Node000020" href="$chronology_8c.html#af4804828a994a0d76b79da462ad1580a" title="converts the number associated to the color to its color char" alt="" coords="581,288,741,313"/>
 <area shape="poly" id="edge26_Node000019_Node000020" title=" " alt="" coords="532,298,566,298,566,303,532,303"/>
 <area shape="rect" id="Node000021" href="$game_8c.html#afe0d6ca1d0ba6b6e45490d996b21cdac" title="Action that the menu performs when the stick goes left, primarly changing selection and imposing logi..." alt="" coords="617,337,705,363"/>
 <area shape="poly" id="edge27_Node000019_Node000021" title=" " alt="" coords="504,311,603,334,601,339,502,317"/>

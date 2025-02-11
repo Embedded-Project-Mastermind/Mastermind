@@ -1,6 +1,6 @@
 <map id="is_full" name="is_full">
 <area shape="rect" id="Node000001" title="returns if the user’s sequence is full or not" alt="" coords="333,31,388,56"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic2_8c.html#a6639e69c4f94296b4ed63b9471ba37e8" title=" " alt="" coords="5,5,149,31"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic2_8c.html#a6639e69c4f94296b4ed63b9471ba37e8" title="state for inserting the color choosen by the user in its sequence" alt="" coords="5,5,149,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="317,29,285,21,215,15,149,15,149,10,215,9,285,16,319,24"/>
 <area shape="rect" id="Node000003" href="$general_2gamelogic2_8c.html#aaf32eada42d315c1c42b5e21d002f1aa" title="inserts the selected color into the user&#39;s sequence if space is available" alt="" coords="197,31,285,56"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="318,46,286,46,286,41,318,41"/>

@@ -1,7 +1,6 @@
 var general_2gamelogic2_8c =
 [
     [ "eliminate_color", "general_2gamelogic2_8c.html#a2aac7e2824658f8ac7c8b8446fff0c9c", null ],
-    [ "fn_ELABORATE", "general_2gamelogic2_8c.html#a4a4f4707af922a7b84fdd6bdd358691e", null ],
     [ "fn_ELIMINATE_COLOR", "general_2gamelogic2_8c.html#a135da966b746514db883735bf010382f", null ],
     [ "fn_INSERT_COLOR", "general_2gamelogic2_8c.html#a6639e69c4f94296b4ed63b9471ba37e8", null ],
     [ "fn_WAIT", "general_2gamelogic2_8c.html#a816c5d4caf1a402f87e1e28b641884b4", null ],

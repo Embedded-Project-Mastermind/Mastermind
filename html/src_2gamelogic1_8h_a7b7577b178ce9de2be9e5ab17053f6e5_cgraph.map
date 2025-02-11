@@ -1,5 +1,5 @@
 <map id="fn_KEY_WH_DOUB" name="fn_KEY_WH_DOUB">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,148,107"/>
+<area shape="rect" id="Node000001" title="Call function when KEY_WH_DOUB of the finite state machine is called and generates a sequence to find..." alt="" coords="5,81,148,107"/>
 <area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a2700fd085c33e4ef923ab449276a578f" title="Analysis and parsing of the integer sequence to the char one, with an appropriate deallocation of the..." alt="" coords="196,56,366,82"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,83,180,79,181,84,148,88"/>
 <area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#a88ad662207fa03ea53b1f6be039fa066" title="Generation of a random key that allows the presence of duplicates colors." alt="" coords="197,107,365,132"/>

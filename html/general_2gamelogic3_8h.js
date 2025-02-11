@@ -2,7 +2,6 @@ var general_2gamelogic3_8h =
 [
     [ "check_difficulty", "general_2gamelogic3_8h.html#a7033367b04d502387b7ee238f8accedf", null ],
     [ "checkIfGameOver", "general_2gamelogic3_8h.html#a4ed6d290973d5c7cf85aad8061fd4587", null ],
-    [ "checkIfTenctOrCorrection", "general_2gamelogic3_8h.html#a795a538d3d72ab7f0af6867ad0bfc278", null ],
     [ "correctionsDifficultMode", "general_2gamelogic3_8h.html#a75f0aa97e826eb82b32948cd435d6185", null ],
     [ "correctionsEasyMode", "general_2gamelogic3_8h.html#a1ae9537a5e4b0e166d93c4997448030c", null ],
     [ "correctionsMediumMode", "general_2gamelogic3_8h.html#a1d23c4adc9c272ed1461ee228cf73036", null ],

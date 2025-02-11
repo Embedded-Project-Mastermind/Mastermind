@@ -1,10 +1,10 @@
 <map id="fn_ELABORATE_RESULT" name="fn_ELABORATE_RESULT">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,184,80"/>
+<area shape="rect" id="Node000001" title="Function for ELABORATE_RESULT state." alt="" coords="5,55,184,80"/>
 <area shape="rect" id="Node000002" href="$src_2gamelogic3_8c.html#a69557878ed149c80e5393e38a540eff9" title=" " alt="" coords="267,5,398,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,51,251,32,253,37,161,57"/>
-<area shape="rect" id="Node000004" href="$general_2gamelogic3_8c.html#aa1804c7734b17ce9285763af7df44751" title=" " alt="" coords="232,55,433,80"/>
+<area shape="rect" id="Node000004" href="$general_2gamelogic3_8c.html#aa1804c7734b17ce9285763af7df44751" title="Function that prints the last sequence inserted in the chronology with the respective corrections." alt="" coords="232,55,433,80"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="184,65,216,65,216,70,184,70"/>
-<area shape="rect" id="Node000005" href="$general_2gamelogic3_8c.html#af1faa7e0b10021c413bf5fb4188cfa9a" title=" " alt="" coords="284,104,380,130"/>
+<area shape="rect" id="Node000005" href="$general_2gamelogic3_8c.html#af1faa7e0b10021c413bf5fb4188cfa9a" title="Function that checks if the next state is WIN or not." alt="" coords="284,104,380,130"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="161,78,269,101,268,106,160,84"/>
 <area shape="rect" id="Node000003" href="$src_2gamelogic3_8c.html#ad3d2d227e5de9f5614af5a9898df57d1" title=" " alt="" coords="481,5,651,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="398,16,466,16,466,21,398,21"/>

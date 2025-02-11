@@ -15,29 +15,29 @@ Include dependency graph for input.\+c\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{input_8c_aad3f0b26686a346707670914702aeaad}{reset\+Array\+Input}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Function to reset the global bool array, simulating the activation of the ports. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{input_8c_a75d92ac43d65d743ff159105e3e33b60}{set\+Array\+Input}} (int val)
-\item 
+\begin{DoxyCompactList}\small\item\em Set array values based on the value inputed. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{input_8c_aa947a586c72671cffe8f528abc7f5bda}{configure\+Ports\+Input}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Setup the various ports from 1 to 6 in order, but not all the pins, because they have already active sensors connected to them, limitating the choice. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{input_8c_aead6b5c0c9e2aee938cff12f269c3216}{configure\+Interrupt\+Port\+Input}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Setup the interrupt enabling only for some ports in order to make not append some undesired behavior. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{input_8c_a961a43ddc52b1c2b16aab7f30f4ad0d9}{trigger\+Pin\+Interrupt}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em A via for creating a dummy trigger on P1.\+1, in order to reactivate an undesired stop of the system. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{input_8c_a0e001e6590fdf593eeac0f10ee1c18ff}{counter\+True}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Verify how many inputs in a period of time were performed in the array generated. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{input_8c_aa21ddc994860540031b8ee0b3a81f5f2}{find\+True}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Verify the true input in a period of time, in order to see a clear output. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{input_8c_a445b36ad7315b9af24ac6cde2f307d5e}{elaborate\+Output}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Determine which is the output action after pressing a button, it can be trigger a color or give a particular behavior if it is the back one or the confirm one. \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{input_8c_a649025105fd573f4021b9aa4b3ba5e44}{bitofstatus}} (uint8\+\_\+t status)
-\item 
+\begin{DoxyCompactList}\small\item\em Verify on a specific port IFG which is the bit activated. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{input_8c_a23a5061c21b189449ac63eef4edc75d8}{switching}} (uint8\+\_\+t status, int8\+\_\+t port)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the position of the array according to an input pin on a port. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{input_8c_a880c69c873b56ebc5af5a1c8186854cb}{configure\+Timers\+Input}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Setup the timer TIMER A0 in order to be continuous tracking and usable to get some frames of time. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{input_8c_afc6f8d83006ea3fd3139fe320edb4ec3}{at\+Least\+One\+True}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Verify that there is only one true input in a period of time, in order to see a clear output. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,8 +54,22 @@ uint8\+\_\+t \mbox{\hyperlink{input_8c_a91c43a08db7dcacca600434acdf805a5}{overfl
 {\footnotesize\ttfamily \label{input_8c_afc6f8d83006ea3fd3139fe320edb4ec3} 
 bool at\+Least\+One\+True (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Verify that there is only one true input in a period of time, in order to see a clear output. 
+
+\begin{DoxyReturn}{Returns}
+bool returning the result TRUE if there was only one input and FALSE if not 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -68,8 +82,27 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{input_8c_a649025105fd573f4021b9aa4b3ba5e44} 
 uint8\+\_\+t bitofstatus (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{status}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Verify on a specific port IFG which is the bit activated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & The IFG port status, that symbolizes the status of the pins on a port \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a uint8 corresponding to the actual bit position searched in the status 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -82,8 +115,22 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{input_8c_aead6b5c0c9e2aee938cff12f269c3216} 
 void configure\+Interrupt\+Port\+Input (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Setup the interrupt enabling only for some ports in order to make not append some undesired behavior. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -96,8 +143,22 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{input_8c_aa947a586c72671cffe8f528abc7f5bda} 
 void configure\+Ports\+Input (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Setup the various ports from 1 to 6 in order, but not all the pins, because they have already active sensors connected to them, limitating the choice. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -110,14 +171,43 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{input_8c_a880c69c873b56ebc5af5a1c8186854cb} 
 void configure\+Timers\+Input (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
+
+
+Setup the timer TIMER A0 in order to be continuous tracking and usable to get some frames of time. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
 \Hypertarget{input_8c_a0e001e6590fdf593eeac0f10ee1c18ff}\index{input.c@{input.c}!counterTrue@{counterTrue}}
 \index{counterTrue@{counterTrue}!input.c@{input.c}}
 \doxysubsubsection{\texorpdfstring{counterTrue()}{counterTrue()}}
 {\footnotesize\ttfamily \label{input_8c_a0e001e6590fdf593eeac0f10ee1c18ff} 
 int counter\+True (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Verify how many inputs in a period of time were performed in the array generated. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -130,16 +220,29 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{input_8c_a445b36ad7315b9af24ac6cde2f307d5e} 
 void elaborate\+Output (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Determine which is the output action after pressing a button, it can be trigger a color or give a particular behavior if it is the back one or the confirm one. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{input_8c_a445b36ad7315b9af24ac6cde2f307d5e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -152,8 +255,22 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{input_8c_aa21ddc994860540031b8ee0b3a81f5f2} 
 int find\+True (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Verify the true input in a period of time, in order to see a clear output. 
+
+\begin{DoxyReturn}{Returns}
+int returning the array position that has a true value 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -166,8 +283,22 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{input_8c_aad3f0b26686a346707670914702aeaad} 
 void reset\+Array\+Input (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Function to reset the global bool array, simulating the activation of the ports. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -180,16 +311,34 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{input_8c_a75d92ac43d65d743ff159105e3e33b60} 
 void set\+Array\+Input (\begin{DoxyParamCaption}\item[{int}]{val}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Set array values based on the value inputed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & In case the value belongd to the interval 0 DIMIO, then it will be set to true, like an activation, instead it will mean that the try is over and it is reseted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=273pt]{input_8c_a75d92ac43d65d743ff159105e3e33b60_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -202,16 +351,36 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{input_8c_a23a5061c21b189449ac63eef4edc75d8} 
 void switching (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{status}{, }\item[{int8\+\_\+t}]{port}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Sets the position of the array according to an input pin on a port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & The IFG port status, that symbolizes the status of the pins on a port \\
+\hline
+{\em port} & The port, that could not correspond to the reality, but to a convension with the define in .h file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{input_8c_a23a5061c21b189449ac63eef4edc75d8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -224,8 +393,22 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{input_8c_a961a43ddc52b1c2b16aab7f30f4ad0d9} 
 void trigger\+Pin\+Interrupt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+A via for creating a dummy trigger on P1.\+1, in order to reactivate an undesired stop of the system. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary Author \& Maintainer) 
+
+Alessandro Benassi (Helper) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/05 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

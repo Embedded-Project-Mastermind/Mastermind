@@ -23,43 +23,43 @@ Include dependency graph for implementations.\+c\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{implementations_8c_a5b980628dc75e57228c103881e9246af}{reset\+\_\+\+Screen}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em it resets all default\textquotesingle{}s colors and clear the display \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_abd724b53de6eb2de11d29407bb874691}{graphics\+\_\+\+Init}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em initializes the display and drivers \end{DoxyCompactList}\item 
 int32\+\_\+t \mbox{\hyperlink{implementations_8c_ae3d236b3ca1dca7c0d774ecd718bc62f}{get\+CenteredX}} (Graphics\+\_\+\+Rectangle rect)
-\item 
+\begin{DoxyCompactList}\small\item\em gives back the x of the center of the given rectangle \end{DoxyCompactList}\item 
 int32\+\_\+t \mbox{\hyperlink{implementations_8c_ae57d3f9fa9c50aaabe2f4824209ebe51}{get\+CenteredY}} (Graphics\+\_\+\+Rectangle rect)
-\item 
+\begin{DoxyCompactList}\small\item\em gives back the y of the center of the given rectangle \end{DoxyCompactList}\item 
 int32\+\_\+t \mbox{\hyperlink{implementations_8c_a17fb5785fa10393596b1c10e580fee1b}{choose\+Color\+Rect}} (\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\+\_\+\+State}} state, int32\+\_\+t color)
-\item 
+\begin{DoxyCompactList}\small\item\em chooses the color of the button given its current state \end{DoxyCompactList}\item 
 int32\+\_\+t \mbox{\hyperlink{implementations_8c_ac2bb0254f8bef6f471cc1e1e4aff3fb2}{choose\+Color\+Text}} (\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\+\_\+\+State}} state, int32\+\_\+t color)
-\item 
+\begin{DoxyCompactList}\small\item\em chooses the color of the text on the button given the button\textquotesingle{}s current state \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_aaa2bed682fe325d72adc6d9ee50b15b9}{focusedhandle}} (\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\+\_\+\+State}} state, Graphics\+\_\+\+Rectangle rect, int32\+\_\+t color)
-\item 
+\begin{DoxyCompactList}\small\item\em visually updates a button when it is focused \end{DoxyCompactList}\item 
 int8\+\_\+t \mbox{\hyperlink{implementations_8c_aea1dda1e46fe79f2ce1e1f4afb8391e0}{find\+Selected}} (\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}\mbox{[}$\,$\mbox{]}, int8\+\_\+t size)
-\item 
+\begin{DoxyCompactList}\small\item\em finds the selected button in all the buttons of an interface \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_ada4cd14b9689d4fe9b9de328e4724964}{draw\+Button}} (\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} button, int32\+\_\+t rect\+\_\+color, int32\+\_\+t text\+\_\+color, int8\+\_\+t pos\+\_\+selected)
-\item 
+\begin{DoxyCompactList}\small\item\em draws the button in the given position with the right color \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_ad52f2c05d7aee61aba7bfcc147efcab5}{rectangle\+With\+Text}} (Graphics\+\_\+\+Rectangle rect, int32\+\_\+t color\+Rect, \mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}} text, int32\+\_\+t color\+Text)
-\item 
+\begin{DoxyCompactList}\small\item\em it draws a rectangle with a text centered in it \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_a7850b120bb168cda34d0ff446cd53845}{handle\+Out}} (\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}\mbox{[}$\,$\mbox{]}, uint8\+\_\+t \mbox{\hyperlink{implementations_8h_a1e1320cfd39f6febcf8e4eb2b542f424}{position}}, int8\+\_\+t size)
-\item 
+\begin{DoxyCompactList}\small\item\em it handles the status change of old focused button \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_a0f3ea1e3abed721e539b1332079664c4}{handle\+In}} (\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}\mbox{[}$\,$\mbox{]}, uint8\+\_\+t \mbox{\hyperlink{implementations_8h_a1e1320cfd39f6febcf8e4eb2b542f424}{position}}, int8\+\_\+t size)
-\item 
+\begin{DoxyCompactList}\small\item\em it handles the status change of new focused button \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_ad37616d1eaf8c88801edb04ba22d15c6}{hardware\+\_\+\+Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em initializa all the hardware, including ports and interrupts \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_ae6b98301bc187c6f3b974c2283459932}{handle\+\_\+buttons}} (\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}\mbox{[}$\,$\mbox{]})
-\item 
+\begin{DoxyCompactList}\small\item\em handles the prev and next buttons \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_a7b8a1f6ee64675c2f14e0c4d61b10092}{handle\+Selection}} (\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}\mbox{[}$\,$\mbox{]})
-\item 
+\begin{DoxyCompactList}\small\item\em selects the currently focused button \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_af4097a2a104a8d16ccf1344d0e9f25b1}{handle\+Deselection}} (\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}\mbox{[}$\,$\mbox{]})
-\item 
+\begin{DoxyCompactList}\small\item\em Resets all buttons to "{}\+STANDARD"{}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_ad356fdfc13b47974aa06a7924485fd66}{init\+Array}} (\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \mbox{\hyperlink{input_8c_acfee743be70af26f7fb63dc854b1c429}{array}}\mbox{[}$\,$\mbox{]}, int size)
-\item 
+\begin{DoxyCompactList}\small\item\em it finalizes out buttons\textquotesingle{} array putting in it the prev and next button and modifing the states \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_aca49222800e07bf4638969b29685b388}{acquire\+Mutex}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em it activates the mutex \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{implementations_8c_a02156d12d2735f76feebf107ff4346a9}{release\+Mutex}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em it releases the mutex \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -74,8 +74,24 @@ volatile bool \mbox{\hyperlink{implementations_8c_ade160ca745bd047c50bd978a3546b
 {\footnotesize\ttfamily \label{implementations_8c_aca49222800e07bf4638969b29685b388} 
 void acquire\+Mutex (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+it activates the mutex 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -88,8 +104,31 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_a17fb5785fa10393596b1c10e580fee1b} 
 int32\+\_\+t choose\+Color\+Rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\+\_\+\+State}}}]{state}{, }\item[{int32\+\_\+t}]{color}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+chooses the color of the button given its current state 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & current state of the button \\
+\hline
+{\em the} & current color of the button \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the choosen color 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -102,8 +141,31 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_ac2bb0254f8bef6f471cc1e1e4aff3fb2} 
 int32\+\_\+t choose\+Color\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\+\_\+\+State}}}]{state}{, }\item[{int32\+\_\+t}]{color}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+chooses the color of the text on the button given the button\textquotesingle{}s current state 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & current state of the button \\
+\hline
+{\em the} & current color of the text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the choosen color 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -116,16 +178,42 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_ada4cd14b9689d4fe9b9de328e4724964} 
 void draw\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}}}]{button}{, }\item[{int32\+\_\+t}]{rect\+\_\+color}{, }\item[{int32\+\_\+t}]{text\+\_\+color}{, }\item[{int8\+\_\+t}]{pos\+\_\+selected}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+draws the button in the given position with the right color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & button \\
+\hline
+{\em the} & button\textquotesingle{}s color \\
+\hline
+{\em the} & button\textquotesingle{}s text color \\
+\hline
+{\em then} & position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{implementations_8c_ada4cd14b9689d4fe9b9de328e4724964_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -138,8 +226,31 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_aea1dda1e46fe79f2ce1e1f4afb8391e0} 
 int8\+\_\+t find\+Selected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}}}]{array}{\mbox{[}$\,$\mbox{]}, }\item[{int8\+\_\+t}]{size}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+finds the selected button in all the buttons of an interface 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & buttons\textquotesingle{} array \\
+\hline
+{\em the} & size of the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the position of the button in the "{}selected"{} state (if no button is selected, -\/1) 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -152,16 +263,40 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_aaa2bed682fe325d72adc6d9ee50b15b9} 
 void focusedhandle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{graphics_8h_a7fd021312aff57a6c6959f0e7990e21f}{Button\+\_\+\+State}}}]{state}{, }\item[{Graphics\+\_\+\+Rectangle}]{rect}{, }\item[{int32\+\_\+t}]{color}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+visually updates a button when it is focused 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & state of the button \\
+\hline
+{\em the} & button \\
+\hline
+{\em the} & button\textquotesingle{}s color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=287pt]{implementations_8c_aaa2bed682fe325d72adc6d9ee50b15b9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -174,8 +309,29 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_ae3d236b3ca1dca7c0d774ecd718bc62f} 
 int32\+\_\+t get\+CenteredX (\begin{DoxyParamCaption}\item[{Graphics\+\_\+\+Rectangle}]{rect}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+gives back the x of the center of the given rectangle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & rectangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the x of the center of the given rectangle 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -188,8 +344,29 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_ae57d3f9fa9c50aaabe2f4824209ebe51} 
 int32\+\_\+t get\+CenteredY (\begin{DoxyParamCaption}\item[{Graphics\+\_\+\+Rectangle}]{rect}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+gives back the y of the center of the given rectangle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & rectangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the y of the center of the given rectangle 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -202,16 +379,31 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_abd724b53de6eb2de11d29407bb874691} 
 void graphics\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+initializes the display and drivers 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{implementations_8c_abd724b53de6eb2de11d29407bb874691_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -224,16 +416,36 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_ae6b98301bc187c6f3b974c2283459932} 
 void handle\+\_\+buttons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}}}]{array}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+handles the prev and next buttons 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & buttons\textquotesingle{} array of the current interface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{implementations_8c_ae6b98301bc187c6f3b974c2283459932_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -246,8 +458,29 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_af4097a2a104a8d16ccf1344d0e9f25b1} 
 void handle\+Deselection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}}}]{array}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Resets all buttons to "{}\+STANDARD"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buttons\textquotesingle{}} & array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -260,16 +493,40 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_a0f3ea1e3abed721e539b1332079664c4} 
 void handle\+In (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}}}]{array}{\mbox{[}$\,$\mbox{]}, }\item[{uint8\+\_\+t}]{position}{, }\item[{int8\+\_\+t}]{size}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+it handles the status change of new focused button 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & buttons\textquotesingle{} array \\
+\hline
+{\em the} & position of the new focused button \\
+\hline
+{\em the} & size opf the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{implementations_8c_a0f3ea1e3abed721e539b1332079664c4_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -282,16 +539,40 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_a7850b120bb168cda34d0ff446cd53845} 
 void handle\+Out (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}}}]{array}{\mbox{[}$\,$\mbox{]}, }\item[{uint8\+\_\+t}]{position}{, }\item[{int8\+\_\+t}]{size}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+it handles the status change of old focused button 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & buttons\textquotesingle{} array \\
+\hline
+{\em the} & position of the old focused button \\
+\hline
+{\em the} & size opf the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{implementations_8c_a7850b120bb168cda34d0ff446cd53845_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -304,8 +585,29 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_a7b8a1f6ee64675c2f14e0c4d61b10092} 
 void handle\+Selection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}}}]{array}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+selects the currently focused button 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buttons\textquotesingle{}} & array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -318,16 +620,31 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_ad37616d1eaf8c88801edb04ba22d15c6} 
 void hardware\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+initializa all the hardware, including ports and interrupts 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{implementations_8c_ad37616d1eaf8c88801edb04ba22d15c6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -340,16 +657,38 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_ad356fdfc13b47974aa06a7924485fd66} 
 void init\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}}}]{array}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{size}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+it finalizes out buttons\textquotesingle{} array putting in it the prev and next button and modifing the states 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & buttons\textquotesingle{} array of the current interface \\
+\hline
+{\em the} & size of the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=238pt]{implementations_8c_ad356fdfc13b47974aa06a7924485fd66_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -362,16 +701,42 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_ad52f2c05d7aee61aba7bfcc147efcab5} 
 void rectangle\+With\+Text (\begin{DoxyParamCaption}\item[{Graphics\+\_\+\+Rectangle}]{rect}{, }\item[{int32\+\_\+t}]{color\+Rect}{, }\item[{\mbox{\hyperlink{struct_graphics___text}{Graphics\+\_\+\+Text}}}]{text}{, }\item[{int32\+\_\+t}]{color\+Text}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+it draws a rectangle with a text centered in it 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & rectangle \\
+\hline
+{\em the} & rectangle\textquotesingle{}s color \\
+\hline
+{\em the} & text \\
+\hline
+{\em the} & text\textquotesingle{}s color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=287pt]{implementations_8c_ad52f2c05d7aee61aba7bfcc147efcab5_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -384,16 +749,31 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_a02156d12d2735f76feebf107ff4346a9} 
 void release\+Mutex (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+it releases the mutex 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=305pt]{implementations_8c_a02156d12d2735f76feebf107ff4346a9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -406,8 +786,24 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{implementations_8c_a5b980628dc75e57228c103881e9246af} 
 void reset\+\_\+\+Screen (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+it resets all default\textquotesingle{}s colors and clear the display 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Matteo Gottardelli (Primary author) 
+
+Niccolo Cristoforetti (Helper) 
+
+Daniele Calvo (Maintainer) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/10-\/5 
+\end{DoxyDate}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

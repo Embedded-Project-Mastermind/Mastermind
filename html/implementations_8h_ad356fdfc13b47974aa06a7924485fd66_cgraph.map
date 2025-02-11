@@ -1,5 +1,5 @@
 <map id="initArray" name="initArray">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,75,31"/>
-<area shape="rect" id="Node000002" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title=" " alt="" coords="123,5,216,31"/>
+<area shape="rect" id="Node000001" title="it finalizes out buttons&#39; array putting in it the prev and next button and modifing the states" alt="" coords="5,5,75,31"/>
+<area shape="rect" id="Node000002" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title="finds the selected button in all the buttons of an interface" alt="" coords="123,5,216,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,16,107,16,107,21,75,21"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="fn_START" name="fn_START">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,88,105"/>
+<area shape="rect" id="Node000001" title="Call function when START of the finite state machine is called and initializes the game after selecti..." alt="" coords="5,80,88,105"/>
 <area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#afb2e75602fcc752a18fcfc0ba165ad00" title="Initialize the game with parameters selected from the GUI interface from DIMENSION,..." alt="" coords="136,80,209,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,90,120,90,120,95,88,95"/>
 <area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a26e20921c3fb3ec3b86ce90e18514575" title="Allocation for a boolean array, ensuring that it is not already allocated." alt="" coords="258,54,412,80"/>

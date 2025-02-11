@@ -21,5 +21,6 @@ var general_2gamelogic1_8h =
     [ "makeArrayEmpty_Char", "general_2gamelogic1_8h.html#abf0d75f005530b95f776456baa7840c2", null ],
     [ "makeArrayEmpty_Int", "general_2gamelogic1_8h.html#a85f585c5cf928dd3f6aa31b07f4ff1f1", null ],
     [ "presence_Double", "general_2gamelogic1_8h.html#af42b50d4086354e6b49eac80239cd8d4", null ],
+    [ "random_int", "general_2gamelogic1_8h.html#a5e9db8c78f3d92aa520e8ebd811aa3a9", null ],
     [ "resetTentative", "general_2gamelogic1_8h.html#a349e30260991f4d42dc6e3b575108891", null ]
 ];

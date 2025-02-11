@@ -1,7 +1,7 @@
 <map id="releaseMutex" name="releaseMutex">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,105,56"/>
-<area shape="rect" id="Node000002" href="$joystick_8c.html#aba5554d566a1a96bb319050ee2a87ea5" title=" " alt="" coords="153,5,305,31"/>
+<area shape="rect" id="Node000001" title="it releases the mutex" alt="" coords="5,31,105,56"/>
+<area shape="rect" id="Node000002" href="$joystick_8c.html#aba5554d566a1a96bb319050ee2a87ea5" title="enabling the interrupts for the two joystick channels P6.0 and P4.4" alt="" coords="153,5,305,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,34,137,29,138,34,105,39"/>
-<area shape="rect" id="Node000003" href="$joystick_8c.html#a4023d983e6edbb9ec1c19264b9f5d063" title=" " alt="" coords="177,55,281,80"/>
+<area shape="rect" id="Node000003" href="$joystick_8c.html#a4023d983e6edbb9ec1c19264b9f5d063" title="In order to handle the various interrupts, we have to setup the various sending of interrupts accordi..." alt="" coords="177,55,281,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,48,162,56,161,61,105,53"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="key_generation_wout_doub" name="key_generation_wout_doub">
 <area shape="rect" id="Node000001" title="Generation of a random key that doesn&#39;t allow the presence of duplicates colors." alt="" coords="214,5,393,31"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a6dfdeacaef5a5d37960e2575015b6516" title=" " alt="" coords="5,5,166,31"/>
+<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a6dfdeacaef5a5d37960e2575015b6516" title="Call function when KEY_WOUT_DOUB of the finite state machine is called and generates a sequence to fi..." alt="" coords="5,5,166,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,21,166,21,166,16,198,16"/>
 </map>
