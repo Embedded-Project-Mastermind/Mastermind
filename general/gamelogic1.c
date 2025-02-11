@@ -19,7 +19,8 @@ int i, j;
 void emergency() {
     deallocate_Char(game.seq_to_guess); // Deallocate sequence memory
     deallocate_Char(game.chronology); // Deallocate chronology memory
-    deallocate_Bool(game.flags); //Deallocate flag memory
+    deallocate_Bool(game.flagsGuess); //Deallocate flag memory
+    deallocate_Bool(game.flagsUsr); //Deallocate flag memory
     deallocate_Char(tentative.seq_user);
     deallocate_Char(tentative.sol_user);
     for (i = 0; i < sizes[CHRONOLOGY]; i++) {
@@ -202,7 +203,8 @@ void initGame(int16_t dim, int8_t diff, bool doubles, int16_t tents) {
     else {
         allocate_in_Heap_Char(&game.chronology, 7, game.dim * 2);
     }
-    allocate_in_Heap_Bool(&game.flags, 1, game.dim);  //allocate memory for flags
+    allocate_in_Heap_Bool(&game.flagsGuess, 1, game.dim);  //allocate memory for flags
+    allocate_in_Heap_Bool(&game.flagsUsr, 1, game.dim);  //allocate memory for flags
 }
 /**
  * @brief Generation of a random integer with two limits
