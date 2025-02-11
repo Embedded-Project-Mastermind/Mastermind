@@ -35,9 +35,11 @@ The MSP432 board is used to take the input of 8 buttons setted up on an external
 
 ```
 Mastermind
-┣ .github/workflows                        # Doxygen
-┣ .vscode
+┣ .github/workflows                        
+┣ .vscode                              
 ┣ LcdDriver
+┣ html
+┣ latex
 ┣ general                                  # All the source code
 ┃ ┣ bitmap.h                               # Link between peripherals and the microcontroller
 ┃ ┣ buttons.c                              # Manage physical buttons + "back" and "next" buttons
@@ -55,11 +57,11 @@ Mastermind
 ┃ ┣ fsm.h                                  # Defines states, structures, and global variables for the finite state machine implementation
 ┃ ┣ game.c                                 # Manage the main interface where the user can guess the sequence
 ┃ ┣ game.h                                 # Headers for game.c
-┃ ┣ gamelogic1.c                           # First part of the basic logic
+┃ ┣ gamelogic1.c                           # First part of the basic logic, with the password generation
 ┃ ┣ gamelogic1.h                           # Headers for gamelogic1.c
-┃ ┣ gamelogic2.c                           # Second part of the basic logic
+┃ ┣ gamelogic2.c                           # Second part of the basic logic, with the input management
 ┃ ┣ gamelogic2.h                           # Headers for gamelogic2.c
-┃ ┣ gamelogic3.c                           # Third part of the basic logic
+┃ ┣ gamelogic3.c                           # Third part of the basic logic, with the input and result elaboration
 ┃ ┣ gamelogic3.h                           # Headers for gamelogic3.c
 ┃ ┣ graphics.h                             # Defines graphics states, UI elements, colors, and structures for rendering on an MSP432 display
 ┃ ┣ implementations.c                      # Basic functions for the right functioning of all the interfaces
@@ -70,24 +72,21 @@ Mastermind
 ┃ ┣ input.h                                # Headers for input.c
 ┃ ┣ joystick.c                             # Handles joystick input, screen navigation, timer, delay, and ADC for embedded system joystick control
 ┃ ┣ joystick.h                             # Headers for joystick.c
-┃ ┣ main.c                                 # Calls the various states in out state machine
-┃ ┣ read_me.c                              # 
+┃ ┣ main.c                                 # Calls the various states in out state machine 
 ┃ ┣ start.c                                # Manage the first interface, with the start button and the logo
 ┃ ┣ start.h                                # Headers for start.c
 ┃ ┣ tentatives.c                           # Manage the interface to select the number of tentatives you want to have to guess the sequence
 ┃ ┗ tentatives.h                           # Headers for tentatives.c
-┣ html                                     #
-┣ latex
 ┣ src                                      # Obsolete version, with only the basic logic and with console response
-┃ ┣ fsm.h                                  # 
-┃ ┣ gamelogic1.c                           # 
-┃ ┣ gamelogic1.h                           # 
-┃ ┣ gamelogic2.c                           # 
-┃ ┣ gamelogic2.h                           # 
-┃ ┣ gamelogic3.c                           # 
-┃ ┣ gamelogic3.h                           # 
-┃ ┗ main.c                                 # 
-┗ 
+┃ ┣ fsm.h                                  # old version, but very similar to the newer one
+┃ ┣ gamelogic1.c                           # Old version, with the password generation
+┃ ┣ gamelogic1.h                           # Headers for gamelogic1.c
+┃ ┣ gamelogic2.c                           # Old version, with the input management from the console
+┃ ┣ gamelogic2.h                           # Headers for gamelogic2.c
+┃ ┣ gamelogic3.c                           # Third part of the basic logic, with the input elaboration and result print on console
+┃ ┣ gamelogic3.h                           # Headers for gamelogic3.c
+┃ ┗ main.c                                 # Old version, calls the various states in out state machine
+┗ read_me.txt                              # Implementations' instructions 
 ```
 
 [Back to top](#table-of-contents)
