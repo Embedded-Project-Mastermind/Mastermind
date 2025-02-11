@@ -26,7 +26,8 @@ typedef struct {
     int tentatives;            // Total number of allowed attempts
     char* seq_to_guess;        // Sequence to be guessed
     char* chronology;          // History of attempts
-    bool* flags;               // Flag of boolean
+    bool* flagsGuess;               // Flag of boolean for the seq to guess part
+    bool* flagsUsr;               // Flag of boolean for the seq user part
 } Game;
 
 typedef struct {
