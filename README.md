@@ -28,6 +28,7 @@ The purpose of the project is to develop a simple version of the game Mastermind
 The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit. each button has the pin which it's connected to and then it is connected to gtound on the other side. So when the button is released the internal pull-up resistor will put the value to high, while when the button is pressed the value will be low as it is connected to the ground.
 
 Disegno del circuito e tabella con i pin
+For the left side of the board, the connected pins related to the colors are the following:
 <table>
   <tr>
     <th>Color</th>
@@ -42,6 +43,26 @@ Disegno del circuito e tabella con i pin
     <th>3.3</th>
     <th>4.7</th>
     <th>5.4</th>
+  </tr>
+</table>
+
+For the right side the pins are:
+<table>
+  <tr>
+    <th>Color</th>
+    <th>Red</th>
+    <th>White</th>
+    <th>Purple</th>
+    <th>Blue</th>
+    <th>Yellow</th>
+  </tr>
+  <tr>
+    <th>Pin</th>
+    <th>3.0</th>
+    <th>5.6</th>
+    <th>6.6</th>
+    <th>5.2</th>
+    <th>3.6</th>
   </tr>
 </table>
 
