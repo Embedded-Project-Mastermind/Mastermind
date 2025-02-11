@@ -46,8 +46,8 @@ void drawTentatives(int elems) {
 void fn_TENTATIVE(void) {
     reset_Screen();
     //DRAW FUNCTION
-    reset_Screen();
     initArray(tent_buttons, sizes[TENTATIVE]);
+    tent_buttons[sizes[TENTATIVE]-3].state=DISABLED;
     rectangleWithText(upperRect, FILL_UPPER_RECT, labelText, SELECTED_COLOR);
     drawTentatives(sizes[TENTATIVE]);
 }
