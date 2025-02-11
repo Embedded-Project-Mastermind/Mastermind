@@ -34,7 +34,7 @@
 void insertInChronologyColor(int8_t* seq){
     //j=checkIfTenctOrCorrection(seq[0]);  //The j index is used to insert correctly in the chronology the sequence or corrections
     for(i=0; i<game.dim; i++){
-        //game.chronology[ game.dim * 2 * game.count_tent + j + i ]=seq[i];  //The minus is used because when it's add the corrections the tenctative is already the next
+        //game.chronology[ game.dim * 2 * game.count_tent + j + i ]=seq[i];  //The minus is used because when it's add the corrections the tentative is already the next
         game.chronology[ game.dim * 2 * game.count_tent + i ]=seq[i];
     }
 }
@@ -49,7 +49,7 @@ void insertInChronologyColor(int8_t* seq){
 void insertInChronologyRes(int8_t* seq){
     //j=checkIfTenctOrCorrection(seq[0]);  //The j index is used to insert correctly in the chronology the sequence or corrections
     for(i=0; i<game.dim; i++){
-        //game.chronology[ game.dim * 2 * game.count_tent + j + i ]=seq[i];  //The minus is used because when it's add the corrections the tenctative is already the next
+        //game.chronology[ game.dim * 2 * game.count_tent + j + i ]=seq[i];  //The minus is used because when it's add the corrections the tentative is already the next
         game.chronology[ game.dim * 2 * (game.count_tent-1) + game.dim + i ]=seq[i];
     }
 }
@@ -101,25 +101,29 @@ int8_t check_difficulty(void){
  * @date 2024-09-29
  */
 void correctionsEasyMode(void){
-    makeArrayEmpty_Bool(game.flags, 1, game.dim);  //Function for set all the flags to false
+    int i, j;
+    makeArrayEmpty_Bool(game.flagsGuess, 1, game.dim);  //Function for set all the flags to false
+    makeArrayEmpty_Bool(game.flagsUsr, 1, game.dim);  //Function for set all the flags to false
     for(i=0; i<game.dim; i++){
-        if(tentative.seq_user[i]==game.seq_to_guess[i]){  //If the colour in the seq user corrispond to the colour of the sequence to guess in the same position
-            tentative.sol_user[i]= 'X';  //That means the colour is correct and in the right position
-            game.flags[i]=true;
+        if(tentative.seq_user[i]==game.seq_to_guess[i]){  //If the color in the seq user correspond to the color of the sequence to guess in the same position
+            tentative.sol_user[i]= 'X';  //That means the color is correct and in the right position
+            game.flagsUsr[i]=true;
+            game.flagsGuess[i]=true;
         }
     }
     for (i=0; i<game.dim; i++) {
         for(j=0; j<game.dim; j++){
-            if(tentative.seq_user[i]==game.seq_to_guess[j]){  //If the colour in the seq user corrispond to the colour of the sequence to guess in at least one position
-                if(game.flags[j]!=true && game.flags[i]!=true){  //If the colour in that position of the seq_to_guess was already been selected it must be ! not O
-                    tentative.sol_user[i]= 'O';  //That means the colour is correct but in wrong position
-                    game.flags[j]=true;
+            if(tentative.seq_user[i]==game.seq_to_guess[j]){  //If the color in the seq user correspond to the color of the sequence to guess in at least one position
+                if(game.flagsUsr[i]!=true && game.flagsGuess[j]!=true){  //If the color in that position of the seq_to_guess was already been selected it must be ! not O
+                    tentative.sol_user[i]= 'O';  //That means the color is correct but in wrong position
+                    game.flagsUsr[i]=true;
+                    game.flagsGuess[j]=true;
                     break;
                 }
             }
         }
-        if(tentative.sol_user[i]!='O' && tentative.sol_user[i]!='X'){  //If the colour doesn't exist in the sequence to guess (that means the output is neither 'O' and 'X')
-            tentative.sol_user[i]= '!';  //The colour isn't correct
+        if(tentative.sol_user[i]!='O' && tentative.sol_user[i]!='X'){  //If the color doesn't exist in the sequence to guess (that means the output is neither 'O' and 'X')
+            tentative.sol_user[i]= '!';  //The color isn't correct
         }
     }
 }
@@ -140,14 +144,14 @@ void correctionsMediumMode(void){
             case 'O': o++; break;
             case '!': break;
             default: exit(1);
-        }  //This switch count the number of X O for reordinate the corrections for the medium mode
+        }  //This switch count the number of X O for ordinate the corrections for the medium mode
     }
     for(i=0; i<game.dim; i++){
         if(x>0){
-            tentative.sol_user[i]='X';  //Firstly it's inserted the X based on the number the upper switch have finded
+            tentative.sol_user[i]='X';  //Firstly it's inserted the X based on the number the upper switch have found
             x--;
         } else if (o>0){
-            tentative.sol_user[i]='O';  //Secondly it's inserted the Y based on the number the upper switch have finded
+            tentative.sol_user[i]='O';  //Secondly it's inserted the Y based on the number the upper switch have found
             o--;
         } else {
             tentative.sol_user[i]='!';  //Lastly it's inserted the !
@@ -296,7 +300,7 @@ void fn_ELABORATE_RESULT(void){
     printLastTentativeInChronology();  //Print the complete output of the last tentative
     displayResultsOnScreen();
     current_state = winCondition() ? WIN : RESET_TENT; // Transition to the next state based on the win condition
-    if(game.tentatives!=0) {
+    if(game.tentatives!=0 && current_state!=WIN) {
         if(checkIfGameOver()) {
             current_state=GAME_OVER;
         }
@@ -319,7 +323,7 @@ void fn_ELABORATE_RESULT(void){
  * @date 2024-09-29
  */
 void fn_WIN(void){
-    printf("The sequence is correct: WIN in %d tenctatives!!!\n",
+    printf("The sequence is correct: WIN in %d tentatives!!!\n",
            game.count_tent);  //WIN state
     current_state=ERROR;  //Transition to the ERROR state
 }
