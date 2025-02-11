@@ -95,7 +95,8 @@ void initGame(int dim, char diff, bool doubles, int tents) {
     game.tentatives = tents;             // Set the total number of attempts
     allocate_in_Heap_Char(&game.seq_to_guess, 1, game.dim); // Allocate memory for the sequence to guess
     allocate_in_Heap_Char(&game.chronology, game.tentatives, game.dim * 2); // Allocate memory for attempt history
-    allocate_in_Heap_Bool(&game.flags, 1, game.dim);  //allocate memory for flags
+    allocate_in_Heap_Bool(&game.flagsGuess, 1, game.dim);  //allocate memory for flags
+    allocate_in_Heap_Bool(&game.flagsUsr, 1, game.dim);  //allocate memory for flags
 }
 
 /* Generate a random integer between min and max */
