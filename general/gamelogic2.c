@@ -185,19 +185,6 @@ void fn_WAIT(void) {
 //  handle_wait(value);     //calls handle_wait(), which handles the input and redirects to the correct state
 }
 /**
- * @brief state for when he received an input (now useless)
- * @return void
- * @author Alessandro Benassi & Daniele Calvo (Primary Author)
- * @author Matteo Gottardelli (Helper)
- * @author Alessandro Benassi & Daniele Calvo (Maintainer)
- * @date 2024-09-27
- */
-void fn_ELABORATE(void){ //da rimuovere
-/*  if(elaborate()){ current_state = INSERT_COLOR; }
-    else { current_state = WAIT; }*/
-    //current_state = (elaborate()) ? INSERT_COLOR : WAIT;  //if the input is correct it changes state to insert the color, otherwise returns to wait
-}
-/**
  * @brief state for inserting the color choosen by the user in its sequence
  * @return void
  * @author Alessandro Benassi & Daniele Calvo (Primary Author)
