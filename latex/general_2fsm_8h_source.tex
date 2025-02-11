@@ -31,24 +31,25 @@
 \DoxyCodeLine{00027\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_game_a08fea7da8e77a8bcee60f645bdb02df3}{tentatives}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Total\ number\ of\ allowed\ attempts}}
 \DoxyCodeLine{00028\ \ \ \ \ int8\_t*\ \mbox{\hyperlink{struct_game_a6902027b7573ef7327f63d1ce212058e}{seq\_to\_guess}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sequence\ to\ be\ guessed}}
 \DoxyCodeLine{00029\ \ \ \ \ int8\_t*\ \mbox{\hyperlink{struct_game_a755d9ddab09eea4df4db703ebf286de8}{chronology}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ History\ of\ attempts}}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{struct_game_af3536e48f60e7f23419a97fea48afbb8}{flags}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flag\ of\ boolean}}
-\DoxyCodeLine{00031\ \}\ \mbox{\hyperlink{struct_game}{Game}};}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{00034\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_tentative_a8578a64cc5e97db613657e0a0c4db167}{count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Count\ of\ user\ attempts}}
-\DoxyCodeLine{00035\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_tentative_ab87b7717009a4b6371715a611b843e18}{dim}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dimension\ of\ user's\ sequence}}
-\DoxyCodeLine{00036\ \ \ \ \ int8\_t*\ \mbox{\hyperlink{struct_tentative_a5e2915e523c1df819a984972067a6c8b}{seq\_user}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ User's\ guessed\ sequence}}
-\DoxyCodeLine{00037\ \ \ \ \ int8\_t*\ \mbox{\hyperlink{struct_tentative_a8f952b34f34f5f570171b39638fbadfd}{sol\_user}};}
-\DoxyCodeLine{00038\ \}\ \mbox{\hyperlink{struct_tentative}{Tentative}};}
-\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44}{acquireMutex}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5}{releaseMutex}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00041\ \textcolor{comment}{/*Global\ variables*/}}
-\DoxyCodeLine{00042\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_game}{Game}}\ \mbox{\hyperlink{general_2fsm_8h_ac6a5ed6191fcf3a5bf0445921feb4f48}{game}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Game\ struct\ instance}}
-\DoxyCodeLine{00043\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_tentative}{Tentative}}\ \mbox{\hyperlink{general_2fsm_8h_a645ef54f5ed9e77e09c0edb057a4d15a}{tentative}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tentative\ struct\ instance}}
-\DoxyCodeLine{00044\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}\ \mbox{\hyperlink{general_2fsm_8h_a54138d08678dd972a2c9b13e069fd91a}{current\_state}};\ \ \ \ \textcolor{comment}{//\ Initialize\ current\ state}}
-\DoxyCodeLine{00045\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{general_2fsm_8h_acb559820d9ca11295b4500f179ef6392}{i}},\ \mbox{\hyperlink{general_2fsm_8h_a37d972ae0b47b9099e30983131d31916}{j}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Variables\ acting\ like\ counters\ for\ for-\/cycles}}
-\DoxyCodeLine{00046\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{general_2fsm_8h_a8401524759ad65a7d2cf99141ae1c5c3}{interruptFlag}};}
-\DoxyCodeLine{00047\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{general_2fsm_8h_ade160ca745bd047c50bd978a3546b708}{mutex}};}
-\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ FSM\_H\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{struct_game_a52c30108d0d1a24ff70fcd4a8c420b5b}{flagsGuess}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flag\ of\ boolean\ for\ the\ seq\ to\ guess\ part}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{struct_game_aecfbeb2d860d8f03260e7df95cb90f6d}{flagsUsr}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flag\ of\ boolean\ for\ the\ seq\ user\ part}}
+\DoxyCodeLine{00032\ \}\ \mbox{\hyperlink{struct_game}{Game}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00035\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_tentative_a8578a64cc5e97db613657e0a0c4db167}{count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Count\ of\ user\ attempts}}
+\DoxyCodeLine{00036\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_tentative_ab87b7717009a4b6371715a611b843e18}{dim}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dimension\ of\ user's\ sequence}}
+\DoxyCodeLine{00037\ \ \ \ \ int8\_t*\ \mbox{\hyperlink{struct_tentative_a5e2915e523c1df819a984972067a6c8b}{seq\_user}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ User's\ guessed\ sequence}}
+\DoxyCodeLine{00038\ \ \ \ \ int8\_t*\ \mbox{\hyperlink{struct_tentative_a8f952b34f34f5f570171b39638fbadfd}{sol\_user}};}
+\DoxyCodeLine{00039\ \}\ \mbox{\hyperlink{struct_tentative}{Tentative}};}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2fsm_8h_a2b8f386c98b90f3eb1b93b5c35f8bd44}{acquireMutex}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{general_2fsm_8h_a499c227b2251935bad6eef854ba5ffe5}{releaseMutex}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00042\ \textcolor{comment}{/*Global\ variables*/}}
+\DoxyCodeLine{00043\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_game}{Game}}\ \mbox{\hyperlink{general_2fsm_8h_ac6a5ed6191fcf3a5bf0445921feb4f48}{game}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Game\ struct\ instance}}
+\DoxyCodeLine{00044\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_tentative}{Tentative}}\ \mbox{\hyperlink{general_2fsm_8h_a645ef54f5ed9e77e09c0edb057a4d15a}{tentative}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tentative\ struct\ instance}}
+\DoxyCodeLine{00045\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{general_2fsm_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}\ \mbox{\hyperlink{general_2fsm_8h_a54138d08678dd972a2c9b13e069fd91a}{current\_state}};\ \ \ \ \textcolor{comment}{//\ Initialize\ current\ state}}
+\DoxyCodeLine{00046\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{general_2fsm_8h_acb559820d9ca11295b4500f179ef6392}{i}},\ \mbox{\hyperlink{general_2fsm_8h_a37d972ae0b47b9099e30983131d31916}{j}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Variables\ acting\ like\ counters\ for\ for-\/cycles}}
+\DoxyCodeLine{00047\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{general_2fsm_8h_a8401524759ad65a7d2cf99141ae1c5c3}{interruptFlag}};}
+\DoxyCodeLine{00048\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{general_2fsm_8h_ade160ca745bd047c50bd978a3546b708}{mutex}};}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ FSM\_H\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

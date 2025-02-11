@@ -12,15 +12,15 @@
 <area shape="poly" id="edge34_Node000001_Node000025" title=" " alt="" coords="62,306,94,348,117,371,143,391,160,399,158,404,140,395,114,375,90,351,57,309"/>
 <area shape="rect" id="Node000026" href="$tentatives_8c.html#a2f3f309351ef49408ab306d80f801256" title="manage what to do when the user moves the stick up" alt="" coords="153,305,298,331"/>
 <area shape="poly" id="edge35_Node000001_Node000026" title=" " alt="" coords="95,298,138,304,137,309,94,303"/>
-<area shape="rect" id="Node000003" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="show the last attempts of the chronology or the ones that were selected by the joystick" alt="" coords="359,131,442,156"/>
+<area shape="rect" id="Node000003" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="populate the last attempts of the chronology or the ones that were selected by the joystick" alt="" coords="359,131,442,156"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,142,344,141,344,147,310,147"/>
 <area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a3b3176d6777adfb7086ceb88f5224380" title="Deallocate memory for a character array setting then that allocation to null for being sure." alt="" coords="932,181,1047,207"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="443,144,916,185,916,191,442,150"/>
 <area shape="rect" id="Node000005" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="758,131,843,156"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="443,141,742,141,742,146,443,146"/>
-<area shape="rect" id="Node000007" href="$chronology_8c.html#af95f3e53eb47667a4ae3da13fecc23d1" title="function that populate chronology buttons" alt="" coords="491,80,673,106"/>
+<area shape="rect" id="Node000007" href="$chronology_8c.html#af95f3e53eb47667a4ae3da13fecc23d1" title="function that populate chronology buttons of corrections for evry single attempts displayed" alt="" coords="491,80,673,106"/>
 <area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="442,129,518,108,520,113,444,134"/>
-<area shape="rect" id="Node000008" href="$chronology_8c.html#a5cf5997f8c26419de3228a297019b0bc" title="populate the cHronology circle with their colors" alt="" coords="493,31,671,56"/>
+<area shape="rect" id="Node000008" href="$chronology_8c.html#a5cf5997f8c26419de3228a297019b0bc" title="populate the cHronology circle with their colors for evry single attempts displayed" alt="" coords="493,31,671,56"/>
 <area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="412,128,445,97,490,65,501,60,504,65,493,70,449,101,416,132"/>
 <area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="844,152,924,174,923,179,843,157"/>
 <area shape="rect" id="Node000006" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="932,131,1046,156"/>

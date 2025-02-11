@@ -1,5 +1,5 @@
 <map id="populateChronologyButtons" name="populateChronologyButtons">
-<area shape="rect" id="Node000001" title="function that populate chronology buttons" alt="" coords="5,31,187,56"/>
+<area shape="rect" id="Node000001" title="function that populate chronology buttons of corrections for evry single attempts displayed" alt="" coords="5,31,187,56"/>
 <area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="235,31,320,56"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,41,219,41,219,46,187,46"/>
 <area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="369,5,482,31"/>

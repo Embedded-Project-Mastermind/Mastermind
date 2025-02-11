@@ -6,13 +6,13 @@
 <area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="90,159,133,128,195,88,271,49,351,21,402,8,443,3,484,7,534,21,566,36,595,56,641,98,637,102,592,60,563,40,532,26,483,12,444,8,403,14,353,26,273,54,198,93,136,132,93,163"/>
 <area shape="rect" id="Node000013" href="$implementations_8c.html#a5b980628dc75e57228c103881e9246af" title="it resets all default&#39;s colors and clear the display" alt="" coords="197,185,296,211"/>
 <area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="142,181,182,186,181,192,141,186"/>
-<area shape="rect" id="Node000014" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="show the last attempts of the chronology or the ones that were selected by the joystick" alt="" coords="205,337,288,363"/>
+<area shape="rect" id="Node000014" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="populate the last attempts of the chronology or the ones that were selected by the joystick" alt="" coords="205,337,288,363"/>
 <area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="89,185,223,324,219,327,85,189"/>
 <area shape="rect" id="Node000003" href="$implementations_8c.html#ada4cd14b9689d4fe9b9de328e4724964" title="draws the button in the given position with the right color" alt="" coords="617,236,705,261"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="287,160,306,170,320,185,329,199,338,211,353,222,416,244,483,254,547,256,602,253,602,259,547,262,482,260,415,249,351,227,334,215,325,202,316,188,302,175,284,164"/>
 <area shape="rect" id="Node000009" href="$game_8c.html#a1d704afea01300efda83ee14d72bf132" title="Management and color of the circles on screen." alt="" coords="398,186,488,212"/>
 <area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="300,159,383,181,382,186,298,165"/>
-<area shape="rect" id="Node000010" href="$chronology_8c.html#a0009722d580b5fc3a2c6ae32efadd8bb" title="TODO: Describe function." alt="" coords="382,36,503,61"/>
+<area shape="rect" id="Node000010" href="$chronology_8c.html#a0009722d580b5fc3a2c6ae32efadd8bb" title="function that draw corrections below circles" alt="" coords="382,36,503,61"/>
 <area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="260,133,300,102,351,70,366,64,368,69,353,75,303,106,264,137"/>
 <area shape="poly" id="edge15_Node000002_Node000011" title=" " alt="" coords="304,143,582,126,582,132,305,148"/>
 <area shape="rect" id="Node000012" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title="finds the selected button in all the buttons of an interface" alt="" coords="396,85,489,111"/>
@@ -35,9 +35,9 @@
 <area shape="poly" id="edge19_Node000014_Node000015" title=" " alt="" coords="272,361,309,380,353,397,467,422,582,437,689,445,775,448,775,453,688,450,582,443,466,427,351,402,307,385,269,366"/>
 <area shape="rect" id="Node000016" href="$general_2gamelogic1_8c.html#a5de9beb50528513eff761d89deb0fe39" title="Function that deallocated dynamic allocated memory and is called if there are unexpected behaviors in..." alt="" coords="618,388,704,413"/>
 <area shape="poly" id="edge20_Node000014_Node000016" title=" " alt="" coords="289,359,352,373,487,388,603,396,603,401,487,394,352,378,288,364"/>
-<area shape="rect" id="Node000018" href="$chronology_8c.html#af95f3e53eb47667a4ae3da13fecc23d1" title="function that populate chronology buttons" alt="" coords="352,337,533,363"/>
+<area shape="rect" id="Node000018" href="$chronology_8c.html#af95f3e53eb47667a4ae3da13fecc23d1" title="function that populate chronology buttons of corrections for evry single attempts displayed" alt="" coords="352,337,533,363"/>
 <area shape="poly" id="edge23_Node000014_Node000018" title=" " alt="" coords="288,347,337,347,337,353,288,353"/>
-<area shape="rect" id="Node000019" href="$chronology_8c.html#a5cf5997f8c26419de3228a297019b0bc" title="populate the cHronology circle with their colors" alt="" coords="354,288,531,313"/>
+<area shape="rect" id="Node000019" href="$chronology_8c.html#a5cf5997f8c26419de3228a297019b0bc" title="populate the cHronology circle with their colors for evry single attempts displayed" alt="" coords="354,288,531,313"/>
 <area shape="poly" id="edge25_Node000014_Node000019" title=" " alt="" coords="288,337,373,315,375,320,289,342"/>
 <area shape="poly" id="edge22_Node000016_Node000015" title=" " alt="" coords="705,409,783,430,781,435,704,414"/>
 <area shape="rect" id="Node000017" href="$general_2gamelogic1_8c.html#aba3f992fdc05554a125bb9c1c299a622" title="Deallocate memory for a boolean array setting then that allocation to null for being sure." alt="" coords="792,388,905,413"/>

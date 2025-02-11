@@ -25,11 +25,11 @@ void \mbox{\hyperlink{chronology_8c_a77703c37a23665ce74ccea44a084a247}{fn\+\_\+\
 int16\+\_\+t \mbox{\hyperlink{chronology_8c_af4804828a994a0d76b79da462ad1580a}{char\+\_\+\+Conversion\+\_\+to\+\_\+\+Int}} (int8\+\_\+t index)
 \begin{DoxyCompactList}\small\item\em converts the number associated to the color to its color char \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{chronology_8c_a5cf5997f8c26419de3228a297019b0bc}{populate\+Chronology\+Circles}} (int16\+\_\+t radius, int16\+\_\+t \mbox{\hyperlink{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a}{value}}, int16\+\_\+t index)
-\begin{DoxyCompactList}\small\item\em populate the c\+Hronology circle with their colors \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em populate the c\+Hronology circle with their colors for evry single attempts displayed \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{chronology_8c_af95f3e53eb47667a4ae3da13fecc23d1}{populate\+Chronology\+Buttons}} (int16\+\_\+t \mbox{\hyperlink{general_2gamelogic2_8c_a7375fa3485ce43bbc621f90ce895d52a}{value}}, int16\+\_\+t index)
-\begin{DoxyCompactList}\small\item\em function that populate chronology buttons \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em function that populate chronology buttons of corrections for evry single attempts displayed \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{chronology_8c_a0009722d580b5fc3a2c6ae32efadd8bb}{draw\+Past\+Results}} (\mbox{\hyperlink{struct_graphics___button}{Graphics\+\_\+\+Button}} \texorpdfstring{$\ast$}{*}buttons)
-\begin{DoxyCompactList}\small\item\em TODO\+: Describe function. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em function that draw corrections below circles \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{chronology_8c_ad774f58034bd7f8cb0c570021307df20}{up\+Stick\+\_\+\+CHRONOLOGY}} ()
 \begin{DoxyCompactList}\small\item\em manage what to do when the user moves the stick up \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{chronology_8c_a200291275b68705ac77fdde64e026b27}{down\+Stick\+\_\+\+CHRONOLOGY}} ()
@@ -37,7 +37,7 @@ void \mbox{\hyperlink{chronology_8c_a200291275b68705ac77fdde64e026b27}{down\+Sti
 void \mbox{\hyperlink{chronology_8c_ab6199fff7dce2a49d3b5329e51570fbe}{right\+Stick\+\_\+\+CHRONOLOGY}} ()
 \begin{DoxyCompactList}\small\item\em manage what to do when the user moves the stick right \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{chronology_8c_a2c8461dd4bc87e2cee6461d79daca665}{update\+Pos}} ()
-\begin{DoxyCompactList}\small\item\em show the last attempts of the chronology or the ones that were selected by the joystick \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em populate the last attempts of the chronology or the ones that were selected by the joystick \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -67,7 +67,8 @@ Matteo Gottardelli (Helper \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/31 
 \end{DoxyDate}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -95,7 +96,8 @@ Matteo Gottardelli (Helper \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/31 
 \end{DoxyDate}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -130,7 +132,8 @@ Matteo Gottardelli (Helper \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/31 
 \end{DoxyDate}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -152,11 +155,11 @@ void draw\+Past\+Results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct
 
 
 
-TODO\+: Describe function. 
+function that draw corrections below circles 
 
 
 \begin{DoxyParams}{Parameters}
-{\em buttons} & TODO\+: Describe parameter. \\
+{\em buttons} & buttons related to corrections \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -170,14 +173,16 @@ Matteo Gottardelli (Helper \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/31 
 \end{DoxyDate}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{chronology_8c_a0009722d580b5fc3a2c6ae32efadd8bb_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -205,7 +210,8 @@ Matteo Gottardelli (Helper \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/31 
 \end{DoxyDate}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -220,7 +226,9 @@ void populate\+Chronology\+Buttons (\begin{DoxyParamCaption}\item[{int16\+\_\+t}
 
 
 
-function that populate chronology buttons 
+function that populate chronology buttons of corrections for evry single attempts displayed 
+
+function that populate chronology buttons of the corrections for evry single attempts displayed
 
 
 \begin{DoxyParams}{Parameters}
@@ -240,14 +248,16 @@ Matteo Gottardelli (Helper \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/31 
 \end{DoxyDate}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{chronology_8c_af95f3e53eb47667a4ae3da13fecc23d1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -262,7 +272,7 @@ void populate\+Chronology\+Circles (\begin{DoxyParamCaption}\item[{int16\+\_\+t}
 
 
 
-populate the c\+Hronology circle with their colors 
+populate the c\+Hronology circle with their colors for evry single attempts displayed 
 
 
 \begin{DoxyParams}{Parameters}
@@ -284,14 +294,16 @@ Matteo Gottardelli (Helper \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/31 
 \end{DoxyDate}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{chronology_8c_a5cf5997f8c26419de3228a297019b0bc_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -334,7 +346,7 @@ void update\+Pos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-show the last attempts of the chronology or the ones that were selected by the joystick 
+populate the last attempts of the chronology or the ones that were selected by the joystick 
 
 \begin{DoxyReturn}{Returns}
 void 
@@ -347,14 +359,16 @@ Matteo Gottardelli (Helper \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/31 
 \end{DoxyDate}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{chronology_8c_a2c8461dd4bc87e2cee6461d79daca665_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -382,7 +396,8 @@ Matteo Gottardelli (Helper \& Maintainer)
 \begin{DoxyDate}{Date}
 2024-\/10-\/31 
 \end{DoxyDate}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -14,7 +14,7 @@
 <area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="641,323,443,343,364,357,363,352,443,338,640,318"/>
 <area shape="rect" id="Node000013" href="$chronology_8c.html#a77703c37a23665ce74ccea44a084a247" title="functions that create the Chronology screen starting from resetting the previous screen" alt="" coords="19,379,155,404"/>
 <area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="695,341,657,370,609,394,549,409,486,419,423,424,361,425,246,418,155,407,155,401,247,413,361,419,423,418,485,414,548,404,607,389,654,366,692,337"/>
-<area shape="rect" id="Node000014" href="$chronology_8c.html#a0009722d580b5fc3a2c6ae32efadd8bb" title="TODO: Describe function." alt="" coords="465,353,586,379"/>
+<area shape="rect" id="Node000014" href="$chronology_8c.html#a0009722d580b5fc3a2c6ae32efadd8bb" title="function that draw corrections below circles" alt="" coords="465,353,586,379"/>
 <area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="654,335,578,355,577,350,652,330"/>
 <area shape="rect" id="Node000015" href="$game_8c.html#ae75b7a2c4cacd669fec7a8d14c925898" title="According to the inputed color, the leds are turned on according to that color (ORANGE case it will b..." alt="" coords="473,104,578,130"/>
 <area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="706,289,691,256,669,216,641,177,607,143,578,128,580,124,610,139,645,173,674,213,696,253,711,287"/>
