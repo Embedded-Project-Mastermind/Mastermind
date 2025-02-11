@@ -66,7 +66,7 @@ For the right side the pins are:
   </tr>
 </table>
 
-<img src="images/board_configuration.jpg" alt="Alt Text" align="right" width="700">
+<img src="images/board_configuration.jpg" alt="Alt Text" align="right" width="300">
 
 [Back to top](#table-of-contents)
 
