@@ -29,7 +29,7 @@ The MSP432 board is used to take the input of 8 buttons setted up on an external
 
 Disegno del circuito e tabella con i pin
 For the left side of the board, the connected pins related to the colors are the following:
-<table>
+<table align="left">
   <tr>
     <th>Color</th>
     <th>Ground</th>
@@ -47,7 +47,7 @@ For the left side of the board, the connected pins related to the colors are the
 </table>
 
 For the right side the pins are:
-<table>
+<table align="left">
   <tr>
     <th>Color</th>
     <th>Red</th>
@@ -66,7 +66,7 @@ For the right side the pins are:
   </tr>
 </table>
 
-<img src="images/board_configuration.jpg" alt="Alt Text" align="right" width="200">
+<img src="images/board_configuration.jpg" alt="Alt Text" align="right" width="700">
 
 [Back to top](#table-of-contents)
 
