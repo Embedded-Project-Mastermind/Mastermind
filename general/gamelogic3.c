@@ -111,7 +111,7 @@ void correctionsEasyMode(void){
     for (i=0; i<game.dim; i++) {
         for(j=0; j<game.dim; j++){
             if(tentative.seq_user[i]==game.seq_to_guess[j]){  //If the colour in the seq user corrispond to the colour of the sequence to guess in at least one position
-                if(game.flags[j]!=true){  //If the colour in that position of the seq_to_guess was already been selected it must be ! not O
+                if(game.flags[j]!=true && game.flags[i]!=true){  //If the colour in that position of the seq_to_guess was already been selected it must be ! not O
                     tentative.sol_user[i]= 'O';  //That means the colour is correct but in wrong position
                     game.flags[j]=true;
                     break;
