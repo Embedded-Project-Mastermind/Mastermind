@@ -9,6 +9,8 @@
     </div>
 </div>
 
+<img src="images/logo.jpg" alt="logo" width="500">
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Project Layout](#project-layout)
