@@ -1,5 +1,13 @@
 # Mastermind
-
+<div align="center">
+    <p>
+        <img width="100%" src=“*images/logo.jpeg*”/>
+    </p>
+    <div>
+        <img src="https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white" alt="C"/>
+        <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white" alt="CSS"/>
+    </div>
+</div>
 ## Table of Contents
 - [Introduction](#introduction)
 - [Project Layout](#project-layout)
@@ -26,45 +34,6 @@
 The purpose of the project is to develop a simple version of the game Mastermind. It is a simple and funny game, where the user has to guess a sequence of colors within a certain number of attempts. Some settings for the game can be chosen wia an intuitive GUI, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the presence of doubles. Then, after a summary page, the game starts and at every sequence inserted, the system tells wheter each color is in the right position([X]), is in the sequence but in the wrong position([O]), and if it isn't present at all ([!]). The clues given are also based on the difficulty levels, which are three. For the easiest mode, one all of these three are displayed, for the medium mode, the results are displayed as the correct number of O and X but in a casual order, while for the difficult there are onle X and ! and the X are put starting from the left for the number that is present in the entered sequence.
 - Describe shortly how the MSP432 is used<br><br>
 The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit. each button has the pin which it's connected to and then it is connected to gtound on the other side. So when the button is released the internal pull-up resistor will put the value to high, while when the button is pressed the value will be low as it is connected to the ground.
-
-Disegno del circuito e tabella con i pin
-For the left side of the board, the connected pins related to the colors are the following:
-<table>
-  <tr>
-    <th>Color</th>
-    <th>Ground</th>
-    <th>Orange</th>
-    <th>Green</th>
-    <th>Cyan</th>
-  </tr>
-  <tr>
-    <th>Pin</th>
-    <th>GND</th>
-    <th>3.3</th>
-    <th>4.7</th>
-    <th>5.4</th>
-  </tr>
-</table>
-
-For the right side the pins are:
-<table>
-  <tr>
-    <th>Color</th>
-    <th>Red</th>
-    <th>White</th>
-    <th>Purple</th>
-    <th>Blue</th>
-    <th>Yellow</th>
-  </tr>
-  <tr>
-    <th>Pin</th>
-    <th>3.0</th>
-    <th>5.6</th>
-    <th>6.6</th>
-    <th>5.2</th>
-    <th>3.6</th>
-  </tr>
-</table>
 
 
 [Back to top](#table-of-contents)
@@ -137,16 +106,49 @@ Mastermind
 ## Hardware Requirements
 • MSP432P401R + BoosterPack (Link the documentation)<br>
 • Breadboard<br>
-• Buttons for Breadboard<br>
-• Wires<br><br>
+• 8 Buttons for Breadboard<br>
+• 9 wires male to female and 8 wires for breadboard(male to male) to connect the buttons with the ground<br><br>
 Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...<br>
+For the left side of the board, the connected pins related to the colors are the following:
 <table>
   <tr>
-    <th>MSP432 pin</th>
     <th>Color</th>
+    <th>Ground</th>
+    <th>Orange</th>
+    <th>Green</th>
+    <th>Cyan</th>
   </tr>
-  ...
+  <tr>
+    <th>MSP432 pin</th>
+    <th>GND</th>
+    <th>3.3</th>
+    <th>4.7</th>
+    <th>5.4</th>
+  </tr>
 </table>
+
+For the right side the pins are:
+<table>
+  <tr>
+    <th>Color</th>
+    <th>Red</th>
+    <th>White</th>
+    <th>Purple</th>
+    <th>Blue</th>
+    <th>Yellow</th>
+  </tr>
+  <tr>
+    <th>Pin</th>
+    <th>3.0</th>
+    <th>5.6</th>
+    <th>6.6</th>
+    <th>5.2</th>
+    <th>3.6</th>
+  </tr>
+</table>
+
+<img src="images/board_configuration.png" alt="Alt Text" width="300">
+
 - Description and image of how to build a working pressable button<br><br>
 
 [Back to top](#table-of-contents)
@@ -166,11 +168,12 @@ Code Composer Studio (CCS) is an integrated development environment (IDE) design
 
 ## Setup IDE
 
-After the installation of CCS, version 12.8.0, open the file `ccs_setup_12.8.0.00012.exe`.
-On the opened window, press `next` one time. Accept the agreement and press `next` again four times.
-Then, in `Select Components` select `SimpleLink™ MSP432™ low power + performance MCUs`.
-In `Install debug probes` leave it as it clicking `next`.
-To conclude, press `next` until the launcher begins the download.
+After the installation of **Code Composer Studio (CCS)**, version 12.8.0
+1. Open the file `ccs_setup_12.8.0.00012.exe`.
+2. On the opened window, press `next` one time. Accept the agreement and press `next` again four times.
+3. Then, in `Select Components` select `SimpleLink™ MSP432™ low power + performance MCUs`.
+4. In `Install debug probes` leave it as it clicking `next`.
+5. To conclude, press `next` until the launcher begins the download.
 
 (da finire)
 
@@ -199,7 +202,8 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 4. Click **ARM Compiler** and then **Include Options**.  
    - 4.1 Add `"simplelink_msp432p4_sdk_3_40_01_02/source"` directory to the `"Add dir to #include search path"` window.  
 5. Click **ARM Linker** and then **File Search Path**.  
-   - 5.1 Add `"simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib"` to the `"Include library file..."` window.  
+   - 5.1 Add `"simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib"` to the `"Include library file..."` window.
+   - 5.2 Add `"simplelink_msp432p4_sdk_3_40_01_02/source/ti/grlib/lib/ccs/m4/grlib.a"` to the `"Include library file..."` window.
 
 
 [Back to top](#table-of-contents)
