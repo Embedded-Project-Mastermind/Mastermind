@@ -8,6 +8,7 @@
         <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white" alt="CSS"/>
     </div>
 </div>
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Project Layout](#project-layout)
