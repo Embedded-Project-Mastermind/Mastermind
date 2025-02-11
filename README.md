@@ -1,7 +1,7 @@
 # Mastermind
 <div align="center">
     <p>
-        <img width="100%" src=“images/logo.jpeg”/>
+        <img src="images/logo.png" alt="logo" width="500">
     </p>
     <div>
         <img src="https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white" alt="C"/>
@@ -9,7 +9,7 @@
     </div>
 </div>
 
-<img src="images/logo.png" alt="logo" width="500">
+
 
 ## Table of Contents
 - [Introduction](#introduction)
