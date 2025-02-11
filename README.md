@@ -72,7 +72,7 @@ Disegno del circuito e tabella con i pin
 </div>
 
 <!-- Image on the Right -->
-<img src="images/board_configuration.jpg" alt="Board Configuration" width="300" style="float: right; margin-left: 20px;">
+<img src="images/board_configuration.jpg" alt="Board Configuration" width="250" style="float: right; margin-left: 20px;">
 
 
 
