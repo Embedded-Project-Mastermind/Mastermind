@@ -160,11 +160,12 @@ Code Composer Studio (CCS) is an integrated development environment (IDE) design
 
 ## Setup IDE
 
-After the installation of CCS, version 12.8.0, open the file `ccs_setup_12.8.0.00012.exe`.
-On the opened window, press `next` one time. Accept the agreement and press `next` again four times.
-Then, in `Select Components` select `SimpleLink™ MSP432™ low power + performance MCUs`.
-In `Install debug probes` leave it as it clicking `next`.
-To conclude, press `next` until the launcher begins the download.
+After the installation of **Code Composer Studio (CCS)**, version 12.8.0
+1. Open the file `ccs_setup_12.8.0.00012.exe`.
+2. On the opened window, press `next` one time. Accept the agreement and press `next` again four times.
+3. Then, in `Select Components` select `SimpleLink™ MSP432™ low power + performance MCUs`.
+4. In `Install debug probes` leave it as it clicking `next`.
+5. To conclude, press `next` until the launcher begins the download.
 
 (da finire)
 
