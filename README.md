@@ -5,7 +5,7 @@
     </p>
     <div>
         <img src="https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white" alt="C"/>
-        <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white" alt="CSS"/>
+         <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white" alt="HTML"/>
     </div>
 </div>
 
@@ -259,8 +259,7 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>Responsible Member</th>
     <th>Helper Member</th>
     <th>Maintainer Member</th>
-    <th>Comments .c</th>
-    <th>Integration .h</th>
+    <th>Status</th>
   </tr>
   <tr>
     <th>buttons.c</th>
@@ -268,14 +267,12 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>Benassi Alessandro</th>
     <th>Gottardelli Matteo</th>
     <th>🟢</th>
-    <th>🟢</th>
   </tr>
   <tr>
     <th>chronology.c</th>
     <th>Cristoforetti Niccolò</th>
     <th>Gottardelli Matteo</th>
     <th>Cristoforetti Niccolò</th>
-    <th>🟢</th>
     <th>🟢</th>
   </tr>
   <tr>
@@ -292,14 +289,12 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>-</th>
     <th>Benassi Alessandro</th>
     <th>🟢</th>
-    <th>🟢</th>
   </tr>
   <tr>
     <th>doubles.c</th>
     <th>Calvo Daniele</th>
     <th>Benassi Alessandro</th>
     <th>Calvo Daniele</th>
-    <th>🟢</th>
     <th>🟢</th>
   </tr>
   <tr>
@@ -308,14 +303,12 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>-</th>
     <th>Calvo Daniele</th>
     <th>🟢</th>
-    <th>🟢</th>
   </tr>
   <tr>
     <th>game.c</th>
     <th>Gottardelli Matteo</th>
     <th>Benassi Alessandro</th>
     <th>Benassi Alessandro & Gottardelli Matteo</th>
-    <th>🟢</th>
     <th>🟢</th>
   </tr>
   <tr>
@@ -324,14 +317,12 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>-</th>
     <th>Gottardelli Matteo</th>
     <th>🟢</th>
-    <th>🟢</th>
   </tr>
   <tr>
     <th>gamelogic2.c</th>
     <th>Benassi Alessandro & Calvo Daniele</th>
     <th>Gottardelli Matteo</th>
     <th>Benassi Alessandro</th>
-    <th>🟢</th>
     <th>🟢</th>
   </tr>
   <tr>
@@ -340,14 +331,12 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>-</th>
     <th>Cristoforetti Niccolò</th>
     <th>🟢</th>
-    <th>🟢</th>
   </tr>
   <tr>
     <th>implementations.c</th>
     <th>Gottardelli Matteo</th>
     <th>Cristoforetti Niccolò</th>
     <th>Calvo Daniele</th>
-    <th>🟢</th>
     <th>🟢</th>
   </tr>
   <tr>
@@ -356,14 +345,12 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>Gottardelli Matteo</th>
     <th>Calvo Daniele</th>
     <th>🟢</th>
-    <th>🟢</th>
   </tr>
    <tr>
     <th>input.c</th>
     <th>Gottardelli Matteo</th>
     <th>Benassi Alessandro</th>
     <th>Gottardelli Matteo</th>
-    <th>🟢</th>
     <th>🟢</th>
   </tr>
   <tr>
@@ -372,15 +359,13 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>-</th>
     <th>Gottardelli Matteo</th>
     <th>🟢</th>
-    <th>🟢</th>
   </tr>
   <tr>
     <th>main.c</th>
     <th>All</th>
     <th>-</th>
     <th>All</th>
-    <th>🔴</th>
-    <th>NONE</th>
+    <th>🟢</th>
   </tr>
   <tr>
     <th>start.c</th>
@@ -388,14 +373,12 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>Gottardelli Matteo</th>
     <th>Calvo Daniele</th>
     <th>🟢</th>
-    <th>🟢</th>
   </tr>
   <tr>
     <th>tentatives.c</th>
     <th>Cristoforetti Niccolò</th>
     <th>-</th>
     <th>Cristoforetti Niccolò</th>
-    <th>🟢</th>
     <th>🟢</th>
   </tr>
 </table>
