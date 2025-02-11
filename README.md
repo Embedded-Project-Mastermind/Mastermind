@@ -30,49 +30,51 @@ The MSP432 board is used to take the input of 8 buttons setted up on an external
 Disegno del circuito e tabella con i pin
 <p>For the left side of the board, the connected pins related to the colors are the following:</p>
 
-<div style="display: flex; justify-content: space-between; align-items: start;">
+<div style="display: flex; justify-content: flex-start; align-items: flex-start;">
 
-  <!-- Left Side Table -->
-  <table style="border-collapse: collapse; margin-right: 20px;">
-    <tr>
-      <th>Color</th>
-      <th>Ground</th>
-      <th>Orange</th>
-      <th>Green</th>
-      <th>Cyan</th>
-    </tr>
-    <tr>
-      <th>Pin</th>
-      <td>GND</td>
-      <td>3.3</td>
-      <td>4.7</td>
-      <td>5.4</td>
-    </tr>
-  </table>
+  <!-- Left Side Tables -->
+  <div style="flex: 1; margin-right: 20px;">
+    <!-- Left Table -->
+    <table style="border-collapse: collapse; margin-bottom: 20px;">
+      <tr>
+        <th>Color</th>
+        <th>Ground</th>
+        <th>Orange</th>
+        <th>Green</th>
+        <th>Cyan</th>
+      </tr>
+      <tr>
+        <th>Pin</th>
+        <td>GND</td>
+        <td>3.3</td>
+        <td>4.7</td>
+        <td>5.4</td>
+      </tr>
+    </table>
 
-  <!-- Right Side Table -->
-  <table style="border-collapse: collapse; margin-right: 20px;">
-    <tr>
-      <th>Color</th>
-      <th>Red</th>
-      <th>White</th>
-      <th>Purple</th>
-      <th>Blue</th>
-      <th>Yellow</th>
-    </tr>
-    <tr>
-      <th>Pin</th>
-      <td>3.0</td>
-      <td>5.6</td>
-      <td>6.6</td>
-      <td>5.2</td>
-      <td>3.6</td>
-    </tr>
-  </table>
+    <!-- Right Table -->
+    <table style="border-collapse: collapse;">
+      <tr>
+        <th>Color</th>
+        <th>Red</th>
+        <th>White</th>
+        <th>Purple</th>
+        <th>Blue</th>
+        <th>Yellow</th>
+      </tr>
+      <tr>
+        <th>Pin</th>
+        <td>3.0</td>
+        <td>5.6</td>
+        <td>6.6</td>
+        <td>5.2</td>
+        <td>3.6</td>
+      </tr>
+    </table>
+  </div>
 
   <!-- Image on the Right -->
   <img src="images/board_configuration.jpg" alt="Board Configuration" width="300">
-
 </div>
 
 [Back to top](#table-of-contents)
