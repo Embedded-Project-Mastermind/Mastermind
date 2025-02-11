@@ -23,9 +23,58 @@
 
 # Introduction
 - Present the purpose of the project and its main functionalities<br>
-The purpose of the project is to develop a simple version of th egame Mastermind. It is a simple and funny game where the user has to guess a sequence of colors within a certain number of attempts. Some settings for the game can be chosen, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the precence of doubles. Then the game starts and at every sequence inserted, the system tells wheter the color is in the right position([X]), is in the sequence but in the wrong position([O]), and if it isn't present at all ([!]). The clues given are also based on the difficulty levels, which are three...
+The purpose of the project is to develop a simple version of the game Mastermind. It is a simple and funny game, where the user has to guess a sequence of colors within a certain number of attempts. Some settings for the game can be chosen wia an intuitive GUI, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the presence of doubles. Then, after a summary page, the game starts and at every sequence inserted, the system tells wheter each color is in the right position([X]), is in the sequence but in the wrong position([O]), and if it isn't present at all ([!]). The clues given are also based on the difficulty levels, which are three. For the easiest mode, one all of these three are displayed, for the medium mode, the results are displayed as the correct number of O and X but in a casual order, while for the difficult there are onle X and ! and the X are put starting from the left for the number that is present in the entered sequence.
 - Describe shortly how the MSP432 is used<br><br>
-The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit. Disegno del circuito e controllare la resistenza.........
+The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit. each button has the pin which it's connected to and then it is connected to gtound on the other side. So when the button is released the internal pull-up resistor will put the value to high, while when the button is pressed the value will be low as it is connected to the ground.
+
+Disegno del circuito e tabella con i pin
+<table align="left">
+  <tr>
+    <th>Color</th>
+    <th>Pin</th>
+  </tr>
+  <tr>
+    <th>Ground</th>
+    <th>GND</th>
+  </tr>
+  <tr>
+    <th>Orange</th>
+    <th>3.3</th>
+  </tr>
+  <tr>
+    <th>Green</th>
+    <th>4.7</th>
+  </tr>
+  <tr>
+    <th>Cyan</th>
+    <th>5.4</th>
+  </tr>
+</table>
+
+<table align="right">
+  <tr>
+    <th>Color</th>
+    <th>Pin</th>
+  </tr>
+  <tr>
+    <td>Contributing</td>
+    <td>How to help</td>
+  </tr>
+  <tr>
+    <td>Issues</td>
+    <td>Bug reports</td>
+  </tr>
+  <tr>
+    <td>License</td>
+    <td>Project license</td>
+  </tr>
+  <tr>
+    <td>Support</td>
+    <td>Contact info</td>
+  </tr>
+</table>
+
+<br clear="all"/>
 
 [Back to top](#table-of-contents)
 
