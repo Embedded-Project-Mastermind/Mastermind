@@ -318,7 +318,7 @@ This is referred to the TODO section, search TODO in those files and fill the mi
     <th>gamelogic2.c</th>
     <th>Benassi Alessandro & Calvo Daniele</th>
     <th>Gottardelli Matteo</th>
-    <th>Benassi Alessandro</th>
+    <th>Benassi Alessandro & Calvo Daniele</th>
     <th>🟢</th>
   </tr>
   <tr>
@@ -389,7 +389,8 @@ This is referred to the TODO section, search TODO in those files and fill the mi
 • Connection with an ESP32 in order to display the game on another device<br>
 • Sound Emition explaining how the combination gone<br>
 • Theme customization<br>
-...<br><br>
+• Creating a real-time engine, that allows to stop a game and resume it, using the main memory of the Embedded system
+• Extend the memory of the system allowing for tentatives (MAX of 8, because of lack of memory)
 
 [Back to top](#table-of-contents)
 
