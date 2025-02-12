@@ -110,45 +110,42 @@ Mastermind
 Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...<br>
 <table align="left">
   <tr>
-      <th>Left</th>
-      <th></th>
-      <th>Right</th>
-      <th></th>
-  </tr>  
-  <tr>
-    <th>Color</th>
-    <th>MSP432 pin</th>
     <th>Color</th>
     <th>MSP432 pin</th>
   </tr>
   <tr>
     <th>Ground</th>
     <th>GND</th>
-    <th>Red</th>
-    <th>3.0</th>
   </tr>
   <tr>
     <th>Orange</th>
     <th>3.3</th>
-    <th>White</th>
-    <th>5.6</th>
   </tr>
   <tr>
     <th>Green</th>
     <th>4.7</th>
-    <th>Purple</th>
-    <th>6.6</th>
   </tr>
   <tr>
     <th>Cyan</th>
     <th>5.4</th>
-    <th>Blue</th>
-    <th>5.2</th>
-      
   </tr>
   <tr>
-    <th></th>
-    <th></th>
+    <th>Red</th>
+    <th>3.0</th>
+  </tr>
+  <tr>
+    <th>White</th>
+    <th>5.6</th>
+  </tr>
+  <tr>
+    <th>Purple</th>
+    <th>6.6</th>
+  </tr>
+  <tr>
+    <th>Blue</th>
+    <th>5.2</th>  
+  </tr>
+  <tr>
     <th>Yellow</th>
     <th>3.6</th> 
   </tr>  
@@ -157,10 +154,10 @@ Suggested connection - Considering that the connections are done in order to avo
 <table align="center">
   <tr>
     <td>
-      <img src="images/board_configuration.png" alt="Board configuration" width="330">
+      <img src="images/board_configuration.png" alt="Board configuration" width="400">
     </td>
     <td>
-      <img src="images/breadboard.png" alt="Board configuration" width="330">
+      <img src="images/breadboard.png" alt="Board configuration" width="400">
     </td>
   </tr>
 </table>
