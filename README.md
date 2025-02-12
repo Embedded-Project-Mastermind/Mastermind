@@ -261,13 +261,47 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>Description</th>
   </tr>
   <tr>
-  <th>Start</th>
+  <th>START</th>
   <th>-</th>
   <th>Doubles</th>
   <th>🟢KEY_WH_DOUB<br>🔴KEY_WHOUT_DOUB</th>
   <th>-</th>
   <th>Setup the start of the game inserting the dimension, the difficulty, the number of tentatives and double presence in the sequence, at according to the last one it choose the next state to which the logic has to go</th>
   </tr>
+   <tr>
+  <th>KEY_WH_DOUB</th>
+  <th>START</th>
+  <th>-</th>
+  <th>RESET_TENT</th>
+  <th>-</th>
+  <th>Generate the sequence to guess with the presence of doubles</th>
+  </tr>
+   <tr>
+  <th>KEY_WHOUT_DOUB</th>
+  <th>START</th>
+  <th>-</th>
+  <th>RESET_TENT</th>
+  <th>-</th>
+  <th>Generate the sequence to guess without the presence of doubles</th>
+  </tr>
+  <tr>
+   <th>RESET_TENT</th>
+  <th>KEY_WH_DOUB<br>KEY_WHOUT_DOUB</th>
+  <th>-</th>
+  <th>WAIT_EMPTY</th>
+  <th>-</th>
+  <th>Reset the user sequence and starts a new tentative of guessing</th>
+  </tr>
+   <tr>
+   <th>WAIT_EMPTY</th>
+  <th>RESET_TENT</th>
+  <th>-</th>
+  <th>INSERT_COLOR</th>
+  <th>Signal</th>
+  <th>Reset the user sequence and starts a new tentative of guessing</th>
+  </tr>
+  
+</table>
 <br><br>
 </table>
   
