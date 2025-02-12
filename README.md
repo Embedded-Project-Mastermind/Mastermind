@@ -134,48 +134,6 @@ Suggested connection - Considering that the connections are done in order to avo
     <th>3.6</th> 
   </tr>
 </table>
-<table align="left">
-  <tr>
-    <th>Color</th>
-    <th>MSP432 pin</th>
-  </tr>
-  <tr>
-    <th>Ground</th>
-    <th>GND</th>
-  </tr>
-  <tr>
-    <th>Orange</th>
-    <th>3.3</th>
-  </tr>
-  <tr>
-    <th>Green</th>
-    <th>4.7</th>
-  </tr>
-  <tr>
-    <th>Cyan</th>
-    <th>5.4</th>
-  </tr>
-  <tr>
-    <th>Red</th>
-    <th>3.0</th>
-  </tr>
-  <tr>
-    <th>White</th>
-    <th>5.6</th>
-  </tr>
-  <tr>
-    <th>Purple</th>
-    <th>6.6</th>
-  </tr>
-  <tr>
-    <th>Blue</th>
-    <th>5.2</th>  
-  </tr>
-  <tr>
-    <th>Yellow</th>
-    <th>3.6</th> 
-  </tr>  
-</table>
 
 <table align="center">
   <tr>
