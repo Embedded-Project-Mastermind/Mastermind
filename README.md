@@ -300,6 +300,83 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>Button_Input</th>
   <th>In the case, the sequence is empty, it is given the possibility to insert a color in the sequence, clicking a button on breadboard</th>
   </tr>
+  <th>WAIT_NOT_EMPTY</th>
+  <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
+  <th>-</th>
+  <th>INSERT_COLOR</th>
+  <th>Button_Input</th>
+  <th>In the case, the sequence is not empty, it is given the possibility to insert a color in the sequence, clicking a button on breadboard</th>
+  </tr>
+   <tr>
+   <th>INSERT_COLOR</th>
+  <th>WAIT_EMPTY<br>WAIT_NOT_EMPTY</th>
+  <th>full</th>
+  <th>🟢WAIT_FULL<br>🔴WAIT_NOT_EMPTY</th>
+  <th>-</th>
+  <th>After a color in insert, is verified if the sequence is full or not, if yes it goes to the state of full, instead if no it goes to the wait not empty state</th>
+  </tr>
+  <th>WAIT_NOT_EMPTY</th>
+  <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
+  <th>-</th>
+  <th>ELIMINATE_COLOR</th>
+  <th>Back</th>
+  <th>In the case, the sequence, which not empty, is not full, it is possible to press the button back, to eliminate the lastest color</th>
+  </tr>
+   <th>WAIT_FULL</th>
+  <th>INSERT_COLOR</th>
+  <th>-</th>
+  <th>ELIMINATE_COLOR</th>
+  <th>Back</th>
+  <th>In the case, the sequence is full, it is possible to press the button back, to eliminate the lastest color</th>
+  </tr>
+  <tr>
+   <th>ELIMINATE_COLOR</th>
+  <th>WAIT_FULL<br>WAIT_NOT_EMPTY</th>
+  <th>empty</th>
+  <th>🟢WAIT_EMPTY<br>🔴WAIT_NOT_EMPTY</th>
+  <th>-</th>
+  <th>After a color is eliminated, is verified if the sequence is empty or not, if yes it goes to the state of empty, instead if no it goes to the wait not empty state</th>
+  </tr>
+  <tr>
+   <th>WAIT_FULL</th>
+  <th>INSERT_COLOR</th>
+  <th>-</th>
+  <th>ELABORATE_TENTATIVE</th>
+  <th>Confirm</th>
+  <th>If the sequence is full, it can be entered as a chosen sequence by the user, so it can be elaborated by the system</th>
+    <tr>
+   <th>INCREMENT_TENTATIVE</th>
+  <th>ELABORATE_TENTATIVE</th>
+  <th>Difficulty</th>
+  <th>🟢A:EASY_MODE<br>🟡B:MEDIUM_MODE<br>🔴C:DIFFICULT_MODE</th>
+  <th>-</th>
+  <th>The tentative is incrementated and is adjusted according to the code and the flow is redirected according to the difficulty chosen by the user, which will give a different output of the solution</th>
+  </tr>
+   <tr>
+   <th>EASY_MODE</th>
+  <th>INCREMENT_TENTATIVE</th>
+  <th>-</th>
+  <th>ELABORATE_RESULT</th>
+  <th>-</th>
+  <th>The output will allow X (presence in the sequence + corrected poses), O (presence in the sequence + incorrect poses), ! (No presence in the sequence) with each symbol associated to the above color</th>
+  </tr>
+   <tr>
+   <th>MEDIUM_MODE</th>
+  <th>INCREMENT_TENTATIVE</th>
+  <th>-</th>
+  <th>ELABORATE_RESULT</th>
+  <th>-</th>
+  <th>The output will allow X (presence in the sequence + corrected poses), O (presence in the sequence + incorrect poses), ! (No presence in the sequence) with each symbol not associated to the above color and place in order first all X, then O and last ones !</th>
+  </tr>
+    </tr>
+   <tr>
+   <th>DIFFICULT_MODE</th>
+  <th>INCREMENT_TENTATIVE</th>
+  <th>-</th>
+  <th>ELABORATE_RESULT</th>
+  <th>-</th>
+  <th>The output will allow X (presence in the sequence + corrected poses), ! (No presence in the sequence) with each symbol not associated to the above color and place in order first all X and last ones !</th>
+  </tr>
   
 </table>
 <br><br>
