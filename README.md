@@ -43,51 +43,51 @@ Mastermind
 ┣ latex                                    # Latex files genreated by Doxygen
 ┣ general                                  # All the code that let the project work
 ┃ ┣ bitmap.h                               # Declaration of color palette and image logo
-┃ ┣ buttons.c                              # Manage physical buttons + "back" and "next" buttons
+┃ ┣ buttons.c                              # Manage physical buttons + "back/cancel" and "confirm" buttons
 ┃ ┣ buttons.h                              # Headers for buttons.c
 ┃ ┣ chronology.c                           # Manage the interface to show on screen the chronology of previous tentatives
 ┃ ┣ chronology.h                           # Headers for chronology.c
-┃ ┣ difficulty.c                           # Manage the interface to select the difficulty of the game (from easy to hard)
+┃ ┣ difficulty.c                           # Manage the interface to select the difficulty of the game (easy, medium, hard)
 ┃ ┣ difficulty.h                           # Headers for difficulty.c
-┃ ┣ dimension.c                            # Manage the interface to select 
+┃ ┣ dimension.c                            # Manage the interface to select the dimension of the sequence
 ┃ ┣ dimension.h                            # Headers for dimension.c
-┃ ┣ doubles.c                              # Manage the interface to able/disable doubles in the sequence
+┃ ┣ doubles.c                              # Manage the interface to able/disable color duplicate presence in the sequence
 ┃ ┣ doubles.h                              # Headers for doubles.c
 ┃ ┣ end.c                                  # Manage the last interface, that can vary from a winning one to a losing one
 ┃ ┣ end.h                                  # Headers for end.c
-┃ ┣ fsm.h                                  # Defines states, structures, and global variables for the finite state machine implementation
+┃ ┣ fsm.h                                  # Defines states, structures, and global variables for the software logic finite state machine
 ┃ ┣ game.c                                 # Manage the main interface where the user can guess the sequence
 ┃ ┣ game.h                                 # Headers for game.c
 ┃ ┣ gamelogic1.c                           # First part of the basic logic, with the password generation
 ┃ ┣ gamelogic1.h                           # Headers for gamelogic1.c
 ┃ ┣ gamelogic2.c                           # Second part of the basic logic, with the input management
 ┃ ┣ gamelogic2.h                           # Headers for gamelogic2.c
-┃ ┣ gamelogic3.c                           # Third part of the basic logic, with the input and result elaboration
+┃ ┣ gamelogic3.c                           # Third part of the basic logic, with each tentative user's sequence elaboration
 ┃ ┣ gamelogic3.h                           # Headers for gamelogic3.c
-┃ ┣ graphics.h                             # Defines graphics states, UI elements, colors, and structures for rendering on an MSP432 display
-┃ ┣ implementations.c                      # Basic functions for the right functioning of all the interfaces
+┃ ┣ graphics.h                             # Defines graphics states, UI elements, colors, structures for rendering on an MSP432 display and graphics finite state machine
+┃ ┣ implementations.c                      # Setup of program and general functions that are used by the various GUI interfaces
 ┃ ┣ implementations.h                      # Headers for implementations.c
 ┃ ┣ info.c                                 # Manage the interface that summarize all the game characteristics
 ┃ ┣ info.h                                 # Headers for info.c
-┃ ┣ input.c                                # Handles input processing, port configuration, interrupt handling, and array management for the system
+┃ ┣ input.c                                # Handles input processing, port configuration and array management for the system
 ┃ ┣ input.h                                # Headers for input.c
-┃ ┣ joystick.c                             # Handles joystick input, screen navigation, timer, delay, and ADC for embedded system joystick control
+┃ ┣ joystick.c                             # Handles joystick input, screen navigation, interrupt and timer intialization, delay, and ADC for embedded system joystick control
 ┃ ┣ joystick.h                             # Headers for joystick.c
-┃ ┣ main.c                                 # Calls the various states in out state machine 
+┃ ┣ main.c                                 # Invokes the GUI state machine, then the software logic state machine and then manages the inputs. Handles the interrupts and the dynamic elements declaration
 ┃ ┣ start.c                                # Manage the first interface, with the start button and the logo
 ┃ ┣ start.h                                # Headers for start.c
-┃ ┣ tentatives.c                           # Manage the interface to select the number of tentatives you want to have to guess the sequence
+┃ ┣ tentatives.c                           # Manage the interface to select the number of tentatives with which it is desired to play the game
 ┃ ┗ tentatives.h                           # Headers for tentatives.c
-┣ src                                      # Obsolete version, with only the basic logic and with console response
-┃ ┣ fsm.h                                  # old version, but very similar to the newer one
-┃ ┣ gamelogic1.c                           # Old version, with the password generation
-┃ ┣ gamelogic1.h                           # Headers for gamelogic1.c
-┃ ┣ gamelogic2.c                           # Old version, with the input management from the console
-┃ ┣ gamelogic2.h                           # Headers for gamelogic2.c
-┃ ┣ gamelogic3.c                           # Third part of the basic logic, with the input elaboration and result print on console
-┃ ┣ gamelogic3.h                           # Headers for gamelogic3.c
-┃ ┗ main.c                                 # Old version, calls the various states in out state machine
-┗ read_me.txt                              # Implementations' instructions 
+┣ src                                      # Essential version, with only the basic logic and console response
+┃ ┣ fsm.h                                  # Software Version - Defines states, structures, and global variables for the software logic finite state machine
+┃ ┣ gamelogic1.c                           # Software Version - First part of the basic logic, with the password generation
+┃ ┣ gamelogic1.h                           # Software Version - Headers for gamelogic1.c
+┃ ┣ gamelogic2.c                           # Software Version - Second part of the basic logic, with the input management
+┃ ┣ gamelogic2.h                           # Software Version - Headers for gamelogic2.c
+┃ ┣ gamelogic3.c                           # Software Version - Third part of the basic logic, with the input elaboration and result print on console
+┃ ┣ gamelogic3.h                           # Software Version - Headers for gamelogic3.c
+┃ ┗ main.c                                 # Software Version - Invokes the software logic state machine
+┗ read_me.txt                              # Implementation instructions 
 ```
 
 [Back to top](#table-of-contents)
