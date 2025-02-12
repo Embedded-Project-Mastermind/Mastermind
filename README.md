@@ -161,7 +161,8 @@ Suggested connection - Considering that the connections are done in order to avo
  <br><br>
 
 - Description and image of how to build a working pressable button<br><br>
- ...So when the button is released the internal pull-up resistor will put the value to high, while when the button is pressed the value will be low as it is connected to the ground. 
+ ...So when the button is released the internal pull-up resistor will put the value to high, while when the button is pressed the value will be low as it is connected to the ground. <br><br>
+ 
 [Back to top](#table-of-contents)
 
 ---
