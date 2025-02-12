@@ -125,7 +125,7 @@ Suggested connection - Considering that the connections are done in order to avo
     <th>Cyan</th>
     <th>Red</th>
     <th>White</th>
-    <th>Purple</th>
+    <th>Pink</th>
     <th>Blue</th>
     <th>Yellow</th>
   </tr>
