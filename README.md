@@ -169,14 +169,14 @@ Suggested connection - Considering that the connections are done in order to avo
 ## Software Requirements
 • Code Composer Studio (Link)
 Code Composer Studio (CCS) is an integrated development environment (IDE) designed for embedded systems, particularly for programming and debugging microcontrollers and processors. Developed by Texas Instruments, CCS supports a wide range of TI’s hardware, offering tools for writing, compiling, and testing code.
-- Really brief description of what this is<br><br>
+<br>
 
 [Back to top](#table-of-contents)
 
 ---
 
 # Installation and Configuration
-
+• Install [Code Composer Studio CCS](https://www.ti.com/tool/download/CCSTUDIO/12.8.1) version 12.8.0
 ## Setup IDE
 
 After the installation of **Code Composer Studio (CCS)**, version 12.8.0
