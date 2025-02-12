@@ -9,7 +9,7 @@
     </div>
 </div>
 
-
+<img src="images/logo.png" alt="logo" width="200" align="center">
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -145,6 +145,52 @@ For the right side the pins are:
     <th>5.2</th>
     <th>3.6</th>
   </tr>
+</table>
+
+<table>
+  <tr>
+      <th>Left</th>
+      <th></th>
+      <th>Right</th>
+      <th></th>
+  </tr>  
+  <tr>
+    <th>Color</th>
+    <th>MSP432 pin</th>
+    <th>Color</th>
+    <th>MSP432 pin</th>
+  </tr>
+  <tr>
+    <th>Ground</th>
+    <th>GND</th>
+    <th>Red</th>
+    <th>3.0</th>
+  </tr>
+  <tr>
+    <th>Orange</th>
+    <th>3.3</th>
+    <th>White</th>
+    <th>5.6</th>
+  </tr>
+  <tr>
+    <th>Green</th>
+    <th>4.7</th>
+    <th>Purple</th>
+    <th>6.6</th>
+  </tr>
+  <tr>
+    <th>Cyan</th>
+    <th>5.4</th>
+    <th>Blue</th>
+    <th>5.2</th>
+      
+  </tr>
+  <tr>
+    <th></th>
+    <th></th>
+    <th>Yellow</th>
+    <th>3.6</th> 
+  </tr>  
 </table>
 
 <img src="images/board_configuration.png" alt="Alt Text" width="300">
