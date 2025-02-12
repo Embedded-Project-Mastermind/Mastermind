@@ -289,6 +289,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>-</th>
   <th>Generate the sequence to guess without the presence of doubles</th>
   </tr>
+</table>
 <br><br>
   
 [Back to top](#table-of-contents)
