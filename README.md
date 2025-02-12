@@ -386,10 +386,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>-</th>
   <th>If, elaborating the result, is obtained the win condition, the user goes WIN, instead if the tentatives are still available, he will reset the sequence an try with another tentative, instead the user will be sent to game over</th>
   </tr>
-</table>
-<br><br>
-</table>
-<tr>
+  <tr>
   <th>WIN</th>
   <th>-</th>
   <th>-</th>
@@ -403,6 +400,8 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>-</th>
   <th>The user has lost the game</th>
 </tr>
+</table>
+<br><br>
 
 [Back to top](#table-of-contents)
 
