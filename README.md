@@ -256,7 +256,23 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 
 ## Software Algorithm
 
-- FMS that we developed<br><br>
+<table>
+  <tr>
+  <th>State</th>
+  <th>Input</th>
+  <th>Condition</th>
+  <th>Output</th>
+  <th>Signal</th>
+  <th>Description</th>
+  </tr>
+  <tr>
+  <th>Start</th>
+  <th>-</th>
+  <th>Doubles</th>
+  <th>🟢 KEY WH DOUB; 🔴 KEY WHOUT DOUB</th>
+  <th>-</th>
+  <th>Setup the start of the game inserting the dimension, the difficulty, the number of tentatives and double presence in the sequence, at according to the last one it choose the next state to which the logic has to go</th>
+  </tr>
 
 [Back to top](#table-of-contents)
 
