@@ -96,14 +96,14 @@ Mastermind
 
 # Software and Hardware Requirements
 ## Hardware Requirements
-• MSP432P401R + BoosterPack (Link the documentation)<br>
-  we have different documentation for this project:
+• MSP432P401R + BoosterPack (Link the documentation), we have different documentation for this project:
   1. launchpad user's guide
   2. microcontroller documentation
   3. technical reference manual
   4. DriverLib user's guide
   5. Booster pack user's guide
-  6. Graphics Library 3.21.00.00 user's guide
+  6. Graphics Library 3.21.00.00 user's guide <br>
+
 • Breadboard<br>
 • 8 Buttons for Breadboard<br>
 • 9 wires male to female and 8 wires for breadboard(male to male) to connect the buttons with the ground<br><br>
