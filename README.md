@@ -1,16 +1,6 @@
 # Mastermind
 <div align="center">
-    <p>
-        <img src="images/logo.png" alt="logo" width="200">
-    </p>
-    <div>
-        <img src="https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white" alt="C"/>
-         <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white" alt="HTML"/>
-    </div>
-</div>
-
-<div align="center">
-  <img src="images/logo.png" alt="logo" width="300">
+  <img src="images/logo.png" alt="logo" width="200">
 </div>
 
 ## Table of Contents
