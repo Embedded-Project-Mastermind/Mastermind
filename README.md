@@ -25,7 +25,7 @@
 ---
 
 # Introduction
-The purpose of the project is to develop a simple version of the game Mastermind. It is a simple and funny game, where the user has to guess a sequence of colors within a certain number of attempts. Some settings for the game can be chosen wia an intuitive GUI, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the presence of doubles. Then, after a summary page, the game starts and at every sequence inserted, the system tells wheter each color is in the right position([X]), is in the sequence but in the wrong position([O]), and if it isn't present at all ([!]). The clues given are also based on the difficulty levels, which are three. For the easiest mode, one all of these three are displayed, for the medium mode, the results are displayed as the correct number of O and X but in a casual order, while for the difficult there are onle X and ! and the X are put starting from the left for the number that is present in the entered sequence.<br><br>
+The purpose of the project is to develop a simple version of the game Mastermind. It is a simple and funny game, where the user has to guess a sequence of colors within a certain number of attempts. Some settings for the game can be chosen wia an intuitive GUI, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the presence of doubles. Then, after a summary page, the game starts and at every sequence inserted, the system tells wheter each color is in the right position([X]), is in the sequence but in the wrong position([O]), and if it is not present at all ([!]). The clues given are also based on the difficulty levels, which are three. For the easiest mode, one all of these three are displayed, for the medium mode, the results are displayed as the correct number of O and X but in a casual order, while for the difficult there are onle X and ! and the X are put starting from the left for the number that is present in the entered sequence.<br><br>
 
 The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit. each button has the pin which it's connected to and then it is connected to gtound on the other side. So when the button is released the internal pull-up resistor will put the value to high, while when the button is pressed the value will be low as it is connected to the ground.<br><br>
 
@@ -97,6 +97,13 @@ Mastermind
 # Software and Hardware Requirements
 ## Hardware Requirements
 • MSP432P401R + BoosterPack (Link the documentation)<br>
+  we have different documentation for this project:
+  1. launchpad user's guide
+  2. microcontroller documentation
+  3. technical reference manual
+  4. DriverLib user's guide
+  5. Booster pack user's guide
+  6. Graphics Library 3.21.00.00 user's guide
 • Breadboard<br>
 • 8 Buttons for Breadboard<br>
 • 9 wires male to female and 8 wires for breadboard(male to male) to connect the buttons with the ground<br><br>
