@@ -286,7 +286,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   </tr>
   <tr>
    <th>RESET_TENT</th>
-  <th>KEY_WH_DOUB<br>KEY_WHOUT_DOUB</th>
+  <th>KEY_WH_DOUB<br>KEY_WHOUT_DOUB<br>ELABORATE_RESULT</th>
   <th>-</th>
   <th>WAIT_EMPTY</th>
   <th>-</th>
@@ -388,7 +388,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   </tr>
   <tr>
   <th>WIN</th>
-  <th>-</th>
+  <th>ELABORATE_RESULT</th>
   <th>-</th>
   <th>-</th>
   <th>-</th>
@@ -396,7 +396,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 </tr>
   <tr>
   <th>GAME_OVER</th>
-  <th>-</th>
+  <th>ELABORATE_RESULT</th>
   <th>-</th>
   <th>-</th>
   <th>-</th>
