@@ -107,43 +107,6 @@ Mastermind
 • 8 Buttons for Breadboard<br>
 • 9 wires male to female and 8 wires for breadboard(male to male) to connect the buttons with the ground<br><br>
 Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...<br>
-For the left side of the board, the connected pins related to the colors are the following:
-<table>
-  <tr>
-    <th>Color</th>
-    <th>Ground</th>
-    <th>Orange</th>
-    <th>Green</th>
-    <th>Cyan</th>
-  </tr>
-  <tr>
-    <th>MSP432 pin</th>
-    <th>GND</th>
-    <th>3.3</th>
-    <th>4.7</th>
-    <th>5.4</th>
-  </tr>
-</table>
-
-For the right side the pins are:
-<table>
-  <tr>
-    <th>Color</th>
-    <th>Red</th>
-    <th>White</th>
-    <th>Purple</th>
-    <th>Blue</th>
-    <th>Yellow</th>
-  </tr>
-  <tr>
-    <th>Pin</th>
-    <th>3.0</th>
-    <th>5.6</th>
-    <th>6.6</th>
-    <th>5.2</th>
-    <th>3.6</th>
-  </tr>
-</table>
 
 <table align="left">
   <tr>
