@@ -274,6 +274,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>Setup the start of the game inserting the dimension, the difficulty, the number of tentatives and double presence in the sequence, at according to the last one it choose the next state to which the logic has to go</th>
   </tr>
 <br><br>
+</table>
   
 [Back to top](#table-of-contents)
 
