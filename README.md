@@ -391,10 +391,12 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>-</th>
   <th>-</th>
   <th>-</th>
+  <th>-</th>
   <th>The user has won the game</th>
 </tr>
   <tr>
   <th>GAME_OVER</th>
+  <th>-</th>
   <th>-</th>
   <th>-</th>
   <th>-</th>
