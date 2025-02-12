@@ -130,7 +130,7 @@ void leftStick_DIFFICULTY() {
  * @date 2024-10-10
  */
 void rightStick_DIFFICULTY() {
-    if (position==sizes[DIFFICULTY]-2 && (diff_buttons[sizes[DIFFICULTY-1]].state!=DISABLED)) {
+    if (position==sizes[DIFFICULTY]-2 && (diff_buttons[sizes[DIFFICULTY]-1].state!=DISABLED)) {
             handleOut(diff_buttons, position, sizes[DIFFICULTY]);
             position++;
             handleIn(diff_buttons, position, sizes[DIFFICULTY]);

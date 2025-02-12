@@ -1,9 +1,0 @@
-<map id="makeArrayEmpty_Bool" name="makeArrayEmpty_Bool">
-<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="208,55,363,80"/>
-<area shape="rect" id="Node000002" href="$src_2gamelogic1_8c.html#a9e39464d13bda2ea16881b5a1e29d97f" title=" " alt="" coords="5,5,160,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,53,138,34,139,29,215,48"/>
-<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a26e20921c3fb3ec3b86ce90e18514575" title="Allocation for a boolean array, ensuring that it is not already allocated." alt="" coords="5,55,160,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,70,160,70,160,65,192,65"/>
-<area shape="rect" id="Node000004" href="$general_2gamelogic3_8c.html#a1ae9537a5e4b0e166d93c4997448030c" title="TODO: Describe function." alt="" coords="9,104,156,130"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="215,87,139,106,138,101,214,82"/>
-</map>

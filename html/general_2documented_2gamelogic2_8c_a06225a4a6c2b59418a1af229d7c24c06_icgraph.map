@@ -1,9 +1,0 @@
-<map id="print_sequence" name="print_sequence">
-<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="162,55,271,80"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic2_8c.html#a2aac7e2824658f8ac7c8b8446fff0c9c" title="deletes the last color into the user&#39;s sequence if it is not empty" alt="" coords="5,5,114,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,52,102,34,104,29,159,47"/>
-<area shape="rect" id="Node000003" href="$general_2gamelogic2_8c.html#aaf32eada42d315c1c42b5e21d002f1aa" title="inserts the selected color into the user&#39;s sequence if space is available" alt="" coords="15,55,104,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,70,104,70,104,65,146,65"/>
-<area shape="rect" id="Node000004" href="$src_2gamelogic2_8c.html#ae8ac64a74ba2b23dc45065445721080c" title=" " alt="" coords="15,104,104,130"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="159,88,104,106,102,101,158,83"/>
-</map>

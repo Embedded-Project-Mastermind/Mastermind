@@ -1,7 +1,0 @@
-<map id="random_int" name="random_int">
-<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="233,31,318,56"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic1_8c.html#a88ad662207fa03ea53b1f6be039fa066" title="Generation of a random key that allows the presence of duplicates colors." alt="" coords="11,5,179,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,38,179,33,180,27,218,33"/>
-<area shape="rect" id="Node000003" href="$general_2gamelogic1_8c.html#a3abce2284f44af7203a666506074b873" title="Generation of a random key that doesn&#39;t allow the presence of duplicates colors." alt="" coords="5,55,185,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,54,185,58,185,53,217,49"/>
-</map>

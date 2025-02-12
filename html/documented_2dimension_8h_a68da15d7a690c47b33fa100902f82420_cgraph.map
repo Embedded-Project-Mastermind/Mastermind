@@ -1,9 +1,0 @@
-<map id="upStick_DIMENSION" name="upStick_DIMENSION">
-<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="5,55,155,80"/>
-<area shape="rect" id="Node000002" href="$dimension_8c.html#aa38b30924148a4b57c31d71a60aa6e4f" title="manages the font dimension for the buttons" alt="" coords="203,5,288,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,51,187,33,189,38,127,57"/>
-<area shape="rect" id="Node000003" href="$documented_2implementations_8c.html#a0f3ea1e3abed721e539b1332079664c4" title="TODO: Describe function." alt="" coords="210,55,280,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,65,194,65,194,70,155,70"/>
-<area shape="rect" id="Node000004" href="$documented_2implementations_8c.html#a7850b120bb168cda34d0ff446cd53845" title="TODO: Describe function." alt="" coords="205,104,286,130"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="127,78,191,98,189,103,125,84"/>
-</map>
