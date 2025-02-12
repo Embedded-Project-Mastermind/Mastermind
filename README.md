@@ -104,7 +104,7 @@ Mastermind
   5. [Booster pack user's guide](/documentation/BoosterPack_connections.pdf)
   6. [Graphics Library 3.21.00.00 user's guide](/documentation/MSP_Graphics_Library_3.21.00.pdf) <br>
      
-• Breadboard<br>
+• Half size breadboard with 420 points(30 lines and 10 columns)<br>
 • 8 Buttons for Breadboard<br>
 • 9 wires male to female and 8 wires for breadboard(male to male) to connect the buttons with the ground<br><br>
 Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...<br>
