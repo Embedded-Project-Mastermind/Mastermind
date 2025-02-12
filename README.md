@@ -289,6 +289,14 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>-</th>
   <th>Generate the sequence to guess without the presence of doubles</th>
   </tr>
+   <th>KEY_WHOUT_DOUB</th>
+  <th>RESET_TENT</th>
+  <th>-</th>
+  <th>WAIT_EMPTY</th>
+  <th>-</th>
+  <th>Reset the user sequence and starts a new tentative of guessing</th>
+  </tr>
+  
 </table>
 <br><br>
   
