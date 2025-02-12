@@ -26,7 +26,7 @@ void text_selection(bool sel){     //selects which text to display
 	}
 }
 
-void full_text(){
+void full_text(void){
      printf("The array is full, click 2 to confirm and 3 to go back.\nSelection: ");    
 }
 
