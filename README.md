@@ -1,6 +1,6 @@
 <h1 align="center">Mastermind</h1>
 <div align="center">
-  <img src="images/logo.png" alt="logo" width="200">
+  <img src="images/logo.png" alt="logo" width="250">
 </div>
 
 ## Table of Contents
