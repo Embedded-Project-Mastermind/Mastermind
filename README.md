@@ -97,7 +97,7 @@ Mastermind
 # Software and Hardware Requirements
 ## Hardware Requirements
 • MSP432P401R + BoosterPack (Link the documentation), we have different documentation for this project:
-  1. launchpad user's guide
+  1. launchpad user's guide [Launchpad user's guide](/documentation/launchpad)
   2. microcontroller documentation
   3. technical reference manual
   4. DriverLib user's guide
