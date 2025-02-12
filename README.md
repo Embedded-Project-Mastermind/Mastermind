@@ -108,7 +108,7 @@ Mastermind
 • 8 Buttons for Breadboard<br>
 • 9 wires male to female and 8 wires for breadboard(male to male) to connect the buttons with the ground<br><br>
 Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...<br>
-<table>
+<table align="center">
   <tr>
     <th>Color</th>
     <th>Ground</th>
