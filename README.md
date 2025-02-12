@@ -297,8 +297,8 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>RESET_TENT</th>
   <th>-</th>
   <th>INSERT_COLOR</th>
-  <th>Signal</th>
-  <th>Reset the user sequence and starts a new tentative of guessing</th>
+  <th>Button_Input</th>
+  <th>In the case, the sequence is empty, it is given the possibility to insert a color in the sequence, clicking a button on breadboard</th>
   </tr>
   
 </table>
