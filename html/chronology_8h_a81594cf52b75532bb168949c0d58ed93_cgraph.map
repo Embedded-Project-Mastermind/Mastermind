@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,205,115,173,140,156,168,142,212,129,258,121,342,115,342,120,259,126,213,134,170,147,143,160,118,177,79,209"/>
 <area shape="rect" id="Node000008" href="$game_8c.html#a1d704afea01300efda83ee14d72bf132" title="Management and color of the circles on screen." alt="" coords="184,259,274,284"/>
 <area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="109,232,171,251,170,256,107,237"/>
-<area shape="rect" id="Node000009" href="$chronology_8c.html#a0009722d580b5fc3a2c6ae32efadd8bb" title="TODO: Describe function." alt="" coords="169,157,290,183"/>
+<area shape="rect" id="Node000009" href="$chronology_8c.html#a0009722d580b5fc3a2c6ae32efadd8bb" title="function that draw corrections below circles" alt="" coords="169,157,290,183"/>
 <area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="107,205,170,185,171,191,109,210"/>
 <area shape="rect" id="Node000010" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title="it draws a rectangle with a text centered in it" alt="" coords="338,181,464,207"/>
 <area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="121,214,322,198,323,203,121,219"/>

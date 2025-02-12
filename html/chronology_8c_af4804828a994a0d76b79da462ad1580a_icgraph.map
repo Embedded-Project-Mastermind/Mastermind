@@ -1,8 +1,8 @@
 <map id="char_Conversion_to_Int" name="char_Conversion_to_Int">
 <area shape="rect" id="Node000001" title="converts the number associated to the color to its color char" alt="" coords="1090,55,1250,80"/>
-<area shape="rect" id="Node000002" href="$chronology_8c.html#a5cf5997f8c26419de3228a297019b0bc" title="populate the cHronology circle with their colors" alt="" coords="865,55,1042,80"/>
+<area shape="rect" id="Node000002" href="$chronology_8c.html#a5cf5997f8c26419de3228a297019b0bc" title="populate the cHronology circle with their colors for evry single attempts displayed" alt="" coords="865,55,1042,80"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1075,70,1043,70,1043,65,1075,65"/>
-<area shape="rect" id="Node000003" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="show the last attempts of the chronology or the ones that were selected by the joystick" alt="" coords="734,55,817,80"/>
+<area shape="rect" id="Node000003" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="populate the last attempts of the chronology or the ones that were selected by the joystick" alt="" coords="734,55,817,80"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="850,70,817,70,817,65,850,65"/>
 <area shape="rect" id="Node000004" href="$chronology_8c.html#a200291275b68705ac77fdde64e026b27" title="manage what to do when the user moves the stick down" alt="" coords="500,5,686,31"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="718,54,685,45,645,34,647,29,686,40,719,49"/>

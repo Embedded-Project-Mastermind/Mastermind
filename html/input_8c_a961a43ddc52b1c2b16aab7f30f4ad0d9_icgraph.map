@@ -1,5 +1,9 @@
 <map id="triggerPinInterrupt" name="triggerPinInterrupt">
-<area shape="rect" id="Node000001" title="A via for creating a dummy trigger on P1.1, in order to reactivate an undesired stop of the system." alt="" coords="194,5,318,31"/>
-<area shape="rect" id="Node000002" href="$general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="5,5,146,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,21,146,21,146,16,178,16"/>
+<area shape="rect" id="Node000001" title="A via for creating a dummy trigger on P1.1, in order to reactivate an undesired stop of the system." alt="" coords="379,31,503,56"/>
+<area shape="rect" id="Node000002" href="$general_2main_8c.html#a9fa2875556d48df2ba3c9c148667b8f5" title=" " alt="" coords="191,5,331,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="363,35,331,31,332,25,364,30"/>
+<area shape="rect" id="Node000003" href="$input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="204,55,318,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="364,56,318,63,318,57,363,51"/>
+<area shape="rect" id="Node000004" href="$general_2main_8c.html#a9b3c0e9afd83afa34c0070f88d7860bc" title=" " alt="" coords="5,55,143,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="189,70,143,70,143,65,189,65"/>
 </map>

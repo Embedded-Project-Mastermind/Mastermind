@@ -1,6 +1,6 @@
 <map id="populateChronologyCircles" name="populateChronologyCircles">
-<area shape="rect" id="Node000001" title="populate the cHronology circle with their colors" alt="" coords="865,55,1042,80"/>
-<area shape="rect" id="Node000002" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="show the last attempts of the chronology or the ones that were selected by the joystick" alt="" coords="734,55,817,80"/>
+<area shape="rect" id="Node000001" title="populate the cHronology circle with their colors for evry single attempts displayed" alt="" coords="865,55,1042,80"/>
+<area shape="rect" id="Node000002" href="$chronology_8c.html#a2c8461dd4bc87e2cee6461d79daca665" title="populate the last attempts of the chronology or the ones that were selected by the joystick" alt="" coords="734,55,817,80"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="850,70,817,70,817,65,850,65"/>
 <area shape="rect" id="Node000003" href="$chronology_8c.html#a200291275b68705ac77fdde64e026b27" title="manage what to do when the user moves the stick down" alt="" coords="500,5,686,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="718,54,685,45,645,34,647,29,686,40,719,49"/>

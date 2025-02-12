@@ -1,21 +1,23 @@
 <map id="TA0_N_IRQHandler" name="TA0_N_IRQHandler">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,143,130"/>
-<area shape="rect" id="Node000002" href="$input_8c.html#afc6f8d83006ea3fd3139fe320edb4ec3" title="Verify that there is only one true input in a period of time, in order to see a clear output." alt="" coords="191,55,305,80"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,101,184,83,186,88,123,106"/>
-<area shape="rect" id="Node000003" href="$input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="191,104,304,130"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,114,176,114,176,120,143,120"/>
-<area shape="rect" id="Node000020" href="$input_8c.html#aad3f0b26686a346707670914702aeaad" title="Function to reset the global bool array, simulating the activation of the ports." alt="" coords="193,153,303,179"/>
-<area shape="poly" id="edge24_Node000001_Node000020" title=" " alt="" coords="123,128,186,146,184,151,121,133"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,129,143,155"/>
+<area shape="rect" id="Node000002" href="$input_8c.html#afc6f8d83006ea3fd3139fe320edb4ec3" title="Verify that there is only one true input in a period of time, in order to see a clear output." alt="" coords="191,80,305,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,126,184,108,186,113,123,131"/>
+<area shape="rect" id="Node000003" href="$input_8c.html#a445b36ad7315b9af24ac6cde2f307d5e" title="Determine which is the output action after pressing a button, it can be trigger a color or give a par..." alt="" coords="191,129,304,155"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,140,176,140,176,145,143,145"/>
+<area shape="rect" id="Node000021" href="$input_8c.html#aad3f0b26686a346707670914702aeaad" title="Function to reset the global bool array, simulating the activation of the ports." alt="" coords="193,179,303,204"/>
+<area shape="poly" id="edge25_Node000001_Node000021" title=" " alt="" coords="123,153,186,171,184,176,121,158"/>
 <area shape="rect" id="Node000004" href="$buttons_8c.html#a1009f4e791fd062c1654ef5ccff2993a" title="Implements back button action that redirects in eliminate colored circle state if there was at least ..." alt="" coords="361,5,485,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="285,101,303,91,318,78,327,66,336,53,351,40,359,35,362,40,355,44,340,57,331,69,322,82,307,95,288,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="287,126,303,116,319,97,326,79,334,59,351,40,356,37,359,41,355,44,339,62,331,81,323,100,307,120,290,131"/>
 <area shape="rect" id="Node000009" href="$buttons_8c.html#a4fe9599165d47017fa954f8ec9016d4f" title="Implements confirm button action that manage its input according to the state you are in...." alt="" coords="353,104,493,130"/>
-<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="305,114,337,114,337,120,305,120"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="304,131,337,127,338,132,305,137"/>
 <area shape="rect" id="Node000017" href="$input_8c.html#a0e001e6590fdf593eeac0f10ee1c18ff" title="Verify how many inputs in a period of time were performed in the array generated." alt="" coords="378,153,468,179"/>
-<area shape="poly" id="edge20_Node000003_Node000017" title=" " alt="" coords="297,128,364,147,362,152,296,133"/>
+<area shape="poly" id="edge20_Node000003_Node000017" title=" " alt="" coords="305,147,364,155,363,161,304,153"/>
 <area shape="rect" id="Node000018" href="$game_8c.html#ae75b7a2c4cacd669fec7a8d14c925898" title="According to the inputed color, the leds are turned on according to that color (ORANGE case it will b..." alt="" coords="370,55,476,80"/>
-<area shape="poly" id="edge21_Node000003_Node000018" title=" " alt="" coords="296,101,360,82,361,88,297,106"/>
+<area shape="poly" id="edge21_Node000003_Node000018" title=" " alt="" coords="281,126,304,116,352,89,364,84,366,89,354,94,306,121,283,131"/>
 <area shape="rect" id="Node000019" href="$input_8c.html#aa21ddc994860540031b8ee0b3a81f5f2" title="Verify the true input in a period of time, in order to see a clear output." alt="" coords="389,203,457,228"/>
-<area shape="poly" id="edge23_Node000003_Node000019" title=" " alt="" coords="288,128,307,139,322,152,331,165,340,177,354,189,376,200,373,205,352,194,336,181,327,168,318,156,303,143,285,133"/>
+<area shape="poly" id="edge23_Node000003_Node000019" title=" " alt="" coords="282,153,306,164,354,189,375,197,373,202,352,194,304,169,280,158"/>
+<area shape="rect" id="Node000020" href="$input_8c.html#a961a43ddc52b1c2b16aab7f30f4ad0d9" title="A via for creating a dummy trigger on P1.1, in order to reactivate an undesired stop of the system." alt="" coords="361,252,485,278"/>
+<area shape="poly" id="edge24_Node000003_Node000020" title=" " alt="" coords="290,153,307,164,323,184,331,203,339,221,355,239,359,242,356,246,351,243,334,224,326,205,319,187,303,168,287,158"/>
 <area shape="rect" id="Node000005" href="$general_2gamelogic2_8c.html#a2d9418eed626aa95f8198811a970a254" title="returns if the user’s sequence is empty or not" alt="" coords="567,5,642,31"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="486,16,552,16,552,21,486,21"/>
 <area shape="rect" id="Node000006" href="$implementations_8c.html#ad52f2c05d7aee61aba7bfcc147efcab5" title="it draws a rectangle with a text centered in it" alt="" coords="541,55,668,80"/>

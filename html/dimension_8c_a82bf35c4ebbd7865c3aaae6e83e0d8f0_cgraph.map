@@ -1,5 +1,5 @@
 <map id="drawDimension" name="drawDimension">
-<area shape="rect" id="Node000001" title="Function that draws the interface of dimension section, 4 buttons to select the dimension and the oth..." alt="" coords="5,103,117,129"/>
+<area shape="rect" id="Node000001" title="dFunction that draws the interface of dimension section, 4 buttons to select the dimension and the ot..." alt="" coords="5,103,117,129"/>
 <area shape="rect" id="Node000002" href="$implementations_8c.html#ada4cd14b9689d4fe9b9de328e4724964" title="draws the button in the given position with the right color" alt="" coords="168,78,255,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,104,152,98,153,103,118,109"/>
 <area shape="rect" id="Node000008" href="$implementations_8c.html#aea1dda1e46fe79f2ce1e1f4afb8391e0" title="finds the selected button in all the buttons of an interface" alt="" coords="165,127,258,153"/>

@@ -12,7 +12,7 @@
 <area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="946,217,915,179,874,143,852,133,855,128,876,139,919,175,950,214"/>
 <area shape="rect" id="Node000010" href="$difficulty_8c.html#a1834148a96e06042ee734794f17f9714" title="Function that draws the interface of difficulty section, 3 buttons to select difficulty and the other..." alt="" coords="745,153,846,179"/>
 <area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="930,222,874,193,845,182,847,177,876,188,933,217"/>
-<area shape="rect" id="Node000012" href="$dimension_8c.html#a82bf35c4ebbd7865c3aaae6e83e0d8f0" title="Function that draws the interface of dimension section, 4 buttons to select the dimension and the oth..." alt="" coords="740,203,851,228"/>
+<area shape="rect" id="Node000012" href="$dimension_8c.html#a82bf35c4ebbd7865c3aaae6e83e0d8f0" title="dFunction that draws the interface of dimension section, 4 buttons to select the dimension and the ot..." alt="" coords="740,203,851,228"/>
 <area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="907,235,851,226,851,221,908,230"/>
 <area shape="rect" id="Node000014" href="$end_8c.html#abd6de31a2cbd9c1609338b0f9095e230" title="draws the end screen, displaying either a win or game over message." alt="" coords="759,252,832,278"/>
 <area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="908,252,832,262,831,257,907,246"/>
