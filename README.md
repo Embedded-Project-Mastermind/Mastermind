@@ -25,15 +25,10 @@
 ---
 
 # Introduction
-<video width="600" controls>
-  <source src="https://youtu.be/asKY3cJsWYA" type="video/mp4">
-  Il tuo browser non supporta il tag video.
-</video>
-<br>
-<video width="600" controls>
-  <source src="https://youtu.be/Nvdm1BBGjmU" type="video/mp4">
-  Il tuo browser non supporta il tag video.
-</video>
+<iframe width="600" height="340" src="https://www.youtube.com/embed/asKY3cJsWYA" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="600" height="340" src="https://www.youtube.com/embed/Nvdm1BBGjmU" frameborder="0" allowfullscreen></iframe>
+
 The purpose of the project is to develop a version of the game Mastermind for the MSP432 microcrontroller. It is a intuitive and funny game, where the user has to guess a sequence of colors within a certain number of attempts. Some settings for the game can be chosen wia an intuitive GUI, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the presence of doubles, which means that a color can be found multiple times in the key. Then, after a summary page, the game starts and at every sequence inserted, the system tells whether each color is in the right position([X]), is in the sequence but in the wrong position([O]), and if it is not present at all ([!]). The clues given are also based on the difficulty levels, which are three. For the easiest mode, one all of these three are displayed, for the medium mode, the results are displayed as the correct number of X and O but in a quantity manner and in an order that is not associated with the colors like in the easy mode: the first displayed are the X, then O and ! for the remaining. For the hard mode there are only X and ! and they are displayed as for the medium mode.<br><br>
 The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit. Each button is connected to a pin of the board and to the ground, and it corresponds to a specific color, related to the cable in our configuration.
 <br><br>
