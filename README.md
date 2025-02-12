@@ -192,7 +192,7 @@ For the right side the pins are:
 </table>
 
 <div style="text-align: right;">
-  <img src="images/board_configuration.png" alt="Board configuration" width="300">
+  <img src="images/board_configuration.png" alt="Board configuration" width="330">
 </div>
  <br><br>
 
