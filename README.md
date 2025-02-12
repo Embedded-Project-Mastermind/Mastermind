@@ -102,7 +102,8 @@ Mastermind
   3. [Technical reference manual](/documentation/Technical_reference_manual.pdf)
   4. [DriverLib user's guide](/documentation/MSP432_DriverLib_Users_Guide.pdf)
   5. [Booster pack user's guide](/documentation/BoosterPack_connections.pdf)
-  6. [Graphics Library 3.21.00.00 user's guide](/documentation/MSP_Graphics_Library_3.21.00.pdf)<br> 
+  6. [Graphics Library 3.21.00.00 user's guide](/documentation/MSP_Graphics_Library_3.21.00.pdf) <br>
+     
 • Breadboard<br>
 • 8 Buttons for Breadboard<br>
 • 9 wires male to female and 8 wires for breadboard(male to male) to connect the buttons with the ground<br><br>
