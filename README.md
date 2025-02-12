@@ -258,7 +258,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 
 ## Software Algorithm
 <div align="center">
-  <img src="images/FSM.png" alt="fsm" width="250">
+  <img src="images/FSM.png" alt="fsm" width="400">
 </div>
 <table>
   <tr>
@@ -286,7 +286,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 
 ## Menu
 <div align="center">
-  <img src="images/Workflow_GUI.png" alt="workflow" width="250">
+  <img src="images/Workflow_GUI.png" alt="workflow" width="400">
 </div>
 - FMS for the menu<br><br>
 
