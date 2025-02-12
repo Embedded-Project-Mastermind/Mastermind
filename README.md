@@ -1,4 +1,6 @@
-<h1 align="center">Mastermind</h1>
+<p align="center" style="font-family: Arial, sans-serif; font-size: 40px;">
+  <b>Mastermind</b>
+</p>
 <div align="center">
   <img src="images/logo.png" alt="logo" width="250">
 </div>
