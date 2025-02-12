@@ -1,6 +1,6 @@
 <h1 align="center">Mastermind</h1>
 <div align="center">
-  <img src="images/logo.png" alt="logo" width="200">
+  <img src="images/logo.png" alt="logo" width="250">
 </div>
 
 ## Table of Contents
@@ -102,50 +102,14 @@ Mastermind
   3. [Technical reference manual](/documentation/Technical_reference_manual.pdf)
   4. [DriverLib user's guide](/documentation/MSP432_DriverLib_Users_Guide.pdf)
   5. [Booster pack user's guide](/documentation/BoosterPack_connections.pdf)
-  6. [Graphics Library 3.21.00.00 user's guide](/documentation/MSP_Graphics_Library_3.21.00.pdf)<br> 
+  6. [Graphics Library 3.21.00.00 user's guide](/documentation/MSP_Graphics_Library_3.21.00.pdf) <br>
+     
 • Breadboard<br>
 • 8 Buttons for Breadboard<br>
 • 9 wires male to female and 8 wires for breadboard(male to male) to connect the buttons with the ground<br><br>
 Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...<br>
-For the left side of the board, the connected pins related to the colors are the following:
-<table>
-  <tr>
-    <th>Color</th>
-    <th>Ground</th>
-    <th>Orange</th>
-    <th>Green</th>
-    <th>Cyan</th>
-  </tr>
-  <tr>
-    <th>MSP432 pin</th>
-    <th>GND</th>
-    <th>3.3</th>
-    <th>4.7</th>
-    <th>5.4</th>
-  </tr>
-</table>
 
-For the right side the pins are:
-<table>
-  <tr>
-    <th>Color</th>
-    <th>Red</th>
-    <th>White</th>
-    <th>Purple</th>
-    <th>Blue</th>
-    <th>Yellow</th>
-  </tr>
-  <tr>
-    <th>Pin</th>
-    <th>3.0</th>
-    <th>5.6</th>
-    <th>6.6</th>
-    <th>5.2</th>
-    <th>3.6</th>
-  </tr>
-</table>
-
-<table>
+<table align="left">
   <tr>
       <th>Left</th>
       <th></th>
@@ -191,7 +155,10 @@ For the right side the pins are:
   </tr>  
 </table>
 
-<img src="images/board_configuration.png" alt="Alt Text" width="300">
+<div style="text-align: right;">
+  <img src="images/board_configuration.png" alt="Board configuration" width="330">
+</div>
+ <br><br>
 
 - Description and image of how to build a working pressable button<br><br>
 
