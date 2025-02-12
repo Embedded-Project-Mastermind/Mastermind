@@ -145,7 +145,7 @@ For the right side the pins are:
   </tr>
 </table>
 
-<table>
+<table align="left">
   <tr>
       <th>Left</th>
       <th></th>
@@ -191,7 +191,10 @@ For the right side the pins are:
   </tr>  
 </table>
 
-<img src="images/board_configuration.png" alt="Alt Text" width="300">
+<div style="text-align: right;">
+  <img src="images/board_configuration.png" alt="Board configuration" width="200">
+</div>
+
 
 - Description and image of how to build a working pressable button<br><br>
 
