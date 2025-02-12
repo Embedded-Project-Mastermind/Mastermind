@@ -159,8 +159,9 @@ Suggested connection - Considering that the connections are done in order to avo
 <div style="text-align: right;">
   <img src="images/board_configuration.png" alt="Board configuration" width="330">
 </div>
- <br><br>
 </div>
+ <br><br>
+
 - Description and image of how to build a working pressable button<br><br>
  ...So when the button is released the internal pull-up resistor will put the value to high, while when the button is pressed the value will be low as it is connected to the ground. 
 [Back to top](#table-of-contents)
