@@ -165,7 +165,7 @@ Suggested connection - Considering that the connections are done in order to avo
 </table>
 
 <div align="center">
-  <img src="images/breadboard.png" alt="logo" width="1000">
+  <img src="images/breadboard.png" alt="logo" width="750">
 </div>
 
 
