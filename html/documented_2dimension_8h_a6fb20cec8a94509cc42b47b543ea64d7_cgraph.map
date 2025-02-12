@@ -1,9 +1,0 @@
-<map id="downStick_DIMENSION" name="downStick_DIMENSION">
-<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="5,55,172,80"/>
-<area shape="rect" id="Node000002" href="$dimension_8c.html#aa38b30924148a4b57c31d71a60aa6e4f" title="manages the font dimension for the buttons" alt="" coords="220,5,305,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,51,204,32,206,37,137,57"/>
-<area shape="rect" id="Node000003" href="$documented_2implementations_8c.html#a0f3ea1e3abed721e539b1332079664c4" title="TODO: Describe function." alt="" coords="227,55,298,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,65,212,65,212,70,172,70"/>
-<area shape="rect" id="Node000004" href="$documented_2implementations_8c.html#a7850b120bb168cda34d0ff446cd53845" title="TODO: Describe function." alt="" coords="222,104,302,130"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="137,78,208,99,207,104,136,84"/>
-</map>

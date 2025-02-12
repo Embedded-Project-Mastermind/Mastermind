@@ -1,7 +1,0 @@
-<map id="checkIfGameOver" name="checkIfGameOver">
-<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="232,31,359,56"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic3_8c.html#a4965965e6c1b73519655decb209180b1" title="TODO: Describe function." alt="" coords="5,5,184,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,36,184,32,185,27,217,31"/>
-<area shape="rect" id="Node000003" href="$src_2gamelogic3_8c.html#a0f8b9f3f374b53b9e58424bf9d735544" title="TODO: Describe function." alt="" coords="13,55,176,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,56,177,60,176,55,216,50"/>
-</map>

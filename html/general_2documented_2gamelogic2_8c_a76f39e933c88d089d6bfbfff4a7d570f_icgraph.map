@@ -1,9 +1,0 @@
-<map id="is_full" name="is_full">
-<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="197,55,252,80"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic2_8c.html#a6639e69c4f94296b4ed63b9471ba37e8" title="TODO: Describe function." alt="" coords="5,5,149,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,56,117,34,118,29,183,51"/>
-<area shape="rect" id="Node000003" href="$general_2gamelogic2_8c.html#aaf32eada42d315c1c42b5e21d002f1aa" title="inserts the selected color into the user&#39;s sequence if space is available" alt="" coords="33,55,121,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,70,122,70,122,65,181,65"/>
-<area shape="rect" id="Node000004" href="$src_2gamelogic2_8c.html#ae8ac64a74ba2b23dc45065445721080c" title=" " alt="" coords="33,104,121,130"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,84,118,106,117,101,181,79"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="fn_GAME" name="fn_GAME">
-<area shape="rect" id="Node000001" title="TODO: Describe function." alt="" coords="162,55,240,80"/>
-<area shape="rect" id="Node000002" href="$general_2gamelogic2_8c.html#a2aac7e2824658f8ac7c8b8446fff0c9c" title="deletes the last color into the user&#39;s sequence if it is not empty" alt="" coords="5,5,114,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,51,98,34,100,29,148,46"/>
-<area shape="rect" id="Node000003" href="$general_2gamelogic2_8c.html#aaf32eada42d315c1c42b5e21d002f1aa" title="inserts the selected color into the user&#39;s sequence if space is available" alt="" coords="15,55,104,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,70,104,70,104,65,146,65"/>
-<area shape="rect" id="Node000004" href="$general_2gamelogic1_8c.html#a349e30260991f4d42dc6e3b575108891" title="After each input sequence is analyzed the tentative is all reinitialized with an incrementation of th..." alt="" coords="8,104,111,130"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,89,100,106,98,101,146,84"/>
-</map>
