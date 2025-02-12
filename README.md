@@ -381,7 +381,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
    <tr>
    <th>ELABORATE_RESULT</th>
   <th>EASY_MODE<br>MEDIUM_MODE<br>DIFFICULT_MODE</th>
-  <th>1. Win cond<br>2. Tentative>max</th>
+  <th>1.Win_cond<br>2.Tentative>max</th>
   <th>🟢WIN<br>🔴(<br>🟢GAME_OVER<br>🔴RESET_TENT<br>)</th>
   <th>-</th>
   <th>If, elaborating the result, is obtained the win condition, the user goes WIN, instead if the tentatives are still available, he will reset the sequence an try with another tentative, instead the user will be sent to game over</th>
