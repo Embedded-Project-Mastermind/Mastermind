@@ -108,11 +108,7 @@ Mastermind
 • 8 Buttons for Breadboard<br>
 • 9 wires male to female and 8 wires for breadboard(male to male) to connect the buttons with the ground<br><br>
 Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...<br>
-
-<table align="center">
-  <tr>
-    <td>
-      <table>
+<table align="left">
   <tr>
       <th>Left</th>
       <th></th>
@@ -157,19 +153,17 @@ Suggested connection - Considering that the connections are done in order to avo
     <th>3.6</th> 
   </tr>  
 </table>
-    </td>
+
+<table align="center">
+  <tr>
     <td>
       <img src="images/board_configuration.png" alt="Board configuration" width="330">
     </td>
+    <td>
+      <img src="images/breadboard.png" alt="Board configuration" width="330">
+    </td>
   </tr>
 </table>
-
-<div align="center">
-  <img src="images/breadboard.png" alt="logo" width="750">
-</div>
-
-
-
  <br><br>
 
 - Description and image of how to build a working pressable button<br><br>
