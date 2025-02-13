@@ -501,7 +501,7 @@ To run the project press the button highlighted in green. After that it is possi
 
 ## Menu
   <p align="center">
-  <img src="images/your-new-image.png" alt="workflow" width="1000">
+  <img src="images/Workflow_GUI.png" alt="workflow" width="1000">
 </p>
 
 
