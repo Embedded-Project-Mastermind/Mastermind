@@ -377,8 +377,12 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 
 ## Connectivity Sensors and MSP432
 
-- Sensors used<br>
-- How they interface and react based on the system<br><br>
+- Sensors used:<br>
+- Color TFT LCD display<br>
+- 2 user push buttons<br>
+- 2-axis joystick<br>
+- Reset button <br>
+- Pin.Port: 3.3, 4.7, 5.4,3.0, 5.6, 6.6, 5.2, 3.6 [Hardware Requirements](#hardware-requirements) <br><br>
 
 [Back to top](#table-of-contents)
 
