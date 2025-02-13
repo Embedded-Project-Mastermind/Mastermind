@@ -242,7 +242,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 <div align="center">
   <img src="images/FSM.png" alt="fsm" width="400">
 </div>
-## Finite State Machine (FSM) - Game Flow
+Finite State Machine (FSM) - Game Flow<br>
 
 | **State**         | **Input**                                      | **Condition**                 | **Output**                                          | **Signal**     |
 |-------------------|----------------------------------------------|--------------------------------|------------------------------------------------------|---------------|
