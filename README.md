@@ -249,231 +249,253 @@ Finite State Machine (FSM) - Game Flow<br>
 ## Finite State Machine (FSM) - Game Flow
 ## Finite State Machine (FSM) - Game Flow
 
-<table>
-  <tr>
+## Finite State Machine (FSM) - Game Flow
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+
+  <tr style="background-color: #f2f2f2;">
     <th>State</th>
     <th>Input</th>
     <th>Condition</th>
     <th>Output</th>
     <th>Signal</th>
   </tr>
-  <tr>
-    <th>START</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>START</strong></th>
     <th>-</th>
     <th>Doubles</th>
     <th>🟢KEY_WH_DOUB<br>🔴KEY_WHOUT_DOUB</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       Setup the game by inserting the dimensions, difficulty, the number of attempts, and whether doubles are present in the sequence. Based on the doubles' presence, the next state is determined.
     </td>
   </tr>
-  <tr>
-    <th>KEY_WH_DOUB</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>KEY_WH_DOUB</strong></th>
     <th>START</th>
     <th>-</th>
     <th>RESET_TENT</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       Generate the sequence to guess with the presence of doubles.
     </td>
   </tr>
-  <tr>
-    <th>KEY_WHOUT_DOUB</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>KEY_WHOUT_DOUB</strong></th>
     <th>START</th>
     <th>-</th>
     <th>RESET_TENT</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       Generate the sequence to guess without the presence of doubles.
     </td>
   </tr>
-  <tr>
-    <th>RESET_TENT</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>RESET_TENT</strong></th>
     <th>KEY_WH_DOUB<br>KEY_WHOUT_DOUB<br>ELABORATE_RESULT</th>
     <th>-</th>
     <th>WAIT_EMPTY</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       Reset the user sequence and start a new attempt for guessing.
     </td>
   </tr>
-  <tr>
-    <th>WAIT_EMPTY</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>WAIT_EMPTY</strong></th>
     <th>RESET_TENT</th>
     <th>-</th>
     <th>INSERT_COLOR</th>
     <th>Button_Input</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       If the sequence is empty, the user can insert a color into the sequence by clicking a button on the breadboard.
     </td>
   </tr>
-  <tr>
-    <th>WAIT_NOT_EMPTY</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>WAIT_NOT_EMPTY</strong></th>
     <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
     <th>-</th>
     <th>INSERT_COLOR</th>
     <th>Button_Input</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       If the sequence is not empty, the user can insert a color into the sequence by pressing a button on the breadboard.
     </td>
   </tr>
-  <tr>
-    <th>INSERT_COLOR</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>INSERT_COLOR</strong></th>
     <th>WAIT_EMPTY<br>WAIT_NOT_EMPTY</th>
     <th>Full</th>
     <th>🟢WAIT_FULL<br>🔴WAIT_NOT_EMPTY</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       After inserting a color, check if the sequence is full. If it is, go to the state `WAIT_FULL`; if not, go to `WAIT_NOT_EMPTY`.
     </td>
   </tr>
-  <tr>
-    <th>WAIT_NOT_EMPTY</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>WAIT_NOT_EMPTY</strong></th>
     <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
     <th>-</th>
     <th>ELIMINATE_COLOR</th>
     <th>Back</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       If the sequence is not full, the user can press the "Back" button to eliminate the last color added.
     </td>
   </tr>
-  <tr>
-    <th>WAIT_FULL</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>WAIT_FULL</strong></th>
     <th>INSERT_COLOR</th>
     <th>-</th>
     <th>ELIMINATE_COLOR</th>
     <th>Back</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       If the sequence is full, the user can press the "Back" button to remove the last color added.
     </td>
   </tr>
-  <tr>
-    <th>ELIMINATE_COLOR</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>ELIMINATE_COLOR</strong></th>
     <th>WAIT_FULL<br>WAIT_NOT_EMPTY</th>
     <th>Empty</th>
     <th>🟢WAIT_EMPTY<br>🔴WAIT_NOT_EMPTY</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       After eliminating a color, check if the sequence is empty. If it is, transition to `WAIT_EMPTY`; otherwise, remain in `WAIT_NOT_EMPTY`.
     </td>
   </tr>
-  <tr>
-    <th>WAIT_FULL</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>WAIT_FULL</strong></th>
     <th>INSERT_COLOR</th>
     <th>-</th>
     <th>ELABORATE_TENTATIVE</th>
     <th>Confirm</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       If the sequence is full, the user can confirm their sequence. The system will then process the sequence.
     </td>
   </tr>
-  <tr>
-    <th>INCREMENT_TENTATIVE</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>INCREMENT_TENTATIVE</strong></th>
     <th>ELABORATE_TENTATIVE</th>
     <th>Difficulty</th>
     <th>🟢EASY_MODE<br>🟡MEDIUM_MODE<br>🔴DIFFICULT_MODE</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       Increment the number of attempts and adjust the output based on the difficulty level chosen by the user (Easy, Medium, or Hard).
     </td>
   </tr>
-  <tr>
-    <th>EASY_MODE</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>EASY_MODE</strong></th>
     <th>INCREMENT_TENTATIVE</th>
     <th>-</th>
     <th>ELABORATE_RESULT</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       The output will include symbols like `X` (correct color and position), `O` (correct color but wrong position), and `!` (color not in the sequence).
     </td>
   </tr>
-  <tr>
-    <th>MEDIUM_MODE</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>MEDIUM_MODE</strong></th>
     <th>INCREMENT_TENTATIVE</th>
     <th>-</th>
     <th>ELABORATE_RESULT</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       The output will include the same symbols as in Easy Mode, but colors will not be associated, and the symbols will be arranged in this order: `X`, then `O`, and finally `!`.
     </td>
   </tr>
-  <tr>
-    <th>DIFFICULT_MODE</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>DIFFICULT_MODE</strong></th>
     <th>INCREMENT_TENTATIVE</th>
     <th>-</th>
     <th>ELABORATE_RESULT</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       The output will include only `X` (correct color and position) and `!` (color not in the sequence), arranged in that order.
     </td>
   </tr>
-  <tr>
-    <th>ELABORATE_RESULT</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>ELABORATE_RESULT</strong></th>
     <th>EASY_MODE<br>MEDIUM_MODE<br>DIFFICULT_MODE</th>
     <th>1. Win condition<br>2. Tentative exceeds max</th>
     <th>🟢WIN<br>🔴(2. 🟢GAME_OVER<br>🔴RESET_TENT)</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       If the win condition is met, the player wins. If the maximum number of attempts is exceeded, the game ends, and the user is either reset or the game is over.
     </td>
   </tr>
-  <tr>
-    <th>WIN</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>WIN</strong></th>
     <th>ELABORATE_RESULT</th>
     <th>-</th>
     <th>-</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       The player has won the game.
     </td>
   </tr>
-  <tr>
-    <th>GAME_OVER</th>
+  
+  <tr style="background-color: #f9f9f9;">
+    <th><strong>GAME_OVER</strong></th>
     <th>ELABORATE_RESULT</th>
     <th>-</th>
     <th>-</th>
     <th>-</th>
   </tr>
   <tr>
-    <td colspan="5">
+    <td colspan="5" style="padding: 15px;">
       The player has lost the game.
     </td>
   </tr>
 </table>
+
 
 
 [Back to top](#table-of-contents)
