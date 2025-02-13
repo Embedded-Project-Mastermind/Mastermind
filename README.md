@@ -181,8 +181,6 @@ After the installation of **Code Composer Studio (CCS)**, version 12.8.0
 4. In `Install debug probes` leave it as it clicking `next`.
 5. To conclude, press `next` until the launcher begins the download.
 
-(da finire)
-
 [Back to top](#table-of-contents)
 
 ---
@@ -212,12 +210,13 @@ Create workspace, repository, project from scratch
 The **SIMPLELINK-MSP432-SDK** library is needed to run the program. Download it at the following link:
 [SIMPLELINK-MSP432-SDK Download](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02)
  
-1. Extract `simplelink_msp432p4_sdk_3_40_01_02.zip` file.  
-2. Open **Code Composer Studio (CCS)** and left-click on the **Project Folder** to select **Properties**.  
-3. Select **CCS Build**.  
-4. Click **ARM Compiler** and then **Include Options**.  
+1. Run the `simplelink_msp432p4_sdk_3_40_01_02.exe` file.
+2. Click `next` 3 times to begin the installation into the ti directory. 
+3. Open **Code Composer Studio (CCS)** and left-click on the **Project Folder** to select **Properties**.  
+4. Select **CCS Build**.  
+5. Click **ARM Compiler** and then **Include Options**.  
    - 4.1 Add `"simplelink_msp432p4_sdk_3_40_01_02/source"` directory to the `"Add dir to #include search path"` window.  
-5. Click **ARM Linker** and then **File Search Path**.  
+6. Click **ARM Linker** and then **File Search Path**.  
    - 5.1 Add `"simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib"` to the `"Include library file..."` window.
    - 5.2 Add `"simplelink_msp432p4_sdk_3_40_01_02/source/ti/grlib/lib/ccs/m4/grlib.a"` to the `"Include library file..."` window.
 
@@ -230,11 +229,12 @@ The **SIMPLELINK-MSP432-SDK** library is needed to run the program. Download it 
 <div align="center">
   <img src="images/debug_icon.PNG" alt="debug" width="600">
 </div>
-- How to run the project on CCS<br><br>
-To debug the project press on the debug button highligted in red in the image
-
-
-
+To debug the project press on the debug button highligted in red in the image.
+<div align="center">
+  <img src="images/run_icon.PNG" alt="debug" width="600">
+</div>
+To run the project press the button highlighted in green. After that it is possible to play the game as explained in the [Introduction](#introduction)
+<br>
 
 [Back to top](#table-of-contents)
 
