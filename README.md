@@ -377,11 +377,16 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 
 ## Connectivity Sensors and MSP432
 
-- Sensors used:<br>
-- Color TFT LCD display<br>
+Sensors used:<br>
+-128x128-pixel TFT LCD <br>
+    1. Supports display updates up to 20 frames per second (FPS).<br>
+    2. Controlled through the SPI interface.<br>
+    3. Has a color depth of 262K colors and a contrast ratio of 350.<br>
 - 2 user push buttons<br>
+    1. Two potentiometers, one for each axis.<br>
+    2. read the voltage present on the joystick axis to provide the position of the joystick to the application<br>
 - 2-axis joystick<br>
-- Reset button <br>
+    1. are connected to pullup resistors that drive the BoosterPack plug-in module pin high until the button is pressed and the pin is driven low
 - Pin.Port: 3.3, 4.7, 5.4,3.0, 5.6, 6.6, 5.2, 3.6 [Hardware Requirements](#hardware-requirements) <br><br>
 
 [Back to top](#table-of-contents)
