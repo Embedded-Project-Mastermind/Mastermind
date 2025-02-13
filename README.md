@@ -152,7 +152,9 @@ Suggested connection - Considering that the connections are done in order to avo
  <br><br>
 
 - Description and image of how to build a working pressable button<br><br>
- ...So when the button is released the internal pull-up resistor will put the value to high, while when the button is pressed the value will be low as it is connected to the ground. <br><br>
+The image on the right shows the configurations we used for the external buttons, which are related to specifical pins and so to the colors as described in the table above. The buttons used are four pins buttons and to avoid using them incorrectly we decided to wire them in a diagonal way. Each of them is wired to the designed pin with the pull up resistor, providing the 3.3V value and then on the other side it is connected to the ground. With this configuration we have all the pins to high and when we press the button it connects to ground and the value goes from high to low and so we have the input.
+
+<br><br>
  
 [Back to top](#table-of-contents)
 
