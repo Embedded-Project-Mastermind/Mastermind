@@ -505,6 +505,50 @@ To run the project press the button highlighted in green. After that it is possi
 </div>
 - FMS for the menu<br><br>
 
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+
+  <tr style="background-color: #f2f2f2;">
+    <th>GUI state</th>
+    <th>Description</th>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <th><strong>Start</strong></th>
+    <th> First GUI, with the logo and the start button</th>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <th><strong>Dimension</strong></th>
+    <th> GUI needed for the user for choosing the dimension of the generated password (from a value of 3 to 6) </th>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <th><strong>Difficulty</strong></th>
+    <th> GUI needed for the user for choosing the difficulty of the game (from easy to hard)</th>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <th><strong>Tentatives</strong></th>
+    <th>GUI needed for the user for choosing how many tentatives he wants to have during the game. The number of tentatives can be: unlimited, 3, 5, 7, 10. Due to memory problems, the "10" option is disabled</th>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <th><strong>Doubles</strong></th>
+    <th> GUI needed for the user for choosing the presence or not of doubles (the presence of a color in the password in multiple positions) </th>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <th><strong>Info</strong></th>
+    <th> GUI with a summary of all the options choosen by the user. The options cannot be changed from here, so this interface has the only purpose to list them all</th>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <th><strong>Game</strong></th>
+    <th> GUI for managing all the game. It displays the number of tentatives, the user's sequence, and the corrections with the press of the confirm button </th>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <th><strong>Chronology</strong></th>
+    <th> GUI directly linked to the Game GUI (accessible with the left stick, and with the rightstick to return to the game). It displays all previous tentatives' sequences with all the corrections. Only two tentatives at the time can be seen on the display, so the rest can be scrolled with di up and down stick</th>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <th><strong>End</strong></th>
+    <th> Last GUI, it displays the logo and the "win" or "game over" message, depending on the end condition. <br> End condition: there are two important factors to determine the end of the game: <br> Tentatives_count: when this variable reached the number of tentatives choosen by the user, he lose the game <br> Win_condition: this condition is satisfied if the user guesses the password right. If this happens before the Tentatives_count condition, the user win the game</th>
+  </tr>
+</table>
+
 [Back to top](#table-of-contents)
 
 ---
