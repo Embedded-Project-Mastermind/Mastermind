@@ -500,10 +500,13 @@ To run the project press the button highlighted in green. After that it is possi
 ---
 
 ## Menu
-<div align="center">
+<table>
+<tr style="background-color: #f2f2f2;">
+  <div align="center">
   <img src="images/Workflow_GUI.png" alt="workflow" width="1000">
 </div>
-- FMS for the menu<br><br>
+</tr>
+</table>
 
 <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
 
