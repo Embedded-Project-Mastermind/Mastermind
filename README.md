@@ -32,7 +32,7 @@
 | <p align="center"><b>Easy Mode Test<b> | <p align="center"><b>Medium Mode Test<b> |
 
 
-The purpose of the project is to develop a version of the game Mastermind for the MSP432 microcrontroller, with the addition of the boosterpack and of eight external four pins buttons used for the color selection part. This game is intuitive and funny and its purpose is to guess a sequence of colors within a certain number of attempts. The settings for the game can be chosen via an intuitive GUI, shown on the boosterpack's LCD display. These are the dimension of the sequence to guess, the difficulty of the game, the number of tentatives and the doubles option, which allows a color to be present multiple times in the key. Then, after a summary page, the game starts and with the external buttons the colors can be inserted. They will appear in some circles on the display and there is the possibility to withdraw the insertion with the upper button on the boosterpack, while the lower button is used to confirm the sequence when the insertion is terminated. After confirmation, the system tells whether each color is in the right position([X]), is in the sequence but in the wrong position([O]), and if it is not present at all ([!]). The clues given are also based on the difficulty levels, which are three. For the easy mode, all of the three corrections are shown, for the medium mode, the results are displayed as the correct number of X and O but in a quantity manner and in an order that is not associated with the colors like in the easy mode: the first displayed are the X, then O and ! for the remaining. For the hard mode there are only X and ! and they are shown as for the medium mode. The correction will appear under the circles in the main screen and by moving the joystick to the left it is possible to view the chronology of the past tentatives with the relative corrections. If the sequence is correctly guessed, a win screen will appear, otherwise when the user runs out of tentatives the game over interface will be displayed. To restart the game press the reset button on the MSP432 board.
+The purpose of the project is to develop a version of the game Mastermind for the MSP432 microcrontroller, with the addition of the boosterpack and of eight external four pins buttons used for the color selection part. This game is intuitive and funny and its purpose is to guess a sequence of colors within a certain number of attempts. The settings for the game can be chosen via an intuitive GUI(Graphical User Interface), shown on the boosterpack's LCD display. These are the dimension of the sequence to guess, the difficulty of the game, the number of tentatives and the doubles option, which allows a color to be present multiple times in the key. Then, after a summary page, the game starts and with the external buttons the colors can be inserted. They will appear in some circles on the display and there is the possibility to withdraw the insertion with the upper button on the boosterpack, while the lower button is used to confirm the sequence when the insertion is terminated. After confirmation, the system tells whether each color is in the right position([X]), is in the sequence but in the wrong position([O]), and if it is not present at all ([!]). The clues given are also based on the difficulty levels, which are three. For the easy mode, all of the three corrections are shown, for the medium mode, the results are displayed as the correct number of X and O but in a quantity manner and in an order that is not associated with the colors like in the easy mode: the first displayed are the X, then O and ! for the remaining. For the hard mode there are only X and ! and they are shown as for the medium mode. The correction will appear under the circles in the main screen and by moving the joystick to the left it is possible to view the chronology of the past tentatives with the relative corrections. If the sequence is correctly guessed, a win screen will appear, otherwise when the user runs out of tentatives the game over interface will be displayed. To restart the game press the reset button on the MSP432 board.
 
 <br><br>
 
@@ -213,14 +213,16 @@ The **SIMPLELINK-MSP432-SDK** library is needed to run the program. Download it 
 1. Run the `simplelink_msp432p4_sdk_3_40_01_02.exe` file.
 2. Click `next` 3 times to begin the installation into the ti directory. <br>
       For windows user the folder will be in the C directory, while for MAC users it will be in the Application directory.
-4. Open **Code Composer Studio (CCS)** and left-click on the **Project Folder** to select **Properties**.  
+4. Open **Code Composer Studio (CCS)** and right-click on the **Project Folder** to select **Properties**.  
 5. Select **CCS Build**.  
 6. Click **ARM Compiler** and then **Include Options**.  
-   - 4.1 Add `"simplelink_msp432p4_sdk_3_40_01_02/source"` directory to the `"Add dir to #include search path"` window.  
+   - 6.1 Add `"C:\ti\simplelink_msp432p4_sdk_3_40_01_02\source"` (for Windows) directory to the `"Add dir to #include search path"` window. To add click on the icon highligted in green on the image below
 7. Click **ARM Linker** and then **File Search Path**.  
-   - 5.1 Add `"simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib"` to the `"Include library file..."` window.
-   - 5.2 Add `"simplelink_msp432p4_sdk_3_40_01_02/source/ti/grlib/lib/ccs/m4/grlib.a"` to the `"Include library file..."` window.
-
+   - 7.1 Add `"C:\ti\simplelink_msp432p4_sdk_3_40_01_02\source\ti\devices\msp432p4xx\driverlib\ccs\msp432p4xx_driverlib.lib"` to the `"Include library file..."` window.
+   - 7.2 Add `"C:\ti\simplelink_msp432p4_sdk_3_40_01_02\source\ti\grlib\lib\ccs\m4\grlib.a"` to the `"Include library file..."` window.
+<div align="center">
+  <img src="images/simplelink_setup.PNG" alt="add" width="500">
+</div>
 
 [Back to top](#table-of-contents)
 
