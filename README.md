@@ -242,7 +242,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 <div align="center">
   <img src="images/FSM.png" alt="fsm" width="400">
 </div>
-<table border="1" style="border-collapse: collapse; width: 100%;">
+<table border="1" style="border-collapse: collapse; width: 100%; text-align: center;">
   <thead style="background-color: #ddd;">
     <tr>
       <th>State</th>
@@ -253,6 +253,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
     </tr>
   </thead>
   <tbody>
+
     <tr style="background-color: #f9f9f9;">
       <th>START</th>
       <td>-</td>
@@ -260,12 +261,8 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
       <td>🟢KEY_WH_DOUB<br>🔴KEY_WHOUT_DOUB</td>
       <td>-</td>
     </tr>
-    <tr>
-      <td colspan="5" style="padding: 10px;">
-        <b>Setup:</b> Insert dimensions, difficulty, number of tentatives, and double presence. Based on the selection, the logic moves to the next state.
-      </td>
-    </tr>
-    
+    <tr><td colspan="5" style="padding: 10px; text-align: left;">👉 **Setup:** The game initializes by setting the dimension, difficulty, number of attempts, and double presence in the sequence. Depending on the selection, the logic moves to the next state.</td></tr>
+
     <tr style="background-color: #f9f9f9;">
       <th>KEY_WH_DOUB</th>
       <td>START</td>
@@ -273,11 +270,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
       <td>RESET_TENT</td>
       <td>-</td>
     </tr>
-    <tr>
-      <td colspan="5" style="padding: 10px;">
-        <b>Action:</b> Generates a sequence <b>with doubles</b>.
-      </td>
-    </tr>
+    <tr><td colspan="5" style="padding: 10px; text-align: left;">🔄 **Action:** Generates a sequence **with doubles**.</td></tr>
 
     <tr style="background-color: #f9f9f9;">
       <th>KEY_WHOUT_DOUB</th>
@@ -286,24 +279,16 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
       <td>RESET_TENT</td>
       <td>-</td>
     </tr>
-    <tr>
-      <td colspan="5" style="padding: 10px;">
-        <b>Action:</b> Generates a sequence <b>without doubles</b>.
-      </td>
-    </tr>
+    <tr><td colspan="5" style="padding: 10px; text-align: left;">🔄 **Action:** Generates a sequence **without doubles**.</td></tr>
 
     <tr style="background-color: #f9f9f9;">
       <th>RESET_TENT</th>
-      <td>KEY_WH_DOUB<br>KEY_WHOUT_DOUB<br>ELABORATE_RESULT</td>
+      <td>KEY_WH_DOUB, KEY_WHOUT_DOUB, ELABORATE_RESULT</td>
       <td>-</td>
       <td>WAIT_EMPTY</td>
       <td>-</td>
     </tr>
-    <tr>
-      <td colspan="5" style="padding: 10px;">
-        <b>Action:</b> Resets the user sequence and allows a new attempt.
-      </td>
-    </tr>
+    <tr><td colspan="5" style="padding: 10px; text-align: left;">♻ **Action:** Resets the user sequence and allows a new attempt.</td></tr>
 
     <tr style="background-color: #f9f9f9;">
       <th>WAIT_EMPTY</th>
@@ -312,24 +297,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
       <td>INSERT_COLOR</td>
       <td>Button_Input</td>
     </tr>
-    <tr>
-      <td colspan="5" style="padding: 10px;">
-        <b>Action:</b> If the sequence is empty, the player can insert a color by clicking a button on the breadboard.
-      </td>
-    </tr>
-
-    <tr style="background-color: #f9f9f9;">
-      <th>INSERT_COLOR</th>
-      <td>WAIT_EMPTY<br>WAIT_NOT_EMPTY</td>
-      <td>full</td>
-      <td>🟢WAIT_FULL<br>🔴WAIT_NOT_EMPTY</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td colspan="5" style="padding: 10px;">
-        <b>Action:</b> After inserting a color, checks if the sequence is full. If full, goes to WAIT_FULL; otherwise, stays in WAIT_NOT_EMPTY.
-      </td>
-    </tr>
+    <tr><td colspan="5" style="padding: 10px; text-align: left;">🎨 **Action:** If the sequence is empty, the player can insert a color by clicking a button on the breadboard.</td></tr>
 
     <tr style="background-color: #f9f9f9;">
       <th>WIN</th>
@@ -338,11 +306,7 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
       <td>-</td>
       <td>-</td>
     </tr>
-    <tr>
-      <td colspan="5" style="padding: 10px; background-color: #d4edda;">
-        <b>🎉 The user has won the game! 🎉</b>
-      </td>
-    </tr>
+    <tr><td colspan="5" style="padding: 10px; background-color: #d4edda; text-align: center;"><b>🎉 The user has won the game! 🎉</b></td></tr>
 
     <tr style="background-color: #f9f9f9;">
       <th>GAME_OVER</th>
@@ -351,14 +315,11 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
       <td>-</td>
       <td>-</td>
     </tr>
-    <tr>
-      <td colspan="5" style="padding: 10px; background-color: #f8d7da;">
-        <b>❌ The user has lost the game! ❌</b>
-      </td>
-    </tr>
+    <tr><td colspan="5" style="padding: 10px; background-color: #f8d7da; text-align: center;"><b>❌ The user has lost the game! ❌</b></td></tr>
 
   </tbody>
 </table>
+
 
 
 
