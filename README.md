@@ -212,7 +212,7 @@ The **SIMPLELINK-MSP432-SDK** library is needed to run the program. Download it 
  
 1. Run the `simplelink_msp432p4_sdk_3_40_01_02.exe` file.
 2. Click `next` 3 times to begin the installation into the ti directory. <br>
-    For windows user the folder will be in the C directory, while for MAC users it will be in the Application directory.
+      For windows user the folder will be in the C directory, while for MAC users it will be in the Application directory.
 4. Open **Code Composer Studio (CCS)** and left-click on the **Project Folder** to select **Properties**.  
 5. Select **CCS Build**.  
 6. Click **ARM Compiler** and then **Include Options**.  
