@@ -249,39 +249,39 @@ Finite State Machine (FSM) - Game Flow<br>
 | **START**        | -                                            | Doubles                        | 🟢 `KEY_WH_DOUB` <br> 🔴 `KEY_WHOUT_DOUB`         | -             |
 | **Description**  | *Setup the game with dimensions, difficulty, attempts, and whether doubles are present in the sequence. The logic moves based on double selection.* | | | |
 | **KEY_WH_DOUB**  | START                                       | -                              | `RESET_TENT`                                       | -             |
-| **Description**  | *Generate a sequence with doubles.* | | | |
+| **Description**  | *Generate a sequence with doubles.* | 
 | **KEY_WHOUT_DOUB** | START                                     | -                              | `RESET_TENT`                                       | -             |
-| **Description**  | *Generate a sequence without doubles.* | | | |
+| **Description**  | *Generate a sequence without doubles.* | 
 | **RESET_TENT**   | KEY_WH_DOUB <br> KEY_WHOUT_DOUB <br> ELABORATE_RESULT | - | `WAIT_EMPTY`                                       | -             |
-| **Description**  | *Reset the user sequence and start a new attempt.* | | | |
+| **Description**  | *Reset the user sequence and start a new attempt.* | 
 | **WAIT_EMPTY**   | RESET_TENT                                  | -                              | `INSERT_COLOR`                                     | `Button_Input` |
-| **Description**  | *If the sequence is empty, allow the player to insert a color by clicking a button on the breadboard.* | | | |
+| **Description**  | *If the sequence is empty, allow the player to insert a color by clicking a button on the breadboard.* |
 | **WAIT_NOT_EMPTY** | INSERT_COLOR <br> ELIMINATE_COLOR       | -                              | `INSERT_COLOR`                                     | `Button_Input` |
-| **Description**  | *If the sequence is not empty, allow inserting a color by clicking a button.* | | | |
+| **Description**  | *If the sequence is not empty, allow inserting a color by clicking a button.* |
 | **INSERT_COLOR** | WAIT_EMPTY <br> WAIT_NOT_EMPTY             | Full                           | 🟢 `WAIT_FULL` <br> 🔴 `WAIT_NOT_EMPTY`           | -             |
-| **Description**  | *After inserting a color, check if the sequence is full. If full, go to `WAIT_FULL`, otherwise stay in `WAIT_NOT_EMPTY`.* | | | |
+| **Description**  | *After inserting a color, check if the sequence is full. If full, go to `WAIT_FULL`, otherwise stay in `WAIT_NOT_EMPTY`.* |
 | **WAIT_NOT_EMPTY** | INSERT_COLOR <br> ELIMINATE_COLOR       | -                              | `ELIMINATE_COLOR`                                 | `Back`        |
-| **Description**  | *If the sequence is not full, the player can press "Back" to remove the last color.* | | | |
+| **Description**  | *If the sequence is not full, the player can press "Back" to remove the last color.* | 
 | **WAIT_FULL**   | INSERT_COLOR                                | -                              | `ELIMINATE_COLOR`                                 | `Back`        |
-| **Description**  | *If the sequence is full, the player can press "Back" to remove the last color.* | | | |
+| **Description**  | *If the sequence is full, the player can press "Back" to remove the last color.* | 
 | **ELIMINATE_COLOR** | WAIT_FULL <br> WAIT_NOT_EMPTY         | Empty                          | 🟢 `WAIT_EMPTY` <br> 🔴 `WAIT_NOT_EMPTY`         | -             |
-| **Description**  | *After removing a color, check if the sequence is empty. If yes, go to `WAIT_EMPTY`, otherwise stay in `WAIT_NOT_EMPTY`.* | | | |
+| **Description**  | *After removing a color, check if the sequence is empty. If yes, go to `WAIT_EMPTY`, otherwise stay in `WAIT_NOT_EMPTY`.* | 
 | **WAIT_FULL**   | INSERT_COLOR                                | -                              | `ELABORATE_TENTATIVE`                            | `Confirm`     |
-| **Description**  | *If the sequence is full, the player can confirm their input, and the system will process it.* | | | |
+| **Description**  | *If the sequence is full, the player can confirm their input, and the system will process it.* | 
 | **INCREMENT_TENTATIVE** | ELABORATE_TENTATIVE               | Difficulty                      | 🟢 `EASY_MODE` <br> 🟡 `MEDIUM_MODE` <br> 🔴 `DIFFICULT_MODE` | - |
-| **Description**  | *Increase the attempt count and determine the output style based on difficulty level.* | | | |
+| **Description**  | *Increase the attempt count and determine the output style based on difficulty level.* | 
 | **EASY_MODE**   | INCREMENT_TENTATIVE                         | -                              | `ELABORATE_RESULT`                                | -             |
-| **Description**  | *Output includes:* <br> `X` (Correct position and color) <br> `O` (Correct color, wrong position) <br> `!` (Not present in sequence) – symbols **associated** with colors. | | | |
+| **Description**  | *Output includes:* <br> `X` (Correct position and color) <br> `O` (Correct color, wrong position) <br> `!` (Not present in sequence) – symbols **associated** with colors. | 
 | **MEDIUM_MODE** | INCREMENT_TENTATIVE                         | -                              | `ELABORATE_RESULT`                                | -             |
-| **Description**  | *Output includes:* <br> `X` (Correct position and color) <br> `O` (Correct color, wrong position) <br> `!` (Not present in sequence) – symbols **not associated** with colors. Ordered: `X`, then `O`, then `!`. | | | |
+| **Description**  | *Output includes:* <br> `X` (Correct position and color) <br> `O` (Correct color, wrong position) <br> `!` (Not present in sequence) – symbols **not associated** with colors. Ordered: `X`, then `O`, then `!`. |
 | **DIFFICULT_MODE** | INCREMENT_TENTATIVE                     | -                              | `ELABORATE_RESULT`                                | -             |
-| **Description**  | *Output includes:* <br> `X` (Correct position and color) <br> `!` (Not present in sequence) – symbols **not associated** with colors. Ordered: `X`, then `!`. | | | |
+| **Description**  | *Output includes:* <br> `X` (Correct position and color) <br> `!` (Not present in sequence) – symbols **not associated** with colors. Ordered: `X`, then `!`. |
 | **ELABORATE_RESULT** | EASY_MODE <br> MEDIUM_MODE <br> DIFFICULT_MODE | 1. Win Condition <br> 2. Attempts > Max | 🟢 `WIN` <br> 🔴 (if 2: 🟢 `GAME_OVER` <br> 🔴 `RESET_TENT`) | - |
-| **Description**  | *Evaluate the attempt:* <br> **Win Condition Met?** → `WIN` <br> **Attempts Remaining?** → `RESET_TENT` <br> **Attempts Exceeded?** → `GAME_OVER` | | | |
+| **Description**  | *Evaluate the attempt:* <br> **Win Condition Met?** → `WIN` <br> **Attempts Remaining?** → `RESET_TENT` <br> **Attempts Exceeded?** → `GAME_OVER` | 
 | **WIN**         | ELABORATE_RESULT                           | -                              | -                                                  | -             |
-| **Description**  | *The user has won the game!* | | | |
+| **Description**  | *The user has won the game!* | 
 | **GAME_OVER**   | ELABORATE_RESULT                           | -                              | -                                                  | -             |
-| **Description**  | *The user has lost the game!* | | | |
+| **Description**  | *The user has lost the game!* | 
 
 
 
