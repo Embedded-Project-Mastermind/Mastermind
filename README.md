@@ -212,10 +212,10 @@ The **SIMPLELINK-MSP432-SDK** library is needed to run the program. Download it 
 4. Open **Code Composer Studio (CCS)** and right-click on the **Project Folder** to select **Properties**.  
 5. Select **CCS Build**.  
 6. Click **ARM Compiler** and then **Include Options**.  
-   - 6.1 Add `"C:\ti\simplelink_msp432p4_sdk_3_40_01_02\source"` (for Windows) directory to the `"Add dir to #include search path"` window. To add click on the icon highligted in green on the image below
+   - 6.1 Add `"C:\ti\simplelink_msp432p4_sdk_3_40_01_02\source"` (for Windows) and `"\Applications\ti\simplelink_msp432p4_sdk_3_40_01_02\source"` (for MacOS) directory to the `"Add dir to #include search path"` window. To add click on the icon highligted in green on the image below.
 7. Click **ARM Linker** and then **File Search Path**.  
-   - 7.1 Add `"C:\ti\simplelink_msp432p4_sdk_3_40_01_02\source\ti\devices\msp432p4xx\driverlib\ccs\msp432p4xx_driverlib.lib"` to the `"Include library file..."` window.
-   - 7.2 Add `"C:\ti\simplelink_msp432p4_sdk_3_40_01_02\source\ti\grlib\lib\ccs\m4\grlib.a"` to the `"Include library file..."` window.
+   - 7.1 Add `"C:\ti\simplelink_msp432p4_sdk_3_40_01_02\source\ti\devices\msp432p4xx\driverlib\ccs\msp432p4xx_driverlib.lib"` (for Windows) and `"\Applications\ti\simplelink_msp432p4_sdk_3_40_01_02\source\ti\devices\msp432p4xx\driverlib\ccs\msp432p4xx_driverlib.lib"` (for MacOS) to the `"Include library file..."` window.
+   - 7.2 Add `"C:\ti\simplelink_msp432p4_sdk_3_40_01_02\source\ti\grlib\lib\ccs\m4\grlib.a"` (for Windows) and `"\Applications\ti\simplelink_msp432p4_sdk_3_40_01_02\source\ti\grlib\lib\ccs\m4\grlib.a"` (for MacOS) to the `"Include library file..."` window.
 <div align="center">
   <img src="images/simplelink_setup.PNG" alt="add" width="500">
 </div>
