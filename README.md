@@ -190,13 +190,12 @@ After the installation of **Code Composer Studio (CCS)**, version 12.8.0
 - How to import this project from GitHub to CCS<br><br>
 Create workspace, repository, project from scratch:<br>
 1) Create new workspace: File--> Switch worksapce --> Other . Type in or browse the directory name of the new workspace.<br>
-2) Create new git: File-->New-->Other-->Git-->Git Repository. Browse to the same directory as above workspace.<br>
-3) Create a new project: File --> New--> CCS project:<br>
-3.1) Select the target (MSP432 Family - MSP432P401R)
-3.2) Select the connection (Texas Instruments XDS110 USB Debug Probe)<br>
-3.3) Insert Project Name (Mastermind)<br>
-3.4) Select a project template and project name (default will be Empty Project with main.c) --> finish
-4) On Github download the project in .ZIP format in Code -> Download ZIP and then drop the files in general folder in the CCS project folder
+2) Create a new project: File --> New--> CCS project:<br>
+2.1) Select the target (MSP432 Family - MSP432P401R)
+2.2) Select the connection (Texas Instruments XDS110 USB Debug Probe)<br>
+2.3) Insert Project Name (Mastermind)<br>
+2.4) Select a project template and project name (default will be Empty Project with main.c) --> finish
+3) On Github download the project in .ZIP format in Code -> Download ZIP and then drop the files in general folder in the CCS project folder
 
 [Back to top](#table-of-contents)
 
