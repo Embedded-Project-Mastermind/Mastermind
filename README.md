@@ -519,7 +519,7 @@ Sensors used:<br>
     - Supports display updates up to 20 frames per second (FPS).<br>
     - Controlled through the SPI interface.<br>
     - Has a color depth of 262K colors and a contrast ratio of 350.<br>
-- 2 user push buttons<br>
+- 2 Boosterpack push buttons (upper & lower)<br>
     - Two potentiometers, one for each axis.<br>
     - read the voltage present on the joystick axis to provide the position of the joystick to the application.<br>
 - 2-axis joystick<br>
