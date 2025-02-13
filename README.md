@@ -201,7 +201,7 @@ Create workspace, repository, project from scratch:<br>
 3.3) Insert Project Name (Mastermind)<br>
 3.4) Select a project template and project name (default will be Empty Project with main.c) --> finish
 4) On Github download the project in .ZIP format in Code -> Download ZIP and then drop the files in general folder in the CCS project folder
-5) 
+
 [Back to top](#table-of-contents)
 
 ---
