@@ -114,7 +114,7 @@ Mastermind
 • Half size breadboard with 420 points(30 lines and 10 columns)<br>
 • 8 Buttons for Breadboard<br>
 • 9 wires male to female and 8 wires for breadboard(male to male) to connect the buttons with the ground<br><br>
-Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...<br>
+Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c file<br>
 <table align="center">
   <tr>
     <th>Color</th>
@@ -154,7 +154,6 @@ Suggested connection - Considering that the connections are done in order to avo
 </table>
  <br><br>
 
-- Description and image of how to build a working pressable button<br><br>
 The image on the right shows the configurations we used for the external buttons, which are related to specifical pins and so to the colors as described in the table above. The buttons used are four pins buttons and to avoid using them incorrectly we decided to wire them in a diagonal way. Each of them is wired to the designed pin with the pull up resistor, providing the 3.3V value and then on the other side it is connected to the ground. With this configuration we have all the pins to high and when we press the button it connects to ground and the value goes from high to low and so we have the input.
 
 <br><br>
@@ -164,8 +163,7 @@ The image on the right shows the configurations we used for the external buttons
 ---
 
 ## Software Requirements
-• Code Composer Studio (Link)
-Code Composer Studio (CCS) is an integrated development environment (IDE) designed for embedded systems, particularly for programming and debugging microcontrollers and processors. Developed by Texas Instruments, CCS supports a wide range of TI’s hardware, offering tools for writing, compiling, and testing code.
+**Code Composer Studio (CCS)** is an integrated development environment (IDE) designed for embedded systems, particularly for programming and debugging microcontrollers and processors. Developed by Texas Instruments, CCS supports a wide range of TI’s hardware, offering tools for writing, compiling, and testing code.
 <br>
 
 [Back to top](#table-of-contents)
@@ -211,9 +209,7 @@ Create workspace, repository, project from scratch
 
 ## Import Libraries
 
-- How to import the necessary library to make the code work, the imports that prof told us<br><br>
-The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at the following link:
-
+The **SIMPLELINK-MSP432-SDK** library is needed to run the program. Download it at the following link:
 [SIMPLELINK-MSP432-SDK Download](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02)
  
 1. Extract `simplelink_msp432p4_sdk_3_40_01_02.zip` file.  
@@ -231,8 +227,14 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 ---
 
 ## Run Project
-
+<div align="center">
+  <img src="images/debug_icon.PNG" alt="debug" width="600">
+</div>
 - How to run the project on CCS<br><br>
+To debug the project press on the debug button highligted in red in the image
+
+
+
 
 [Back to top](#table-of-contents)
 
