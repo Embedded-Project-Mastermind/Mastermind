@@ -632,13 +632,15 @@ This is referred to the TODO section, search TODO in those files and fill the mi
 ---
 
 # Future Integrations
+Possible integration the project could be:<br>
+| 🔗 Improvement | 📝 Description |
+|--------------|-------------|
+| 🎮 **ESP32 Connection** | Connects with an ESP32 to display the game on another device. |
+| 🔊 **Sound Emission** | Adds audio feedback explaining the outcome of each combination. |
+| 🎨 **Theme Customization** | Allows players to customize the game's appearance. |
+| ⏳ **Real-Time Engine** | Implements a system that enables pausing and resuming a game using the embedded system's main memory. |
+| 💾 **Memory Extension** | Expands system memory to allow for more attempts (maximum of 8 due to hardware limitations). |
 
-- The possible integration the project could have<br>
-• Connection with an ESP32 in order to display the game on another device<br>
-• Sound Emition explaining how the combination gone<br>
-• Theme customization<br>
-• Creating a real-time engine, that allows to stop a game and resume it, using the main memory of the Embedded system
-• Extend the memory of the system allowing for tentatives (MAX of 8, because of lack of memory)
 
 [Back to top](#table-of-contents)
 
