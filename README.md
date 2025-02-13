@@ -548,14 +548,6 @@ To debug the project press on the debug button highligted in red in the image
     <th><strong>End</strong></th>
     <th> Last GUI, it displays the logo and the "win" or "game over" message, depending on the end condition. <br> End condition: there are two important factors to determine the end of the game: <br> Tentatives_count: when this variable reached the number of tentatives choosen by the user, he lose the game <br> Win_condition: this condition is satisfied if the user guesses the password right. If this happens before the Tentatives_count condition, the user win the game</th>
   </tr>
-  <tr style="background-color: #f2f2f2;">
-    <th><strong>ELIMINATE_COLOR</strong></th>
-    <th>WAIT_FULL<br>WAIT_NOT_EMPTY</th>
-  </tr>
-  <tr style="background-color: #f2f2f2;">
-    <th><strong>WAIT_FULL</strong></th>
-    <th>INSERT_COLOR</th>
-  </tr>
 </table>
 
 [Back to top](#table-of-contents)
