@@ -510,7 +510,7 @@ To debug the project press on the debug button highligted in red in the image
 
   <tr style="background-color: #f2f2f2;">
     <th>GUI state</th>
-    <th>Descriptio</th>
+    <th>Description</th>
   </tr>
   
   <tr>
@@ -523,7 +523,7 @@ To debug the project press on the debug button highligted in red in the image
   </tr>
   <tr>
     <th><strong>Difficulty</strong></th>
-    <th></th>
+    <th>-</th>
   </tr>
   <tr>
     <th><strong>RESET_TENT</strong></th>
@@ -557,6 +557,7 @@ To debug the project press on the debug button highligted in red in the image
     <th><strong>WAIT_FULL</strong></th>
     <th>INSERT_COLOR</th>
   </tr>
+</table>
 
 [Back to top](#table-of-contents)
 
