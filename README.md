@@ -25,6 +25,10 @@
 ---
 
 # Introduction
+[![Watch the video](https://img.youtube.com/vi/asKY3cJsWYA/0.jpg)](https://www.youtube.com/watch?v=asKY3cJsWYA)
+
+[![Watch the video](https://img.youtube.com/vi/Nvdm1BBGjmU/0.jpg)](https://www.youtube.com/watch?v=Nvdm1BBGjmU)
+
 The purpose of the project is to develop a version of the game Mastermind for the MSP432 microcrontroller. It is a intuitive and funny game, where the user has to guess a sequence of colors within a certain number of attempts. Some settings for the game can be chosen wia an intuitive GUI, like the dimension of the sequence to guess, the difficulty, the number of tentatives and the presence of doubles, which means that a color can be found multiple times in the key. Then, after a summary page, the game starts and at every sequence inserted, the system tells whether each color is in the right position([X]), is in the sequence but in the wrong position([O]), and if it is not present at all ([!]). The clues given are also based on the difficulty levels, which are three. For the easiest mode, one all of these three are displayed, for the medium mode, the results are displayed as the correct number of X and O but in a quantity manner and in an order that is not associated with the colors like in the easy mode: the first displayed are the X, then O and ! for the remaining. For the hard mode there are only X and ! and they are displayed as for the medium mode.<br><br>
 The MSP432 board is used to take the input of 8 buttons setted up on an external breadboard with a very simple circuit. Each button is connected to a pin of the board and to the ground, and it corresponds to a specific color, related to the cable in our configuration.
 <br><br>
@@ -108,68 +112,43 @@ Mastermind
 • 8 Buttons for Breadboard<br>
 • 9 wires male to female and 8 wires for breadboard(male to male) to connect the buttons with the ground<br><br>
 Suggested connection - Considering that the connections are done in order to avoid conflicts with other input sensors is recommended to use the ones below. To customize the color, you can modify it in the appropriate section in input.c, function ... lines...<br>
+<table align="center">
+  <tr>
+    <th>Color</th>
+    <th>Ground</th>
+    <th>Orange</th>
+    <th>Green</th>
+    <th>Cyan</th>
+    <th>Red</th>
+    <th>White</th>
+    <th>Pink</th>
+    <th>Blue</th>
+    <th>Yellow</th>
+  </tr>
+  <tr>
+    <th>MSP432 pin</th>
+    <th>GND</th>
+    <th>3.3</th>
+    <th>4.7</th>
+    <th>5.4</th>
+    <th>3.0</th>
+    <th>5.6</th>
+    <th>6.6</th>
+    <th>5.2</th>
+    <th>3.6</th> 
+  </tr>
+</table>
 
 <table align="center">
   <tr>
     <td>
-      <table>
-  <tr>
-      <th>Left</th>
-      <th></th>
-      <th>Right</th>
-      <th></th>
-  </tr>  
-  <tr>
-    <th>Color</th>
-    <th>MSP432 pin</th>
-    <th>Color</th>
-    <th>MSP432 pin</th>
-  </tr>
-  <tr>
-    <th>Ground</th>
-    <th>GND</th>
-    <th>Red</th>
-    <th>3.0</th>
-  </tr>
-  <tr>
-    <th>Orange</th>
-    <th>3.3</th>
-    <th>White</th>
-    <th>5.6</th>
-  </tr>
-  <tr>
-    <th>Green</th>
-    <th>4.7</th>
-    <th>Purple</th>
-    <th>6.6</th>
-  </tr>
-  <tr>
-    <th>Cyan</th>
-    <th>5.4</th>
-    <th>Blue</th>
-    <th>5.2</th>
-      
-  </tr>
-  <tr>
-    <th></th>
-    <th></th>
-    <th>Yellow</th>
-    <th>3.6</th> 
-  </tr>  
-</table>
+      <img src="images/board_configuration.png" alt="Board configuration" width="400">
     </td>
     <td>
-      <img src="images/board_configuration.png" alt="Board configuration" width="330">
+      <img src="images/breadboard.png" alt="Board configuration" width="400">
     </td>
   </tr>
 </table>
-
-<div align="center">
-  <img src="images/breadboard.png" alt="logo" width="750">
-</div>
-
-
-
  <br><br>
 
 - Description and image of how to build a working pressable button<br><br>
@@ -257,7 +236,9 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 # Code Overview
 
 ## Software Algorithm
-
+<div align="center">
+  <img src="images/FSM.png" alt="fsm" width="400">
+</div>
 <table>
   <tr>
   <th>State</th>
@@ -268,22 +249,166 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>Description</th>
   </tr>
   <tr>
-  <th>Start</th>
+  <th>START</th>
   <th>-</th>
   <th>Doubles</th>
   <th>🟢KEY_WH_DOUB<br>🔴KEY_WHOUT_DOUB</th>
   <th>-</th>
-  <th>Setup the start of the game inserting the dimension, the difficulty, the number of tentatives and double presence in the sequence, at according to the last one it choose the next state to which the logic has to go</th>
   </tr>
-<br><br>
+  <tr>
+ <td colspan="6">
+      Setup the start of the game inserting the dimension, the difficulty, the number of tentatives and double presence in the sequence. According to the last one, it chooses the next state to which the logic has to go.
+    </td>
+  </tr>
+   <tr>
+  <th>KEY_WH_DOUB</th>
+  <th>START</th>
+  <th>-</th>
+  <th>RESET_TENT</th>
+  <th>-</th>
+  </tr>
+   <tr>
+      <tr>
+ <td colspan="6">
+      Generate the sequence to guess with the presence of doubles
+    </td>
+  </tr>
+  <th>KEY_WHOUT_DOUB</th>
+  <th>START</th>
+  <th>-</th>
+  <th>RESET_TENT</th>
+  <th>-</th>
+  <th>Generate the sequence to guess without the presence of doubles</th>
+  </tr>
+  <tr>
+   <th>RESET_TENT</th>
+  <th>KEY_WH_DOUB<br>KEY_WHOUT_DOUB<br>ELABORATE_RESULT</th>
+  <th>-</th>
+  <th>WAIT_EMPTY</th>
+  <th>-</th>
+  <th>Reset the user sequence and starts a new tentative of guessing</th>
+  </tr>
+   <tr>
+   <th>WAIT_EMPTY</th>
+  <th>RESET_TENT</th>
+  <th>-</th>
+  <th>INSERT_COLOR</th>
+  <th>Button_Input</th>
+  <th>In the case, the sequence is empty, it is given the possibility to insert a color in the sequence, clicking a button on breadboard</th>
+  </tr>
+  <th>WAIT_NOT_EMPTY</th>
+  <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
+  <th>-</th>
+  <th>INSERT_COLOR</th>
+  <th>Button_Input</th>
+  <th>In the case, the sequence is not empty, it is given the possibility to insert a color in the sequence, clicking a button on breadboard</th>
+  </tr>
+   <tr>
+   <th>INSERT_COLOR</th>
+  <th>WAIT_EMPTY<br>WAIT_NOT_EMPTY</th>
+  <th>full</th>
+  <th>🟢WAIT_FULL<br>🔴WAIT_NOT_EMPTY</th>
+  <th>-</th>
+  <th>After a color in insert, is verified if the sequence is full or not, if yes it goes to the state of full, instead if no it goes to the wait not empty state</th>
+  </tr>
+  <th>WAIT_NOT_EMPTY</th>
+  <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
+  <th>-</th>
+  <th>ELIMINATE_COLOR</th>
+  <th>Back</th>
+  <th>In the case, the sequence, which not empty, is not full, it is possible to press the button back, to eliminate the lastest color</th>
+  </tr>
+   <th>WAIT_FULL</th>
+  <th>INSERT_COLOR</th>
+  <th>-</th>
+  <th>ELIMINATE_COLOR</th>
+  <th>Back</th>
+  <th>In the case, the sequence is full, it is possible to press the button back, to eliminate the lastest color</th>
+  </tr>
+  <tr>
+   <th>ELIMINATE_COLOR</th>
+  <th>WAIT_FULL<br>WAIT_NOT_EMPTY</th>
+  <th>empty</th>
+  <th>🟢WAIT_EMPTY<br>🔴WAIT_NOT_EMPTY</th>
+  <th>-</th>
+  <th>After a color is eliminated, is verified if the sequence is empty or not, if yes it goes to the state of empty, instead if no it goes to the wait not empty state</th>
+  </tr>
+  <tr>
+   <th>WAIT_FULL</th>
+  <th>INSERT_COLOR</th>
+  <th>-</th>
+  <th>ELABORATE_TENTATIVE</th>
+  <th>Confirm</th>
+  <th>If the sequence is full, it can be entered as a chosen sequence by the user, so it can be elaborated by the system</th>
+    <tr>
+   <th>INCREMENT_TENTATIVE</th>
+  <th>ELABORATE_TENTATIVE</th>
+  <th>Difficulty</th>
+  <th>🟢A:EASY_MODE<br>🟡B:MEDIUM_MODE<br>🔴C:DIFFICULT_MODE</th>
+  <th>-</th>
+  <th>The tentative is incrementated and is adjusted according to the code and the flow is redirected according to the difficulty chosen by the user, which will give a different output of the solution</th>
+  </tr>
+   <tr>
+   <th>EASY_MODE</th>
+  <th>INCREMENT_TENTATIVE</th>
+  <th>-</th>
+  <th>ELABORATE_RESULT</th>
+  <th>-</th>
+  <th>The output will allow X (presence in the sequence + corrected poses), O (presence in the sequence + incorrect poses), ! (No presence in the sequence) with each symbol associated to the above color</th>
+  </tr>
+   <tr>
+   <th>MEDIUM_MODE</th>
+  <th>INCREMENT_TENTATIVE</th>
+  <th>-</th>
+  <th>ELABORATE_RESULT</th>
+  <th>-</th>
+  <th>The output will allow X (presence in the sequence + corrected poses), O (presence in the sequence + incorrect poses), ! (No presence in the sequence) with each symbol not associated to the above color and place in order first all X, then O and last ones !</th>
+  </tr>
+    </tr>
+   <tr>
+   <th>DIFFICULT_MODE</th>
+  <th>INCREMENT_TENTATIVE</th>
+  <th>-</th>
+  <th>ELABORATE_RESULT</th>
+  <th>-</th>
+  <th>The output will allow X (presence in the sequence + corrected poses), ! (No presence in the sequence) with each symbol not associated to the above color and place in order first all X and last ones !</th>
+  </tr>
+    </tr>
+   <tr>
+   <th>ELABORATE_RESULT</th>
+  <th>EASY_MODE<br>MEDIUM_MODE<br>DIFFICULT_MODE</th>
+  <th>1.Win_cond<br>2.Tentative>max</th>
+  <th>🟢WIN<br>🔴(2.<br>🟢GAME_OVER<br>🔴RESET_TENT<br>)</th>
+  <th>-</th>
+  <th>If, elaborating the result, is obtained the win condition, the user goes WIN, instead if the tentatives are still available, he will reset the sequence an try with another tentative, instead the user will be sent to game over</th>
+  </tr>
+  <tr>
+  <th>WIN</th>
+  <th>ELABORATE_RESULT</th>
+  <th>-</th>
+  <th>-</th>
+  <th>-</th>
+  <th>The user has won the game</th>
+</tr>
+  <tr>
+  <th>GAME_OVER</th>
+  <th>ELABORATE_RESULT</th>
+  <th>-</th>
+  <th>-</th>
+  <th>-</th>
+  <th>The user has lost the game</th>
+</tr>
 </table>
-  
+<br><br>
+
 [Back to top](#table-of-contents)
 
 ---
 
 ## Menu
-
+<div align="center">
+  <img src="images/Workflow_GUI.png" alt="workflow" width="1000">
+</div>
 - FMS for the menu<br><br>
 
 [Back to top](#table-of-contents)
