@@ -247,48 +247,233 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
 Finite State Machine (FSM) - Game Flow<br>
 
 ## Finite State Machine (FSM) - Game Flow
-
 ## Finite State Machine (FSM) - Game Flow
 
-| **State**         | **Input**                                      | **Condition**                 | **Output**                                          | **Signal**     |
-|-------------------|----------------------------------------------|--------------------------------|------------------------------------------------------|---------------|
-| **START**        | -                                            | Doubles                        | 🟢 `KEY_WH_DOUB` <br> 🔴 `KEY_WHOUT_DOUB`         | -             |
-| **Description**  | Setup the game by inserting dimensions, difficulty, the number of attempts, and whether doubles are present in the sequence. Depending on the choice, the logic proceeds to the appropriate next state. |
-| **KEY_WH_DOUB**  | START                                       | -                              | `RESET_TENT`                                       | -             |
-| **Description**  | Generate the sequence to guess, including doubles. |
-| **KEY_WHOUT_DOUB** | START                                     | -                              | `RESET_TENT`                                       | -             |
-| **Description**  | Generate the sequence to guess, ensuring there are no doubles. |
-| **RESET_TENT**   | KEY_WH_DOUB <br> KEY_WHOUT_DOUB <br> ELABORATE_RESULT | - | `WAIT_EMPTY`                                       | -             |
-| **Description**  | Reset the user sequence and prepare for a new guessing attempt. |
-| **WAIT_EMPTY**   | RESET_TENT                                  | -                              | `INSERT_COLOR`                                     | `Button_Input` |
-| **Description**  | If the sequence is empty, allow the player to insert a color by pressing a button on the breadboard. |
-| **WAIT_NOT_EMPTY** | INSERT_COLOR <br> ELIMINATE_COLOR       | -                              | `INSERT_COLOR`                                     | `Button_Input` |
-| **Description**  | If the sequence is not empty, allow inserting another color by pressing a button. |
-| **INSERT_COLOR** | WAIT_EMPTY <br> WAIT_NOT_EMPTY             | Full                           | 🟢 `WAIT_FULL` <br> 🔴 `WAIT_NOT_EMPTY`           | -             |
-| **Description**  | After inserting a color, check whether the sequence is full. If full, transition to `WAIT_FULL`; otherwise, remain in `WAIT_NOT_EMPTY`. |
-| **WAIT_NOT_EMPTY** | INSERT_COLOR <br> ELIMINATE_COLOR       | -                              | `ELIMINATE_COLOR`                                 | `Back`        |
-| **Description**  | If the sequence is not full, the player can press "Back" to remove the most recently added color. |
-| **WAIT_FULL**   | INSERT_COLOR                                | -                              | `ELIMINATE_COLOR`                                 | `Back`        |
-| **Description**  | If the sequence is full, the player can press "Back" to remove the most recently added color. |
-| **ELIMINATE_COLOR** | WAIT_FULL <br> WAIT_NOT_EMPTY         | Empty                          | 🟢 `WAIT_EMPTY` <br> 🔴 `WAIT_NOT_EMPTY`         | -             |
-| **Description**  | After removing a color, check if the sequence is empty. If so, transition to `WAIT_EMPTY`; otherwise, remain in `WAIT_NOT_EMPTY`. |
-| **WAIT_FULL**   | INSERT_COLOR                                | -                              | `ELABORATE_TENTATIVE`                            | `Confirm`     |
-| **Description**  | If the sequence is full, the player can confirm their selection, and the system will process it. |
-| **INCREMENT_TENTATIVE** | ELABORATE_TENTATIVE               | Difficulty                      | 🟢 `EASY_MODE` <br> 🟡 `MEDIUM_MODE` <br> 🔴 `DIFFICULT_MODE` | - |
-| **Description**  | Increase the attempt count and determine the output format based on the chosen difficulty level. |
-| **EASY_MODE**   | INCREMENT_TENTATIVE                         | -                              | `ELABORATE_RESULT`                                | -             |
-| **Description**  | Output symbols with their respective colors: `X` (Correct position and color), `O` (Correct color, wrong position), `!` (Color not present in the sequence). |
-| **MEDIUM_MODE** | INCREMENT_TENTATIVE                         | -                              | `ELABORATE_RESULT`                                | -             |
-| **Description**  | Output symbols without color association, arranged in the following order: `X` (correct position and color), `O` (correct color, wrong position), `!` (not present in sequence). |
-| **DIFFICULT_MODE** | INCREMENT_TENTATIVE                     | -                              | `ELABORATE_RESULT`                                | -             |
-| **Description**  | Output includes only `X` (correct position and color) and `!` (not present in sequence), arranged in order. |
-| **ELABORATE_RESULT** | EASY_MODE <br> MEDIUM_MODE <br> DIFFICULT_MODE | 1. Win Condition <br> 2. Attempts > Max | 🟢 `WIN` <br> 🔴 (if 2: 🟢 `GAME_OVER` <br> 🔴 `RESET_TENT`) | - |
-| **Description**  | Evaluate the attempt: **Win Condition Met?** → `WIN` <br> **Attempts Remaining?** → `RESET_TENT` <br> **Attempts Exceeded?** → `GAME_OVER` |
-| **WIN**         | ELABORATE_RESULT                           | -                              | -                                                  | -             |
-| **Description**  | The player has won the game! |
-| **GAME_OVER**   | ELABORATE_RESULT                           | -                              | -                                                  | -             |
-| **Description**  | The player has lost the game! |
-
+<table>
+  <tr>
+    <th>State</th>
+    <th>Input</th>
+    <th>Condition</th>
+    <th>Output</th>
+    <th>Signal</th>
+  </tr>
+  <tr>
+    <th>START</th>
+    <th>-</th>
+    <th>Doubles</th>
+    <th>🟢KEY_WH_DOUB<br>🔴KEY_WHOUT_DOUB</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      Setup the game by inserting the dimensions, difficulty, the number of attempts, and whether doubles are present in the sequence. Based on the doubles' presence, the next state is determined.
+    </td>
+  </tr>
+  <tr>
+    <th>KEY_WH_DOUB</th>
+    <th>START</th>
+    <th>-</th>
+    <th>RESET_TENT</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      Generate the sequence to guess with the presence of doubles.
+    </td>
+  </tr>
+  <tr>
+    <th>KEY_WHOUT_DOUB</th>
+    <th>START</th>
+    <th>-</th>
+    <th>RESET_TENT</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      Generate the sequence to guess without the presence of doubles.
+    </td>
+  </tr>
+  <tr>
+    <th>RESET_TENT</th>
+    <th>KEY_WH_DOUB<br>KEY_WHOUT_DOUB<br>ELABORATE_RESULT</th>
+    <th>-</th>
+    <th>WAIT_EMPTY</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      Reset the user sequence and start a new attempt for guessing.
+    </td>
+  </tr>
+  <tr>
+    <th>WAIT_EMPTY</th>
+    <th>RESET_TENT</th>
+    <th>-</th>
+    <th>INSERT_COLOR</th>
+    <th>Button_Input</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      If the sequence is empty, the user can insert a color into the sequence by clicking a button on the breadboard.
+    </td>
+  </tr>
+  <tr>
+    <th>WAIT_NOT_EMPTY</th>
+    <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
+    <th>-</th>
+    <th>INSERT_COLOR</th>
+    <th>Button_Input</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      If the sequence is not empty, the user can insert a color into the sequence by pressing a button on the breadboard.
+    </td>
+  </tr>
+  <tr>
+    <th>INSERT_COLOR</th>
+    <th>WAIT_EMPTY<br>WAIT_NOT_EMPTY</th>
+    <th>Full</th>
+    <th>🟢WAIT_FULL<br>🔴WAIT_NOT_EMPTY</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      After inserting a color, check if the sequence is full. If it is, go to the state `WAIT_FULL`; if not, go to `WAIT_NOT_EMPTY`.
+    </td>
+  </tr>
+  <tr>
+    <th>WAIT_NOT_EMPTY</th>
+    <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
+    <th>-</th>
+    <th>ELIMINATE_COLOR</th>
+    <th>Back</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      If the sequence is not full, the user can press the "Back" button to eliminate the last color added.
+    </td>
+  </tr>
+  <tr>
+    <th>WAIT_FULL</th>
+    <th>INSERT_COLOR</th>
+    <th>-</th>
+    <th>ELIMINATE_COLOR</th>
+    <th>Back</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      If the sequence is full, the user can press the "Back" button to remove the last color added.
+    </td>
+  </tr>
+  <tr>
+    <th>ELIMINATE_COLOR</th>
+    <th>WAIT_FULL<br>WAIT_NOT_EMPTY</th>
+    <th>Empty</th>
+    <th>🟢WAIT_EMPTY<br>🔴WAIT_NOT_EMPTY</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      After eliminating a color, check if the sequence is empty. If it is, transition to `WAIT_EMPTY`; otherwise, remain in `WAIT_NOT_EMPTY`.
+    </td>
+  </tr>
+  <tr>
+    <th>WAIT_FULL</th>
+    <th>INSERT_COLOR</th>
+    <th>-</th>
+    <th>ELABORATE_TENTATIVE</th>
+    <th>Confirm</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      If the sequence is full, the user can confirm their sequence. The system will then process the sequence.
+    </td>
+  </tr>
+  <tr>
+    <th>INCREMENT_TENTATIVE</th>
+    <th>ELABORATE_TENTATIVE</th>
+    <th>Difficulty</th>
+    <th>🟢EASY_MODE<br>🟡MEDIUM_MODE<br>🔴DIFFICULT_MODE</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      Increment the number of attempts and adjust the output based on the difficulty level chosen by the user (Easy, Medium, or Hard).
+    </td>
+  </tr>
+  <tr>
+    <th>EASY_MODE</th>
+    <th>INCREMENT_TENTATIVE</th>
+    <th>-</th>
+    <th>ELABORATE_RESULT</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      The output will include symbols like `X` (correct color and position), `O` (correct color but wrong position), and `!` (color not in the sequence).
+    </td>
+  </tr>
+  <tr>
+    <th>MEDIUM_MODE</th>
+    <th>INCREMENT_TENTATIVE</th>
+    <th>-</th>
+    <th>ELABORATE_RESULT</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      The output will include the same symbols as in Easy Mode, but colors will not be associated, and the symbols will be arranged in this order: `X`, then `O`, and finally `!`.
+    </td>
+  </tr>
+  <tr>
+    <th>DIFFICULT_MODE</th>
+    <th>INCREMENT_TENTATIVE</th>
+    <th>-</th>
+    <th>ELABORATE_RESULT</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      The output will include only `X` (correct color and position) and `!` (color not in the sequence), arranged in that order.
+    </td>
+  </tr>
+  <tr>
+    <th>ELABORATE_RESULT</th>
+    <th>EASY_MODE<br>MEDIUM_MODE<br>DIFFICULT_MODE</th>
+    <th>1. Win condition<br>2. Tentative exceeds max</th>
+    <th>🟢WIN<br>🔴(2. 🟢GAME_OVER<br>🔴RESET_TENT)</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      If the win condition is met, the player wins. If the maximum number of attempts is exceeded, the game ends, and the user is either reset or the game is over.
+    </td>
+  </tr>
+  <tr>
+    <th>WIN</th>
+    <th>ELABORATE_RESULT</th>
+    <th>-</th>
+    <th>-</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      The player has won the game.
+    </td>
+  </tr>
+  <tr>
+    <th>GAME_OVER</th>
+    <th>ELABORATE_RESULT</th>
+    <th>-</th>
+    <th>-</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <td colspan="5">
+      The player has lost the game.
+    </td>
+  </tr>
+</table>
 
 
 [Back to top](#table-of-contents)
