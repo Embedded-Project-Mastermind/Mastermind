@@ -506,6 +506,58 @@ To debug the project press on the debug button highligted in red in the image
 </div>
 - FMS for the menu<br><br>
 
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+
+  <tr style="background-color: #f2f2f2;">
+    <th>GUI state</th>
+    <th>Descriptio</th>
+  </tr>
+  
+  <tr>
+    <th><strong>Start</strong></th>
+    <th> Initial GUI, with the logo and the start button</th>
+  </tr>
+  <tr>
+    <th><strong>Dimension</strong></th>
+    <th> GUI needed for the user for choosing the dimension of the generated password (from a value of 3 to 6) </th>
+  </tr>
+  <tr>
+    <th><strong>Difficulty</strong></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th><strong>RESET_TENT</strong></th>
+    <th>KEY_WH_DOUB<br>KEY_WHOUT_DOUB<br>ELABORATE_RESULT</th>
+  </tr>
+  <tr>
+    <th><strong>WAIT_EMPTY</strong></th>
+    <th>RESET_TENT</th>
+  </tr>
+  <tr>
+    <th><strong>WAIT_NOT_EMPTY</strong></th>
+    <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
+  </tr>
+  <tr>
+    <th><strong>INSERT_COLOR</strong></th>
+    <th>WAIT_EMPTY<br>WAIT_NOT_EMPTY</th>
+  </tr>
+  <tr>
+    <th><strong>WAIT_NOT_EMPTY</strong></th>
+    <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
+  </tr>
+  <tr>
+    <th><strong>WAIT_FULL</strong></th>
+    <th>INSERT_COLOR</th>
+  </tr>
+  <tr>
+    <th><strong>ELIMINATE_COLOR</strong></th>
+    <th>WAIT_FULL<br>WAIT_NOT_EMPTY</th>
+  </tr>
+  <tr>
+    <th><strong>WAIT_FULL</strong></th>
+    <th>INSERT_COLOR</th>
+  </tr>
+
 [Back to top](#table-of-contents)
 
 ---
