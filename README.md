@@ -28,7 +28,7 @@
 
 | Video 1 | Video 2 |
 |---------|---------|
-| [![Video 1](https://img.youtube.com/vi/asKY3cJsWYA/0.jpg)](https://www.youtube.com/watch?v=asKY3cJsWYA) | [![Video 2](https://img.youtube.com/vi/Nvdm1BBGjmU/0.jpg)](https://www.youtube.com/watch?v=Nvdm1BBGjmU) |
+| [![Video 1](https://img.youtube.com/vi/Nvdm1BBGjmU/0.jpg)](https://www.youtube.com/watch?v=Nvdm1BBGjmU) | [![Video 2](https://img.youtube.com/vi/asKY3cJsWYA/0.jpg)](https://www.youtube.com/watch?v=asKY3cJsWYA)  |
 | <p align="center"><b>Easy Mode Test<b> | <p align="center"><b>Medium Mode Test<b> |
 
 
