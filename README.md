@@ -254,7 +254,6 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>Doubles</th>
   <th>🟢KEY_WH_DOUB<br>🔴KEY_WHOUT_DOUB</th>
   <th>-</th>
-  <th></th>
   </tr>
   <tr>
  <td colspan="6">
@@ -267,9 +266,13 @@ The SIMPLELINK-MSP432-SDK library is needed to run the program. Download it at t
   <th>-</th>
   <th>RESET_TENT</th>
   <th>-</th>
-  <th>Generate the sequence to guess with the presence of doubles</th>
   </tr>
    <tr>
+      <tr>
+ <td colspan="6">
+      Generate the sequence to guess with the presence of doubles
+    </td>
+  </tr>
   <th>KEY_WHOUT_DOUB</th>
   <th>START</th>
   <th>-</th>
