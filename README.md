@@ -500,13 +500,9 @@ To run the project press the button highlighted in green. After that it is possi
 ---
 
 ## Menu
-<table>
-<tr style="background-color: #f2f2f2;">
-  <div align="center">
+  <div align="center" style="background-color: black; padding: 20px;">
   <img src="images/Workflow_GUI.png" alt="workflow" width="1000">
 </div>
-</tr>
-</table>
 
 <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
 
