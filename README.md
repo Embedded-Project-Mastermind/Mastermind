@@ -514,7 +514,7 @@ To debug the project press on the debug button highligted in red in the image
   </tr>
   <tr style="background-color: #f2f2f2;">
     <th><strong>Start</strong></th>
-    <th> Initial GUI, with the logo and the start button</th>
+    <th> First GUI, with the logo and the start button</th>
   </tr>
   <tr style="background-color: #f2f2f2;">
     <th><strong>Dimension</strong></th>
@@ -522,31 +522,31 @@ To debug the project press on the debug button highligted in red in the image
   </tr>
   <tr style="background-color: #f2f2f2;">
     <th><strong>Difficulty</strong></th>
-    <th>-</th>
+    <th> GUI needed for the user for choosing the difficulty of the game (from easy to hard)</th>
   </tr>
   <tr style="background-color: #f2f2f2;">
-    <th><strong>RESET_TENT</strong></th>
-    <th>KEY_WH_DOUB<br>KEY_WHOUT_DOUB<br>ELABORATE_RESULT</th>
+    <th><strong>Tentatives</strong></th>
+    <th>GUI needed for the user for choosing how many tentatives he wants to have during the game. The number of tentatives can be: unlimited, 3, 5, 7, 10. Due to memory problems, the "10" option is disabled</th>
   </tr>
   <tr style="background-color: #f2f2f2;">
-    <th><strong>WAIT_EMPTY</strong></th>
-    <th>RESET_TENT</th>
+    <th><strong>Doubles</strong></th>
+    <th> GUI needed for the user for choosing the presence or not of doubles (the presence of a color in the password in multiple positions) </th>
   </tr>
   <tr style="background-color: #f2f2f2;">
-    <th><strong>WAIT_NOT_EMPTY</strong></th>
-    <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
+    <th><strong>Info</strong></th>
+    <th> GUI with a summary of all the options choosen by the user. The options cannot be changed from here, so this interface has the only purpose to list them all</th>
   </tr>
   <tr style="background-color: #f2f2f2;">
-    <th><strong>INSERT_COLOR</strong></th>
-    <th>WAIT_EMPTY<br>WAIT_NOT_EMPTY</th>
+    <th><strong>Game</strong></th>
+    <th> GUI for managing all the game. It displays the number of tentatives, the user's sequence, and the corrections with the press of the confirm button </th>
   </tr>
   <tr style="background-color: #f2f2f2;">
-    <th><strong>WAIT_NOT_EMPTY</strong></th>
-    <th>INSERT_COLOR<br>ELIMINATE_COLOR</th>
+    <th><strong>Chronology</strong></th>
+    <th> GUI directly linked to the Game GUI (accessible with the left stick, and with the rightstick to return to the game). It displays all previous tentatives' sequences with all the corrections. Only two tentatives at the time can be seen on the display, so the rest can be scrolled with di up and down stick</th>
   </tr>
   <tr style="background-color: #f2f2f2;">
-    <th><strong>WAIT_FULL</strong></th>
-    <th>INSERT_COLOR</th>
+    <th><strong>End</strong></th>
+    <th> Last GUI, it displays the logo and the "win" or "game over" message, depending on the end condition. <br> End condition: there are two important factors to determine the end of the game: <br> Tentatives_count: when this variable reached the number of tentatives choosen by the user, he lose the game <br> Win_condition: this condition is satisfied if the user guesses the password right. If this happens before the Tentatives_count condition, the user win the game</th>
   </tr>
   <tr style="background-color: #f2f2f2;">
     <th><strong>ELIMINATE_COLOR</strong></th>
