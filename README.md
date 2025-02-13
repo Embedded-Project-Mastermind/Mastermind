@@ -228,7 +228,7 @@ The **SIMPLELINK-MSP432-SDK** library is needed to run the program. Download it 
 
 ## Run Project
 <div align="center">
-  <img src="images/debug_icon.PNG" alt="debug" width="250">
+  <img src="images/debug_icon.PNG" alt="debug" width="700">
 </div>
 - How to run the project on CCS<br><br>
 To debug the project press on the debug button highligted in red in the image
