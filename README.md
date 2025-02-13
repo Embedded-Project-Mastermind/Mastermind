@@ -211,12 +211,13 @@ The **SIMPLELINK-MSP432-SDK** library is needed to run the program. Download it 
 [SIMPLELINK-MSP432-SDK Download](https://www.ti.com/tool/download/SIMPLELINK-MSP432-SDK/3.40.01.02)
  
 1. Run the `simplelink_msp432p4_sdk_3_40_01_02.exe` file.
-2. Click `next` 3 times to begin the installation into the ti directory. 
-3. Open **Code Composer Studio (CCS)** and left-click on the **Project Folder** to select **Properties**.  
-4. Select **CCS Build**.  
-5. Click **ARM Compiler** and then **Include Options**.  
+2. Click `next` 3 times to begin the installation into the ti directory.
+    For windows user the folder will be in the C directory, while for MAC users it will be in the Application directory.
+4. Open **Code Composer Studio (CCS)** and left-click on the **Project Folder** to select **Properties**.  
+5. Select **CCS Build**.  
+6. Click **ARM Compiler** and then **Include Options**.  
    - 4.1 Add `"simplelink_msp432p4_sdk_3_40_01_02/source"` directory to the `"Add dir to #include search path"` window.  
-6. Click **ARM Linker** and then **File Search Path**.  
+7. Click **ARM Linker** and then **File Search Path**.  
    - 5.1 Add `"simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/ccs/msp432p4xx_driverlib.lib"` to the `"Include library file..."` window.
    - 5.2 Add `"simplelink_msp432p4_sdk_3_40_01_02/source/ti/grlib/lib/ccs/m4/grlib.a"` to the `"Include library file..."` window.
 
