@@ -629,7 +629,7 @@ This is referred to the TODO section, search TODO in those files and fill the mi
   <tr>
     <th>game.c</th>
     <th>Gottardelli Matteo</th>
-    <th>Benassi Alessandro</th>
+    <th>Benassi Alessandro & Calvo Daniele</th>
     <th>Benassi Alessandro & Gottardelli Matteo</th>
     <th>🟢</th>
   </tr>
