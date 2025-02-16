@@ -575,7 +575,6 @@ Sensors used:<br>
 🟢 - Complete<br>
 🟡 - To finish<br>
 🔴 - To start<br><br>
-This is referred to the TODO section, search TODO in those files and fill the missing information<br>
 <table>
   <tr>
     <th>Topic/Section</th>
